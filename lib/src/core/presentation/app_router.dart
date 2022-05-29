@@ -1,11 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:misica/src/authorization/presentation/authorization_page.dart';
-import 'package:misica/src/browse/presentation/browse_page.dart';
-import 'package:misica/src/home/presentation/home_page.dart';
-import 'package:misica/src/library/presentation/library_page.dart';
-import 'package:misica/src/listen_now/presentation/listen_now_page.dart';
-import 'package:misica/src/radio/presentation/radio_page.dart';
-import 'package:misica/src/search/presentation/search_page.dart';
+import 'package:misica/src/home/browse/presentation/browse_page.dart';
+import 'package:misica/src/home/core/presentation/home_page.dart';
+import 'package:misica/src/home/library/presentation/library_page.dart';
+import 'package:misica/src/home/listen_now/presentation/listen_now_page.dart';
+import 'package:misica/src/home/radio/presentation/radio_page.dart';
+import 'package:misica/src/home/search/presentation/search_page.dart';
+
 import 'package:misica/src/splash/presentation/splash_page.dart';
 
 @MaterialAutoRouter(

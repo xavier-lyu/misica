@@ -14,12 +14,12 @@ import 'package:auto_route/auto_route.dart' as _i4;
 import 'package:flutter/material.dart' as _i10;
 
 import '../../authorization/presentation/authorization_page.dart' as _i2;
-import '../../browse/presentation/browse_page.dart' as _i6;
-import '../../home/presentation/home_page.dart' as _i3;
-import '../../library/presentation/library_page.dart' as _i8;
-import '../../listen_now/presentation/listen_now_page.dart' as _i5;
-import '../../radio/presentation/radio_page.dart' as _i7;
-import '../../search/presentation/search_page.dart' as _i9;
+import '../../home/browse/presentation/browse_page.dart' as _i6;
+import '../../home/core/presentation/home_page.dart' as _i3;
+import '../../home/library/presentation/library_page.dart' as _i8;
+import '../../home/listen_now/presentation/listen_now_page.dart' as _i5;
+import '../../home/radio/presentation/radio_page.dart' as _i7;
+import '../../home/search/presentation/search_page.dart' as _i9;
 import '../../splash/presentation/splash_page.dart' as _i1;
 
 class AppRouter extends _i4.RootStackRouter {
