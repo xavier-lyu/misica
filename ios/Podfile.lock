@@ -1,0 +1,34 @@
+PODS:
+  - "app_settings (3.0.0+1)":
+    - Flutter
+  - Flutter (1.0.0)
+  - flutter_secure_storage (3.3.1):
+    - Flutter
+  - music_kit (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - app_settings (from `.symlinks/plugins/app_settings/ios`)
+  - Flutter (from `Flutter`)
+  - flutter_secure_storage (from `.symlinks/plugins/flutter_secure_storage/ios`)
+  - music_kit (from `.symlinks/plugins/music_kit/ios`)
+
+EXTERNAL SOURCES:
+  app_settings:
+    :path: ".symlinks/plugins/app_settings/ios"
+  Flutter:
+    :path: Flutter
+  flutter_secure_storage:
+    :path: ".symlinks/plugins/flutter_secure_storage/ios"
+  music_kit:
+    :path: ".symlinks/plugins/music_kit/ios"
+
+SPEC CHECKSUMS:
+  app_settings: d103828c9f5d515c4df9ee754dabd443f7cedcf3
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  flutter_secure_storage: 7953c38a04c3fdbb00571bcd87d8e3b5ceb9daec
+  music_kit: defb969f1be323eb85c9707d7446e563408830d4
+
+PODFILE CHECKSUM: 57c8aed26fba39d3ec9424816221f294a07c58eb
+
+COCOAPODS: 1.11.2

@@ -2,5 +2,20 @@
   "appTitle": "misica",
   "@appTitle": {
     "description": "The title of the application"
-  }
+  },
+
+  "defaultExplanatory": "Soundtrack your life with Apple Music.",
+  "@defaultExplanatory": {},
+
+  "restrictedExplanatory": "Misica can not be used on this device because usage of Apple Music is restricted.",
+  "@restrictedExplanatory": {},
+
+  "secondaryExplanatory": "Please grant Misica\n access to Apple Music in Settings.",
+  "@secondaryExplanatory": {},
+
+  "continueText": "Continue",
+  "@continueText": {},
+
+  "openSettings": "Open Settings",
+  "@openSettings": {}
 }

@@ -49,5 +49,9 @@
 	<false/>
 	<key>kTCCServiceMediaLibrary</key>
 	<string>We need access to your music so you can listen to your songs using our app.</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_dartobservatory._tcp</string>
+	</array>
 </dict>
 </plist>
