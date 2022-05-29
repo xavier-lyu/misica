@@ -17,5 +17,20 @@
   "@continueText": {},
 
   "openSettings": "Open Settings",
-  "@openSettings": {}
+  "@openSettings": {},
+
+  "listenNow": "Listen Now",
+  "@listenNow": {},
+
+  "browse": "Browse",
+  "@browse": {},
+
+  "radio": "Radio",
+  "@radio": {},
+
+  "library": "Library",
+  "@library": {},
+
+  "search": "Search",
+  "@search": {}
 }
