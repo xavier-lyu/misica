@@ -1,0 +1,64 @@
+import 'package:flutter/material.dart';
+import 'package:misica/src/music/core/domain/resource.dart';
+
+import 'artwork_widget.dart';
+
+class ResourceCard extends StatelessWidget {
+  final Resource resource;
+  final double aspectRatio;
+  final double artworkAspectRatio;
+  final int artworkWidth;
+
+  const ResourceCard({
+    Key? key,
+    required this.resource,
+    required this.aspectRatio,
+    this.artworkAspectRatio = 1.0,
+    required this.artworkWidth,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        // final path = "/${resource.type.replaceAll("-", "/")}/${resource.id}";
+        // context.router.pushNamed(path);
+      },
+      child: AspectRatio(
+        aspectRatio: aspectRatio,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            AspectRatio(
+              aspectRatio: artworkAspectRatio,
+              child: ArtworkWidget(
+                artwork: resource.artwork,
+                width: artworkWidth,
+                height: (artworkWidth * artworkAspectRatio).floor(),
+              ),
+            ),
+            const SizedBox(height: 5),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  if (resource.name.isNotEmpty)
+                    Text(
+                      resource.name,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  if (resource.creatorName.isNotEmpty)
+                    Text(
+                      resource.creatorName,
+                      style: const TextStyle(),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

@@ -4,18 +4,17 @@ import 'package:misica/src/core/presentation/app_router.gr.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class IndexPage extends StatelessWidget {
+  const IndexPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
       routes: const [
-        ListenNowRouter(),
-        BrowseRouter(),
-        RadioRouter(),
-        LibraryRouter(),
-        SearchRouter(),
+        HomeRoute(),
+        RadioRoute(),
+        LibraryRoute(),
+        SearchRoute(),
       ],
       bottomNavigationBuilder: (_, tabsRouter) {
         return SalomonBottomBar(
@@ -23,12 +22,8 @@ class HomePage extends StatelessWidget {
           onTap: tabsRouter.setActiveIndex,
           items: [
             SalomonBottomBarItem(
-              icon: const Icon(Icons.favorite),
-              title: Text(context.loc.listenNow),
-            ),
-            SalomonBottomBarItem(
-              icon: const Icon(Icons.view_carousel),
-              title: Text(context.loc.browse),
+              icon: const Icon(Icons.home_filled),
+              title: Text(context.loc.home),
             ),
             SalomonBottomBarItem(
               icon: const Icon(Icons.radio),

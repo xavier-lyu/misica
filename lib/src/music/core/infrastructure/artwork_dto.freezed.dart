@@ -1,0 +1,303 @@
+// coverage:ignore-file
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+
+part of 'artwork_dto.dart';
+
+// **************************************************************************
+// FreezedGenerator
+// **************************************************************************
+
+T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
+ArtworkDTO _$ArtworkDTOFromJson(Map<String, dynamic> json) {
+  return _ArtworkDTO.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ArtworkDTO {
+  String? get bgColor => throw _privateConstructorUsedError;
+  int get height => throw _privateConstructorUsedError;
+  String? get textColor1 => throw _privateConstructorUsedError;
+  String? get textColor2 => throw _privateConstructorUsedError;
+  String? get textColor3 => throw _privateConstructorUsedError;
+  String? get textColor4 => throw _privateConstructorUsedError;
+  String get url => throw _privateConstructorUsedError;
+  int get width => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ArtworkDTOCopyWith<ArtworkDTO> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ArtworkDTOCopyWith<$Res> {
+  factory $ArtworkDTOCopyWith(
+          ArtworkDTO value, $Res Function(ArtworkDTO) then) =
+      _$ArtworkDTOCopyWithImpl<$Res>;
+  $Res call(
+      {String? bgColor,
+      int height,
+      String? textColor1,
+      String? textColor2,
+      String? textColor3,
+      String? textColor4,
+      String url,
+      int width});
+}
+
+/// @nodoc
+class _$ArtworkDTOCopyWithImpl<$Res> implements $ArtworkDTOCopyWith<$Res> {
+  _$ArtworkDTOCopyWithImpl(this._value, this._then);
+
+  final ArtworkDTO _value;
+  // ignore: unused_field
+  final $Res Function(ArtworkDTO) _then;
+
+  @override
+  $Res call({
+    Object? bgColor = freezed,
+    Object? height = freezed,
+    Object? textColor1 = freezed,
+    Object? textColor2 = freezed,
+    Object? textColor3 = freezed,
+    Object? textColor4 = freezed,
+    Object? url = freezed,
+    Object? width = freezed,
+  }) {
+    return _then(_value.copyWith(
+      bgColor: bgColor == freezed
+          ? _value.bgColor
+          : bgColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      height: height == freezed
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as int,
+      textColor1: textColor1 == freezed
+          ? _value.textColor1
+          : textColor1 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      textColor2: textColor2 == freezed
+          ? _value.textColor2
+          : textColor2 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      textColor3: textColor3 == freezed
+          ? _value.textColor3
+          : textColor3 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      textColor4: textColor4 == freezed
+          ? _value.textColor4
+          : textColor4 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      width: width == freezed
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$$_ArtworkDTOCopyWith<$Res>
+    implements $ArtworkDTOCopyWith<$Res> {
+  factory _$$_ArtworkDTOCopyWith(
+          _$_ArtworkDTO value, $Res Function(_$_ArtworkDTO) then) =
+      __$$_ArtworkDTOCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? bgColor,
+      int height,
+      String? textColor1,
+      String? textColor2,
+      String? textColor3,
+      String? textColor4,
+      String url,
+      int width});
+}
+
+/// @nodoc
+class __$$_ArtworkDTOCopyWithImpl<$Res> extends _$ArtworkDTOCopyWithImpl<$Res>
+    implements _$$_ArtworkDTOCopyWith<$Res> {
+  __$$_ArtworkDTOCopyWithImpl(
+      _$_ArtworkDTO _value, $Res Function(_$_ArtworkDTO) _then)
+      : super(_value, (v) => _then(v as _$_ArtworkDTO));
+
+  @override
+  _$_ArtworkDTO get _value => super._value as _$_ArtworkDTO;
+
+  @override
+  $Res call({
+    Object? bgColor = freezed,
+    Object? height = freezed,
+    Object? textColor1 = freezed,
+    Object? textColor2 = freezed,
+    Object? textColor3 = freezed,
+    Object? textColor4 = freezed,
+    Object? url = freezed,
+    Object? width = freezed,
+  }) {
+    return _then(_$_ArtworkDTO(
+      bgColor: bgColor == freezed
+          ? _value.bgColor
+          : bgColor // ignore: cast_nullable_to_non_nullable
+              as String?,
+      height: height == freezed
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as int,
+      textColor1: textColor1 == freezed
+          ? _value.textColor1
+          : textColor1 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      textColor2: textColor2 == freezed
+          ? _value.textColor2
+          : textColor2 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      textColor3: textColor3 == freezed
+          ? _value.textColor3
+          : textColor3 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      textColor4: textColor4 == freezed
+          ? _value.textColor4
+          : textColor4 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      url: url == freezed
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String,
+      width: width == freezed
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ArtworkDTO extends _ArtworkDTO {
+  const _$_ArtworkDTO(
+      {this.bgColor,
+      required this.height,
+      this.textColor1,
+      this.textColor2,
+      this.textColor3,
+      this.textColor4,
+      required this.url,
+      required this.width})
+      : super._();
+
+  factory _$_ArtworkDTO.fromJson(Map<String, dynamic> json) =>
+      _$$_ArtworkDTOFromJson(json);
+
+  @override
+  final String? bgColor;
+  @override
+  final int height;
+  @override
+  final String? textColor1;
+  @override
+  final String? textColor2;
+  @override
+  final String? textColor3;
+  @override
+  final String? textColor4;
+  @override
+  final String url;
+  @override
+  final int width;
+
+  @override
+  String toString() {
+    return 'ArtworkDTO(bgColor: $bgColor, height: $height, textColor1: $textColor1, textColor2: $textColor2, textColor3: $textColor3, textColor4: $textColor4, url: $url, width: $width)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ArtworkDTO &&
+            const DeepCollectionEquality().equals(other.bgColor, bgColor) &&
+            const DeepCollectionEquality().equals(other.height, height) &&
+            const DeepCollectionEquality()
+                .equals(other.textColor1, textColor1) &&
+            const DeepCollectionEquality()
+                .equals(other.textColor2, textColor2) &&
+            const DeepCollectionEquality()
+                .equals(other.textColor3, textColor3) &&
+            const DeepCollectionEquality()
+                .equals(other.textColor4, textColor4) &&
+            const DeepCollectionEquality().equals(other.url, url) &&
+            const DeepCollectionEquality().equals(other.width, width));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(bgColor),
+      const DeepCollectionEquality().hash(height),
+      const DeepCollectionEquality().hash(textColor1),
+      const DeepCollectionEquality().hash(textColor2),
+      const DeepCollectionEquality().hash(textColor3),
+      const DeepCollectionEquality().hash(textColor4),
+      const DeepCollectionEquality().hash(url),
+      const DeepCollectionEquality().hash(width));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ArtworkDTOCopyWith<_$_ArtworkDTO> get copyWith =>
+      __$$_ArtworkDTOCopyWithImpl<_$_ArtworkDTO>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ArtworkDTOToJson(this);
+  }
+}
+
+abstract class _ArtworkDTO extends ArtworkDTO {
+  const factory _ArtworkDTO(
+      {final String? bgColor,
+      required final int height,
+      final String? textColor1,
+      final String? textColor2,
+      final String? textColor3,
+      final String? textColor4,
+      required final String url,
+      required final int width}) = _$_ArtworkDTO;
+  const _ArtworkDTO._() : super._();
+
+  factory _ArtworkDTO.fromJson(Map<String, dynamic> json) =
+      _$_ArtworkDTO.fromJson;
+
+  @override
+  String? get bgColor => throw _privateConstructorUsedError;
+  @override
+  int get height => throw _privateConstructorUsedError;
+  @override
+  String? get textColor1 => throw _privateConstructorUsedError;
+  @override
+  String? get textColor2 => throw _privateConstructorUsedError;
+  @override
+  String? get textColor3 => throw _privateConstructorUsedError;
+  @override
+  String? get textColor4 => throw _privateConstructorUsedError;
+  @override
+  String get url => throw _privateConstructorUsedError;
+  @override
+  int get width => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ArtworkDTOCopyWith<_$_ArtworkDTO> get copyWith =>
+      throw _privateConstructorUsedError;
+}

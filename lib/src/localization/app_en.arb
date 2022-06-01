@@ -19,11 +19,8 @@
   "openSettings": "Open Settings",
   "@openSettings": {},
 
-  "listenNow": "Listen Now",
-  "@listenNow": {},
-
-  "browse": "Browse",
-  "@browse": {},
+  "home": "Home",
+  "@home": {},
 
   "radio": "Radio",
   "@radio": {},

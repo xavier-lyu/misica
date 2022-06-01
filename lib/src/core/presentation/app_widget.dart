@@ -38,7 +38,7 @@ class AppWidget extends ConsumerWidget {
         },
         authorized: () {
           _appRouter.pushAndPopUntil(
-            const HomeRoute(),
+            const IndexRoute(),
             predicate: (route) => route.settings.name == SplashRoute.name,
           );
         },
