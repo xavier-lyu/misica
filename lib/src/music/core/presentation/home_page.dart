@@ -3,6 +3,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/charts/presentation/charts_list.dart';
+import 'package:misica/src/music/core/presentation/divider_widget.dart';
+import 'package:misica/src/music/recommendations/presentation/recommendations_list.dart';
 
 import 'app_navbar.dart';
 
@@ -31,8 +33,16 @@ class HomePage extends HookWidget {
           ),
           const SliverPadding(
             padding: EdgeInsetsDirectional.only(top: 15, bottom: 15),
+            sliver: RecommendationsList(),
+          ),
+          const SliverToBoxAdapter(
+              child: DividerWidget(
+            endIndent: 0,
+          )),
+          const SliverPadding(
+            padding: EdgeInsetsDirectional.only(top: 15, bottom: 15),
             sliver: ChartsList(),
-          )
+          ),
         ],
       ),
     );

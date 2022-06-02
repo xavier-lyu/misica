@@ -49,6 +49,46 @@ class ResourceDTO with _$ResourceDTO {
 
   factory ResourceDTO.fromJson(Map<String, dynamic> json) =>
       _$ResourceDTOFromJson(json);
+
+  Resource toDomain() {
+    return map(
+      (value) => Resource(
+        id: id,
+        type: type,
+        attributes: ResourceAttributes.fromJson(value.attributes),
+      ),
+      album: (value) => Album(
+        id: id,
+        type: type,
+        attributes: value.attributes.toDomain(),
+      ),
+      artist: (value) => Artist(
+        id: id,
+        type: type,
+        attributes: value.attributes.toDomain(),
+      ),
+      playlist: (value) => Playlist(
+        id: id,
+        type: type,
+        attributes: value.attributes.toDomain(),
+      ),
+      song: (value) => Song(
+        id: id,
+        type: type,
+        attributes: value.attributes.toDomain(),
+      ),
+      station: (value) => Station(
+        id: id,
+        type: type,
+        attributes: value.attributes.toDomain(),
+      ),
+      musicVideo: (value) => MusicVideo(
+        id: id,
+        type: type,
+        attributes: value.attributes.toDomain(),
+      ),
+    );
+  }
 }
 
 @freezed
