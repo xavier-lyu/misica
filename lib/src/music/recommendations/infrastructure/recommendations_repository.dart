@@ -18,7 +18,8 @@ class RecommendationsRepository {
         'artistUrl',
         'f',
       );
-      return right(remoteRecommendations.map((e) => e.toDomain()).toList());
+      return right(
+          remoteRecommendations.data.map((e) => e.toDomain()).toList());
     } on DioError catch (e) {
       return left(MusicFailure.api(e.response?.statusCode));
     }

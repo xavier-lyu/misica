@@ -6,6 +6,22 @@ part of 'recommendation_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+_$_RecommendationsResponse _$$_RecommendationsResponseFromJson(Map json) =>
+    _$_RecommendationsResponse(
+      next: json['next'] as String?,
+      data: (json['data'] as List<dynamic>)
+          .map((e) =>
+              RecommendationDTO.fromJson(Map<String, dynamic>.from(e as Map)))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$_RecommendationsResponseToJson(
+        _$_RecommendationsResponse instance) =>
+    <String, dynamic>{
+      'next': instance.next,
+      'data': instance.data.map((e) => e.toJson()).toList(),
+    };
+
 _$_RecommendationDTO _$$_RecommendationDTOFromJson(Map json) =>
     _$_RecommendationDTO(
       id: json['id'] as String?,

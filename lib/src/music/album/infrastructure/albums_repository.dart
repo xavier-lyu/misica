@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:misica/src/music/core/domain/music_failure.dart';
@@ -16,9 +18,11 @@ class AlbumsRepository {
   ) async {
     try {
       final album = await _remoteService.fetchCatalogAlbum(storefront, id);
-      return right(album.first.toDomain() as Album);
+      return right(album.data.first.toDomain() as Album);
     } on DioError catch (e) {
       return left(MusicFailure.api(e.response?.statusCode));
+    } on StateError {
+      return left(const MusicFailure.api(HttpStatus.notFound));
     }
   }
 }

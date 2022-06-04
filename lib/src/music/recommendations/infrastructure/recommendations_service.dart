@@ -11,7 +11,7 @@ abstract class RecommendationsService {
       _RecommendationsService;
 
   @GET("/me/recommendations")
-  Future<List<RecommendationDTO>> getRecommendations(
+  Future<RecommendationsResponse> getRecommendations(
     @Query("extend[albums]") String extendAlbums,
     @Query("extend[songs]") String extendSongs,
     @Query("art[url]") String artUrl,

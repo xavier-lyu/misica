@@ -8,14 +8,12 @@ import 'package:misica/src/authorization/shared/providers.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
 import 'package:misica/src/core/shared/providers.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
-import 'package:misica/src/music/core/infrastructure/music_response_intercepter.dart';
 
 final initializationProvider = FutureProvider<Unit>((ref) async {
-  ref.read(musicDioProvider).interceptors.addAll([
-    LogInterceptor(),
-    MusicResponseIntercepter(),
-    ref.watch(musicAuthIntercepter)
-  ]);
+  ref
+      .read(musicDioProvider)
+      .interceptors
+      .addAll([LogInterceptor(), ref.watch(musicAuthIntercepter)]);
 
   final authNotifier = ref.read<AuthNotifier>(authNotifierProvider.notifier);
   await authNotifier.checkAndUpdateAuthState();

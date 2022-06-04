@@ -14,6 +14,170 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+RecommendationsResponse _$RecommendationsResponseFromJson(
+    Map<String, dynamic> json) {
+  return _RecommendationsResponse.fromJson(json);
+}
+
+/// @nodoc
+mixin _$RecommendationsResponse {
+  String? get next => throw _privateConstructorUsedError;
+  List<RecommendationDTO> get data => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $RecommendationsResponseCopyWith<RecommendationsResponse> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $RecommendationsResponseCopyWith<$Res> {
+  factory $RecommendationsResponseCopyWith(RecommendationsResponse value,
+          $Res Function(RecommendationsResponse) then) =
+      _$RecommendationsResponseCopyWithImpl<$Res>;
+  $Res call({String? next, List<RecommendationDTO> data});
+}
+
+/// @nodoc
+class _$RecommendationsResponseCopyWithImpl<$Res>
+    implements $RecommendationsResponseCopyWith<$Res> {
+  _$RecommendationsResponseCopyWithImpl(this._value, this._then);
+
+  final RecommendationsResponse _value;
+  // ignore: unused_field
+  final $Res Function(RecommendationsResponse) _then;
+
+  @override
+  $Res call({
+    Object? next = freezed,
+    Object? data = freezed,
+  }) {
+    return _then(_value.copyWith(
+      next: next == freezed
+          ? _value.next
+          : next // ignore: cast_nullable_to_non_nullable
+              as String?,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<RecommendationDTO>,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$$_RecommendationsResponseCopyWith<$Res>
+    implements $RecommendationsResponseCopyWith<$Res> {
+  factory _$$_RecommendationsResponseCopyWith(_$_RecommendationsResponse value,
+          $Res Function(_$_RecommendationsResponse) then) =
+      __$$_RecommendationsResponseCopyWithImpl<$Res>;
+  @override
+  $Res call({String? next, List<RecommendationDTO> data});
+}
+
+/// @nodoc
+class __$$_RecommendationsResponseCopyWithImpl<$Res>
+    extends _$RecommendationsResponseCopyWithImpl<$Res>
+    implements _$$_RecommendationsResponseCopyWith<$Res> {
+  __$$_RecommendationsResponseCopyWithImpl(_$_RecommendationsResponse _value,
+      $Res Function(_$_RecommendationsResponse) _then)
+      : super(_value, (v) => _then(v as _$_RecommendationsResponse));
+
+  @override
+  _$_RecommendationsResponse get _value =>
+      super._value as _$_RecommendationsResponse;
+
+  @override
+  $Res call({
+    Object? next = freezed,
+    Object? data = freezed,
+  }) {
+    return _then(_$_RecommendationsResponse(
+      next: next == freezed
+          ? _value.next
+          : next // ignore: cast_nullable_to_non_nullable
+              as String?,
+      data: data == freezed
+          ? _value._data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<RecommendationDTO>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_RecommendationsResponse extends _RecommendationsResponse {
+  const _$_RecommendationsResponse(
+      {this.next, required final List<RecommendationDTO> data})
+      : _data = data,
+        super._();
+
+  factory _$_RecommendationsResponse.fromJson(Map<String, dynamic> json) =>
+      _$$_RecommendationsResponseFromJson(json);
+
+  @override
+  final String? next;
+  final List<RecommendationDTO> _data;
+  @override
+  List<RecommendationDTO> get data {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_data);
+  }
+
+  @override
+  String toString() {
+    return 'RecommendationsResponse(next: $next, data: $data)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_RecommendationsResponse &&
+            const DeepCollectionEquality().equals(other.next, next) &&
+            const DeepCollectionEquality().equals(other._data, _data));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(next),
+      const DeepCollectionEquality().hash(_data));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_RecommendationsResponseCopyWith<_$_RecommendationsResponse>
+      get copyWith =>
+          __$$_RecommendationsResponseCopyWithImpl<_$_RecommendationsResponse>(
+              this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_RecommendationsResponseToJson(this);
+  }
+}
+
+abstract class _RecommendationsResponse extends RecommendationsResponse {
+  const factory _RecommendationsResponse(
+          {final String? next, required final List<RecommendationDTO> data}) =
+      _$_RecommendationsResponse;
+  const _RecommendationsResponse._() : super._();
+
+  factory _RecommendationsResponse.fromJson(Map<String, dynamic> json) =
+      _$_RecommendationsResponse.fromJson;
+
+  @override
+  String? get next => throw _privateConstructorUsedError;
+  @override
+  List<RecommendationDTO> get data => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_RecommendationsResponseCopyWith<_$_RecommendationsResponse>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
 RecommendationDTO _$RecommendationDTOFromJson(Map<String, dynamic> json) {
   return _RecommendationDTO.fromJson(json);
 }

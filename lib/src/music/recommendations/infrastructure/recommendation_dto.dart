@@ -7,6 +7,18 @@ part 'recommendation_dto.freezed.dart';
 part 'recommendation_dto.g.dart';
 
 @freezed
+class RecommendationsResponse with _$RecommendationsResponse {
+  const RecommendationsResponse._();
+  const factory RecommendationsResponse({
+    String? next,
+    required List<RecommendationDTO> data,
+  }) = _RecommendationsResponse;
+
+  factory RecommendationsResponse.fromJson(Map<String, dynamic> json) =>
+      _$RecommendationsResponseFromJson(json);
+}
+
+@freezed
 class RecommendationDTO with _$RecommendationDTO {
   const RecommendationDTO._();
   const factory RecommendationDTO({
