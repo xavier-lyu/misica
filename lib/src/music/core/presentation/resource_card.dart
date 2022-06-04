@@ -23,12 +23,11 @@ class ResourceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        resource.mapOrNull(
-          (value) => null,
-          album: (album) {
-            context.router.push(AlbumRoute(id: album.id));
-          },
-        );
+        resource.mapOrNull((value) => null, album: (album) {
+          context.router.push(AlbumRoute(id: album.id));
+        }, playlist: (playlist) {
+          context.router.push(PlaylistRoute(id: playlist.id));
+        });
       },
       child: AspectRatio(
         aspectRatio: aspectRatio,

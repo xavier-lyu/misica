@@ -26,7 +26,7 @@ class AlbumAttributesDTO with _$AlbumAttributesDTO {
     bool? isMasteredForItunes,
     bool? isSingle,
     required String name,
-    required PlayParamsDTO playParams,
+    PlayParamsDTO? playParams,
     String? recordLabel,
     @DateTimeConverter() DateTime? releaseDate,
     int? trackCount,
@@ -43,7 +43,7 @@ class AlbumAttributesDTO with _$AlbumAttributesDTO {
       artwork: artwork?.toDomain(),
       contentRating: contentRating,
       name: name,
-      playParams: playParams.toDomain(),
+      playParams: playParams?.toDomain(),
       url: url,
       releaseDate: releaseDate,
       recordLabel: recordLabel,
@@ -88,7 +88,7 @@ class MusicVideoAttributesDTO with _$MusicVideoAttributesDTO {
     required bool hasHDR,
     required String isrc,
     required String name,
-    required PlayParamsDTO playParams,
+    PlayParamsDTO? playParams,
     List<Map<String, dynamic>>? previews,
     DateTime? releaseDate,
     String? url,
@@ -104,7 +104,7 @@ class MusicVideoAttributesDTO with _$MusicVideoAttributesDTO {
       artwork: artwork?.toDomain(),
       durationInMillis: durationInMillis,
       name: name,
-      playParams: playParams.toDomain(),
+      playParams: playParams?.toDomain(),
       previews: previews,
       url: url,
     );
@@ -125,7 +125,7 @@ class PlaylistAttributesDTO with _$PlaylistAttributesDTO {
     String? lastModifiedDate,
     required String name,
     String? playlistType,
-    required PlayParamsDTO playParams,
+    PlayParamsDTO? playParams,
     String? url,
     String? curatorSocialHandle,
   }) = _PlaylistAttributesDTO;
@@ -138,8 +138,9 @@ class PlaylistAttributesDTO with _$PlaylistAttributesDTO {
       artwork: artwork?.toDomain(),
       curatorName: curatorName,
       name: name,
-      playParams: playParams.toDomain(),
+      playParams: playParams?.toDomain(),
       url: url,
+      editorialNotes: description?.toDomain(),
     );
   }
 }
@@ -165,7 +166,7 @@ class SongAttributesDTO with _$SongAttributesDTO {
     bool? isMasteredForItunes,
     String? isrc,
     required String name,
-    required PlayParamsDTO playParams,
+    PlayParamsDTO? playParams,
     List<Map<String, dynamic>>? previews,
     DateTime? releaseDate,
     required int trackNumber,
@@ -183,7 +184,7 @@ class SongAttributesDTO with _$SongAttributesDTO {
       artistName: artistName,
       durationInMillis: durationInMillis,
       name: name,
-      playParams: playParams.toDomain(),
+      playParams: playParams?.toDomain(),
       trackNumber: trackNumber,
       url: url,
       previews: previews,
@@ -199,7 +200,7 @@ class StationAttributesDTO with _$StationAttributesDTO {
   const factory StationAttributesDTO({
     required bool isLive,
     ArtworkDTO? artwork,
-    required PlayParamsDTO playParams,
+    PlayParamsDTO? playParams,
     EditorialNotesDTO? editorialNotes,
     int? durationInMillis,
     String? mediaKind,
@@ -214,7 +215,7 @@ class StationAttributesDTO with _$StationAttributesDTO {
   StationAttributes toDomain() {
     return StationAttributes(
       artwork: artwork?.toDomain(),
-      playParams: playParams.toDomain(),
+      playParams: playParams?.toDomain(),
       durationInMillis: durationInMillis,
       name: name,
       url: url,

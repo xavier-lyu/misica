@@ -16,15 +16,15 @@ class ResourceDTO with _$ResourceDTO {
   const factory ResourceDTO(
     String id,
     String type,
-    Map<String, dynamic> attributes,
+    Map<String, dynamic>? attributes,
     Map<String, ResourceRelationshipDTO>? relationships,
     Map<String, ResourceViewDTO>? views,
-  ) = _ResourceDTO;
+  ) = ResourceRawDTO;
 
   const factory ResourceDTO.album(
     String id,
     String type,
-    AlbumAttributesDTO attributes,
+    AlbumAttributesDTO? attributes,
     AlbumRelationshipsDTO? relationships,
     Map<String, ResourceViewDTO>? views,
   ) = AlbumDTO;
@@ -32,7 +32,7 @@ class ResourceDTO with _$ResourceDTO {
   const factory ResourceDTO.artist(
     String id,
     String type,
-    ArtistAttributesDTO attributes,
+    ArtistAttributesDTO? attributes,
     ArtistRelationshipsDTO? relationships,
     Map<String, ResourceViewDTO>? views,
   ) = ArtistDTO;
@@ -40,7 +40,7 @@ class ResourceDTO with _$ResourceDTO {
   const factory ResourceDTO.playlist(
     String id,
     String type,
-    PlaylistAttributesDTO attributes,
+    PlaylistAttributesDTO? attributes,
     PlaylistRelationshipsDTO? relationships,
     Map<String, ResourceViewDTO>? views,
   ) = PlaylistDTO;
@@ -48,20 +48,20 @@ class ResourceDTO with _$ResourceDTO {
   const factory ResourceDTO.song(
     String id,
     String type,
-    SongAttributesDTO attributes,
+    SongAttributesDTO? attributes,
     SongRelationshipsDTO? relationships,
   ) = SongDTO;
 
   const factory ResourceDTO.station(
     String id,
     String type,
-    StationAttributesDTO attributes,
+    StationAttributesDTO? attributes,
   ) = StationDTO;
 
   const factory ResourceDTO.musicVideo(
     String id,
     String type,
-    MusicVideoAttributesDTO attributes,
+    MusicVideoAttributesDTO? attributes,
     MusicVideoRelationshipsDTO? relationships,
     Map<String, ResourceViewDTO>? views,
   ) = MusicVideoDTO;
@@ -69,7 +69,7 @@ class ResourceDTO with _$ResourceDTO {
   const factory ResourceDTO.curator(
     String id,
     String type,
-    CuratorAttributesDTO attributes,
+    CuratorAttributesDTO? attributes,
     CuratorRelationshipsDTO? relationships,
   ) = CuratorDTO;
 
@@ -81,50 +81,52 @@ class ResourceDTO with _$ResourceDTO {
       (value) => Resource(
         id: id,
         type: type,
-        attributes: ResourceAttributes.fromJson(value.attributes),
+        attributes: value.attributes != null
+            ? ResourceAttributes.fromJson(value.attributes!)
+            : null,
       ),
       album: (value) => Album(
         id: id,
         type: type,
-        attributes: value.attributes.toDomain(),
+        attributes: value.attributes?.toDomain(),
         relationships: value.relationships?.toDomain(),
         views: value.views?.toDomain(),
       ),
       artist: (value) => Artist(
         id: id,
         type: type,
-        attributes: value.attributes.toDomain(),
+        attributes: value.attributes?.toDomain(),
         relationships: value.relationships?.toDomain(),
         views: value.views?.toDomain(),
       ),
       playlist: (value) => Playlist(
         id: id,
         type: type,
-        attributes: value.attributes.toDomain(),
+        attributes: value.attributes?.toDomain(),
         relationships: value.relationships?.toDomain(),
         views: value.views?.toDomain(),
       ),
       song: (value) => Song(
         id: id,
         type: type,
-        attributes: value.attributes.toDomain(),
+        attributes: value.attributes?.toDomain(),
         relationships: value.relationships?.toDomain(),
       ),
       station: (value) => Station(
         id: id,
         type: type,
-        attributes: value.attributes.toDomain(),
+        attributes: value.attributes?.toDomain(),
       ),
       musicVideo: (value) => MusicVideo(
         id: id,
         type: type,
-        attributes: value.attributes.toDomain(),
+        attributes: value.attributes?.toDomain(),
         relationships: value.relationships?.toDomain(),
       ),
       curator: (value) => Curator(
         id: id,
         type: type,
-        attributes: value.attributes.toDomain(),
+        attributes: value.attributes?.toDomain(),
         relationships: value.relationships?.toDomain(),
       ),
     );

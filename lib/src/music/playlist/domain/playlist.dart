@@ -1,20 +1,12 @@
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/shared/formatters.dart';
 
-extension AlbumExt on Album {
+extension PlaylistExt on Playlist {
   List<Song> get songs {
     return relationships?.tracks ?? [];
   }
 
   Duration get duration => durationOfSongs(songs);
-
-  DateTime? get releaseDate => maybeMap(
-        (value) => null,
-        orElse: () => null,
-        album: (album) => album.attributes?.releaseDate,
-      );
-
-  String get copyright => attributes?.copyright ?? '';
 
   String? get description =>
       attributes?.editorialNotes?.standard ?? attributes?.editorialNotes?.short;

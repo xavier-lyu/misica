@@ -1,0 +1,116 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:misica/src/music/core/presentation/resource_tile.dart';
+import 'package:misica/src/music/core/presentation/retry_widget.dart';
+import 'package:misica/src/music/core/presentation/songs_list.dart';
+import 'package:misica/src/music/core/shared/formatters.dart';
+import 'package:misica/src/music/playlist/shared/providers.dart';
+
+import 'playlist_footer_view.dart';
+import 'playlist_header_view.dart';
+
+class PlaylistPage extends StatefulHookConsumerWidget {
+  const PlaylistPage({Key? key, required this.id}) : super(key: key);
+
+  final String id;
+
+  @override
+  ConsumerState<ConsumerStatefulWidget> createState() => _PlaylistPageState();
+}
+
+class _PlaylistPageState extends ConsumerState<PlaylistPage> {
+  @override
+  void initState() {
+    super.initState();
+    Future.microtask(() {
+      ref
+          .watch(playlistsNotifierProvider.notifier)
+          .fetchCatalogPlaylist(widget.id);
+
+      ref
+          .watch(playlistTracksNotifierProvider.notifier)
+          .fetchPlaylistTracks(widget.id);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final scrollOffset = useState<double>(0);
+    final scrollController = useScrollController();
+    scrollController.addListener(() {
+      scrollOffset.value = scrollController.offset;
+    });
+
+    return Scaffold(
+      body: Consumer(builder: (context, ref, child) {
+        final state = ref.watch(playlistsNotifierProvider);
+        final tracksState = ref.watch(playlistTracksNotifierProvider);
+
+        return state.maybeWhen(
+          orElse: () => CustomScrollView(
+            slivers: [
+              const SliverAppBar(),
+              SliverFillRemaining(
+                child: RetryWidget(onRetry: () {
+                  ref
+                      .read(playlistsNotifierProvider.notifier)
+                      .fetchCatalogPlaylist(widget.id);
+                }),
+              )
+            ],
+          ),
+          loading: () => const Center(child: CircularProgressIndicator()),
+          data: (playlist) => CustomScrollView(
+            controller: scrollController,
+            slivers: [
+              SliverAppBar(
+                title: scrollOffset.value >= 264 ? Text(playlist.name) : null,
+                pinned: true,
+              ),
+              SliverPadding(
+                padding: const EdgeInsetsDirectional.only(
+                  top: 5,
+                  start: 20,
+                  end: 20,
+                ),
+                sliver: SliverToBoxAdapter(
+                  child: PlaylistHeaderView(playlist: playlist),
+                ),
+              ),
+              SliverPadding(
+                padding: const EdgeInsetsDirectional.only(
+                  top: 20,
+                  start: 20,
+                  end: 20,
+                  bottom: 44,
+                ),
+                sliver: tracksState.when(
+                  error: (_, __) => SliverToBoxAdapter(child: Container()),
+                  loading: () => const SliverToBoxAdapter(
+                    child: Center(
+                      child: CircularProgressIndicator(),
+                    ),
+                  ),
+                  data: (tracks) {
+                    return SongsList(
+                      songs: tracks,
+                      itemBuilder: (_, song) => ResourceTile(resource: song),
+                      footerBuilder: (_) => Padding(
+                        padding: const EdgeInsetsDirectional.only(top: 15),
+                        child: PlaylistFooterView(
+                          songsCount: tracks.length,
+                          duration: durationOfSongs(tracks),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
+        );
+      }),
+    );
+  }
+}

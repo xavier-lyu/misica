@@ -34,7 +34,7 @@ class AlbumAttributes with _$AlbumAttributes {
     required Artwork? artwork,
     required String? contentRating,
     required String name,
-    required PlayParams playParams,
+    required PlayParams? playParams,
     required String? url,
     required DateTime? releaseDate,
     required String? recordLabel,
@@ -61,7 +61,7 @@ class MusicVideoAttributes with _$MusicVideoAttributes {
     required Artwork? artwork,
     required int durationInMillis,
     required String name,
-    required PlayParams playParams,
+    required PlayParams? playParams,
     required List<Map<String, dynamic>>? previews,
     required String? url,
   }) = _MusicVideoAttributes;
@@ -74,8 +74,9 @@ class PlaylistAttributes with _$PlaylistAttributes {
     required Artwork? artwork,
     required String? curatorName,
     required String name,
-    required PlayParams playParams,
+    required PlayParams? playParams,
     required String? url,
+    required EditorialNotes? editorialNotes,
   }) = _PlaylistAttributes;
 }
 
@@ -90,7 +91,7 @@ class SongAttributes with _$SongAttributes {
     required String? contentRating,
     required int durationInMillis,
     required String name,
-    required PlayParams playParams,
+    required PlayParams? playParams,
     required List<Map<String, dynamic>>? previews,
     required int trackNumber,
     required String? url,
@@ -102,7 +103,7 @@ class StationAttributes with _$StationAttributes {
   const StationAttributes._();
   const factory StationAttributes({
     required Artwork? artwork,
-    required PlayParams playParams,
+    required PlayParams? playParams,
     required int? durationInMillis,
     required String name,
     required String? url,

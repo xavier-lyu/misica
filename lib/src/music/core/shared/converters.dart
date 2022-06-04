@@ -20,10 +20,11 @@ class ResourceDTOConverter
       return StationDTO.fromJson(json);
     } else if (dtoType.startsWith('music-video')) {
       return MusicVideoDTO.fromJson(json);
-    } else if (dtoType.endsWith('curators')) {
+    } else if (dtoType.endsWith('curators') ||
+        dtoType.endsWith('social-profiles')) {
       return CuratorDTO.fromJson(json);
     } else {
-      return ResourceDTO.fromJson(json);
+      return ResourceRawDTO.fromJson(json);
     }
   }
 

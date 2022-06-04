@@ -33,7 +33,7 @@ mixin _$AlbumAttributesDTO {
   bool? get isMasteredForItunes => throw _privateConstructorUsedError;
   bool? get isSingle => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  PlayParamsDTO get playParams => throw _privateConstructorUsedError;
+  PlayParamsDTO? get playParams => throw _privateConstructorUsedError;
   String? get recordLabel => throw _privateConstructorUsedError;
   @DateTimeConverter()
   DateTime? get releaseDate => throw _privateConstructorUsedError;
@@ -65,7 +65,7 @@ abstract class $AlbumAttributesDTOCopyWith<$Res> {
       bool? isMasteredForItunes,
       bool? isSingle,
       String name,
-      PlayParamsDTO playParams,
+      PlayParamsDTO? playParams,
       String? recordLabel,
       @DateTimeConverter() DateTime? releaseDate,
       int? trackCount,
@@ -73,7 +73,7 @@ abstract class $AlbumAttributesDTOCopyWith<$Res> {
 
   $ArtworkDTOCopyWith<$Res>? get artwork;
   $EditorialNotesDTOCopyWith<$Res>? get editorialNotes;
-  $PlayParamsDTOCopyWith<$Res> get playParams;
+  $PlayParamsDTOCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
@@ -162,7 +162,7 @@ class _$AlbumAttributesDTOCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParamsDTO,
+              as PlayParamsDTO?,
       recordLabel: recordLabel == freezed
           ? _value.recordLabel
           : recordLabel // ignore: cast_nullable_to_non_nullable
@@ -205,8 +205,12 @@ class _$AlbumAttributesDTOCopyWithImpl<$Res>
   }
 
   @override
-  $PlayParamsDTOCopyWith<$Res> get playParams {
-    return $PlayParamsDTOCopyWith<$Res>(_value.playParams, (value) {
+  $PlayParamsDTOCopyWith<$Res>? get playParams {
+    if (_value.playParams == null) {
+      return null;
+    }
+
+    return $PlayParamsDTOCopyWith<$Res>(_value.playParams!, (value) {
       return _then(_value.copyWith(playParams: value));
     });
   }
@@ -233,7 +237,7 @@ abstract class _$$_AlbumAttributesDTOCopyWith<$Res>
       bool? isMasteredForItunes,
       bool? isSingle,
       String name,
-      PlayParamsDTO playParams,
+      PlayParamsDTO? playParams,
       String? recordLabel,
       @DateTimeConverter() DateTime? releaseDate,
       int? trackCount,
@@ -244,7 +248,7 @@ abstract class _$$_AlbumAttributesDTOCopyWith<$Res>
   @override
   $EditorialNotesDTOCopyWith<$Res>? get editorialNotes;
   @override
-  $PlayParamsDTOCopyWith<$Res> get playParams;
+  $PlayParamsDTOCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
@@ -335,7 +339,7 @@ class __$$_AlbumAttributesDTOCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParamsDTO,
+              as PlayParamsDTO?,
       recordLabel: recordLabel == freezed
           ? _value.recordLabel
           : recordLabel // ignore: cast_nullable_to_non_nullable
@@ -373,7 +377,7 @@ class _$_AlbumAttributesDTO extends _AlbumAttributesDTO {
       this.isMasteredForItunes,
       this.isSingle,
       required this.name,
-      required this.playParams,
+      this.playParams,
       this.recordLabel,
       @DateTimeConverter() this.releaseDate,
       this.trackCount,
@@ -418,7 +422,7 @@ class _$_AlbumAttributesDTO extends _AlbumAttributesDTO {
   @override
   final String name;
   @override
-  final PlayParamsDTO playParams;
+  final PlayParamsDTO? playParams;
   @override
   final String? recordLabel;
   @override
@@ -520,7 +524,7 @@ abstract class _AlbumAttributesDTO extends AlbumAttributesDTO {
       final bool? isMasteredForItunes,
       final bool? isSingle,
       required final String name,
-      required final PlayParamsDTO playParams,
+      final PlayParamsDTO? playParams,
       final String? recordLabel,
       @DateTimeConverter() final DateTime? releaseDate,
       final int? trackCount,
@@ -557,7 +561,7 @@ abstract class _AlbumAttributesDTO extends AlbumAttributesDTO {
   @override
   String get name => throw _privateConstructorUsedError;
   @override
-  PlayParamsDTO get playParams => throw _privateConstructorUsedError;
+  PlayParamsDTO? get playParams => throw _privateConstructorUsedError;
   @override
   String? get recordLabel => throw _privateConstructorUsedError;
   @override
@@ -818,7 +822,7 @@ mixin _$MusicVideoAttributesDTO {
   bool get hasHDR => throw _privateConstructorUsedError;
   String get isrc => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  PlayParamsDTO get playParams => throw _privateConstructorUsedError;
+  PlayParamsDTO? get playParams => throw _privateConstructorUsedError;
   List<Map<String, dynamic>>? get previews =>
       throw _privateConstructorUsedError;
   DateTime? get releaseDate => throw _privateConstructorUsedError;
@@ -846,14 +850,14 @@ abstract class $MusicVideoAttributesDTOCopyWith<$Res> {
       bool hasHDR,
       String isrc,
       String name,
-      PlayParamsDTO playParams,
+      PlayParamsDTO? playParams,
       List<Map<String, dynamic>>? previews,
       DateTime? releaseDate,
       String? url});
 
   $ArtworkDTOCopyWith<$Res>? get artwork;
   $EditorialNotesDTOCopyWith<$Res>? get editorialNotes;
-  $PlayParamsDTOCopyWith<$Res> get playParams;
+  $PlayParamsDTOCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
@@ -926,7 +930,7 @@ class _$MusicVideoAttributesDTOCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParamsDTO,
+              as PlayParamsDTO?,
       previews: previews == freezed
           ? _value.previews
           : previews // ignore: cast_nullable_to_non_nullable
@@ -965,8 +969,12 @@ class _$MusicVideoAttributesDTOCopyWithImpl<$Res>
   }
 
   @override
-  $PlayParamsDTOCopyWith<$Res> get playParams {
-    return $PlayParamsDTOCopyWith<$Res>(_value.playParams, (value) {
+  $PlayParamsDTOCopyWith<$Res>? get playParams {
+    if (_value.playParams == null) {
+      return null;
+    }
+
+    return $PlayParamsDTOCopyWith<$Res>(_value.playParams!, (value) {
       return _then(_value.copyWith(playParams: value));
     });
   }
@@ -990,7 +998,7 @@ abstract class _$$_MusicVideoAttributesDTOCopyWith<$Res>
       bool hasHDR,
       String isrc,
       String name,
-      PlayParamsDTO playParams,
+      PlayParamsDTO? playParams,
       List<Map<String, dynamic>>? previews,
       DateTime? releaseDate,
       String? url});
@@ -1000,7 +1008,7 @@ abstract class _$$_MusicVideoAttributesDTOCopyWith<$Res>
   @override
   $EditorialNotesDTOCopyWith<$Res>? get editorialNotes;
   @override
-  $PlayParamsDTOCopyWith<$Res> get playParams;
+  $PlayParamsDTOCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
@@ -1076,7 +1084,7 @@ class __$$_MusicVideoAttributesDTOCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParamsDTO,
+              as PlayParamsDTO?,
       previews: previews == freezed
           ? _value._previews
           : previews // ignore: cast_nullable_to_non_nullable
@@ -1107,7 +1115,7 @@ class _$_MusicVideoAttributesDTO extends _MusicVideoAttributesDTO {
       required this.hasHDR,
       required this.isrc,
       required this.name,
-      required this.playParams,
+      this.playParams,
       final List<Map<String, dynamic>>? previews,
       this.releaseDate,
       this.url})
@@ -1146,7 +1154,7 @@ class _$_MusicVideoAttributesDTO extends _MusicVideoAttributesDTO {
   @override
   final String name;
   @override
-  final PlayParamsDTO playParams;
+  final PlayParamsDTO? playParams;
   final List<Map<String, dynamic>>? _previews;
   @override
   List<Map<String, dynamic>>? get previews {
@@ -1237,7 +1245,7 @@ abstract class _MusicVideoAttributesDTO extends MusicVideoAttributesDTO {
       required final bool hasHDR,
       required final String isrc,
       required final String name,
-      required final PlayParamsDTO playParams,
+      final PlayParamsDTO? playParams,
       final List<Map<String, dynamic>>? previews,
       final DateTime? releaseDate,
       final String? url}) = _$_MusicVideoAttributesDTO;
@@ -1267,7 +1275,7 @@ abstract class _MusicVideoAttributesDTO extends MusicVideoAttributesDTO {
   @override
   String get name => throw _privateConstructorUsedError;
   @override
-  PlayParamsDTO get playParams => throw _privateConstructorUsedError;
+  PlayParamsDTO? get playParams => throw _privateConstructorUsedError;
   @override
   List<Map<String, dynamic>>? get previews =>
       throw _privateConstructorUsedError;
@@ -1298,7 +1306,7 @@ mixin _$PlaylistAttributesDTO {
   String? get lastModifiedDate => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String? get playlistType => throw _privateConstructorUsedError;
-  PlayParamsDTO get playParams => throw _privateConstructorUsedError;
+  PlayParamsDTO? get playParams => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
   String? get curatorSocialHandle => throw _privateConstructorUsedError;
 
@@ -1324,13 +1332,13 @@ abstract class $PlaylistAttributesDTOCopyWith<$Res> {
       String? lastModifiedDate,
       String name,
       String? playlistType,
-      PlayParamsDTO playParams,
+      PlayParamsDTO? playParams,
       String? url,
       String? curatorSocialHandle});
 
   $ArtworkDTOCopyWith<$Res>? get artwork;
   $EditorialNotesDTOCopyWith<$Res>? get description;
-  $PlayParamsDTOCopyWith<$Res> get playParams;
+  $PlayParamsDTOCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
@@ -1402,7 +1410,7 @@ class _$PlaylistAttributesDTOCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParamsDTO,
+              as PlayParamsDTO?,
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -1437,8 +1445,12 @@ class _$PlaylistAttributesDTOCopyWithImpl<$Res>
   }
 
   @override
-  $PlayParamsDTOCopyWith<$Res> get playParams {
-    return $PlayParamsDTOCopyWith<$Res>(_value.playParams, (value) {
+  $PlayParamsDTOCopyWith<$Res>? get playParams {
+    if (_value.playParams == null) {
+      return null;
+    }
+
+    return $PlayParamsDTOCopyWith<$Res>(_value.playParams!, (value) {
       return _then(_value.copyWith(playParams: value));
     });
   }
@@ -1462,7 +1474,7 @@ abstract class _$$_PlaylistAttributesDTOCopyWith<$Res>
       String? lastModifiedDate,
       String name,
       String? playlistType,
-      PlayParamsDTO playParams,
+      PlayParamsDTO? playParams,
       String? url,
       String? curatorSocialHandle});
 
@@ -1471,7 +1483,7 @@ abstract class _$$_PlaylistAttributesDTOCopyWith<$Res>
   @override
   $EditorialNotesDTOCopyWith<$Res>? get description;
   @override
-  $PlayParamsDTOCopyWith<$Res> get playParams;
+  $PlayParamsDTOCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
@@ -1546,7 +1558,7 @@ class __$$_PlaylistAttributesDTOCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParamsDTO,
+              as PlayParamsDTO?,
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -1573,7 +1585,7 @@ class _$_PlaylistAttributesDTO extends _PlaylistAttributesDTO {
       this.lastModifiedDate,
       required this.name,
       this.playlistType,
-      required this.playParams,
+      this.playParams,
       this.url,
       this.curatorSocialHandle})
       : super._();
@@ -1602,7 +1614,7 @@ class _$_PlaylistAttributesDTO extends _PlaylistAttributesDTO {
   @override
   final String? playlistType;
   @override
-  final PlayParamsDTO playParams;
+  final PlayParamsDTO? playParams;
   @override
   final String? url;
   @override
@@ -1682,7 +1694,7 @@ abstract class _PlaylistAttributesDTO extends PlaylistAttributesDTO {
       final String? lastModifiedDate,
       required final String name,
       final String? playlistType,
-      required final PlayParamsDTO playParams,
+      final PlayParamsDTO? playParams,
       final String? url,
       final String? curatorSocialHandle}) = _$_PlaylistAttributesDTO;
   const _PlaylistAttributesDTO._() : super._();
@@ -1711,7 +1723,7 @@ abstract class _PlaylistAttributesDTO extends PlaylistAttributesDTO {
   @override
   String? get playlistType => throw _privateConstructorUsedError;
   @override
-  PlayParamsDTO get playParams => throw _privateConstructorUsedError;
+  PlayParamsDTO? get playParams => throw _privateConstructorUsedError;
   @override
   String? get url => throw _privateConstructorUsedError;
   @override
@@ -1745,7 +1757,7 @@ mixin _$SongAttributesDTO {
   bool? get isMasteredForItunes => throw _privateConstructorUsedError;
   String? get isrc => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  PlayParamsDTO get playParams => throw _privateConstructorUsedError;
+  PlayParamsDTO? get playParams => throw _privateConstructorUsedError;
   List<Map<String, dynamic>>? get previews =>
       throw _privateConstructorUsedError;
   DateTime? get releaseDate => throw _privateConstructorUsedError;
@@ -1782,7 +1794,7 @@ abstract class $SongAttributesDTOCopyWith<$Res> {
       bool? isMasteredForItunes,
       String? isrc,
       String name,
-      PlayParamsDTO playParams,
+      PlayParamsDTO? playParams,
       List<Map<String, dynamic>>? previews,
       DateTime? releaseDate,
       int trackNumber,
@@ -1790,7 +1802,7 @@ abstract class $SongAttributesDTOCopyWith<$Res> {
       String? workName});
 
   $ArtworkDTOCopyWith<$Res>? get artwork;
-  $PlayParamsDTOCopyWith<$Res> get playParams;
+  $PlayParamsDTOCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
@@ -1900,7 +1912,7 @@ class _$SongAttributesDTOCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParamsDTO,
+              as PlayParamsDTO?,
       previews: previews == freezed
           ? _value.previews
           : previews // ignore: cast_nullable_to_non_nullable
@@ -1936,8 +1948,12 @@ class _$SongAttributesDTOCopyWithImpl<$Res>
   }
 
   @override
-  $PlayParamsDTOCopyWith<$Res> get playParams {
-    return $PlayParamsDTOCopyWith<$Res>(_value.playParams, (value) {
+  $PlayParamsDTOCopyWith<$Res>? get playParams {
+    if (_value.playParams == null) {
+      return null;
+    }
+
+    return $PlayParamsDTOCopyWith<$Res>(_value.playParams!, (value) {
       return _then(_value.copyWith(playParams: value));
     });
   }
@@ -1968,7 +1984,7 @@ abstract class _$$_SongAttributesDTOCopyWith<$Res>
       bool? isMasteredForItunes,
       String? isrc,
       String name,
-      PlayParamsDTO playParams,
+      PlayParamsDTO? playParams,
       List<Map<String, dynamic>>? previews,
       DateTime? releaseDate,
       int trackNumber,
@@ -1978,7 +1994,7 @@ abstract class _$$_SongAttributesDTOCopyWith<$Res>
   @override
   $ArtworkDTOCopyWith<$Res>? get artwork;
   @override
-  $PlayParamsDTOCopyWith<$Res> get playParams;
+  $PlayParamsDTOCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
@@ -2090,7 +2106,7 @@ class __$$_SongAttributesDTOCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParamsDTO,
+              as PlayParamsDTO?,
       previews: previews == freezed
           ? _value._previews
           : previews // ignore: cast_nullable_to_non_nullable
@@ -2136,7 +2152,7 @@ class _$_SongAttributesDTO extends _SongAttributesDTO {
       this.isMasteredForItunes,
       this.isrc,
       required this.name,
-      required this.playParams,
+      this.playParams,
       final List<Map<String, dynamic>>? previews,
       this.releaseDate,
       required this.trackNumber,
@@ -2199,7 +2215,7 @@ class _$_SongAttributesDTO extends _SongAttributesDTO {
   @override
   final String name;
   @override
-  final PlayParamsDTO playParams;
+  final PlayParamsDTO? playParams;
   final List<Map<String, dynamic>>? _previews;
   @override
   List<Map<String, dynamic>>? get previews {
@@ -2327,7 +2343,7 @@ abstract class _SongAttributesDTO extends SongAttributesDTO {
       final bool? isMasteredForItunes,
       final String? isrc,
       required final String name,
-      required final PlayParamsDTO playParams,
+      final PlayParamsDTO? playParams,
       final List<Map<String, dynamic>>? previews,
       final DateTime? releaseDate,
       required final int trackNumber,
@@ -2373,7 +2389,7 @@ abstract class _SongAttributesDTO extends SongAttributesDTO {
   @override
   String get name => throw _privateConstructorUsedError;
   @override
-  PlayParamsDTO get playParams => throw _privateConstructorUsedError;
+  PlayParamsDTO? get playParams => throw _privateConstructorUsedError;
   @override
   List<Map<String, dynamic>>? get previews =>
       throw _privateConstructorUsedError;
@@ -2399,7 +2415,7 @@ StationAttributesDTO _$StationAttributesDTOFromJson(Map<String, dynamic> json) {
 mixin _$StationAttributesDTO {
   bool get isLive => throw _privateConstructorUsedError;
   ArtworkDTO? get artwork => throw _privateConstructorUsedError;
-  PlayParamsDTO get playParams => throw _privateConstructorUsedError;
+  PlayParamsDTO? get playParams => throw _privateConstructorUsedError;
   EditorialNotesDTO? get editorialNotes => throw _privateConstructorUsedError;
   int? get durationInMillis => throw _privateConstructorUsedError;
   String? get mediaKind => throw _privateConstructorUsedError;
@@ -2421,7 +2437,7 @@ abstract class $StationAttributesDTOCopyWith<$Res> {
   $Res call(
       {bool isLive,
       ArtworkDTO? artwork,
-      PlayParamsDTO playParams,
+      PlayParamsDTO? playParams,
       EditorialNotesDTO? editorialNotes,
       int? durationInMillis,
       String? mediaKind,
@@ -2430,7 +2446,7 @@ abstract class $StationAttributesDTOCopyWith<$Res> {
       String? url});
 
   $ArtworkDTOCopyWith<$Res>? get artwork;
-  $PlayParamsDTOCopyWith<$Res> get playParams;
+  $PlayParamsDTOCopyWith<$Res>? get playParams;
   $EditorialNotesDTOCopyWith<$Res>? get editorialNotes;
 }
 
@@ -2467,7 +2483,7 @@ class _$StationAttributesDTOCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParamsDTO,
+              as PlayParamsDTO?,
       editorialNotes: editorialNotes == freezed
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
@@ -2507,8 +2523,12 @@ class _$StationAttributesDTOCopyWithImpl<$Res>
   }
 
   @override
-  $PlayParamsDTOCopyWith<$Res> get playParams {
-    return $PlayParamsDTOCopyWith<$Res>(_value.playParams, (value) {
+  $PlayParamsDTOCopyWith<$Res>? get playParams {
+    if (_value.playParams == null) {
+      return null;
+    }
+
+    return $PlayParamsDTOCopyWith<$Res>(_value.playParams!, (value) {
       return _then(_value.copyWith(playParams: value));
     });
   }
@@ -2535,7 +2555,7 @@ abstract class _$$_StationAttributesDTOCopyWith<$Res>
   $Res call(
       {bool isLive,
       ArtworkDTO? artwork,
-      PlayParamsDTO playParams,
+      PlayParamsDTO? playParams,
       EditorialNotesDTO? editorialNotes,
       int? durationInMillis,
       String? mediaKind,
@@ -2546,7 +2566,7 @@ abstract class _$$_StationAttributesDTOCopyWith<$Res>
   @override
   $ArtworkDTOCopyWith<$Res>? get artwork;
   @override
-  $PlayParamsDTOCopyWith<$Res> get playParams;
+  $PlayParamsDTOCopyWith<$Res>? get playParams;
   @override
   $EditorialNotesDTOCopyWith<$Res>? get editorialNotes;
 }
@@ -2586,7 +2606,7 @@ class __$$_StationAttributesDTOCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParamsDTO,
+              as PlayParamsDTO?,
       editorialNotes: editorialNotes == freezed
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
@@ -2621,7 +2641,7 @@ class _$_StationAttributesDTO extends _StationAttributesDTO {
   const _$_StationAttributesDTO(
       {required this.isLive,
       this.artwork,
-      required this.playParams,
+      this.playParams,
       this.editorialNotes,
       this.durationInMillis,
       this.mediaKind,
@@ -2638,7 +2658,7 @@ class _$_StationAttributesDTO extends _StationAttributesDTO {
   @override
   final ArtworkDTO? artwork;
   @override
-  final PlayParamsDTO playParams;
+  final PlayParamsDTO? playParams;
   @override
   final EditorialNotesDTO? editorialNotes;
   @override
@@ -2707,7 +2727,7 @@ abstract class _StationAttributesDTO extends StationAttributesDTO {
   const factory _StationAttributesDTO(
       {required final bool isLive,
       final ArtworkDTO? artwork,
-      required final PlayParamsDTO playParams,
+      final PlayParamsDTO? playParams,
       final EditorialNotesDTO? editorialNotes,
       final int? durationInMillis,
       final String? mediaKind,
@@ -2724,7 +2744,7 @@ abstract class _StationAttributesDTO extends StationAttributesDTO {
   @override
   ArtworkDTO? get artwork => throw _privateConstructorUsedError;
   @override
-  PlayParamsDTO get playParams => throw _privateConstructorUsedError;
+  PlayParamsDTO? get playParams => throw _privateConstructorUsedError;
   @override
   EditorialNotesDTO? get editorialNotes => throw _privateConstructorUsedError;
   @override

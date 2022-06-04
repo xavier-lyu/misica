@@ -29,8 +29,10 @@ _$_AlbumAttributesDTO _$$_AlbumAttributesDTOFromJson(Map json) =>
       isMasteredForItunes: json['isMasteredForItunes'] as bool?,
       isSingle: json['isSingle'] as bool?,
       name: json['name'] as String,
-      playParams: PlayParamsDTO.fromJson(
-          Map<String, dynamic>.from(json['playParams'] as Map)),
+      playParams: json['playParams'] == null
+          ? null
+          : PlayParamsDTO.fromJson(
+              Map<String, dynamic>.from(json['playParams'] as Map)),
       recordLabel: json['recordLabel'] as String?,
       releaseDate:
           const DateTimeConverter().fromJson(json['releaseDate'] as String),
@@ -54,7 +56,7 @@ Map<String, dynamic> _$$_AlbumAttributesDTOToJson(
       'isMasteredForItunes': instance.isMasteredForItunes,
       'isSingle': instance.isSingle,
       'name': instance.name,
-      'playParams': instance.playParams.toJson(),
+      'playParams': instance.playParams?.toJson(),
       'recordLabel': instance.recordLabel,
       'releaseDate': const DateTimeConverter().toJson(instance.releaseDate),
       'trackCount': instance.trackCount,
@@ -103,8 +105,10 @@ _$_MusicVideoAttributesDTO _$$_MusicVideoAttributesDTOFromJson(Map json) =>
       hasHDR: json['hasHDR'] as bool,
       isrc: json['isrc'] as String,
       name: json['name'] as String,
-      playParams: PlayParamsDTO.fromJson(
-          Map<String, dynamic>.from(json['playParams'] as Map)),
+      playParams: json['playParams'] == null
+          ? null
+          : PlayParamsDTO.fromJson(
+              Map<String, dynamic>.from(json['playParams'] as Map)),
       previews: (json['previews'] as List<dynamic>?)
           ?.map((e) => Map<String, dynamic>.from(e as Map))
           .toList(),
@@ -127,7 +131,7 @@ Map<String, dynamic> _$$_MusicVideoAttributesDTOToJson(
       'hasHDR': instance.hasHDR,
       'isrc': instance.isrc,
       'name': instance.name,
-      'playParams': instance.playParams.toJson(),
+      'playParams': instance.playParams?.toJson(),
       'previews': instance.previews,
       'releaseDate': instance.releaseDate?.toIso8601String(),
       'url': instance.url,
@@ -151,8 +155,10 @@ _$_PlaylistAttributesDTO _$$_PlaylistAttributesDTOFromJson(Map json) =>
       lastModifiedDate: json['lastModifiedDate'] as String?,
       name: json['name'] as String,
       playlistType: json['playlistType'] as String?,
-      playParams: PlayParamsDTO.fromJson(
-          Map<String, dynamic>.from(json['playParams'] as Map)),
+      playParams: json['playParams'] == null
+          ? null
+          : PlayParamsDTO.fromJson(
+              Map<String, dynamic>.from(json['playParams'] as Map)),
       url: json['url'] as String?,
       curatorSocialHandle: json['curatorSocialHandle'] as String?,
     );
@@ -170,7 +176,7 @@ Map<String, dynamic> _$$_PlaylistAttributesDTOToJson(
       'lastModifiedDate': instance.lastModifiedDate,
       'name': instance.name,
       'playlistType': instance.playlistType,
-      'playParams': instance.playParams.toJson(),
+      'playParams': instance.playParams?.toJson(),
       'url': instance.url,
       'curatorSocialHandle': instance.curatorSocialHandle,
     };
@@ -201,8 +207,10 @@ _$_SongAttributesDTO _$$_SongAttributesDTOFromJson(Map json) =>
       isMasteredForItunes: json['isMasteredForItunes'] as bool?,
       isrc: json['isrc'] as String?,
       name: json['name'] as String,
-      playParams: PlayParamsDTO.fromJson(
-          Map<String, dynamic>.from(json['playParams'] as Map)),
+      playParams: json['playParams'] == null
+          ? null
+          : PlayParamsDTO.fromJson(
+              Map<String, dynamic>.from(json['playParams'] as Map)),
       previews: (json['previews'] as List<dynamic>?)
           ?.map((e) => Map<String, dynamic>.from(e as Map))
           .toList(),
@@ -234,7 +242,7 @@ Map<String, dynamic> _$$_SongAttributesDTOToJson(
       'isMasteredForItunes': instance.isMasteredForItunes,
       'isrc': instance.isrc,
       'name': instance.name,
-      'playParams': instance.playParams.toJson(),
+      'playParams': instance.playParams?.toJson(),
       'previews': instance.previews,
       'releaseDate': instance.releaseDate?.toIso8601String(),
       'trackNumber': instance.trackNumber,
@@ -249,8 +257,10 @@ _$_StationAttributesDTO _$$_StationAttributesDTOFromJson(Map json) =>
           ? null
           : ArtworkDTO.fromJson(
               Map<String, dynamic>.from(json['artwork'] as Map)),
-      playParams: PlayParamsDTO.fromJson(
-          Map<String, dynamic>.from(json['playParams'] as Map)),
+      playParams: json['playParams'] == null
+          ? null
+          : PlayParamsDTO.fromJson(
+              Map<String, dynamic>.from(json['playParams'] as Map)),
       editorialNotes: json['editorialNotes'] == null
           ? null
           : EditorialNotesDTO.fromJson(
@@ -267,7 +277,7 @@ Map<String, dynamic> _$$_StationAttributesDTOToJson(
     <String, dynamic>{
       'isLive': instance.isLive,
       'artwork': instance.artwork?.toJson(),
-      'playParams': instance.playParams.toJson(),
+      'playParams': instance.playParams?.toJson(),
       'editorialNotes': instance.editorialNotes?.toJson(),
       'durationInMillis': instance.durationInMillis,
       'mediaKind': instance.mediaKind,

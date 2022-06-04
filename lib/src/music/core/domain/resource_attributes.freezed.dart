@@ -341,7 +341,7 @@ mixin _$AlbumAttributes {
   Artwork? get artwork => throw _privateConstructorUsedError;
   String? get contentRating => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  PlayParams get playParams => throw _privateConstructorUsedError;
+  PlayParams? get playParams => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
   DateTime? get releaseDate => throw _privateConstructorUsedError;
   String? get recordLabel => throw _privateConstructorUsedError;
@@ -364,7 +364,7 @@ abstract class $AlbumAttributesCopyWith<$Res> {
       Artwork? artwork,
       String? contentRating,
       String name,
-      PlayParams playParams,
+      PlayParams? playParams,
       String? url,
       DateTime? releaseDate,
       String? recordLabel,
@@ -372,7 +372,7 @@ abstract class $AlbumAttributesCopyWith<$Res> {
       EditorialNotes? editorialNotes});
 
   $ArtworkCopyWith<$Res>? get artwork;
-  $PlayParamsCopyWith<$Res> get playParams;
+  $PlayParamsCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
@@ -422,7 +422,7 @@ class _$AlbumAttributesCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
+              as PlayParams?,
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -458,8 +458,12 @@ class _$AlbumAttributesCopyWithImpl<$Res>
   }
 
   @override
-  $PlayParamsCopyWith<$Res> get playParams {
-    return $PlayParamsCopyWith<$Res>(_value.playParams, (value) {
+  $PlayParamsCopyWith<$Res>? get playParams {
+    if (_value.playParams == null) {
+      return null;
+    }
+
+    return $PlayParamsCopyWith<$Res>(_value.playParams!, (value) {
       return _then(_value.copyWith(playParams: value));
     });
   }
@@ -478,7 +482,7 @@ abstract class _$$_AlbumAttributesCopyWith<$Res>
       Artwork? artwork,
       String? contentRating,
       String name,
-      PlayParams playParams,
+      PlayParams? playParams,
       String? url,
       DateTime? releaseDate,
       String? recordLabel,
@@ -488,7 +492,7 @@ abstract class _$$_AlbumAttributesCopyWith<$Res>
   @override
   $ArtworkCopyWith<$Res>? get artwork;
   @override
-  $PlayParamsCopyWith<$Res> get playParams;
+  $PlayParamsCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
@@ -540,7 +544,7 @@ class __$$_AlbumAttributesCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
+              as PlayParams?,
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -593,7 +597,7 @@ class _$_AlbumAttributes extends _AlbumAttributes {
   @override
   final String name;
   @override
-  final PlayParams playParams;
+  final PlayParams? playParams;
   @override
   final String? url;
   @override
@@ -662,7 +666,7 @@ abstract class _AlbumAttributes extends AlbumAttributes {
       required final Artwork? artwork,
       required final String? contentRating,
       required final String name,
-      required final PlayParams playParams,
+      required final PlayParams? playParams,
       required final String? url,
       required final DateTime? releaseDate,
       required final String? recordLabel,
@@ -681,7 +685,7 @@ abstract class _AlbumAttributes extends AlbumAttributes {
   @override
   String get name => throw _privateConstructorUsedError;
   @override
-  PlayParams get playParams => throw _privateConstructorUsedError;
+  PlayParams? get playParams => throw _privateConstructorUsedError;
   @override
   String? get url => throw _privateConstructorUsedError;
   @override
@@ -842,7 +846,7 @@ mixin _$MusicVideoAttributes {
   Artwork? get artwork => throw _privateConstructorUsedError;
   int get durationInMillis => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  PlayParams get playParams => throw _privateConstructorUsedError;
+  PlayParams? get playParams => throw _privateConstructorUsedError;
   List<Map<String, dynamic>>? get previews =>
       throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
@@ -863,12 +867,12 @@ abstract class $MusicVideoAttributesCopyWith<$Res> {
       Artwork? artwork,
       int durationInMillis,
       String name,
-      PlayParams playParams,
+      PlayParams? playParams,
       List<Map<String, dynamic>>? previews,
       String? url});
 
   $ArtworkCopyWith<$Res>? get artwork;
-  $PlayParamsCopyWith<$Res> get playParams;
+  $PlayParamsCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
@@ -915,7 +919,7 @@ class _$MusicVideoAttributesCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
+              as PlayParams?,
       previews: previews == freezed
           ? _value.previews
           : previews // ignore: cast_nullable_to_non_nullable
@@ -939,8 +943,12 @@ class _$MusicVideoAttributesCopyWithImpl<$Res>
   }
 
   @override
-  $PlayParamsCopyWith<$Res> get playParams {
-    return $PlayParamsCopyWith<$Res>(_value.playParams, (value) {
+  $PlayParamsCopyWith<$Res>? get playParams {
+    if (_value.playParams == null) {
+      return null;
+    }
+
+    return $PlayParamsCopyWith<$Res>(_value.playParams!, (value) {
       return _then(_value.copyWith(playParams: value));
     });
   }
@@ -959,14 +967,14 @@ abstract class _$$_MusicVideoAttributesCopyWith<$Res>
       Artwork? artwork,
       int durationInMillis,
       String name,
-      PlayParams playParams,
+      PlayParams? playParams,
       List<Map<String, dynamic>>? previews,
       String? url});
 
   @override
   $ArtworkCopyWith<$Res>? get artwork;
   @override
-  $PlayParamsCopyWith<$Res> get playParams;
+  $PlayParamsCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
@@ -1015,7 +1023,7 @@ class __$$_MusicVideoAttributesCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
+              as PlayParams?,
       previews: previews == freezed
           ? _value._previews
           : previews // ignore: cast_nullable_to_non_nullable
@@ -1054,7 +1062,7 @@ class _$_MusicVideoAttributes extends _MusicVideoAttributes {
   @override
   final String name;
   @override
-  final PlayParams playParams;
+  final PlayParams? playParams;
   final List<Map<String, dynamic>>? _previews;
   @override
   List<Map<String, dynamic>>? get previews {
@@ -1116,7 +1124,7 @@ abstract class _MusicVideoAttributes extends MusicVideoAttributes {
       required final Artwork? artwork,
       required final int durationInMillis,
       required final String name,
-      required final PlayParams playParams,
+      required final PlayParams? playParams,
       required final List<Map<String, dynamic>>? previews,
       required final String? url}) = _$_MusicVideoAttributes;
   const _MusicVideoAttributes._() : super._();
@@ -1132,7 +1140,7 @@ abstract class _MusicVideoAttributes extends MusicVideoAttributes {
   @override
   String get name => throw _privateConstructorUsedError;
   @override
-  PlayParams get playParams => throw _privateConstructorUsedError;
+  PlayParams? get playParams => throw _privateConstructorUsedError;
   @override
   List<Map<String, dynamic>>? get previews =>
       throw _privateConstructorUsedError;
@@ -1149,8 +1157,9 @@ mixin _$PlaylistAttributes {
   Artwork? get artwork => throw _privateConstructorUsedError;
   String? get curatorName => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  PlayParams get playParams => throw _privateConstructorUsedError;
+  PlayParams? get playParams => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
+  EditorialNotes? get editorialNotes => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PlaylistAttributesCopyWith<PlaylistAttributes> get copyWith =>
@@ -1166,11 +1175,12 @@ abstract class $PlaylistAttributesCopyWith<$Res> {
       {Artwork? artwork,
       String? curatorName,
       String name,
-      PlayParams playParams,
-      String? url});
+      PlayParams? playParams,
+      String? url,
+      EditorialNotes? editorialNotes});
 
   $ArtworkCopyWith<$Res>? get artwork;
-  $PlayParamsCopyWith<$Res> get playParams;
+  $PlayParamsCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
@@ -1189,6 +1199,7 @@ class _$PlaylistAttributesCopyWithImpl<$Res>
     Object? name = freezed,
     Object? playParams = freezed,
     Object? url = freezed,
+    Object? editorialNotes = freezed,
   }) {
     return _then(_value.copyWith(
       artwork: artwork == freezed
@@ -1206,11 +1217,15 @@ class _$PlaylistAttributesCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
+              as PlayParams?,
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
+      editorialNotes: editorialNotes == freezed
+          ? _value.editorialNotes
+          : editorialNotes // ignore: cast_nullable_to_non_nullable
+              as EditorialNotes?,
     ));
   }
 
@@ -1226,8 +1241,12 @@ class _$PlaylistAttributesCopyWithImpl<$Res>
   }
 
   @override
-  $PlayParamsCopyWith<$Res> get playParams {
-    return $PlayParamsCopyWith<$Res>(_value.playParams, (value) {
+  $PlayParamsCopyWith<$Res>? get playParams {
+    if (_value.playParams == null) {
+      return null;
+    }
+
+    return $PlayParamsCopyWith<$Res>(_value.playParams!, (value) {
       return _then(_value.copyWith(playParams: value));
     });
   }
@@ -1244,13 +1263,14 @@ abstract class _$$_PlaylistAttributesCopyWith<$Res>
       {Artwork? artwork,
       String? curatorName,
       String name,
-      PlayParams playParams,
-      String? url});
+      PlayParams? playParams,
+      String? url,
+      EditorialNotes? editorialNotes});
 
   @override
   $ArtworkCopyWith<$Res>? get artwork;
   @override
-  $PlayParamsCopyWith<$Res> get playParams;
+  $PlayParamsCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
@@ -1271,6 +1291,7 @@ class __$$_PlaylistAttributesCopyWithImpl<$Res>
     Object? name = freezed,
     Object? playParams = freezed,
     Object? url = freezed,
+    Object? editorialNotes = freezed,
   }) {
     return _then(_$_PlaylistAttributes(
       artwork: artwork == freezed
@@ -1288,11 +1309,15 @@ class __$$_PlaylistAttributesCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
+              as PlayParams?,
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
+      editorialNotes: editorialNotes == freezed
+          ? _value.editorialNotes
+          : editorialNotes // ignore: cast_nullable_to_non_nullable
+              as EditorialNotes?,
     ));
   }
 }
@@ -1305,7 +1330,8 @@ class _$_PlaylistAttributes extends _PlaylistAttributes {
       required this.curatorName,
       required this.name,
       required this.playParams,
-      required this.url})
+      required this.url,
+      required this.editorialNotes})
       : super._();
 
   @override
@@ -1315,13 +1341,15 @@ class _$_PlaylistAttributes extends _PlaylistAttributes {
   @override
   final String name;
   @override
-  final PlayParams playParams;
+  final PlayParams? playParams;
   @override
   final String? url;
+  @override
+  final EditorialNotes? editorialNotes;
 
   @override
   String toString() {
-    return 'PlaylistAttributes(artwork: $artwork, curatorName: $curatorName, name: $name, playParams: $playParams, url: $url)';
+    return 'PlaylistAttributes(artwork: $artwork, curatorName: $curatorName, name: $name, playParams: $playParams, url: $url, editorialNotes: $editorialNotes)';
   }
 
   @override
@@ -1335,7 +1363,9 @@ class _$_PlaylistAttributes extends _PlaylistAttributes {
             const DeepCollectionEquality().equals(other.name, name) &&
             const DeepCollectionEquality()
                 .equals(other.playParams, playParams) &&
-            const DeepCollectionEquality().equals(other.url, url));
+            const DeepCollectionEquality().equals(other.url, url) &&
+            const DeepCollectionEquality()
+                .equals(other.editorialNotes, editorialNotes));
   }
 
   @override
@@ -1345,7 +1375,8 @@ class _$_PlaylistAttributes extends _PlaylistAttributes {
       const DeepCollectionEquality().hash(curatorName),
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(playParams),
-      const DeepCollectionEquality().hash(url));
+      const DeepCollectionEquality().hash(url),
+      const DeepCollectionEquality().hash(editorialNotes));
 
   @JsonKey(ignore: true)
   @override
@@ -1359,8 +1390,9 @@ abstract class _PlaylistAttributes extends PlaylistAttributes {
       {required final Artwork? artwork,
       required final String? curatorName,
       required final String name,
-      required final PlayParams playParams,
-      required final String? url}) = _$_PlaylistAttributes;
+      required final PlayParams? playParams,
+      required final String? url,
+      required final EditorialNotes? editorialNotes}) = _$_PlaylistAttributes;
   const _PlaylistAttributes._() : super._();
 
   @override
@@ -1370,9 +1402,11 @@ abstract class _PlaylistAttributes extends PlaylistAttributes {
   @override
   String get name => throw _privateConstructorUsedError;
   @override
-  PlayParams get playParams => throw _privateConstructorUsedError;
+  PlayParams? get playParams => throw _privateConstructorUsedError;
   @override
   String? get url => throw _privateConstructorUsedError;
+  @override
+  EditorialNotes? get editorialNotes => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_PlaylistAttributesCopyWith<_$_PlaylistAttributes> get copyWith =>
@@ -1388,7 +1422,7 @@ mixin _$SongAttributes {
   String? get contentRating => throw _privateConstructorUsedError;
   int get durationInMillis => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
-  PlayParams get playParams => throw _privateConstructorUsedError;
+  PlayParams? get playParams => throw _privateConstructorUsedError;
   List<Map<String, dynamic>>? get previews =>
       throw _privateConstructorUsedError;
   int get trackNumber => throw _privateConstructorUsedError;
@@ -1412,13 +1446,13 @@ abstract class $SongAttributesCopyWith<$Res> {
       String? contentRating,
       int durationInMillis,
       String name,
-      PlayParams playParams,
+      PlayParams? playParams,
       List<Map<String, dynamic>>? previews,
       int trackNumber,
       String? url});
 
   $ArtworkCopyWith<$Res>? get artwork;
-  $PlayParamsCopyWith<$Res> get playParams;
+  $PlayParamsCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
@@ -1476,7 +1510,7 @@ class _$SongAttributesCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
+              as PlayParams?,
       previews: previews == freezed
           ? _value.previews
           : previews // ignore: cast_nullable_to_non_nullable
@@ -1504,8 +1538,12 @@ class _$SongAttributesCopyWithImpl<$Res>
   }
 
   @override
-  $PlayParamsCopyWith<$Res> get playParams {
-    return $PlayParamsCopyWith<$Res>(_value.playParams, (value) {
+  $PlayParamsCopyWith<$Res>? get playParams {
+    if (_value.playParams == null) {
+      return null;
+    }
+
+    return $PlayParamsCopyWith<$Res>(_value.playParams!, (value) {
       return _then(_value.copyWith(playParams: value));
     });
   }
@@ -1526,7 +1564,7 @@ abstract class _$$_SongAttributesCopyWith<$Res>
       String? contentRating,
       int durationInMillis,
       String name,
-      PlayParams playParams,
+      PlayParams? playParams,
       List<Map<String, dynamic>>? previews,
       int trackNumber,
       String? url});
@@ -1534,7 +1572,7 @@ abstract class _$$_SongAttributesCopyWith<$Res>
   @override
   $ArtworkCopyWith<$Res>? get artwork;
   @override
-  $PlayParamsCopyWith<$Res> get playParams;
+  $PlayParamsCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
@@ -1594,7 +1632,7 @@ class __$$_SongAttributesCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
+              as PlayParams?,
       previews: previews == freezed
           ? _value._previews
           : previews // ignore: cast_nullable_to_non_nullable
@@ -1644,7 +1682,7 @@ class _$_SongAttributes extends _SongAttributes {
   @override
   final String name;
   @override
-  final PlayParams playParams;
+  final PlayParams? playParams;
   final List<Map<String, dynamic>>? _previews;
   @override
   List<Map<String, dynamic>>? get previews {
@@ -1717,7 +1755,7 @@ abstract class _SongAttributes extends SongAttributes {
       required final String? contentRating,
       required final int durationInMillis,
       required final String name,
-      required final PlayParams playParams,
+      required final PlayParams? playParams,
       required final List<Map<String, dynamic>>? previews,
       required final int trackNumber,
       required final String? url}) = _$_SongAttributes;
@@ -1738,7 +1776,7 @@ abstract class _SongAttributes extends SongAttributes {
   @override
   String get name => throw _privateConstructorUsedError;
   @override
-  PlayParams get playParams => throw _privateConstructorUsedError;
+  PlayParams? get playParams => throw _privateConstructorUsedError;
   @override
   List<Map<String, dynamic>>? get previews =>
       throw _privateConstructorUsedError;
@@ -1755,7 +1793,7 @@ abstract class _SongAttributes extends SongAttributes {
 /// @nodoc
 mixin _$StationAttributes {
   Artwork? get artwork => throw _privateConstructorUsedError;
-  PlayParams get playParams => throw _privateConstructorUsedError;
+  PlayParams? get playParams => throw _privateConstructorUsedError;
   int? get durationInMillis => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
@@ -1772,13 +1810,13 @@ abstract class $StationAttributesCopyWith<$Res> {
       _$StationAttributesCopyWithImpl<$Res>;
   $Res call(
       {Artwork? artwork,
-      PlayParams playParams,
+      PlayParams? playParams,
       int? durationInMillis,
       String name,
       String? url});
 
   $ArtworkCopyWith<$Res>? get artwork;
-  $PlayParamsCopyWith<$Res> get playParams;
+  $PlayParamsCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
@@ -1806,7 +1844,7 @@ class _$StationAttributesCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
+              as PlayParams?,
       durationInMillis: durationInMillis == freezed
           ? _value.durationInMillis
           : durationInMillis // ignore: cast_nullable_to_non_nullable
@@ -1834,8 +1872,12 @@ class _$StationAttributesCopyWithImpl<$Res>
   }
 
   @override
-  $PlayParamsCopyWith<$Res> get playParams {
-    return $PlayParamsCopyWith<$Res>(_value.playParams, (value) {
+  $PlayParamsCopyWith<$Res>? get playParams {
+    if (_value.playParams == null) {
+      return null;
+    }
+
+    return $PlayParamsCopyWith<$Res>(_value.playParams!, (value) {
       return _then(_value.copyWith(playParams: value));
     });
   }
@@ -1850,7 +1892,7 @@ abstract class _$$_StationAttributesCopyWith<$Res>
   @override
   $Res call(
       {Artwork? artwork,
-      PlayParams playParams,
+      PlayParams? playParams,
       int? durationInMillis,
       String name,
       String? url});
@@ -1858,7 +1900,7 @@ abstract class _$$_StationAttributesCopyWith<$Res>
   @override
   $ArtworkCopyWith<$Res>? get artwork;
   @override
-  $PlayParamsCopyWith<$Res> get playParams;
+  $PlayParamsCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
@@ -1888,7 +1930,7 @@ class __$$_StationAttributesCopyWithImpl<$Res>
       playParams: playParams == freezed
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
+              as PlayParams?,
       durationInMillis: durationInMillis == freezed
           ? _value.durationInMillis
           : durationInMillis // ignore: cast_nullable_to_non_nullable
@@ -1919,7 +1961,7 @@ class _$_StationAttributes extends _StationAttributes {
   @override
   final Artwork? artwork;
   @override
-  final PlayParams playParams;
+  final PlayParams? playParams;
   @override
   final int? durationInMillis;
   @override
@@ -1965,7 +2007,7 @@ class _$_StationAttributes extends _StationAttributes {
 abstract class _StationAttributes extends StationAttributes {
   const factory _StationAttributes(
       {required final Artwork? artwork,
-      required final PlayParams playParams,
+      required final PlayParams? playParams,
       required final int? durationInMillis,
       required final String name,
       required final String? url}) = _$_StationAttributes;
@@ -1974,7 +2016,7 @@ abstract class _StationAttributes extends StationAttributes {
   @override
   Artwork? get artwork => throw _privateConstructorUsedError;
   @override
-  PlayParams get playParams => throw _privateConstructorUsedError;
+  PlayParams? get playParams => throw _privateConstructorUsedError;
   @override
   int? get durationInMillis => throw _privateConstructorUsedError;
   @override
