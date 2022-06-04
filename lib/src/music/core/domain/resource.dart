@@ -1,10 +1,11 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:misica/src/music/core/domain/resource_relationships.dart';
 
 import 'artwork.dart';
-import 'play_params.dart';
+import 'resource_attributes.dart';
+import 'resource_view.dart';
 
 part 'resource.freezed.dart';
-part 'resource.g.dart';
 
 @freezed
 class Resource with _$Resource {
@@ -19,30 +20,38 @@ class Resource with _$Resource {
     required String id,
     required String type,
     required AlbumAttributes? attributes,
+    required AlbumRelationships? relationships,
+    required List<ResourceView>? views,
   }) = Album;
 
   const factory Resource.artist({
     required String id,
     required String type,
     required ArtistAttributes? attributes,
+    required ArtistRelationships? relationships,
+    required List<ResourceView>? views,
   }) = Artist;
 
   const factory Resource.musicVideo({
     required String id,
     required String type,
     required MusicVideoAttributes? attributes,
+    required MusicVideoRelationships? relationships,
   }) = MusicVideo;
 
   const factory Resource.playlist({
     required String id,
     required String type,
     required PlaylistAttributes? attributes,
+    required PlaylistRelationships? relationships,
+    required List<ResourceView>? views,
   }) = Playlist;
 
   const factory Resource.song({
     required String id,
     required String type,
     required SongAttributes? attributes,
+    required SongRelationships? relationships,
   }) = Song;
 
   const factory Resource.station({
@@ -50,6 +59,13 @@ class Resource with _$Resource {
     required String type,
     required StationAttributes? attributes,
   }) = Station;
+
+  const factory Resource.curator({
+    required String id,
+    required String type,
+    required CuratorAttributes? attributes,
+    required CuratorRelationships? relationships,
+  }) = Curator;
 
   Artwork? get artwork => map(
         (value) => value.attributes?.artwork,
@@ -61,6 +77,7 @@ class Resource with _$Resource {
           return song.attributes?.artwork;
         },
         station: (station) => station.attributes?.artwork,
+        curator: (curator) => curator.attributes?.artwork,
       );
 
   String get creatorName =>
@@ -73,6 +90,7 @@ class Resource with _$Resource {
         playlist: (playlist) => playlist.attributes?.curatorName,
         song: (song) => song.attributes?.artistName,
         station: (station) => null,
+        curator: (curator) => null,
       ) ??
       '';
 
@@ -85,104 +103,7 @@ class Resource with _$Resource {
         playlist: (playlist) => playlist.attributes?.name,
         song: (song) => song.attributes?.name,
         station: (station) => station.attributes?.name,
+        curator: (curator) => curator.attributes?.name,
       ) ??
       '';
-}
-
-@freezed
-class ResourceAttributes with _$ResourceAttributes {
-  const ResourceAttributes._();
-  const factory ResourceAttributes({
-    String? albumName,
-    String? artistName,
-    String? artistUrl,
-    String? curatorName,
-    Artwork? artwork,
-    required String name,
-    PlayParams? playParams,
-    String? url,
-  }) = _ResourceAttributes;
-
-  factory ResourceAttributes.fromJson(Map<String, dynamic> json) =>
-      _$ResourceAttributesFromJson(json);
-}
-
-@freezed
-class AlbumAttributes with _$AlbumAttributes {
-  const AlbumAttributes._();
-  const factory AlbumAttributes({
-    required String artistName,
-    required String? artistUrl,
-    required Artwork? artwork,
-    required String? contentRating,
-    required String name,
-    required PlayParams playParams,
-    required String? url,
-  }) = _AlbumAttributes;
-}
-
-@freezed
-class ArtistAttributes with _$ArtistAttributes {
-  const ArtistAttributes._();
-  const factory ArtistAttributes({
-    required String name,
-    required String? url,
-  }) = _ArtistAttributes;
-}
-
-@freezed
-class MusicVideoAttributes with _$MusicVideoAttributes {
-  const MusicVideoAttributes._();
-  const factory MusicVideoAttributes({
-    required String artistName,
-    required String artistUrl,
-    required Artwork? artwork,
-    required int durationInMillis,
-    required String name,
-    required PlayParams playParams,
-    required List<Map<String, dynamic>>? previews,
-    required String? url,
-  }) = _MusicVideoAttributes;
-}
-
-@freezed
-class PlaylistAttributes with _$PlaylistAttributes {
-  const PlaylistAttributes._();
-  const factory PlaylistAttributes({
-    required Artwork? artwork,
-    required String? curatorName,
-    required String name,
-    required PlayParams playParams,
-    required String? url,
-  }) = _PlaylistAttributes;
-}
-
-@freezed
-class SongAttributes with _$SongAttributes {
-  const SongAttributes._();
-  const factory SongAttributes({
-    required String albumName,
-    String? artistUrl,
-    required String artistName,
-    required Artwork? artwork,
-    String? contentRating,
-    required int durationInMillis,
-    required String name,
-    required PlayParams playParams,
-    List<Map<String, dynamic>>? previews,
-    required int trackNumber,
-    String? url,
-  }) = _SongAttributes;
-}
-
-@freezed
-class StationAttributes with _$StationAttributes {
-  const StationAttributes._();
-  const factory StationAttributes({
-    required Artwork? artwork,
-    required PlayParams playParams,
-    required int? durationInMillis,
-    required String name,
-    required String? url,
-  }) = _StationAttributes;
 }

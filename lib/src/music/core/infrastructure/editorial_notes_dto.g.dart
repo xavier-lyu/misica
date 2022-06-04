@@ -9,7 +9,7 @@ part of 'editorial_notes_dto.dart';
 _$_EditorialNotesDTO _$$_EditorialNotesDTOFromJson(Map json) =>
     _$_EditorialNotesDTO(
       short: json['short'] as String?,
-      standart: json['standart'] as String?,
+      standard: json['standard'] as String?,
       name: json['name'] as String?,
     );
 
@@ -17,6 +17,6 @@ Map<String, dynamic> _$$_EditorialNotesDTOToJson(
         _$_EditorialNotesDTO instance) =>
     <String, dynamic>{
       'short': instance.short,
-      'standart': instance.standart,
+      'standard': instance.standard,
       'name': instance.name,
     };

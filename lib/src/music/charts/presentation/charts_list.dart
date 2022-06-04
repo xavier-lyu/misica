@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -57,7 +59,7 @@ class _ChartsListState extends ConsumerState<ChartsList> {
                 }
                 return ChartWidget(chart: charts.flattenCharts[index ~/ 2]);
               }),
-              childCount: (charts.flattenCharts.length * 2 - 1),
+              childCount: max(0, charts.flattenCharts.length * 2 - 1),
             ),
           ),
         );

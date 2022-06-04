@@ -16,10 +16,12 @@ class ResourceDTOConverter
       return PlaylistDTO.fromJson(json);
     } else if (dtoType.endsWith('songs')) {
       return SongDTO.fromJson(json);
-    } else if (dtoType.endsWith('stations')) {
+    } else if (dtoType.startsWith('station')) {
       return StationDTO.fromJson(json);
     } else if (dtoType.startsWith('music-video')) {
       return MusicVideoDTO.fromJson(json);
+    } else if (dtoType.endsWith('curators')) {
+      return CuratorDTO.fromJson(json);
     } else {
       return ResourceDTO.fromJson(json);
     }
@@ -29,4 +31,20 @@ class ResourceDTOConverter
   Map<String, dynamic> toJson(ResourceDTO object) {
     return object.toJson();
   }
+}
+
+class DateTimeConverter implements JsonConverter<DateTime?, String> {
+  const DateTimeConverter();
+
+  @override
+  DateTime? fromJson(String json) {
+    final units = json.split('-').map<int>((e) => int.parse(e)).toList()
+      ..addAll([1, 1]);
+    if (units.length < 3) return null;
+
+    return DateTime.utc(units[0], units[1], units[2]);
+  }
+
+  @override
+  String toJson(DateTime? object) => object?.toIso8601String() ?? '';
 }

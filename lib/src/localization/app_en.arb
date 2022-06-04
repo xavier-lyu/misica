@@ -29,5 +29,20 @@
   "@library": {},
 
   "search": "Search",
-  "@search": {}
+  "@search": {},
+
+  "play": "Play",
+  "@play": {},
+
+  "pause": "pause",
+  "@pause": {},
+
+  "shuffle": "shuffle",
+  "@shuffle": {},
+
+  "song": "song",
+  "@song": {},
+
+  "more": "More",
+  "@more": {}
 }

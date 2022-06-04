@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'resource.dart';
+part of 'resource_attributes.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

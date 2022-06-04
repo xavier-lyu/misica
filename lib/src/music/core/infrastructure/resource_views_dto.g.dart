@@ -1,0 +1,35 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'resource_views_dto.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+_$_ResourceViewDTO _$$_ResourceViewDTOFromJson(Map json) => _$_ResourceViewDTO(
+      href: json['href'] as String,
+      data: (json['data'] as List<dynamic>)
+          .map((e) =>
+              const ResourceDTOConverter().fromJson(e as Map<String, dynamic>))
+          .toList(),
+      attributes: ResourceViewAttributesDTO.fromJson(
+          Map<String, dynamic>.from(json['attributes'] as Map)),
+    );
+
+Map<String, dynamic> _$$_ResourceViewDTOToJson(_$_ResourceViewDTO instance) =>
+    <String, dynamic>{
+      'href': instance.href,
+      'data': instance.data.map(const ResourceDTOConverter().toJson).toList(),
+      'attributes': instance.attributes.toJson(),
+    };
+
+_$_ResourceViewAttributesDTO _$$_ResourceViewAttributesDTOFromJson(Map json) =>
+    _$_ResourceViewAttributesDTO(
+      title: json['title'] as String,
+    );
+
+Map<String, dynamic> _$$_ResourceViewAttributesDTOToJson(
+        _$_ResourceViewAttributesDTO instance) =>
+    <String, dynamic>{
+      'title': instance.title,
+    };

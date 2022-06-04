@@ -1,4 +1,6 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:misica/src/core/presentation/app_router.gr.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 
 import 'artwork_widget.dart';
@@ -21,8 +23,12 @@ class ResourceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // final path = "/${resource.type.replaceAll("-", "/")}/${resource.id}";
-        // context.router.pushNamed(path);
+        resource.mapOrNull(
+          (value) => null,
+          album: (album) {
+            context.router.push(AlbumRoute(id: album.id));
+          },
+        );
       },
       child: AspectRatio(
         aspectRatio: aspectRatio,

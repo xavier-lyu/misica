@@ -23,57 +23,93 @@ mixin _$Resource {
     TResult Function(String id, String type, ResourceAttributes? attributes)
         $default, {
     required TResult Function(
-            String id, String type, AlbumAttributes? attributes)
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            List<ResourceView>? views)
         album,
     required TResult Function(
-            String id, String type, ArtistAttributes? attributes)
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            List<ResourceView>? views)
         artist,
     required TResult Function(
-            String id, String type, MusicVideoAttributes? attributes)
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)
         musicVideo,
     required TResult Function(
-            String id, String type, PlaylistAttributes? attributes)
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            List<ResourceView>? views)
         playlist,
-    required TResult Function(
-            String id, String type, SongAttributes? attributes)
+    required TResult Function(String id, String type,
+            SongAttributes? attributes, SongRelationships? relationships)
         song,
     required TResult Function(
             String id, String type, StationAttributes? attributes)
         station,
+    required TResult Function(String id, String type,
+            CuratorAttributes? attributes, CuratorRelationships? relationships)
+        curator,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes)?
+    TResult Function(String id, String type, AlbumAttributes? attributes,
+            AlbumRelationships? relationships, List<ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes)?
+    TResult Function(String id, String type, ArtistAttributes? attributes,
+            ArtistRelationships? relationships, List<ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes)?
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes)?
+    TResult Function(String id, String type, PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships, List<ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes)? song,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            SongRelationships? relationships)?
+        song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            CuratorRelationships? relationships)?
+        curator,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes)?
+    TResult Function(String id, String type, AlbumAttributes? attributes,
+            AlbumRelationships? relationships, List<ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes)?
+    TResult Function(String id, String type, ArtistAttributes? attributes,
+            ArtistRelationships? relationships, List<ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes)?
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes)?
+    TResult Function(String id, String type, PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships, List<ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes)? song,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            SongRelationships? relationships)?
+        song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            CuratorRelationships? relationships)?
+        curator,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -86,6 +122,7 @@ mixin _$Resource {
     required TResult Function(Playlist value) playlist,
     required TResult Function(Song value) song,
     required TResult Function(Station value) station,
+    required TResult Function(Curator value) curator,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -97,6 +134,7 @@ mixin _$Resource {
     TResult Function(Playlist value)? playlist,
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -108,6 +146,7 @@ mixin _$Resource {
     TResult Function(Playlist value)? playlist,
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -253,23 +292,41 @@ class _$_Resource extends _Resource {
     TResult Function(String id, String type, ResourceAttributes? attributes)
         $default, {
     required TResult Function(
-            String id, String type, AlbumAttributes? attributes)
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            List<ResourceView>? views)
         album,
     required TResult Function(
-            String id, String type, ArtistAttributes? attributes)
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            List<ResourceView>? views)
         artist,
     required TResult Function(
-            String id, String type, MusicVideoAttributes? attributes)
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)
         musicVideo,
     required TResult Function(
-            String id, String type, PlaylistAttributes? attributes)
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            List<ResourceView>? views)
         playlist,
-    required TResult Function(
-            String id, String type, SongAttributes? attributes)
+    required TResult Function(String id, String type,
+            SongAttributes? attributes, SongRelationships? relationships)
         song,
     required TResult Function(
             String id, String type, StationAttributes? attributes)
         station,
+    required TResult Function(String id, String type,
+            CuratorAttributes? attributes, CuratorRelationships? relationships)
+        curator,
   }) {
     return $default(id, type, attributes);
   }
@@ -279,17 +336,26 @@ class _$_Resource extends _Resource {
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes)?
+    TResult Function(String id, String type, AlbumAttributes? attributes,
+            AlbumRelationships? relationships, List<ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes)?
+    TResult Function(String id, String type, ArtistAttributes? attributes,
+            ArtistRelationships? relationships, List<ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes)?
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes)?
+    TResult Function(String id, String type, PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships, List<ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes)? song,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            SongRelationships? relationships)?
+        song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            CuratorRelationships? relationships)?
+        curator,
   }) {
     return $default?.call(id, type, attributes);
   }
@@ -299,17 +365,26 @@ class _$_Resource extends _Resource {
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes)?
+    TResult Function(String id, String type, AlbumAttributes? attributes,
+            AlbumRelationships? relationships, List<ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes)?
+    TResult Function(String id, String type, ArtistAttributes? attributes,
+            ArtistRelationships? relationships, List<ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes)?
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes)?
+    TResult Function(String id, String type, PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships, List<ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes)? song,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            SongRelationships? relationships)?
+        song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            CuratorRelationships? relationships)?
+        curator,
     required TResult orElse(),
   }) {
     if ($default != null) {
@@ -328,6 +403,7 @@ class _$_Resource extends _Resource {
     required TResult Function(Playlist value) playlist,
     required TResult Function(Song value) song,
     required TResult Function(Station value) station,
+    required TResult Function(Curator value) curator,
   }) {
     return $default(this);
   }
@@ -342,6 +418,7 @@ class _$_Resource extends _Resource {
     TResult Function(Playlist value)? playlist,
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
   }) {
     return $default?.call(this);
   }
@@ -356,6 +433,7 @@ class _$_Resource extends _Resource {
     TResult Function(Playlist value)? playlist,
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
     required TResult orElse(),
   }) {
     if ($default != null) {
@@ -388,9 +466,15 @@ abstract class _$$AlbumCopyWith<$Res> implements $ResourceCopyWith<$Res> {
   factory _$$AlbumCopyWith(_$Album value, $Res Function(_$Album) then) =
       __$$AlbumCopyWithImpl<$Res>;
   @override
-  $Res call({String id, String type, AlbumAttributes? attributes});
+  $Res call(
+      {String id,
+      String type,
+      AlbumAttributes? attributes,
+      AlbumRelationships? relationships,
+      List<ResourceView>? views});
 
   $AlbumAttributesCopyWith<$Res>? get attributes;
+  $AlbumRelationshipsCopyWith<$Res>? get relationships;
 }
 
 /// @nodoc
@@ -407,6 +491,8 @@ class __$$AlbumCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
     Object? id = freezed,
     Object? type = freezed,
     Object? attributes = freezed,
+    Object? relationships = freezed,
+    Object? views = freezed,
   }) {
     return _then(_$Album(
       id: id == freezed
@@ -421,6 +507,14 @@ class __$$AlbumCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as AlbumAttributes?,
+      relationships: relationships == freezed
+          ? _value.relationships
+          : relationships // ignore: cast_nullable_to_non_nullable
+              as AlbumRelationships?,
+      views: views == freezed
+          ? _value._views
+          : views // ignore: cast_nullable_to_non_nullable
+              as List<ResourceView>?,
     ));
   }
 
@@ -434,14 +528,30 @@ class __$$AlbumCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
       return _then(_value.copyWith(attributes: value));
     });
   }
+
+  @override
+  $AlbumRelationshipsCopyWith<$Res>? get relationships {
+    if (_value.relationships == null) {
+      return null;
+    }
+
+    return $AlbumRelationshipsCopyWith<$Res>(_value.relationships!, (value) {
+      return _then(_value.copyWith(relationships: value));
+    });
+  }
 }
 
 /// @nodoc
 
 class _$Album extends Album {
   const _$Album(
-      {required this.id, required this.type, required this.attributes})
-      : super._();
+      {required this.id,
+      required this.type,
+      required this.attributes,
+      required this.relationships,
+      required final List<ResourceView>? views})
+      : _views = views,
+        super._();
 
   @override
   final String id;
@@ -449,10 +559,20 @@ class _$Album extends Album {
   final String type;
   @override
   final AlbumAttributes? attributes;
+  @override
+  final AlbumRelationships? relationships;
+  final List<ResourceView>? _views;
+  @override
+  List<ResourceView>? get views {
+    final value = _views;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'Resource.album(id: $id, type: $type, attributes: $attributes)';
+    return 'Resource.album(id: $id, type: $type, attributes: $attributes, relationships: $relationships, views: $views)';
   }
 
   @override
@@ -463,7 +583,10 @@ class _$Album extends Album {
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
-                .equals(other.attributes, attributes));
+                .equals(other.attributes, attributes) &&
+            const DeepCollectionEquality()
+                .equals(other.relationships, relationships) &&
+            const DeepCollectionEquality().equals(other._views, _views));
   }
 
   @override
@@ -471,7 +594,9 @@ class _$Album extends Album {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes));
+      const DeepCollectionEquality().hash(attributes),
+      const DeepCollectionEquality().hash(relationships),
+      const DeepCollectionEquality().hash(_views));
 
   @JsonKey(ignore: true)
   @override
@@ -484,25 +609,43 @@ class _$Album extends Album {
     TResult Function(String id, String type, ResourceAttributes? attributes)
         $default, {
     required TResult Function(
-            String id, String type, AlbumAttributes? attributes)
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            List<ResourceView>? views)
         album,
     required TResult Function(
-            String id, String type, ArtistAttributes? attributes)
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            List<ResourceView>? views)
         artist,
     required TResult Function(
-            String id, String type, MusicVideoAttributes? attributes)
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)
         musicVideo,
     required TResult Function(
-            String id, String type, PlaylistAttributes? attributes)
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            List<ResourceView>? views)
         playlist,
-    required TResult Function(
-            String id, String type, SongAttributes? attributes)
+    required TResult Function(String id, String type,
+            SongAttributes? attributes, SongRelationships? relationships)
         song,
     required TResult Function(
             String id, String type, StationAttributes? attributes)
         station,
+    required TResult Function(String id, String type,
+            CuratorAttributes? attributes, CuratorRelationships? relationships)
+        curator,
   }) {
-    return album(id, type, attributes);
+    return album(id, type, attributes, relationships, views);
   }
 
   @override
@@ -510,19 +653,28 @@ class _$Album extends Album {
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes)?
+    TResult Function(String id, String type, AlbumAttributes? attributes,
+            AlbumRelationships? relationships, List<ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes)?
+    TResult Function(String id, String type, ArtistAttributes? attributes,
+            ArtistRelationships? relationships, List<ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes)?
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes)?
+    TResult Function(String id, String type, PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships, List<ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes)? song,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            SongRelationships? relationships)?
+        song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            CuratorRelationships? relationships)?
+        curator,
   }) {
-    return album?.call(id, type, attributes);
+    return album?.call(id, type, attributes, relationships, views);
   }
 
   @override
@@ -530,21 +682,30 @@ class _$Album extends Album {
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes)?
+    TResult Function(String id, String type, AlbumAttributes? attributes,
+            AlbumRelationships? relationships, List<ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes)?
+    TResult Function(String id, String type, ArtistAttributes? attributes,
+            ArtistRelationships? relationships, List<ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes)?
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes)?
+    TResult Function(String id, String type, PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships, List<ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes)? song,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            SongRelationships? relationships)?
+        song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            CuratorRelationships? relationships)?
+        curator,
     required TResult orElse(),
   }) {
     if (album != null) {
-      return album(id, type, attributes);
+      return album(id, type, attributes, relationships, views);
     }
     return orElse();
   }
@@ -559,6 +720,7 @@ class _$Album extends Album {
     required TResult Function(Playlist value) playlist,
     required TResult Function(Song value) song,
     required TResult Function(Station value) station,
+    required TResult Function(Curator value) curator,
   }) {
     return album(this);
   }
@@ -573,6 +735,7 @@ class _$Album extends Album {
     TResult Function(Playlist value)? playlist,
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
   }) {
     return album?.call(this);
   }
@@ -587,6 +750,7 @@ class _$Album extends Album {
     TResult Function(Playlist value)? playlist,
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
     required TResult orElse(),
   }) {
     if (album != null) {
@@ -600,7 +764,9 @@ abstract class Album extends Resource {
   const factory Album(
       {required final String id,
       required final String type,
-      required final AlbumAttributes? attributes}) = _$Album;
+      required final AlbumAttributes? attributes,
+      required final AlbumRelationships? relationships,
+      required final List<ResourceView>? views}) = _$Album;
   const Album._() : super._();
 
   @override
@@ -608,6 +774,8 @@ abstract class Album extends Resource {
   @override
   String get type => throw _privateConstructorUsedError;
   AlbumAttributes? get attributes => throw _privateConstructorUsedError;
+  AlbumRelationships? get relationships => throw _privateConstructorUsedError;
+  List<ResourceView>? get views => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$AlbumCopyWith<_$Album> get copyWith => throw _privateConstructorUsedError;
@@ -618,9 +786,15 @@ abstract class _$$ArtistCopyWith<$Res> implements $ResourceCopyWith<$Res> {
   factory _$$ArtistCopyWith(_$Artist value, $Res Function(_$Artist) then) =
       __$$ArtistCopyWithImpl<$Res>;
   @override
-  $Res call({String id, String type, ArtistAttributes? attributes});
+  $Res call(
+      {String id,
+      String type,
+      ArtistAttributes? attributes,
+      ArtistRelationships? relationships,
+      List<ResourceView>? views});
 
   $ArtistAttributesCopyWith<$Res>? get attributes;
+  $ArtistRelationshipsCopyWith<$Res>? get relationships;
 }
 
 /// @nodoc
@@ -637,6 +811,8 @@ class __$$ArtistCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
     Object? id = freezed,
     Object? type = freezed,
     Object? attributes = freezed,
+    Object? relationships = freezed,
+    Object? views = freezed,
   }) {
     return _then(_$Artist(
       id: id == freezed
@@ -651,6 +827,14 @@ class __$$ArtistCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as ArtistAttributes?,
+      relationships: relationships == freezed
+          ? _value.relationships
+          : relationships // ignore: cast_nullable_to_non_nullable
+              as ArtistRelationships?,
+      views: views == freezed
+          ? _value._views
+          : views // ignore: cast_nullable_to_non_nullable
+              as List<ResourceView>?,
     ));
   }
 
@@ -664,14 +848,30 @@ class __$$ArtistCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
       return _then(_value.copyWith(attributes: value));
     });
   }
+
+  @override
+  $ArtistRelationshipsCopyWith<$Res>? get relationships {
+    if (_value.relationships == null) {
+      return null;
+    }
+
+    return $ArtistRelationshipsCopyWith<$Res>(_value.relationships!, (value) {
+      return _then(_value.copyWith(relationships: value));
+    });
+  }
 }
 
 /// @nodoc
 
 class _$Artist extends Artist {
   const _$Artist(
-      {required this.id, required this.type, required this.attributes})
-      : super._();
+      {required this.id,
+      required this.type,
+      required this.attributes,
+      required this.relationships,
+      required final List<ResourceView>? views})
+      : _views = views,
+        super._();
 
   @override
   final String id;
@@ -679,10 +879,20 @@ class _$Artist extends Artist {
   final String type;
   @override
   final ArtistAttributes? attributes;
+  @override
+  final ArtistRelationships? relationships;
+  final List<ResourceView>? _views;
+  @override
+  List<ResourceView>? get views {
+    final value = _views;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'Resource.artist(id: $id, type: $type, attributes: $attributes)';
+    return 'Resource.artist(id: $id, type: $type, attributes: $attributes, relationships: $relationships, views: $views)';
   }
 
   @override
@@ -693,7 +903,10 @@ class _$Artist extends Artist {
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
-                .equals(other.attributes, attributes));
+                .equals(other.attributes, attributes) &&
+            const DeepCollectionEquality()
+                .equals(other.relationships, relationships) &&
+            const DeepCollectionEquality().equals(other._views, _views));
   }
 
   @override
@@ -701,7 +914,9 @@ class _$Artist extends Artist {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes));
+      const DeepCollectionEquality().hash(attributes),
+      const DeepCollectionEquality().hash(relationships),
+      const DeepCollectionEquality().hash(_views));
 
   @JsonKey(ignore: true)
   @override
@@ -714,25 +929,43 @@ class _$Artist extends Artist {
     TResult Function(String id, String type, ResourceAttributes? attributes)
         $default, {
     required TResult Function(
-            String id, String type, AlbumAttributes? attributes)
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            List<ResourceView>? views)
         album,
     required TResult Function(
-            String id, String type, ArtistAttributes? attributes)
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            List<ResourceView>? views)
         artist,
     required TResult Function(
-            String id, String type, MusicVideoAttributes? attributes)
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)
         musicVideo,
     required TResult Function(
-            String id, String type, PlaylistAttributes? attributes)
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            List<ResourceView>? views)
         playlist,
-    required TResult Function(
-            String id, String type, SongAttributes? attributes)
+    required TResult Function(String id, String type,
+            SongAttributes? attributes, SongRelationships? relationships)
         song,
     required TResult Function(
             String id, String type, StationAttributes? attributes)
         station,
+    required TResult Function(String id, String type,
+            CuratorAttributes? attributes, CuratorRelationships? relationships)
+        curator,
   }) {
-    return artist(id, type, attributes);
+    return artist(id, type, attributes, relationships, views);
   }
 
   @override
@@ -740,19 +973,28 @@ class _$Artist extends Artist {
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes)?
+    TResult Function(String id, String type, AlbumAttributes? attributes,
+            AlbumRelationships? relationships, List<ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes)?
+    TResult Function(String id, String type, ArtistAttributes? attributes,
+            ArtistRelationships? relationships, List<ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes)?
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes)?
+    TResult Function(String id, String type, PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships, List<ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes)? song,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            SongRelationships? relationships)?
+        song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            CuratorRelationships? relationships)?
+        curator,
   }) {
-    return artist?.call(id, type, attributes);
+    return artist?.call(id, type, attributes, relationships, views);
   }
 
   @override
@@ -760,21 +1002,30 @@ class _$Artist extends Artist {
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes)?
+    TResult Function(String id, String type, AlbumAttributes? attributes,
+            AlbumRelationships? relationships, List<ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes)?
+    TResult Function(String id, String type, ArtistAttributes? attributes,
+            ArtistRelationships? relationships, List<ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes)?
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes)?
+    TResult Function(String id, String type, PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships, List<ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes)? song,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            SongRelationships? relationships)?
+        song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            CuratorRelationships? relationships)?
+        curator,
     required TResult orElse(),
   }) {
     if (artist != null) {
-      return artist(id, type, attributes);
+      return artist(id, type, attributes, relationships, views);
     }
     return orElse();
   }
@@ -789,6 +1040,7 @@ class _$Artist extends Artist {
     required TResult Function(Playlist value) playlist,
     required TResult Function(Song value) song,
     required TResult Function(Station value) station,
+    required TResult Function(Curator value) curator,
   }) {
     return artist(this);
   }
@@ -803,6 +1055,7 @@ class _$Artist extends Artist {
     TResult Function(Playlist value)? playlist,
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
   }) {
     return artist?.call(this);
   }
@@ -817,6 +1070,7 @@ class _$Artist extends Artist {
     TResult Function(Playlist value)? playlist,
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
     required TResult orElse(),
   }) {
     if (artist != null) {
@@ -830,7 +1084,9 @@ abstract class Artist extends Resource {
   const factory Artist(
       {required final String id,
       required final String type,
-      required final ArtistAttributes? attributes}) = _$Artist;
+      required final ArtistAttributes? attributes,
+      required final ArtistRelationships? relationships,
+      required final List<ResourceView>? views}) = _$Artist;
   const Artist._() : super._();
 
   @override
@@ -838,6 +1094,8 @@ abstract class Artist extends Resource {
   @override
   String get type => throw _privateConstructorUsedError;
   ArtistAttributes? get attributes => throw _privateConstructorUsedError;
+  ArtistRelationships? get relationships => throw _privateConstructorUsedError;
+  List<ResourceView>? get views => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$ArtistCopyWith<_$Artist> get copyWith =>
@@ -850,9 +1108,14 @@ abstract class _$$MusicVideoCopyWith<$Res> implements $ResourceCopyWith<$Res> {
           _$MusicVideo value, $Res Function(_$MusicVideo) then) =
       __$$MusicVideoCopyWithImpl<$Res>;
   @override
-  $Res call({String id, String type, MusicVideoAttributes? attributes});
+  $Res call(
+      {String id,
+      String type,
+      MusicVideoAttributes? attributes,
+      MusicVideoRelationships? relationships});
 
   $MusicVideoAttributesCopyWith<$Res>? get attributes;
+  $MusicVideoRelationshipsCopyWith<$Res>? get relationships;
 }
 
 /// @nodoc
@@ -870,6 +1133,7 @@ class __$$MusicVideoCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
     Object? id = freezed,
     Object? type = freezed,
     Object? attributes = freezed,
+    Object? relationships = freezed,
   }) {
     return _then(_$MusicVideo(
       id: id == freezed
@@ -884,6 +1148,10 @@ class __$$MusicVideoCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as MusicVideoAttributes?,
+      relationships: relationships == freezed
+          ? _value.relationships
+          : relationships // ignore: cast_nullable_to_non_nullable
+              as MusicVideoRelationships?,
     ));
   }
 
@@ -897,13 +1165,28 @@ class __$$MusicVideoCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
       return _then(_value.copyWith(attributes: value));
     });
   }
+
+  @override
+  $MusicVideoRelationshipsCopyWith<$Res>? get relationships {
+    if (_value.relationships == null) {
+      return null;
+    }
+
+    return $MusicVideoRelationshipsCopyWith<$Res>(_value.relationships!,
+        (value) {
+      return _then(_value.copyWith(relationships: value));
+    });
+  }
 }
 
 /// @nodoc
 
 class _$MusicVideo extends MusicVideo {
   const _$MusicVideo(
-      {required this.id, required this.type, required this.attributes})
+      {required this.id,
+      required this.type,
+      required this.attributes,
+      required this.relationships})
       : super._();
 
   @override
@@ -912,10 +1195,12 @@ class _$MusicVideo extends MusicVideo {
   final String type;
   @override
   final MusicVideoAttributes? attributes;
+  @override
+  final MusicVideoRelationships? relationships;
 
   @override
   String toString() {
-    return 'Resource.musicVideo(id: $id, type: $type, attributes: $attributes)';
+    return 'Resource.musicVideo(id: $id, type: $type, attributes: $attributes, relationships: $relationships)';
   }
 
   @override
@@ -926,7 +1211,9 @@ class _$MusicVideo extends MusicVideo {
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
-                .equals(other.attributes, attributes));
+                .equals(other.attributes, attributes) &&
+            const DeepCollectionEquality()
+                .equals(other.relationships, relationships));
   }
 
   @override
@@ -934,7 +1221,8 @@ class _$MusicVideo extends MusicVideo {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes));
+      const DeepCollectionEquality().hash(attributes),
+      const DeepCollectionEquality().hash(relationships));
 
   @JsonKey(ignore: true)
   @override
@@ -947,25 +1235,43 @@ class _$MusicVideo extends MusicVideo {
     TResult Function(String id, String type, ResourceAttributes? attributes)
         $default, {
     required TResult Function(
-            String id, String type, AlbumAttributes? attributes)
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            List<ResourceView>? views)
         album,
     required TResult Function(
-            String id, String type, ArtistAttributes? attributes)
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            List<ResourceView>? views)
         artist,
     required TResult Function(
-            String id, String type, MusicVideoAttributes? attributes)
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)
         musicVideo,
     required TResult Function(
-            String id, String type, PlaylistAttributes? attributes)
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            List<ResourceView>? views)
         playlist,
-    required TResult Function(
-            String id, String type, SongAttributes? attributes)
+    required TResult Function(String id, String type,
+            SongAttributes? attributes, SongRelationships? relationships)
         song,
     required TResult Function(
             String id, String type, StationAttributes? attributes)
         station,
+    required TResult Function(String id, String type,
+            CuratorAttributes? attributes, CuratorRelationships? relationships)
+        curator,
   }) {
-    return musicVideo(id, type, attributes);
+    return musicVideo(id, type, attributes, relationships);
   }
 
   @override
@@ -973,19 +1279,28 @@ class _$MusicVideo extends MusicVideo {
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes)?
+    TResult Function(String id, String type, AlbumAttributes? attributes,
+            AlbumRelationships? relationships, List<ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes)?
+    TResult Function(String id, String type, ArtistAttributes? attributes,
+            ArtistRelationships? relationships, List<ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes)?
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes)?
+    TResult Function(String id, String type, PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships, List<ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes)? song,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            SongRelationships? relationships)?
+        song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            CuratorRelationships? relationships)?
+        curator,
   }) {
-    return musicVideo?.call(id, type, attributes);
+    return musicVideo?.call(id, type, attributes, relationships);
   }
 
   @override
@@ -993,21 +1308,30 @@ class _$MusicVideo extends MusicVideo {
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes)?
+    TResult Function(String id, String type, AlbumAttributes? attributes,
+            AlbumRelationships? relationships, List<ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes)?
+    TResult Function(String id, String type, ArtistAttributes? attributes,
+            ArtistRelationships? relationships, List<ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes)?
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes)?
+    TResult Function(String id, String type, PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships, List<ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes)? song,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            SongRelationships? relationships)?
+        song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            CuratorRelationships? relationships)?
+        curator,
     required TResult orElse(),
   }) {
     if (musicVideo != null) {
-      return musicVideo(id, type, attributes);
+      return musicVideo(id, type, attributes, relationships);
     }
     return orElse();
   }
@@ -1022,6 +1346,7 @@ class _$MusicVideo extends MusicVideo {
     required TResult Function(Playlist value) playlist,
     required TResult Function(Song value) song,
     required TResult Function(Station value) station,
+    required TResult Function(Curator value) curator,
   }) {
     return musicVideo(this);
   }
@@ -1036,6 +1361,7 @@ class _$MusicVideo extends MusicVideo {
     TResult Function(Playlist value)? playlist,
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
   }) {
     return musicVideo?.call(this);
   }
@@ -1050,6 +1376,7 @@ class _$MusicVideo extends MusicVideo {
     TResult Function(Playlist value)? playlist,
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
     required TResult orElse(),
   }) {
     if (musicVideo != null) {
@@ -1063,7 +1390,8 @@ abstract class MusicVideo extends Resource {
   const factory MusicVideo(
       {required final String id,
       required final String type,
-      required final MusicVideoAttributes? attributes}) = _$MusicVideo;
+      required final MusicVideoAttributes? attributes,
+      required final MusicVideoRelationships? relationships}) = _$MusicVideo;
   const MusicVideo._() : super._();
 
   @override
@@ -1071,6 +1399,8 @@ abstract class MusicVideo extends Resource {
   @override
   String get type => throw _privateConstructorUsedError;
   MusicVideoAttributes? get attributes => throw _privateConstructorUsedError;
+  MusicVideoRelationships? get relationships =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$MusicVideoCopyWith<_$MusicVideo> get copyWith =>
@@ -1083,9 +1413,15 @@ abstract class _$$PlaylistCopyWith<$Res> implements $ResourceCopyWith<$Res> {
           _$Playlist value, $Res Function(_$Playlist) then) =
       __$$PlaylistCopyWithImpl<$Res>;
   @override
-  $Res call({String id, String type, PlaylistAttributes? attributes});
+  $Res call(
+      {String id,
+      String type,
+      PlaylistAttributes? attributes,
+      PlaylistRelationships? relationships,
+      List<ResourceView>? views});
 
   $PlaylistAttributesCopyWith<$Res>? get attributes;
+  $PlaylistRelationshipsCopyWith<$Res>? get relationships;
 }
 
 /// @nodoc
@@ -1102,6 +1438,8 @@ class __$$PlaylistCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
     Object? id = freezed,
     Object? type = freezed,
     Object? attributes = freezed,
+    Object? relationships = freezed,
+    Object? views = freezed,
   }) {
     return _then(_$Playlist(
       id: id == freezed
@@ -1116,6 +1454,14 @@ class __$$PlaylistCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as PlaylistAttributes?,
+      relationships: relationships == freezed
+          ? _value.relationships
+          : relationships // ignore: cast_nullable_to_non_nullable
+              as PlaylistRelationships?,
+      views: views == freezed
+          ? _value._views
+          : views // ignore: cast_nullable_to_non_nullable
+              as List<ResourceView>?,
     ));
   }
 
@@ -1129,14 +1475,30 @@ class __$$PlaylistCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
       return _then(_value.copyWith(attributes: value));
     });
   }
+
+  @override
+  $PlaylistRelationshipsCopyWith<$Res>? get relationships {
+    if (_value.relationships == null) {
+      return null;
+    }
+
+    return $PlaylistRelationshipsCopyWith<$Res>(_value.relationships!, (value) {
+      return _then(_value.copyWith(relationships: value));
+    });
+  }
 }
 
 /// @nodoc
 
 class _$Playlist extends Playlist {
   const _$Playlist(
-      {required this.id, required this.type, required this.attributes})
-      : super._();
+      {required this.id,
+      required this.type,
+      required this.attributes,
+      required this.relationships,
+      required final List<ResourceView>? views})
+      : _views = views,
+        super._();
 
   @override
   final String id;
@@ -1144,10 +1506,20 @@ class _$Playlist extends Playlist {
   final String type;
   @override
   final PlaylistAttributes? attributes;
+  @override
+  final PlaylistRelationships? relationships;
+  final List<ResourceView>? _views;
+  @override
+  List<ResourceView>? get views {
+    final value = _views;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'Resource.playlist(id: $id, type: $type, attributes: $attributes)';
+    return 'Resource.playlist(id: $id, type: $type, attributes: $attributes, relationships: $relationships, views: $views)';
   }
 
   @override
@@ -1158,7 +1530,10 @@ class _$Playlist extends Playlist {
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
-                .equals(other.attributes, attributes));
+                .equals(other.attributes, attributes) &&
+            const DeepCollectionEquality()
+                .equals(other.relationships, relationships) &&
+            const DeepCollectionEquality().equals(other._views, _views));
   }
 
   @override
@@ -1166,7 +1541,9 @@ class _$Playlist extends Playlist {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes));
+      const DeepCollectionEquality().hash(attributes),
+      const DeepCollectionEquality().hash(relationships),
+      const DeepCollectionEquality().hash(_views));
 
   @JsonKey(ignore: true)
   @override
@@ -1179,25 +1556,43 @@ class _$Playlist extends Playlist {
     TResult Function(String id, String type, ResourceAttributes? attributes)
         $default, {
     required TResult Function(
-            String id, String type, AlbumAttributes? attributes)
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            List<ResourceView>? views)
         album,
     required TResult Function(
-            String id, String type, ArtistAttributes? attributes)
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            List<ResourceView>? views)
         artist,
     required TResult Function(
-            String id, String type, MusicVideoAttributes? attributes)
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)
         musicVideo,
     required TResult Function(
-            String id, String type, PlaylistAttributes? attributes)
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            List<ResourceView>? views)
         playlist,
-    required TResult Function(
-            String id, String type, SongAttributes? attributes)
+    required TResult Function(String id, String type,
+            SongAttributes? attributes, SongRelationships? relationships)
         song,
     required TResult Function(
             String id, String type, StationAttributes? attributes)
         station,
+    required TResult Function(String id, String type,
+            CuratorAttributes? attributes, CuratorRelationships? relationships)
+        curator,
   }) {
-    return playlist(id, type, attributes);
+    return playlist(id, type, attributes, relationships, views);
   }
 
   @override
@@ -1205,19 +1600,28 @@ class _$Playlist extends Playlist {
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes)?
+    TResult Function(String id, String type, AlbumAttributes? attributes,
+            AlbumRelationships? relationships, List<ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes)?
+    TResult Function(String id, String type, ArtistAttributes? attributes,
+            ArtistRelationships? relationships, List<ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes)?
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes)?
+    TResult Function(String id, String type, PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships, List<ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes)? song,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            SongRelationships? relationships)?
+        song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            CuratorRelationships? relationships)?
+        curator,
   }) {
-    return playlist?.call(id, type, attributes);
+    return playlist?.call(id, type, attributes, relationships, views);
   }
 
   @override
@@ -1225,21 +1629,30 @@ class _$Playlist extends Playlist {
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes)?
+    TResult Function(String id, String type, AlbumAttributes? attributes,
+            AlbumRelationships? relationships, List<ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes)?
+    TResult Function(String id, String type, ArtistAttributes? attributes,
+            ArtistRelationships? relationships, List<ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes)?
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes)?
+    TResult Function(String id, String type, PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships, List<ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes)? song,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            SongRelationships? relationships)?
+        song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            CuratorRelationships? relationships)?
+        curator,
     required TResult orElse(),
   }) {
     if (playlist != null) {
-      return playlist(id, type, attributes);
+      return playlist(id, type, attributes, relationships, views);
     }
     return orElse();
   }
@@ -1254,6 +1667,7 @@ class _$Playlist extends Playlist {
     required TResult Function(Playlist value) playlist,
     required TResult Function(Song value) song,
     required TResult Function(Station value) station,
+    required TResult Function(Curator value) curator,
   }) {
     return playlist(this);
   }
@@ -1268,6 +1682,7 @@ class _$Playlist extends Playlist {
     TResult Function(Playlist value)? playlist,
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
   }) {
     return playlist?.call(this);
   }
@@ -1282,6 +1697,7 @@ class _$Playlist extends Playlist {
     TResult Function(Playlist value)? playlist,
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
     required TResult orElse(),
   }) {
     if (playlist != null) {
@@ -1295,7 +1711,9 @@ abstract class Playlist extends Resource {
   const factory Playlist(
       {required final String id,
       required final String type,
-      required final PlaylistAttributes? attributes}) = _$Playlist;
+      required final PlaylistAttributes? attributes,
+      required final PlaylistRelationships? relationships,
+      required final List<ResourceView>? views}) = _$Playlist;
   const Playlist._() : super._();
 
   @override
@@ -1303,6 +1721,9 @@ abstract class Playlist extends Resource {
   @override
   String get type => throw _privateConstructorUsedError;
   PlaylistAttributes? get attributes => throw _privateConstructorUsedError;
+  PlaylistRelationships? get relationships =>
+      throw _privateConstructorUsedError;
+  List<ResourceView>? get views => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$PlaylistCopyWith<_$Playlist> get copyWith =>
@@ -1314,9 +1735,14 @@ abstract class _$$SongCopyWith<$Res> implements $ResourceCopyWith<$Res> {
   factory _$$SongCopyWith(_$Song value, $Res Function(_$Song) then) =
       __$$SongCopyWithImpl<$Res>;
   @override
-  $Res call({String id, String type, SongAttributes? attributes});
+  $Res call(
+      {String id,
+      String type,
+      SongAttributes? attributes,
+      SongRelationships? relationships});
 
   $SongAttributesCopyWith<$Res>? get attributes;
+  $SongRelationshipsCopyWith<$Res>? get relationships;
 }
 
 /// @nodoc
@@ -1333,6 +1759,7 @@ class __$$SongCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
     Object? id = freezed,
     Object? type = freezed,
     Object? attributes = freezed,
+    Object? relationships = freezed,
   }) {
     return _then(_$Song(
       id: id == freezed
@@ -1347,6 +1774,10 @@ class __$$SongCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as SongAttributes?,
+      relationships: relationships == freezed
+          ? _value.relationships
+          : relationships // ignore: cast_nullable_to_non_nullable
+              as SongRelationships?,
     ));
   }
 
@@ -1360,12 +1791,27 @@ class __$$SongCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
       return _then(_value.copyWith(attributes: value));
     });
   }
+
+  @override
+  $SongRelationshipsCopyWith<$Res>? get relationships {
+    if (_value.relationships == null) {
+      return null;
+    }
+
+    return $SongRelationshipsCopyWith<$Res>(_value.relationships!, (value) {
+      return _then(_value.copyWith(relationships: value));
+    });
+  }
 }
 
 /// @nodoc
 
 class _$Song extends Song {
-  const _$Song({required this.id, required this.type, required this.attributes})
+  const _$Song(
+      {required this.id,
+      required this.type,
+      required this.attributes,
+      required this.relationships})
       : super._();
 
   @override
@@ -1374,10 +1820,12 @@ class _$Song extends Song {
   final String type;
   @override
   final SongAttributes? attributes;
+  @override
+  final SongRelationships? relationships;
 
   @override
   String toString() {
-    return 'Resource.song(id: $id, type: $type, attributes: $attributes)';
+    return 'Resource.song(id: $id, type: $type, attributes: $attributes, relationships: $relationships)';
   }
 
   @override
@@ -1388,7 +1836,9 @@ class _$Song extends Song {
             const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
-                .equals(other.attributes, attributes));
+                .equals(other.attributes, attributes) &&
+            const DeepCollectionEquality()
+                .equals(other.relationships, relationships));
   }
 
   @override
@@ -1396,7 +1846,8 @@ class _$Song extends Song {
       runtimeType,
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes));
+      const DeepCollectionEquality().hash(attributes),
+      const DeepCollectionEquality().hash(relationships));
 
   @JsonKey(ignore: true)
   @override
@@ -1409,25 +1860,43 @@ class _$Song extends Song {
     TResult Function(String id, String type, ResourceAttributes? attributes)
         $default, {
     required TResult Function(
-            String id, String type, AlbumAttributes? attributes)
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            List<ResourceView>? views)
         album,
     required TResult Function(
-            String id, String type, ArtistAttributes? attributes)
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            List<ResourceView>? views)
         artist,
     required TResult Function(
-            String id, String type, MusicVideoAttributes? attributes)
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)
         musicVideo,
     required TResult Function(
-            String id, String type, PlaylistAttributes? attributes)
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            List<ResourceView>? views)
         playlist,
-    required TResult Function(
-            String id, String type, SongAttributes? attributes)
+    required TResult Function(String id, String type,
+            SongAttributes? attributes, SongRelationships? relationships)
         song,
     required TResult Function(
             String id, String type, StationAttributes? attributes)
         station,
+    required TResult Function(String id, String type,
+            CuratorAttributes? attributes, CuratorRelationships? relationships)
+        curator,
   }) {
-    return song(id, type, attributes);
+    return song(id, type, attributes, relationships);
   }
 
   @override
@@ -1435,19 +1904,28 @@ class _$Song extends Song {
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes)?
+    TResult Function(String id, String type, AlbumAttributes? attributes,
+            AlbumRelationships? relationships, List<ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes)?
+    TResult Function(String id, String type, ArtistAttributes? attributes,
+            ArtistRelationships? relationships, List<ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes)?
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes)?
+    TResult Function(String id, String type, PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships, List<ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes)? song,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            SongRelationships? relationships)?
+        song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            CuratorRelationships? relationships)?
+        curator,
   }) {
-    return song?.call(id, type, attributes);
+    return song?.call(id, type, attributes, relationships);
   }
 
   @override
@@ -1455,21 +1933,30 @@ class _$Song extends Song {
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes)?
+    TResult Function(String id, String type, AlbumAttributes? attributes,
+            AlbumRelationships? relationships, List<ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes)?
+    TResult Function(String id, String type, ArtistAttributes? attributes,
+            ArtistRelationships? relationships, List<ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes)?
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes)?
+    TResult Function(String id, String type, PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships, List<ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes)? song,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            SongRelationships? relationships)?
+        song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            CuratorRelationships? relationships)?
+        curator,
     required TResult orElse(),
   }) {
     if (song != null) {
-      return song(id, type, attributes);
+      return song(id, type, attributes, relationships);
     }
     return orElse();
   }
@@ -1484,6 +1971,7 @@ class _$Song extends Song {
     required TResult Function(Playlist value) playlist,
     required TResult Function(Song value) song,
     required TResult Function(Station value) station,
+    required TResult Function(Curator value) curator,
   }) {
     return song(this);
   }
@@ -1498,6 +1986,7 @@ class _$Song extends Song {
     TResult Function(Playlist value)? playlist,
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
   }) {
     return song?.call(this);
   }
@@ -1512,6 +2001,7 @@ class _$Song extends Song {
     TResult Function(Playlist value)? playlist,
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
     required TResult orElse(),
   }) {
     if (song != null) {
@@ -1525,7 +2015,8 @@ abstract class Song extends Resource {
   const factory Song(
       {required final String id,
       required final String type,
-      required final SongAttributes? attributes}) = _$Song;
+      required final SongAttributes? attributes,
+      required final SongRelationships? relationships}) = _$Song;
   const Song._() : super._();
 
   @override
@@ -1533,6 +2024,7 @@ abstract class Song extends Resource {
   @override
   String get type => throw _privateConstructorUsedError;
   SongAttributes? get attributes => throw _privateConstructorUsedError;
+  SongRelationships? get relationships => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$SongCopyWith<_$Song> get copyWith => throw _privateConstructorUsedError;
@@ -1639,23 +2131,41 @@ class _$Station extends Station {
     TResult Function(String id, String type, ResourceAttributes? attributes)
         $default, {
     required TResult Function(
-            String id, String type, AlbumAttributes? attributes)
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            List<ResourceView>? views)
         album,
     required TResult Function(
-            String id, String type, ArtistAttributes? attributes)
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            List<ResourceView>? views)
         artist,
     required TResult Function(
-            String id, String type, MusicVideoAttributes? attributes)
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)
         musicVideo,
     required TResult Function(
-            String id, String type, PlaylistAttributes? attributes)
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            List<ResourceView>? views)
         playlist,
-    required TResult Function(
-            String id, String type, SongAttributes? attributes)
+    required TResult Function(String id, String type,
+            SongAttributes? attributes, SongRelationships? relationships)
         song,
     required TResult Function(
             String id, String type, StationAttributes? attributes)
         station,
+    required TResult Function(String id, String type,
+            CuratorAttributes? attributes, CuratorRelationships? relationships)
+        curator,
   }) {
     return station(id, type, attributes);
   }
@@ -1665,17 +2175,26 @@ class _$Station extends Station {
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes)?
+    TResult Function(String id, String type, AlbumAttributes? attributes,
+            AlbumRelationships? relationships, List<ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes)?
+    TResult Function(String id, String type, ArtistAttributes? attributes,
+            ArtistRelationships? relationships, List<ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes)?
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes)?
+    TResult Function(String id, String type, PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships, List<ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes)? song,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            SongRelationships? relationships)?
+        song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            CuratorRelationships? relationships)?
+        curator,
   }) {
     return station?.call(id, type, attributes);
   }
@@ -1685,17 +2204,26 @@ class _$Station extends Station {
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes)?
+    TResult Function(String id, String type, AlbumAttributes? attributes,
+            AlbumRelationships? relationships, List<ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes)?
+    TResult Function(String id, String type, ArtistAttributes? attributes,
+            ArtistRelationships? relationships, List<ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes)?
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes)?
+    TResult Function(String id, String type, PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships, List<ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes)? song,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            SongRelationships? relationships)?
+        song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            CuratorRelationships? relationships)?
+        curator,
     required TResult orElse(),
   }) {
     if (station != null) {
@@ -1714,6 +2242,7 @@ class _$Station extends Station {
     required TResult Function(Playlist value) playlist,
     required TResult Function(Song value) song,
     required TResult Function(Station value) station,
+    required TResult Function(Curator value) curator,
   }) {
     return station(this);
   }
@@ -1728,6 +2257,7 @@ class _$Station extends Station {
     TResult Function(Playlist value)? playlist,
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
   }) {
     return station?.call(this);
   }
@@ -1742,6 +2272,7 @@ class _$Station extends Station {
     TResult Function(Playlist value)? playlist,
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
     required TResult orElse(),
   }) {
     if (station != null) {
@@ -1769,1888 +2300,303 @@ abstract class Station extends Resource {
       throw _privateConstructorUsedError;
 }
 
-ResourceAttributes _$ResourceAttributesFromJson(Map<String, dynamic> json) {
-  return _ResourceAttributes.fromJson(json);
-}
-
 /// @nodoc
-mixin _$ResourceAttributes {
-  String? get albumName => throw _privateConstructorUsedError;
-  String? get artistName => throw _privateConstructorUsedError;
-  String? get artistUrl => throw _privateConstructorUsedError;
-  String? get curatorName => throw _privateConstructorUsedError;
-  Artwork? get artwork => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  PlayParams? get playParams => throw _privateConstructorUsedError;
-  String? get url => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $ResourceAttributesCopyWith<ResourceAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $ResourceAttributesCopyWith<$Res> {
-  factory $ResourceAttributesCopyWith(
-          ResourceAttributes value, $Res Function(ResourceAttributes) then) =
-      _$ResourceAttributesCopyWithImpl<$Res>;
+abstract class _$$CuratorCopyWith<$Res> implements $ResourceCopyWith<$Res> {
+  factory _$$CuratorCopyWith(_$Curator value, $Res Function(_$Curator) then) =
+      __$$CuratorCopyWithImpl<$Res>;
+  @override
   $Res call(
-      {String? albumName,
-      String? artistName,
-      String? artistUrl,
-      String? curatorName,
-      Artwork? artwork,
-      String name,
-      PlayParams? playParams,
-      String? url});
+      {String id,
+      String type,
+      CuratorAttributes? attributes,
+      CuratorRelationships? relationships});
 
-  $ArtworkCopyWith<$Res>? get artwork;
-  $PlayParamsCopyWith<$Res>? get playParams;
+  $CuratorAttributesCopyWith<$Res>? get attributes;
+  $CuratorRelationshipsCopyWith<$Res>? get relationships;
 }
 
 /// @nodoc
-class _$ResourceAttributesCopyWithImpl<$Res>
-    implements $ResourceAttributesCopyWith<$Res> {
-  _$ResourceAttributesCopyWithImpl(this._value, this._then);
+class __$$CuratorCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
+    implements _$$CuratorCopyWith<$Res> {
+  __$$CuratorCopyWithImpl(_$Curator _value, $Res Function(_$Curator) _then)
+      : super(_value, (v) => _then(v as _$Curator));
 
-  final ResourceAttributes _value;
-  // ignore: unused_field
-  final $Res Function(ResourceAttributes) _then;
+  @override
+  _$Curator get _value => super._value as _$Curator;
 
   @override
   $Res call({
-    Object? albumName = freezed,
-    Object? artistName = freezed,
-    Object? artistUrl = freezed,
-    Object? curatorName = freezed,
-    Object? artwork = freezed,
-    Object? name = freezed,
-    Object? playParams = freezed,
-    Object? url = freezed,
+    Object? id = freezed,
+    Object? type = freezed,
+    Object? attributes = freezed,
+    Object? relationships = freezed,
   }) {
-    return _then(_value.copyWith(
-      albumName: albumName == freezed
-          ? _value.albumName
-          : albumName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artistName: artistName == freezed
-          ? _value.artistName
-          : artistName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artistUrl: artistUrl == freezed
-          ? _value.artistUrl
-          : artistUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      curatorName: curatorName == freezed
-          ? _value.curatorName
-          : curatorName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artwork: artwork == freezed
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
+    return _then(_$Curator(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String,
-      playParams: playParams == freezed
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams?,
-      url: url == freezed
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      attributes: attributes == freezed
+          ? _value.attributes
+          : attributes // ignore: cast_nullable_to_non_nullable
+              as CuratorAttributes?,
+      relationships: relationships == freezed
+          ? _value.relationships
+          : relationships // ignore: cast_nullable_to_non_nullable
+              as CuratorRelationships?,
     ));
   }
 
   @override
-  $ArtworkCopyWith<$Res>? get artwork {
-    if (_value.artwork == null) {
+  $CuratorAttributesCopyWith<$Res>? get attributes {
+    if (_value.attributes == null) {
       return null;
     }
 
-    return $ArtworkCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
+    return $CuratorAttributesCopyWith<$Res>(_value.attributes!, (value) {
+      return _then(_value.copyWith(attributes: value));
     });
   }
 
   @override
-  $PlayParamsCopyWith<$Res>? get playParams {
-    if (_value.playParams == null) {
+  $CuratorRelationshipsCopyWith<$Res>? get relationships {
+    if (_value.relationships == null) {
       return null;
     }
 
-    return $PlayParamsCopyWith<$Res>(_value.playParams!, (value) {
-      return _then(_value.copyWith(playParams: value));
+    return $CuratorRelationshipsCopyWith<$Res>(_value.relationships!, (value) {
+      return _then(_value.copyWith(relationships: value));
     });
   }
 }
 
 /// @nodoc
-abstract class _$$_ResourceAttributesCopyWith<$Res>
-    implements $ResourceAttributesCopyWith<$Res> {
-  factory _$$_ResourceAttributesCopyWith(_$_ResourceAttributes value,
-          $Res Function(_$_ResourceAttributes) then) =
-      __$$_ResourceAttributesCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String? albumName,
-      String? artistName,
-      String? artistUrl,
-      String? curatorName,
-      Artwork? artwork,
-      String name,
-      PlayParams? playParams,
-      String? url});
 
-  @override
-  $ArtworkCopyWith<$Res>? get artwork;
-  @override
-  $PlayParamsCopyWith<$Res>? get playParams;
-}
-
-/// @nodoc
-class __$$_ResourceAttributesCopyWithImpl<$Res>
-    extends _$ResourceAttributesCopyWithImpl<$Res>
-    implements _$$_ResourceAttributesCopyWith<$Res> {
-  __$$_ResourceAttributesCopyWithImpl(
-      _$_ResourceAttributes _value, $Res Function(_$_ResourceAttributes) _then)
-      : super(_value, (v) => _then(v as _$_ResourceAttributes));
-
-  @override
-  _$_ResourceAttributes get _value => super._value as _$_ResourceAttributes;
-
-  @override
-  $Res call({
-    Object? albumName = freezed,
-    Object? artistName = freezed,
-    Object? artistUrl = freezed,
-    Object? curatorName = freezed,
-    Object? artwork = freezed,
-    Object? name = freezed,
-    Object? playParams = freezed,
-    Object? url = freezed,
-  }) {
-    return _then(_$_ResourceAttributes(
-      albumName: albumName == freezed
-          ? _value.albumName
-          : albumName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artistName: artistName == freezed
-          ? _value.artistName
-          : artistName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artistUrl: artistUrl == freezed
-          ? _value.artistUrl
-          : artistUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      curatorName: curatorName == freezed
-          ? _value.curatorName
-          : curatorName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artwork: artwork == freezed
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      playParams: playParams == freezed
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams?,
-      url: url == freezed
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_ResourceAttributes extends _ResourceAttributes {
-  const _$_ResourceAttributes(
-      {this.albumName,
-      this.artistName,
-      this.artistUrl,
-      this.curatorName,
-      this.artwork,
-      required this.name,
-      this.playParams,
-      this.url})
-      : super._();
-
-  factory _$_ResourceAttributes.fromJson(Map<String, dynamic> json) =>
-      _$$_ResourceAttributesFromJson(json);
-
-  @override
-  final String? albumName;
-  @override
-  final String? artistName;
-  @override
-  final String? artistUrl;
-  @override
-  final String? curatorName;
-  @override
-  final Artwork? artwork;
-  @override
-  final String name;
-  @override
-  final PlayParams? playParams;
-  @override
-  final String? url;
-
-  @override
-  String toString() {
-    return 'ResourceAttributes(albumName: $albumName, artistName: $artistName, artistUrl: $artistUrl, curatorName: $curatorName, artwork: $artwork, name: $name, playParams: $playParams, url: $url)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_ResourceAttributes &&
-            const DeepCollectionEquality().equals(other.albumName, albumName) &&
-            const DeepCollectionEquality()
-                .equals(other.artistName, artistName) &&
-            const DeepCollectionEquality().equals(other.artistUrl, artistUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.curatorName, curatorName) &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.playParams, playParams) &&
-            const DeepCollectionEquality().equals(other.url, url));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(albumName),
-      const DeepCollectionEquality().hash(artistName),
-      const DeepCollectionEquality().hash(artistUrl),
-      const DeepCollectionEquality().hash(curatorName),
-      const DeepCollectionEquality().hash(artwork),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(playParams),
-      const DeepCollectionEquality().hash(url));
-
-  @JsonKey(ignore: true)
-  @override
-  _$$_ResourceAttributesCopyWith<_$_ResourceAttributes> get copyWith =>
-      __$$_ResourceAttributesCopyWithImpl<_$_ResourceAttributes>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_ResourceAttributesToJson(this);
-  }
-}
-
-abstract class _ResourceAttributes extends ResourceAttributes {
-  const factory _ResourceAttributes(
-      {final String? albumName,
-      final String? artistName,
-      final String? artistUrl,
-      final String? curatorName,
-      final Artwork? artwork,
-      required final String name,
-      final PlayParams? playParams,
-      final String? url}) = _$_ResourceAttributes;
-  const _ResourceAttributes._() : super._();
-
-  factory _ResourceAttributes.fromJson(Map<String, dynamic> json) =
-      _$_ResourceAttributes.fromJson;
-
-  @override
-  String? get albumName => throw _privateConstructorUsedError;
-  @override
-  String? get artistName => throw _privateConstructorUsedError;
-  @override
-  String? get artistUrl => throw _privateConstructorUsedError;
-  @override
-  String? get curatorName => throw _privateConstructorUsedError;
-  @override
-  Artwork? get artwork => throw _privateConstructorUsedError;
-  @override
-  String get name => throw _privateConstructorUsedError;
-  @override
-  PlayParams? get playParams => throw _privateConstructorUsedError;
-  @override
-  String? get url => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$$_ResourceAttributesCopyWith<_$_ResourceAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-mixin _$AlbumAttributes {
-  String get artistName => throw _privateConstructorUsedError;
-  String? get artistUrl => throw _privateConstructorUsedError;
-  Artwork? get artwork => throw _privateConstructorUsedError;
-  String? get contentRating => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  PlayParams get playParams => throw _privateConstructorUsedError;
-  String? get url => throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $AlbumAttributesCopyWith<AlbumAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $AlbumAttributesCopyWith<$Res> {
-  factory $AlbumAttributesCopyWith(
-          AlbumAttributes value, $Res Function(AlbumAttributes) then) =
-      _$AlbumAttributesCopyWithImpl<$Res>;
-  $Res call(
-      {String artistName,
-      String? artistUrl,
-      Artwork? artwork,
-      String? contentRating,
-      String name,
-      PlayParams playParams,
-      String? url});
-
-  $ArtworkCopyWith<$Res>? get artwork;
-  $PlayParamsCopyWith<$Res> get playParams;
-}
-
-/// @nodoc
-class _$AlbumAttributesCopyWithImpl<$Res>
-    implements $AlbumAttributesCopyWith<$Res> {
-  _$AlbumAttributesCopyWithImpl(this._value, this._then);
-
-  final AlbumAttributes _value;
-  // ignore: unused_field
-  final $Res Function(AlbumAttributes) _then;
-
-  @override
-  $Res call({
-    Object? artistName = freezed,
-    Object? artistUrl = freezed,
-    Object? artwork = freezed,
-    Object? contentRating = freezed,
-    Object? name = freezed,
-    Object? playParams = freezed,
-    Object? url = freezed,
-  }) {
-    return _then(_value.copyWith(
-      artistName: artistName == freezed
-          ? _value.artistName
-          : artistName // ignore: cast_nullable_to_non_nullable
-              as String,
-      artistUrl: artistUrl == freezed
-          ? _value.artistUrl
-          : artistUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artwork: artwork == freezed
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      contentRating: contentRating == freezed
-          ? _value.contentRating
-          : contentRating // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      playParams: playParams == freezed
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
-      url: url == freezed
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-
-  @override
-  $ArtworkCopyWith<$Res>? get artwork {
-    if (_value.artwork == null) {
-      return null;
-    }
-
-    return $ArtworkCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
-    });
-  }
-
-  @override
-  $PlayParamsCopyWith<$Res> get playParams {
-    return $PlayParamsCopyWith<$Res>(_value.playParams, (value) {
-      return _then(_value.copyWith(playParams: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_AlbumAttributesCopyWith<$Res>
-    implements $AlbumAttributesCopyWith<$Res> {
-  factory _$$_AlbumAttributesCopyWith(
-          _$_AlbumAttributes value, $Res Function(_$_AlbumAttributes) then) =
-      __$$_AlbumAttributesCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String artistName,
-      String? artistUrl,
-      Artwork? artwork,
-      String? contentRating,
-      String name,
-      PlayParams playParams,
-      String? url});
-
-  @override
-  $ArtworkCopyWith<$Res>? get artwork;
-  @override
-  $PlayParamsCopyWith<$Res> get playParams;
-}
-
-/// @nodoc
-class __$$_AlbumAttributesCopyWithImpl<$Res>
-    extends _$AlbumAttributesCopyWithImpl<$Res>
-    implements _$$_AlbumAttributesCopyWith<$Res> {
-  __$$_AlbumAttributesCopyWithImpl(
-      _$_AlbumAttributes _value, $Res Function(_$_AlbumAttributes) _then)
-      : super(_value, (v) => _then(v as _$_AlbumAttributes));
-
-  @override
-  _$_AlbumAttributes get _value => super._value as _$_AlbumAttributes;
-
-  @override
-  $Res call({
-    Object? artistName = freezed,
-    Object? artistUrl = freezed,
-    Object? artwork = freezed,
-    Object? contentRating = freezed,
-    Object? name = freezed,
-    Object? playParams = freezed,
-    Object? url = freezed,
-  }) {
-    return _then(_$_AlbumAttributes(
-      artistName: artistName == freezed
-          ? _value.artistName
-          : artistName // ignore: cast_nullable_to_non_nullable
-              as String,
-      artistUrl: artistUrl == freezed
-          ? _value.artistUrl
-          : artistUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artwork: artwork == freezed
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      contentRating: contentRating == freezed
-          ? _value.contentRating
-          : contentRating // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      playParams: playParams == freezed
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
-      url: url == freezed
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$_AlbumAttributes extends _AlbumAttributes {
-  const _$_AlbumAttributes(
-      {required this.artistName,
-      required this.artistUrl,
-      required this.artwork,
-      required this.contentRating,
-      required this.name,
-      required this.playParams,
-      required this.url})
+class _$Curator extends Curator {
+  const _$Curator(
+      {required this.id,
+      required this.type,
+      required this.attributes,
+      required this.relationships})
       : super._();
 
   @override
-  final String artistName;
+  final String id;
   @override
-  final String? artistUrl;
+  final String type;
   @override
-  final Artwork? artwork;
+  final CuratorAttributes? attributes;
   @override
-  final String? contentRating;
-  @override
-  final String name;
-  @override
-  final PlayParams playParams;
-  @override
-  final String? url;
+  final CuratorRelationships? relationships;
 
   @override
   String toString() {
-    return 'AlbumAttributes(artistName: $artistName, artistUrl: $artistUrl, artwork: $artwork, contentRating: $contentRating, name: $name, playParams: $playParams, url: $url)';
+    return 'Resource.curator(id: $id, type: $type, attributes: $attributes, relationships: $relationships)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AlbumAttributes &&
+            other is _$Curator &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
-                .equals(other.artistName, artistName) &&
-            const DeepCollectionEquality().equals(other.artistUrl, artistUrl) &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
+                .equals(other.attributes, attributes) &&
             const DeepCollectionEquality()
-                .equals(other.contentRating, contentRating) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.playParams, playParams) &&
-            const DeepCollectionEquality().equals(other.url, url));
+                .equals(other.relationships, relationships));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(artistName),
-      const DeepCollectionEquality().hash(artistUrl),
-      const DeepCollectionEquality().hash(artwork),
-      const DeepCollectionEquality().hash(contentRating),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(playParams),
-      const DeepCollectionEquality().hash(url));
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(attributes),
+      const DeepCollectionEquality().hash(relationships));
 
   @JsonKey(ignore: true)
   @override
-  _$$_AlbumAttributesCopyWith<_$_AlbumAttributes> get copyWith =>
-      __$$_AlbumAttributesCopyWithImpl<_$_AlbumAttributes>(this, _$identity);
-}
-
-abstract class _AlbumAttributes extends AlbumAttributes {
-  const factory _AlbumAttributes(
-      {required final String artistName,
-      required final String? artistUrl,
-      required final Artwork? artwork,
-      required final String? contentRating,
-      required final String name,
-      required final PlayParams playParams,
-      required final String? url}) = _$_AlbumAttributes;
-  const _AlbumAttributes._() : super._();
+  _$$CuratorCopyWith<_$Curator> get copyWith =>
+      __$$CuratorCopyWithImpl<_$Curator>(this, _$identity);
 
   @override
-  String get artistName => throw _privateConstructorUsedError;
-  @override
-  String? get artistUrl => throw _privateConstructorUsedError;
-  @override
-  Artwork? get artwork => throw _privateConstructorUsedError;
-  @override
-  String? get contentRating => throw _privateConstructorUsedError;
-  @override
-  String get name => throw _privateConstructorUsedError;
-  @override
-  PlayParams get playParams => throw _privateConstructorUsedError;
-  @override
-  String? get url => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$$_AlbumAttributesCopyWith<_$_AlbumAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-mixin _$ArtistAttributes {
-  String get name => throw _privateConstructorUsedError;
-  String? get url => throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $ArtistAttributesCopyWith<ArtistAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $ArtistAttributesCopyWith<$Res> {
-  factory $ArtistAttributesCopyWith(
-          ArtistAttributes value, $Res Function(ArtistAttributes) then) =
-      _$ArtistAttributesCopyWithImpl<$Res>;
-  $Res call({String name, String? url});
-}
-
-/// @nodoc
-class _$ArtistAttributesCopyWithImpl<$Res>
-    implements $ArtistAttributesCopyWith<$Res> {
-  _$ArtistAttributesCopyWithImpl(this._value, this._then);
-
-  final ArtistAttributes _value;
-  // ignore: unused_field
-  final $Res Function(ArtistAttributes) _then;
-
-  @override
-  $Res call({
-    Object? name = freezed,
-    Object? url = freezed,
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String id, String type, ResourceAttributes? attributes)
+        $default, {
+    required TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            List<ResourceView>? views)
+        album,
+    required TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            List<ResourceView>? views)
+        artist,
+    required TResult Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)
+        musicVideo,
+    required TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            List<ResourceView>? views)
+        playlist,
+    required TResult Function(String id, String type,
+            SongAttributes? attributes, SongRelationships? relationships)
+        song,
+    required TResult Function(
+            String id, String type, StationAttributes? attributes)
+        station,
+    required TResult Function(String id, String type,
+            CuratorAttributes? attributes, CuratorRelationships? relationships)
+        curator,
   }) {
-    return _then(_value.copyWith(
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: url == freezed
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return curator(id, type, attributes, relationships);
   }
-}
-
-/// @nodoc
-abstract class _$$_ArtistAttributesCopyWith<$Res>
-    implements $ArtistAttributesCopyWith<$Res> {
-  factory _$$_ArtistAttributesCopyWith(
-          _$_ArtistAttributes value, $Res Function(_$_ArtistAttributes) then) =
-      __$$_ArtistAttributesCopyWithImpl<$Res>;
-  @override
-  $Res call({String name, String? url});
-}
-
-/// @nodoc
-class __$$_ArtistAttributesCopyWithImpl<$Res>
-    extends _$ArtistAttributesCopyWithImpl<$Res>
-    implements _$$_ArtistAttributesCopyWith<$Res> {
-  __$$_ArtistAttributesCopyWithImpl(
-      _$_ArtistAttributes _value, $Res Function(_$_ArtistAttributes) _then)
-      : super(_value, (v) => _then(v as _$_ArtistAttributes));
 
   @override
-  _$_ArtistAttributes get _value => super._value as _$_ArtistAttributes;
-
-  @override
-  $Res call({
-    Object? name = freezed,
-    Object? url = freezed,
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(String id, String type, ResourceAttributes? attributes)?
+        $default, {
+    TResult Function(String id, String type, AlbumAttributes? attributes,
+            AlbumRelationships? relationships, List<ResourceView>? views)?
+        album,
+    TResult Function(String id, String type, ArtistAttributes? attributes,
+            ArtistRelationships? relationships, List<ResourceView>? views)?
+        artist,
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)?
+        musicVideo,
+    TResult Function(String id, String type, PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships, List<ResourceView>? views)?
+        playlist,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            SongRelationships? relationships)?
+        song,
+    TResult Function(String id, String type, StationAttributes? attributes)?
+        station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            CuratorRelationships? relationships)?
+        curator,
   }) {
-    return _then(_$_ArtistAttributes(
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: url == freezed
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$_ArtistAttributes extends _ArtistAttributes {
-  const _$_ArtistAttributes({required this.name, required this.url})
-      : super._();
-
-  @override
-  final String name;
-  @override
-  final String? url;
-
-  @override
-  String toString() {
-    return 'ArtistAttributes(name: $name, url: $url)';
+    return curator?.call(id, type, attributes, relationships);
   }
 
   @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_ArtistAttributes &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.url, url));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(url));
-
-  @JsonKey(ignore: true)
-  @override
-  _$$_ArtistAttributesCopyWith<_$_ArtistAttributes> get copyWith =>
-      __$$_ArtistAttributesCopyWithImpl<_$_ArtistAttributes>(this, _$identity);
-}
-
-abstract class _ArtistAttributes extends ArtistAttributes {
-  const factory _ArtistAttributes(
-      {required final String name,
-      required final String? url}) = _$_ArtistAttributes;
-  const _ArtistAttributes._() : super._();
-
-  @override
-  String get name => throw _privateConstructorUsedError;
-  @override
-  String? get url => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$$_ArtistAttributesCopyWith<_$_ArtistAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-mixin _$MusicVideoAttributes {
-  String get artistName => throw _privateConstructorUsedError;
-  String get artistUrl => throw _privateConstructorUsedError;
-  Artwork? get artwork => throw _privateConstructorUsedError;
-  int get durationInMillis => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  PlayParams get playParams => throw _privateConstructorUsedError;
-  List<Map<String, dynamic>>? get previews =>
-      throw _privateConstructorUsedError;
-  String? get url => throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $MusicVideoAttributesCopyWith<MusicVideoAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $MusicVideoAttributesCopyWith<$Res> {
-  factory $MusicVideoAttributesCopyWith(MusicVideoAttributes value,
-          $Res Function(MusicVideoAttributes) then) =
-      _$MusicVideoAttributesCopyWithImpl<$Res>;
-  $Res call(
-      {String artistName,
-      String artistUrl,
-      Artwork? artwork,
-      int durationInMillis,
-      String name,
-      PlayParams playParams,
-      List<Map<String, dynamic>>? previews,
-      String? url});
-
-  $ArtworkCopyWith<$Res>? get artwork;
-  $PlayParamsCopyWith<$Res> get playParams;
-}
-
-/// @nodoc
-class _$MusicVideoAttributesCopyWithImpl<$Res>
-    implements $MusicVideoAttributesCopyWith<$Res> {
-  _$MusicVideoAttributesCopyWithImpl(this._value, this._then);
-
-  final MusicVideoAttributes _value;
-  // ignore: unused_field
-  final $Res Function(MusicVideoAttributes) _then;
-
-  @override
-  $Res call({
-    Object? artistName = freezed,
-    Object? artistUrl = freezed,
-    Object? artwork = freezed,
-    Object? durationInMillis = freezed,
-    Object? name = freezed,
-    Object? playParams = freezed,
-    Object? previews = freezed,
-    Object? url = freezed,
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String id, String type, ResourceAttributes? attributes)?
+        $default, {
+    TResult Function(String id, String type, AlbumAttributes? attributes,
+            AlbumRelationships? relationships, List<ResourceView>? views)?
+        album,
+    TResult Function(String id, String type, ArtistAttributes? attributes,
+            ArtistRelationships? relationships, List<ResourceView>? views)?
+        artist,
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            MusicVideoRelationships? relationships)?
+        musicVideo,
+    TResult Function(String id, String type, PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships, List<ResourceView>? views)?
+        playlist,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            SongRelationships? relationships)?
+        song,
+    TResult Function(String id, String type, StationAttributes? attributes)?
+        station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            CuratorRelationships? relationships)?
+        curator,
+    required TResult orElse(),
   }) {
-    return _then(_value.copyWith(
-      artistName: artistName == freezed
-          ? _value.artistName
-          : artistName // ignore: cast_nullable_to_non_nullable
-              as String,
-      artistUrl: artistUrl == freezed
-          ? _value.artistUrl
-          : artistUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      artwork: artwork == freezed
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      durationInMillis: durationInMillis == freezed
-          ? _value.durationInMillis
-          : durationInMillis // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      playParams: playParams == freezed
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
-      previews: previews == freezed
-          ? _value.previews
-          : previews // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>?,
-      url: url == freezed
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-
-  @override
-  $ArtworkCopyWith<$Res>? get artwork {
-    if (_value.artwork == null) {
-      return null;
+    if (curator != null) {
+      return curator(id, type, attributes, relationships);
     }
-
-    return $ArtworkCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
-    });
+    return orElse();
   }
 
   @override
-  $PlayParamsCopyWith<$Res> get playParams {
-    return $PlayParamsCopyWith<$Res>(_value.playParams, (value) {
-      return _then(_value.copyWith(playParams: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_MusicVideoAttributesCopyWith<$Res>
-    implements $MusicVideoAttributesCopyWith<$Res> {
-  factory _$$_MusicVideoAttributesCopyWith(_$_MusicVideoAttributes value,
-          $Res Function(_$_MusicVideoAttributes) then) =
-      __$$_MusicVideoAttributesCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String artistName,
-      String artistUrl,
-      Artwork? artwork,
-      int durationInMillis,
-      String name,
-      PlayParams playParams,
-      List<Map<String, dynamic>>? previews,
-      String? url});
-
-  @override
-  $ArtworkCopyWith<$Res>? get artwork;
-  @override
-  $PlayParamsCopyWith<$Res> get playParams;
-}
-
-/// @nodoc
-class __$$_MusicVideoAttributesCopyWithImpl<$Res>
-    extends _$MusicVideoAttributesCopyWithImpl<$Res>
-    implements _$$_MusicVideoAttributesCopyWith<$Res> {
-  __$$_MusicVideoAttributesCopyWithImpl(_$_MusicVideoAttributes _value,
-      $Res Function(_$_MusicVideoAttributes) _then)
-      : super(_value, (v) => _then(v as _$_MusicVideoAttributes));
-
-  @override
-  _$_MusicVideoAttributes get _value => super._value as _$_MusicVideoAttributes;
-
-  @override
-  $Res call({
-    Object? artistName = freezed,
-    Object? artistUrl = freezed,
-    Object? artwork = freezed,
-    Object? durationInMillis = freezed,
-    Object? name = freezed,
-    Object? playParams = freezed,
-    Object? previews = freezed,
-    Object? url = freezed,
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(_Resource value) $default, {
+    required TResult Function(Album value) album,
+    required TResult Function(Artist value) artist,
+    required TResult Function(MusicVideo value) musicVideo,
+    required TResult Function(Playlist value) playlist,
+    required TResult Function(Song value) song,
+    required TResult Function(Station value) station,
+    required TResult Function(Curator value) curator,
   }) {
-    return _then(_$_MusicVideoAttributes(
-      artistName: artistName == freezed
-          ? _value.artistName
-          : artistName // ignore: cast_nullable_to_non_nullable
-              as String,
-      artistUrl: artistUrl == freezed
-          ? _value.artistUrl
-          : artistUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      artwork: artwork == freezed
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      durationInMillis: durationInMillis == freezed
-          ? _value.durationInMillis
-          : durationInMillis // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      playParams: playParams == freezed
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
-      previews: previews == freezed
-          ? _value._previews
-          : previews // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>?,
-      url: url == freezed
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$_MusicVideoAttributes extends _MusicVideoAttributes {
-  const _$_MusicVideoAttributes(
-      {required this.artistName,
-      required this.artistUrl,
-      required this.artwork,
-      required this.durationInMillis,
-      required this.name,
-      required this.playParams,
-      required final List<Map<String, dynamic>>? previews,
-      required this.url})
-      : _previews = previews,
-        super._();
-
-  @override
-  final String artistName;
-  @override
-  final String artistUrl;
-  @override
-  final Artwork? artwork;
-  @override
-  final int durationInMillis;
-  @override
-  final String name;
-  @override
-  final PlayParams playParams;
-  final List<Map<String, dynamic>>? _previews;
-  @override
-  List<Map<String, dynamic>>? get previews {
-    final value = _previews;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return curator(this);
   }
 
   @override
-  final String? url;
-
-  @override
-  String toString() {
-    return 'MusicVideoAttributes(artistName: $artistName, artistUrl: $artistUrl, artwork: $artwork, durationInMillis: $durationInMillis, name: $name, playParams: $playParams, previews: $previews, url: $url)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_MusicVideoAttributes &&
-            const DeepCollectionEquality()
-                .equals(other.artistName, artistName) &&
-            const DeepCollectionEquality().equals(other.artistUrl, artistUrl) &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
-            const DeepCollectionEquality()
-                .equals(other.durationInMillis, durationInMillis) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.playParams, playParams) &&
-            const DeepCollectionEquality().equals(other._previews, _previews) &&
-            const DeepCollectionEquality().equals(other.url, url));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(artistName),
-      const DeepCollectionEquality().hash(artistUrl),
-      const DeepCollectionEquality().hash(artwork),
-      const DeepCollectionEquality().hash(durationInMillis),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(playParams),
-      const DeepCollectionEquality().hash(_previews),
-      const DeepCollectionEquality().hash(url));
-
-  @JsonKey(ignore: true)
-  @override
-  _$$_MusicVideoAttributesCopyWith<_$_MusicVideoAttributes> get copyWith =>
-      __$$_MusicVideoAttributesCopyWithImpl<_$_MusicVideoAttributes>(
-          this, _$identity);
-}
-
-abstract class _MusicVideoAttributes extends MusicVideoAttributes {
-  const factory _MusicVideoAttributes(
-      {required final String artistName,
-      required final String artistUrl,
-      required final Artwork? artwork,
-      required final int durationInMillis,
-      required final String name,
-      required final PlayParams playParams,
-      required final List<Map<String, dynamic>>? previews,
-      required final String? url}) = _$_MusicVideoAttributes;
-  const _MusicVideoAttributes._() : super._();
-
-  @override
-  String get artistName => throw _privateConstructorUsedError;
-  @override
-  String get artistUrl => throw _privateConstructorUsedError;
-  @override
-  Artwork? get artwork => throw _privateConstructorUsedError;
-  @override
-  int get durationInMillis => throw _privateConstructorUsedError;
-  @override
-  String get name => throw _privateConstructorUsedError;
-  @override
-  PlayParams get playParams => throw _privateConstructorUsedError;
-  @override
-  List<Map<String, dynamic>>? get previews =>
-      throw _privateConstructorUsedError;
-  @override
-  String? get url => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$$_MusicVideoAttributesCopyWith<_$_MusicVideoAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-mixin _$PlaylistAttributes {
-  Artwork? get artwork => throw _privateConstructorUsedError;
-  String? get curatorName => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  PlayParams get playParams => throw _privateConstructorUsedError;
-  String? get url => throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $PlaylistAttributesCopyWith<PlaylistAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $PlaylistAttributesCopyWith<$Res> {
-  factory $PlaylistAttributesCopyWith(
-          PlaylistAttributes value, $Res Function(PlaylistAttributes) then) =
-      _$PlaylistAttributesCopyWithImpl<$Res>;
-  $Res call(
-      {Artwork? artwork,
-      String? curatorName,
-      String name,
-      PlayParams playParams,
-      String? url});
-
-  $ArtworkCopyWith<$Res>? get artwork;
-  $PlayParamsCopyWith<$Res> get playParams;
-}
-
-/// @nodoc
-class _$PlaylistAttributesCopyWithImpl<$Res>
-    implements $PlaylistAttributesCopyWith<$Res> {
-  _$PlaylistAttributesCopyWithImpl(this._value, this._then);
-
-  final PlaylistAttributes _value;
-  // ignore: unused_field
-  final $Res Function(PlaylistAttributes) _then;
-
-  @override
-  $Res call({
-    Object? artwork = freezed,
-    Object? curatorName = freezed,
-    Object? name = freezed,
-    Object? playParams = freezed,
-    Object? url = freezed,
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(_Resource value)? $default, {
+    TResult Function(Album value)? album,
+    TResult Function(Artist value)? artist,
+    TResult Function(MusicVideo value)? musicVideo,
+    TResult Function(Playlist value)? playlist,
+    TResult Function(Song value)? song,
+    TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
   }) {
-    return _then(_value.copyWith(
-      artwork: artwork == freezed
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      curatorName: curatorName == freezed
-          ? _value.curatorName
-          : curatorName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      playParams: playParams == freezed
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
-      url: url == freezed
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return curator?.call(this);
   }
 
   @override
-  $ArtworkCopyWith<$Res>? get artwork {
-    if (_value.artwork == null) {
-      return null;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(_Resource value)? $default, {
+    TResult Function(Album value)? album,
+    TResult Function(Artist value)? artist,
+    TResult Function(MusicVideo value)? musicVideo,
+    TResult Function(Playlist value)? playlist,
+    TResult Function(Song value)? song,
+    TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
+    required TResult orElse(),
+  }) {
+    if (curator != null) {
+      return curator(this);
     }
-
-    return $ArtworkCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
-    });
-  }
-
-  @override
-  $PlayParamsCopyWith<$Res> get playParams {
-    return $PlayParamsCopyWith<$Res>(_value.playParams, (value) {
-      return _then(_value.copyWith(playParams: value));
-    });
+    return orElse();
   }
 }
 
-/// @nodoc
-abstract class _$$_PlaylistAttributesCopyWith<$Res>
-    implements $PlaylistAttributesCopyWith<$Res> {
-  factory _$$_PlaylistAttributesCopyWith(_$_PlaylistAttributes value,
-          $Res Function(_$_PlaylistAttributes) then) =
-      __$$_PlaylistAttributesCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {Artwork? artwork,
-      String? curatorName,
-      String name,
-      PlayParams playParams,
-      String? url});
+abstract class Curator extends Resource {
+  const factory Curator(
+      {required final String id,
+      required final String type,
+      required final CuratorAttributes? attributes,
+      required final CuratorRelationships? relationships}) = _$Curator;
+  const Curator._() : super._();
 
   @override
-  $ArtworkCopyWith<$Res>? get artwork;
+  String get id => throw _privateConstructorUsedError;
   @override
-  $PlayParamsCopyWith<$Res> get playParams;
-}
-
-/// @nodoc
-class __$$_PlaylistAttributesCopyWithImpl<$Res>
-    extends _$PlaylistAttributesCopyWithImpl<$Res>
-    implements _$$_PlaylistAttributesCopyWith<$Res> {
-  __$$_PlaylistAttributesCopyWithImpl(
-      _$_PlaylistAttributes _value, $Res Function(_$_PlaylistAttributes) _then)
-      : super(_value, (v) => _then(v as _$_PlaylistAttributes));
-
-  @override
-  _$_PlaylistAttributes get _value => super._value as _$_PlaylistAttributes;
-
-  @override
-  $Res call({
-    Object? artwork = freezed,
-    Object? curatorName = freezed,
-    Object? name = freezed,
-    Object? playParams = freezed,
-    Object? url = freezed,
-  }) {
-    return _then(_$_PlaylistAttributes(
-      artwork: artwork == freezed
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      curatorName: curatorName == freezed
-          ? _value.curatorName
-          : curatorName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      playParams: playParams == freezed
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
-      url: url == freezed
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$_PlaylistAttributes extends _PlaylistAttributes {
-  const _$_PlaylistAttributes(
-      {required this.artwork,
-      required this.curatorName,
-      required this.name,
-      required this.playParams,
-      required this.url})
-      : super._();
-
-  @override
-  final Artwork? artwork;
-  @override
-  final String? curatorName;
-  @override
-  final String name;
-  @override
-  final PlayParams playParams;
-  @override
-  final String? url;
-
-  @override
-  String toString() {
-    return 'PlaylistAttributes(artwork: $artwork, curatorName: $curatorName, name: $name, playParams: $playParams, url: $url)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_PlaylistAttributes &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
-            const DeepCollectionEquality()
-                .equals(other.curatorName, curatorName) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.playParams, playParams) &&
-            const DeepCollectionEquality().equals(other.url, url));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(artwork),
-      const DeepCollectionEquality().hash(curatorName),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(playParams),
-      const DeepCollectionEquality().hash(url));
-
-  @JsonKey(ignore: true)
-  @override
-  _$$_PlaylistAttributesCopyWith<_$_PlaylistAttributes> get copyWith =>
-      __$$_PlaylistAttributesCopyWithImpl<_$_PlaylistAttributes>(
-          this, _$identity);
-}
-
-abstract class _PlaylistAttributes extends PlaylistAttributes {
-  const factory _PlaylistAttributes(
-      {required final Artwork? artwork,
-      required final String? curatorName,
-      required final String name,
-      required final PlayParams playParams,
-      required final String? url}) = _$_PlaylistAttributes;
-  const _PlaylistAttributes._() : super._();
-
-  @override
-  Artwork? get artwork => throw _privateConstructorUsedError;
-  @override
-  String? get curatorName => throw _privateConstructorUsedError;
-  @override
-  String get name => throw _privateConstructorUsedError;
-  @override
-  PlayParams get playParams => throw _privateConstructorUsedError;
-  @override
-  String? get url => throw _privateConstructorUsedError;
+  String get type => throw _privateConstructorUsedError;
+  CuratorAttributes? get attributes => throw _privateConstructorUsedError;
+  CuratorRelationships? get relationships => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$_PlaylistAttributesCopyWith<_$_PlaylistAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-mixin _$SongAttributes {
-  String get albumName => throw _privateConstructorUsedError;
-  String? get artistUrl => throw _privateConstructorUsedError;
-  String get artistName => throw _privateConstructorUsedError;
-  Artwork? get artwork => throw _privateConstructorUsedError;
-  String? get contentRating => throw _privateConstructorUsedError;
-  int get durationInMillis => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  PlayParams get playParams => throw _privateConstructorUsedError;
-  List<Map<String, dynamic>>? get previews =>
-      throw _privateConstructorUsedError;
-  int get trackNumber => throw _privateConstructorUsedError;
-  String? get url => throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $SongAttributesCopyWith<SongAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $SongAttributesCopyWith<$Res> {
-  factory $SongAttributesCopyWith(
-          SongAttributes value, $Res Function(SongAttributes) then) =
-      _$SongAttributesCopyWithImpl<$Res>;
-  $Res call(
-      {String albumName,
-      String? artistUrl,
-      String artistName,
-      Artwork? artwork,
-      String? contentRating,
-      int durationInMillis,
-      String name,
-      PlayParams playParams,
-      List<Map<String, dynamic>>? previews,
-      int trackNumber,
-      String? url});
-
-  $ArtworkCopyWith<$Res>? get artwork;
-  $PlayParamsCopyWith<$Res> get playParams;
-}
-
-/// @nodoc
-class _$SongAttributesCopyWithImpl<$Res>
-    implements $SongAttributesCopyWith<$Res> {
-  _$SongAttributesCopyWithImpl(this._value, this._then);
-
-  final SongAttributes _value;
-  // ignore: unused_field
-  final $Res Function(SongAttributes) _then;
-
-  @override
-  $Res call({
-    Object? albumName = freezed,
-    Object? artistUrl = freezed,
-    Object? artistName = freezed,
-    Object? artwork = freezed,
-    Object? contentRating = freezed,
-    Object? durationInMillis = freezed,
-    Object? name = freezed,
-    Object? playParams = freezed,
-    Object? previews = freezed,
-    Object? trackNumber = freezed,
-    Object? url = freezed,
-  }) {
-    return _then(_value.copyWith(
-      albumName: albumName == freezed
-          ? _value.albumName
-          : albumName // ignore: cast_nullable_to_non_nullable
-              as String,
-      artistUrl: artistUrl == freezed
-          ? _value.artistUrl
-          : artistUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artistName: artistName == freezed
-          ? _value.artistName
-          : artistName // ignore: cast_nullable_to_non_nullable
-              as String,
-      artwork: artwork == freezed
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      contentRating: contentRating == freezed
-          ? _value.contentRating
-          : contentRating // ignore: cast_nullable_to_non_nullable
-              as String?,
-      durationInMillis: durationInMillis == freezed
-          ? _value.durationInMillis
-          : durationInMillis // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      playParams: playParams == freezed
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
-      previews: previews == freezed
-          ? _value.previews
-          : previews // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>?,
-      trackNumber: trackNumber == freezed
-          ? _value.trackNumber
-          : trackNumber // ignore: cast_nullable_to_non_nullable
-              as int,
-      url: url == freezed
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-
-  @override
-  $ArtworkCopyWith<$Res>? get artwork {
-    if (_value.artwork == null) {
-      return null;
-    }
-
-    return $ArtworkCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
-    });
-  }
-
-  @override
-  $PlayParamsCopyWith<$Res> get playParams {
-    return $PlayParamsCopyWith<$Res>(_value.playParams, (value) {
-      return _then(_value.copyWith(playParams: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_SongAttributesCopyWith<$Res>
-    implements $SongAttributesCopyWith<$Res> {
-  factory _$$_SongAttributesCopyWith(
-          _$_SongAttributes value, $Res Function(_$_SongAttributes) then) =
-      __$$_SongAttributesCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String albumName,
-      String? artistUrl,
-      String artistName,
-      Artwork? artwork,
-      String? contentRating,
-      int durationInMillis,
-      String name,
-      PlayParams playParams,
-      List<Map<String, dynamic>>? previews,
-      int trackNumber,
-      String? url});
-
-  @override
-  $ArtworkCopyWith<$Res>? get artwork;
-  @override
-  $PlayParamsCopyWith<$Res> get playParams;
-}
-
-/// @nodoc
-class __$$_SongAttributesCopyWithImpl<$Res>
-    extends _$SongAttributesCopyWithImpl<$Res>
-    implements _$$_SongAttributesCopyWith<$Res> {
-  __$$_SongAttributesCopyWithImpl(
-      _$_SongAttributes _value, $Res Function(_$_SongAttributes) _then)
-      : super(_value, (v) => _then(v as _$_SongAttributes));
-
-  @override
-  _$_SongAttributes get _value => super._value as _$_SongAttributes;
-
-  @override
-  $Res call({
-    Object? albumName = freezed,
-    Object? artistUrl = freezed,
-    Object? artistName = freezed,
-    Object? artwork = freezed,
-    Object? contentRating = freezed,
-    Object? durationInMillis = freezed,
-    Object? name = freezed,
-    Object? playParams = freezed,
-    Object? previews = freezed,
-    Object? trackNumber = freezed,
-    Object? url = freezed,
-  }) {
-    return _then(_$_SongAttributes(
-      albumName: albumName == freezed
-          ? _value.albumName
-          : albumName // ignore: cast_nullable_to_non_nullable
-              as String,
-      artistUrl: artistUrl == freezed
-          ? _value.artistUrl
-          : artistUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artistName: artistName == freezed
-          ? _value.artistName
-          : artistName // ignore: cast_nullable_to_non_nullable
-              as String,
-      artwork: artwork == freezed
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      contentRating: contentRating == freezed
-          ? _value.contentRating
-          : contentRating // ignore: cast_nullable_to_non_nullable
-              as String?,
-      durationInMillis: durationInMillis == freezed
-          ? _value.durationInMillis
-          : durationInMillis // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      playParams: playParams == freezed
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
-      previews: previews == freezed
-          ? _value._previews
-          : previews // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>?,
-      trackNumber: trackNumber == freezed
-          ? _value.trackNumber
-          : trackNumber // ignore: cast_nullable_to_non_nullable
-              as int,
-      url: url == freezed
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$_SongAttributes extends _SongAttributes {
-  const _$_SongAttributes(
-      {required this.albumName,
-      this.artistUrl,
-      required this.artistName,
-      required this.artwork,
-      this.contentRating,
-      required this.durationInMillis,
-      required this.name,
-      required this.playParams,
-      final List<Map<String, dynamic>>? previews,
-      required this.trackNumber,
-      this.url})
-      : _previews = previews,
-        super._();
-
-  @override
-  final String albumName;
-  @override
-  final String? artistUrl;
-  @override
-  final String artistName;
-  @override
-  final Artwork? artwork;
-  @override
-  final String? contentRating;
-  @override
-  final int durationInMillis;
-  @override
-  final String name;
-  @override
-  final PlayParams playParams;
-  final List<Map<String, dynamic>>? _previews;
-  @override
-  List<Map<String, dynamic>>? get previews {
-    final value = _previews;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final int trackNumber;
-  @override
-  final String? url;
-
-  @override
-  String toString() {
-    return 'SongAttributes(albumName: $albumName, artistUrl: $artistUrl, artistName: $artistName, artwork: $artwork, contentRating: $contentRating, durationInMillis: $durationInMillis, name: $name, playParams: $playParams, previews: $previews, trackNumber: $trackNumber, url: $url)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_SongAttributes &&
-            const DeepCollectionEquality().equals(other.albumName, albumName) &&
-            const DeepCollectionEquality().equals(other.artistUrl, artistUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.artistName, artistName) &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
-            const DeepCollectionEquality()
-                .equals(other.contentRating, contentRating) &&
-            const DeepCollectionEquality()
-                .equals(other.durationInMillis, durationInMillis) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.playParams, playParams) &&
-            const DeepCollectionEquality().equals(other._previews, _previews) &&
-            const DeepCollectionEquality()
-                .equals(other.trackNumber, trackNumber) &&
-            const DeepCollectionEquality().equals(other.url, url));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(albumName),
-      const DeepCollectionEquality().hash(artistUrl),
-      const DeepCollectionEquality().hash(artistName),
-      const DeepCollectionEquality().hash(artwork),
-      const DeepCollectionEquality().hash(contentRating),
-      const DeepCollectionEquality().hash(durationInMillis),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(playParams),
-      const DeepCollectionEquality().hash(_previews),
-      const DeepCollectionEquality().hash(trackNumber),
-      const DeepCollectionEquality().hash(url));
-
-  @JsonKey(ignore: true)
-  @override
-  _$$_SongAttributesCopyWith<_$_SongAttributes> get copyWith =>
-      __$$_SongAttributesCopyWithImpl<_$_SongAttributes>(this, _$identity);
-}
-
-abstract class _SongAttributes extends SongAttributes {
-  const factory _SongAttributes(
-      {required final String albumName,
-      final String? artistUrl,
-      required final String artistName,
-      required final Artwork? artwork,
-      final String? contentRating,
-      required final int durationInMillis,
-      required final String name,
-      required final PlayParams playParams,
-      final List<Map<String, dynamic>>? previews,
-      required final int trackNumber,
-      final String? url}) = _$_SongAttributes;
-  const _SongAttributes._() : super._();
-
-  @override
-  String get albumName => throw _privateConstructorUsedError;
-  @override
-  String? get artistUrl => throw _privateConstructorUsedError;
-  @override
-  String get artistName => throw _privateConstructorUsedError;
-  @override
-  Artwork? get artwork => throw _privateConstructorUsedError;
-  @override
-  String? get contentRating => throw _privateConstructorUsedError;
-  @override
-  int get durationInMillis => throw _privateConstructorUsedError;
-  @override
-  String get name => throw _privateConstructorUsedError;
-  @override
-  PlayParams get playParams => throw _privateConstructorUsedError;
-  @override
-  List<Map<String, dynamic>>? get previews =>
-      throw _privateConstructorUsedError;
-  @override
-  int get trackNumber => throw _privateConstructorUsedError;
-  @override
-  String? get url => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$$_SongAttributesCopyWith<_$_SongAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-mixin _$StationAttributes {
-  Artwork? get artwork => throw _privateConstructorUsedError;
-  PlayParams get playParams => throw _privateConstructorUsedError;
-  int? get durationInMillis => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  String? get url => throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $StationAttributesCopyWith<StationAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $StationAttributesCopyWith<$Res> {
-  factory $StationAttributesCopyWith(
-          StationAttributes value, $Res Function(StationAttributes) then) =
-      _$StationAttributesCopyWithImpl<$Res>;
-  $Res call(
-      {Artwork? artwork,
-      PlayParams playParams,
-      int? durationInMillis,
-      String name,
-      String? url});
-
-  $ArtworkCopyWith<$Res>? get artwork;
-  $PlayParamsCopyWith<$Res> get playParams;
-}
-
-/// @nodoc
-class _$StationAttributesCopyWithImpl<$Res>
-    implements $StationAttributesCopyWith<$Res> {
-  _$StationAttributesCopyWithImpl(this._value, this._then);
-
-  final StationAttributes _value;
-  // ignore: unused_field
-  final $Res Function(StationAttributes) _then;
-
-  @override
-  $Res call({
-    Object? artwork = freezed,
-    Object? playParams = freezed,
-    Object? durationInMillis = freezed,
-    Object? name = freezed,
-    Object? url = freezed,
-  }) {
-    return _then(_value.copyWith(
-      artwork: artwork == freezed
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      playParams: playParams == freezed
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
-      durationInMillis: durationInMillis == freezed
-          ? _value.durationInMillis
-          : durationInMillis // ignore: cast_nullable_to_non_nullable
-              as int?,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: url == freezed
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-
-  @override
-  $ArtworkCopyWith<$Res>? get artwork {
-    if (_value.artwork == null) {
-      return null;
-    }
-
-    return $ArtworkCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
-    });
-  }
-
-  @override
-  $PlayParamsCopyWith<$Res> get playParams {
-    return $PlayParamsCopyWith<$Res>(_value.playParams, (value) {
-      return _then(_value.copyWith(playParams: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$$_StationAttributesCopyWith<$Res>
-    implements $StationAttributesCopyWith<$Res> {
-  factory _$$_StationAttributesCopyWith(_$_StationAttributes value,
-          $Res Function(_$_StationAttributes) then) =
-      __$$_StationAttributesCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {Artwork? artwork,
-      PlayParams playParams,
-      int? durationInMillis,
-      String name,
-      String? url});
-
-  @override
-  $ArtworkCopyWith<$Res>? get artwork;
-  @override
-  $PlayParamsCopyWith<$Res> get playParams;
-}
-
-/// @nodoc
-class __$$_StationAttributesCopyWithImpl<$Res>
-    extends _$StationAttributesCopyWithImpl<$Res>
-    implements _$$_StationAttributesCopyWith<$Res> {
-  __$$_StationAttributesCopyWithImpl(
-      _$_StationAttributes _value, $Res Function(_$_StationAttributes) _then)
-      : super(_value, (v) => _then(v as _$_StationAttributes));
-
-  @override
-  _$_StationAttributes get _value => super._value as _$_StationAttributes;
-
-  @override
-  $Res call({
-    Object? artwork = freezed,
-    Object? playParams = freezed,
-    Object? durationInMillis = freezed,
-    Object? name = freezed,
-    Object? url = freezed,
-  }) {
-    return _then(_$_StationAttributes(
-      artwork: artwork == freezed
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      playParams: playParams == freezed
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams,
-      durationInMillis: durationInMillis == freezed
-          ? _value.durationInMillis
-          : durationInMillis // ignore: cast_nullable_to_non_nullable
-              as int?,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: url == freezed
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$_StationAttributes extends _StationAttributes {
-  const _$_StationAttributes(
-      {required this.artwork,
-      required this.playParams,
-      required this.durationInMillis,
-      required this.name,
-      required this.url})
-      : super._();
-
-  @override
-  final Artwork? artwork;
-  @override
-  final PlayParams playParams;
-  @override
-  final int? durationInMillis;
-  @override
-  final String name;
-  @override
-  final String? url;
-
-  @override
-  String toString() {
-    return 'StationAttributes(artwork: $artwork, playParams: $playParams, durationInMillis: $durationInMillis, name: $name, url: $url)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_StationAttributes &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
-            const DeepCollectionEquality()
-                .equals(other.playParams, playParams) &&
-            const DeepCollectionEquality()
-                .equals(other.durationInMillis, durationInMillis) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.url, url));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(artwork),
-      const DeepCollectionEquality().hash(playParams),
-      const DeepCollectionEquality().hash(durationInMillis),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(url));
-
-  @JsonKey(ignore: true)
-  @override
-  _$$_StationAttributesCopyWith<_$_StationAttributes> get copyWith =>
-      __$$_StationAttributesCopyWithImpl<_$_StationAttributes>(
-          this, _$identity);
-}
-
-abstract class _StationAttributes extends StationAttributes {
-  const factory _StationAttributes(
-      {required final Artwork? artwork,
-      required final PlayParams playParams,
-      required final int? durationInMillis,
-      required final String name,
-      required final String? url}) = _$_StationAttributes;
-  const _StationAttributes._() : super._();
-
-  @override
-  Artwork? get artwork => throw _privateConstructorUsedError;
-  @override
-  PlayParams get playParams => throw _privateConstructorUsedError;
-  @override
-  int? get durationInMillis => throw _privateConstructorUsedError;
-  @override
-  String get name => throw _privateConstructorUsedError;
-  @override
-  String? get url => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$$_StationAttributesCopyWith<_$_StationAttributes> get copyWith =>
+  _$$CuratorCopyWith<_$Curator> get copyWith =>
       throw _privateConstructorUsedError;
 }

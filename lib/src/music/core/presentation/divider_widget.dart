@@ -5,21 +5,25 @@ class DividerWidget extends StatelessWidget {
     Key? key,
     this.indent = 20,
     this.endIndent = 20,
-    this.color = Colors.black45,
+    this.color,
+    this.height = 10,
   }) : super(key: key);
 
   final double indent;
   final double endIndent;
   final Color? color;
+  final double height;
+
+  Color? get _color => color ?? Colors.grey[200];
 
   @override
   Widget build(BuildContext context) {
     return Divider(
-      height: 10,
+      height: height,
       thickness: 1,
       indent: indent,
       endIndent: endIndent,
-      color: color,
+      color: _color,
     );
   }
 }

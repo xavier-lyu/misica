@@ -21,7 +21,7 @@ EditorialNotesDTO _$EditorialNotesDTOFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$EditorialNotesDTO {
   String? get short => throw _privateConstructorUsedError;
-  String? get standart => throw _privateConstructorUsedError;
+  String? get standard => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -35,7 +35,7 @@ abstract class $EditorialNotesDTOCopyWith<$Res> {
   factory $EditorialNotesDTOCopyWith(
           EditorialNotesDTO value, $Res Function(EditorialNotesDTO) then) =
       _$EditorialNotesDTOCopyWithImpl<$Res>;
-  $Res call({String? short, String? standart, String? name});
+  $Res call({String? short, String? standard, String? name});
 }
 
 /// @nodoc
@@ -50,7 +50,7 @@ class _$EditorialNotesDTOCopyWithImpl<$Res>
   @override
   $Res call({
     Object? short = freezed,
-    Object? standart = freezed,
+    Object? standard = freezed,
     Object? name = freezed,
   }) {
     return _then(_value.copyWith(
@@ -58,9 +58,9 @@ class _$EditorialNotesDTOCopyWithImpl<$Res>
           ? _value.short
           : short // ignore: cast_nullable_to_non_nullable
               as String?,
-      standart: standart == freezed
-          ? _value.standart
-          : standart // ignore: cast_nullable_to_non_nullable
+      standard: standard == freezed
+          ? _value.standard
+          : standard // ignore: cast_nullable_to_non_nullable
               as String?,
       name: name == freezed
           ? _value.name
@@ -77,7 +77,7 @@ abstract class _$$_EditorialNotesDTOCopyWith<$Res>
           $Res Function(_$_EditorialNotesDTO) then) =
       __$$_EditorialNotesDTOCopyWithImpl<$Res>;
   @override
-  $Res call({String? short, String? standart, String? name});
+  $Res call({String? short, String? standard, String? name});
 }
 
 /// @nodoc
@@ -94,7 +94,7 @@ class __$$_EditorialNotesDTOCopyWithImpl<$Res>
   @override
   $Res call({
     Object? short = freezed,
-    Object? standart = freezed,
+    Object? standard = freezed,
     Object? name = freezed,
   }) {
     return _then(_$_EditorialNotesDTO(
@@ -102,9 +102,9 @@ class __$$_EditorialNotesDTOCopyWithImpl<$Res>
           ? _value.short
           : short // ignore: cast_nullable_to_non_nullable
               as String?,
-      standart: standart == freezed
-          ? _value.standart
-          : standart // ignore: cast_nullable_to_non_nullable
+      standard: standard == freezed
+          ? _value.standard
+          : standard // ignore: cast_nullable_to_non_nullable
               as String?,
       name: name == freezed
           ? _value.name
@@ -117,7 +117,7 @@ class __$$_EditorialNotesDTOCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EditorialNotesDTO extends _EditorialNotesDTO {
-  const _$_EditorialNotesDTO({this.short, this.standart, this.name})
+  const _$_EditorialNotesDTO({this.short, this.standard, this.name})
       : super._();
 
   factory _$_EditorialNotesDTO.fromJson(Map<String, dynamic> json) =>
@@ -126,13 +126,13 @@ class _$_EditorialNotesDTO extends _EditorialNotesDTO {
   @override
   final String? short;
   @override
-  final String? standart;
+  final String? standard;
   @override
   final String? name;
 
   @override
   String toString() {
-    return 'EditorialNotesDTO(short: $short, standart: $standart, name: $name)';
+    return 'EditorialNotesDTO(short: $short, standard: $standard, name: $name)';
   }
 
   @override
@@ -141,7 +141,7 @@ class _$_EditorialNotesDTO extends _EditorialNotesDTO {
         (other.runtimeType == runtimeType &&
             other is _$_EditorialNotesDTO &&
             const DeepCollectionEquality().equals(other.short, short) &&
-            const DeepCollectionEquality().equals(other.standart, standart) &&
+            const DeepCollectionEquality().equals(other.standard, standard) &&
             const DeepCollectionEquality().equals(other.name, name));
   }
 
@@ -150,7 +150,7 @@ class _$_EditorialNotesDTO extends _EditorialNotesDTO {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(short),
-      const DeepCollectionEquality().hash(standart),
+      const DeepCollectionEquality().hash(standard),
       const DeepCollectionEquality().hash(name));
 
   @JsonKey(ignore: true)
@@ -168,7 +168,7 @@ class _$_EditorialNotesDTO extends _EditorialNotesDTO {
 abstract class _EditorialNotesDTO extends EditorialNotesDTO {
   const factory _EditorialNotesDTO(
       {final String? short,
-      final String? standart,
+      final String? standard,
       final String? name}) = _$_EditorialNotesDTO;
   const _EditorialNotesDTO._() : super._();
 
@@ -178,7 +178,7 @@ abstract class _EditorialNotesDTO extends EditorialNotesDTO {
   @override
   String? get short => throw _privateConstructorUsedError;
   @override
-  String? get standart => throw _privateConstructorUsedError;
+  String? get standard => throw _privateConstructorUsedError;
   @override
   String? get name => throw _privateConstructorUsedError;
   @override
