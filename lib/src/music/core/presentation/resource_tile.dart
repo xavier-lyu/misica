@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
+import 'package:misica/src/music/core/domain/song.dart';
 
 import 'artwork_widget.dart';
 
@@ -29,6 +30,7 @@ class ResourceTile extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Flexible(
                       child: Text(
@@ -37,13 +39,19 @@ class ResourceTile extends StatelessWidget {
                         style: context.ttoc.titleMedium,
                       ),
                     ),
+                    if (resource is Song && (resource as Song).isExplicit)
+                      const Icon(Icons.explicit_rounded),
                   ],
                 ),
-                Text(
-                  resource.creatorName,
-                  overflow: TextOverflow.ellipsis,
-                  style: context.ttoc.labelLarge,
-                )
+                if (resource.creatorName.isNotEmpty)
+                  Container(
+                    margin: const EdgeInsetsDirectional.only(top: 10),
+                    child: Text(
+                      resource.creatorName,
+                      overflow: TextOverflow.ellipsis,
+                      style: context.ttoc.labelLarge,
+                    ),
+                  )
               ],
             ),
           ),

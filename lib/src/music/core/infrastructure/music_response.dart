@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:misica/src/music/core/shared/converters.dart';
+import 'package:misica/src/music/core/shared/json_converters.dart';
 
 import 'resource_dto.dart';
 

@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
 import 'package:misica/src/music/core/domain/music_failure.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/shared/dtos_to_domains.dart';
@@ -36,7 +35,6 @@ class PlaylistsRepository {
     try {
       final tracks =
           await _remoteService.fetchCatalogPlaylistTracks(storefront, id);
-      debugPrint(tracks.toString());
       return right(tracks.data.toDomain<Song>());
     } on DioError catch (e) {
       return left(MusicFailure.api(e.response?.statusCode));

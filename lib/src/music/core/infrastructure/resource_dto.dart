@@ -19,6 +19,7 @@ class ResourceDTO with _$ResourceDTO {
     Map<String, dynamic>? attributes,
     Map<String, ResourceRelationshipDTO>? relationships,
     Map<String, ResourceViewDTO>? views,
+    ResourceMetaDTO? meta,
   ) = ResourceRawDTO;
 
   const factory ResourceDTO.album(
@@ -27,6 +28,7 @@ class ResourceDTO with _$ResourceDTO {
     AlbumAttributesDTO? attributes,
     AlbumRelationshipsDTO? relationships,
     Map<String, ResourceViewDTO>? views,
+    ResourceMetaDTO? meta,
   ) = AlbumDTO;
 
   const factory ResourceDTO.artist(
@@ -35,6 +37,7 @@ class ResourceDTO with _$ResourceDTO {
     ArtistAttributesDTO? attributes,
     ArtistRelationshipsDTO? relationships,
     Map<String, ResourceViewDTO>? views,
+    ResourceMetaDTO? meta,
   ) = ArtistDTO;
 
   const factory ResourceDTO.playlist(
@@ -43,6 +46,7 @@ class ResourceDTO with _$ResourceDTO {
     PlaylistAttributesDTO? attributes,
     PlaylistRelationshipsDTO? relationships,
     Map<String, ResourceViewDTO>? views,
+    ResourceMetaDTO? meta,
   ) = PlaylistDTO;
 
   const factory ResourceDTO.song(
@@ -64,6 +68,7 @@ class ResourceDTO with _$ResourceDTO {
     MusicVideoAttributesDTO? attributes,
     MusicVideoRelationshipsDTO? relationships,
     Map<String, ResourceViewDTO>? views,
+    ResourceMetaDTO? meta,
   ) = MusicVideoDTO;
 
   const factory ResourceDTO.curator(
@@ -90,21 +95,21 @@ class ResourceDTO with _$ResourceDTO {
         type: type,
         attributes: value.attributes?.toDomain(),
         relationships: value.relationships?.toDomain(),
-        views: value.views?.toDomain(),
+        views: value.views?.toDomain(order: value.meta?.views?.order),
       ),
       artist: (value) => Artist(
         id: id,
         type: type,
         attributes: value.attributes?.toDomain(),
         relationships: value.relationships?.toDomain(),
-        views: value.views?.toDomain(),
+        views: value.views?.toDomain(order: value.meta?.views?.order),
       ),
       playlist: (value) => Playlist(
         id: id,
         type: type,
         attributes: value.attributes?.toDomain(),
         relationships: value.relationships?.toDomain(),
-        views: value.views?.toDomain(),
+        views: value.views?.toDomain(order: value.meta?.views?.order),
       ),
       song: (value) => Song(
         id: id,
@@ -131,4 +136,26 @@ class ResourceDTO with _$ResourceDTO {
       ),
     );
   }
+}
+
+@freezed
+class ResourceMetaDTO with _$ResourceMetaDTO {
+  const ResourceMetaDTO._();
+  const factory ResourceMetaDTO({
+    ResourceMetaViewsDTO? views,
+  }) = _ResourceMeta;
+
+  factory ResourceMetaDTO.fromJson(Map<String, dynamic> json) =>
+      _$ResourceMetaDTOFromJson(json);
+}
+
+@freezed
+class ResourceMetaViewsDTO with _$ResourceMetaViewsDTO {
+  const ResourceMetaViewsDTO._();
+  const factory ResourceMetaViewsDTO({
+    List<String>? order,
+  }) = _ResourceMetaViewsDTO;
+
+  factory ResourceMetaViewsDTO.fromJson(Map<String, dynamic> json) =>
+      _$ResourceMetaViewsDTOFromJson(json);
 }

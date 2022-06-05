@@ -1,0 +1,158 @@
+import 'dart:math';
+
+import 'package:flutter/material.dart';
+import 'package:misica/src/music/core/domain/album.dart';
+import 'package:misica/src/music/core/domain/resource_view.dart';
+import 'package:misica/src/music/core/presentation/artwork_widget.dart';
+import 'package:misica/src/music/core/presentation/explicit_icon.dart';
+import 'package:misica/src/music/core/presentation/more_button.dart';
+import 'package:misica/src/music/core/presentation/release_date_widget.dart';
+
+import 'divider_widget.dart';
+import 'resource_cards_list.dart';
+import 'resources_list.dart';
+
+class ResourceViewsList extends StatelessWidget {
+  const ResourceViewsList({
+    Key? key,
+    required this.views,
+  }) : super(key: key);
+
+  final Map<String, ResourceView> views;
+
+  @override
+  Widget build(BuildContext context) {
+    return SliverList(
+      delegate: SliverChildBuilderDelegate(
+        ((context, index) {
+          MapEntry<String, ResourceView> entry =
+              views.entries.elementAt(index ~/ 2);
+          return Container(
+            padding: EdgeInsets.symmetric(
+              vertical: (index.isOdd ? 0 : 10),
+            ),
+            color: Colors.grey[100]!,
+            child: (index.isOdd)
+                ? const DividerWidget(
+                    endIndent: 0,
+                    height: 1,
+                  )
+                : ResourceViewWidget(
+                    kind: entry.key,
+                    resourceView: entry.value,
+                  ),
+          );
+        }),
+        childCount: max(0, views.length * 2 - 1),
+      ),
+    );
+  }
+}
+
+class ResourceViewWidget extends StatelessWidget {
+  const ResourceViewWidget({
+    Key? key,
+    required this.kind,
+    required this.resourceView,
+  }) : super(key: key);
+
+  final ResourceView resourceView;
+  final String kind;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsetsDirectional.only(start: 20),
+          child: Text(
+            resourceView.title,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 24,
+            ),
+          ),
+        ),
+        const SizedBox(height: 8),
+        _buildViews(),
+      ],
+    );
+  }
+
+  bool get isMV => [
+        'related-videos',
+        'music-videos',
+        'top-music-videos',
+        'more-by-artist',
+        'more-in-genre'
+      ].contains(kind);
+
+  Widget _buildViews() {
+    if (isMV) {
+      return ResourceCardsList(
+        resources: resourceView.data,
+        itemHeightOffset: 50.0,
+        artworkAspectRatio: 16 / 9,
+      );
+    }
+
+    if (kind == 'top-songs') {
+      return ResourcesList(
+        resources: resourceView.data,
+      );
+    }
+
+    if (kind == 'latest-release') {
+      return _buildLatestRelease();
+    }
+
+    return ResourceCardsList(
+      resources: resourceView.data,
+      itemHeightOffset: 50.0,
+      mainAxisCount: 2,
+    );
+  }
+
+  Widget _buildLatestRelease() {
+    final latest = resourceView.data.first as Album;
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Row(
+        children: [
+          ArtworkWidget(
+            artwork: latest.artwork,
+            height: 100,
+            width: 100,
+          ),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsetsDirectional.only(start: 10, end: 10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ReleaseDateWidget(date: latest.releaseDate),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        latest.name,
+                        maxLines: 2,
+                      ),
+                      if (latest.isExplicit)
+                        Container(
+                          margin: const EdgeInsetsDirectional.only(start: 5),
+                          child: const ExplicitIcon(),
+                        )
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+          MoreButton(onPressed: () {}),
+        ],
+      ),
+    );
+  }
+}

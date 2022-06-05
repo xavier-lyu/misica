@@ -42,6 +42,9 @@ class ArtworkWidget extends StatelessWidget {
                 placeholder: (context, url) => ColoredBox(
                   color: bgColor,
                 ),
+                errorWidget: (context, url, error) => ColoredBox(
+                  color: bgColor,
+                ),
               ),
       ),
     );

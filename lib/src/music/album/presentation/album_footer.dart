@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/domain/album.dart';
-import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/shared/formatters.dart';
 
 class AlbumFooter extends StatelessWidget {

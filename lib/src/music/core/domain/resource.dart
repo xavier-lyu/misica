@@ -21,7 +21,7 @@ class Resource with _$Resource {
     required String type,
     required AlbumAttributes? attributes,
     required AlbumRelationships? relationships,
-    required List<ResourceView>? views,
+    required Map<String, ResourceView>? views,
   }) = Album;
 
   const factory Resource.artist({
@@ -29,7 +29,7 @@ class Resource with _$Resource {
     required String type,
     required ArtistAttributes? attributes,
     required ArtistRelationships? relationships,
-    required List<ResourceView>? views,
+    required Map<String, ResourceView>? views,
   }) = Artist;
 
   const factory Resource.musicVideo({
@@ -44,7 +44,7 @@ class Resource with _$Resource {
     required String type,
     required PlaylistAttributes? attributes,
     required PlaylistRelationships? relationships,
-    required List<ResourceView>? views,
+    required Map<String, ResourceView>? views,
   }) = Playlist;
 
   const factory Resource.song({

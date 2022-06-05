@@ -50,28 +50,32 @@ mixin _$ResourceDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         $default, {
     required TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         artist,
     required TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         playlist,
     required TResult Function(String id, String type,
             SongAttributesDTO? attributes, SongRelationshipsDTO? relationships)
@@ -84,7 +88,8 @@ mixin _$ResourceDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         musicVideo,
     required TResult Function(
             String id,
@@ -101,28 +106,32 @@ mixin _$ResourceDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         $default, {
     TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         artist,
     TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         playlist,
     TResult Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
@@ -134,7 +143,8 @@ mixin _$ResourceDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         musicVideo,
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
@@ -148,28 +158,32 @@ mixin _$ResourceDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         $default, {
     TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         artist,
     TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         playlist,
     TResult Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
@@ -181,7 +195,8 @@ mixin _$ResourceDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         musicVideo,
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
@@ -278,7 +293,10 @@ abstract class _$$ResourceRawDTOCopyWith<$Res>
       String type,
       Map<String, dynamic>? attributes,
       Map<String, ResourceRelationshipDTO>? relationships,
-      Map<String, ResourceViewDTO>? views});
+      Map<String, ResourceViewDTO>? views,
+      ResourceMetaDTO? meta});
+
+  $ResourceMetaDTOCopyWith<$Res>? get meta;
 }
 
 /// @nodoc
@@ -299,6 +317,7 @@ class __$$ResourceRawDTOCopyWithImpl<$Res>
     Object? attributes = freezed,
     Object? relationships = freezed,
     Object? views = freezed,
+    Object? meta = freezed,
   }) {
     return _then(_$ResourceRawDTO(
       id == freezed
@@ -321,7 +340,22 @@ class __$$ResourceRawDTOCopyWithImpl<$Res>
           ? _value._views
           : views // ignore: cast_nullable_to_non_nullable
               as Map<String, ResourceViewDTO>?,
+      meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as ResourceMetaDTO?,
     ));
+  }
+
+  @override
+  $ResourceMetaDTOCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $ResourceMetaDTOCopyWith<$Res>(_value.meta!, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
   }
 }
 
@@ -334,6 +368,7 @@ class _$ResourceRawDTO extends ResourceRawDTO {
       final Map<String, dynamic>? attributes,
       final Map<String, ResourceRelationshipDTO>? relationships,
       final Map<String, ResourceViewDTO>? views,
+      this.meta,
       {final String? $type})
       : _attributes = attributes,
         _relationships = relationships,
@@ -375,12 +410,15 @@ class _$ResourceRawDTO extends ResourceRawDTO {
     return EqualUnmodifiableMapView(value);
   }
 
+  @override
+  final ResourceMetaDTO? meta;
+
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'ResourceDTO(id: $id, type: $type, attributes: $attributes, relationships: $relationships, views: $views)';
+    return 'ResourceDTO(id: $id, type: $type, attributes: $attributes, relationships: $relationships, views: $views, meta: $meta)';
   }
 
   @override
@@ -394,7 +432,8 @@ class _$ResourceRawDTO extends ResourceRawDTO {
                 .equals(other._attributes, _attributes) &&
             const DeepCollectionEquality()
                 .equals(other._relationships, _relationships) &&
-            const DeepCollectionEquality().equals(other._views, _views));
+            const DeepCollectionEquality().equals(other._views, _views) &&
+            const DeepCollectionEquality().equals(other.meta, meta));
   }
 
   @JsonKey(ignore: true)
@@ -405,7 +444,8 @@ class _$ResourceRawDTO extends ResourceRawDTO {
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(_attributes),
       const DeepCollectionEquality().hash(_relationships),
-      const DeepCollectionEquality().hash(_views));
+      const DeepCollectionEquality().hash(_views),
+      const DeepCollectionEquality().hash(meta));
 
   @JsonKey(ignore: true)
   @override
@@ -420,28 +460,32 @@ class _$ResourceRawDTO extends ResourceRawDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         $default, {
     required TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         artist,
     required TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         playlist,
     required TResult Function(String id, String type,
             SongAttributesDTO? attributes, SongRelationshipsDTO? relationships)
@@ -454,7 +498,8 @@ class _$ResourceRawDTO extends ResourceRawDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         musicVideo,
     required TResult Function(
             String id,
@@ -463,7 +508,7 @@ class _$ResourceRawDTO extends ResourceRawDTO {
             CuratorRelationshipsDTO? relationships)
         curator,
   }) {
-    return $default(id, type, attributes, relationships, views);
+    return $default(id, type, attributes, relationships, views, meta);
   }
 
   @override
@@ -474,28 +519,32 @@ class _$ResourceRawDTO extends ResourceRawDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         $default, {
     TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         artist,
     TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         playlist,
     TResult Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
@@ -507,13 +556,14 @@ class _$ResourceRawDTO extends ResourceRawDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         musicVideo,
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
   }) {
-    return $default?.call(id, type, attributes, relationships, views);
+    return $default?.call(id, type, attributes, relationships, views, meta);
   }
 
   @override
@@ -524,28 +574,32 @@ class _$ResourceRawDTO extends ResourceRawDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         $default, {
     TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         artist,
     TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         playlist,
     TResult Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
@@ -557,7 +611,8 @@ class _$ResourceRawDTO extends ResourceRawDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         musicVideo,
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
@@ -565,7 +620,7 @@ class _$ResourceRawDTO extends ResourceRawDTO {
     required TResult orElse(),
   }) {
     if ($default != null) {
-      return $default(id, type, attributes, relationships, views);
+      return $default(id, type, attributes, relationships, views, meta);
     }
     return orElse();
   }
@@ -631,7 +686,8 @@ abstract class ResourceRawDTO extends ResourceDTO {
       final String type,
       final Map<String, dynamic>? attributes,
       final Map<String, ResourceRelationshipDTO>? relationships,
-      final Map<String, ResourceViewDTO>? views) = _$ResourceRawDTO;
+      final Map<String, ResourceViewDTO>? views,
+      final ResourceMetaDTO? meta) = _$ResourceRawDTO;
   const ResourceRawDTO._() : super._();
 
   factory ResourceRawDTO.fromJson(Map<String, dynamic> json) =
@@ -645,6 +701,7 @@ abstract class ResourceRawDTO extends ResourceDTO {
   Map<String, ResourceRelationshipDTO>? get relationships =>
       throw _privateConstructorUsedError;
   Map<String, ResourceViewDTO>? get views => throw _privateConstructorUsedError;
+  ResourceMetaDTO? get meta => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$ResourceRawDTOCopyWith<_$ResourceRawDTO> get copyWith =>
@@ -662,10 +719,12 @@ abstract class _$$AlbumDTOCopyWith<$Res> implements $ResourceDTOCopyWith<$Res> {
       String type,
       AlbumAttributesDTO? attributes,
       AlbumRelationshipsDTO? relationships,
-      Map<String, ResourceViewDTO>? views});
+      Map<String, ResourceViewDTO>? views,
+      ResourceMetaDTO? meta});
 
   $AlbumAttributesDTOCopyWith<$Res>? get attributes;
   $AlbumRelationshipsDTOCopyWith<$Res>? get relationships;
+  $ResourceMetaDTOCopyWith<$Res>? get meta;
 }
 
 /// @nodoc
@@ -684,6 +743,7 @@ class __$$AlbumDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
     Object? attributes = freezed,
     Object? relationships = freezed,
     Object? views = freezed,
+    Object? meta = freezed,
   }) {
     return _then(_$AlbumDTO(
       id == freezed
@@ -706,6 +766,10 @@ class __$$AlbumDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
           ? _value._views
           : views // ignore: cast_nullable_to_non_nullable
               as Map<String, ResourceViewDTO>?,
+      meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as ResourceMetaDTO?,
     ));
   }
 
@@ -730,13 +794,24 @@ class __$$AlbumDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
       return _then(_value.copyWith(relationships: value));
     });
   }
+
+  @override
+  $ResourceMetaDTOCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $ResourceMetaDTOCopyWith<$Res>(_value.meta!, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AlbumDTO extends AlbumDTO {
   const _$AlbumDTO(this.id, this.type, this.attributes, this.relationships,
-      final Map<String, ResourceViewDTO>? views,
+      final Map<String, ResourceViewDTO>? views, this.meta,
       {final String? $type})
       : _views = views,
         $type = $type ?? 'album',
@@ -762,12 +837,15 @@ class _$AlbumDTO extends AlbumDTO {
     return EqualUnmodifiableMapView(value);
   }
 
+  @override
+  final ResourceMetaDTO? meta;
+
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'ResourceDTO.album(id: $id, type: $type, attributes: $attributes, relationships: $relationships, views: $views)';
+    return 'ResourceDTO.album(id: $id, type: $type, attributes: $attributes, relationships: $relationships, views: $views, meta: $meta)';
   }
 
   @override
@@ -781,7 +859,8 @@ class _$AlbumDTO extends AlbumDTO {
                 .equals(other.attributes, attributes) &&
             const DeepCollectionEquality()
                 .equals(other.relationships, relationships) &&
-            const DeepCollectionEquality().equals(other._views, _views));
+            const DeepCollectionEquality().equals(other._views, _views) &&
+            const DeepCollectionEquality().equals(other.meta, meta));
   }
 
   @JsonKey(ignore: true)
@@ -792,7 +871,8 @@ class _$AlbumDTO extends AlbumDTO {
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(attributes),
       const DeepCollectionEquality().hash(relationships),
-      const DeepCollectionEquality().hash(_views));
+      const DeepCollectionEquality().hash(_views),
+      const DeepCollectionEquality().hash(meta));
 
   @JsonKey(ignore: true)
   @override
@@ -807,28 +887,32 @@ class _$AlbumDTO extends AlbumDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         $default, {
     required TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         artist,
     required TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         playlist,
     required TResult Function(String id, String type,
             SongAttributesDTO? attributes, SongRelationshipsDTO? relationships)
@@ -841,7 +925,8 @@ class _$AlbumDTO extends AlbumDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         musicVideo,
     required TResult Function(
             String id,
@@ -850,7 +935,7 @@ class _$AlbumDTO extends AlbumDTO {
             CuratorRelationshipsDTO? relationships)
         curator,
   }) {
-    return album(id, type, attributes, relationships, views);
+    return album(id, type, attributes, relationships, views, meta);
   }
 
   @override
@@ -861,28 +946,32 @@ class _$AlbumDTO extends AlbumDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         $default, {
     TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         artist,
     TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         playlist,
     TResult Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
@@ -894,13 +983,14 @@ class _$AlbumDTO extends AlbumDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         musicVideo,
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
   }) {
-    return album?.call(id, type, attributes, relationships, views);
+    return album?.call(id, type, attributes, relationships, views, meta);
   }
 
   @override
@@ -911,28 +1001,32 @@ class _$AlbumDTO extends AlbumDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         $default, {
     TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         artist,
     TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         playlist,
     TResult Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
@@ -944,7 +1038,8 @@ class _$AlbumDTO extends AlbumDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         musicVideo,
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
@@ -952,7 +1047,7 @@ class _$AlbumDTO extends AlbumDTO {
     required TResult orElse(),
   }) {
     if (album != null) {
-      return album(id, type, attributes, relationships, views);
+      return album(id, type, attributes, relationships, views, meta);
     }
     return orElse();
   }
@@ -1018,7 +1113,8 @@ abstract class AlbumDTO extends ResourceDTO {
       final String type,
       final AlbumAttributesDTO? attributes,
       final AlbumRelationshipsDTO? relationships,
-      final Map<String, ResourceViewDTO>? views) = _$AlbumDTO;
+      final Map<String, ResourceViewDTO>? views,
+      final ResourceMetaDTO? meta) = _$AlbumDTO;
   const AlbumDTO._() : super._();
 
   factory AlbumDTO.fromJson(Map<String, dynamic> json) = _$AlbumDTO.fromJson;
@@ -1031,6 +1127,7 @@ abstract class AlbumDTO extends ResourceDTO {
   AlbumRelationshipsDTO? get relationships =>
       throw _privateConstructorUsedError;
   Map<String, ResourceViewDTO>? get views => throw _privateConstructorUsedError;
+  ResourceMetaDTO? get meta => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$AlbumDTOCopyWith<_$AlbumDTO> get copyWith =>
@@ -1049,10 +1146,12 @@ abstract class _$$ArtistDTOCopyWith<$Res>
       String type,
       ArtistAttributesDTO? attributes,
       ArtistRelationshipsDTO? relationships,
-      Map<String, ResourceViewDTO>? views});
+      Map<String, ResourceViewDTO>? views,
+      ResourceMetaDTO? meta});
 
   $ArtistAttributesDTOCopyWith<$Res>? get attributes;
   $ArtistRelationshipsDTOCopyWith<$Res>? get relationships;
+  $ResourceMetaDTOCopyWith<$Res>? get meta;
 }
 
 /// @nodoc
@@ -1072,6 +1171,7 @@ class __$$ArtistDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
     Object? attributes = freezed,
     Object? relationships = freezed,
     Object? views = freezed,
+    Object? meta = freezed,
   }) {
     return _then(_$ArtistDTO(
       id == freezed
@@ -1094,6 +1194,10 @@ class __$$ArtistDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
           ? _value._views
           : views // ignore: cast_nullable_to_non_nullable
               as Map<String, ResourceViewDTO>?,
+      meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as ResourceMetaDTO?,
     ));
   }
 
@@ -1119,13 +1223,24 @@ class __$$ArtistDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
       return _then(_value.copyWith(relationships: value));
     });
   }
+
+  @override
+  $ResourceMetaDTOCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $ResourceMetaDTOCopyWith<$Res>(_value.meta!, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ArtistDTO extends ArtistDTO {
   const _$ArtistDTO(this.id, this.type, this.attributes, this.relationships,
-      final Map<String, ResourceViewDTO>? views,
+      final Map<String, ResourceViewDTO>? views, this.meta,
       {final String? $type})
       : _views = views,
         $type = $type ?? 'artist',
@@ -1151,12 +1266,15 @@ class _$ArtistDTO extends ArtistDTO {
     return EqualUnmodifiableMapView(value);
   }
 
+  @override
+  final ResourceMetaDTO? meta;
+
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'ResourceDTO.artist(id: $id, type: $type, attributes: $attributes, relationships: $relationships, views: $views)';
+    return 'ResourceDTO.artist(id: $id, type: $type, attributes: $attributes, relationships: $relationships, views: $views, meta: $meta)';
   }
 
   @override
@@ -1170,7 +1288,8 @@ class _$ArtistDTO extends ArtistDTO {
                 .equals(other.attributes, attributes) &&
             const DeepCollectionEquality()
                 .equals(other.relationships, relationships) &&
-            const DeepCollectionEquality().equals(other._views, _views));
+            const DeepCollectionEquality().equals(other._views, _views) &&
+            const DeepCollectionEquality().equals(other.meta, meta));
   }
 
   @JsonKey(ignore: true)
@@ -1181,7 +1300,8 @@ class _$ArtistDTO extends ArtistDTO {
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(attributes),
       const DeepCollectionEquality().hash(relationships),
-      const DeepCollectionEquality().hash(_views));
+      const DeepCollectionEquality().hash(_views),
+      const DeepCollectionEquality().hash(meta));
 
   @JsonKey(ignore: true)
   @override
@@ -1196,28 +1316,32 @@ class _$ArtistDTO extends ArtistDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         $default, {
     required TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         artist,
     required TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         playlist,
     required TResult Function(String id, String type,
             SongAttributesDTO? attributes, SongRelationshipsDTO? relationships)
@@ -1230,7 +1354,8 @@ class _$ArtistDTO extends ArtistDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         musicVideo,
     required TResult Function(
             String id,
@@ -1239,7 +1364,7 @@ class _$ArtistDTO extends ArtistDTO {
             CuratorRelationshipsDTO? relationships)
         curator,
   }) {
-    return artist(id, type, attributes, relationships, views);
+    return artist(id, type, attributes, relationships, views, meta);
   }
 
   @override
@@ -1250,28 +1375,32 @@ class _$ArtistDTO extends ArtistDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         $default, {
     TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         artist,
     TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         playlist,
     TResult Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
@@ -1283,13 +1412,14 @@ class _$ArtistDTO extends ArtistDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         musicVideo,
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
   }) {
-    return artist?.call(id, type, attributes, relationships, views);
+    return artist?.call(id, type, attributes, relationships, views, meta);
   }
 
   @override
@@ -1300,28 +1430,32 @@ class _$ArtistDTO extends ArtistDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         $default, {
     TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         artist,
     TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         playlist,
     TResult Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
@@ -1333,7 +1467,8 @@ class _$ArtistDTO extends ArtistDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         musicVideo,
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
@@ -1341,7 +1476,7 @@ class _$ArtistDTO extends ArtistDTO {
     required TResult orElse(),
   }) {
     if (artist != null) {
-      return artist(id, type, attributes, relationships, views);
+      return artist(id, type, attributes, relationships, views, meta);
     }
     return orElse();
   }
@@ -1407,7 +1542,8 @@ abstract class ArtistDTO extends ResourceDTO {
       final String type,
       final ArtistAttributesDTO? attributes,
       final ArtistRelationshipsDTO? relationships,
-      final Map<String, ResourceViewDTO>? views) = _$ArtistDTO;
+      final Map<String, ResourceViewDTO>? views,
+      final ResourceMetaDTO? meta) = _$ArtistDTO;
   const ArtistDTO._() : super._();
 
   factory ArtistDTO.fromJson(Map<String, dynamic> json) = _$ArtistDTO.fromJson;
@@ -1420,6 +1556,7 @@ abstract class ArtistDTO extends ResourceDTO {
   ArtistRelationshipsDTO? get relationships =>
       throw _privateConstructorUsedError;
   Map<String, ResourceViewDTO>? get views => throw _privateConstructorUsedError;
+  ResourceMetaDTO? get meta => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$ArtistDTOCopyWith<_$ArtistDTO> get copyWith =>
@@ -1438,10 +1575,12 @@ abstract class _$$PlaylistDTOCopyWith<$Res>
       String type,
       PlaylistAttributesDTO? attributes,
       PlaylistRelationshipsDTO? relationships,
-      Map<String, ResourceViewDTO>? views});
+      Map<String, ResourceViewDTO>? views,
+      ResourceMetaDTO? meta});
 
   $PlaylistAttributesDTOCopyWith<$Res>? get attributes;
   $PlaylistRelationshipsDTOCopyWith<$Res>? get relationships;
+  $ResourceMetaDTOCopyWith<$Res>? get meta;
 }
 
 /// @nodoc
@@ -1461,6 +1600,7 @@ class __$$PlaylistDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
     Object? attributes = freezed,
     Object? relationships = freezed,
     Object? views = freezed,
+    Object? meta = freezed,
   }) {
     return _then(_$PlaylistDTO(
       id == freezed
@@ -1483,6 +1623,10 @@ class __$$PlaylistDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
           ? _value._views
           : views // ignore: cast_nullable_to_non_nullable
               as Map<String, ResourceViewDTO>?,
+      meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as ResourceMetaDTO?,
     ));
   }
 
@@ -1508,13 +1652,24 @@ class __$$PlaylistDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
       return _then(_value.copyWith(relationships: value));
     });
   }
+
+  @override
+  $ResourceMetaDTOCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $ResourceMetaDTOCopyWith<$Res>(_value.meta!, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$PlaylistDTO extends PlaylistDTO {
   const _$PlaylistDTO(this.id, this.type, this.attributes, this.relationships,
-      final Map<String, ResourceViewDTO>? views,
+      final Map<String, ResourceViewDTO>? views, this.meta,
       {final String? $type})
       : _views = views,
         $type = $type ?? 'playlist',
@@ -1540,12 +1695,15 @@ class _$PlaylistDTO extends PlaylistDTO {
     return EqualUnmodifiableMapView(value);
   }
 
+  @override
+  final ResourceMetaDTO? meta;
+
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'ResourceDTO.playlist(id: $id, type: $type, attributes: $attributes, relationships: $relationships, views: $views)';
+    return 'ResourceDTO.playlist(id: $id, type: $type, attributes: $attributes, relationships: $relationships, views: $views, meta: $meta)';
   }
 
   @override
@@ -1559,7 +1717,8 @@ class _$PlaylistDTO extends PlaylistDTO {
                 .equals(other.attributes, attributes) &&
             const DeepCollectionEquality()
                 .equals(other.relationships, relationships) &&
-            const DeepCollectionEquality().equals(other._views, _views));
+            const DeepCollectionEquality().equals(other._views, _views) &&
+            const DeepCollectionEquality().equals(other.meta, meta));
   }
 
   @JsonKey(ignore: true)
@@ -1570,7 +1729,8 @@ class _$PlaylistDTO extends PlaylistDTO {
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(attributes),
       const DeepCollectionEquality().hash(relationships),
-      const DeepCollectionEquality().hash(_views));
+      const DeepCollectionEquality().hash(_views),
+      const DeepCollectionEquality().hash(meta));
 
   @JsonKey(ignore: true)
   @override
@@ -1585,28 +1745,32 @@ class _$PlaylistDTO extends PlaylistDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         $default, {
     required TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         artist,
     required TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         playlist,
     required TResult Function(String id, String type,
             SongAttributesDTO? attributes, SongRelationshipsDTO? relationships)
@@ -1619,7 +1783,8 @@ class _$PlaylistDTO extends PlaylistDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         musicVideo,
     required TResult Function(
             String id,
@@ -1628,7 +1793,7 @@ class _$PlaylistDTO extends PlaylistDTO {
             CuratorRelationshipsDTO? relationships)
         curator,
   }) {
-    return playlist(id, type, attributes, relationships, views);
+    return playlist(id, type, attributes, relationships, views, meta);
   }
 
   @override
@@ -1639,28 +1804,32 @@ class _$PlaylistDTO extends PlaylistDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         $default, {
     TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         artist,
     TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         playlist,
     TResult Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
@@ -1672,13 +1841,14 @@ class _$PlaylistDTO extends PlaylistDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         musicVideo,
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
   }) {
-    return playlist?.call(id, type, attributes, relationships, views);
+    return playlist?.call(id, type, attributes, relationships, views, meta);
   }
 
   @override
@@ -1689,28 +1859,32 @@ class _$PlaylistDTO extends PlaylistDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         $default, {
     TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         artist,
     TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         playlist,
     TResult Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
@@ -1722,7 +1896,8 @@ class _$PlaylistDTO extends PlaylistDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         musicVideo,
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
@@ -1730,7 +1905,7 @@ class _$PlaylistDTO extends PlaylistDTO {
     required TResult orElse(),
   }) {
     if (playlist != null) {
-      return playlist(id, type, attributes, relationships, views);
+      return playlist(id, type, attributes, relationships, views, meta);
     }
     return orElse();
   }
@@ -1796,7 +1971,8 @@ abstract class PlaylistDTO extends ResourceDTO {
       final String type,
       final PlaylistAttributesDTO? attributes,
       final PlaylistRelationshipsDTO? relationships,
-      final Map<String, ResourceViewDTO>? views) = _$PlaylistDTO;
+      final Map<String, ResourceViewDTO>? views,
+      final ResourceMetaDTO? meta) = _$PlaylistDTO;
   const PlaylistDTO._() : super._();
 
   factory PlaylistDTO.fromJson(Map<String, dynamic> json) =
@@ -1810,6 +1986,7 @@ abstract class PlaylistDTO extends ResourceDTO {
   PlaylistRelationshipsDTO? get relationships =>
       throw _privateConstructorUsedError;
   Map<String, ResourceViewDTO>? get views => throw _privateConstructorUsedError;
+  ResourceMetaDTO? get meta => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$PlaylistDTOCopyWith<_$PlaylistDTO> get copyWith =>
@@ -1953,28 +2130,32 @@ class _$SongDTO extends SongDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         $default, {
     required TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         artist,
     required TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         playlist,
     required TResult Function(String id, String type,
             SongAttributesDTO? attributes, SongRelationshipsDTO? relationships)
@@ -1987,7 +2168,8 @@ class _$SongDTO extends SongDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         musicVideo,
     required TResult Function(
             String id,
@@ -2007,28 +2189,32 @@ class _$SongDTO extends SongDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         $default, {
     TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         artist,
     TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         playlist,
     TResult Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
@@ -2040,7 +2226,8 @@ class _$SongDTO extends SongDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         musicVideo,
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
@@ -2057,28 +2244,32 @@ class _$SongDTO extends SongDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         $default, {
     TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         artist,
     TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         playlist,
     TResult Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
@@ -2090,7 +2281,8 @@ class _$SongDTO extends SongDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         musicVideo,
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
@@ -2293,28 +2485,32 @@ class _$StationDTO extends StationDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         $default, {
     required TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         artist,
     required TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         playlist,
     required TResult Function(String id, String type,
             SongAttributesDTO? attributes, SongRelationshipsDTO? relationships)
@@ -2327,7 +2523,8 @@ class _$StationDTO extends StationDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         musicVideo,
     required TResult Function(
             String id,
@@ -2347,28 +2544,32 @@ class _$StationDTO extends StationDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         $default, {
     TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         artist,
     TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         playlist,
     TResult Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
@@ -2380,7 +2581,8 @@ class _$StationDTO extends StationDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         musicVideo,
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
@@ -2397,28 +2599,32 @@ class _$StationDTO extends StationDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         $default, {
     TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         artist,
     TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         playlist,
     TResult Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
@@ -2430,7 +2636,8 @@ class _$StationDTO extends StationDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         musicVideo,
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
@@ -2529,10 +2736,12 @@ abstract class _$$MusicVideoDTOCopyWith<$Res>
       String type,
       MusicVideoAttributesDTO? attributes,
       MusicVideoRelationshipsDTO? relationships,
-      Map<String, ResourceViewDTO>? views});
+      Map<String, ResourceViewDTO>? views,
+      ResourceMetaDTO? meta});
 
   $MusicVideoAttributesDTOCopyWith<$Res>? get attributes;
   $MusicVideoRelationshipsDTOCopyWith<$Res>? get relationships;
+  $ResourceMetaDTOCopyWith<$Res>? get meta;
 }
 
 /// @nodoc
@@ -2553,6 +2762,7 @@ class __$$MusicVideoDTOCopyWithImpl<$Res>
     Object? attributes = freezed,
     Object? relationships = freezed,
     Object? views = freezed,
+    Object? meta = freezed,
   }) {
     return _then(_$MusicVideoDTO(
       id == freezed
@@ -2575,6 +2785,10 @@ class __$$MusicVideoDTOCopyWithImpl<$Res>
           ? _value._views
           : views // ignore: cast_nullable_to_non_nullable
               as Map<String, ResourceViewDTO>?,
+      meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as ResourceMetaDTO?,
     ));
   }
 
@@ -2600,13 +2814,24 @@ class __$$MusicVideoDTOCopyWithImpl<$Res>
       return _then(_value.copyWith(relationships: value));
     });
   }
+
+  @override
+  $ResourceMetaDTOCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $ResourceMetaDTOCopyWith<$Res>(_value.meta!, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$MusicVideoDTO extends MusicVideoDTO {
   const _$MusicVideoDTO(this.id, this.type, this.attributes, this.relationships,
-      final Map<String, ResourceViewDTO>? views,
+      final Map<String, ResourceViewDTO>? views, this.meta,
       {final String? $type})
       : _views = views,
         $type = $type ?? 'musicVideo',
@@ -2632,12 +2857,15 @@ class _$MusicVideoDTO extends MusicVideoDTO {
     return EqualUnmodifiableMapView(value);
   }
 
+  @override
+  final ResourceMetaDTO? meta;
+
   @JsonKey(name: 'runtimeType')
   final String $type;
 
   @override
   String toString() {
-    return 'ResourceDTO.musicVideo(id: $id, type: $type, attributes: $attributes, relationships: $relationships, views: $views)';
+    return 'ResourceDTO.musicVideo(id: $id, type: $type, attributes: $attributes, relationships: $relationships, views: $views, meta: $meta)';
   }
 
   @override
@@ -2651,7 +2879,8 @@ class _$MusicVideoDTO extends MusicVideoDTO {
                 .equals(other.attributes, attributes) &&
             const DeepCollectionEquality()
                 .equals(other.relationships, relationships) &&
-            const DeepCollectionEquality().equals(other._views, _views));
+            const DeepCollectionEquality().equals(other._views, _views) &&
+            const DeepCollectionEquality().equals(other.meta, meta));
   }
 
   @JsonKey(ignore: true)
@@ -2662,7 +2891,8 @@ class _$MusicVideoDTO extends MusicVideoDTO {
       const DeepCollectionEquality().hash(type),
       const DeepCollectionEquality().hash(attributes),
       const DeepCollectionEquality().hash(relationships),
-      const DeepCollectionEquality().hash(_views));
+      const DeepCollectionEquality().hash(_views),
+      const DeepCollectionEquality().hash(meta));
 
   @JsonKey(ignore: true)
   @override
@@ -2677,28 +2907,32 @@ class _$MusicVideoDTO extends MusicVideoDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         $default, {
     required TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         artist,
     required TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         playlist,
     required TResult Function(String id, String type,
             SongAttributesDTO? attributes, SongRelationshipsDTO? relationships)
@@ -2711,7 +2945,8 @@ class _$MusicVideoDTO extends MusicVideoDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         musicVideo,
     required TResult Function(
             String id,
@@ -2720,7 +2955,7 @@ class _$MusicVideoDTO extends MusicVideoDTO {
             CuratorRelationshipsDTO? relationships)
         curator,
   }) {
-    return musicVideo(id, type, attributes, relationships, views);
+    return musicVideo(id, type, attributes, relationships, views, meta);
   }
 
   @override
@@ -2731,28 +2966,32 @@ class _$MusicVideoDTO extends MusicVideoDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         $default, {
     TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         artist,
     TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         playlist,
     TResult Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
@@ -2764,13 +3003,14 @@ class _$MusicVideoDTO extends MusicVideoDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         musicVideo,
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
   }) {
-    return musicVideo?.call(id, type, attributes, relationships, views);
+    return musicVideo?.call(id, type, attributes, relationships, views, meta);
   }
 
   @override
@@ -2781,28 +3021,32 @@ class _$MusicVideoDTO extends MusicVideoDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         $default, {
     TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         artist,
     TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         playlist,
     TResult Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
@@ -2814,7 +3058,8 @@ class _$MusicVideoDTO extends MusicVideoDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         musicVideo,
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
@@ -2822,7 +3067,7 @@ class _$MusicVideoDTO extends MusicVideoDTO {
     required TResult orElse(),
   }) {
     if (musicVideo != null) {
-      return musicVideo(id, type, attributes, relationships, views);
+      return musicVideo(id, type, attributes, relationships, views, meta);
     }
     return orElse();
   }
@@ -2888,7 +3133,8 @@ abstract class MusicVideoDTO extends ResourceDTO {
       final String type,
       final MusicVideoAttributesDTO? attributes,
       final MusicVideoRelationshipsDTO? relationships,
-      final Map<String, ResourceViewDTO>? views) = _$MusicVideoDTO;
+      final Map<String, ResourceViewDTO>? views,
+      final ResourceMetaDTO? meta) = _$MusicVideoDTO;
   const MusicVideoDTO._() : super._();
 
   factory MusicVideoDTO.fromJson(Map<String, dynamic> json) =
@@ -2902,6 +3148,7 @@ abstract class MusicVideoDTO extends ResourceDTO {
   MusicVideoRelationshipsDTO? get relationships =>
       throw _privateConstructorUsedError;
   Map<String, ResourceViewDTO>? get views => throw _privateConstructorUsedError;
+  ResourceMetaDTO? get meta => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$MusicVideoDTOCopyWith<_$MusicVideoDTO> get copyWith =>
@@ -3049,28 +3296,32 @@ class _$CuratorDTO extends CuratorDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         $default, {
     required TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         artist,
     required TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         playlist,
     required TResult Function(String id, String type,
             SongAttributesDTO? attributes, SongRelationshipsDTO? relationships)
@@ -3083,7 +3334,8 @@ class _$CuratorDTO extends CuratorDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
         musicVideo,
     required TResult Function(
             String id,
@@ -3103,28 +3355,32 @@ class _$CuratorDTO extends CuratorDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         $default, {
     TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         artist,
     TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         playlist,
     TResult Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
@@ -3136,7 +3392,8 @@ class _$CuratorDTO extends CuratorDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         musicVideo,
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
@@ -3153,28 +3410,32 @@ class _$CuratorDTO extends CuratorDTO {
             String type,
             Map<String, dynamic>? attributes,
             Map<String, ResourceRelationshipDTO>? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         $default, {
     TResult Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
             AlbumRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
             ArtistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         artist,
     TResult Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
             PlaylistRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         playlist,
     TResult Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
@@ -3186,7 +3447,8 @@ class _$CuratorDTO extends CuratorDTO {
             String type,
             MusicVideoAttributesDTO? attributes,
             MusicVideoRelationshipsDTO? relationships,
-            Map<String, ResourceViewDTO>? views)?
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
         musicVideo,
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
@@ -3275,5 +3537,298 @@ abstract class CuratorDTO extends ResourceDTO {
   @override
   @JsonKey(ignore: true)
   _$$CuratorDTOCopyWith<_$CuratorDTO> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ResourceMetaDTO _$ResourceMetaDTOFromJson(Map<String, dynamic> json) {
+  return _ResourceMeta.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ResourceMetaDTO {
+  ResourceMetaViewsDTO? get views => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ResourceMetaDTOCopyWith<ResourceMetaDTO> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ResourceMetaDTOCopyWith<$Res> {
+  factory $ResourceMetaDTOCopyWith(
+          ResourceMetaDTO value, $Res Function(ResourceMetaDTO) then) =
+      _$ResourceMetaDTOCopyWithImpl<$Res>;
+  $Res call({ResourceMetaViewsDTO? views});
+
+  $ResourceMetaViewsDTOCopyWith<$Res>? get views;
+}
+
+/// @nodoc
+class _$ResourceMetaDTOCopyWithImpl<$Res>
+    implements $ResourceMetaDTOCopyWith<$Res> {
+  _$ResourceMetaDTOCopyWithImpl(this._value, this._then);
+
+  final ResourceMetaDTO _value;
+  // ignore: unused_field
+  final $Res Function(ResourceMetaDTO) _then;
+
+  @override
+  $Res call({
+    Object? views = freezed,
+  }) {
+    return _then(_value.copyWith(
+      views: views == freezed
+          ? _value.views
+          : views // ignore: cast_nullable_to_non_nullable
+              as ResourceMetaViewsDTO?,
+    ));
+  }
+
+  @override
+  $ResourceMetaViewsDTOCopyWith<$Res>? get views {
+    if (_value.views == null) {
+      return null;
+    }
+
+    return $ResourceMetaViewsDTOCopyWith<$Res>(_value.views!, (value) {
+      return _then(_value.copyWith(views: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_ResourceMetaCopyWith<$Res>
+    implements $ResourceMetaDTOCopyWith<$Res> {
+  factory _$$_ResourceMetaCopyWith(
+          _$_ResourceMeta value, $Res Function(_$_ResourceMeta) then) =
+      __$$_ResourceMetaCopyWithImpl<$Res>;
+  @override
+  $Res call({ResourceMetaViewsDTO? views});
+
+  @override
+  $ResourceMetaViewsDTOCopyWith<$Res>? get views;
+}
+
+/// @nodoc
+class __$$_ResourceMetaCopyWithImpl<$Res>
+    extends _$ResourceMetaDTOCopyWithImpl<$Res>
+    implements _$$_ResourceMetaCopyWith<$Res> {
+  __$$_ResourceMetaCopyWithImpl(
+      _$_ResourceMeta _value, $Res Function(_$_ResourceMeta) _then)
+      : super(_value, (v) => _then(v as _$_ResourceMeta));
+
+  @override
+  _$_ResourceMeta get _value => super._value as _$_ResourceMeta;
+
+  @override
+  $Res call({
+    Object? views = freezed,
+  }) {
+    return _then(_$_ResourceMeta(
+      views: views == freezed
+          ? _value.views
+          : views // ignore: cast_nullable_to_non_nullable
+              as ResourceMetaViewsDTO?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ResourceMeta extends _ResourceMeta {
+  const _$_ResourceMeta({this.views}) : super._();
+
+  factory _$_ResourceMeta.fromJson(Map<String, dynamic> json) =>
+      _$$_ResourceMetaFromJson(json);
+
+  @override
+  final ResourceMetaViewsDTO? views;
+
+  @override
+  String toString() {
+    return 'ResourceMetaDTO(views: $views)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ResourceMeta &&
+            const DeepCollectionEquality().equals(other.views, views));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(views));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ResourceMetaCopyWith<_$_ResourceMeta> get copyWith =>
+      __$$_ResourceMetaCopyWithImpl<_$_ResourceMeta>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ResourceMetaToJson(this);
+  }
+}
+
+abstract class _ResourceMeta extends ResourceMetaDTO {
+  const factory _ResourceMeta({final ResourceMetaViewsDTO? views}) =
+      _$_ResourceMeta;
+  const _ResourceMeta._() : super._();
+
+  factory _ResourceMeta.fromJson(Map<String, dynamic> json) =
+      _$_ResourceMeta.fromJson;
+
+  @override
+  ResourceMetaViewsDTO? get views => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ResourceMetaCopyWith<_$_ResourceMeta> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ResourceMetaViewsDTO _$ResourceMetaViewsDTOFromJson(Map<String, dynamic> json) {
+  return _ResourceMetaViewsDTO.fromJson(json);
+}
+
+/// @nodoc
+mixin _$ResourceMetaViewsDTO {
+  List<String>? get order => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ResourceMetaViewsDTOCopyWith<ResourceMetaViewsDTO> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ResourceMetaViewsDTOCopyWith<$Res> {
+  factory $ResourceMetaViewsDTOCopyWith(ResourceMetaViewsDTO value,
+          $Res Function(ResourceMetaViewsDTO) then) =
+      _$ResourceMetaViewsDTOCopyWithImpl<$Res>;
+  $Res call({List<String>? order});
+}
+
+/// @nodoc
+class _$ResourceMetaViewsDTOCopyWithImpl<$Res>
+    implements $ResourceMetaViewsDTOCopyWith<$Res> {
+  _$ResourceMetaViewsDTOCopyWithImpl(this._value, this._then);
+
+  final ResourceMetaViewsDTO _value;
+  // ignore: unused_field
+  final $Res Function(ResourceMetaViewsDTO) _then;
+
+  @override
+  $Res call({
+    Object? order = freezed,
+  }) {
+    return _then(_value.copyWith(
+      order: order == freezed
+          ? _value.order
+          : order // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$$_ResourceMetaViewsDTOCopyWith<$Res>
+    implements $ResourceMetaViewsDTOCopyWith<$Res> {
+  factory _$$_ResourceMetaViewsDTOCopyWith(_$_ResourceMetaViewsDTO value,
+          $Res Function(_$_ResourceMetaViewsDTO) then) =
+      __$$_ResourceMetaViewsDTOCopyWithImpl<$Res>;
+  @override
+  $Res call({List<String>? order});
+}
+
+/// @nodoc
+class __$$_ResourceMetaViewsDTOCopyWithImpl<$Res>
+    extends _$ResourceMetaViewsDTOCopyWithImpl<$Res>
+    implements _$$_ResourceMetaViewsDTOCopyWith<$Res> {
+  __$$_ResourceMetaViewsDTOCopyWithImpl(_$_ResourceMetaViewsDTO _value,
+      $Res Function(_$_ResourceMetaViewsDTO) _then)
+      : super(_value, (v) => _then(v as _$_ResourceMetaViewsDTO));
+
+  @override
+  _$_ResourceMetaViewsDTO get _value => super._value as _$_ResourceMetaViewsDTO;
+
+  @override
+  $Res call({
+    Object? order = freezed,
+  }) {
+    return _then(_$_ResourceMetaViewsDTO(
+      order: order == freezed
+          ? _value._order
+          : order // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ResourceMetaViewsDTO extends _ResourceMetaViewsDTO {
+  const _$_ResourceMetaViewsDTO({final List<String>? order})
+      : _order = order,
+        super._();
+
+  factory _$_ResourceMetaViewsDTO.fromJson(Map<String, dynamic> json) =>
+      _$$_ResourceMetaViewsDTOFromJson(json);
+
+  final List<String>? _order;
+  @override
+  List<String>? get order {
+    final value = _order;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'ResourceMetaViewsDTO(order: $order)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ResourceMetaViewsDTO &&
+            const DeepCollectionEquality().equals(other._order, _order));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_order));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_ResourceMetaViewsDTOCopyWith<_$_ResourceMetaViewsDTO> get copyWith =>
+      __$$_ResourceMetaViewsDTOCopyWithImpl<_$_ResourceMetaViewsDTO>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ResourceMetaViewsDTOToJson(this);
+  }
+}
+
+abstract class _ResourceMetaViewsDTO extends ResourceMetaViewsDTO {
+  const factory _ResourceMetaViewsDTO({final List<String>? order}) =
+      _$_ResourceMetaViewsDTO;
+  const _ResourceMetaViewsDTO._() : super._();
+
+  factory _ResourceMetaViewsDTO.fromJson(Map<String, dynamic> json) =
+      _$_ResourceMetaViewsDTO.fromJson;
+
+  @override
+  List<String>? get order => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_ResourceMetaViewsDTOCopyWith<_$_ResourceMetaViewsDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }

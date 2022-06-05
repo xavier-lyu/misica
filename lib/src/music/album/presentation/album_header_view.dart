@@ -1,10 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:misica/src/core/presentation/app_router.gr.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/domain/album.dart';
-import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/presentation/artwork_widget.dart';
 import 'package:misica/src/music/core/presentation/play_button.dart';
 import 'package:misica/src/music/core/presentation/shuffle_button.dart';
@@ -38,12 +39,19 @@ class AlbumHeaderView extends ConsumerWidget {
             textAlign: TextAlign.center,
           ),
         if (album.creatorName.isNotEmpty)
-          Text(
-            album.creatorName,
-            style: context.ttoc.titleLarge?.copyWith(
-              color: Colors.redAccent,
+          TextButton(
+            child: Text(
+              album.creatorName,
+              style: context.ttoc.titleLarge?.copyWith(
+                color: Colors.redAccent,
+              ),
+              textAlign: TextAlign.center,
             ),
-            textAlign: TextAlign.center,
+            onPressed: () {
+              if (album.artist != null) {
+                context.router.push(ArtistRoute(id: album.artist!.id));
+              }
+            },
           ),
         if (album.description != null)
           Padding(

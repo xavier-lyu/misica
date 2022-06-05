@@ -3,8 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/core/domain/album.dart';
 import 'package:misica/src/music/album/shared/providers.dart';
-import 'package:misica/src/music/core/presentation/divider_widget.dart';
-import 'package:misica/src/music/core/presentation/resource_view_widget.dart';
+import 'package:misica/src/music/core/presentation/resource_views_list.dart';
 import 'package:misica/src/music/core/presentation/retry_widget.dart';
 import 'package:misica/src/music/core/presentation/songs_list.dart';
 
@@ -93,27 +92,7 @@ class _AlbumPageState extends ConsumerState<AlbumPage> {
                 )),
               ),
               if (album.views?.isNotEmpty == true)
-                SliverList(
-                  delegate: SliverChildBuilderDelegate(
-                    ((context, index) {
-                      return Container(
-                        padding: EdgeInsets.symmetric(
-                          vertical: (index.isOdd ? 0 : 10),
-                        ),
-                        color: Colors.grey[100]!,
-                        child: (index.isOdd)
-                            ? const DividerWidget(
-                                endIndent: 0,
-                                height: 1,
-                              )
-                            : ResourceViewWidget(
-                                resourceView: album.views![index ~/ 2],
-                              ),
-                      );
-                    }),
-                    childCount: (album.views!.length * 2 - 1),
-                  ),
-                ),
+                ResourceViewsList(views: album.views!),
             ],
           ),
         );

@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:misica/src/core/shared/utils.dart';
+import 'package:misica/src/core/shared/constants.dart';
 import 'package:misica/src/music/core/infrastructure/music_response.dart';
 import 'package:retrofit/retrofit.dart';
 

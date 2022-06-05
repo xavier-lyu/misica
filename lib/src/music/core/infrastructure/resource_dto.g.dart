@@ -22,6 +22,10 @@ _$ResourceRawDTO _$$ResourceRawDTOFromJson(Map json) => _$ResourceRawDTO(
         (k, e) => MapEntry(k as String,
             ResourceViewDTO.fromJson(Map<String, dynamic>.from(e as Map))),
       ),
+      json['meta'] == null
+          ? null
+          : ResourceMetaDTO.fromJson(
+              Map<String, dynamic>.from(json['meta'] as Map)),
       $type: json['runtimeType'] as String?,
     );
 
@@ -33,6 +37,7 @@ Map<String, dynamic> _$$ResourceRawDTOToJson(_$ResourceRawDTO instance) =>
       'relationships':
           instance.relationships?.map((k, e) => MapEntry(k, e.toJson())),
       'views': instance.views?.map((k, e) => MapEntry(k, e.toJson())),
+      'meta': instance.meta?.toJson(),
       'runtimeType': instance.$type,
     };
 
@@ -51,6 +56,10 @@ _$AlbumDTO _$$AlbumDTOFromJson(Map json) => _$AlbumDTO(
         (k, e) => MapEntry(k as String,
             ResourceViewDTO.fromJson(Map<String, dynamic>.from(e as Map))),
       ),
+      json['meta'] == null
+          ? null
+          : ResourceMetaDTO.fromJson(
+              Map<String, dynamic>.from(json['meta'] as Map)),
       $type: json['runtimeType'] as String?,
     );
 
@@ -61,6 +70,7 @@ Map<String, dynamic> _$$AlbumDTOToJson(_$AlbumDTO instance) =>
       'attributes': instance.attributes?.toJson(),
       'relationships': instance.relationships?.toJson(),
       'views': instance.views?.map((k, e) => MapEntry(k, e.toJson())),
+      'meta': instance.meta?.toJson(),
       'runtimeType': instance.$type,
     };
 
@@ -79,6 +89,10 @@ _$ArtistDTO _$$ArtistDTOFromJson(Map json) => _$ArtistDTO(
         (k, e) => MapEntry(k as String,
             ResourceViewDTO.fromJson(Map<String, dynamic>.from(e as Map))),
       ),
+      json['meta'] == null
+          ? null
+          : ResourceMetaDTO.fromJson(
+              Map<String, dynamic>.from(json['meta'] as Map)),
       $type: json['runtimeType'] as String?,
     );
 
@@ -89,6 +103,7 @@ Map<String, dynamic> _$$ArtistDTOToJson(_$ArtistDTO instance) =>
       'attributes': instance.attributes?.toJson(),
       'relationships': instance.relationships?.toJson(),
       'views': instance.views?.map((k, e) => MapEntry(k, e.toJson())),
+      'meta': instance.meta?.toJson(),
       'runtimeType': instance.$type,
     };
 
@@ -107,6 +122,10 @@ _$PlaylistDTO _$$PlaylistDTOFromJson(Map json) => _$PlaylistDTO(
         (k, e) => MapEntry(k as String,
             ResourceViewDTO.fromJson(Map<String, dynamic>.from(e as Map))),
       ),
+      json['meta'] == null
+          ? null
+          : ResourceMetaDTO.fromJson(
+              Map<String, dynamic>.from(json['meta'] as Map)),
       $type: json['runtimeType'] as String?,
     );
 
@@ -117,6 +136,7 @@ Map<String, dynamic> _$$PlaylistDTOToJson(_$PlaylistDTO instance) =>
       'attributes': instance.attributes?.toJson(),
       'relationships': instance.relationships?.toJson(),
       'views': instance.views?.map((k, e) => MapEntry(k, e.toJson())),
+      'meta': instance.meta?.toJson(),
       'runtimeType': instance.$type,
     };
 
@@ -175,6 +195,10 @@ _$MusicVideoDTO _$$MusicVideoDTOFromJson(Map json) => _$MusicVideoDTO(
         (k, e) => MapEntry(k as String,
             ResourceViewDTO.fromJson(Map<String, dynamic>.from(e as Map))),
       ),
+      json['meta'] == null
+          ? null
+          : ResourceMetaDTO.fromJson(
+              Map<String, dynamic>.from(json['meta'] as Map)),
       $type: json['runtimeType'] as String?,
     );
 
@@ -185,6 +209,7 @@ Map<String, dynamic> _$$MusicVideoDTOToJson(_$MusicVideoDTO instance) =>
       'attributes': instance.attributes?.toJson(),
       'relationships': instance.relationships?.toJson(),
       'views': instance.views?.map((k, e) => MapEntry(k, e.toJson())),
+      'meta': instance.meta?.toJson(),
       'runtimeType': instance.$type,
     };
 
@@ -209,4 +234,28 @@ Map<String, dynamic> _$$CuratorDTOToJson(_$CuratorDTO instance) =>
       'attributes': instance.attributes?.toJson(),
       'relationships': instance.relationships?.toJson(),
       'runtimeType': instance.$type,
+    };
+
+_$_ResourceMeta _$$_ResourceMetaFromJson(Map json) => _$_ResourceMeta(
+      views: json['views'] == null
+          ? null
+          : ResourceMetaViewsDTO.fromJson(
+              Map<String, dynamic>.from(json['views'] as Map)),
+    );
+
+Map<String, dynamic> _$$_ResourceMetaToJson(_$_ResourceMeta instance) =>
+    <String, dynamic>{
+      'views': instance.views?.toJson(),
+    };
+
+_$_ResourceMetaViewsDTO _$$_ResourceMetaViewsDTOFromJson(Map json) =>
+    _$_ResourceMetaViewsDTO(
+      order:
+          (json['order'] as List<dynamic>?)?.map((e) => e as String).toList(),
+    );
+
+Map<String, dynamic> _$$_ResourceMetaViewsDTOToJson(
+        _$_ResourceMetaViewsDTO instance) =>
+    <String, dynamic>{
+      'order': instance.order,
     };

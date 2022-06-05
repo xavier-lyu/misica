@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:misica/src/music/core/domain/resource_relationships.dart';
-import 'package:misica/src/music/core/shared/converters.dart';
+import 'package:misica/src/music/core/shared/json_converters.dart';
 import 'package:misica/src/music/core/shared/dtos_to_domains.dart';
 
 import 'resource_dto.dart';

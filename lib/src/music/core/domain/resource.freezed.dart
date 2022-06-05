@@ -27,14 +27,14 @@ mixin _$Resource {
             String type,
             AlbumAttributes? attributes,
             AlbumRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
             ArtistRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         artist,
     required TResult Function(
             String id,
@@ -47,7 +47,7 @@ mixin _$Resource {
             String type,
             PlaylistAttributes? attributes,
             PlaylistRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         playlist,
     required TResult Function(String id, String type,
             SongAttributes? attributes, SongRelationships? relationships)
@@ -64,17 +64,29 @@ mixin _$Resource {
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes,
-            AlbumRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            Map<String, ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes,
-            ArtistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         artist,
     TResult Function(String id, String type, MusicVideoAttributes? attributes,
             MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes,
-            PlaylistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         playlist,
     TResult Function(String id, String type, SongAttributes? attributes,
             SongRelationships? relationships)?
@@ -90,17 +102,29 @@ mixin _$Resource {
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes,
-            AlbumRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            Map<String, ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes,
-            ArtistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         artist,
     TResult Function(String id, String type, MusicVideoAttributes? attributes,
             MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes,
-            PlaylistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         playlist,
     TResult Function(String id, String type, SongAttributes? attributes,
             SongRelationships? relationships)?
@@ -296,14 +320,14 @@ class _$_Resource extends _Resource {
             String type,
             AlbumAttributes? attributes,
             AlbumRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
             ArtistRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         artist,
     required TResult Function(
             String id,
@@ -316,7 +340,7 @@ class _$_Resource extends _Resource {
             String type,
             PlaylistAttributes? attributes,
             PlaylistRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         playlist,
     required TResult Function(String id, String type,
             SongAttributes? attributes, SongRelationships? relationships)
@@ -336,17 +360,29 @@ class _$_Resource extends _Resource {
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes,
-            AlbumRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            Map<String, ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes,
-            ArtistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         artist,
     TResult Function(String id, String type, MusicVideoAttributes? attributes,
             MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes,
-            PlaylistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         playlist,
     TResult Function(String id, String type, SongAttributes? attributes,
             SongRelationships? relationships)?
@@ -365,17 +401,29 @@ class _$_Resource extends _Resource {
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes,
-            AlbumRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            Map<String, ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes,
-            ArtistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         artist,
     TResult Function(String id, String type, MusicVideoAttributes? attributes,
             MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes,
-            PlaylistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         playlist,
     TResult Function(String id, String type, SongAttributes? attributes,
             SongRelationships? relationships)?
@@ -471,7 +519,7 @@ abstract class _$$AlbumCopyWith<$Res> implements $ResourceCopyWith<$Res> {
       String type,
       AlbumAttributes? attributes,
       AlbumRelationships? relationships,
-      List<ResourceView>? views});
+      Map<String, ResourceView>? views});
 
   $AlbumAttributesCopyWith<$Res>? get attributes;
   $AlbumRelationshipsCopyWith<$Res>? get relationships;
@@ -514,7 +562,7 @@ class __$$AlbumCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
       views: views == freezed
           ? _value._views
           : views // ignore: cast_nullable_to_non_nullable
-              as List<ResourceView>?,
+              as Map<String, ResourceView>?,
     ));
   }
 
@@ -549,7 +597,7 @@ class _$Album extends Album {
       required this.type,
       required this.attributes,
       required this.relationships,
-      required final List<ResourceView>? views})
+      required final Map<String, ResourceView>? views})
       : _views = views,
         super._();
 
@@ -561,13 +609,13 @@ class _$Album extends Album {
   final AlbumAttributes? attributes;
   @override
   final AlbumRelationships? relationships;
-  final List<ResourceView>? _views;
+  final Map<String, ResourceView>? _views;
   @override
-  List<ResourceView>? get views {
+  Map<String, ResourceView>? get views {
     final value = _views;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return EqualUnmodifiableMapView(value);
   }
 
   @override
@@ -613,14 +661,14 @@ class _$Album extends Album {
             String type,
             AlbumAttributes? attributes,
             AlbumRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
             ArtistRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         artist,
     required TResult Function(
             String id,
@@ -633,7 +681,7 @@ class _$Album extends Album {
             String type,
             PlaylistAttributes? attributes,
             PlaylistRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         playlist,
     required TResult Function(String id, String type,
             SongAttributes? attributes, SongRelationships? relationships)
@@ -653,17 +701,29 @@ class _$Album extends Album {
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes,
-            AlbumRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            Map<String, ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes,
-            ArtistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         artist,
     TResult Function(String id, String type, MusicVideoAttributes? attributes,
             MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes,
-            PlaylistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         playlist,
     TResult Function(String id, String type, SongAttributes? attributes,
             SongRelationships? relationships)?
@@ -682,17 +742,29 @@ class _$Album extends Album {
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes,
-            AlbumRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            Map<String, ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes,
-            ArtistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         artist,
     TResult Function(String id, String type, MusicVideoAttributes? attributes,
             MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes,
-            PlaylistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         playlist,
     TResult Function(String id, String type, SongAttributes? attributes,
             SongRelationships? relationships)?
@@ -766,7 +838,7 @@ abstract class Album extends Resource {
       required final String type,
       required final AlbumAttributes? attributes,
       required final AlbumRelationships? relationships,
-      required final List<ResourceView>? views}) = _$Album;
+      required final Map<String, ResourceView>? views}) = _$Album;
   const Album._() : super._();
 
   @override
@@ -775,7 +847,7 @@ abstract class Album extends Resource {
   String get type => throw _privateConstructorUsedError;
   AlbumAttributes? get attributes => throw _privateConstructorUsedError;
   AlbumRelationships? get relationships => throw _privateConstructorUsedError;
-  List<ResourceView>? get views => throw _privateConstructorUsedError;
+  Map<String, ResourceView>? get views => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$AlbumCopyWith<_$Album> get copyWith => throw _privateConstructorUsedError;
@@ -791,7 +863,7 @@ abstract class _$$ArtistCopyWith<$Res> implements $ResourceCopyWith<$Res> {
       String type,
       ArtistAttributes? attributes,
       ArtistRelationships? relationships,
-      List<ResourceView>? views});
+      Map<String, ResourceView>? views});
 
   $ArtistAttributesCopyWith<$Res>? get attributes;
   $ArtistRelationshipsCopyWith<$Res>? get relationships;
@@ -834,7 +906,7 @@ class __$$ArtistCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
       views: views == freezed
           ? _value._views
           : views // ignore: cast_nullable_to_non_nullable
-              as List<ResourceView>?,
+              as Map<String, ResourceView>?,
     ));
   }
 
@@ -869,7 +941,7 @@ class _$Artist extends Artist {
       required this.type,
       required this.attributes,
       required this.relationships,
-      required final List<ResourceView>? views})
+      required final Map<String, ResourceView>? views})
       : _views = views,
         super._();
 
@@ -881,13 +953,13 @@ class _$Artist extends Artist {
   final ArtistAttributes? attributes;
   @override
   final ArtistRelationships? relationships;
-  final List<ResourceView>? _views;
+  final Map<String, ResourceView>? _views;
   @override
-  List<ResourceView>? get views {
+  Map<String, ResourceView>? get views {
     final value = _views;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return EqualUnmodifiableMapView(value);
   }
 
   @override
@@ -933,14 +1005,14 @@ class _$Artist extends Artist {
             String type,
             AlbumAttributes? attributes,
             AlbumRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
             ArtistRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         artist,
     required TResult Function(
             String id,
@@ -953,7 +1025,7 @@ class _$Artist extends Artist {
             String type,
             PlaylistAttributes? attributes,
             PlaylistRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         playlist,
     required TResult Function(String id, String type,
             SongAttributes? attributes, SongRelationships? relationships)
@@ -973,17 +1045,29 @@ class _$Artist extends Artist {
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes,
-            AlbumRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            Map<String, ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes,
-            ArtistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         artist,
     TResult Function(String id, String type, MusicVideoAttributes? attributes,
             MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes,
-            PlaylistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         playlist,
     TResult Function(String id, String type, SongAttributes? attributes,
             SongRelationships? relationships)?
@@ -1002,17 +1086,29 @@ class _$Artist extends Artist {
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes,
-            AlbumRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            Map<String, ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes,
-            ArtistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         artist,
     TResult Function(String id, String type, MusicVideoAttributes? attributes,
             MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes,
-            PlaylistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         playlist,
     TResult Function(String id, String type, SongAttributes? attributes,
             SongRelationships? relationships)?
@@ -1086,7 +1182,7 @@ abstract class Artist extends Resource {
       required final String type,
       required final ArtistAttributes? attributes,
       required final ArtistRelationships? relationships,
-      required final List<ResourceView>? views}) = _$Artist;
+      required final Map<String, ResourceView>? views}) = _$Artist;
   const Artist._() : super._();
 
   @override
@@ -1095,7 +1191,7 @@ abstract class Artist extends Resource {
   String get type => throw _privateConstructorUsedError;
   ArtistAttributes? get attributes => throw _privateConstructorUsedError;
   ArtistRelationships? get relationships => throw _privateConstructorUsedError;
-  List<ResourceView>? get views => throw _privateConstructorUsedError;
+  Map<String, ResourceView>? get views => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$ArtistCopyWith<_$Artist> get copyWith =>
@@ -1239,14 +1335,14 @@ class _$MusicVideo extends MusicVideo {
             String type,
             AlbumAttributes? attributes,
             AlbumRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
             ArtistRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         artist,
     required TResult Function(
             String id,
@@ -1259,7 +1355,7 @@ class _$MusicVideo extends MusicVideo {
             String type,
             PlaylistAttributes? attributes,
             PlaylistRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         playlist,
     required TResult Function(String id, String type,
             SongAttributes? attributes, SongRelationships? relationships)
@@ -1279,17 +1375,29 @@ class _$MusicVideo extends MusicVideo {
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes,
-            AlbumRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            Map<String, ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes,
-            ArtistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         artist,
     TResult Function(String id, String type, MusicVideoAttributes? attributes,
             MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes,
-            PlaylistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         playlist,
     TResult Function(String id, String type, SongAttributes? attributes,
             SongRelationships? relationships)?
@@ -1308,17 +1416,29 @@ class _$MusicVideo extends MusicVideo {
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes,
-            AlbumRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            Map<String, ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes,
-            ArtistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         artist,
     TResult Function(String id, String type, MusicVideoAttributes? attributes,
             MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes,
-            PlaylistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         playlist,
     TResult Function(String id, String type, SongAttributes? attributes,
             SongRelationships? relationships)?
@@ -1418,7 +1538,7 @@ abstract class _$$PlaylistCopyWith<$Res> implements $ResourceCopyWith<$Res> {
       String type,
       PlaylistAttributes? attributes,
       PlaylistRelationships? relationships,
-      List<ResourceView>? views});
+      Map<String, ResourceView>? views});
 
   $PlaylistAttributesCopyWith<$Res>? get attributes;
   $PlaylistRelationshipsCopyWith<$Res>? get relationships;
@@ -1461,7 +1581,7 @@ class __$$PlaylistCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
       views: views == freezed
           ? _value._views
           : views // ignore: cast_nullable_to_non_nullable
-              as List<ResourceView>?,
+              as Map<String, ResourceView>?,
     ));
   }
 
@@ -1496,7 +1616,7 @@ class _$Playlist extends Playlist {
       required this.type,
       required this.attributes,
       required this.relationships,
-      required final List<ResourceView>? views})
+      required final Map<String, ResourceView>? views})
       : _views = views,
         super._();
 
@@ -1508,13 +1628,13 @@ class _$Playlist extends Playlist {
   final PlaylistAttributes? attributes;
   @override
   final PlaylistRelationships? relationships;
-  final List<ResourceView>? _views;
+  final Map<String, ResourceView>? _views;
   @override
-  List<ResourceView>? get views {
+  Map<String, ResourceView>? get views {
     final value = _views;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
+    return EqualUnmodifiableMapView(value);
   }
 
   @override
@@ -1560,14 +1680,14 @@ class _$Playlist extends Playlist {
             String type,
             AlbumAttributes? attributes,
             AlbumRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
             ArtistRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         artist,
     required TResult Function(
             String id,
@@ -1580,7 +1700,7 @@ class _$Playlist extends Playlist {
             String type,
             PlaylistAttributes? attributes,
             PlaylistRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         playlist,
     required TResult Function(String id, String type,
             SongAttributes? attributes, SongRelationships? relationships)
@@ -1600,17 +1720,29 @@ class _$Playlist extends Playlist {
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes,
-            AlbumRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            Map<String, ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes,
-            ArtistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         artist,
     TResult Function(String id, String type, MusicVideoAttributes? attributes,
             MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes,
-            PlaylistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         playlist,
     TResult Function(String id, String type, SongAttributes? attributes,
             SongRelationships? relationships)?
@@ -1629,17 +1761,29 @@ class _$Playlist extends Playlist {
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes,
-            AlbumRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            Map<String, ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes,
-            ArtistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         artist,
     TResult Function(String id, String type, MusicVideoAttributes? attributes,
             MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes,
-            PlaylistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         playlist,
     TResult Function(String id, String type, SongAttributes? attributes,
             SongRelationships? relationships)?
@@ -1713,7 +1857,7 @@ abstract class Playlist extends Resource {
       required final String type,
       required final PlaylistAttributes? attributes,
       required final PlaylistRelationships? relationships,
-      required final List<ResourceView>? views}) = _$Playlist;
+      required final Map<String, ResourceView>? views}) = _$Playlist;
   const Playlist._() : super._();
 
   @override
@@ -1723,7 +1867,7 @@ abstract class Playlist extends Resource {
   PlaylistAttributes? get attributes => throw _privateConstructorUsedError;
   PlaylistRelationships? get relationships =>
       throw _privateConstructorUsedError;
-  List<ResourceView>? get views => throw _privateConstructorUsedError;
+  Map<String, ResourceView>? get views => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$PlaylistCopyWith<_$Playlist> get copyWith =>
@@ -1864,14 +2008,14 @@ class _$Song extends Song {
             String type,
             AlbumAttributes? attributes,
             AlbumRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
             ArtistRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         artist,
     required TResult Function(
             String id,
@@ -1884,7 +2028,7 @@ class _$Song extends Song {
             String type,
             PlaylistAttributes? attributes,
             PlaylistRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         playlist,
     required TResult Function(String id, String type,
             SongAttributes? attributes, SongRelationships? relationships)
@@ -1904,17 +2048,29 @@ class _$Song extends Song {
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes,
-            AlbumRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            Map<String, ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes,
-            ArtistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         artist,
     TResult Function(String id, String type, MusicVideoAttributes? attributes,
             MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes,
-            PlaylistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         playlist,
     TResult Function(String id, String type, SongAttributes? attributes,
             SongRelationships? relationships)?
@@ -1933,17 +2089,29 @@ class _$Song extends Song {
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes,
-            AlbumRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            Map<String, ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes,
-            ArtistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         artist,
     TResult Function(String id, String type, MusicVideoAttributes? attributes,
             MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes,
-            PlaylistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         playlist,
     TResult Function(String id, String type, SongAttributes? attributes,
             SongRelationships? relationships)?
@@ -2135,14 +2303,14 @@ class _$Station extends Station {
             String type,
             AlbumAttributes? attributes,
             AlbumRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
             ArtistRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         artist,
     required TResult Function(
             String id,
@@ -2155,7 +2323,7 @@ class _$Station extends Station {
             String type,
             PlaylistAttributes? attributes,
             PlaylistRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         playlist,
     required TResult Function(String id, String type,
             SongAttributes? attributes, SongRelationships? relationships)
@@ -2175,17 +2343,29 @@ class _$Station extends Station {
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes,
-            AlbumRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            Map<String, ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes,
-            ArtistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         artist,
     TResult Function(String id, String type, MusicVideoAttributes? attributes,
             MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes,
-            PlaylistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         playlist,
     TResult Function(String id, String type, SongAttributes? attributes,
             SongRelationships? relationships)?
@@ -2204,17 +2384,29 @@ class _$Station extends Station {
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes,
-            AlbumRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            Map<String, ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes,
-            ArtistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         artist,
     TResult Function(String id, String type, MusicVideoAttributes? attributes,
             MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes,
-            PlaylistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         playlist,
     TResult Function(String id, String type, SongAttributes? attributes,
             SongRelationships? relationships)?
@@ -2434,14 +2626,14 @@ class _$Curator extends Curator {
             String type,
             AlbumAttributes? attributes,
             AlbumRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
             ArtistRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         artist,
     required TResult Function(
             String id,
@@ -2454,7 +2646,7 @@ class _$Curator extends Curator {
             String type,
             PlaylistAttributes? attributes,
             PlaylistRelationships? relationships,
-            List<ResourceView>? views)
+            Map<String, ResourceView>? views)
         playlist,
     required TResult Function(String id, String type,
             SongAttributes? attributes, SongRelationships? relationships)
@@ -2474,17 +2666,29 @@ class _$Curator extends Curator {
   TResult? whenOrNull<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes,
-            AlbumRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            Map<String, ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes,
-            ArtistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         artist,
     TResult Function(String id, String type, MusicVideoAttributes? attributes,
             MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes,
-            PlaylistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         playlist,
     TResult Function(String id, String type, SongAttributes? attributes,
             SongRelationships? relationships)?
@@ -2503,17 +2707,29 @@ class _$Curator extends Curator {
   TResult maybeWhen<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(String id, String type, AlbumAttributes? attributes,
-            AlbumRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            AlbumRelationships? relationships,
+            Map<String, ResourceView>? views)?
         album,
-    TResult Function(String id, String type, ArtistAttributes? attributes,
-            ArtistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            ArtistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         artist,
     TResult Function(String id, String type, MusicVideoAttributes? attributes,
             MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(String id, String type, PlaylistAttributes? attributes,
-            PlaylistRelationships? relationships, List<ResourceView>? views)?
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            PlaylistRelationships? relationships,
+            Map<String, ResourceView>? views)?
         playlist,
     TResult Function(String id, String type, SongAttributes? attributes,
             SongRelationships? relationships)?

@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:misica/src/music/core/domain/resource_view.dart';
-import 'package:misica/src/music/core/shared/converters.dart';
+import 'package:misica/src/music/core/shared/json_converters.dart';
 import 'package:misica/src/music/core/shared/dtos_to_domains.dart';
 
 import 'resource_dto.dart';
@@ -40,10 +40,19 @@ class ResourceViewAttributesDTO with _$ResourceViewAttributesDTO {
 }
 
 extension ResourceViewDTOListToDomainList on Map<String, ResourceViewDTO> {
-  List<ResourceView> toDomain() {
-    return values
-        .map((e) => e.toDomain())
-        .where((element) => element.data.isNotEmpty)
-        .toList();
+  Map<String, ResourceView> toDomain({List<String>? order}) {
+    final viewsOrder = order ?? keys;
+
+    final views = <String, ResourceView>{};
+    for (var key in viewsOrder) {
+      final value = this[key];
+      if (value != null) {
+        if (value.data.isNotEmpty) {
+          views[key] = value.toDomain();
+        }
+      }
+    }
+
+    return views;
   }
 }
