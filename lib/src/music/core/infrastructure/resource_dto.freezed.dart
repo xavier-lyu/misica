@@ -3546,7 +3546,8 @@ ResourceMetaDTO _$ResourceMetaDTOFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ResourceMetaDTO {
-  ResourceMetaViewsDTO? get views => throw _privateConstructorUsedError;
+  ResourceMetaOrderDTO? get views => throw _privateConstructorUsedError;
+  ResourceMetaOrderDTO? get results => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -3559,9 +3560,10 @@ abstract class $ResourceMetaDTOCopyWith<$Res> {
   factory $ResourceMetaDTOCopyWith(
           ResourceMetaDTO value, $Res Function(ResourceMetaDTO) then) =
       _$ResourceMetaDTOCopyWithImpl<$Res>;
-  $Res call({ResourceMetaViewsDTO? views});
+  $Res call({ResourceMetaOrderDTO? views, ResourceMetaOrderDTO? results});
 
-  $ResourceMetaViewsDTOCopyWith<$Res>? get views;
+  $ResourceMetaOrderDTOCopyWith<$Res>? get views;
+  $ResourceMetaOrderDTOCopyWith<$Res>? get results;
 }
 
 /// @nodoc
@@ -3576,23 +3578,39 @@ class _$ResourceMetaDTOCopyWithImpl<$Res>
   @override
   $Res call({
     Object? views = freezed,
+    Object? results = freezed,
   }) {
     return _then(_value.copyWith(
       views: views == freezed
           ? _value.views
           : views // ignore: cast_nullable_to_non_nullable
-              as ResourceMetaViewsDTO?,
+              as ResourceMetaOrderDTO?,
+      results: results == freezed
+          ? _value.results
+          : results // ignore: cast_nullable_to_non_nullable
+              as ResourceMetaOrderDTO?,
     ));
   }
 
   @override
-  $ResourceMetaViewsDTOCopyWith<$Res>? get views {
+  $ResourceMetaOrderDTOCopyWith<$Res>? get views {
     if (_value.views == null) {
       return null;
     }
 
-    return $ResourceMetaViewsDTOCopyWith<$Res>(_value.views!, (value) {
+    return $ResourceMetaOrderDTOCopyWith<$Res>(_value.views!, (value) {
       return _then(_value.copyWith(views: value));
+    });
+  }
+
+  @override
+  $ResourceMetaOrderDTOCopyWith<$Res>? get results {
+    if (_value.results == null) {
+      return null;
+    }
+
+    return $ResourceMetaOrderDTOCopyWith<$Res>(_value.results!, (value) {
+      return _then(_value.copyWith(results: value));
     });
   }
 }
@@ -3604,10 +3622,12 @@ abstract class _$$_ResourceMetaCopyWith<$Res>
           _$_ResourceMeta value, $Res Function(_$_ResourceMeta) then) =
       __$$_ResourceMetaCopyWithImpl<$Res>;
   @override
-  $Res call({ResourceMetaViewsDTO? views});
+  $Res call({ResourceMetaOrderDTO? views, ResourceMetaOrderDTO? results});
 
   @override
-  $ResourceMetaViewsDTOCopyWith<$Res>? get views;
+  $ResourceMetaOrderDTOCopyWith<$Res>? get views;
+  @override
+  $ResourceMetaOrderDTOCopyWith<$Res>? get results;
 }
 
 /// @nodoc
@@ -3624,12 +3644,17 @@ class __$$_ResourceMetaCopyWithImpl<$Res>
   @override
   $Res call({
     Object? views = freezed,
+    Object? results = freezed,
   }) {
     return _then(_$_ResourceMeta(
       views: views == freezed
           ? _value.views
           : views // ignore: cast_nullable_to_non_nullable
-              as ResourceMetaViewsDTO?,
+              as ResourceMetaOrderDTO?,
+      results: results == freezed
+          ? _value.results
+          : results // ignore: cast_nullable_to_non_nullable
+              as ResourceMetaOrderDTO?,
     ));
   }
 }
@@ -3637,17 +3662,19 @@ class __$$_ResourceMetaCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ResourceMeta extends _ResourceMeta {
-  const _$_ResourceMeta({this.views}) : super._();
+  const _$_ResourceMeta({this.views, this.results}) : super._();
 
   factory _$_ResourceMeta.fromJson(Map<String, dynamic> json) =>
       _$$_ResourceMetaFromJson(json);
 
   @override
-  final ResourceMetaViewsDTO? views;
+  final ResourceMetaOrderDTO? views;
+  @override
+  final ResourceMetaOrderDTO? results;
 
   @override
   String toString() {
-    return 'ResourceMetaDTO(views: $views)';
+    return 'ResourceMetaDTO(views: $views, results: $results)';
   }
 
   @override
@@ -3655,13 +3682,16 @@ class _$_ResourceMeta extends _ResourceMeta {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ResourceMeta &&
-            const DeepCollectionEquality().equals(other.views, views));
+            const DeepCollectionEquality().equals(other.views, views) &&
+            const DeepCollectionEquality().equals(other.results, results));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(views));
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(views),
+      const DeepCollectionEquality().hash(results));
 
   @JsonKey(ignore: true)
   @override
@@ -3675,51 +3705,54 @@ class _$_ResourceMeta extends _ResourceMeta {
 }
 
 abstract class _ResourceMeta extends ResourceMetaDTO {
-  const factory _ResourceMeta({final ResourceMetaViewsDTO? views}) =
-      _$_ResourceMeta;
+  const factory _ResourceMeta(
+      {final ResourceMetaOrderDTO? views,
+      final ResourceMetaOrderDTO? results}) = _$_ResourceMeta;
   const _ResourceMeta._() : super._();
 
   factory _ResourceMeta.fromJson(Map<String, dynamic> json) =
       _$_ResourceMeta.fromJson;
 
   @override
-  ResourceMetaViewsDTO? get views => throw _privateConstructorUsedError;
+  ResourceMetaOrderDTO? get views => throw _privateConstructorUsedError;
+  @override
+  ResourceMetaOrderDTO? get results => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_ResourceMetaCopyWith<_$_ResourceMeta> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-ResourceMetaViewsDTO _$ResourceMetaViewsDTOFromJson(Map<String, dynamic> json) {
-  return _ResourceMetaViewsDTO.fromJson(json);
+ResourceMetaOrderDTO _$ResourceMetaOrderDTOFromJson(Map<String, dynamic> json) {
+  return _ResourceMetaOrderDTO.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ResourceMetaViewsDTO {
+mixin _$ResourceMetaOrderDTO {
   List<String>? get order => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ResourceMetaViewsDTOCopyWith<ResourceMetaViewsDTO> get copyWith =>
+  $ResourceMetaOrderDTOCopyWith<ResourceMetaOrderDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ResourceMetaViewsDTOCopyWith<$Res> {
-  factory $ResourceMetaViewsDTOCopyWith(ResourceMetaViewsDTO value,
-          $Res Function(ResourceMetaViewsDTO) then) =
-      _$ResourceMetaViewsDTOCopyWithImpl<$Res>;
+abstract class $ResourceMetaOrderDTOCopyWith<$Res> {
+  factory $ResourceMetaOrderDTOCopyWith(ResourceMetaOrderDTO value,
+          $Res Function(ResourceMetaOrderDTO) then) =
+      _$ResourceMetaOrderDTOCopyWithImpl<$Res>;
   $Res call({List<String>? order});
 }
 
 /// @nodoc
-class _$ResourceMetaViewsDTOCopyWithImpl<$Res>
-    implements $ResourceMetaViewsDTOCopyWith<$Res> {
-  _$ResourceMetaViewsDTOCopyWithImpl(this._value, this._then);
+class _$ResourceMetaOrderDTOCopyWithImpl<$Res>
+    implements $ResourceMetaOrderDTOCopyWith<$Res> {
+  _$ResourceMetaOrderDTOCopyWithImpl(this._value, this._then);
 
-  final ResourceMetaViewsDTO _value;
+  final ResourceMetaOrderDTO _value;
   // ignore: unused_field
-  final $Res Function(ResourceMetaViewsDTO) _then;
+  final $Res Function(ResourceMetaOrderDTO) _then;
 
   @override
   $Res call({
@@ -3735,31 +3768,31 @@ class _$ResourceMetaViewsDTOCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$$_ResourceMetaViewsDTOCopyWith<$Res>
-    implements $ResourceMetaViewsDTOCopyWith<$Res> {
-  factory _$$_ResourceMetaViewsDTOCopyWith(_$_ResourceMetaViewsDTO value,
-          $Res Function(_$_ResourceMetaViewsDTO) then) =
-      __$$_ResourceMetaViewsDTOCopyWithImpl<$Res>;
+abstract class _$$_ResourceMetaOrderDTOCopyWith<$Res>
+    implements $ResourceMetaOrderDTOCopyWith<$Res> {
+  factory _$$_ResourceMetaOrderDTOCopyWith(_$_ResourceMetaOrderDTO value,
+          $Res Function(_$_ResourceMetaOrderDTO) then) =
+      __$$_ResourceMetaOrderDTOCopyWithImpl<$Res>;
   @override
   $Res call({List<String>? order});
 }
 
 /// @nodoc
-class __$$_ResourceMetaViewsDTOCopyWithImpl<$Res>
-    extends _$ResourceMetaViewsDTOCopyWithImpl<$Res>
-    implements _$$_ResourceMetaViewsDTOCopyWith<$Res> {
-  __$$_ResourceMetaViewsDTOCopyWithImpl(_$_ResourceMetaViewsDTO _value,
-      $Res Function(_$_ResourceMetaViewsDTO) _then)
-      : super(_value, (v) => _then(v as _$_ResourceMetaViewsDTO));
+class __$$_ResourceMetaOrderDTOCopyWithImpl<$Res>
+    extends _$ResourceMetaOrderDTOCopyWithImpl<$Res>
+    implements _$$_ResourceMetaOrderDTOCopyWith<$Res> {
+  __$$_ResourceMetaOrderDTOCopyWithImpl(_$_ResourceMetaOrderDTO _value,
+      $Res Function(_$_ResourceMetaOrderDTO) _then)
+      : super(_value, (v) => _then(v as _$_ResourceMetaOrderDTO));
 
   @override
-  _$_ResourceMetaViewsDTO get _value => super._value as _$_ResourceMetaViewsDTO;
+  _$_ResourceMetaOrderDTO get _value => super._value as _$_ResourceMetaOrderDTO;
 
   @override
   $Res call({
     Object? order = freezed,
   }) {
-    return _then(_$_ResourceMetaViewsDTO(
+    return _then(_$_ResourceMetaOrderDTO(
       order: order == freezed
           ? _value._order
           : order // ignore: cast_nullable_to_non_nullable
@@ -3770,13 +3803,13 @@ class __$$_ResourceMetaViewsDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResourceMetaViewsDTO extends _ResourceMetaViewsDTO {
-  const _$_ResourceMetaViewsDTO({final List<String>? order})
+class _$_ResourceMetaOrderDTO extends _ResourceMetaOrderDTO {
+  const _$_ResourceMetaOrderDTO({final List<String>? order})
       : _order = order,
         super._();
 
-  factory _$_ResourceMetaViewsDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_ResourceMetaViewsDTOFromJson(json);
+  factory _$_ResourceMetaOrderDTO.fromJson(Map<String, dynamic> json) =>
+      _$$_ResourceMetaOrderDTOFromJson(json);
 
   final List<String>? _order;
   @override
@@ -3789,14 +3822,14 @@ class _$_ResourceMetaViewsDTO extends _ResourceMetaViewsDTO {
 
   @override
   String toString() {
-    return 'ResourceMetaViewsDTO(order: $order)';
+    return 'ResourceMetaOrderDTO(order: $order)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResourceMetaViewsDTO &&
+            other is _$_ResourceMetaOrderDTO &&
             const DeepCollectionEquality().equals(other._order, _order));
   }
 
@@ -3807,28 +3840,28 @@ class _$_ResourceMetaViewsDTO extends _ResourceMetaViewsDTO {
 
   @JsonKey(ignore: true)
   @override
-  _$$_ResourceMetaViewsDTOCopyWith<_$_ResourceMetaViewsDTO> get copyWith =>
-      __$$_ResourceMetaViewsDTOCopyWithImpl<_$_ResourceMetaViewsDTO>(
+  _$$_ResourceMetaOrderDTOCopyWith<_$_ResourceMetaOrderDTO> get copyWith =>
+      __$$_ResourceMetaOrderDTOCopyWithImpl<_$_ResourceMetaOrderDTO>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResourceMetaViewsDTOToJson(this);
+    return _$$_ResourceMetaOrderDTOToJson(this);
   }
 }
 
-abstract class _ResourceMetaViewsDTO extends ResourceMetaViewsDTO {
-  const factory _ResourceMetaViewsDTO({final List<String>? order}) =
-      _$_ResourceMetaViewsDTO;
-  const _ResourceMetaViewsDTO._() : super._();
+abstract class _ResourceMetaOrderDTO extends ResourceMetaOrderDTO {
+  const factory _ResourceMetaOrderDTO({final List<String>? order}) =
+      _$_ResourceMetaOrderDTO;
+  const _ResourceMetaOrderDTO._() : super._();
 
-  factory _ResourceMetaViewsDTO.fromJson(Map<String, dynamic> json) =
-      _$_ResourceMetaViewsDTO.fromJson;
+  factory _ResourceMetaOrderDTO.fromJson(Map<String, dynamic> json) =
+      _$_ResourceMetaOrderDTO.fromJson;
 
   @override
   List<String>? get order => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$$_ResourceMetaViewsDTOCopyWith<_$_ResourceMetaViewsDTO> get copyWith =>
+  _$$_ResourceMetaOrderDTOCopyWith<_$_ResourceMetaOrderDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }

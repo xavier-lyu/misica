@@ -104,7 +104,7 @@ class SongAttributes with _$SongAttributes {
   const SongAttributes._();
 
   const factory SongAttributes({
-    required String albumName,
+    required String? albumName,
     required String? artistUrl,
     required String artistName,
     required Artwork? artwork,

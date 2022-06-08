@@ -153,7 +153,7 @@ class PlaylistAttributesDTO with _$PlaylistAttributesDTO {
 class SongAttributesDTO with _$SongAttributesDTO {
   const SongAttributesDTO._();
   const factory SongAttributesDTO({
-    required String albumName,
+    String? albumName,
     String? artistUrl,
     String? attribution,
     required String artistName,

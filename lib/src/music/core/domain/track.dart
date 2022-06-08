@@ -11,6 +11,16 @@ class Track with _$Track {
   const factory Track.song(Song value) = TrackSong;
   const factory Track.musicVideo(MusicVideo value) = TrackMusicVideo;
 
+  String get id => when(
+        song: (song) => song.id,
+        musicVideo: (musicVideo) => musicVideo.id,
+      );
+
+  String get type => when(
+        song: (song) => song.type,
+        musicVideo: (musicVideo) => musicVideo.type,
+      );
+
   int get durationInMillis =>
       when(
         song: (song) => song.attributes?.durationInMillis,

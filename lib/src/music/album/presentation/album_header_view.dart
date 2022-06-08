@@ -64,10 +64,14 @@ class AlbumHeaderView extends ConsumerWidget {
             ),
           ),
         Row(
-          children: const [
-            Flexible(child: PlayButton()),
-            SizedBox(width: 15),
-            Flexible(child: ShuffleButton())
+          children: [
+            Flexible(
+                child: PlayButton(
+              kind: album.type,
+              item: album,
+            )),
+            const SizedBox(width: 15),
+            const Flexible(child: ShuffleButton())
           ],
         )
       ],

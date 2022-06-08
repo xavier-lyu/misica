@@ -1559,7 +1559,7 @@ SongAttributes _$SongAttributesFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SongAttributes {
-  String get albumName => throw _privateConstructorUsedError;
+  String? get albumName => throw _privateConstructorUsedError;
   String? get artistUrl => throw _privateConstructorUsedError;
   String get artistName => throw _privateConstructorUsedError;
   Artwork? get artwork => throw _privateConstructorUsedError;
@@ -1584,7 +1584,7 @@ abstract class $SongAttributesCopyWith<$Res> {
           SongAttributes value, $Res Function(SongAttributes) then) =
       _$SongAttributesCopyWithImpl<$Res>;
   $Res call(
-      {String albumName,
+      {String? albumName,
       String? artistUrl,
       String artistName,
       Artwork? artwork,
@@ -1627,7 +1627,7 @@ class _$SongAttributesCopyWithImpl<$Res>
       albumName: albumName == freezed
           ? _value.albumName
           : albumName // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       artistUrl: artistUrl == freezed
           ? _value.artistUrl
           : artistUrl // ignore: cast_nullable_to_non_nullable
@@ -1702,7 +1702,7 @@ abstract class _$$_SongAttributesCopyWith<$Res>
       __$$_SongAttributesCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String albumName,
+      {String? albumName,
       String? artistUrl,
       String artistName,
       Artwork? artwork,
@@ -1749,7 +1749,7 @@ class __$$_SongAttributesCopyWithImpl<$Res>
       albumName: albumName == freezed
           ? _value.albumName
           : albumName // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       artistUrl: artistUrl == freezed
           ? _value.artistUrl
           : artistUrl // ignore: cast_nullable_to_non_nullable
@@ -1816,7 +1816,7 @@ class _$_SongAttributes extends _SongAttributes {
       _$$_SongAttributesFromJson(json);
 
   @override
-  final String albumName;
+  final String? albumName;
   @override
   final String? artistUrl;
   @override
@@ -1902,7 +1902,7 @@ class _$_SongAttributes extends _SongAttributes {
 
 abstract class _SongAttributes extends SongAttributes {
   const factory _SongAttributes(
-      {required final String albumName,
+      {required final String? albumName,
       required final String? artistUrl,
       required final String artistName,
       required final Artwork? artwork,
@@ -1919,7 +1919,7 @@ abstract class _SongAttributes extends SongAttributes {
       _$_SongAttributes.fromJson;
 
   @override
-  String get albumName => throw _privateConstructorUsedError;
+  String? get albumName => throw _privateConstructorUsedError;
   @override
   String? get artistUrl => throw _privateConstructorUsedError;
   @override

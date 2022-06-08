@@ -56,10 +56,14 @@ class PlaylistHeaderView extends ConsumerWidget {
             ),
           ),
         Row(
-          children: const [
-            Flexible(child: PlayButton()),
-            SizedBox(width: 15),
-            Flexible(child: ShuffleButton())
+          children: [
+            Flexible(
+                child: PlayButton(
+              kind: playlist.type,
+              item: playlist,
+            )),
+            const SizedBox(width: 15),
+            const Flexible(child: ShuffleButton())
           ],
         )
       ],

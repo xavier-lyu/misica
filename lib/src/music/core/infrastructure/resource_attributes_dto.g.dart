@@ -187,7 +187,7 @@ Map<String, dynamic> _$$_PlaylistAttributesDTOToJson(
 
 _$_SongAttributesDTO _$$_SongAttributesDTOFromJson(Map json) =>
     _$_SongAttributesDTO(
-      albumName: json['albumName'] as String,
+      albumName: json['albumName'] as String?,
       artistUrl: json['artistUrl'] as String?,
       attribution: json['attribution'] as String?,
       artistName: json['artistName'] as String,

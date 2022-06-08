@@ -142,7 +142,8 @@ class ResourceDTO with _$ResourceDTO {
 class ResourceMetaDTO with _$ResourceMetaDTO {
   const ResourceMetaDTO._();
   const factory ResourceMetaDTO({
-    ResourceMetaViewsDTO? views,
+    ResourceMetaOrderDTO? views,
+    ResourceMetaOrderDTO? results,
   }) = _ResourceMeta;
 
   factory ResourceMetaDTO.fromJson(Map<String, dynamic> json) =>
@@ -150,12 +151,12 @@ class ResourceMetaDTO with _$ResourceMetaDTO {
 }
 
 @freezed
-class ResourceMetaViewsDTO with _$ResourceMetaViewsDTO {
-  const ResourceMetaViewsDTO._();
-  const factory ResourceMetaViewsDTO({
+class ResourceMetaOrderDTO with _$ResourceMetaOrderDTO {
+  const ResourceMetaOrderDTO._();
+  const factory ResourceMetaOrderDTO({
     List<String>? order,
-  }) = _ResourceMetaViewsDTO;
+  }) = _ResourceMetaOrderDTO;
 
-  factory ResourceMetaViewsDTO.fromJson(Map<String, dynamic> json) =>
-      _$ResourceMetaViewsDTOFromJson(json);
+  factory ResourceMetaOrderDTO.fromJson(Map<String, dynamic> json) =>
+      _$ResourceMetaOrderDTOFromJson(json);
 }

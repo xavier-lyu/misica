@@ -1,3 +1,9 @@
+# Resource
+
+## toJson
+
+transform an playable item to json object as parameter of `setQueue`
+
 ## Album
 
 ### relationships

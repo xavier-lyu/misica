@@ -153,7 +153,7 @@ Map<String, dynamic> _$$_PlaylistAttributesToJson(
     };
 
 _$_SongAttributes _$$_SongAttributesFromJson(Map json) => _$_SongAttributes(
-      albumName: json['albumName'] as String,
+      albumName: json['albumName'] as String?,
       artistUrl: json['artistUrl'] as String?,
       artistName: json['artistName'] as String,
       artwork: json['artwork'] == null

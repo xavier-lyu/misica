@@ -1784,7 +1784,7 @@ SongAttributesDTO _$SongAttributesDTOFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SongAttributesDTO {
-  String get albumName => throw _privateConstructorUsedError;
+  String? get albumName => throw _privateConstructorUsedError;
   String? get artistUrl => throw _privateConstructorUsedError;
   String? get attribution => throw _privateConstructorUsedError;
   String get artistName => throw _privateConstructorUsedError;
@@ -1821,7 +1821,7 @@ abstract class $SongAttributesDTOCopyWith<$Res> {
           SongAttributesDTO value, $Res Function(SongAttributesDTO) then) =
       _$SongAttributesDTOCopyWithImpl<$Res>;
   $Res call(
-      {String albumName,
+      {String? albumName,
       String? artistUrl,
       String? attribution,
       String artistName,
@@ -1888,7 +1888,7 @@ class _$SongAttributesDTOCopyWithImpl<$Res>
       albumName: albumName == freezed
           ? _value.albumName
           : albumName // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       artistUrl: artistUrl == freezed
           ? _value.artistUrl
           : artistUrl // ignore: cast_nullable_to_non_nullable
@@ -2011,7 +2011,7 @@ abstract class _$$_SongAttributesDTOCopyWith<$Res>
       __$$_SongAttributesDTOCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String albumName,
+      {String? albumName,
       String? artistUrl,
       String? attribution,
       String artistName,
@@ -2082,7 +2082,7 @@ class __$$_SongAttributesDTOCopyWithImpl<$Res>
       albumName: albumName == freezed
           ? _value.albumName
           : albumName // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       artistUrl: artistUrl == freezed
           ? _value.artistUrl
           : artistUrl // ignore: cast_nullable_to_non_nullable
@@ -2179,7 +2179,7 @@ class __$$_SongAttributesDTOCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SongAttributesDTO extends _SongAttributesDTO {
   const _$_SongAttributesDTO(
-      {required this.albumName,
+      {this.albumName,
       this.artistUrl,
       this.attribution,
       required this.artistName,
@@ -2211,7 +2211,7 @@ class _$_SongAttributesDTO extends _SongAttributesDTO {
       _$$_SongAttributesDTOFromJson(json);
 
   @override
-  final String albumName;
+  final String? albumName;
   @override
   final String? artistUrl;
   @override
@@ -2370,7 +2370,7 @@ class _$_SongAttributesDTO extends _SongAttributesDTO {
 
 abstract class _SongAttributesDTO extends SongAttributesDTO {
   const factory _SongAttributesDTO(
-      {required final String albumName,
+      {final String? albumName,
       final String? artistUrl,
       final String? attribution,
       required final String artistName,
@@ -2399,7 +2399,7 @@ abstract class _SongAttributesDTO extends SongAttributesDTO {
       _$_SongAttributesDTO.fromJson;
 
   @override
-  String get albumName => throw _privateConstructorUsedError;
+  String? get albumName => throw _privateConstructorUsedError;
   @override
   String? get artistUrl => throw _privateConstructorUsedError;
   @override

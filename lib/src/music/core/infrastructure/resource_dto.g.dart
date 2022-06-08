@@ -239,23 +239,28 @@ Map<String, dynamic> _$$CuratorDTOToJson(_$CuratorDTO instance) =>
 _$_ResourceMeta _$$_ResourceMetaFromJson(Map json) => _$_ResourceMeta(
       views: json['views'] == null
           ? null
-          : ResourceMetaViewsDTO.fromJson(
+          : ResourceMetaOrderDTO.fromJson(
               Map<String, dynamic>.from(json['views'] as Map)),
+      results: json['results'] == null
+          ? null
+          : ResourceMetaOrderDTO.fromJson(
+              Map<String, dynamic>.from(json['results'] as Map)),
     );
 
 Map<String, dynamic> _$$_ResourceMetaToJson(_$_ResourceMeta instance) =>
     <String, dynamic>{
       'views': instance.views?.toJson(),
+      'results': instance.results?.toJson(),
     };
 
-_$_ResourceMetaViewsDTO _$$_ResourceMetaViewsDTOFromJson(Map json) =>
-    _$_ResourceMetaViewsDTO(
+_$_ResourceMetaOrderDTO _$$_ResourceMetaOrderDTOFromJson(Map json) =>
+    _$_ResourceMetaOrderDTO(
       order:
           (json['order'] as List<dynamic>?)?.map((e) => e as String).toList(),
     );
 
-Map<String, dynamic> _$$_ResourceMetaViewsDTOToJson(
-        _$_ResourceMetaViewsDTO instance) =>
+Map<String, dynamic> _$$_ResourceMetaOrderDTOToJson(
+        _$_ResourceMetaOrderDTO instance) =>
     <String, dynamic>{
       'order': instance.order,
     };

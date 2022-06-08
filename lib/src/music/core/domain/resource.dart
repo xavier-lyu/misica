@@ -6,6 +6,7 @@ import 'resource_attributes.dart';
 import 'resource_view.dart';
 
 part 'resource.freezed.dart';
+part 'resource.g.dart';
 
 @freezed
 class Resource with _$Resource {
@@ -14,44 +15,44 @@ class Resource with _$Resource {
     required String id,
     required String type,
     required ResourceAttributes? attributes,
-  }) = _Resource;
+  }) = ResourceRaw;
 
   const factory Resource.album({
     required String id,
     required String type,
     required AlbumAttributes? attributes,
-    required AlbumRelationships? relationships,
-    required Map<String, ResourceView>? views,
+    @JsonKey(ignore: true) AlbumRelationships? relationships,
+    @JsonKey(ignore: true) Map<String, ResourceView>? views,
   }) = Album;
 
   const factory Resource.artist({
     required String id,
     required String type,
     required ArtistAttributes? attributes,
-    required ArtistRelationships? relationships,
-    required Map<String, ResourceView>? views,
+    @JsonKey(ignore: true) ArtistRelationships? relationships,
+    @JsonKey(ignore: true) Map<String, ResourceView>? views,
   }) = Artist;
 
   const factory Resource.musicVideo({
     required String id,
     required String type,
     required MusicVideoAttributes? attributes,
-    required MusicVideoRelationships? relationships,
+    @JsonKey(ignore: true) MusicVideoRelationships? relationships,
   }) = MusicVideo;
 
   const factory Resource.playlist({
     required String id,
     required String type,
     required PlaylistAttributes? attributes,
-    required PlaylistRelationships? relationships,
-    required Map<String, ResourceView>? views,
+    @JsonKey(ignore: true) PlaylistRelationships? relationships,
+    @JsonKey(ignore: true) Map<String, ResourceView>? views,
   }) = Playlist;
 
   const factory Resource.song({
     required String id,
     required String type,
     required SongAttributes? attributes,
-    required SongRelationships? relationships,
+    @JsonKey(ignore: true) SongRelationships? relationships,
   }) = Song;
 
   const factory Resource.station({
@@ -64,8 +65,11 @@ class Resource with _$Resource {
     required String id,
     required String type,
     required CuratorAttributes? attributes,
-    required CuratorRelationships? relationships,
+    @JsonKey(ignore: true) CuratorRelationships? relationships,
   }) = Curator;
+
+  factory Resource.fromJson(Map<String, dynamic> json) =>
+      _$ResourceFromJson(json);
 
   Artwork? get artwork => map(
         (value) => value.attributes?.artwork,
