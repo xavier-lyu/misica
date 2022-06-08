@@ -17,7 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$AlbumRelationships {
   List<Artist>? get artists => throw _privateConstructorUsedError;
-  List<Song>? get tracks =>
+  List<Track>? get tracks =>
       throw _privateConstructorUsedError; // required List<RecordLabel>? recordLabels,
   List<Album>? get library => throw _privateConstructorUsedError;
   List<Album>? get catalog => throw _privateConstructorUsedError;
@@ -34,7 +34,7 @@ abstract class $AlbumRelationshipsCopyWith<$Res> {
       _$AlbumRelationshipsCopyWithImpl<$Res>;
   $Res call(
       {List<Artist>? artists,
-      List<Song>? tracks,
+      List<Track>? tracks,
       List<Album>? library,
       List<Album>? catalog});
 }
@@ -63,7 +63,7 @@ class _$AlbumRelationshipsCopyWithImpl<$Res>
       tracks: tracks == freezed
           ? _value.tracks
           : tracks // ignore: cast_nullable_to_non_nullable
-              as List<Song>?,
+              as List<Track>?,
       library: library == freezed
           ? _value.library
           : library // ignore: cast_nullable_to_non_nullable
@@ -85,7 +85,7 @@ abstract class _$$_AlbumRelationshipsCopyWith<$Res>
   @override
   $Res call(
       {List<Artist>? artists,
-      List<Song>? tracks,
+      List<Track>? tracks,
       List<Album>? library,
       List<Album>? catalog});
 }
@@ -116,7 +116,7 @@ class __$$_AlbumRelationshipsCopyWithImpl<$Res>
       tracks: tracks == freezed
           ? _value._tracks
           : tracks // ignore: cast_nullable_to_non_nullable
-              as List<Song>?,
+              as List<Track>?,
       library: library == freezed
           ? _value._library
           : library // ignore: cast_nullable_to_non_nullable
@@ -134,7 +134,7 @@ class __$$_AlbumRelationshipsCopyWithImpl<$Res>
 class _$_AlbumRelationships extends _AlbumRelationships {
   const _$_AlbumRelationships(
       {required final List<Artist>? artists,
-      required final List<Song>? tracks,
+      required final List<Track>? tracks,
       required final List<Album>? library,
       required final List<Album>? catalog})
       : _artists = artists,
@@ -152,9 +152,9 @@ class _$_AlbumRelationships extends _AlbumRelationships {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Song>? _tracks;
+  final List<Track>? _tracks;
   @override
-  List<Song>? get tracks {
+  List<Track>? get tracks {
     final value = _tracks;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -215,7 +215,7 @@ class _$_AlbumRelationships extends _AlbumRelationships {
 abstract class _AlbumRelationships extends AlbumRelationships {
   const factory _AlbumRelationships(
       {required final List<Artist>? artists,
-      required final List<Song>? tracks,
+      required final List<Track>? tracks,
       required final List<Album>? library,
       required final List<Album>? catalog}) = _$_AlbumRelationships;
   const _AlbumRelationships._() : super._();
@@ -223,7 +223,7 @@ abstract class _AlbumRelationships extends AlbumRelationships {
   @override
   List<Artist>? get artists => throw _privateConstructorUsedError;
   @override
-  List<Song>? get tracks => throw _privateConstructorUsedError;
+  List<Track>? get tracks => throw _privateConstructorUsedError;
   @override // required List<RecordLabel>? recordLabels,
   List<Album>? get library => throw _privateConstructorUsedError;
   @override
@@ -484,7 +484,7 @@ abstract class _ArtistRelationships extends ArtistRelationships {
 
 /// @nodoc
 mixin _$PlaylistRelationships {
-  List<Song>? get tracks => throw _privateConstructorUsedError;
+  List<Track>? get tracks => throw _privateConstructorUsedError;
   List<Curator>? get curator => throw _privateConstructorUsedError;
   List<Playlist>? get library => throw _privateConstructorUsedError;
   List<Playlist>? get catalog => throw _privateConstructorUsedError;
@@ -500,7 +500,7 @@ abstract class $PlaylistRelationshipsCopyWith<$Res> {
           $Res Function(PlaylistRelationships) then) =
       _$PlaylistRelationshipsCopyWithImpl<$Res>;
   $Res call(
-      {List<Song>? tracks,
+      {List<Track>? tracks,
       List<Curator>? curator,
       List<Playlist>? library,
       List<Playlist>? catalog});
@@ -526,7 +526,7 @@ class _$PlaylistRelationshipsCopyWithImpl<$Res>
       tracks: tracks == freezed
           ? _value.tracks
           : tracks // ignore: cast_nullable_to_non_nullable
-              as List<Song>?,
+              as List<Track>?,
       curator: curator == freezed
           ? _value.curator
           : curator // ignore: cast_nullable_to_non_nullable
@@ -551,7 +551,7 @@ abstract class _$$_PlaylistRelationshipsCopyWith<$Res>
       __$$_PlaylistRelationshipsCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<Song>? tracks,
+      {List<Track>? tracks,
       List<Curator>? curator,
       List<Playlist>? library,
       List<Playlist>? catalog});
@@ -580,7 +580,7 @@ class __$$_PlaylistRelationshipsCopyWithImpl<$Res>
       tracks: tracks == freezed
           ? _value._tracks
           : tracks // ignore: cast_nullable_to_non_nullable
-              as List<Song>?,
+              as List<Track>?,
       curator: curator == freezed
           ? _value._curator
           : curator // ignore: cast_nullable_to_non_nullable
@@ -601,7 +601,7 @@ class __$$_PlaylistRelationshipsCopyWithImpl<$Res>
 
 class _$_PlaylistRelationships extends _PlaylistRelationships {
   const _$_PlaylistRelationships(
-      {required final List<Song>? tracks,
+      {required final List<Track>? tracks,
       required final List<Curator>? curator,
       required final List<Playlist>? library,
       required final List<Playlist>? catalog})
@@ -611,9 +611,9 @@ class _$_PlaylistRelationships extends _PlaylistRelationships {
         _catalog = catalog,
         super._();
 
-  final List<Song>? _tracks;
+  final List<Track>? _tracks;
   @override
-  List<Song>? get tracks {
+  List<Track>? get tracks {
     final value = _tracks;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
@@ -680,14 +680,14 @@ class _$_PlaylistRelationships extends _PlaylistRelationships {
 
 abstract class _PlaylistRelationships extends PlaylistRelationships {
   const factory _PlaylistRelationships(
-      {required final List<Song>? tracks,
+      {required final List<Track>? tracks,
       required final List<Curator>? curator,
       required final List<Playlist>? library,
       required final List<Playlist>? catalog}) = _$_PlaylistRelationships;
   const _PlaylistRelationships._() : super._();
 
   @override
-  List<Song>? get tracks => throw _privateConstructorUsedError;
+  List<Track>? get tracks => throw _privateConstructorUsedError;
   @override
   List<Curator>? get curator => throw _privateConstructorUsedError;
   @override

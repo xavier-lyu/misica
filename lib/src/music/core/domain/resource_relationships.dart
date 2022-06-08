@@ -1,6 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 
+import 'track.dart';
+
 part 'resource_relationships.freezed.dart';
 
 @freezed
@@ -8,7 +10,7 @@ class AlbumRelationships with _$AlbumRelationships {
   const AlbumRelationships._();
   const factory AlbumRelationships({
     required List<Artist>? artists,
-    required List<Song>? tracks,
+    required List<Track>? tracks,
     // required List<RecordLabel>? recordLabels,
     required List<Album>? library,
     required List<Album>? catalog,
@@ -31,7 +33,7 @@ class ArtistRelationships with _$ArtistRelationships {
 class PlaylistRelationships with _$PlaylistRelationships {
   const PlaylistRelationships._();
   const factory PlaylistRelationships({
-    required List<Song>? tracks,
+    required List<Track>? tracks,
     required List<Curator>? curator,
     required List<Playlist>? library,
     required List<Playlist>? catalog,

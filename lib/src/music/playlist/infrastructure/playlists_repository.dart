@@ -4,6 +4,7 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:misica/src/music/core/domain/music_failure.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
+import 'package:misica/src/music/core/domain/track.dart';
 import 'package:misica/src/music/core/shared/dtos_to_domains.dart';
 
 import 'playlists_service.dart';
@@ -28,14 +29,14 @@ class PlaylistsRepository {
     }
   }
 
-  Future<Either<MusicFailure, List<Song>>> fetchCatalogPlaylistTracks(
+  Future<Either<MusicFailure, List<Track>>> fetchCatalogPlaylistTracks(
     String storefront,
     String id,
   ) async {
     try {
       final tracks =
           await _remoteService.fetchCatalogPlaylistTracks(storefront, id);
-      return right(tracks.data.toDomain<Song>());
+      return right(tracks.data.toDomainTracks());
     } on DioError catch (e) {
       return left(MusicFailure.api(e.response?.statusCode));
     }

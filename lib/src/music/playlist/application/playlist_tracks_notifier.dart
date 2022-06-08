@@ -1,9 +1,9 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:misica/src/music/core/domain/resource.dart';
+import 'package:misica/src/music/core/domain/track.dart';
 import 'package:misica/src/music/core/shared/providers.dart';
 import 'package:misica/src/music/playlist/infrastructure/playlists_repository.dart';
 
-class PlaylistTracksNotifier extends StateNotifier<AsyncValue<List<Song>>> {
+class PlaylistTracksNotifier extends StateNotifier<AsyncValue<List<Track>>> {
   PlaylistTracksNotifier(this._repository, this._read)
       : super(const AsyncLoading());
 

@@ -21,10 +21,10 @@ ResourceViewDTO _$ResourceViewDTOFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ResourceViewDTO {
   String get href => throw _privateConstructorUsedError;
-  @ResourceDTOConverter()
-  List<ResourceDTO> get data => throw _privateConstructorUsedError;
   ResourceViewAttributesDTO get attributes =>
       throw _privateConstructorUsedError;
+  @ResourceDTOConverter()
+  List<ResourceDTO> get data => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,8 +39,8 @@ abstract class $ResourceViewDTOCopyWith<$Res> {
       _$ResourceViewDTOCopyWithImpl<$Res>;
   $Res call(
       {String href,
-      @ResourceDTOConverter() List<ResourceDTO> data,
-      ResourceViewAttributesDTO attributes});
+      ResourceViewAttributesDTO attributes,
+      @ResourceDTOConverter() List<ResourceDTO> data});
 
   $ResourceViewAttributesDTOCopyWith<$Res> get attributes;
 }
@@ -57,22 +57,22 @@ class _$ResourceViewDTOCopyWithImpl<$Res>
   @override
   $Res call({
     Object? href = freezed,
-    Object? data = freezed,
     Object? attributes = freezed,
+    Object? data = freezed,
   }) {
     return _then(_value.copyWith(
       href: href == freezed
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String,
-      data: data == freezed
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<ResourceDTO>,
       attributes: attributes == freezed
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as ResourceViewAttributesDTO,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<ResourceDTO>,
     ));
   }
 
@@ -93,8 +93,8 @@ abstract class _$$_ResourceViewDTOCopyWith<$Res>
   @override
   $Res call(
       {String href,
-      @ResourceDTOConverter() List<ResourceDTO> data,
-      ResourceViewAttributesDTO attributes});
+      ResourceViewAttributesDTO attributes,
+      @ResourceDTOConverter() List<ResourceDTO> data});
 
   @override
   $ResourceViewAttributesDTOCopyWith<$Res> get attributes;
@@ -114,22 +114,22 @@ class __$$_ResourceViewDTOCopyWithImpl<$Res>
   @override
   $Res call({
     Object? href = freezed,
-    Object? data = freezed,
     Object? attributes = freezed,
+    Object? data = freezed,
   }) {
     return _then(_$_ResourceViewDTO(
       href: href == freezed
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String,
-      data: data == freezed
-          ? _value._data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<ResourceDTO>,
       attributes: attributes == freezed
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as ResourceViewAttributesDTO,
+      data: data == freezed
+          ? _value._data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<ResourceDTO>,
     ));
   }
 }
@@ -139,8 +139,8 @@ class __$$_ResourceViewDTOCopyWithImpl<$Res>
 class _$_ResourceViewDTO extends _ResourceViewDTO {
   const _$_ResourceViewDTO(
       {required this.href,
-      @ResourceDTOConverter() required final List<ResourceDTO> data,
-      required this.attributes})
+      required this.attributes,
+      @ResourceDTOConverter() required final List<ResourceDTO> data})
       : _data = data,
         super._();
 
@@ -149,6 +149,8 @@ class _$_ResourceViewDTO extends _ResourceViewDTO {
 
   @override
   final String href;
+  @override
+  final ResourceViewAttributesDTO attributes;
   final List<ResourceDTO> _data;
   @override
   @ResourceDTOConverter()
@@ -158,11 +160,8 @@ class _$_ResourceViewDTO extends _ResourceViewDTO {
   }
 
   @override
-  final ResourceViewAttributesDTO attributes;
-
-  @override
   String toString() {
-    return 'ResourceViewDTO(href: $href, data: $data, attributes: $attributes)';
+    return 'ResourceViewDTO(href: $href, attributes: $attributes, data: $data)';
   }
 
   @override
@@ -171,9 +170,9 @@ class _$_ResourceViewDTO extends _ResourceViewDTO {
         (other.runtimeType == runtimeType &&
             other is _$_ResourceViewDTO &&
             const DeepCollectionEquality().equals(other.href, href) &&
-            const DeepCollectionEquality().equals(other._data, _data) &&
             const DeepCollectionEquality()
-                .equals(other.attributes, attributes));
+                .equals(other.attributes, attributes) &&
+            const DeepCollectionEquality().equals(other._data, _data));
   }
 
   @JsonKey(ignore: true)
@@ -181,8 +180,8 @@ class _$_ResourceViewDTO extends _ResourceViewDTO {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(href),
-      const DeepCollectionEquality().hash(_data),
-      const DeepCollectionEquality().hash(attributes));
+      const DeepCollectionEquality().hash(attributes),
+      const DeepCollectionEquality().hash(_data));
 
   @JsonKey(ignore: true)
   @override
@@ -198,8 +197,8 @@ class _$_ResourceViewDTO extends _ResourceViewDTO {
 abstract class _ResourceViewDTO extends ResourceViewDTO {
   const factory _ResourceViewDTO(
           {required final String href,
-          @ResourceDTOConverter() required final List<ResourceDTO> data,
-          required final ResourceViewAttributesDTO attributes}) =
+          required final ResourceViewAttributesDTO attributes,
+          @ResourceDTOConverter() required final List<ResourceDTO> data}) =
       _$_ResourceViewDTO;
   const _ResourceViewDTO._() : super._();
 
@@ -209,11 +208,11 @@ abstract class _ResourceViewDTO extends ResourceViewDTO {
   @override
   String get href => throw _privateConstructorUsedError;
   @override
-  @ResourceDTOConverter()
-  List<ResourceDTO> get data => throw _privateConstructorUsedError;
-  @override
   ResourceViewAttributesDTO get attributes =>
       throw _privateConstructorUsedError;
+  @override
+  @ResourceDTOConverter()
+  List<ResourceDTO> get data => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_ResourceViewDTOCopyWith<_$_ResourceViewDTO> get copyWith =>

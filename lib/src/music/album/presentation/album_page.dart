@@ -5,11 +5,11 @@ import 'package:misica/src/music/core/domain/album.dart';
 import 'package:misica/src/music/album/shared/providers.dart';
 import 'package:misica/src/music/core/presentation/resource_views_list.dart';
 import 'package:misica/src/music/core/presentation/retry_widget.dart';
-import 'package:misica/src/music/core/presentation/songs_list.dart';
+import 'package:misica/src/music/core/presentation/tracks_list.dart';
 
 import 'album_footer.dart';
 import 'album_header_view.dart';
-import 'album_song_tile.dart';
+import 'album_track_tile.dart';
 
 class AlbumPage extends StatefulHookConsumerWidget {
   const AlbumPage({Key? key, required this.id}) : super(key: key);
@@ -78,9 +78,9 @@ class _AlbumPageState extends ConsumerState<AlbumPage> {
                   start: 20,
                   end: 20,
                 ),
-                sliver: SongsList(
-                  songs: album.songs,
-                  itemBuilder: (context, song) => AlbumSongTile(song: song),
+                sliver: TracksList(
+                  tracks: album.tracks,
+                  itemBuilder: (context, track) => AlbumTrackTile(track: track),
                 ),
               ),
               SliverPadding(

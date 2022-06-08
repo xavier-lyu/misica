@@ -1,16 +1,17 @@
 import 'package:misica/src/core/shared/iterable_extensions.dart';
-import 'package:misica/src/music/core/domain/resource.dart'
-    show Album, Artist, Song;
+import 'package:misica/src/music/core/domain/resource.dart' show Album, Artist;
 import 'package:misica/src/music/core/shared/formatters.dart';
+
+import 'track.dart';
 
 export 'package:misica/src/music/core/domain/resource.dart' show Album;
 
 extension AlbumExt on Album {
-  List<Song> get songs {
+  List<Track> get tracks {
     return relationships?.tracks ?? [];
   }
 
-  Duration get duration => durationOfSongs(songs);
+  Duration get duration => durationOfSongs(tracks);
 
   DateTime? get releaseDate => maybeMap(
         (value) => null,

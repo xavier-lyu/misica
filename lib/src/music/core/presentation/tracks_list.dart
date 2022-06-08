@@ -1,29 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:misica/src/music/core/domain/resource.dart';
+import 'package:misica/src/music/core/domain/track.dart';
 import 'package:misica/src/music/core/presentation/divider_widget.dart';
 
-typedef SongsListItemBuilder = Widget Function(BuildContext context, Song song);
+typedef TracksListItemBuilder = Widget Function(
+    BuildContext context, Track track);
 
-typedef SongsListFooterBuilder = Widget? Function(BuildContext context);
+typedef TracksListFooterBuilder = Widget? Function(BuildContext context);
 
-class SongsList extends StatelessWidget {
-  const SongsList({
+class TracksList extends StatelessWidget {
+  const TracksList({
     Key? key,
-    required this.songs,
+    required this.tracks,
     required this.itemBuilder,
     this.footerBuilder,
   }) : super(key: key);
 
-  final List<Song> songs;
-  final SongsListItemBuilder itemBuilder;
-  final SongsListFooterBuilder? footerBuilder;
+  final List<Track> tracks;
+  final TracksListItemBuilder itemBuilder;
+  final TracksListFooterBuilder? footerBuilder;
 
   @override
   Widget build(BuildContext context) {
     final footer = footerBuilder == null ? null : footerBuilder!(context);
     final hasFooter = footer != null;
 
-    final childCount = songs.length * 2 + (hasFooter ? 2 : 1);
+    final childCount = tracks.length * 2 + (hasFooter ? 2 : 1);
 
     return SliverList(
       delegate: SliverChildBuilderDelegate(
@@ -34,7 +35,7 @@ class SongsList extends StatelessWidget {
           }
 
           if (index.isOdd) {
-            return itemBuilder(context, songs[itemIndex]);
+            return itemBuilder(context, tracks[itemIndex]);
           }
 
           final isEdge =

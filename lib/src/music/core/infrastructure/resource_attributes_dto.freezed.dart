@@ -827,6 +827,8 @@ mixin _$MusicVideoAttributesDTO {
       throw _privateConstructorUsedError;
   DateTime? get releaseDate => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
+  int? get trackNumber => throw _privateConstructorUsedError;
+  String? get contentRating => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -853,7 +855,9 @@ abstract class $MusicVideoAttributesDTOCopyWith<$Res> {
       PlayParamsDTO? playParams,
       List<Map<String, dynamic>>? previews,
       DateTime? releaseDate,
-      String? url});
+      String? url,
+      int? trackNumber,
+      String? contentRating});
 
   $ArtworkDTOCopyWith<$Res>? get artwork;
   $EditorialNotesDTOCopyWith<$Res>? get editorialNotes;
@@ -885,6 +889,8 @@ class _$MusicVideoAttributesDTOCopyWithImpl<$Res>
     Object? previews = freezed,
     Object? releaseDate = freezed,
     Object? url = freezed,
+    Object? trackNumber = freezed,
+    Object? contentRating = freezed,
   }) {
     return _then(_value.copyWith(
       artistName: artistName == freezed
@@ -942,6 +948,14 @@ class _$MusicVideoAttributesDTOCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
+              as String?,
+      trackNumber: trackNumber == freezed
+          ? _value.trackNumber
+          : trackNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+      contentRating: contentRating == freezed
+          ? _value.contentRating
+          : contentRating // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -1001,7 +1015,9 @@ abstract class _$$_MusicVideoAttributesDTOCopyWith<$Res>
       PlayParamsDTO? playParams,
       List<Map<String, dynamic>>? previews,
       DateTime? releaseDate,
-      String? url});
+      String? url,
+      int? trackNumber,
+      String? contentRating});
 
   @override
   $ArtworkDTOCopyWith<$Res>? get artwork;
@@ -1039,6 +1055,8 @@ class __$$_MusicVideoAttributesDTOCopyWithImpl<$Res>
     Object? previews = freezed,
     Object? releaseDate = freezed,
     Object? url = freezed,
+    Object? trackNumber = freezed,
+    Object? contentRating = freezed,
   }) {
     return _then(_$_MusicVideoAttributesDTO(
       artistName: artistName == freezed
@@ -1097,6 +1115,14 @@ class __$$_MusicVideoAttributesDTOCopyWithImpl<$Res>
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
+      trackNumber: trackNumber == freezed
+          ? _value.trackNumber
+          : trackNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+      contentRating: contentRating == freezed
+          ? _value.contentRating
+          : contentRating // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -1118,7 +1144,9 @@ class _$_MusicVideoAttributesDTO extends _MusicVideoAttributesDTO {
       this.playParams,
       final List<Map<String, dynamic>>? previews,
       this.releaseDate,
-      this.url})
+      this.url,
+      this.trackNumber,
+      this.contentRating})
       : _genreNames = genreNames,
         _previews = previews,
         super._();
@@ -1168,10 +1196,14 @@ class _$_MusicVideoAttributesDTO extends _MusicVideoAttributesDTO {
   final DateTime? releaseDate;
   @override
   final String? url;
+  @override
+  final int? trackNumber;
+  @override
+  final String? contentRating;
 
   @override
   String toString() {
-    return 'MusicVideoAttributesDTO(artistName: $artistName, artistUrl: $artistUrl, artwork: $artwork, durationInMillis: $durationInMillis, editorialNotes: $editorialNotes, genreNames: $genreNames, has4K: $has4K, hasHDR: $hasHDR, isrc: $isrc, name: $name, playParams: $playParams, previews: $previews, releaseDate: $releaseDate, url: $url)';
+    return 'MusicVideoAttributesDTO(artistName: $artistName, artistUrl: $artistUrl, artwork: $artwork, durationInMillis: $durationInMillis, editorialNotes: $editorialNotes, genreNames: $genreNames, has4K: $has4K, hasHDR: $hasHDR, isrc: $isrc, name: $name, playParams: $playParams, previews: $previews, releaseDate: $releaseDate, url: $url, trackNumber: $trackNumber, contentRating: $contentRating)';
   }
 
   @override
@@ -1198,7 +1230,11 @@ class _$_MusicVideoAttributesDTO extends _MusicVideoAttributesDTO {
             const DeepCollectionEquality().equals(other._previews, _previews) &&
             const DeepCollectionEquality()
                 .equals(other.releaseDate, releaseDate) &&
-            const DeepCollectionEquality().equals(other.url, url));
+            const DeepCollectionEquality().equals(other.url, url) &&
+            const DeepCollectionEquality()
+                .equals(other.trackNumber, trackNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.contentRating, contentRating));
   }
 
   @JsonKey(ignore: true)
@@ -1218,7 +1254,9 @@ class _$_MusicVideoAttributesDTO extends _MusicVideoAttributesDTO {
       const DeepCollectionEquality().hash(playParams),
       const DeepCollectionEquality().hash(_previews),
       const DeepCollectionEquality().hash(releaseDate),
-      const DeepCollectionEquality().hash(url));
+      const DeepCollectionEquality().hash(url),
+      const DeepCollectionEquality().hash(trackNumber),
+      const DeepCollectionEquality().hash(contentRating));
 
   @JsonKey(ignore: true)
   @override
@@ -1248,7 +1286,9 @@ abstract class _MusicVideoAttributesDTO extends MusicVideoAttributesDTO {
       final PlayParamsDTO? playParams,
       final List<Map<String, dynamic>>? previews,
       final DateTime? releaseDate,
-      final String? url}) = _$_MusicVideoAttributesDTO;
+      final String? url,
+      final int? trackNumber,
+      final String? contentRating}) = _$_MusicVideoAttributesDTO;
   const _MusicVideoAttributesDTO._() : super._();
 
   factory _MusicVideoAttributesDTO.fromJson(Map<String, dynamic> json) =
@@ -1283,6 +1323,10 @@ abstract class _MusicVideoAttributesDTO extends MusicVideoAttributesDTO {
   DateTime? get releaseDate => throw _privateConstructorUsedError;
   @override
   String? get url => throw _privateConstructorUsedError;
+  @override
+  int? get trackNumber => throw _privateConstructorUsedError;
+  @override
+  String? get contentRating => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_MusicVideoAttributesDTOCopyWith<_$_MusicVideoAttributesDTO>

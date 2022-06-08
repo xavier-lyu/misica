@@ -37,7 +37,7 @@ class AlbumRelationshipsDTO with _$AlbumRelationshipsDTO {
   AlbumRelationships toDomain() {
     return AlbumRelationships(
       artists: artists?.data.toDomain(),
-      tracks: tracks?.data.toDomain(),
+      tracks: tracks?.data.toDomainTracks(),
       library: library?.data.toDomain(),
       catalog: catalog?.data.toDomain(),
     );
@@ -84,7 +84,7 @@ class PlaylistRelationshipsDTO with _$PlaylistRelationshipsDTO {
 
   PlaylistRelationships toDomain() {
     return PlaylistRelationships(
-      tracks: tracks?.data.toDomain(),
+      tracks: tracks?.data.toDomainTracks(),
       curator: curator?.data.toDomain(),
       library: library?.data.toDomain(),
       catalog: catalog?.data.toDomain(),

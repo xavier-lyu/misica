@@ -26,7 +26,7 @@ class AlbumFooter extends StatelessWidget {
             Text(DateFormat.yMMMd(context.loc.localeName)
                 .format(album.releaseDate!)),
           Text(
-              '${album.songs.length} ${context.loc.song}, ${album.duration.readable(context.loc.localeName)}'),
+              '${album.tracks.length} ${context.loc.song}, ${album.duration.readable(context.loc.localeName)}'),
           if (album.copyright.isNotEmpty) Text(album.copyright),
         ],
       ),

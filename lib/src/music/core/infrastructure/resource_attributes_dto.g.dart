@@ -116,6 +116,8 @@ _$_MusicVideoAttributesDTO _$$_MusicVideoAttributesDTOFromJson(Map json) =>
           ? null
           : DateTime.parse(json['releaseDate'] as String),
       url: json['url'] as String?,
+      trackNumber: json['trackNumber'] as int?,
+      contentRating: json['contentRating'] as String?,
     );
 
 Map<String, dynamic> _$$_MusicVideoAttributesDTOToJson(
@@ -135,6 +137,8 @@ Map<String, dynamic> _$$_MusicVideoAttributesDTOToJson(
       'previews': instance.previews,
       'releaseDate': instance.releaseDate?.toIso8601String(),
       'url': instance.url,
+      'trackNumber': instance.trackNumber,
+      'contentRating': instance.contentRating,
     };
 
 _$_PlaylistAttributesDTO _$$_PlaylistAttributesDTOFromJson(Map json) =>

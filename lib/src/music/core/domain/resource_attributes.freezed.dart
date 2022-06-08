@@ -334,6 +334,10 @@ abstract class _ResourceAttributes extends ResourceAttributes {
       throw _privateConstructorUsedError;
 }
 
+AlbumAttributes _$AlbumAttributesFromJson(Map<String, dynamic> json) {
+  return _AlbumAttributes.fromJson(json);
+}
+
 /// @nodoc
 mixin _$AlbumAttributes {
   String get artistName => throw _privateConstructorUsedError;
@@ -348,6 +352,7 @@ mixin _$AlbumAttributes {
   String? get copyright => throw _privateConstructorUsedError;
   EditorialNotes? get editorialNotes => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $AlbumAttributesCopyWith<AlbumAttributes> get copyWith =>
       throw _privateConstructorUsedError;
@@ -373,6 +378,7 @@ abstract class $AlbumAttributesCopyWith<$Res> {
 
   $ArtworkCopyWith<$Res>? get artwork;
   $PlayParamsCopyWith<$Res>? get playParams;
+  $EditorialNotesCopyWith<$Res>? get editorialNotes;
 }
 
 /// @nodoc
@@ -467,6 +473,17 @@ class _$AlbumAttributesCopyWithImpl<$Res>
       return _then(_value.copyWith(playParams: value));
     });
   }
+
+  @override
+  $EditorialNotesCopyWith<$Res>? get editorialNotes {
+    if (_value.editorialNotes == null) {
+      return null;
+    }
+
+    return $EditorialNotesCopyWith<$Res>(_value.editorialNotes!, (value) {
+      return _then(_value.copyWith(editorialNotes: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -493,6 +510,8 @@ abstract class _$$_AlbumAttributesCopyWith<$Res>
   $ArtworkCopyWith<$Res>? get artwork;
   @override
   $PlayParamsCopyWith<$Res>? get playParams;
+  @override
+  $EditorialNotesCopyWith<$Res>? get editorialNotes;
 }
 
 /// @nodoc
@@ -570,7 +589,7 @@ class __$$_AlbumAttributesCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_AlbumAttributes extends _AlbumAttributes {
   const _$_AlbumAttributes(
       {required this.artistName,
@@ -585,6 +604,9 @@ class _$_AlbumAttributes extends _AlbumAttributes {
       required this.copyright,
       required this.editorialNotes})
       : super._();
+
+  factory _$_AlbumAttributes.fromJson(Map<String, dynamic> json) =>
+      _$$_AlbumAttributesFromJson(json);
 
   @override
   final String artistName;
@@ -638,6 +660,7 @@ class _$_AlbumAttributes extends _AlbumAttributes {
                 .equals(other.editorialNotes, editorialNotes));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -657,6 +680,11 @@ class _$_AlbumAttributes extends _AlbumAttributes {
   @override
   _$$_AlbumAttributesCopyWith<_$_AlbumAttributes> get copyWith =>
       __$$_AlbumAttributesCopyWithImpl<_$_AlbumAttributes>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_AlbumAttributesToJson(this);
+  }
 }
 
 abstract class _AlbumAttributes extends AlbumAttributes {
@@ -673,6 +701,9 @@ abstract class _AlbumAttributes extends AlbumAttributes {
       required final String? copyright,
       required final EditorialNotes? editorialNotes}) = _$_AlbumAttributes;
   const _AlbumAttributes._() : super._();
+
+  factory _AlbumAttributes.fromJson(Map<String, dynamic> json) =
+      _$_AlbumAttributes.fromJson;
 
   @override
   String get artistName => throw _privateConstructorUsedError;
@@ -702,11 +733,16 @@ abstract class _AlbumAttributes extends AlbumAttributes {
       throw _privateConstructorUsedError;
 }
 
+ArtistAttributes _$ArtistAttributesFromJson(Map<String, dynamic> json) {
+  return _ArtistAttributes.fromJson(json);
+}
+
 /// @nodoc
 mixin _$ArtistAttributes {
   String get name => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ArtistAttributesCopyWith<ArtistAttributes> get copyWith =>
       throw _privateConstructorUsedError;
@@ -787,10 +823,13 @@ class __$$_ArtistAttributesCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_ArtistAttributes extends _ArtistAttributes {
   const _$_ArtistAttributes({required this.name, required this.url})
       : super._();
+
+  factory _$_ArtistAttributes.fromJson(Map<String, dynamic> json) =>
+      _$$_ArtistAttributesFromJson(json);
 
   @override
   final String name;
@@ -811,6 +850,7 @@ class _$_ArtistAttributes extends _ArtistAttributes {
             const DeepCollectionEquality().equals(other.url, url));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -821,6 +861,11 @@ class _$_ArtistAttributes extends _ArtistAttributes {
   @override
   _$$_ArtistAttributesCopyWith<_$_ArtistAttributes> get copyWith =>
       __$$_ArtistAttributesCopyWithImpl<_$_ArtistAttributes>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ArtistAttributesToJson(this);
+  }
 }
 
 abstract class _ArtistAttributes extends ArtistAttributes {
@@ -828,6 +873,9 @@ abstract class _ArtistAttributes extends ArtistAttributes {
       {required final String name,
       required final String? url}) = _$_ArtistAttributes;
   const _ArtistAttributes._() : super._();
+
+  factory _ArtistAttributes.fromJson(Map<String, dynamic> json) =
+      _$_ArtistAttributes.fromJson;
 
   @override
   String get name => throw _privateConstructorUsedError;
@@ -837,6 +885,10 @@ abstract class _ArtistAttributes extends ArtistAttributes {
   @JsonKey(ignore: true)
   _$$_ArtistAttributesCopyWith<_$_ArtistAttributes> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+MusicVideoAttributes _$MusicVideoAttributesFromJson(Map<String, dynamic> json) {
+  return _MusicVideoAttributes.fromJson(json);
 }
 
 /// @nodoc
@@ -850,7 +902,10 @@ mixin _$MusicVideoAttributes {
   List<Map<String, dynamic>>? get previews =>
       throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
+  int? get trackNumber => throw _privateConstructorUsedError;
+  String? get contentRating => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $MusicVideoAttributesCopyWith<MusicVideoAttributes> get copyWith =>
       throw _privateConstructorUsedError;
@@ -869,7 +924,9 @@ abstract class $MusicVideoAttributesCopyWith<$Res> {
       String name,
       PlayParams? playParams,
       List<Map<String, dynamic>>? previews,
-      String? url});
+      String? url,
+      int? trackNumber,
+      String? contentRating});
 
   $ArtworkCopyWith<$Res>? get artwork;
   $PlayParamsCopyWith<$Res>? get playParams;
@@ -894,6 +951,8 @@ class _$MusicVideoAttributesCopyWithImpl<$Res>
     Object? playParams = freezed,
     Object? previews = freezed,
     Object? url = freezed,
+    Object? trackNumber = freezed,
+    Object? contentRating = freezed,
   }) {
     return _then(_value.copyWith(
       artistName: artistName == freezed
@@ -927,6 +986,14 @@ class _$MusicVideoAttributesCopyWithImpl<$Res>
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
+              as String?,
+      trackNumber: trackNumber == freezed
+          ? _value.trackNumber
+          : trackNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+      contentRating: contentRating == freezed
+          ? _value.contentRating
+          : contentRating // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -969,7 +1036,9 @@ abstract class _$$_MusicVideoAttributesCopyWith<$Res>
       String name,
       PlayParams? playParams,
       List<Map<String, dynamic>>? previews,
-      String? url});
+      String? url,
+      int? trackNumber,
+      String? contentRating});
 
   @override
   $ArtworkCopyWith<$Res>? get artwork;
@@ -998,6 +1067,8 @@ class __$$_MusicVideoAttributesCopyWithImpl<$Res>
     Object? playParams = freezed,
     Object? previews = freezed,
     Object? url = freezed,
+    Object? trackNumber = freezed,
+    Object? contentRating = freezed,
   }) {
     return _then(_$_MusicVideoAttributes(
       artistName: artistName == freezed
@@ -1032,12 +1103,20 @@ class __$$_MusicVideoAttributesCopyWithImpl<$Res>
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
+      trackNumber: trackNumber == freezed
+          ? _value.trackNumber
+          : trackNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+      contentRating: contentRating == freezed
+          ? _value.contentRating
+          : contentRating // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_MusicVideoAttributes extends _MusicVideoAttributes {
   const _$_MusicVideoAttributes(
       {required this.artistName,
@@ -1047,9 +1126,14 @@ class _$_MusicVideoAttributes extends _MusicVideoAttributes {
       required this.name,
       required this.playParams,
       required final List<Map<String, dynamic>>? previews,
-      required this.url})
+      required this.url,
+      required this.trackNumber,
+      required this.contentRating})
       : _previews = previews,
         super._();
+
+  factory _$_MusicVideoAttributes.fromJson(Map<String, dynamic> json) =>
+      _$$_MusicVideoAttributesFromJson(json);
 
   @override
   final String artistName;
@@ -1074,10 +1158,14 @@ class _$_MusicVideoAttributes extends _MusicVideoAttributes {
 
   @override
   final String? url;
+  @override
+  final int? trackNumber;
+  @override
+  final String? contentRating;
 
   @override
   String toString() {
-    return 'MusicVideoAttributes(artistName: $artistName, artistUrl: $artistUrl, artwork: $artwork, durationInMillis: $durationInMillis, name: $name, playParams: $playParams, previews: $previews, url: $url)';
+    return 'MusicVideoAttributes(artistName: $artistName, artistUrl: $artistUrl, artwork: $artwork, durationInMillis: $durationInMillis, name: $name, playParams: $playParams, previews: $previews, url: $url, trackNumber: $trackNumber, contentRating: $contentRating)';
   }
 
   @override
@@ -1095,9 +1183,14 @@ class _$_MusicVideoAttributes extends _MusicVideoAttributes {
             const DeepCollectionEquality()
                 .equals(other.playParams, playParams) &&
             const DeepCollectionEquality().equals(other._previews, _previews) &&
-            const DeepCollectionEquality().equals(other.url, url));
+            const DeepCollectionEquality().equals(other.url, url) &&
+            const DeepCollectionEquality()
+                .equals(other.trackNumber, trackNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.contentRating, contentRating));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1108,13 +1201,20 @@ class _$_MusicVideoAttributes extends _MusicVideoAttributes {
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(playParams),
       const DeepCollectionEquality().hash(_previews),
-      const DeepCollectionEquality().hash(url));
+      const DeepCollectionEquality().hash(url),
+      const DeepCollectionEquality().hash(trackNumber),
+      const DeepCollectionEquality().hash(contentRating));
 
   @JsonKey(ignore: true)
   @override
   _$$_MusicVideoAttributesCopyWith<_$_MusicVideoAttributes> get copyWith =>
       __$$_MusicVideoAttributesCopyWithImpl<_$_MusicVideoAttributes>(
           this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_MusicVideoAttributesToJson(this);
+  }
 }
 
 abstract class _MusicVideoAttributes extends MusicVideoAttributes {
@@ -1126,8 +1226,13 @@ abstract class _MusicVideoAttributes extends MusicVideoAttributes {
       required final String name,
       required final PlayParams? playParams,
       required final List<Map<String, dynamic>>? previews,
-      required final String? url}) = _$_MusicVideoAttributes;
+      required final String? url,
+      required final int? trackNumber,
+      required final String? contentRating}) = _$_MusicVideoAttributes;
   const _MusicVideoAttributes._() : super._();
+
+  factory _MusicVideoAttributes.fromJson(Map<String, dynamic> json) =
+      _$_MusicVideoAttributes.fromJson;
 
   @override
   String get artistName => throw _privateConstructorUsedError;
@@ -1147,9 +1252,17 @@ abstract class _MusicVideoAttributes extends MusicVideoAttributes {
   @override
   String? get url => throw _privateConstructorUsedError;
   @override
+  int? get trackNumber => throw _privateConstructorUsedError;
+  @override
+  String? get contentRating => throw _privateConstructorUsedError;
+  @override
   @JsonKey(ignore: true)
   _$$_MusicVideoAttributesCopyWith<_$_MusicVideoAttributes> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+PlaylistAttributes _$PlaylistAttributesFromJson(Map<String, dynamic> json) {
+  return _PlaylistAttributes.fromJson(json);
 }
 
 /// @nodoc
@@ -1161,6 +1274,7 @@ mixin _$PlaylistAttributes {
   String? get url => throw _privateConstructorUsedError;
   EditorialNotes? get editorialNotes => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $PlaylistAttributesCopyWith<PlaylistAttributes> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1181,6 +1295,7 @@ abstract class $PlaylistAttributesCopyWith<$Res> {
 
   $ArtworkCopyWith<$Res>? get artwork;
   $PlayParamsCopyWith<$Res>? get playParams;
+  $EditorialNotesCopyWith<$Res>? get editorialNotes;
 }
 
 /// @nodoc
@@ -1250,6 +1365,17 @@ class _$PlaylistAttributesCopyWithImpl<$Res>
       return _then(_value.copyWith(playParams: value));
     });
   }
+
+  @override
+  $EditorialNotesCopyWith<$Res>? get editorialNotes {
+    if (_value.editorialNotes == null) {
+      return null;
+    }
+
+    return $EditorialNotesCopyWith<$Res>(_value.editorialNotes!, (value) {
+      return _then(_value.copyWith(editorialNotes: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -1271,6 +1397,8 @@ abstract class _$$_PlaylistAttributesCopyWith<$Res>
   $ArtworkCopyWith<$Res>? get artwork;
   @override
   $PlayParamsCopyWith<$Res>? get playParams;
+  @override
+  $EditorialNotesCopyWith<$Res>? get editorialNotes;
 }
 
 /// @nodoc
@@ -1323,7 +1451,7 @@ class __$$_PlaylistAttributesCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_PlaylistAttributes extends _PlaylistAttributes {
   const _$_PlaylistAttributes(
       {required this.artwork,
@@ -1333,6 +1461,9 @@ class _$_PlaylistAttributes extends _PlaylistAttributes {
       required this.url,
       required this.editorialNotes})
       : super._();
+
+  factory _$_PlaylistAttributes.fromJson(Map<String, dynamic> json) =>
+      _$$_PlaylistAttributesFromJson(json);
 
   @override
   final Artwork? artwork;
@@ -1368,6 +1499,7 @@ class _$_PlaylistAttributes extends _PlaylistAttributes {
                 .equals(other.editorialNotes, editorialNotes));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1383,6 +1515,11 @@ class _$_PlaylistAttributes extends _PlaylistAttributes {
   _$$_PlaylistAttributesCopyWith<_$_PlaylistAttributes> get copyWith =>
       __$$_PlaylistAttributesCopyWithImpl<_$_PlaylistAttributes>(
           this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_PlaylistAttributesToJson(this);
+  }
 }
 
 abstract class _PlaylistAttributes extends PlaylistAttributes {
@@ -1394,6 +1531,9 @@ abstract class _PlaylistAttributes extends PlaylistAttributes {
       required final String? url,
       required final EditorialNotes? editorialNotes}) = _$_PlaylistAttributes;
   const _PlaylistAttributes._() : super._();
+
+  factory _PlaylistAttributes.fromJson(Map<String, dynamic> json) =
+      _$_PlaylistAttributes.fromJson;
 
   @override
   Artwork? get artwork => throw _privateConstructorUsedError;
@@ -1413,6 +1553,10 @@ abstract class _PlaylistAttributes extends PlaylistAttributes {
       throw _privateConstructorUsedError;
 }
 
+SongAttributes _$SongAttributesFromJson(Map<String, dynamic> json) {
+  return _SongAttributes.fromJson(json);
+}
+
 /// @nodoc
 mixin _$SongAttributes {
   String get albumName => throw _privateConstructorUsedError;
@@ -1428,6 +1572,7 @@ mixin _$SongAttributes {
   int get trackNumber => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SongAttributesCopyWith<SongAttributes> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1650,7 +1795,7 @@ class __$$_SongAttributesCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_SongAttributes extends _SongAttributes {
   const _$_SongAttributes(
       {required this.albumName,
@@ -1666,6 +1811,9 @@ class _$_SongAttributes extends _SongAttributes {
       required this.url})
       : _previews = previews,
         super._();
+
+  factory _$_SongAttributes.fromJson(Map<String, dynamic> json) =>
+      _$$_SongAttributesFromJson(json);
 
   @override
   final String albumName;
@@ -1725,6 +1873,7 @@ class _$_SongAttributes extends _SongAttributes {
             const DeepCollectionEquality().equals(other.url, url));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1744,6 +1893,11 @@ class _$_SongAttributes extends _SongAttributes {
   @override
   _$$_SongAttributesCopyWith<_$_SongAttributes> get copyWith =>
       __$$_SongAttributesCopyWithImpl<_$_SongAttributes>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_SongAttributesToJson(this);
+  }
 }
 
 abstract class _SongAttributes extends SongAttributes {
@@ -1760,6 +1914,9 @@ abstract class _SongAttributes extends SongAttributes {
       required final int trackNumber,
       required final String? url}) = _$_SongAttributes;
   const _SongAttributes._() : super._();
+
+  factory _SongAttributes.fromJson(Map<String, dynamic> json) =
+      _$_SongAttributes.fromJson;
 
   @override
   String get albumName => throw _privateConstructorUsedError;
@@ -1790,6 +1947,10 @@ abstract class _SongAttributes extends SongAttributes {
       throw _privateConstructorUsedError;
 }
 
+StationAttributes _$StationAttributesFromJson(Map<String, dynamic> json) {
+  return _StationAttributes.fromJson(json);
+}
+
 /// @nodoc
 mixin _$StationAttributes {
   Artwork? get artwork => throw _privateConstructorUsedError;
@@ -1798,6 +1959,7 @@ mixin _$StationAttributes {
   String get name => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $StationAttributesCopyWith<StationAttributes> get copyWith =>
       throw _privateConstructorUsedError;
@@ -1948,7 +2110,7 @@ class __$$_StationAttributesCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_StationAttributes extends _StationAttributes {
   const _$_StationAttributes(
       {required this.artwork,
@@ -1957,6 +2119,9 @@ class _$_StationAttributes extends _StationAttributes {
       required this.name,
       required this.url})
       : super._();
+
+  factory _$_StationAttributes.fromJson(Map<String, dynamic> json) =>
+      _$$_StationAttributesFromJson(json);
 
   @override
   final Artwork? artwork;
@@ -1988,6 +2153,7 @@ class _$_StationAttributes extends _StationAttributes {
             const DeepCollectionEquality().equals(other.url, url));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2002,6 +2168,11 @@ class _$_StationAttributes extends _StationAttributes {
   _$$_StationAttributesCopyWith<_$_StationAttributes> get copyWith =>
       __$$_StationAttributesCopyWithImpl<_$_StationAttributes>(
           this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_StationAttributesToJson(this);
+  }
 }
 
 abstract class _StationAttributes extends StationAttributes {
@@ -2012,6 +2183,9 @@ abstract class _StationAttributes extends StationAttributes {
       required final String name,
       required final String? url}) = _$_StationAttributes;
   const _StationAttributes._() : super._();
+
+  factory _StationAttributes.fromJson(Map<String, dynamic> json) =
+      _$_StationAttributes.fromJson;
 
   @override
   Artwork? get artwork => throw _privateConstructorUsedError;
@@ -2029,12 +2203,17 @@ abstract class _StationAttributes extends StationAttributes {
       throw _privateConstructorUsedError;
 }
 
+CuratorAttributes _$CuratorAttributesFromJson(Map<String, dynamic> json) {
+  return _CuratorAttributes.fromJson(json);
+}
+
 /// @nodoc
 mixin _$CuratorAttributes {
   Artwork? get artwork => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CuratorAttributesCopyWith<CuratorAttributes> get copyWith =>
       throw _privateConstructorUsedError;
@@ -2141,11 +2320,14 @@ class __$$_CuratorAttributesCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$_CuratorAttributes extends _CuratorAttributes {
   const _$_CuratorAttributes(
       {required this.artwork, required this.name, required this.url})
       : super._();
+
+  factory _$_CuratorAttributes.fromJson(Map<String, dynamic> json) =>
+      _$$_CuratorAttributesFromJson(json);
 
   @override
   final Artwork? artwork;
@@ -2169,6 +2351,7 @@ class _$_CuratorAttributes extends _CuratorAttributes {
             const DeepCollectionEquality().equals(other.url, url));
   }
 
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2181,6 +2364,11 @@ class _$_CuratorAttributes extends _CuratorAttributes {
   _$$_CuratorAttributesCopyWith<_$_CuratorAttributes> get copyWith =>
       __$$_CuratorAttributesCopyWithImpl<_$_CuratorAttributes>(
           this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_CuratorAttributesToJson(this);
+  }
 }
 
 abstract class _CuratorAttributes extends CuratorAttributes {
@@ -2189,6 +2377,9 @@ abstract class _CuratorAttributes extends CuratorAttributes {
       required final String name,
       required final String? url}) = _$_CuratorAttributes;
   const _CuratorAttributes._() : super._();
+
+  factory _CuratorAttributes.fromJson(Map<String, dynamic> json) =
+      _$_CuratorAttributes.fromJson;
 
   @override
   Artwork? get artwork => throw _privateConstructorUsedError;

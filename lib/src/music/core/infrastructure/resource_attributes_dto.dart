@@ -92,6 +92,8 @@ class MusicVideoAttributesDTO with _$MusicVideoAttributesDTO {
     List<Map<String, dynamic>>? previews,
     DateTime? releaseDate,
     String? url,
+    int? trackNumber,
+    String? contentRating,
   }) = _MusicVideoAttributesDTO;
 
   factory MusicVideoAttributesDTO.fromJson(Map<String, dynamic> json) =>
@@ -107,6 +109,8 @@ class MusicVideoAttributesDTO with _$MusicVideoAttributesDTO {
       playParams: playParams?.toDomain(),
       previews: previews,
       url: url,
+      trackNumber: trackNumber,
+      contentRating: contentRating,
     );
   }
 }

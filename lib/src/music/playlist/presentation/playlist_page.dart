@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:misica/src/music/core/presentation/resource_tile.dart';
 import 'package:misica/src/music/core/presentation/retry_widget.dart';
-import 'package:misica/src/music/core/presentation/songs_list.dart';
+import 'package:misica/src/music/core/presentation/tracks_list.dart';
 import 'package:misica/src/music/core/shared/formatters.dart';
 import 'package:misica/src/music/playlist/shared/providers.dart';
 
 import 'playlist_footer_view.dart';
 import 'playlist_header_view.dart';
+import 'playlist_track_tile.dart';
 
 class PlaylistPage extends StatefulHookConsumerWidget {
   const PlaylistPage({Key? key, required this.id}) : super(key: key);
@@ -93,9 +93,10 @@ class _PlaylistPageState extends ConsumerState<PlaylistPage> {
                     ),
                   ),
                   data: (tracks) {
-                    return SongsList(
-                      songs: tracks,
-                      itemBuilder: (_, song) => ResourceTile(resource: song),
+                    return TracksList(
+                      tracks: tracks,
+                      itemBuilder: (_, track) =>
+                          PlaylistTrackTile(track: track),
                       footerBuilder: (_) => Padding(
                         padding: const EdgeInsetsDirectional.only(top: 15),
                         child: PlaylistFooterView(

@@ -13,8 +13,8 @@ class ResourceViewDTO with _$ResourceViewDTO {
   const ResourceViewDTO._();
   const factory ResourceViewDTO({
     required String href,
-    @ResourceDTOConverter() required List<ResourceDTO> data,
     required ResourceViewAttributesDTO attributes,
+    @ResourceDTOConverter() required List<ResourceDTO> data,
   }) = _ResourceViewDTO;
 
   factory ResourceViewDTO.fromJson(Map<String, dynamic> json) =>

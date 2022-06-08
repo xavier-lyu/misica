@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:misica/src/music/core/domain/resource.dart';
-import 'package:misica/src/music/core/domain/song.dart';
+import 'package:misica/src/music/core/domain/track.dart';
+import 'package:misica/src/music/core/presentation/explicit_icon.dart';
+import 'package:misica/src/music/core/presentation/music_video_icon.dart';
 
-class AlbumSongTile extends ConsumerWidget {
-  const AlbumSongTile({
+class AlbumTrackTile extends ConsumerWidget {
+  const AlbumTrackTile({
     Key? key,
-    required this.song,
+    required this.track,
   }) : super(key: key);
 
-  final Song song;
+  final Track track;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -18,7 +19,7 @@ class AlbumSongTile extends ConsumerWidget {
         SizedBox(
             width: 20,
             child: Text(
-              '${song.attributes?.trackNumber}',
+              '${track.trackNumber}',
               textAlign: TextAlign.center,
             )),
         Expanded(
@@ -26,12 +27,17 @@ class AlbumSongTile extends ConsumerWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             child: Row(
               children: [
+                if (track.isMV)
+                  Container(
+                    margin: const EdgeInsetsDirectional.only(end: 5),
+                    child: const MusicVideoIcon(),
+                  ),
                 Expanded(
                     child: Text(
-                  song.attributes?.name ?? '',
+                  track.name ?? '',
                   overflow: TextOverflow.ellipsis,
                 )),
-                if (song.isExplicit) const Icon(Icons.explicit_rounded),
+                if (track.isExplicit) const ExplicitIcon(),
               ],
             ),
           ),
