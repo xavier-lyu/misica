@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
+import 'package:misica/src/music/player/presentation/now_playing_bar.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 class IndexPage extends StatelessWidget {
@@ -40,6 +41,7 @@ class IndexPage extends StatelessWidget {
           ],
         );
       },
+      bottomSheet: const NowPlayingBar(),
     );
   }
 }

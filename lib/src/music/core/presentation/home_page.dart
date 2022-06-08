@@ -20,30 +20,33 @@ class HomePage extends HookWidget {
     });
 
     return Scaffold(
-      body: CustomScrollView(
-        controller: scrollController,
-        slivers: [
-          AppNavbar(
-            title: Text(
-              context.loc.home,
-              style: context.ttoc.headlineSmall,
-              textAlign: TextAlign.start,
+      body: Padding(
+        padding: const EdgeInsets.only(bottom: 44),
+        child: CustomScrollView(
+          controller: scrollController,
+          slivers: [
+            AppNavbar(
+              title: Text(
+                context.loc.home,
+                style: context.ttoc.headlineSmall,
+                textAlign: TextAlign.start,
+              ),
+              centerTitle: scrollOffset.value >= 44,
             ),
-            centerTitle: scrollOffset.value >= 44,
-          ),
-          const SliverPadding(
-            padding: EdgeInsetsDirectional.only(top: 15, bottom: 15),
-            sliver: RecommendationsList(),
-          ),
-          const SliverToBoxAdapter(
-              child: DividerWidget(
-            endIndent: 0,
-          )),
-          const SliverPadding(
-            padding: EdgeInsetsDirectional.only(top: 15, bottom: 15),
-            sliver: ChartsList(),
-          ),
-        ],
+            const SliverPadding(
+              padding: EdgeInsetsDirectional.only(top: 15, bottom: 15),
+              sliver: RecommendationsList(),
+            ),
+            const SliverToBoxAdapter(
+                child: DividerWidget(
+              endIndent: 0,
+            )),
+            const SliverPadding(
+              padding: EdgeInsetsDirectional.only(top: 15, bottom: 15),
+              sliver: ChartsList(),
+            ),
+          ],
+        ),
       ),
     );
   }
