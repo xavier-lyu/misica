@@ -11,10 +11,12 @@ class MusicAuthenticator {
 
   MusicAuthenticator(this._credentialStorage, this._musicKit);
 
-  Future<Credentials?> fetchCredentials() async {
+  Future<Credentials?> fetchCredentials({bool forceInvalidate = false}) async {
     try {
       final storedCredentials = await _credentialStorage.read();
-      if (storedCredentials == null || storedCredentials.isExpired) {
+      if (forceInvalidate ||
+          storedCredentials == null ||
+          storedCredentials.isExpired) {
         final failureOrCredentials = await refresh();
         return failureOrCredentials.fold(
           (_) => null,
