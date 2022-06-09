@@ -3,7 +3,7 @@ import 'package:misica/src/music/core/domain/track.dart';
 import 'package:misica/src/music/core/presentation/divider_widget.dart';
 
 typedef TracksListItemBuilder = Widget Function(
-    BuildContext context, Track track);
+    BuildContext context, int index);
 
 typedef TracksListFooterBuilder = Widget? Function(BuildContext context);
 
@@ -35,7 +35,7 @@ class TracksList extends StatelessWidget {
           }
 
           if (index.isOdd) {
-            return itemBuilder(context, tracks[itemIndex]);
+            return itemBuilder(context, itemIndex);
           }
 
           final isEdge =

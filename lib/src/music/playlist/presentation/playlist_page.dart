@@ -4,6 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/core/presentation/retry_widget.dart';
 import 'package:misica/src/music/core/presentation/tracks_list.dart';
 import 'package:misica/src/music/core/shared/formatters.dart';
+import 'package:misica/src/music/player/shared/providers.dart';
 import 'package:misica/src/music/playlist/shared/providers.dart';
 
 import 'playlist_footer_view.dart';
@@ -95,8 +96,12 @@ class _PlaylistPageState extends ConsumerState<PlaylistPage> {
                   data: (tracks) {
                     return TracksList(
                       tracks: tracks,
-                      itemBuilder: (_, track) =>
-                          PlaylistTrackTile(track: track),
+                      itemBuilder: (_, index) => PlaylistTrackTile(
+                        track: tracks[index],
+                        onTap: () => ref
+                            .read(musicPlayerProvider)
+                            .playTracks(tracks: tracks, startingAt: index),
+                      ),
                       footerBuilder: (_) => Padding(
                         padding: const EdgeInsetsDirectional.only(top: 15),
                         child: PlaylistFooterView(

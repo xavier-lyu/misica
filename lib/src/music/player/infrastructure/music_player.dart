@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
+import 'package:misica/src/music/core/domain/track.dart';
 import 'package:misica/src/music/player/shared/providers.dart';
 import 'package:music_kit/music_kit.dart';
 
@@ -26,14 +27,27 @@ class MusicPlayer {
   }
 
   Future<void> playMany(
-      {required List<Resource> items, int? startingAt}) async {
+      {String? type, required List<Resource> items, int? startingAt}) async {
     await _musicKit.setQueueWithItems(
-      items.first.type,
+      type ?? items.first.type,
       items: items.map((e) => e.toJson()).toList(),
       startingAt: startingAt,
     );
 
     await _musicKit.play();
+  }
+
+  Future<void> playTracks(
+      {required List<Track> tracks, int? startingAt}) async {
+    final items = tracks
+        .map(
+          (e) => e.when(
+            song: (song) => song,
+            musicVideo: (musicVideo) => musicVideo,
+          ),
+        )
+        .toList();
+    await playMany(type: 'tracks', items: items, startingAt: startingAt);
   }
 
   Future<void> playSingleShuffle({required Resource item}) async {

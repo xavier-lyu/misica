@@ -6,6 +6,7 @@ import 'package:misica/src/music/album/shared/providers.dart';
 import 'package:misica/src/music/core/presentation/resource_views_list.dart';
 import 'package:misica/src/music/core/presentation/retry_widget.dart';
 import 'package:misica/src/music/core/presentation/tracks_list.dart';
+import 'package:misica/src/music/player/shared/providers.dart';
 
 import 'album_footer.dart';
 import 'album_header_view.dart';
@@ -80,7 +81,12 @@ class _AlbumPageState extends ConsumerState<AlbumPage> {
                 ),
                 sliver: TracksList(
                   tracks: album.tracks,
-                  itemBuilder: (context, track) => AlbumTrackTile(track: track),
+                  itemBuilder: (context, index) => AlbumTrackTile(
+                    track: album.tracks[index],
+                    onTap: () => ref
+                        .read(musicPlayerProvider)
+                        .playTracks(tracks: album.tracks, startingAt: index),
+                  ),
                 ),
               ),
               SliverPadding(

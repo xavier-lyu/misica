@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/charts/domain/charts.dart';
 import 'package:misica/src/music/core/presentation/resource_cards_list.dart';
+import 'package:misica/src/music/core/presentation/resource_tile.dart';
 import 'package:misica/src/music/core/presentation/resources_list.dart';
+import 'package:misica/src/music/player/shared/providers.dart';
 
-class ChartWidget extends StatelessWidget {
+class ChartWidget extends ConsumerWidget {
   final Chart chart;
   const ChartWidget({Key? key, required this.chart}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -30,7 +33,18 @@ class ChartWidget extends StatelessWidget {
             mainAxisCount: 2,
           ),
           songs: (value) {
-            return ResourcesList(resources: value.data);
+            return ResourcesList(
+              resources: value.data,
+              itemBuilder: (context, item) => ResourceTile(
+                resource: item,
+                onTap: () => ref.read(musicPlayerProvider).playMany(
+                      items: value.data,
+                      startingAt: value.data.indexWhere(
+                        (element) => element.id == item.id,
+                      ),
+                    ),
+              ),
+            );
           },
           musicVideo: (value) => ResourceCardsList(
             resources: chart.data,

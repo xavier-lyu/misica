@@ -1,12 +1,15 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/core/domain/album.dart';
 import 'package:misica/src/music/core/domain/resource_view.dart';
 import 'package:misica/src/music/core/presentation/artwork_widget.dart';
 import 'package:misica/src/music/core/presentation/explicit_icon.dart';
 import 'package:misica/src/music/core/presentation/more_button.dart';
 import 'package:misica/src/music/core/presentation/release_date_widget.dart';
+import 'package:misica/src/music/core/presentation/resource_tile.dart';
+import 'package:misica/src/music/player/shared/providers.dart';
 
 import 'divider_widget.dart';
 import 'resource_cards_list.dart';
@@ -49,7 +52,7 @@ class ResourceViewsList extends StatelessWidget {
   }
 }
 
-class ResourceViewWidget extends StatelessWidget {
+class ResourceViewWidget extends ConsumerWidget {
   const ResourceViewWidget({
     Key? key,
     required this.kind,
@@ -60,7 +63,7 @@ class ResourceViewWidget extends StatelessWidget {
   final String kind;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -75,7 +78,7 @@ class ResourceViewWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 8),
-        _buildViews(),
+        _buildViews(ref),
       ],
     );
   }
@@ -88,7 +91,7 @@ class ResourceViewWidget extends StatelessWidget {
         'more-in-genre'
       ].contains(kind);
 
-  Widget _buildViews() {
+  Widget _buildViews(WidgetRef ref) {
     if (isMV) {
       return ResourceCardsList(
         resources: resourceView.data,
@@ -100,6 +103,15 @@ class ResourceViewWidget extends StatelessWidget {
     if (kind == 'top-songs') {
       return ResourcesList(
         resources: resourceView.data,
+        itemBuilder: (_, item) => ResourceTile(
+          resource: item,
+          onTap: () => ref.read(musicPlayerProvider).playMany(
+                items: resourceView.data,
+                startingAt: resourceView.data.indexWhere(
+                  (element) => element.id == item.id,
+                ),
+              ),
+        ),
       );
     }
 
