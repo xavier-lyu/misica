@@ -101,9 +101,9 @@ _$_MusicVideoAttributesDTO _$$_MusicVideoAttributesDTOFromJson(Map json) =>
       genreNames: (json['genreNames'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      has4K: json['has4K'] as bool,
-      hasHDR: json['hasHDR'] as bool,
-      isrc: json['isrc'] as String,
+      has4K: json['has4K'] as bool?,
+      hasHDR: json['hasHDR'] as bool?,
+      isrc: json['isrc'] as String?,
       name: json['name'] as String,
       playParams: json['playParams'] == null
           ? null

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:misica/src/core/shared/providers.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/domain/track.dart';
@@ -16,10 +15,10 @@ class NowPlayingBar extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final playerQueueStream = ref.watch(playerQueueProvider);
+    final currentEntry = ref.watch(currentEntryProvider);
 
-    return playerQueueStream.maybeWhen(
-      data: (queue) => NowPlayingItemWidget(currentEntry: queue.currentEntry),
+    return currentEntry.maybeWhen(
+      data: (entry) => NowPlayingItemWidget(currentEntry: entry),
       orElse: () => const NowPlayingItemWidget(currentEntry: null),
     );
   }
@@ -37,12 +36,14 @@ class NowPlayingItemWidget extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final playbackState = useState(MusicPlayerPlaybackStatus.stopped);
-    final playbackStateStream = ref.watch(playerStateProvider);
-    playbackStateStream
-        .whenData((value) => playbackState.value = value.playbackStatus);
+    final playbackStatus = useState(MusicPlayerPlaybackStatus.stopped);
 
-    final mk = ref.watch(musicKitProvider);
+    final playbackStateStream = ref.watch(playerStateStreamProvider);
+    playbackStateStream.whenData(
+      (value) => playbackStatus.value = value.playbackStatus,
+    );
+
+    final player = ref.watch(musicPlayerProvider);
 
     return Container(
       height: 58,
@@ -79,26 +80,13 @@ class NowPlayingItemWidget extends HookConsumerWidget {
           ),
         ),
         IconButton(
-          onPressed: isNotPlaying
-              ? null
-              : () {
-                  if (playbackState.value ==
-                      MusicPlayerPlaybackStatus.playing) {
-                    mk.pause();
-                  } else {
-                    mk.play();
-                  }
-                },
-          icon: Icon(playbackState.value != MusicPlayerPlaybackStatus.playing
+          onPressed: isNotPlaying ? null : () => player.playOrPause(),
+          icon: Icon(playbackStatus.value != MusicPlayerPlaybackStatus.playing
               ? Icons.play_arrow_rounded
               : Icons.pause_rounded),
         ),
         IconButton(
-          onPressed: isNotPlaying
-              ? null
-              : () {
-                  mk.skipToNextEntry();
-                },
+          onPressed: isNotPlaying ? null : () => player.skipToNext(),
           icon: const Icon(Icons.fast_forward_rounded),
         ),
       ]),

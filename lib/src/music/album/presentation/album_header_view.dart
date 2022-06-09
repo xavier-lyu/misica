@@ -71,7 +71,7 @@ class AlbumHeaderView extends ConsumerWidget {
               item: album,
             )),
             const SizedBox(width: 15),
-            const Flexible(child: ShuffleButton())
+            Flexible(child: ShuffleButton(item: album))
           ],
         )
       ],

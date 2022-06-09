@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:misica/src/core/shared/providers.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
+import 'package:misica/src/music/player/shared/providers.dart';
 
 class PlayButton extends ConsumerWidget {
   const PlayButton({
@@ -18,9 +18,7 @@ class PlayButton extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return ElevatedButton(
       onPressed: () {
-        final mk = ref.watch(musicKitProvider);
-        mk.setQueue(kind, item: item.toJson());
-        mk.play();
+        ref.read(musicPlayerProvider).playSingle(item: item);
       },
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,

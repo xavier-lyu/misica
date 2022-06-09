@@ -63,7 +63,7 @@ class PlaylistHeaderView extends ConsumerWidget {
               item: playlist,
             )),
             const SizedBox(width: 15),
-            const Flexible(child: ShuffleButton())
+            Flexible(child: ShuffleButton(item: playlist))
           ],
         )
       ],

@@ -818,9 +818,9 @@ mixin _$MusicVideoAttributesDTO {
   int get durationInMillis => throw _privateConstructorUsedError;
   EditorialNotesDTO? get editorialNotes => throw _privateConstructorUsedError;
   List<String>? get genreNames => throw _privateConstructorUsedError;
-  bool get has4K => throw _privateConstructorUsedError;
-  bool get hasHDR => throw _privateConstructorUsedError;
-  String get isrc => throw _privateConstructorUsedError;
+  bool? get has4K => throw _privateConstructorUsedError;
+  bool? get hasHDR => throw _privateConstructorUsedError;
+  String? get isrc => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   PlayParamsDTO? get playParams => throw _privateConstructorUsedError;
   List<Map<String, dynamic>>? get previews =>
@@ -848,9 +848,9 @@ abstract class $MusicVideoAttributesDTOCopyWith<$Res> {
       int durationInMillis,
       EditorialNotesDTO? editorialNotes,
       List<String>? genreNames,
-      bool has4K,
-      bool hasHDR,
-      String isrc,
+      bool? has4K,
+      bool? hasHDR,
+      String? isrc,
       String name,
       PlayParamsDTO? playParams,
       List<Map<String, dynamic>>? previews,
@@ -920,15 +920,15 @@ class _$MusicVideoAttributesDTOCopyWithImpl<$Res>
       has4K: has4K == freezed
           ? _value.has4K
           : has4K // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       hasHDR: hasHDR == freezed
           ? _value.hasHDR
           : hasHDR // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       isrc: isrc == freezed
           ? _value.isrc
           : isrc // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -1008,9 +1008,9 @@ abstract class _$$_MusicVideoAttributesDTOCopyWith<$Res>
       int durationInMillis,
       EditorialNotesDTO? editorialNotes,
       List<String>? genreNames,
-      bool has4K,
-      bool hasHDR,
-      String isrc,
+      bool? has4K,
+      bool? hasHDR,
+      String? isrc,
       String name,
       PlayParamsDTO? playParams,
       List<Map<String, dynamic>>? previews,
@@ -1086,15 +1086,15 @@ class __$$_MusicVideoAttributesDTOCopyWithImpl<$Res>
       has4K: has4K == freezed
           ? _value.has4K
           : has4K // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       hasHDR: hasHDR == freezed
           ? _value.hasHDR
           : hasHDR // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       isrc: isrc == freezed
           ? _value.isrc
           : isrc // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -1137,9 +1137,9 @@ class _$_MusicVideoAttributesDTO extends _MusicVideoAttributesDTO {
       required this.durationInMillis,
       this.editorialNotes,
       final List<String>? genreNames,
-      required this.has4K,
-      required this.hasHDR,
-      required this.isrc,
+      this.has4K,
+      this.hasHDR,
+      this.isrc,
       required this.name,
       this.playParams,
       final List<Map<String, dynamic>>? previews,
@@ -1174,11 +1174,11 @@ class _$_MusicVideoAttributesDTO extends _MusicVideoAttributesDTO {
   }
 
   @override
-  final bool has4K;
+  final bool? has4K;
   @override
-  final bool hasHDR;
+  final bool? hasHDR;
   @override
-  final String isrc;
+  final String? isrc;
   @override
   final String name;
   @override
@@ -1279,9 +1279,9 @@ abstract class _MusicVideoAttributesDTO extends MusicVideoAttributesDTO {
       required final int durationInMillis,
       final EditorialNotesDTO? editorialNotes,
       final List<String>? genreNames,
-      required final bool has4K,
-      required final bool hasHDR,
-      required final String isrc,
+      final bool? has4K,
+      final bool? hasHDR,
+      final String? isrc,
       required final String name,
       final PlayParamsDTO? playParams,
       final List<Map<String, dynamic>>? previews,
@@ -1307,11 +1307,11 @@ abstract class _MusicVideoAttributesDTO extends MusicVideoAttributesDTO {
   @override
   List<String>? get genreNames => throw _privateConstructorUsedError;
   @override
-  bool get has4K => throw _privateConstructorUsedError;
+  bool? get has4K => throw _privateConstructorUsedError;
   @override
-  bool get hasHDR => throw _privateConstructorUsedError;
+  bool? get hasHDR => throw _privateConstructorUsedError;
   @override
-  String get isrc => throw _privateConstructorUsedError;
+  String? get isrc => throw _privateConstructorUsedError;
   @override
   String get name => throw _privateConstructorUsedError;
   @override
