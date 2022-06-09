@@ -74,6 +74,7 @@ class NowPlayingItemWidget extends HookConsumerWidget {
                   Text(
                     currentEntry!.subtitle!,
                     style: context.ttoc.titleSmall,
+                    overflow: TextOverflow.ellipsis,
                   ),
               ],
             ),
