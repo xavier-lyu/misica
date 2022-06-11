@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/core/domain/album.dart';
 import 'package:misica/src/music/album/shared/providers.dart';
+import 'package:misica/src/music/core/presentation/loader.dart';
 import 'package:misica/src/music/core/presentation/resource_views_list.dart';
 import 'package:misica/src/music/core/presentation/retry_widget.dart';
 import 'package:misica/src/music/core/presentation/tracks_list.dart';
@@ -55,7 +56,7 @@ class _AlbumPageState extends ConsumerState<AlbumPage> {
               )
             ],
           ),
-          loading: () => const Center(child: CircularProgressIndicator()),
+          loading: () => const SliverLoader(),
           data: (album) => CustomScrollView(
             controller: scrollController,
             slivers: [

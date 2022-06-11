@@ -8,6 +8,7 @@ import 'package:misica/src/music/artist/domain/artist.dart';
 import 'package:misica/src/music/artist/shared/providers.dart';
 import 'package:misica/src/music/core/presentation/artwork_widget.dart';
 import 'package:misica/src/music/core/presentation/expandable_app_bar.dart';
+import 'package:misica/src/music/core/presentation/loader.dart';
 import 'package:misica/src/music/core/presentation/resource_views_list.dart';
 import 'package:misica/src/music/core/presentation/retry_widget.dart';
 
@@ -47,27 +48,12 @@ class _ArtistPageState extends ConsumerState<ArtistPage> {
         child: Consumer(builder: (context, ref, child) {
           final state = ref.watch(artistNotifierProvider);
           return state.when(
-            error: (_, __) {
-              return CustomScrollView(
-                slivers: [
-                  const SliverAppBar(),
-                  SliverFillRemaining(
-                    child: RetryWidget(
-                      onRetry: () {
-                        ref
-                            .watch(artistNotifierProvider.notifier)
-                            .fetchArtist(widget.id);
-                      },
-                    ),
-                  )
-                ],
-              );
-            },
-            loading: () {
-              return const Center(
-                child: CircularProgressIndicator(),
-              );
-            },
+            error: (_, __) => SliverRetryView(
+              onRetry: () => ref
+                  .watch(artistNotifierProvider.notifier)
+                  .fetchArtist(widget.id),
+            ),
+            loading: () => const SliverLoader(),
             data: (artist) {
               final expandedHeight = screenWidth - context.mqoc.viewPadding.top;
               final isAppBarCollapsed =

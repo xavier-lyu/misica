@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:misica/src/music/core/presentation/loader.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -6,7 +7,7 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(child: CircularProgressIndicator()),
+      body: Loader(),
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:misica/src/music/core/presentation/loader.dart';
 import 'package:misica/src/music/core/presentation/retry_widget.dart';
 import 'package:misica/src/music/core/presentation/tracks_list.dart';
 import 'package:misica/src/music/core/shared/formatters.dart';
@@ -49,19 +50,12 @@ class _PlaylistPageState extends ConsumerState<PlaylistPage> {
         final tracksState = ref.watch(playlistTracksNotifierProvider);
 
         return state.maybeWhen(
-          orElse: () => CustomScrollView(
-            slivers: [
-              const SliverAppBar(),
-              SliverFillRemaining(
-                child: RetryWidget(onRetry: () {
-                  ref
-                      .read(playlistsNotifierProvider.notifier)
-                      .fetchCatalogPlaylist(widget.id);
-                }),
-              )
-            ],
+          orElse: () => SliverRetryView(
+            onRetry: () => ref
+                .read(playlistsNotifierProvider.notifier)
+                .fetchCatalogPlaylist(widget.id),
           ),
-          loading: () => const Center(child: CircularProgressIndicator()),
+          loading: () => const SliverLoader(),
           data: (playlist) => CustomScrollView(
             controller: scrollController,
             slivers: [
@@ -89,9 +83,7 @@ class _PlaylistPageState extends ConsumerState<PlaylistPage> {
                 sliver: tracksState.when(
                   error: (_, __) => SliverToBoxAdapter(child: Container()),
                   loading: () => const SliverToBoxAdapter(
-                    child: Center(
-                      child: CircularProgressIndicator(),
-                    ),
+                    child: Loader(),
                   ),
                   data: (tracks) {
                     return TracksList(

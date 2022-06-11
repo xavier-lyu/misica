@@ -6,6 +6,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/charts/presentation/chart_widget.dart';
 import 'package:misica/src/music/charts/shared/providers.dart';
 import 'package:misica/src/music/core/presentation/divider_widget.dart';
+import 'package:misica/src/music/core/presentation/loader.dart';
 import 'package:misica/src/music/core/presentation/retry_widget.dart';
 
 class ChartsList extends StatefulHookConsumerWidget {
@@ -39,15 +40,12 @@ class _ChartsListState extends ConsumerState<ChartsList> {
         return state.maybeWhen(
           orElse: () => SliverFillRemaining(
             child: RetryWidget(
-              onRetry: () {
-                ref.read(chartsNotifierProvider.notifier).fetchTopCharts();
-              },
+              onRetry: () =>
+                  ref.read(chartsNotifierProvider.notifier).fetchTopCharts(),
             ),
           ),
           loading: () => const SliverFillRemaining(
-            child: Center(
-              child: CircularProgressIndicator(),
-            ),
+            child: Loader(),
           ),
           data: (charts) => SliverList(
             delegate: SliverChildBuilderDelegate(
