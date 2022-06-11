@@ -133,6 +133,7 @@ class StationAttributes with _$StationAttributes {
     required int? durationInMillis,
     required String name,
     required String? url,
+    required EditorialNotes? editorialNotes,
   }) = _StationAttributes;
 
   factory StationAttributes.fromJson(Map<String, dynamic> json) =>
@@ -151,4 +152,15 @@ class CuratorAttributes with _$CuratorAttributes {
 
   factory CuratorAttributes.fromJson(Map<String, dynamic> json) =>
       _$CuratorAttributesFromJson(json);
+}
+
+@freezed
+class GenreAttributes with _$GenreAttributes {
+  const GenreAttributes._();
+  const factory GenreAttributes({
+    required String name,
+  }) = _GenreAttributes;
+
+  factory GenreAttributes.fromJson(Map<String, dynamic> json) =>
+      _$GenreAttributesFromJson(json);
 }

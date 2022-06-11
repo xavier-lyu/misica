@@ -32,6 +32,8 @@ ResourceDTO _$ResourceDTOFromJson(Map<String, dynamic> json) {
       return MusicVideoDTO.fromJson(json);
     case 'curator':
       return CuratorDTO.fromJson(json);
+    case 'genre':
+      return GenreDTO.fromJson(json);
 
     default:
       throw CheckedFromJsonException(json, 'runtimeType', 'ResourceDTO',
@@ -97,6 +99,9 @@ mixin _$ResourceDTO {
             CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)
         curator,
+    required TResult Function(
+            String id, String type, GenreAttributesDTO? attributes)
+        genre,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -149,6 +154,8 @@ mixin _$ResourceDTO {
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -201,6 +208,8 @@ mixin _$ResourceDTO {
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -214,6 +223,7 @@ mixin _$ResourceDTO {
     required TResult Function(StationDTO value) station,
     required TResult Function(MusicVideoDTO value) musicVideo,
     required TResult Function(CuratorDTO value) curator,
+    required TResult Function(GenreDTO value) genre,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -226,6 +236,7 @@ mixin _$ResourceDTO {
     TResult Function(StationDTO value)? station,
     TResult Function(MusicVideoDTO value)? musicVideo,
     TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -238,6 +249,7 @@ mixin _$ResourceDTO {
     TResult Function(StationDTO value)? station,
     TResult Function(MusicVideoDTO value)? musicVideo,
     TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -507,6 +519,9 @@ class _$ResourceRawDTO extends ResourceRawDTO {
             CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)
         curator,
+    required TResult Function(
+            String id, String type, GenreAttributesDTO? attributes)
+        genre,
   }) {
     return $default(id, type, attributes, relationships, views, meta);
   }
@@ -562,6 +577,8 @@ class _$ResourceRawDTO extends ResourceRawDTO {
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
   }) {
     return $default?.call(id, type, attributes, relationships, views, meta);
   }
@@ -617,6 +634,8 @@ class _$ResourceRawDTO extends ResourceRawDTO {
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
     required TResult orElse(),
   }) {
     if ($default != null) {
@@ -636,6 +655,7 @@ class _$ResourceRawDTO extends ResourceRawDTO {
     required TResult Function(StationDTO value) station,
     required TResult Function(MusicVideoDTO value) musicVideo,
     required TResult Function(CuratorDTO value) curator,
+    required TResult Function(GenreDTO value) genre,
   }) {
     return $default(this);
   }
@@ -651,6 +671,7 @@ class _$ResourceRawDTO extends ResourceRawDTO {
     TResult Function(StationDTO value)? station,
     TResult Function(MusicVideoDTO value)? musicVideo,
     TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
   }) {
     return $default?.call(this);
   }
@@ -666,6 +687,7 @@ class _$ResourceRawDTO extends ResourceRawDTO {
     TResult Function(StationDTO value)? station,
     TResult Function(MusicVideoDTO value)? musicVideo,
     TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
     required TResult orElse(),
   }) {
     if ($default != null) {
@@ -934,6 +956,9 @@ class _$AlbumDTO extends AlbumDTO {
             CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)
         curator,
+    required TResult Function(
+            String id, String type, GenreAttributesDTO? attributes)
+        genre,
   }) {
     return album(id, type, attributes, relationships, views, meta);
   }
@@ -989,6 +1014,8 @@ class _$AlbumDTO extends AlbumDTO {
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
   }) {
     return album?.call(id, type, attributes, relationships, views, meta);
   }
@@ -1044,6 +1071,8 @@ class _$AlbumDTO extends AlbumDTO {
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
     required TResult orElse(),
   }) {
     if (album != null) {
@@ -1063,6 +1092,7 @@ class _$AlbumDTO extends AlbumDTO {
     required TResult Function(StationDTO value) station,
     required TResult Function(MusicVideoDTO value) musicVideo,
     required TResult Function(CuratorDTO value) curator,
+    required TResult Function(GenreDTO value) genre,
   }) {
     return album(this);
   }
@@ -1078,6 +1108,7 @@ class _$AlbumDTO extends AlbumDTO {
     TResult Function(StationDTO value)? station,
     TResult Function(MusicVideoDTO value)? musicVideo,
     TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
   }) {
     return album?.call(this);
   }
@@ -1093,6 +1124,7 @@ class _$AlbumDTO extends AlbumDTO {
     TResult Function(StationDTO value)? station,
     TResult Function(MusicVideoDTO value)? musicVideo,
     TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
     required TResult orElse(),
   }) {
     if (album != null) {
@@ -1363,6 +1395,9 @@ class _$ArtistDTO extends ArtistDTO {
             CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)
         curator,
+    required TResult Function(
+            String id, String type, GenreAttributesDTO? attributes)
+        genre,
   }) {
     return artist(id, type, attributes, relationships, views, meta);
   }
@@ -1418,6 +1453,8 @@ class _$ArtistDTO extends ArtistDTO {
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
   }) {
     return artist?.call(id, type, attributes, relationships, views, meta);
   }
@@ -1473,6 +1510,8 @@ class _$ArtistDTO extends ArtistDTO {
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
     required TResult orElse(),
   }) {
     if (artist != null) {
@@ -1492,6 +1531,7 @@ class _$ArtistDTO extends ArtistDTO {
     required TResult Function(StationDTO value) station,
     required TResult Function(MusicVideoDTO value) musicVideo,
     required TResult Function(CuratorDTO value) curator,
+    required TResult Function(GenreDTO value) genre,
   }) {
     return artist(this);
   }
@@ -1507,6 +1547,7 @@ class _$ArtistDTO extends ArtistDTO {
     TResult Function(StationDTO value)? station,
     TResult Function(MusicVideoDTO value)? musicVideo,
     TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
   }) {
     return artist?.call(this);
   }
@@ -1522,6 +1563,7 @@ class _$ArtistDTO extends ArtistDTO {
     TResult Function(StationDTO value)? station,
     TResult Function(MusicVideoDTO value)? musicVideo,
     TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
     required TResult orElse(),
   }) {
     if (artist != null) {
@@ -1792,6 +1834,9 @@ class _$PlaylistDTO extends PlaylistDTO {
             CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)
         curator,
+    required TResult Function(
+            String id, String type, GenreAttributesDTO? attributes)
+        genre,
   }) {
     return playlist(id, type, attributes, relationships, views, meta);
   }
@@ -1847,6 +1892,8 @@ class _$PlaylistDTO extends PlaylistDTO {
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
   }) {
     return playlist?.call(id, type, attributes, relationships, views, meta);
   }
@@ -1902,6 +1949,8 @@ class _$PlaylistDTO extends PlaylistDTO {
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
     required TResult orElse(),
   }) {
     if (playlist != null) {
@@ -1921,6 +1970,7 @@ class _$PlaylistDTO extends PlaylistDTO {
     required TResult Function(StationDTO value) station,
     required TResult Function(MusicVideoDTO value) musicVideo,
     required TResult Function(CuratorDTO value) curator,
+    required TResult Function(GenreDTO value) genre,
   }) {
     return playlist(this);
   }
@@ -1936,6 +1986,7 @@ class _$PlaylistDTO extends PlaylistDTO {
     TResult Function(StationDTO value)? station,
     TResult Function(MusicVideoDTO value)? musicVideo,
     TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
   }) {
     return playlist?.call(this);
   }
@@ -1951,6 +2002,7 @@ class _$PlaylistDTO extends PlaylistDTO {
     TResult Function(StationDTO value)? station,
     TResult Function(MusicVideoDTO value)? musicVideo,
     TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
     required TResult orElse(),
   }) {
     if (playlist != null) {
@@ -2177,6 +2229,9 @@ class _$SongDTO extends SongDTO {
             CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)
         curator,
+    required TResult Function(
+            String id, String type, GenreAttributesDTO? attributes)
+        genre,
   }) {
     return song(id, type, attributes, relationships);
   }
@@ -2232,6 +2287,8 @@ class _$SongDTO extends SongDTO {
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
   }) {
     return song?.call(id, type, attributes, relationships);
   }
@@ -2287,6 +2344,8 @@ class _$SongDTO extends SongDTO {
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
     required TResult orElse(),
   }) {
     if (song != null) {
@@ -2306,6 +2365,7 @@ class _$SongDTO extends SongDTO {
     required TResult Function(StationDTO value) station,
     required TResult Function(MusicVideoDTO value) musicVideo,
     required TResult Function(CuratorDTO value) curator,
+    required TResult Function(GenreDTO value) genre,
   }) {
     return song(this);
   }
@@ -2321,6 +2381,7 @@ class _$SongDTO extends SongDTO {
     TResult Function(StationDTO value)? station,
     TResult Function(MusicVideoDTO value)? musicVideo,
     TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
   }) {
     return song?.call(this);
   }
@@ -2336,6 +2397,7 @@ class _$SongDTO extends SongDTO {
     TResult Function(StationDTO value)? station,
     TResult Function(MusicVideoDTO value)? musicVideo,
     TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
     required TResult orElse(),
   }) {
     if (song != null) {
@@ -2532,6 +2594,9 @@ class _$StationDTO extends StationDTO {
             CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)
         curator,
+    required TResult Function(
+            String id, String type, GenreAttributesDTO? attributes)
+        genre,
   }) {
     return station(id, type, attributes);
   }
@@ -2587,6 +2652,8 @@ class _$StationDTO extends StationDTO {
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
   }) {
     return station?.call(id, type, attributes);
   }
@@ -2642,6 +2709,8 @@ class _$StationDTO extends StationDTO {
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
     required TResult orElse(),
   }) {
     if (station != null) {
@@ -2661,6 +2730,7 @@ class _$StationDTO extends StationDTO {
     required TResult Function(StationDTO value) station,
     required TResult Function(MusicVideoDTO value) musicVideo,
     required TResult Function(CuratorDTO value) curator,
+    required TResult Function(GenreDTO value) genre,
   }) {
     return station(this);
   }
@@ -2676,6 +2746,7 @@ class _$StationDTO extends StationDTO {
     TResult Function(StationDTO value)? station,
     TResult Function(MusicVideoDTO value)? musicVideo,
     TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
   }) {
     return station?.call(this);
   }
@@ -2691,6 +2762,7 @@ class _$StationDTO extends StationDTO {
     TResult Function(StationDTO value)? station,
     TResult Function(MusicVideoDTO value)? musicVideo,
     TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
     required TResult orElse(),
   }) {
     if (station != null) {
@@ -2954,6 +3026,9 @@ class _$MusicVideoDTO extends MusicVideoDTO {
             CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)
         curator,
+    required TResult Function(
+            String id, String type, GenreAttributesDTO? attributes)
+        genre,
   }) {
     return musicVideo(id, type, attributes, relationships, views, meta);
   }
@@ -3009,6 +3084,8 @@ class _$MusicVideoDTO extends MusicVideoDTO {
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
   }) {
     return musicVideo?.call(id, type, attributes, relationships, views, meta);
   }
@@ -3064,6 +3141,8 @@ class _$MusicVideoDTO extends MusicVideoDTO {
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
     required TResult orElse(),
   }) {
     if (musicVideo != null) {
@@ -3083,6 +3162,7 @@ class _$MusicVideoDTO extends MusicVideoDTO {
     required TResult Function(StationDTO value) station,
     required TResult Function(MusicVideoDTO value) musicVideo,
     required TResult Function(CuratorDTO value) curator,
+    required TResult Function(GenreDTO value) genre,
   }) {
     return musicVideo(this);
   }
@@ -3098,6 +3178,7 @@ class _$MusicVideoDTO extends MusicVideoDTO {
     TResult Function(StationDTO value)? station,
     TResult Function(MusicVideoDTO value)? musicVideo,
     TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
   }) {
     return musicVideo?.call(this);
   }
@@ -3113,6 +3194,7 @@ class _$MusicVideoDTO extends MusicVideoDTO {
     TResult Function(StationDTO value)? station,
     TResult Function(MusicVideoDTO value)? musicVideo,
     TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
     required TResult orElse(),
   }) {
     if (musicVideo != null) {
@@ -3343,6 +3425,9 @@ class _$CuratorDTO extends CuratorDTO {
             CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)
         curator,
+    required TResult Function(
+            String id, String type, GenreAttributesDTO? attributes)
+        genre,
   }) {
     return curator(id, type, attributes, relationships);
   }
@@ -3398,6 +3483,8 @@ class _$CuratorDTO extends CuratorDTO {
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
   }) {
     return curator?.call(id, type, attributes, relationships);
   }
@@ -3453,6 +3540,8 @@ class _$CuratorDTO extends CuratorDTO {
     TResult Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
     required TResult orElse(),
   }) {
     if (curator != null) {
@@ -3472,6 +3561,7 @@ class _$CuratorDTO extends CuratorDTO {
     required TResult Function(StationDTO value) station,
     required TResult Function(MusicVideoDTO value) musicVideo,
     required TResult Function(CuratorDTO value) curator,
+    required TResult Function(GenreDTO value) genre,
   }) {
     return curator(this);
   }
@@ -3487,6 +3577,7 @@ class _$CuratorDTO extends CuratorDTO {
     TResult Function(StationDTO value)? station,
     TResult Function(MusicVideoDTO value)? musicVideo,
     TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
   }) {
     return curator?.call(this);
   }
@@ -3502,6 +3593,7 @@ class _$CuratorDTO extends CuratorDTO {
     TResult Function(StationDTO value)? station,
     TResult Function(MusicVideoDTO value)? musicVideo,
     TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
     required TResult orElse(),
   }) {
     if (curator != null) {
@@ -3537,6 +3629,365 @@ abstract class CuratorDTO extends ResourceDTO {
   @override
   @JsonKey(ignore: true)
   _$$CuratorDTOCopyWith<_$CuratorDTO> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GenreDTOCopyWith<$Res> implements $ResourceDTOCopyWith<$Res> {
+  factory _$$GenreDTOCopyWith(
+          _$GenreDTO value, $Res Function(_$GenreDTO) then) =
+      __$$GenreDTOCopyWithImpl<$Res>;
+  @override
+  $Res call({String id, String type, GenreAttributesDTO? attributes});
+
+  $GenreAttributesDTOCopyWith<$Res>? get attributes;
+}
+
+/// @nodoc
+class __$$GenreDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
+    implements _$$GenreDTOCopyWith<$Res> {
+  __$$GenreDTOCopyWithImpl(_$GenreDTO _value, $Res Function(_$GenreDTO) _then)
+      : super(_value, (v) => _then(v as _$GenreDTO));
+
+  @override
+  _$GenreDTO get _value => super._value as _$GenreDTO;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? type = freezed,
+    Object? attributes = freezed,
+  }) {
+    return _then(_$GenreDTO(
+      id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      attributes == freezed
+          ? _value.attributes
+          : attributes // ignore: cast_nullable_to_non_nullable
+              as GenreAttributesDTO?,
+    ));
+  }
+
+  @override
+  $GenreAttributesDTOCopyWith<$Res>? get attributes {
+    if (_value.attributes == null) {
+      return null;
+    }
+
+    return $GenreAttributesDTOCopyWith<$Res>(_value.attributes!, (value) {
+      return _then(_value.copyWith(attributes: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$GenreDTO extends GenreDTO {
+  const _$GenreDTO(this.id, this.type, this.attributes, {final String? $type})
+      : $type = $type ?? 'genre',
+        super._();
+
+  factory _$GenreDTO.fromJson(Map<String, dynamic> json) =>
+      _$$GenreDTOFromJson(json);
+
+  @override
+  final String id;
+  @override
+  final String type;
+  @override
+  final GenreAttributesDTO? attributes;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'ResourceDTO.genre(id: $id, type: $type, attributes: $attributes)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GenreDTO &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality()
+                .equals(other.attributes, attributes));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(attributes));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$GenreDTOCopyWith<_$GenreDTO> get copyWith =>
+      __$$GenreDTOCopyWithImpl<_$GenreDTO>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(
+            String id,
+            String type,
+            Map<String, dynamic>? attributes,
+            Map<String, ResourceRelationshipDTO>? relationships,
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
+        $default, {
+    required TResult Function(
+            String id,
+            String type,
+            AlbumAttributesDTO? attributes,
+            AlbumRelationshipsDTO? relationships,
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
+        album,
+    required TResult Function(
+            String id,
+            String type,
+            ArtistAttributesDTO? attributes,
+            ArtistRelationshipsDTO? relationships,
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
+        artist,
+    required TResult Function(
+            String id,
+            String type,
+            PlaylistAttributesDTO? attributes,
+            PlaylistRelationshipsDTO? relationships,
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
+        playlist,
+    required TResult Function(String id, String type,
+            SongAttributesDTO? attributes, SongRelationshipsDTO? relationships)
+        song,
+    required TResult Function(
+            String id, String type, StationAttributesDTO? attributes)
+        station,
+    required TResult Function(
+            String id,
+            String type,
+            MusicVideoAttributesDTO? attributes,
+            MusicVideoRelationshipsDTO? relationships,
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)
+        musicVideo,
+    required TResult Function(
+            String id,
+            String type,
+            CuratorAttributesDTO? attributes,
+            CuratorRelationshipsDTO? relationships)
+        curator,
+    required TResult Function(
+            String id, String type, GenreAttributesDTO? attributes)
+        genre,
+  }) {
+    return genre(id, type, attributes);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(
+            String id,
+            String type,
+            Map<String, dynamic>? attributes,
+            Map<String, ResourceRelationshipDTO>? relationships,
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
+        $default, {
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributesDTO? attributes,
+            AlbumRelationshipsDTO? relationships,
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
+        album,
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributesDTO? attributes,
+            ArtistRelationshipsDTO? relationships,
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
+        artist,
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributesDTO? attributes,
+            PlaylistRelationshipsDTO? relationships,
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
+        playlist,
+    TResult Function(String id, String type, SongAttributesDTO? attributes,
+            SongRelationshipsDTO? relationships)?
+        song,
+    TResult Function(String id, String type, StationAttributesDTO? attributes)?
+        station,
+    TResult Function(
+            String id,
+            String type,
+            MusicVideoAttributesDTO? attributes,
+            MusicVideoRelationshipsDTO? relationships,
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
+        musicVideo,
+    TResult Function(String id, String type, CuratorAttributesDTO? attributes,
+            CuratorRelationshipsDTO? relationships)?
+        curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
+  }) {
+    return genre?.call(id, type, attributes);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(
+            String id,
+            String type,
+            Map<String, dynamic>? attributes,
+            Map<String, ResourceRelationshipDTO>? relationships,
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
+        $default, {
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributesDTO? attributes,
+            AlbumRelationshipsDTO? relationships,
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
+        album,
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributesDTO? attributes,
+            ArtistRelationshipsDTO? relationships,
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
+        artist,
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributesDTO? attributes,
+            PlaylistRelationshipsDTO? relationships,
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
+        playlist,
+    TResult Function(String id, String type, SongAttributesDTO? attributes,
+            SongRelationshipsDTO? relationships)?
+        song,
+    TResult Function(String id, String type, StationAttributesDTO? attributes)?
+        station,
+    TResult Function(
+            String id,
+            String type,
+            MusicVideoAttributesDTO? attributes,
+            MusicVideoRelationshipsDTO? relationships,
+            Map<String, ResourceViewDTO>? views,
+            ResourceMetaDTO? meta)?
+        musicVideo,
+    TResult Function(String id, String type, CuratorAttributesDTO? attributes,
+            CuratorRelationshipsDTO? relationships)?
+        curator,
+    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+        genre,
+    required TResult orElse(),
+  }) {
+    if (genre != null) {
+      return genre(id, type, attributes);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(ResourceRawDTO value) $default, {
+    required TResult Function(AlbumDTO value) album,
+    required TResult Function(ArtistDTO value) artist,
+    required TResult Function(PlaylistDTO value) playlist,
+    required TResult Function(SongDTO value) song,
+    required TResult Function(StationDTO value) station,
+    required TResult Function(MusicVideoDTO value) musicVideo,
+    required TResult Function(CuratorDTO value) curator,
+    required TResult Function(GenreDTO value) genre,
+  }) {
+    return genre(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(ResourceRawDTO value)? $default, {
+    TResult Function(AlbumDTO value)? album,
+    TResult Function(ArtistDTO value)? artist,
+    TResult Function(PlaylistDTO value)? playlist,
+    TResult Function(SongDTO value)? song,
+    TResult Function(StationDTO value)? station,
+    TResult Function(MusicVideoDTO value)? musicVideo,
+    TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
+  }) {
+    return genre?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(ResourceRawDTO value)? $default, {
+    TResult Function(AlbumDTO value)? album,
+    TResult Function(ArtistDTO value)? artist,
+    TResult Function(PlaylistDTO value)? playlist,
+    TResult Function(SongDTO value)? song,
+    TResult Function(StationDTO value)? station,
+    TResult Function(MusicVideoDTO value)? musicVideo,
+    TResult Function(CuratorDTO value)? curator,
+    TResult Function(GenreDTO value)? genre,
+    required TResult orElse(),
+  }) {
+    if (genre != null) {
+      return genre(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$GenreDTOToJson(this);
+  }
+}
+
+abstract class GenreDTO extends ResourceDTO {
+  const factory GenreDTO(final String id, final String type,
+      final GenreAttributesDTO? attributes) = _$GenreDTO;
+  const GenreDTO._() : super._();
+
+  factory GenreDTO.fromJson(Map<String, dynamic> json) = _$GenreDTO.fromJson;
+
+  @override
+  String get id => throw _privateConstructorUsedError;
+  @override
+  String get type => throw _privateConstructorUsedError;
+  GenreAttributesDTO? get attributes => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$GenreDTOCopyWith<_$GenreDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

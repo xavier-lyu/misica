@@ -144,3 +144,20 @@ Map<String, dynamic> _$$CuratorToJson(_$Curator instance) => <String, dynamic>{
       'attributes': instance.attributes?.toJson(),
       'runtimeType': instance.$type,
     };
+
+_$Genre _$$GenreFromJson(Map json) => _$Genre(
+      id: json['id'] as String,
+      type: json['type'] as String,
+      attributes: json['attributes'] == null
+          ? null
+          : GenreAttributes.fromJson(
+              Map<String, dynamic>.from(json['attributes'] as Map)),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$GenreToJson(_$Genre instance) => <String, dynamic>{
+      'id': instance.id,
+      'type': instance.type,
+      'attributes': instance.attributes?.toJson(),
+      'runtimeType': instance.$type,
+    };

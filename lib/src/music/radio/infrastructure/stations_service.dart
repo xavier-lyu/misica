@@ -11,4 +11,15 @@ abstract class StationsService {
 
   @GET('/me/recent/radio-stations?art[url]=f')
   Future<MusicResponse> fetchRecentStations();
+
+  @GET('/catalog/{storefront}/station-genres')
+  Future<MusicResponse> fetchStationGenres(
+    @Path('storefront') String storefront,
+  );
+
+  @GET('/catalog/{storefront}/station-genres/{id}/stations')
+  Future<MusicResponse> fetchGenreStations(
+    @Path('storefront') String storefront,
+    @Path('id') String id,
+  );
 }

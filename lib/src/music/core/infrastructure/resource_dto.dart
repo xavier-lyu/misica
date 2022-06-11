@@ -78,6 +78,12 @@ class ResourceDTO with _$ResourceDTO {
     CuratorRelationshipsDTO? relationships,
   ) = CuratorDTO;
 
+  const factory ResourceDTO.genre(
+    String id,
+    String type,
+    GenreAttributesDTO? attributes,
+  ) = GenreDTO;
+
   factory ResourceDTO.fromJson(Map<String, dynamic> json) =>
       _$ResourceDTOFromJson(json);
 
@@ -133,6 +139,11 @@ class ResourceDTO with _$ResourceDTO {
         type: type,
         attributes: value.attributes?.toDomain(),
         relationships: value.relationships?.toDomain(),
+      ),
+      genre: (value) => Genre(
+        id: id,
+        type: type,
+        attributes: value.attributes?.toDomain(),
       ),
     );
   }

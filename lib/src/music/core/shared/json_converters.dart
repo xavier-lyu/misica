@@ -16,13 +16,15 @@ class ResourceDTOConverter
       return PlaylistDTO.fromJson(json);
     } else if (dtoType.endsWith('songs')) {
       return SongDTO.fromJson(json);
-    } else if (dtoType.startsWith('station')) {
+    } else if (RegExp(r'^station(s)?$').hasMatch(dtoType)) {
       return StationDTO.fromJson(json);
     } else if (dtoType.startsWith('music-video')) {
       return MusicVideoDTO.fromJson(json);
     } else if (dtoType.endsWith('curators') ||
         dtoType.endsWith('social-profiles')) {
       return CuratorDTO.fromJson(json);
+    } else if (dtoType.endsWith('genres')) {
+      return GenreDTO.fromJson(json);
     } else {
       return ResourceRawDTO.fromJson(json);
     }

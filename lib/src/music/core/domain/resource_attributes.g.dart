@@ -209,6 +209,10 @@ _$_StationAttributes _$$_StationAttributesFromJson(Map json) =>
       durationInMillis: json['durationInMillis'] as int?,
       name: json['name'] as String,
       url: json['url'] as String?,
+      editorialNotes: json['editorialNotes'] == null
+          ? null
+          : EditorialNotes.fromJson(
+              Map<String, dynamic>.from(json['editorialNotes'] as Map)),
     );
 
 Map<String, dynamic> _$$_StationAttributesToJson(
@@ -219,6 +223,7 @@ Map<String, dynamic> _$$_StationAttributesToJson(
       'durationInMillis': instance.durationInMillis,
       'name': instance.name,
       'url': instance.url,
+      'editorialNotes': instance.editorialNotes?.toJson(),
     };
 
 _$_CuratorAttributes _$$_CuratorAttributesFromJson(Map json) =>
@@ -236,4 +241,13 @@ Map<String, dynamic> _$$_CuratorAttributesToJson(
       'artwork': instance.artwork?.toJson(),
       'name': instance.name,
       'url': instance.url,
+    };
+
+_$_GenreAttributes _$$_GenreAttributesFromJson(Map json) => _$_GenreAttributes(
+      name: json['name'] as String,
+    );
+
+Map<String, dynamic> _$$_GenreAttributesToJson(_$_GenreAttributes instance) =>
+    <String, dynamic>{
+      'name': instance.name,
     };

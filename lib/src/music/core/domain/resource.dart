@@ -68,6 +68,12 @@ class Resource with _$Resource {
     @JsonKey(ignore: true) CuratorRelationships? relationships,
   }) = Curator;
 
+  const factory Resource.genre({
+    required String id,
+    required String type,
+    required GenreAttributes? attributes,
+  }) = Genre;
+
   factory Resource.fromJson(Map<String, dynamic> json) =>
       _$ResourceFromJson(json);
 
@@ -82,6 +88,7 @@ class Resource with _$Resource {
         },
         station: (station) => station.attributes?.artwork,
         curator: (curator) => curator.attributes?.artwork,
+        genre: (_) => null,
       );
 
   String get creatorName =>
@@ -95,6 +102,7 @@ class Resource with _$Resource {
         song: (song) => song.attributes?.artistName,
         station: (station) => null,
         curator: (curator) => null,
+        genre: (_) => null,
       ) ??
       '';
 
@@ -108,6 +116,7 @@ class Resource with _$Resource {
         song: (song) => song.attributes?.name,
         station: (station) => station.attributes?.name,
         curator: (curator) => curator.attributes?.name,
+        genre: (genre) => genre.attributes?.name,
       ) ??
       '';
 }

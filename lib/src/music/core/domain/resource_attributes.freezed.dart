@@ -2037,6 +2037,7 @@ mixin _$StationAttributes {
   int? get durationInMillis => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
+  EditorialNotes? get editorialNotes => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -2054,10 +2055,12 @@ abstract class $StationAttributesCopyWith<$Res> {
       PlayParams? playParams,
       int? durationInMillis,
       String name,
-      String? url});
+      String? url,
+      EditorialNotes? editorialNotes});
 
   $ArtworkCopyWith<$Res>? get artwork;
   $PlayParamsCopyWith<$Res>? get playParams;
+  $EditorialNotesCopyWith<$Res>? get editorialNotes;
 }
 
 /// @nodoc
@@ -2076,6 +2079,7 @@ class _$StationAttributesCopyWithImpl<$Res>
     Object? durationInMillis = freezed,
     Object? name = freezed,
     Object? url = freezed,
+    Object? editorialNotes = freezed,
   }) {
     return _then(_value.copyWith(
       artwork: artwork == freezed
@@ -2098,6 +2102,10 @@ class _$StationAttributesCopyWithImpl<$Res>
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
+      editorialNotes: editorialNotes == freezed
+          ? _value.editorialNotes
+          : editorialNotes // ignore: cast_nullable_to_non_nullable
+              as EditorialNotes?,
     ));
   }
 
@@ -2122,6 +2130,17 @@ class _$StationAttributesCopyWithImpl<$Res>
       return _then(_value.copyWith(playParams: value));
     });
   }
+
+  @override
+  $EditorialNotesCopyWith<$Res>? get editorialNotes {
+    if (_value.editorialNotes == null) {
+      return null;
+    }
+
+    return $EditorialNotesCopyWith<$Res>(_value.editorialNotes!, (value) {
+      return _then(_value.copyWith(editorialNotes: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -2136,12 +2155,15 @@ abstract class _$$_StationAttributesCopyWith<$Res>
       PlayParams? playParams,
       int? durationInMillis,
       String name,
-      String? url});
+      String? url,
+      EditorialNotes? editorialNotes});
 
   @override
   $ArtworkCopyWith<$Res>? get artwork;
   @override
   $PlayParamsCopyWith<$Res>? get playParams;
+  @override
+  $EditorialNotesCopyWith<$Res>? get editorialNotes;
 }
 
 /// @nodoc
@@ -2162,6 +2184,7 @@ class __$$_StationAttributesCopyWithImpl<$Res>
     Object? durationInMillis = freezed,
     Object? name = freezed,
     Object? url = freezed,
+    Object? editorialNotes = freezed,
   }) {
     return _then(_$_StationAttributes(
       artwork: artwork == freezed
@@ -2184,6 +2207,10 @@ class __$$_StationAttributesCopyWithImpl<$Res>
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
+      editorialNotes: editorialNotes == freezed
+          ? _value.editorialNotes
+          : editorialNotes // ignore: cast_nullable_to_non_nullable
+              as EditorialNotes?,
     ));
   }
 }
@@ -2196,7 +2223,8 @@ class _$_StationAttributes extends _StationAttributes {
       required this.playParams,
       required this.durationInMillis,
       required this.name,
-      required this.url})
+      required this.url,
+      required this.editorialNotes})
       : super._();
 
   factory _$_StationAttributes.fromJson(Map<String, dynamic> json) =>
@@ -2212,10 +2240,12 @@ class _$_StationAttributes extends _StationAttributes {
   final String name;
   @override
   final String? url;
+  @override
+  final EditorialNotes? editorialNotes;
 
   @override
   String toString() {
-    return 'StationAttributes(artwork: $artwork, playParams: $playParams, durationInMillis: $durationInMillis, name: $name, url: $url)';
+    return 'StationAttributes(artwork: $artwork, playParams: $playParams, durationInMillis: $durationInMillis, name: $name, url: $url, editorialNotes: $editorialNotes)';
   }
 
   @override
@@ -2229,7 +2259,9 @@ class _$_StationAttributes extends _StationAttributes {
             const DeepCollectionEquality()
                 .equals(other.durationInMillis, durationInMillis) &&
             const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.url, url));
+            const DeepCollectionEquality().equals(other.url, url) &&
+            const DeepCollectionEquality()
+                .equals(other.editorialNotes, editorialNotes));
   }
 
   @JsonKey(ignore: true)
@@ -2240,7 +2272,8 @@ class _$_StationAttributes extends _StationAttributes {
       const DeepCollectionEquality().hash(playParams),
       const DeepCollectionEquality().hash(durationInMillis),
       const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(url));
+      const DeepCollectionEquality().hash(url),
+      const DeepCollectionEquality().hash(editorialNotes));
 
   @JsonKey(ignore: true)
   @override
@@ -2260,7 +2293,8 @@ abstract class _StationAttributes extends StationAttributes {
       required final PlayParams? playParams,
       required final int? durationInMillis,
       required final String name,
-      required final String? url}) = _$_StationAttributes;
+      required final String? url,
+      required final EditorialNotes? editorialNotes}) = _$_StationAttributes;
   const _StationAttributes._() : super._();
 
   factory _StationAttributes.fromJson(Map<String, dynamic> json) =
@@ -2276,6 +2310,8 @@ abstract class _StationAttributes extends StationAttributes {
   String get name => throw _privateConstructorUsedError;
   @override
   String? get url => throw _privateConstructorUsedError;
+  @override
+  EditorialNotes? get editorialNotes => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_StationAttributesCopyWith<_$_StationAttributes> get copyWith =>
@@ -2469,5 +2505,139 @@ abstract class _CuratorAttributes extends CuratorAttributes {
   @override
   @JsonKey(ignore: true)
   _$$_CuratorAttributesCopyWith<_$_CuratorAttributes> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+GenreAttributes _$GenreAttributesFromJson(Map<String, dynamic> json) {
+  return _GenreAttributes.fromJson(json);
+}
+
+/// @nodoc
+mixin _$GenreAttributes {
+  String get name => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GenreAttributesCopyWith<GenreAttributes> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $GenreAttributesCopyWith<$Res> {
+  factory $GenreAttributesCopyWith(
+          GenreAttributes value, $Res Function(GenreAttributes) then) =
+      _$GenreAttributesCopyWithImpl<$Res>;
+  $Res call({String name});
+}
+
+/// @nodoc
+class _$GenreAttributesCopyWithImpl<$Res>
+    implements $GenreAttributesCopyWith<$Res> {
+  _$GenreAttributesCopyWithImpl(this._value, this._then);
+
+  final GenreAttributes _value;
+  // ignore: unused_field
+  final $Res Function(GenreAttributes) _then;
+
+  @override
+  $Res call({
+    Object? name = freezed,
+  }) {
+    return _then(_value.copyWith(
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$$_GenreAttributesCopyWith<$Res>
+    implements $GenreAttributesCopyWith<$Res> {
+  factory _$$_GenreAttributesCopyWith(
+          _$_GenreAttributes value, $Res Function(_$_GenreAttributes) then) =
+      __$$_GenreAttributesCopyWithImpl<$Res>;
+  @override
+  $Res call({String name});
+}
+
+/// @nodoc
+class __$$_GenreAttributesCopyWithImpl<$Res>
+    extends _$GenreAttributesCopyWithImpl<$Res>
+    implements _$$_GenreAttributesCopyWith<$Res> {
+  __$$_GenreAttributesCopyWithImpl(
+      _$_GenreAttributes _value, $Res Function(_$_GenreAttributes) _then)
+      : super(_value, (v) => _then(v as _$_GenreAttributes));
+
+  @override
+  _$_GenreAttributes get _value => super._value as _$_GenreAttributes;
+
+  @override
+  $Res call({
+    Object? name = freezed,
+  }) {
+    return _then(_$_GenreAttributes(
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_GenreAttributes extends _GenreAttributes {
+  const _$_GenreAttributes({required this.name}) : super._();
+
+  factory _$_GenreAttributes.fromJson(Map<String, dynamic> json) =>
+      _$$_GenreAttributesFromJson(json);
+
+  @override
+  final String name;
+
+  @override
+  String toString() {
+    return 'GenreAttributes(name: $name)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_GenreAttributes &&
+            const DeepCollectionEquality().equals(other.name, name));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(name));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_GenreAttributesCopyWith<_$_GenreAttributes> get copyWith =>
+      __$$_GenreAttributesCopyWithImpl<_$_GenreAttributes>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_GenreAttributesToJson(this);
+  }
+}
+
+abstract class _GenreAttributes extends GenreAttributes {
+  const factory _GenreAttributes({required final String name}) =
+      _$_GenreAttributes;
+  const _GenreAttributes._() : super._();
+
+  factory _GenreAttributes.fromJson(Map<String, dynamic> json) =
+      _$_GenreAttributes.fromJson;
+
+  @override
+  String get name => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_GenreAttributesCopyWith<_$_GenreAttributes> get copyWith =>
       throw _privateConstructorUsedError;
 }

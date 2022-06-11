@@ -261,7 +261,7 @@ Map<String, dynamic> _$$_SongAttributesDTOToJson(
 
 _$_StationAttributesDTO _$$_StationAttributesDTOFromJson(Map json) =>
     _$_StationAttributesDTO(
-      isLive: json['isLive'] as bool,
+      isLive: json['isLive'] as bool?,
       artwork: json['artwork'] == null
           ? null
           : ArtworkDTO.fromJson(
@@ -316,4 +316,19 @@ Map<String, dynamic> _$$_CuratorAttributesDTOToJson(
       'editorialNotes': instance.editorialNotes?.toJson(),
       'name': instance.name,
       'url': instance.url,
+    };
+
+_$_GenreAttributesDTO _$$_GenreAttributesDTOFromJson(Map json) =>
+    _$_GenreAttributesDTO(
+      parentId: json['parentId'] as String?,
+      parentName: json['parentName'] as String?,
+      name: json['name'] as String,
+    );
+
+Map<String, dynamic> _$$_GenreAttributesDTOToJson(
+        _$_GenreAttributesDTO instance) =>
+    <String, dynamic>{
+      'parentId': instance.parentId,
+      'parentName': instance.parentName,
+      'name': instance.name,
     };

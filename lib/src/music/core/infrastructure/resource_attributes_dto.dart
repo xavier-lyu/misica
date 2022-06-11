@@ -205,7 +205,7 @@ class SongAttributesDTO with _$SongAttributesDTO {
 class StationAttributesDTO with _$StationAttributesDTO {
   const StationAttributesDTO._();
   const factory StationAttributesDTO({
-    required bool isLive,
+    bool? isLive,
     ArtworkDTO? artwork,
     PlayParamsDTO? playParams,
     EditorialNotesDTO? editorialNotes,
@@ -226,6 +226,7 @@ class StationAttributesDTO with _$StationAttributesDTO {
       durationInMillis: durationInMillis,
       name: name,
       url: url,
+      editorialNotes: editorialNotes?.toDomain(),
     );
   }
 }
@@ -249,5 +250,22 @@ class CuratorAttributesDTO with _$CuratorAttributesDTO {
       name: name,
       url: url,
     );
+  }
+}
+
+@freezed
+class GenreAttributesDTO with _$GenreAttributesDTO {
+  const GenreAttributesDTO._();
+  const factory GenreAttributesDTO({
+    String? parentId,
+    String? parentName,
+    required String name,
+  }) = _GenreAttributesDTO;
+
+  factory GenreAttributesDTO.fromJson(Map<String, dynamic> json) =>
+      _$GenreAttributesDTOFromJson(json);
+
+  GenreAttributes toDomain() {
+    return GenreAttributes(name: name);
   }
 }

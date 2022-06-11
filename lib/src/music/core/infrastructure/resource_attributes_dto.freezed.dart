@@ -2493,7 +2493,7 @@ StationAttributesDTO _$StationAttributesDTOFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$StationAttributesDTO {
-  bool get isLive => throw _privateConstructorUsedError;
+  bool? get isLive => throw _privateConstructorUsedError;
   ArtworkDTO? get artwork => throw _privateConstructorUsedError;
   PlayParamsDTO? get playParams => throw _privateConstructorUsedError;
   EditorialNotesDTO? get editorialNotes => throw _privateConstructorUsedError;
@@ -2515,7 +2515,7 @@ abstract class $StationAttributesDTOCopyWith<$Res> {
           $Res Function(StationAttributesDTO) then) =
       _$StationAttributesDTOCopyWithImpl<$Res>;
   $Res call(
-      {bool isLive,
+      {bool? isLive,
       ArtworkDTO? artwork,
       PlayParamsDTO? playParams,
       EditorialNotesDTO? editorialNotes,
@@ -2555,7 +2555,7 @@ class _$StationAttributesDTOCopyWithImpl<$Res>
       isLive: isLive == freezed
           ? _value.isLive
           : isLive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       artwork: artwork == freezed
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
@@ -2633,7 +2633,7 @@ abstract class _$$_StationAttributesDTOCopyWith<$Res>
       __$$_StationAttributesDTOCopyWithImpl<$Res>;
   @override
   $Res call(
-      {bool isLive,
+      {bool? isLive,
       ArtworkDTO? artwork,
       PlayParamsDTO? playParams,
       EditorialNotesDTO? editorialNotes,
@@ -2678,7 +2678,7 @@ class __$$_StationAttributesDTOCopyWithImpl<$Res>
       isLive: isLive == freezed
           ? _value.isLive
           : isLive // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       artwork: artwork == freezed
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
@@ -2719,7 +2719,7 @@ class __$$_StationAttributesDTOCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_StationAttributesDTO extends _StationAttributesDTO {
   const _$_StationAttributesDTO(
-      {required this.isLive,
+      {this.isLive,
       this.artwork,
       this.playParams,
       this.editorialNotes,
@@ -2734,7 +2734,7 @@ class _$_StationAttributesDTO extends _StationAttributesDTO {
       _$$_StationAttributesDTOFromJson(json);
 
   @override
-  final bool isLive;
+  final bool? isLive;
   @override
   final ArtworkDTO? artwork;
   @override
@@ -2805,7 +2805,7 @@ class _$_StationAttributesDTO extends _StationAttributesDTO {
 
 abstract class _StationAttributesDTO extends StationAttributesDTO {
   const factory _StationAttributesDTO(
-      {required final bool isLive,
+      {final bool? isLive,
       final ArtworkDTO? artwork,
       final PlayParamsDTO? playParams,
       final EditorialNotesDTO? editorialNotes,
@@ -2820,7 +2820,7 @@ abstract class _StationAttributesDTO extends StationAttributesDTO {
       _$_StationAttributesDTO.fromJson;
 
   @override
-  bool get isLive => throw _privateConstructorUsedError;
+  bool? get isLive => throw _privateConstructorUsedError;
   @override
   ArtworkDTO? get artwork => throw _privateConstructorUsedError;
   @override
@@ -3071,5 +3071,180 @@ abstract class _CuratorAttributesDTO extends CuratorAttributesDTO {
   @override
   @JsonKey(ignore: true)
   _$$_CuratorAttributesDTOCopyWith<_$_CuratorAttributesDTO> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+GenreAttributesDTO _$GenreAttributesDTOFromJson(Map<String, dynamic> json) {
+  return _GenreAttributesDTO.fromJson(json);
+}
+
+/// @nodoc
+mixin _$GenreAttributesDTO {
+  String? get parentId => throw _privateConstructorUsedError;
+  String? get parentName => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $GenreAttributesDTOCopyWith<GenreAttributesDTO> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $GenreAttributesDTOCopyWith<$Res> {
+  factory $GenreAttributesDTOCopyWith(
+          GenreAttributesDTO value, $Res Function(GenreAttributesDTO) then) =
+      _$GenreAttributesDTOCopyWithImpl<$Res>;
+  $Res call({String? parentId, String? parentName, String name});
+}
+
+/// @nodoc
+class _$GenreAttributesDTOCopyWithImpl<$Res>
+    implements $GenreAttributesDTOCopyWith<$Res> {
+  _$GenreAttributesDTOCopyWithImpl(this._value, this._then);
+
+  final GenreAttributesDTO _value;
+  // ignore: unused_field
+  final $Res Function(GenreAttributesDTO) _then;
+
+  @override
+  $Res call({
+    Object? parentId = freezed,
+    Object? parentName = freezed,
+    Object? name = freezed,
+  }) {
+    return _then(_value.copyWith(
+      parentId: parentId == freezed
+          ? _value.parentId
+          : parentId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      parentName: parentName == freezed
+          ? _value.parentName
+          : parentName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$$_GenreAttributesDTOCopyWith<$Res>
+    implements $GenreAttributesDTOCopyWith<$Res> {
+  factory _$$_GenreAttributesDTOCopyWith(_$_GenreAttributesDTO value,
+          $Res Function(_$_GenreAttributesDTO) then) =
+      __$$_GenreAttributesDTOCopyWithImpl<$Res>;
+  @override
+  $Res call({String? parentId, String? parentName, String name});
+}
+
+/// @nodoc
+class __$$_GenreAttributesDTOCopyWithImpl<$Res>
+    extends _$GenreAttributesDTOCopyWithImpl<$Res>
+    implements _$$_GenreAttributesDTOCopyWith<$Res> {
+  __$$_GenreAttributesDTOCopyWithImpl(
+      _$_GenreAttributesDTO _value, $Res Function(_$_GenreAttributesDTO) _then)
+      : super(_value, (v) => _then(v as _$_GenreAttributesDTO));
+
+  @override
+  _$_GenreAttributesDTO get _value => super._value as _$_GenreAttributesDTO;
+
+  @override
+  $Res call({
+    Object? parentId = freezed,
+    Object? parentName = freezed,
+    Object? name = freezed,
+  }) {
+    return _then(_$_GenreAttributesDTO(
+      parentId: parentId == freezed
+          ? _value.parentId
+          : parentId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      parentName: parentName == freezed
+          ? _value.parentName
+          : parentName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_GenreAttributesDTO extends _GenreAttributesDTO {
+  const _$_GenreAttributesDTO(
+      {this.parentId, this.parentName, required this.name})
+      : super._();
+
+  factory _$_GenreAttributesDTO.fromJson(Map<String, dynamic> json) =>
+      _$$_GenreAttributesDTOFromJson(json);
+
+  @override
+  final String? parentId;
+  @override
+  final String? parentName;
+  @override
+  final String name;
+
+  @override
+  String toString() {
+    return 'GenreAttributesDTO(parentId: $parentId, parentName: $parentName, name: $name)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_GenreAttributesDTO &&
+            const DeepCollectionEquality().equals(other.parentId, parentId) &&
+            const DeepCollectionEquality()
+                .equals(other.parentName, parentName) &&
+            const DeepCollectionEquality().equals(other.name, name));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(parentId),
+      const DeepCollectionEquality().hash(parentName),
+      const DeepCollectionEquality().hash(name));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_GenreAttributesDTOCopyWith<_$_GenreAttributesDTO> get copyWith =>
+      __$$_GenreAttributesDTOCopyWithImpl<_$_GenreAttributesDTO>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_GenreAttributesDTOToJson(this);
+  }
+}
+
+abstract class _GenreAttributesDTO extends GenreAttributesDTO {
+  const factory _GenreAttributesDTO(
+      {final String? parentId,
+      final String? parentName,
+      required final String name}) = _$_GenreAttributesDTO;
+  const _GenreAttributesDTO._() : super._();
+
+  factory _GenreAttributesDTO.fromJson(Map<String, dynamic> json) =
+      _$_GenreAttributesDTO.fromJson;
+
+  @override
+  String? get parentId => throw _privateConstructorUsedError;
+  @override
+  String? get parentName => throw _privateConstructorUsedError;
+  @override
+  String get name => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_GenreAttributesDTOCopyWith<_$_GenreAttributesDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }

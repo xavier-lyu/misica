@@ -236,6 +236,24 @@ Map<String, dynamic> _$$CuratorDTOToJson(_$CuratorDTO instance) =>
       'runtimeType': instance.$type,
     };
 
+_$GenreDTO _$$GenreDTOFromJson(Map json) => _$GenreDTO(
+      json['id'] as String,
+      json['type'] as String,
+      json['attributes'] == null
+          ? null
+          : GenreAttributesDTO.fromJson(
+              Map<String, dynamic>.from(json['attributes'] as Map)),
+      $type: json['runtimeType'] as String?,
+    );
+
+Map<String, dynamic> _$$GenreDTOToJson(_$GenreDTO instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'type': instance.type,
+      'attributes': instance.attributes?.toJson(),
+      'runtimeType': instance.$type,
+    };
+
 _$_ResourceMeta _$$_ResourceMetaFromJson(Map json) => _$_ResourceMeta(
       views: json['views'] == null
           ? null

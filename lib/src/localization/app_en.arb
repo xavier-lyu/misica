@@ -53,5 +53,8 @@
   "@about": {},
 
   "recentlyPlayed": "Recently Played",
-  "@recentlyPlayed": {}
+  "@recentlyPlayed": {},
+
+  "stationsByGenre": "Stations by Genre",
+  "@stationsByGenre": {}
 }

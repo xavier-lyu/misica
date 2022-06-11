@@ -6,6 +6,7 @@ import 'package:misica/src/music/core/presentation/home_page.dart';
 import 'package:misica/src/music/core/presentation/index_page.dart';
 import 'package:misica/src/music/library/presentation/library_page.dart';
 import 'package:misica/src/music/playlist/presentation/playlist_page.dart';
+import 'package:misica/src/music/radio/presentation/genre_stations_page.dart';
 import 'package:misica/src/music/radio/presentation/radio_page.dart';
 import 'package:misica/src/music/search/presentation/search_page.dart';
 import 'package:misica/src/splash/presentation/splash_page.dart';
@@ -27,6 +28,7 @@ import 'package:misica/src/splash/presentation/splash_page.dart';
     AutoRoute(path: '/album', page: AlbumPage),
     AutoRoute(path: '/playlist', page: PlaylistPage),
     AutoRoute(path: '/artist', page: ArtistPage),
+    AutoRoute(path: '/radio/genre/:id/:name/stations', page: GenreStationsPage),
   ],
   replaceInRouteName: 'Page,Route',
 )

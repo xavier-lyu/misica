@@ -32,6 +32,8 @@ Resource _$ResourceFromJson(Map<String, dynamic> json) {
       return Station.fromJson(json);
     case 'curator':
       return Curator.fromJson(json);
+    case 'genre':
+      return Genre.fromJson(json);
 
     default:
       throw CheckedFromJsonException(json, 'runtimeType', 'Resource',
@@ -89,6 +91,9 @@ mixin _$Resource {
             CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)
         curator,
+    required TResult Function(
+            String id, String type, GenreAttributes? attributes)
+        genre,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -127,6 +132,8 @@ mixin _$Resource {
     TResult Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -165,6 +172,8 @@ mixin _$Resource {
     TResult Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -178,6 +187,7 @@ mixin _$Resource {
     required TResult Function(Song value) song,
     required TResult Function(Station value) station,
     required TResult Function(Curator value) curator,
+    required TResult Function(Genre value) genre,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -190,6 +200,7 @@ mixin _$Resource {
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
     TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -202,6 +213,7 @@ mixin _$Resource {
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
     TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -399,6 +411,9 @@ class _$ResourceRaw extends ResourceRaw {
             CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)
         curator,
+    required TResult Function(
+            String id, String type, GenreAttributes? attributes)
+        genre,
   }) {
     return $default(id, type, attributes);
   }
@@ -440,6 +455,8 @@ class _$ResourceRaw extends ResourceRaw {
     TResult Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
   }) {
     return $default?.call(id, type, attributes);
   }
@@ -481,6 +498,8 @@ class _$ResourceRaw extends ResourceRaw {
     TResult Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
     required TResult orElse(),
   }) {
     if ($default != null) {
@@ -500,6 +519,7 @@ class _$ResourceRaw extends ResourceRaw {
     required TResult Function(Song value) song,
     required TResult Function(Station value) station,
     required TResult Function(Curator value) curator,
+    required TResult Function(Genre value) genre,
   }) {
     return $default(this);
   }
@@ -515,6 +535,7 @@ class _$ResourceRaw extends ResourceRaw {
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
     TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
   }) {
     return $default?.call(this);
   }
@@ -530,6 +551,7 @@ class _$ResourceRaw extends ResourceRaw {
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
     TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
     required TResult orElse(),
   }) {
     if ($default != null) {
@@ -764,6 +786,9 @@ class _$Album extends Album {
             CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)
         curator,
+    required TResult Function(
+            String id, String type, GenreAttributes? attributes)
+        genre,
   }) {
     return album(id, type, attributes, relationships, views);
   }
@@ -805,6 +830,8 @@ class _$Album extends Album {
     TResult Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
   }) {
     return album?.call(id, type, attributes, relationships, views);
   }
@@ -846,6 +873,8 @@ class _$Album extends Album {
     TResult Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
     required TResult orElse(),
   }) {
     if (album != null) {
@@ -865,6 +894,7 @@ class _$Album extends Album {
     required TResult Function(Song value) song,
     required TResult Function(Station value) station,
     required TResult Function(Curator value) curator,
+    required TResult Function(Genre value) genre,
   }) {
     return album(this);
   }
@@ -880,6 +910,7 @@ class _$Album extends Album {
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
     TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
   }) {
     return album?.call(this);
   }
@@ -895,6 +926,7 @@ class _$Album extends Album {
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
     TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
     required TResult orElse(),
   }) {
     if (album != null) {
@@ -1134,6 +1166,9 @@ class _$Artist extends Artist {
             CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)
         curator,
+    required TResult Function(
+            String id, String type, GenreAttributes? attributes)
+        genre,
   }) {
     return artist(id, type, attributes, relationships, views);
   }
@@ -1175,6 +1210,8 @@ class _$Artist extends Artist {
     TResult Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
   }) {
     return artist?.call(id, type, attributes, relationships, views);
   }
@@ -1216,6 +1253,8 @@ class _$Artist extends Artist {
     TResult Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
     required TResult orElse(),
   }) {
     if (artist != null) {
@@ -1235,6 +1274,7 @@ class _$Artist extends Artist {
     required TResult Function(Song value) song,
     required TResult Function(Station value) station,
     required TResult Function(Curator value) curator,
+    required TResult Function(Genre value) genre,
   }) {
     return artist(this);
   }
@@ -1250,6 +1290,7 @@ class _$Artist extends Artist {
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
     TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
   }) {
     return artist?.call(this);
   }
@@ -1265,6 +1306,7 @@ class _$Artist extends Artist {
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
     TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
     required TResult orElse(),
   }) {
     if (artist != null) {
@@ -1490,6 +1532,9 @@ class _$MusicVideo extends MusicVideo {
             CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)
         curator,
+    required TResult Function(
+            String id, String type, GenreAttributes? attributes)
+        genre,
   }) {
     return musicVideo(id, type, attributes, relationships);
   }
@@ -1531,6 +1576,8 @@ class _$MusicVideo extends MusicVideo {
     TResult Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
   }) {
     return musicVideo?.call(id, type, attributes, relationships);
   }
@@ -1572,6 +1619,8 @@ class _$MusicVideo extends MusicVideo {
     TResult Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
     required TResult orElse(),
   }) {
     if (musicVideo != null) {
@@ -1591,6 +1640,7 @@ class _$MusicVideo extends MusicVideo {
     required TResult Function(Song value) song,
     required TResult Function(Station value) station,
     required TResult Function(Curator value) curator,
+    required TResult Function(Genre value) genre,
   }) {
     return musicVideo(this);
   }
@@ -1606,6 +1656,7 @@ class _$MusicVideo extends MusicVideo {
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
     TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
   }) {
     return musicVideo?.call(this);
   }
@@ -1621,6 +1672,7 @@ class _$MusicVideo extends MusicVideo {
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
     TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
     required TResult orElse(),
   }) {
     if (musicVideo != null) {
@@ -1862,6 +1914,9 @@ class _$Playlist extends Playlist {
             CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)
         curator,
+    required TResult Function(
+            String id, String type, GenreAttributes? attributes)
+        genre,
   }) {
     return playlist(id, type, attributes, relationships, views);
   }
@@ -1903,6 +1958,8 @@ class _$Playlist extends Playlist {
     TResult Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
   }) {
     return playlist?.call(id, type, attributes, relationships, views);
   }
@@ -1944,6 +2001,8 @@ class _$Playlist extends Playlist {
     TResult Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
     required TResult orElse(),
   }) {
     if (playlist != null) {
@@ -1963,6 +2022,7 @@ class _$Playlist extends Playlist {
     required TResult Function(Song value) song,
     required TResult Function(Station value) station,
     required TResult Function(Curator value) curator,
+    required TResult Function(Genre value) genre,
   }) {
     return playlist(this);
   }
@@ -1978,6 +2038,7 @@ class _$Playlist extends Playlist {
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
     TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
   }) {
     return playlist?.call(this);
   }
@@ -1993,6 +2054,7 @@ class _$Playlist extends Playlist {
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
     TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
     required TResult orElse(),
   }) {
     if (playlist != null) {
@@ -2215,6 +2277,9 @@ class _$Song extends Song {
             CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)
         curator,
+    required TResult Function(
+            String id, String type, GenreAttributes? attributes)
+        genre,
   }) {
     return song(id, type, attributes, relationships);
   }
@@ -2256,6 +2321,8 @@ class _$Song extends Song {
     TResult Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
   }) {
     return song?.call(id, type, attributes, relationships);
   }
@@ -2297,6 +2364,8 @@ class _$Song extends Song {
     TResult Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
     required TResult orElse(),
   }) {
     if (song != null) {
@@ -2316,6 +2385,7 @@ class _$Song extends Song {
     required TResult Function(Song value) song,
     required TResult Function(Station value) station,
     required TResult Function(Curator value) curator,
+    required TResult Function(Genre value) genre,
   }) {
     return song(this);
   }
@@ -2331,6 +2401,7 @@ class _$Song extends Song {
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
     TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
   }) {
     return song?.call(this);
   }
@@ -2346,6 +2417,7 @@ class _$Song extends Song {
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
     TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
     required TResult orElse(),
   }) {
     if (song != null) {
@@ -2535,6 +2607,9 @@ class _$Station extends Station {
             CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)
         curator,
+    required TResult Function(
+            String id, String type, GenreAttributes? attributes)
+        genre,
   }) {
     return station(id, type, attributes);
   }
@@ -2576,6 +2651,8 @@ class _$Station extends Station {
     TResult Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
   }) {
     return station?.call(id, type, attributes);
   }
@@ -2617,6 +2694,8 @@ class _$Station extends Station {
     TResult Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
     required TResult orElse(),
   }) {
     if (station != null) {
@@ -2636,6 +2715,7 @@ class _$Station extends Station {
     required TResult Function(Song value) song,
     required TResult Function(Station value) station,
     required TResult Function(Curator value) curator,
+    required TResult Function(Genre value) genre,
   }) {
     return station(this);
   }
@@ -2651,6 +2731,7 @@ class _$Station extends Station {
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
     TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
   }) {
     return station?.call(this);
   }
@@ -2666,6 +2747,7 @@ class _$Station extends Station {
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
     TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
     required TResult orElse(),
   }) {
     if (station != null) {
@@ -2881,6 +2963,9 @@ class _$Curator extends Curator {
             CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)
         curator,
+    required TResult Function(
+            String id, String type, GenreAttributes? attributes)
+        genre,
   }) {
     return curator(id, type, attributes, relationships);
   }
@@ -2922,6 +3007,8 @@ class _$Curator extends Curator {
     TResult Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
   }) {
     return curator?.call(id, type, attributes, relationships);
   }
@@ -2963,6 +3050,8 @@ class _$Curator extends Curator {
     TResult Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
     required TResult orElse(),
   }) {
     if (curator != null) {
@@ -2982,6 +3071,7 @@ class _$Curator extends Curator {
     required TResult Function(Song value) song,
     required TResult Function(Station value) station,
     required TResult Function(Curator value) curator,
+    required TResult Function(Genre value) genre,
   }) {
     return curator(this);
   }
@@ -2997,6 +3087,7 @@ class _$Curator extends Curator {
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
     TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
   }) {
     return curator?.call(this);
   }
@@ -3012,6 +3103,7 @@ class _$Curator extends Curator {
     TResult Function(Song value)? song,
     TResult Function(Station value)? station,
     TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
     required TResult orElse(),
   }) {
     if (curator != null) {
@@ -3048,4 +3140,330 @@ abstract class Curator extends Resource {
   @JsonKey(ignore: true)
   _$$CuratorCopyWith<_$Curator> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GenreCopyWith<$Res> implements $ResourceCopyWith<$Res> {
+  factory _$$GenreCopyWith(_$Genre value, $Res Function(_$Genre) then) =
+      __$$GenreCopyWithImpl<$Res>;
+  @override
+  $Res call({String id, String type, GenreAttributes? attributes});
+
+  $GenreAttributesCopyWith<$Res>? get attributes;
+}
+
+/// @nodoc
+class __$$GenreCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
+    implements _$$GenreCopyWith<$Res> {
+  __$$GenreCopyWithImpl(_$Genre _value, $Res Function(_$Genre) _then)
+      : super(_value, (v) => _then(v as _$Genre));
+
+  @override
+  _$Genre get _value => super._value as _$Genre;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? type = freezed,
+    Object? attributes = freezed,
+  }) {
+    return _then(_$Genre(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String,
+      attributes: attributes == freezed
+          ? _value.attributes
+          : attributes // ignore: cast_nullable_to_non_nullable
+              as GenreAttributes?,
+    ));
+  }
+
+  @override
+  $GenreAttributesCopyWith<$Res>? get attributes {
+    if (_value.attributes == null) {
+      return null;
+    }
+
+    return $GenreAttributesCopyWith<$Res>(_value.attributes!, (value) {
+      return _then(_value.copyWith(attributes: value));
+    });
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$Genre extends Genre {
+  const _$Genre(
+      {required this.id,
+      required this.type,
+      required this.attributes,
+      final String? $type})
+      : $type = $type ?? 'genre',
+        super._();
+
+  factory _$Genre.fromJson(Map<String, dynamic> json) => _$$GenreFromJson(json);
+
+  @override
+  final String id;
+  @override
+  final String type;
+  @override
+  final GenreAttributes? attributes;
+
+  @JsonKey(name: 'runtimeType')
+  final String $type;
+
+  @override
+  String toString() {
+    return 'Resource.genre(id: $id, type: $type, attributes: $attributes)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$Genre &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality()
+                .equals(other.attributes, attributes));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(attributes));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$GenreCopyWith<_$Genre> get copyWith =>
+      __$$GenreCopyWithImpl<_$Genre>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>(
+    TResult Function(String id, String type, ResourceAttributes? attributes)
+        $default, {
+    required TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            @JsonKey(ignore: true) AlbumRelationships? relationships,
+            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+        album,
+    required TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            @JsonKey(ignore: true) ArtistRelationships? relationships,
+            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+        artist,
+    required TResult Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(ignore: true) MusicVideoRelationships? relationships)
+        musicVideo,
+    required TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            @JsonKey(ignore: true) PlaylistRelationships? relationships,
+            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+        playlist,
+    required TResult Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(ignore: true) SongRelationships? relationships)
+        song,
+    required TResult Function(
+            String id, String type, StationAttributes? attributes)
+        station,
+    required TResult Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(ignore: true) CuratorRelationships? relationships)
+        curator,
+    required TResult Function(
+            String id, String type, GenreAttributes? attributes)
+        genre,
+  }) {
+    return genre(id, type, attributes);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>(
+    TResult Function(String id, String type, ResourceAttributes? attributes)?
+        $default, {
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            @JsonKey(ignore: true) AlbumRelationships? relationships,
+            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+        album,
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            @JsonKey(ignore: true) ArtistRelationships? relationships,
+            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+        artist,
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+        musicVideo,
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            @JsonKey(ignore: true) PlaylistRelationships? relationships,
+            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+        playlist,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            @JsonKey(ignore: true) SongRelationships? relationships)?
+        song,
+    TResult Function(String id, String type, StationAttributes? attributes)?
+        station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+        curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
+  }) {
+    return genre?.call(id, type, attributes);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>(
+    TResult Function(String id, String type, ResourceAttributes? attributes)?
+        $default, {
+    TResult Function(
+            String id,
+            String type,
+            AlbumAttributes? attributes,
+            @JsonKey(ignore: true) AlbumRelationships? relationships,
+            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+        album,
+    TResult Function(
+            String id,
+            String type,
+            ArtistAttributes? attributes,
+            @JsonKey(ignore: true) ArtistRelationships? relationships,
+            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+        artist,
+    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+        musicVideo,
+    TResult Function(
+            String id,
+            String type,
+            PlaylistAttributes? attributes,
+            @JsonKey(ignore: true) PlaylistRelationships? relationships,
+            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+        playlist,
+    TResult Function(String id, String type, SongAttributes? attributes,
+            @JsonKey(ignore: true) SongRelationships? relationships)?
+        song,
+    TResult Function(String id, String type, StationAttributes? attributes)?
+        station,
+    TResult Function(String id, String type, CuratorAttributes? attributes,
+            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+        curator,
+    TResult Function(String id, String type, GenreAttributes? attributes)?
+        genre,
+    required TResult orElse(),
+  }) {
+    if (genre != null) {
+      return genre(id, type, attributes);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>(
+    TResult Function(ResourceRaw value) $default, {
+    required TResult Function(Album value) album,
+    required TResult Function(Artist value) artist,
+    required TResult Function(MusicVideo value) musicVideo,
+    required TResult Function(Playlist value) playlist,
+    required TResult Function(Song value) song,
+    required TResult Function(Station value) station,
+    required TResult Function(Curator value) curator,
+    required TResult Function(Genre value) genre,
+  }) {
+    return genre(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>(
+    TResult Function(ResourceRaw value)? $default, {
+    TResult Function(Album value)? album,
+    TResult Function(Artist value)? artist,
+    TResult Function(MusicVideo value)? musicVideo,
+    TResult Function(Playlist value)? playlist,
+    TResult Function(Song value)? song,
+    TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
+  }) {
+    return genre?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>(
+    TResult Function(ResourceRaw value)? $default, {
+    TResult Function(Album value)? album,
+    TResult Function(Artist value)? artist,
+    TResult Function(MusicVideo value)? musicVideo,
+    TResult Function(Playlist value)? playlist,
+    TResult Function(Song value)? song,
+    TResult Function(Station value)? station,
+    TResult Function(Curator value)? curator,
+    TResult Function(Genre value)? genre,
+    required TResult orElse(),
+  }) {
+    if (genre != null) {
+      return genre(this);
+    }
+    return orElse();
+  }
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$GenreToJson(this);
+  }
+}
+
+abstract class Genre extends Resource {
+  const factory Genre(
+      {required final String id,
+      required final String type,
+      required final GenreAttributes? attributes}) = _$Genre;
+  const Genre._() : super._();
+
+  factory Genre.fromJson(Map<String, dynamic> json) = _$Genre.fromJson;
+
+  @override
+  String get id => throw _privateConstructorUsedError;
+  @override
+  String get type => throw _privateConstructorUsedError;
+  GenreAttributes? get attributes => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$GenreCopyWith<_$Genre> get copyWith => throw _privateConstructorUsedError;
 }

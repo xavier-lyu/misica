@@ -23,4 +23,28 @@ class StationsRepository {
       return left(const MusicFailure.api(HttpStatus.notFound));
     }
   }
+
+  Future<Either<MusicFailure, List<Genre>>> fetchStationGenres(
+      String storefront) async {
+    try {
+      final genres = await _remoteService.fetchStationGenres(storefront);
+      return right(genres.data.toDomain<Genre>());
+    } on DioError catch (e) {
+      return left(MusicFailure.api(e.response?.statusCode));
+    } on StateError {
+      return left(const MusicFailure.api(HttpStatus.notFound));
+    }
+  }
+
+  Future<Either<MusicFailure, List<Station>>> fetchGenreStations(
+      String storefront, String id) async {
+    try {
+      final stations = await _remoteService.fetchGenreStations(storefront, id);
+      return right(stations.data.toDomain<Station>());
+    } on DioError catch (e) {
+      return left(MusicFailure.api(e.response?.statusCode));
+    } on StateError {
+      return left(const MusicFailure.api(HttpStatus.notFound));
+    }
+  }
 }
