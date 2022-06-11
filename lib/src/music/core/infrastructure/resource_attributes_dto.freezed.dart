@@ -587,6 +587,7 @@ mixin _$ArtistAttributesDTO {
   String? get url => throw _privateConstructorUsedError;
   EditorialNotesDTO? get editorialNotes => throw _privateConstructorUsedError;
   List<String>? get genreNames => throw _privateConstructorUsedError;
+  ArtworkDTO? get artwork => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -603,9 +604,11 @@ abstract class $ArtistAttributesDTOCopyWith<$Res> {
       {String name,
       String? url,
       EditorialNotesDTO? editorialNotes,
-      List<String>? genreNames});
+      List<String>? genreNames,
+      ArtworkDTO? artwork});
 
   $EditorialNotesDTOCopyWith<$Res>? get editorialNotes;
+  $ArtworkDTOCopyWith<$Res>? get artwork;
 }
 
 /// @nodoc
@@ -623,6 +626,7 @@ class _$ArtistAttributesDTOCopyWithImpl<$Res>
     Object? url = freezed,
     Object? editorialNotes = freezed,
     Object? genreNames = freezed,
+    Object? artwork = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed
@@ -641,6 +645,10 @@ class _$ArtistAttributesDTOCopyWithImpl<$Res>
           ? _value.genreNames
           : genreNames // ignore: cast_nullable_to_non_nullable
               as List<String>?,
+      artwork: artwork == freezed
+          ? _value.artwork
+          : artwork // ignore: cast_nullable_to_non_nullable
+              as ArtworkDTO?,
     ));
   }
 
@@ -652,6 +660,17 @@ class _$ArtistAttributesDTOCopyWithImpl<$Res>
 
     return $EditorialNotesDTOCopyWith<$Res>(_value.editorialNotes!, (value) {
       return _then(_value.copyWith(editorialNotes: value));
+    });
+  }
+
+  @override
+  $ArtworkDTOCopyWith<$Res>? get artwork {
+    if (_value.artwork == null) {
+      return null;
+    }
+
+    return $ArtworkDTOCopyWith<$Res>(_value.artwork!, (value) {
+      return _then(_value.copyWith(artwork: value));
     });
   }
 }
@@ -667,10 +686,13 @@ abstract class _$$_ArtistAttributesDTOCopyWith<$Res>
       {String name,
       String? url,
       EditorialNotesDTO? editorialNotes,
-      List<String>? genreNames});
+      List<String>? genreNames,
+      ArtworkDTO? artwork});
 
   @override
   $EditorialNotesDTOCopyWith<$Res>? get editorialNotes;
+  @override
+  $ArtworkDTOCopyWith<$Res>? get artwork;
 }
 
 /// @nodoc
@@ -690,6 +712,7 @@ class __$$_ArtistAttributesDTOCopyWithImpl<$Res>
     Object? url = freezed,
     Object? editorialNotes = freezed,
     Object? genreNames = freezed,
+    Object? artwork = freezed,
   }) {
     return _then(_$_ArtistAttributesDTO(
       name: name == freezed
@@ -708,6 +731,10 @@ class __$$_ArtistAttributesDTOCopyWithImpl<$Res>
           ? _value._genreNames
           : genreNames // ignore: cast_nullable_to_non_nullable
               as List<String>?,
+      artwork: artwork == freezed
+          ? _value.artwork
+          : artwork // ignore: cast_nullable_to_non_nullable
+              as ArtworkDTO?,
     ));
   }
 }
@@ -719,7 +746,8 @@ class _$_ArtistAttributesDTO extends _ArtistAttributesDTO {
       {required this.name,
       this.url,
       this.editorialNotes,
-      final List<String>? genreNames})
+      final List<String>? genreNames,
+      this.artwork})
       : _genreNames = genreNames,
         super._();
 
@@ -742,8 +770,11 @@ class _$_ArtistAttributesDTO extends _ArtistAttributesDTO {
   }
 
   @override
+  final ArtworkDTO? artwork;
+
+  @override
   String toString() {
-    return 'ArtistAttributesDTO(name: $name, url: $url, editorialNotes: $editorialNotes, genreNames: $genreNames)';
+    return 'ArtistAttributesDTO(name: $name, url: $url, editorialNotes: $editorialNotes, genreNames: $genreNames, artwork: $artwork)';
   }
 
   @override
@@ -756,7 +787,8 @@ class _$_ArtistAttributesDTO extends _ArtistAttributesDTO {
             const DeepCollectionEquality()
                 .equals(other.editorialNotes, editorialNotes) &&
             const DeepCollectionEquality()
-                .equals(other._genreNames, _genreNames));
+                .equals(other._genreNames, _genreNames) &&
+            const DeepCollectionEquality().equals(other.artwork, artwork));
   }
 
   @JsonKey(ignore: true)
@@ -766,7 +798,8 @@ class _$_ArtistAttributesDTO extends _ArtistAttributesDTO {
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(url),
       const DeepCollectionEquality().hash(editorialNotes),
-      const DeepCollectionEquality().hash(_genreNames));
+      const DeepCollectionEquality().hash(_genreNames),
+      const DeepCollectionEquality().hash(artwork));
 
   @JsonKey(ignore: true)
   @override
@@ -785,7 +818,8 @@ abstract class _ArtistAttributesDTO extends ArtistAttributesDTO {
       {required final String name,
       final String? url,
       final EditorialNotesDTO? editorialNotes,
-      final List<String>? genreNames}) = _$_ArtistAttributesDTO;
+      final List<String>? genreNames,
+      final ArtworkDTO? artwork}) = _$_ArtistAttributesDTO;
   const _ArtistAttributesDTO._() : super._();
 
   factory _ArtistAttributesDTO.fromJson(Map<String, dynamic> json) =
@@ -799,6 +833,8 @@ abstract class _ArtistAttributesDTO extends ArtistAttributesDTO {
   EditorialNotesDTO? get editorialNotes => throw _privateConstructorUsedError;
   @override
   List<String>? get genreNames => throw _privateConstructorUsedError;
+  @override
+  ArtworkDTO? get artwork => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_ArtistAttributesDTOCopyWith<_$_ArtistAttributesDTO> get copyWith =>

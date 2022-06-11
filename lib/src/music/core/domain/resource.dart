@@ -74,7 +74,7 @@ class Resource with _$Resource {
   Artwork? get artwork => map(
         (value) => value.attributes?.artwork,
         album: (album) => album.attributes?.artwork,
-        artist: (artist) => null,
+        artist: (artist) => artist.attributes?.artwork,
         musicVideo: (musicVideo) => musicVideo.attributes?.artwork,
         playlist: (playlist) => playlist.attributes?.artwork,
         song: (song) {

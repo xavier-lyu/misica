@@ -79,12 +79,21 @@ _$_ArtistAttributes _$$_ArtistAttributesFromJson(Map json) =>
     _$_ArtistAttributes(
       name: json['name'] as String,
       url: json['url'] as String?,
+      artwork: json['artwork'] == null
+          ? null
+          : Artwork.fromJson(Map<String, dynamic>.from(json['artwork'] as Map)),
+      editorialNotes: json['editorialNotes'] == null
+          ? null
+          : EditorialNotes.fromJson(
+              Map<String, dynamic>.from(json['editorialNotes'] as Map)),
     );
 
 Map<String, dynamic> _$$_ArtistAttributesToJson(_$_ArtistAttributes instance) =>
     <String, dynamic>{
       'name': instance.name,
       'url': instance.url,
+      'artwork': instance.artwork?.toJson(),
+      'editorialNotes': instance.editorialNotes?.toJson(),
     };
 
 _$_MusicVideoAttributes _$$_MusicVideoAttributesFromJson(Map json) =>

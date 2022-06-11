@@ -61,6 +61,7 @@ class ArtistAttributesDTO with _$ArtistAttributesDTO {
     String? url,
     EditorialNotesDTO? editorialNotes,
     List<String>? genreNames,
+    ArtworkDTO? artwork,
   }) = _ArtistAttributesDTO;
 
   factory ArtistAttributesDTO.fromJson(Map<String, dynamic> json) =>
@@ -70,6 +71,8 @@ class ArtistAttributesDTO with _$ArtistAttributesDTO {
     return ArtistAttributes(
       name: name,
       url: url,
+      artwork: artwork?.toDomain(),
+      editorialNotes: editorialNotes?.toDomain(),
     );
   }
 }

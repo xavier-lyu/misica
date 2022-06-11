@@ -12,7 +12,7 @@ class ResourceTile extends StatelessWidget {
   final Resource resource;
   final VoidCallback? onTap;
 
-  static const artworkSize = 60;
+  static const artworkSize = 60.0;
 
   @override
   Widget build(BuildContext context) {

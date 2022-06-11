@@ -74,6 +74,10 @@ _$_ArtistAttributesDTO _$$_ArtistAttributesDTOFromJson(Map json) =>
       genreNames: (json['genreNames'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
+      artwork: json['artwork'] == null
+          ? null
+          : ArtworkDTO.fromJson(
+              Map<String, dynamic>.from(json['artwork'] as Map)),
     );
 
 Map<String, dynamic> _$$_ArtistAttributesDTOToJson(
@@ -83,6 +87,7 @@ Map<String, dynamic> _$$_ArtistAttributesDTOToJson(
       'url': instance.url,
       'editorialNotes': instance.editorialNotes?.toJson(),
       'genreNames': instance.genreNames,
+      'artwork': instance.artwork?.toJson(),
     };
 
 _$_MusicVideoAttributesDTO _$$_MusicVideoAttributesDTOFromJson(Map json) =>

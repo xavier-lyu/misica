@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/album.dart';
 import 'package:misica/src/music/core/domain/resource_view.dart';
 import 'package:misica/src/music/core/presentation/artwork_widget.dart';
@@ -78,7 +79,7 @@ class ResourceViewWidget extends ConsumerWidget {
           ),
         ),
         const SizedBox(height: 8),
-        _buildViews(ref),
+        _buildViews(context, ref),
       ],
     );
   }
@@ -91,7 +92,7 @@ class ResourceViewWidget extends ConsumerWidget {
         'more-in-genre'
       ].contains(kind);
 
-  Widget _buildViews(WidgetRef ref) {
+  Widget _buildViews(BuildContext context, WidgetRef ref) {
     if (isMV) {
       return ResourceCardsList(
         resources: resourceView.data,
@@ -116,7 +117,7 @@ class ResourceViewWidget extends ConsumerWidget {
     }
 
     if (kind == 'latest-release') {
-      return _buildLatestRelease();
+      return _buildLatestRelease(context);
     }
 
     return ResourceCardsList(
@@ -126,7 +127,7 @@ class ResourceViewWidget extends ConsumerWidget {
     );
   }
 
-  Widget _buildLatestRelease() {
+  Widget _buildLatestRelease(BuildContext context) {
     final latest = resourceView.data.first as Album;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -134,8 +135,8 @@ class ResourceViewWidget extends ConsumerWidget {
         children: [
           ArtworkWidget(
             artwork: latest.artwork,
-            height: 100,
-            width: 100,
+            height: 120,
+            width: 120,
           ),
           Expanded(
             child: Padding(
@@ -147,9 +148,13 @@ class ResourceViewWidget extends ConsumerWidget {
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Text(
-                        latest.name,
-                        maxLines: 2,
+                      Expanded(
+                        child: Text(
+                          latest.name,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: context.ttoc.titleMedium,
+                        ),
                       ),
                       if (latest.isExplicit)
                         Container(

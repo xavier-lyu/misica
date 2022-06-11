@@ -741,6 +741,8 @@ ArtistAttributes _$ArtistAttributesFromJson(Map<String, dynamic> json) {
 mixin _$ArtistAttributes {
   String get name => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
+  Artwork? get artwork => throw _privateConstructorUsedError;
+  EditorialNotes? get editorialNotes => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -753,7 +755,14 @@ abstract class $ArtistAttributesCopyWith<$Res> {
   factory $ArtistAttributesCopyWith(
           ArtistAttributes value, $Res Function(ArtistAttributes) then) =
       _$ArtistAttributesCopyWithImpl<$Res>;
-  $Res call({String name, String? url});
+  $Res call(
+      {String name,
+      String? url,
+      Artwork? artwork,
+      EditorialNotes? editorialNotes});
+
+  $ArtworkCopyWith<$Res>? get artwork;
+  $EditorialNotesCopyWith<$Res>? get editorialNotes;
 }
 
 /// @nodoc
@@ -769,6 +778,8 @@ class _$ArtistAttributesCopyWithImpl<$Res>
   $Res call({
     Object? name = freezed,
     Object? url = freezed,
+    Object? artwork = freezed,
+    Object? editorialNotes = freezed,
   }) {
     return _then(_value.copyWith(
       name: name == freezed
@@ -779,7 +790,37 @@ class _$ArtistAttributesCopyWithImpl<$Res>
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
+      artwork: artwork == freezed
+          ? _value.artwork
+          : artwork // ignore: cast_nullable_to_non_nullable
+              as Artwork?,
+      editorialNotes: editorialNotes == freezed
+          ? _value.editorialNotes
+          : editorialNotes // ignore: cast_nullable_to_non_nullable
+              as EditorialNotes?,
     ));
+  }
+
+  @override
+  $ArtworkCopyWith<$Res>? get artwork {
+    if (_value.artwork == null) {
+      return null;
+    }
+
+    return $ArtworkCopyWith<$Res>(_value.artwork!, (value) {
+      return _then(_value.copyWith(artwork: value));
+    });
+  }
+
+  @override
+  $EditorialNotesCopyWith<$Res>? get editorialNotes {
+    if (_value.editorialNotes == null) {
+      return null;
+    }
+
+    return $EditorialNotesCopyWith<$Res>(_value.editorialNotes!, (value) {
+      return _then(_value.copyWith(editorialNotes: value));
+    });
   }
 }
 
@@ -790,7 +831,16 @@ abstract class _$$_ArtistAttributesCopyWith<$Res>
           _$_ArtistAttributes value, $Res Function(_$_ArtistAttributes) then) =
       __$$_ArtistAttributesCopyWithImpl<$Res>;
   @override
-  $Res call({String name, String? url});
+  $Res call(
+      {String name,
+      String? url,
+      Artwork? artwork,
+      EditorialNotes? editorialNotes});
+
+  @override
+  $ArtworkCopyWith<$Res>? get artwork;
+  @override
+  $EditorialNotesCopyWith<$Res>? get editorialNotes;
 }
 
 /// @nodoc
@@ -808,6 +858,8 @@ class __$$_ArtistAttributesCopyWithImpl<$Res>
   $Res call({
     Object? name = freezed,
     Object? url = freezed,
+    Object? artwork = freezed,
+    Object? editorialNotes = freezed,
   }) {
     return _then(_$_ArtistAttributes(
       name: name == freezed
@@ -818,6 +870,14 @@ class __$$_ArtistAttributesCopyWithImpl<$Res>
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
+      artwork: artwork == freezed
+          ? _value.artwork
+          : artwork // ignore: cast_nullable_to_non_nullable
+              as Artwork?,
+      editorialNotes: editorialNotes == freezed
+          ? _value.editorialNotes
+          : editorialNotes // ignore: cast_nullable_to_non_nullable
+              as EditorialNotes?,
     ));
   }
 }
@@ -825,7 +885,11 @@ class __$$_ArtistAttributesCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ArtistAttributes extends _ArtistAttributes {
-  const _$_ArtistAttributes({required this.name, required this.url})
+  const _$_ArtistAttributes(
+      {required this.name,
+      required this.url,
+      required this.artwork,
+      required this.editorialNotes})
       : super._();
 
   factory _$_ArtistAttributes.fromJson(Map<String, dynamic> json) =>
@@ -835,10 +899,14 @@ class _$_ArtistAttributes extends _ArtistAttributes {
   final String name;
   @override
   final String? url;
+  @override
+  final Artwork? artwork;
+  @override
+  final EditorialNotes? editorialNotes;
 
   @override
   String toString() {
-    return 'ArtistAttributes(name: $name, url: $url)';
+    return 'ArtistAttributes(name: $name, url: $url, artwork: $artwork, editorialNotes: $editorialNotes)';
   }
 
   @override
@@ -847,7 +915,10 @@ class _$_ArtistAttributes extends _ArtistAttributes {
         (other.runtimeType == runtimeType &&
             other is _$_ArtistAttributes &&
             const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.url, url));
+            const DeepCollectionEquality().equals(other.url, url) &&
+            const DeepCollectionEquality().equals(other.artwork, artwork) &&
+            const DeepCollectionEquality()
+                .equals(other.editorialNotes, editorialNotes));
   }
 
   @JsonKey(ignore: true)
@@ -855,7 +926,9 @@ class _$_ArtistAttributes extends _ArtistAttributes {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(url));
+      const DeepCollectionEquality().hash(url),
+      const DeepCollectionEquality().hash(artwork),
+      const DeepCollectionEquality().hash(editorialNotes));
 
   @JsonKey(ignore: true)
   @override
@@ -871,7 +944,9 @@ class _$_ArtistAttributes extends _ArtistAttributes {
 abstract class _ArtistAttributes extends ArtistAttributes {
   const factory _ArtistAttributes(
       {required final String name,
-      required final String? url}) = _$_ArtistAttributes;
+      required final String? url,
+      required final Artwork? artwork,
+      required final EditorialNotes? editorialNotes}) = _$_ArtistAttributes;
   const _ArtistAttributes._() : super._();
 
   factory _ArtistAttributes.fromJson(Map<String, dynamic> json) =
@@ -881,6 +956,10 @@ abstract class _ArtistAttributes extends ArtistAttributes {
   String get name => throw _privateConstructorUsedError;
   @override
   String? get url => throw _privateConstructorUsedError;
+  @override
+  Artwork? get artwork => throw _privateConstructorUsedError;
+  @override
+  EditorialNotes? get editorialNotes => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_ArtistAttributesCopyWith<_$_ArtistAttributes> get copyWith =>

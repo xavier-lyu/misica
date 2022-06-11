@@ -47,5 +47,8 @@
   "@more": {},
 
   "notPlaying": "Not playing",
-  "@notPlaying": {}
+  "@notPlaying": {},
+
+  "about": "About",
+  "@about": {}
 }

@@ -55,6 +55,8 @@ class ArtistAttributes with _$ArtistAttributes {
   const factory ArtistAttributes({
     required String name,
     required String? url,
+    required Artwork? artwork,
+    required EditorialNotes? editorialNotes,
   }) = _ArtistAttributes;
 
   factory ArtistAttributes.fromJson(Map<String, dynamic> json) =>

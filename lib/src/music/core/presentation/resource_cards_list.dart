@@ -71,7 +71,7 @@ class ResourceCardsList extends StatelessWidget {
                       resource: e,
                       aspectRatio: itemWidth / itemHeight,
                       artworkAspectRatio: artworkAspectRatio,
-                      artworkWidth: itemWidth.floor(),
+                      artworkWidth: itemWidth,
                     ),
                   )
                   .toList(),

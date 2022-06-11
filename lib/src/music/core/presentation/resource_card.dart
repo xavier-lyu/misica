@@ -9,7 +9,7 @@ class ResourceCard extends StatelessWidget {
   final Resource resource;
   final double aspectRatio;
   final double artworkAspectRatio;
-  final int artworkWidth;
+  final double artworkWidth;
 
   const ResourceCard({
     Key? key,
@@ -39,7 +39,7 @@ class ResourceCard extends StatelessWidget {
               child: ArtworkWidget(
                 artwork: resource.artwork,
                 width: artworkWidth,
-                height: (artworkWidth * artworkAspectRatio).floor(),
+                height: artworkWidth * artworkAspectRatio,
               ),
             ),
             const SizedBox(height: 5),
