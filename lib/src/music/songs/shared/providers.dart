@@ -1,7 +1,7 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/providers.dart';
 import 'package:misica/src/music/core/domain/track.dart';
-import 'package:misica/src/music/songs/domain/song_notifier.dart';
+import 'package:misica/src/music/songs/application/song_notifier.dart';
 import 'package:misica/src/music/songs/infrastructure/song_repository.dart';
 import 'package:misica/src/music/songs/infrastructure/song_service.dart';
 

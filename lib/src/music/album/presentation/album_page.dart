@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/core/domain/album.dart';
 import 'package:misica/src/music/album/shared/providers.dart';
+import 'package:misica/src/music/core/presentation/hook_scroll_view.dart';
 import 'package:misica/src/music/core/presentation/loader.dart';
 import 'package:misica/src/music/core/presentation/resource_views_list.dart';
 import 'package:misica/src/music/core/presentation/retry_widget.dart';
@@ -34,10 +35,6 @@ class _AlbumPageState extends ConsumerState<AlbumPage> {
   @override
   Widget build(BuildContext context) {
     final scrollOffset = useState<double>(0);
-    final scrollController = useScrollController();
-    scrollController.addListener(() {
-      scrollOffset.value = scrollController.offset;
-    });
 
     return Scaffold(
       body: Consumer(builder: (context, ref, child) {
@@ -57,8 +54,8 @@ class _AlbumPageState extends ConsumerState<AlbumPage> {
             ],
           ),
           loading: () => const SliverLoader(),
-          data: (album) => CustomScrollView(
-            controller: scrollController,
+          data: (album) => HookScrollView(
+            onOffsetChanged: (offset) => scrollOffset.value = offset,
             slivers: [
               SliverAppBar(
                 title: scrollOffset.value >= 264 ? Text(album.name) : null,

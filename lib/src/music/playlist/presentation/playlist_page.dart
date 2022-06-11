@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:misica/src/music/core/presentation/hook_scroll_view.dart';
 import 'package:misica/src/music/core/presentation/loader.dart';
 import 'package:misica/src/music/core/presentation/retry_widget.dart';
 import 'package:misica/src/music/core/presentation/tracks_list.dart';
@@ -39,10 +40,6 @@ class _PlaylistPageState extends ConsumerState<PlaylistPage> {
   @override
   Widget build(BuildContext context) {
     final scrollOffset = useState<double>(0);
-    final scrollController = useScrollController();
-    scrollController.addListener(() {
-      scrollOffset.value = scrollController.offset;
-    });
 
     return Scaffold(
       body: Consumer(builder: (context, ref, child) {
@@ -56,8 +53,8 @@ class _PlaylistPageState extends ConsumerState<PlaylistPage> {
                 .fetchCatalogPlaylist(widget.id),
           ),
           loading: () => const SliverLoader(),
-          data: (playlist) => CustomScrollView(
-            controller: scrollController,
+          data: (playlist) => HookScrollView(
+            onOffsetChanged: (offset) => scrollOffset.value = offset,
             slivers: [
               SliverAppBar(
                 title: scrollOffset.value >= 264 ? Text(playlist.name) : null,

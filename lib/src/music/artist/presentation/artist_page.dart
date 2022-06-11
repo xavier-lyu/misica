@@ -8,6 +8,7 @@ import 'package:misica/src/music/artist/domain/artist.dart';
 import 'package:misica/src/music/artist/shared/providers.dart';
 import 'package:misica/src/music/core/presentation/artwork_widget.dart';
 import 'package:misica/src/music/core/presentation/expandable_app_bar.dart';
+import 'package:misica/src/music/core/presentation/hook_scroll_view.dart';
 import 'package:misica/src/music/core/presentation/loader.dart';
 import 'package:misica/src/music/core/presentation/resource_views_list.dart';
 import 'package:misica/src/music/core/presentation/retry_widget.dart';
@@ -35,10 +36,6 @@ class _ArtistPageState extends ConsumerState<ArtistPage> {
   @override
   Widget build(BuildContext context) {
     final scrollOffset = useState<double>(0);
-    final scrollController = useScrollController();
-    scrollController.addListener(() {
-      scrollOffset.value = scrollController.offset;
-    });
 
     final screenWidth = context.mqoc.size.width;
 
@@ -62,11 +59,11 @@ class _ArtistPageState extends ConsumerState<ArtistPage> {
                   min(1.0, max(0, scrollOffset.value) / expandedHeight);
               final opacity = 1.0 - offsetRatio;
 
-              return CustomScrollView(
-                controller: scrollController,
+              return HookScrollView(
+                onOffsetChanged: (offset) => scrollOffset.value = offset,
                 slivers: [
                   ExpandableAppBar(
-                    title: artist.name,
+                    title: Text(artist.name),
                     isCollapsed: isAppBarCollapsed,
                     background: ArtworkWidget(
                       artwork: artist.artwork,

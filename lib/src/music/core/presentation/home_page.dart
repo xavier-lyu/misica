@@ -4,6 +4,7 @@ import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/charts/presentation/charts_list.dart';
 import 'package:misica/src/music/core/presentation/divider_widget.dart';
+import 'package:misica/src/music/core/presentation/hook_scroll_view.dart';
 import 'package:misica/src/music/recommendations/presentation/recommendations_list.dart';
 
 import 'app_navbar.dart';
@@ -14,16 +15,12 @@ class HomePage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final scrollOffset = useState<double>(0);
-    final scrollController = useScrollController();
-    scrollController.addListener(() {
-      scrollOffset.value = scrollController.offset;
-    });
 
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.only(bottom: 44),
-        child: CustomScrollView(
-          controller: scrollController,
+        child: HookScrollView(
+          onOffsetChanged: (offset) => scrollOffset.value = offset,
           slivers: [
             AppNavbar(
               title: Text(

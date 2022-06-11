@@ -8,22 +8,25 @@ class ExpandableAppBar extends StatelessWidget {
     this.expandedHeight,
     this.background,
     this.expandedTitle,
+    this.centerTitle,
   }) : super(key: key);
 
-  final String title;
+  final Widget title;
   final bool isCollapsed;
   final double? expandedHeight;
   final Widget? background;
   final Widget? expandedTitle;
+  final bool? centerTitle;
 
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
-      title: isCollapsed ? Text(title) : null,
+      title: isCollapsed ? title : null,
       pinned: true,
       expandedHeight: expandedHeight,
       elevation: 0,
       stretch: true,
+      centerTitle: centerTitle,
       flexibleSpace: FlexibleSpaceBar(
         stretchModes: const [
           StretchMode.zoomBackground,
