@@ -50,5 +50,8 @@
   "@notPlaying": {},
 
   "about": "About",
-  "@about": {}
+  "@about": {},
+
+  "recentlyPlayed": "Recently Played",
+  "@recentlyPlayed": {}
 }

@@ -1,11 +1,13 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
+import 'package:misica/src/music/player/shared/providers.dart';
 
 import 'artwork_widget.dart';
 
-class ResourceCard extends StatelessWidget {
+class ResourceCard extends ConsumerWidget {
   final Resource resource;
   final double aspectRatio;
   final double artworkAspectRatio;
@@ -20,14 +22,21 @@ class ResourceCard extends StatelessWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return InkWell(
       onTap: () {
-        resource.mapOrNull((value) => null, album: (album) {
-          context.router.push(AlbumRoute(id: album.id));
-        }, playlist: (playlist) {
-          context.router.push(PlaylistRoute(id: playlist.id));
-        });
+        resource.mapOrNull(
+          (value) => null,
+          album: (album) {
+            context.router.push(AlbumRoute(id: album.id));
+          },
+          playlist: (playlist) {
+            context.router.push(PlaylistRoute(id: playlist.id));
+          },
+          station: (station) {
+            ref.read(musicPlayerProvider).playSingle(item: station);
+          },
+        );
       },
       child: AspectRatio(
         aspectRatio: aspectRatio,
