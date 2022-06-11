@@ -62,7 +62,7 @@ class ResourceTile extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.more_horiz),
+            icon: const Icon(Icons.more_horiz_rounded),
           ),
         ],
       ),

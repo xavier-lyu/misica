@@ -23,19 +23,19 @@ class IndexPage extends StatelessWidget {
           onTap: tabsRouter.setActiveIndex,
           items: [
             SalomonBottomBarItem(
-              icon: const Icon(Icons.home_filled),
+              icon: const Icon(Icons.home_rounded),
               title: Text(context.loc.home),
             ),
             SalomonBottomBarItem(
-              icon: const Icon(Icons.radio),
+              icon: const Icon(Icons.radio_rounded),
               title: Text(context.loc.radio),
             ),
             SalomonBottomBarItem(
-              icon: const Icon(Icons.library_music),
+              icon: const Icon(Icons.library_music_rounded),
               title: Text(context.loc.library),
             ),
             SalomonBottomBarItem(
-              icon: const Icon(Icons.search),
+              icon: const Icon(Icons.search_rounded),
               title: Text(context.loc.search),
             ),
           ],
