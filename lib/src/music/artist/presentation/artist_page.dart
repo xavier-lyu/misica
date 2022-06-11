@@ -29,7 +29,7 @@ class _ArtistPageState extends ConsumerState<ArtistPage> {
   void initState() {
     super.initState();
     Future.microtask(() {
-      ref.watch(artistNotifierProvider.notifier).fetchArtist(widget.id);
+      ref.read(artistNotifierProvider.notifier).fetchArtist(widget.id);
     });
   }
 

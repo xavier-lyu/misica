@@ -28,7 +28,7 @@ class _AlbumPageState extends ConsumerState<AlbumPage> {
   void initState() {
     super.initState();
     Future.microtask(() {
-      ref.watch(albumsNotifierProvider.notifier).fetchCatalogAlbum(widget.id);
+      ref.read(albumsNotifierProvider.notifier).fetchCatalogAlbum(widget.id);
     });
   }
 

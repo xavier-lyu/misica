@@ -28,11 +28,11 @@ class _PlaylistPageState extends ConsumerState<PlaylistPage> {
     super.initState();
     Future.microtask(() {
       ref
-          .watch(playlistsNotifierProvider.notifier)
+          .read(playlistsNotifierProvider.notifier)
           .fetchCatalogPlaylist(widget.id);
 
       ref
-          .watch(playlistTracksNotifierProvider.notifier)
+          .read(playlistTracksNotifierProvider.notifier)
           .fetchPlaylistTracks(widget.id);
     });
   }
