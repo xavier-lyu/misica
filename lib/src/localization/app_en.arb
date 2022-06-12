@@ -56,5 +56,14 @@
   "@recentlyPlayed": {},
 
   "stationsByGenre": "Stations by Genre",
-  "@stationsByGenre": {}
+  "@stationsByGenre": {},
+
+  "tapToSearch": "Tap to Search",
+  "@tapToSearch": {},
+
+  "searchHint": "Artists, songs, playlists and more",
+  "@searchHint": {},
+
+  "noResultsFor": "No results for",
+  "@noResultsFor": {}
 }

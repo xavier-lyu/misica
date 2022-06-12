@@ -35,7 +35,7 @@ _$_AlbumAttributesDTO _$$_AlbumAttributesDTOFromJson(Map json) =>
               Map<String, dynamic>.from(json['playParams'] as Map)),
       recordLabel: json['recordLabel'] as String?,
       releaseDate:
-          const DateTimeConverter().fromJson(json['releaseDate'] as String),
+          const DateTimeConverter().fromJson(json['releaseDate'] as String?),
       trackCount: json['trackCount'] as int?,
       url: json['url'] as String?,
     );
@@ -117,9 +117,8 @@ _$_MusicVideoAttributesDTO _$$_MusicVideoAttributesDTOFromJson(Map json) =>
       previews: (json['previews'] as List<dynamic>?)
           ?.map((e) => Map<String, dynamic>.from(e as Map))
           .toList(),
-      releaseDate: json['releaseDate'] == null
-          ? null
-          : DateTime.parse(json['releaseDate'] as String),
+      releaseDate:
+          const DateTimeConverter().fromJson(json['releaseDate'] as String?),
       url: json['url'] as String?,
       trackNumber: json['trackNumber'] as int?,
       contentRating: json['contentRating'] as String?,
@@ -140,7 +139,7 @@ Map<String, dynamic> _$$_MusicVideoAttributesDTOToJson(
       'name': instance.name,
       'playParams': instance.playParams?.toJson(),
       'previews': instance.previews,
-      'releaseDate': instance.releaseDate?.toIso8601String(),
+      'releaseDate': const DateTimeConverter().toJson(instance.releaseDate),
       'url': instance.url,
       'trackNumber': instance.trackNumber,
       'contentRating': instance.contentRating,
@@ -223,9 +222,8 @@ _$_SongAttributesDTO _$$_SongAttributesDTOFromJson(Map json) =>
       previews: (json['previews'] as List<dynamic>?)
           ?.map((e) => Map<String, dynamic>.from(e as Map))
           .toList(),
-      releaseDate: json['releaseDate'] == null
-          ? null
-          : DateTime.parse(json['releaseDate'] as String),
+      releaseDate:
+          const DateTimeConverter().fromJson(json['releaseDate'] as String?),
       trackNumber: json['trackNumber'] as int,
       url: json['url'] as String?,
       workName: json['workName'] as String?,
@@ -253,7 +251,7 @@ Map<String, dynamic> _$$_SongAttributesDTOToJson(
       'name': instance.name,
       'playParams': instance.playParams?.toJson(),
       'previews': instance.previews,
-      'releaseDate': instance.releaseDate?.toIso8601String(),
+      'releaseDate': const DateTimeConverter().toJson(instance.releaseDate),
       'trackNumber': instance.trackNumber,
       'url': instance.url,
       'workName': instance.workName,

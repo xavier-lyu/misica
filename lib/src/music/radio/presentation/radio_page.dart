@@ -58,7 +58,7 @@ class _RadioPageState extends ConsumerState<RadioPage> {
               SliverToBoxAdapter(
                 child: ResourceCardsList(
                   resources: stations,
-                  itemHeightOffset: 30.0,
+                  itemHeightOffset: 50.0,
                   mainAxisCount: 2,
                 ),
               ),

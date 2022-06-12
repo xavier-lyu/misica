@@ -861,6 +861,7 @@ mixin _$MusicVideoAttributesDTO {
   PlayParamsDTO? get playParams => throw _privateConstructorUsedError;
   List<Map<String, dynamic>>? get previews =>
       throw _privateConstructorUsedError;
+  @DateTimeConverter()
   DateTime? get releaseDate => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
   int? get trackNumber => throw _privateConstructorUsedError;
@@ -890,7 +891,7 @@ abstract class $MusicVideoAttributesDTOCopyWith<$Res> {
       String name,
       PlayParamsDTO? playParams,
       List<Map<String, dynamic>>? previews,
-      DateTime? releaseDate,
+      @DateTimeConverter() DateTime? releaseDate,
       String? url,
       int? trackNumber,
       String? contentRating});
@@ -1050,7 +1051,7 @@ abstract class _$$_MusicVideoAttributesDTOCopyWith<$Res>
       String name,
       PlayParamsDTO? playParams,
       List<Map<String, dynamic>>? previews,
-      DateTime? releaseDate,
+      @DateTimeConverter() DateTime? releaseDate,
       String? url,
       int? trackNumber,
       String? contentRating});
@@ -1179,7 +1180,7 @@ class _$_MusicVideoAttributesDTO extends _MusicVideoAttributesDTO {
       required this.name,
       this.playParams,
       final List<Map<String, dynamic>>? previews,
-      this.releaseDate,
+      @DateTimeConverter() this.releaseDate,
       this.url,
       this.trackNumber,
       this.contentRating})
@@ -1229,6 +1230,7 @@ class _$_MusicVideoAttributesDTO extends _MusicVideoAttributesDTO {
   }
 
   @override
+  @DateTimeConverter()
   final DateTime? releaseDate;
   @override
   final String? url;
@@ -1321,7 +1323,7 @@ abstract class _MusicVideoAttributesDTO extends MusicVideoAttributesDTO {
       required final String name,
       final PlayParamsDTO? playParams,
       final List<Map<String, dynamic>>? previews,
-      final DateTime? releaseDate,
+      @DateTimeConverter() final DateTime? releaseDate,
       final String? url,
       final int? trackNumber,
       final String? contentRating}) = _$_MusicVideoAttributesDTO;
@@ -1356,6 +1358,7 @@ abstract class _MusicVideoAttributesDTO extends MusicVideoAttributesDTO {
   List<Map<String, dynamic>>? get previews =>
       throw _privateConstructorUsedError;
   @override
+  @DateTimeConverter()
   DateTime? get releaseDate => throw _privateConstructorUsedError;
   @override
   String? get url => throw _privateConstructorUsedError;
@@ -1840,6 +1843,7 @@ mixin _$SongAttributesDTO {
   PlayParamsDTO? get playParams => throw _privateConstructorUsedError;
   List<Map<String, dynamic>>? get previews =>
       throw _privateConstructorUsedError;
+  @DateTimeConverter()
   DateTime? get releaseDate => throw _privateConstructorUsedError;
   int get trackNumber => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
@@ -1876,7 +1880,7 @@ abstract class $SongAttributesDTOCopyWith<$Res> {
       String name,
       PlayParamsDTO? playParams,
       List<Map<String, dynamic>>? previews,
-      DateTime? releaseDate,
+      @DateTimeConverter() DateTime? releaseDate,
       int trackNumber,
       String? url,
       String? workName});
@@ -2066,7 +2070,7 @@ abstract class _$$_SongAttributesDTOCopyWith<$Res>
       String name,
       PlayParamsDTO? playParams,
       List<Map<String, dynamic>>? previews,
-      DateTime? releaseDate,
+      @DateTimeConverter() DateTime? releaseDate,
       int trackNumber,
       String? url,
       String? workName});
@@ -2234,7 +2238,7 @@ class _$_SongAttributesDTO extends _SongAttributesDTO {
       required this.name,
       this.playParams,
       final List<Map<String, dynamic>>? previews,
-      this.releaseDate,
+      @DateTimeConverter() this.releaseDate,
       required this.trackNumber,
       this.url,
       this.workName})
@@ -2306,6 +2310,7 @@ class _$_SongAttributesDTO extends _SongAttributesDTO {
   }
 
   @override
+  @DateTimeConverter()
   final DateTime? releaseDate;
   @override
   final int trackNumber;
@@ -2425,7 +2430,7 @@ abstract class _SongAttributesDTO extends SongAttributesDTO {
       required final String name,
       final PlayParamsDTO? playParams,
       final List<Map<String, dynamic>>? previews,
-      final DateTime? releaseDate,
+      @DateTimeConverter() final DateTime? releaseDate,
       required final int trackNumber,
       final String? url,
       final String? workName}) = _$_SongAttributesDTO;
@@ -2474,6 +2479,7 @@ abstract class _SongAttributesDTO extends SongAttributesDTO {
   List<Map<String, dynamic>>? get previews =>
       throw _privateConstructorUsedError;
   @override
+  @DateTimeConverter()
   DateTime? get releaseDate => throw _privateConstructorUsedError;
   @override
   int get trackNumber => throw _privateConstructorUsedError;

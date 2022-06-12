@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 extension ThemeBuildContext on BuildContext {
-  TextTheme get ttoc => Theme.of(this).textTheme;
+  ThemeData get toc => Theme.of(this);
+
+  TextTheme get ttoc => toc.textTheme;
 }
 
 extension MediaQueryBuildContext on BuildContext {

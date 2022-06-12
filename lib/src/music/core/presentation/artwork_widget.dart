@@ -20,7 +20,7 @@ class ArtworkWidget extends StatelessWidget {
 
   Color get bgColor => artwork?.bgColor != null
       ? Color(int.parse("0xff${artwork!.bgColor!}"))
-      : Colors.black54;
+      : Colors.black.withOpacity(0.25);
 
   @override
   Widget build(BuildContext context) {

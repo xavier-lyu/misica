@@ -100,7 +100,7 @@ class Resource with _$Resource {
         musicVideo: (musicVideo) => musicVideo.attributes?.artistName,
         playlist: (playlist) => playlist.attributes?.curatorName,
         song: (song) => song.attributes?.artistName,
-        station: (station) => null,
+        station: (station) => station.attributes?.editorialNotes?.short,
         curator: (curator) => null,
         genre: (_) => null,
       ) ??
@@ -119,4 +119,11 @@ class Resource with _$Resource {
         genre: (genre) => genre.attributes?.name,
       ) ??
       '';
+
+  bool get isTrack => maybeMap(
+        (value) => false,
+        orElse: () => false,
+        song: (_) => true,
+        musicVideo: (_) => true,
+      );
 }

@@ -1,70 +1,88 @@
+import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/domain/song.dart';
 
 import 'artwork_widget.dart';
+import 'more_button.dart';
 
 class ResourceTile extends StatelessWidget {
-  const ResourceTile({Key? key, required this.resource, this.onTap})
-      : super(key: key);
+  const ResourceTile({
+    Key? key,
+    required this.resource,
+    this.onTap,
+    this.padding = EdgeInsets.zero,
+    this.subtitle,
+  }) : super(key: key);
 
   final Resource resource;
   final VoidCallback? onTap;
-
-  static const artworkSize = 60.0;
+  final EdgeInsetsGeometry? padding;
+  final String? subtitle;
 
   @override
   Widget build(BuildContext context) {
+    final styles = resource.maybeMap(
+      (value) => const Tuple2(60.0, 5.0),
+      orElse: () => const Tuple2(60.0, 5.0),
+      musicVideo: (_) => const Tuple2(106.6, 5.0),
+      artist: (_) => const Tuple2(60.0, 30.0),
+    );
+
+    final caption = subtitle ?? resource.creatorName;
+
     return InkWell(
       onTap: onTap,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          ArtworkWidget(
-            artwork: resource.artwork,
-            width: artworkSize,
-            height: artworkSize,
-          ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Flexible(
-                        child: Text(
-                          resource.name,
-                          overflow: TextOverflow.ellipsis,
-                          style: context.ttoc.titleMedium,
+      child: Container(
+        padding: padding,
+        child: Row(
+          children: [
+            ArtworkWidget(
+              artwork: resource.artwork,
+              width: styles.value1,
+              height: 60.0,
+              radius: styles.value2,
+            ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Flexible(
+                          child: Text(
+                            resource.name,
+                            overflow: TextOverflow.ellipsis,
+                            style: context.ttoc.titleMedium,
+                          ),
                         ),
-                      ),
-                      if (resource is Song && (resource as Song).isExplicit)
-                        const Icon(Icons.explicit_rounded),
-                    ],
-                  ),
-                  if (resource.creatorName.isNotEmpty)
-                    Container(
-                      margin: const EdgeInsetsDirectional.only(top: 10),
-                      child: Text(
-                        resource.creatorName,
-                        overflow: TextOverflow.ellipsis,
-                        style: context.ttoc.labelLarge,
-                      ),
-                    )
-                ],
+                        if (resource is Song && (resource as Song).isExplicit)
+                          const Icon(Icons.explicit_rounded),
+                      ],
+                    ),
+                    if (caption.isNotEmpty)
+                      Container(
+                        margin: const EdgeInsetsDirectional.only(top: 5),
+                        child: Text(
+                          caption,
+                          overflow: TextOverflow.ellipsis,
+                          style: context.ttoc.labelLarge,
+                        ),
+                      )
+                  ],
+                ),
               ),
             ),
-          ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.more_horiz_rounded),
-          ),
-        ],
+            resource.isTrack
+                ? MoreButton(onPressed: () {})
+                : const Icon(Icons.keyboard_arrow_right_rounded)
+          ],
+        ),
       ),
     );
   }

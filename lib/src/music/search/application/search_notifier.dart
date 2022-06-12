@@ -1,0 +1,33 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:misica/src/music/core/shared/providers.dart';
+import 'package:misica/src/music/search/domain/search_results.dart';
+import 'package:misica/src/music/search/infrastructure/search_repository.dart';
+
+part 'search_notifier.freezed.dart';
+
+@freezed
+class SearchResultsState with _$SearchResultsState {
+  const SearchResultsState._();
+  const factory SearchResultsState.initial() = _Initial;
+  const factory SearchResultsState.loading() = _Loading;
+  const factory SearchResultsState.data(SearchResults value) = _Data;
+  const factory SearchResultsState.error(Object error) = _Error;
+}
+
+class SearchNotifier extends StateNotifier<SearchResultsState> {
+  final SearchRepository _repository;
+  final Reader _read;
+
+  SearchNotifier(this._repository, this._read)
+      : super(const SearchResultsState.initial());
+
+  void search(String term) async {
+    final storefront = await _read(storefrontProvider.future);
+    final failureOrResults = await _repository.search(storefront, term);
+    state = failureOrResults.fold(
+      (l) => SearchResultsState.error(l),
+      (r) => SearchResultsState.data(r),
+    );
+  }
+}

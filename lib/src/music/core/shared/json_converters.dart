@@ -36,11 +36,13 @@ class ResourceDTOConverter
   }
 }
 
-class DateTimeConverter implements JsonConverter<DateTime?, String> {
+class DateTimeConverter implements JsonConverter<DateTime?, String?> {
   const DateTimeConverter();
 
   @override
-  DateTime? fromJson(String json) {
+  DateTime? fromJson(String? json) {
+    if (json == null) return null;
+
     final units = json.split('-').map<int>((e) => int.parse(e)).toList()
       ..addAll([1, 1]);
     if (units.length < 3) return null;
