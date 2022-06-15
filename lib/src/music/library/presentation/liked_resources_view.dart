@@ -1,7 +1,9 @@
 import 'dart:math';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:misica/src/core/presentation/app_router.gr.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/presentation/resource_card.dart';
@@ -110,10 +112,17 @@ class ResourcesListView extends StatelessWidget {
         final item = resources[index];
         return ResourceTile(
           resource: item,
-          onTap: () => ref.read(musicPlayerProvider).playMany(
-                items: resources,
-                startingAt: index,
-              ),
+          onTap: () {
+            item.mapOrNull(
+              (value) => null,
+              song: (song) => ref.read(musicPlayerProvider).playMany(
+                    items: resources,
+                    startingAt: index,
+                  ),
+              artist: (artist) =>
+                  context.router.push(ArtistRoute(id: artist.id)),
+            );
+          },
         );
       }),
     );
