@@ -34,8 +34,11 @@ dependencies:
       url: git@github.com:misiio/flutter_music_kit.git
       ref: master
       path: music_kit
+  path: ^1.8.1
+  path_provider: ^2.0.11
   retrofit: ^3.0.1+1
   salomon_bottom_bar: ^3.3.1
+  sembast: ^3.2.0+1
 
 dev_dependencies:
   flutter_test:

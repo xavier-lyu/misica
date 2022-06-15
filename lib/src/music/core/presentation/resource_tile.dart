@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/domain/song.dart';
+import 'package:misica/src/music/core/presentation/resource_context_menu.dart';
 
 import 'artwork_widget.dart';
-import 'more_button.dart';
 
 class ResourceTile extends StatelessWidget {
   const ResourceTile({
@@ -79,7 +79,7 @@ class ResourceTile extends StatelessWidget {
               ),
             ),
             resource.isTrack
-                ? MoreButton(onPressed: () {})
+                ? ResourceContextMenuButton(resource: resource)
                 : const Icon(Icons.keyboard_arrow_right_rounded)
           ],
         ),

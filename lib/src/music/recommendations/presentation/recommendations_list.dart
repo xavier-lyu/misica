@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -48,7 +50,7 @@ class _RecommendationsListState extends ConsumerState<RecommendationsList> {
                 }
                 return RecommendationWidget(recommendation: recos[index ~/ 2]);
               }),
-              childCount: (recos.length * 2 - 1),
+              childCount: max(0, recos.length * 2 - 1),
             ),
           ),
         );

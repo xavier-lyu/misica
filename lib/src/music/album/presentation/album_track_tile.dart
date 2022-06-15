@@ -3,6 +3,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/core/domain/track.dart';
 import 'package:misica/src/music/core/presentation/explicit_icon.dart';
 import 'package:misica/src/music/core/presentation/music_video_icon.dart';
+import 'package:misica/src/music/core/presentation/resource_context_menu.dart';
 
 class AlbumTrackTile extends ConsumerWidget {
   const AlbumTrackTile({
@@ -46,9 +47,11 @@ class AlbumTrackTile extends ConsumerWidget {
               ),
             ),
           ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.more_horiz_rounded),
+          ResourceContextMenuButton(
+            resource: track.when(
+              song: (song) => song,
+              musicVideo: (musicVideo) => musicVideo,
+            ),
           )
         ],
       ),

@@ -3,7 +3,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/presentation/artwork_widget.dart';
-import 'package:misica/src/music/core/presentation/more_button.dart';
+import 'package:misica/src/music/core/presentation/resource_context_menu.dart';
 import 'package:misica/src/music/player/shared/providers.dart';
 
 class StationTile extends ConsumerWidget {
@@ -38,7 +38,7 @@ class StationTile extends ConsumerWidget {
               ],
             ),
           ),
-          MoreButton(onPressed: () {})
+          ResourceContextMenuButton(resource: station)
         ],
       ),
     );

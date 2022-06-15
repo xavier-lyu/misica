@@ -65,5 +65,11 @@
   "@searchHint": {},
 
   "noResultsFor": "No results for",
-  "@noResultsFor": {}
+  "@noResultsFor": {},
+
+  "like": "Like",
+  "@like": {},
+
+  "liked": "Liked",
+  "@liked": {}
 }

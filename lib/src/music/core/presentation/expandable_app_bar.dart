@@ -9,6 +9,7 @@ class ExpandableAppBar extends StatelessWidget {
     this.background,
     this.expandedTitle,
     this.centerTitle,
+    this.actions,
   }) : super(key: key);
 
   final Widget title;
@@ -17,10 +18,12 @@ class ExpandableAppBar extends StatelessWidget {
   final Widget? background;
   final Widget? expandedTitle;
   final bool? centerTitle;
+  final List<Widget>? actions;
 
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
+      actions: actions,
       title: isCollapsed ? title : null,
       pinned: true,
       expandedHeight: expandedHeight,

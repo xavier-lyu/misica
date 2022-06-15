@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:misica/src/music/core/presentation/favorite_action_widget.dart';
 import 'package:misica/src/music/core/presentation/hook_scroll_view.dart';
 import 'package:misica/src/music/core/presentation/loader.dart';
 import 'package:misica/src/music/core/presentation/retry_widget.dart';
@@ -59,6 +60,9 @@ class _PlaylistPageState extends ConsumerState<PlaylistPage> {
               SliverAppBar(
                 title: scrollOffset.value >= 264 ? Text(playlist.name) : null,
                 pinned: true,
+                actions: [
+                  FavoriteActionWidget(resource: playlist),
+                ],
               ),
               SliverPadding(
                 padding: const EdgeInsetsDirectional.only(

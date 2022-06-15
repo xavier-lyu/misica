@@ -7,8 +7,8 @@ import 'package:misica/src/music/core/domain/album.dart';
 import 'package:misica/src/music/core/domain/resource_view.dart';
 import 'package:misica/src/music/core/presentation/artwork_widget.dart';
 import 'package:misica/src/music/core/presentation/explicit_icon.dart';
-import 'package:misica/src/music/core/presentation/more_button.dart';
 import 'package:misica/src/music/core/presentation/release_date_widget.dart';
+import 'package:misica/src/music/core/presentation/resource_context_menu.dart';
 import 'package:misica/src/music/core/presentation/resource_tile.dart';
 import 'package:misica/src/music/player/shared/providers.dart';
 
@@ -167,7 +167,7 @@ class ResourceViewWidget extends ConsumerWidget {
               ),
             ),
           ),
-          MoreButton(onPressed: () {}),
+          ResourceContextMenuButton(resource: latest),
         ],
       ),
     );

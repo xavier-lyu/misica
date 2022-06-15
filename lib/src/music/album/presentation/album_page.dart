@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/core/domain/album.dart';
 import 'package:misica/src/music/album/shared/providers.dart';
+import 'package:misica/src/music/core/presentation/favorite_action_widget.dart';
 import 'package:misica/src/music/core/presentation/hook_scroll_view.dart';
 import 'package:misica/src/music/core/presentation/loader.dart';
 import 'package:misica/src/music/core/presentation/resource_views_list.dart';
@@ -60,6 +61,9 @@ class _AlbumPageState extends ConsumerState<AlbumPage> {
               SliverAppBar(
                 title: scrollOffset.value >= 264 ? Text(album.name) : null,
                 pinned: true,
+                actions: [
+                  FavoriteActionWidget(resource: album),
+                ],
               ),
               SliverPadding(
                 padding: const EdgeInsetsDirectional.only(

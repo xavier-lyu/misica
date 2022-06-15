@@ -8,6 +8,7 @@ import 'package:misica/src/music/artist/domain/artist.dart';
 import 'package:misica/src/music/artist/shared/providers.dart';
 import 'package:misica/src/music/core/presentation/artwork_widget.dart';
 import 'package:misica/src/music/core/presentation/expandable_app_bar.dart';
+import 'package:misica/src/music/core/presentation/favorite_action_widget.dart';
 import 'package:misica/src/music/core/presentation/hook_scroll_view.dart';
 import 'package:misica/src/music/core/presentation/loader.dart';
 import 'package:misica/src/music/core/presentation/resource_views_list.dart';
@@ -78,6 +79,9 @@ class _ArtistPageState extends ConsumerState<ArtistPage> {
                             title: artist.name,
                             opacity: opacity,
                           ),
+                    actions: [
+                      FavoriteActionWidget(resource: artist),
+                    ],
                   ),
                   if (artist.views?.isNotEmpty == true)
                     ResourceViewsList(views: artist.views!),
