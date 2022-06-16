@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
+import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 
 class GenrePillWidget extends StatelessWidget {
@@ -20,15 +21,23 @@ class GenrePillWidget extends StatelessWidget {
       )),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.black.withOpacity(0.15),
+          color: context.toc.colorScheme.surface,
           borderRadius: BorderRadius.circular(5),
         ),
         padding: const EdgeInsetsDirectional.only(start: 10, end: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(genre.name),
-            const Icon(Icons.keyboard_arrow_right_rounded),
+            Text(
+              genre.name,
+              style: context.ttoc.titleMedium?.copyWith(
+                color: context.toc.colorScheme.onSurface,
+              ),
+            ),
+            Icon(
+              Icons.keyboard_arrow_right_rounded,
+              color: context.toc.colorScheme.primary,
+            ),
           ],
         ),
       ),

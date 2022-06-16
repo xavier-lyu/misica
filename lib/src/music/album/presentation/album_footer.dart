@@ -14,7 +14,7 @@ class AlbumFooter extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         border: BorderDirectional(
-          start: BorderSide(width: 4, color: Colors.grey[400]!),
+          start: Divider.createBorderSide(context, width: 4),
         ),
       ),
       padding: const EdgeInsetsDirectional.only(start: 9),

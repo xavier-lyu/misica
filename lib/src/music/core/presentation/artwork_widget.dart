@@ -1,5 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:misica/src/core/shared/color_extensions.dart';
+import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/artwork.dart';
 
 class ArtworkWidget extends StatelessWidget {
@@ -18,12 +20,12 @@ class ArtworkWidget extends StatelessWidget {
     this.fit = BoxFit.cover,
   }) : super(key: key);
 
-  Color get bgColor => artwork?.bgColor != null
-      ? Color(int.parse("0xff${artwork!.bgColor!}"))
-      : Colors.black.withOpacity(0.25);
-
   @override
   Widget build(BuildContext context) {
+    final bgColor = artwork?.bgColor != null
+        ? colorFromHexString(artwork!.bgColor!)
+        : context.toc.colorScheme.surfaceVariant;
+
     return Container(
       decoration: BoxDecoration(
         color: bgColor,

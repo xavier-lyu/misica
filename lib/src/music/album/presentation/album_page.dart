@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/album.dart';
 import 'package:misica/src/music/album/shared/providers.dart';
 import 'package:misica/src/music/core/presentation/favorite_action_widget.dart';
@@ -59,7 +60,12 @@ class _AlbumPageState extends ConsumerState<AlbumPage> {
             onOffsetChanged: (offset) => scrollOffset.value = offset,
             slivers: [
               SliverAppBar(
-                title: scrollOffset.value >= 264 ? Text(album.name) : null,
+                title: scrollOffset.value >= 264
+                    ? Text(
+                        album.name,
+                        style: context.ttoc.titleLarge,
+                      )
+                    : null,
                 pinned: true,
                 actions: [
                   FavoriteActionWidget(resource: album),
@@ -83,6 +89,7 @@ class _AlbumPageState extends ConsumerState<AlbumPage> {
                 ),
                 sliver: TracksList(
                   tracks: album.tracks,
+                  indent: 30.0,
                   itemBuilder: (context, index) => AlbumTrackTile(
                     track: album.tracks[index],
                     onTap: () => ref

@@ -60,7 +60,10 @@ class _LikedResourcesViewState extends State<LikedResourcesView>
     return CustomScrollView(
       slivers: [
         SliverAppBar(
-          title: const Text('Your Library'),
+          title: Text(
+            'Your Library',
+            style: context.ttoc.titleLarge,
+          ),
           centerTitle: false,
           pinned: true,
           bottom: TabBar(
@@ -68,7 +71,10 @@ class _LikedResourcesViewState extends State<LikedResourcesView>
             controller: _tabController,
             tabs: _types
                 .map((key) => Tab(
-                      text: key.toUpperCase(),
+                      child: Text(
+                        key.toUpperCase(),
+                        style: context.ttoc.titleSmall,
+                      ),
                     ))
                 .toList(),
           ),

@@ -1,7 +1,7 @@
-import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/material.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
+import 'package:misica/src/music/core/presentation/expandable_text.dart';
 
 class ArtistFooterView extends StatelessWidget {
   const ArtistFooterView({
@@ -27,9 +27,7 @@ class ArtistFooterView extends StatelessWidget {
           ),
           ExpandableText(
             description,
-            expandText: context.loc.more,
             maxLines: 8,
-            collapseOnTextTap: true,
           ),
         ],
       ),

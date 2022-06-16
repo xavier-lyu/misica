@@ -35,7 +35,7 @@ class ResourceViewsList extends StatelessWidget {
             padding: EdgeInsets.symmetric(
               vertical: (index.isOdd ? 0 : 10),
             ),
-            color: Colors.grey[100]!,
+            color: context.toc.colorScheme.surface,
             child: (index.isOdd)
                 ? const DividerWidget(
                     endIndent: 0,

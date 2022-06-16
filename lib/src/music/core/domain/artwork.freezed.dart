@@ -24,6 +24,7 @@ mixin _$Artwork {
   int get height => throw _privateConstructorUsedError;
   String get url => throw _privateConstructorUsedError;
   int get width => throw _privateConstructorUsedError;
+  String? get textColor => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,7 +35,8 @@ mixin _$Artwork {
 abstract class $ArtworkCopyWith<$Res> {
   factory $ArtworkCopyWith(Artwork value, $Res Function(Artwork) then) =
       _$ArtworkCopyWithImpl<$Res>;
-  $Res call({String? bgColor, int height, String url, int width});
+  $Res call(
+      {String? bgColor, int height, String url, int width, String? textColor});
 }
 
 /// @nodoc
@@ -51,6 +53,7 @@ class _$ArtworkCopyWithImpl<$Res> implements $ArtworkCopyWith<$Res> {
     Object? height = freezed,
     Object? url = freezed,
     Object? width = freezed,
+    Object? textColor = freezed,
   }) {
     return _then(_value.copyWith(
       bgColor: bgColor == freezed
@@ -69,6 +72,10 @@ class _$ArtworkCopyWithImpl<$Res> implements $ArtworkCopyWith<$Res> {
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as int,
+      textColor: textColor == freezed
+          ? _value.textColor
+          : textColor // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -79,7 +86,8 @@ abstract class _$$_ArtworkCopyWith<$Res> implements $ArtworkCopyWith<$Res> {
           _$_Artwork value, $Res Function(_$_Artwork) then) =
       __$$_ArtworkCopyWithImpl<$Res>;
   @override
-  $Res call({String? bgColor, int height, String url, int width});
+  $Res call(
+      {String? bgColor, int height, String url, int width, String? textColor});
 }
 
 /// @nodoc
@@ -97,6 +105,7 @@ class __$$_ArtworkCopyWithImpl<$Res> extends _$ArtworkCopyWithImpl<$Res>
     Object? height = freezed,
     Object? url = freezed,
     Object? width = freezed,
+    Object? textColor = freezed,
   }) {
     return _then(_$_Artwork(
       bgColor: bgColor == freezed
@@ -115,6 +124,10 @@ class __$$_ArtworkCopyWithImpl<$Res> extends _$ArtworkCopyWithImpl<$Res>
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as int,
+      textColor: textColor == freezed
+          ? _value.textColor
+          : textColor // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -126,7 +139,8 @@ class _$_Artwork extends _Artwork {
       {required this.bgColor,
       required this.height,
       required this.url,
-      required this.width})
+      required this.width,
+      required this.textColor})
       : super._();
 
   factory _$_Artwork.fromJson(Map<String, dynamic> json) =>
@@ -140,10 +154,12 @@ class _$_Artwork extends _Artwork {
   final String url;
   @override
   final int width;
+  @override
+  final String? textColor;
 
   @override
   String toString() {
-    return 'Artwork(bgColor: $bgColor, height: $height, url: $url, width: $width)';
+    return 'Artwork(bgColor: $bgColor, height: $height, url: $url, width: $width, textColor: $textColor)';
   }
 
   @override
@@ -154,7 +170,8 @@ class _$_Artwork extends _Artwork {
             const DeepCollectionEquality().equals(other.bgColor, bgColor) &&
             const DeepCollectionEquality().equals(other.height, height) &&
             const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality().equals(other.width, width));
+            const DeepCollectionEquality().equals(other.width, width) &&
+            const DeepCollectionEquality().equals(other.textColor, textColor));
   }
 
   @JsonKey(ignore: true)
@@ -164,7 +181,8 @@ class _$_Artwork extends _Artwork {
       const DeepCollectionEquality().hash(bgColor),
       const DeepCollectionEquality().hash(height),
       const DeepCollectionEquality().hash(url),
-      const DeepCollectionEquality().hash(width));
+      const DeepCollectionEquality().hash(width),
+      const DeepCollectionEquality().hash(textColor));
 
   @JsonKey(ignore: true)
   @override
@@ -182,7 +200,8 @@ abstract class _Artwork extends Artwork {
       {required final String? bgColor,
       required final int height,
       required final String url,
-      required final int width}) = _$_Artwork;
+      required final int width,
+      required final String? textColor}) = _$_Artwork;
   const _Artwork._() : super._();
 
   factory _Artwork.fromJson(Map<String, dynamic> json) = _$_Artwork.fromJson;
@@ -195,6 +214,8 @@ abstract class _Artwork extends Artwork {
   String get url => throw _privateConstructorUsedError;
   @override
   int get width => throw _privateConstructorUsedError;
+  @override
+  String? get textColor => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_ArtworkCopyWith<_$_Artwork> get copyWith =>

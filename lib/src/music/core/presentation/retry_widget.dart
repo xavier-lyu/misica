@@ -8,8 +8,7 @@ class RetryWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: IconButton(
-        color: Colors.black.withOpacity(0.5),
-        iconSize: 72.0,
+        iconSize: 66.0,
         onPressed: onRetry,
         icon: const Icon(Icons.refresh_rounded),
       ),

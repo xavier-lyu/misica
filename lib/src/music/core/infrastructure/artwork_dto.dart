@@ -23,10 +23,10 @@ class ArtworkDTO with _$ArtworkDTO {
 
   Artwork toDomain() {
     return Artwork(
-      bgColor: bgColor,
-      height: height,
-      url: url,
-      width: width,
-    );
+        bgColor: bgColor,
+        height: height,
+        url: url,
+        width: width,
+        textColor: textColor1);
   }
 }

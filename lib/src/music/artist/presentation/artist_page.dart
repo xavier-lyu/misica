@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -130,17 +131,21 @@ class ArtistExpandedTitle extends StatelessWidget {
               ]),
         ),
         padding:
-            const EdgeInsetsDirectional.only(start: 20, end: 20, bottom: 12),
+            const EdgeInsetsDirectional.only(start: 20, end: 20, bottom: 2),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text(
-              title,
-              style: context.ttoc.headlineMedium?.copyWith(
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white.withOpacity(opacity)),
-              overflow: TextOverflow.ellipsis,
+            Flexible(
+              child: AutoSizeText(
+                title,
+                style: context.ttoc.headlineLarge?.copyWith(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white.withOpacity(opacity)),
+                overflow: TextOverflow.ellipsis,
+                minFontSize: context.ttoc.headlineSmall?.fontSize ?? 20,
+                maxLines: 1,
+              ),
             ),
             IconButton(
               iconSize: 44,

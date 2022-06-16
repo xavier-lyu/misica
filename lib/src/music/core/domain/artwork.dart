@@ -11,6 +11,7 @@ class Artwork with _$Artwork {
     required int height,
     required String url,
     required int width,
+    required String? textColor,
   }) = _Artwork;
 
   factory Artwork.fromJson(Map<String, dynamic> json) =>

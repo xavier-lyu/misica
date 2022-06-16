@@ -1,10 +1,9 @@
-import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
-import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/presentation/artwork_widget.dart';
+import 'package:misica/src/music/core/presentation/expandable_text.dart';
 import 'package:misica/src/music/core/presentation/play_button.dart';
 import 'package:misica/src/music/core/presentation/shuffle_button.dart';
 import 'package:misica/src/music/playlist/domain/playlist.dart';
@@ -41,19 +40,14 @@ class PlaylistHeaderView extends ConsumerWidget {
           Text(
             playlist.creatorName,
             style: context.ttoc.titleLarge?.copyWith(
-              color: Colors.redAccent,
+              color: context.toc.primaryColor,
             ),
             textAlign: TextAlign.center,
           ),
         if (playlist.description != null)
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
-            child: ExpandableText(
-              playlist.description!,
-              expandText: context.loc.more,
-              maxLines: 2,
-              collapseOnTextTap: true,
-            ),
+            child: ExpandableText(playlist.description!),
           ),
         Row(
           children: [

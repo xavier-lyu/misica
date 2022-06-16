@@ -45,6 +45,7 @@ class AuthorizationPage extends HookConsumerWidget {
                   Text(
                     secondaryExplanatory,
                     textAlign: TextAlign.center,
+                    style: context.ttoc.bodyMedium,
                   ),
                   const SizedBox(height: 10),
                 ],

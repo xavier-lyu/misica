@@ -50,7 +50,7 @@ class NowPlayingItemWidget extends HookConsumerWidget {
       padding: const EdgeInsetsDirectional.fromSTEB(20, 5, 15, 5),
       decoration: BoxDecoration(
         border: Border.symmetric(
-          horizontal: BorderSide(width: 1, color: Colors.grey[200]!),
+          horizontal: Divider.createBorderSide(context),
         ),
       ),
       child: Row(children: [

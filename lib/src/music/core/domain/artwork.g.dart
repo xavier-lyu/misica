@@ -11,6 +11,7 @@ _$_Artwork _$$_ArtworkFromJson(Map json) => _$_Artwork(
       height: json['height'] as int,
       url: json['url'] as String,
       width: json['width'] as int,
+      textColor: json['textColor'] as String?,
     );
 
 Map<String, dynamic> _$$_ArtworkToJson(_$_Artwork instance) =>
@@ -19,4 +20,5 @@ Map<String, dynamic> _$$_ArtworkToJson(_$_Artwork instance) =>
       'height': instance.height,
       'url': instance.url,
       'width': instance.width,
+      'textColor': instance.textColor,
     };

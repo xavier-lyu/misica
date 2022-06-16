@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/search/domain/search_results.dart';
 
 import 'search_result_widget.dart';
@@ -58,7 +59,10 @@ class _SearchResultsViewState extends State<SearchResultsView>
             controller: _tabController,
             tabs: widget.results.keys
                 .map((key) => Tab(
-                      text: widget.results[key]!.name,
+                      child: Text(
+                        widget.results[key]!.name,
+                        style: context.ttoc.titleSmall,
+                      ),
                     ))
                 .toList(),
           ),

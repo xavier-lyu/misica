@@ -13,11 +13,13 @@ class TracksList extends StatelessWidget {
     required this.tracks,
     required this.itemBuilder,
     this.footerBuilder,
+    this.indent = 0,
   }) : super(key: key);
 
   final List<Track> tracks;
   final TracksListItemBuilder itemBuilder;
   final TracksListFooterBuilder? footerBuilder;
+  final double indent;
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +43,7 @@ class TracksList extends StatelessWidget {
           final isEdge =
               (index == 0 || index == (childCount - (hasFooter ? 2 : 1)));
           return DividerWidget(
-            indent: isEdge ? 0 : 30,
+            indent: isEdge ? 0 : indent,
             endIndent: 0,
           );
         },

@@ -14,8 +14,6 @@ class DividerWidget extends StatelessWidget {
   final Color? color;
   final double height;
 
-  Color? get _color => color ?? Colors.grey[200];
-
   @override
   Widget build(BuildContext context) {
     return Divider(
@@ -23,7 +21,7 @@ class DividerWidget extends StatelessWidget {
       thickness: 1,
       indent: indent,
       endIndent: endIndent,
-      color: _color,
+      color: color,
     );
   }
 }

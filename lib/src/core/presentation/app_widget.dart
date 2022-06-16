@@ -7,6 +7,7 @@ import 'package:misica/src/authorization/shared/providers.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
 import 'package:misica/src/core/shared/providers.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
+import 'package:misica/src/theme/theme.dart';
 
 final initializationProvider = FutureProvider<Unit>((ref) async {
   ref.read(sembastProvider).init();
@@ -51,8 +52,8 @@ class AppWidget extends ConsumerWidget {
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       onGenerateTitle: (BuildContext context) => context.loc.appTitle,
-      theme: ThemeData(),
-      darkTheme: ThemeData.dark(),
+      theme: CustomTheme.light(),
+      darkTheme: CustomTheme.dark(),
       themeMode: ThemeMode.system,
       routerDelegate: _appRouter.delegate(),
       routeInformationParser: _appRouter.defaultRouteParser(),

@@ -1,10 +1,8 @@
-import 'dart:io';
-
-import 'package:auto_route/auto_route.dart';
 import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:material_floating_search_bar/material_floating_search_bar.dart';
+import 'package:misica/src/core/shared/color_extensions.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/presentation/artwork_widget.dart';
@@ -70,26 +68,7 @@ class _SearchBarState extends ConsumerState<SearchBar> {
         scrollPadding: const EdgeInsets.only(top: 15, bottom: 75),
         automaticallyImplyBackButton: false,
         debounceDelay: const Duration(milliseconds: 500),
-        backdropColor: Colors.black.withOpacity(0.15),
-        leadingActions: [
-          if (AutoRouter.of(context).canPopSelfOrChildren &&
-              (Platform.isIOS || Platform.isMacOS))
-            IconButton(
-              icon: const Icon(Icons.arrow_back_ios_new_rounded),
-              splashRadius: 18,
-              onPressed: () {
-                AutoRouter.of(context).pop();
-              },
-            ),
-          if (AutoRouter.of(context).canPopSelfOrChildren)
-            IconButton(
-              icon: const Icon(Icons.arrow_back_rounded),
-              splashRadius: 18,
-              onPressed: () {
-                AutoRouter.of(context).pop();
-              },
-            ),
-        ],
+        backdropColor: context.toc.colorScheme.surface.darken(),
         actions: [
           FloatingSearchBarAction.searchToClear(
             showIfClosed: false,

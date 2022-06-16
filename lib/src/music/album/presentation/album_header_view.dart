@@ -1,12 +1,11 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
-import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/domain/album.dart';
 import 'package:misica/src/music/core/presentation/artwork_widget.dart';
+import 'package:misica/src/music/core/presentation/expandable_text.dart';
 import 'package:misica/src/music/core/presentation/play_button.dart';
 import 'package:misica/src/music/core/presentation/shuffle_button.dart';
 
@@ -43,7 +42,7 @@ class AlbumHeaderView extends ConsumerWidget {
             child: Text(
               album.creatorName,
               style: context.ttoc.titleLarge?.copyWith(
-                color: Colors.redAccent,
+                color: context.toc.primaryColor,
               ),
               textAlign: TextAlign.center,
             ),
@@ -56,12 +55,7 @@ class AlbumHeaderView extends ConsumerWidget {
         if (album.description != null)
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
-            child: ExpandableText(
-              album.description!,
-              expandText: context.loc.more,
-              maxLines: 2,
-              collapseOnTextTap: true,
-            ),
+            child: ExpandableText(album.description!),
           ),
         Row(
           children: [
