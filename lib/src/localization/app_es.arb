@@ -1,0 +1,101 @@
+{
+  "appTitle": "Misica",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+
+  "defaultExplanatory": "Ponle banda sonora a tu vida con Apple Music.",
+  "@defaultExplanatory": {},
+
+  "restrictedExplanatory": "Misica no se puede utilizar en este dispositivo porque el uso de Apple Music está restringido.",
+  "@restrictedExplanatory": {},
+
+  "secondaryExplanatory": "Concede a Misica\n el acceso a Apple Music en Ajustes.",
+  "@secondaryExplanatory": {},
+
+  "continueText": "Continuar",
+  "@continueText": {},
+
+  "openSettings": "Abrir la Configuración",
+  "@openSettings": {},
+
+  "home": "Inicio",
+  "@home": {},
+
+  "radio": "Rádio",
+  "@radio": {},
+
+  "library": "Biblioteca",
+  "@library": {},
+
+  "search": "Buscar",
+  "@search": {},
+
+  "play": "Reproducir",
+  "@play": {},
+
+  "pause": "Pause",
+  "@pause": {},
+
+  "shuffle": "Shuffle",
+  "@shuffle": {},
+
+  "song": "Sancione",
+  "@song": {},
+
+  "more": "Más",
+  "@more": {},
+
+  "notPlaying": "No jugar",
+  "@notPlaying": {},
+
+  "about": "Acerca de",
+  "@about": {},
+
+  "recentlyPlayed": "Escuchados Recientemente",
+  "@recentlyPlayed": {},
+
+  "stationsByGenre": "Estaciones por género",
+  "@stationsByGenre": {},
+
+  "tapToSearch": "Toque para buscar",
+  "@tapToSearch": {},
+
+  "searchHint": "Artistas, canciones, listas de reproducción y más",
+  "@searchHint": {},
+
+  "noResultsFor": "No hay resultados para",
+  "@noResultsFor": {},
+
+  "like": "Como",
+  "@like": {},
+
+  "liked": "Me gusta",
+  "@liked": {},
+
+  "settings": "Configuración",
+  "@settings": {},
+
+  "yourLibrary": "Su biblioteca",
+  "@yourLibrary": {},
+
+  "appearance": "Apariencia",
+  "@appearance": {},
+
+  "language": "Idioma",
+  "@language": {},
+  "changeLanguageTitle": "Cambia la configuración del idioma",
+  "@changeLanguageTitle": {},
+  "changeLanguageHint": "Continúa a la siguiente pantalla y selecciona Idioma. Luego, elige el idioma que desees.",
+  "@changeLanguageHint": {},
+
+  "dismiss": "Ignorar",
+  "@dismiss": {},
+
+  "light": "Claro",
+  "@light": {},
+  "dark": "Oscuro",
+  "@dark": {},
+  "system": "Sistema de seguimiento",
+  "@system": {}
+}

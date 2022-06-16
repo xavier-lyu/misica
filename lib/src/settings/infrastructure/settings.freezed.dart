@@ -21,7 +21,6 @@ Settings _$SettingsFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Settings {
   ThemeMode get themeMode => throw _privateConstructorUsedError;
-  String get localeName => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -33,7 +32,7 @@ mixin _$Settings {
 abstract class $SettingsCopyWith<$Res> {
   factory $SettingsCopyWith(Settings value, $Res Function(Settings) then) =
       _$SettingsCopyWithImpl<$Res>;
-  $Res call({ThemeMode themeMode, String localeName});
+  $Res call({ThemeMode themeMode});
 }
 
 /// @nodoc
@@ -47,17 +46,12 @@ class _$SettingsCopyWithImpl<$Res> implements $SettingsCopyWith<$Res> {
   @override
   $Res call({
     Object? themeMode = freezed,
-    Object? localeName = freezed,
   }) {
     return _then(_value.copyWith(
       themeMode: themeMode == freezed
           ? _value.themeMode
           : themeMode // ignore: cast_nullable_to_non_nullable
               as ThemeMode,
-      localeName: localeName == freezed
-          ? _value.localeName
-          : localeName // ignore: cast_nullable_to_non_nullable
-              as String,
     ));
   }
 }
@@ -68,7 +62,7 @@ abstract class _$$_SettingsCopyWith<$Res> implements $SettingsCopyWith<$Res> {
           _$_Settings value, $Res Function(_$_Settings) then) =
       __$$_SettingsCopyWithImpl<$Res>;
   @override
-  $Res call({ThemeMode themeMode, String localeName});
+  $Res call({ThemeMode themeMode});
 }
 
 /// @nodoc
@@ -84,17 +78,12 @@ class __$$_SettingsCopyWithImpl<$Res> extends _$SettingsCopyWithImpl<$Res>
   @override
   $Res call({
     Object? themeMode = freezed,
-    Object? localeName = freezed,
   }) {
     return _then(_$_Settings(
       themeMode: themeMode == freezed
           ? _value.themeMode
           : themeMode // ignore: cast_nullable_to_non_nullable
               as ThemeMode,
-      localeName: localeName == freezed
-          ? _value.localeName
-          : localeName // ignore: cast_nullable_to_non_nullable
-              as String,
     ));
   }
 }
@@ -102,20 +91,17 @@ class __$$_SettingsCopyWithImpl<$Res> extends _$SettingsCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Settings extends _Settings {
-  const _$_Settings({required this.themeMode, required this.localeName})
-      : super._();
+  const _$_Settings({required this.themeMode}) : super._();
 
   factory _$_Settings.fromJson(Map<String, dynamic> json) =>
       _$$_SettingsFromJson(json);
 
   @override
   final ThemeMode themeMode;
-  @override
-  final String localeName;
 
   @override
   String toString() {
-    return 'Settings(themeMode: $themeMode, localeName: $localeName)';
+    return 'Settings(themeMode: $themeMode)';
   }
 
   @override
@@ -123,17 +109,13 @@ class _$_Settings extends _Settings {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Settings &&
-            const DeepCollectionEquality().equals(other.themeMode, themeMode) &&
-            const DeepCollectionEquality()
-                .equals(other.localeName, localeName));
+            const DeepCollectionEquality().equals(other.themeMode, themeMode));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(themeMode),
-      const DeepCollectionEquality().hash(localeName));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(themeMode));
 
   @JsonKey(ignore: true)
   @override
@@ -147,17 +129,13 @@ class _$_Settings extends _Settings {
 }
 
 abstract class _Settings extends Settings {
-  const factory _Settings(
-      {required final ThemeMode themeMode,
-      required final String localeName}) = _$_Settings;
+  const factory _Settings({required final ThemeMode themeMode}) = _$_Settings;
   const _Settings._() : super._();
 
   factory _Settings.fromJson(Map<String, dynamic> json) = _$_Settings.fromJson;
 
   @override
   ThemeMode get themeMode => throw _privateConstructorUsedError;
-  @override
-  String get localeName => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_SettingsCopyWith<_$_Settings> get copyWith =>

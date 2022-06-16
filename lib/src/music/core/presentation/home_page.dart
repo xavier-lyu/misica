@@ -33,7 +33,7 @@ class HomePage extends HookWidget {
                 children: [
                   Text(
                     context.loc.home,
-                    style: context.ttoc.headlineSmall,
+                    style: context.ttoc.titleLarge,
                     textAlign: TextAlign.start,
                   ),
                   if (scrollOffset.value < _compactAppBarHeight)
@@ -75,6 +75,7 @@ class SettingsActionWidget extends StatelessWidget {
       icon: const Icon(
         Icons.settings_rounded,
       ),
+      iconSize: 20,
       padding: EdgeInsets.zero,
     );
   }

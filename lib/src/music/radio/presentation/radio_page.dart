@@ -42,7 +42,7 @@ class _RadioPageState extends ConsumerState<RadioPage> {
           AppNavbar(
             title: Text(
               context.loc.radio,
-              style: context.ttoc.headlineSmall,
+              style: context.ttoc.titleLarge,
               textAlign: TextAlign.start,
             ),
             centerTitle: scrollOffset.value >= 44,

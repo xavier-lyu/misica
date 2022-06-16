@@ -1,0 +1,101 @@
+{
+  "appTitle": "misica",
+  "@appTitle": {
+    "description": "The title of the application"
+  },
+
+  "defaultExplanatory": "用 Apple Music 为您的生活配上乐章。",
+  "@defaultExplanatory": {},
+
+  "restrictedExplanatory": "Misica 不能在这个设备上使用，因为 Apple Music 的使用受到限制。",
+  "@restrictedExplanatory": {},
+
+  "secondaryExplanatory": "请在系统设置中授予 Misica\n 访问 Apple Music 的权限。",
+  "@secondaryExplanatory": {},
+
+  "continueText": "继续",
+  "@continueText": {},
+
+  "openSettings": "打开系统设置",
+  "@openSettings": {},
+
+  "home": "首页",
+  "@home": {},
+
+  "radio": "电台",
+  "@radio": {},
+
+  "library": "音乐库",
+  "@library": {},
+
+  "search": "搜索",
+  "@search": {},
+
+  "play": "播放",
+  "@play": {},
+
+  "pause": "暂停",
+  "@pause": {},
+
+  "shuffle": "随机",
+  "@shuffle": {},
+
+  "song": "歌曲",
+  "@song": {},
+
+  "more": "更多",
+  "@more": {},
+
+  "notPlaying": "不在播放",
+  "@notPlaying": {},
+
+  "about": "关于",
+  "@about": {},
+
+  "recentlyPlayed": "最近播放",
+  "@recentlyPlayed": {},
+
+  "stationsByGenre": "电台类型",
+  "@stationsByGenre": {},
+
+  "tapToSearch": "点选搜索",
+  "@tapToSearch": {},
+
+  "searchHint": "艺人、歌曲、歌单以及更多内容",
+  "@searchHint": {},
+
+  "noResultsFor": "无法找到该",
+  "@noResultsFor": {},
+
+  "like": "喜欢",
+  "@like": {},
+
+  "liked": "取消喜欢",
+  "@liked": {},
+
+  "settings": "设置",
+  "@settings": {},
+
+  "yourLibrary": "音乐库",
+  "@yourLibrary": {},
+
+  "appearance": "外观",
+  "@appearance": {},
+
+  "language": "语言",
+  "@language": {},
+  "changeLanguageTitle": "更改语言设置",
+  "@changeLanguageTitle": {},
+  "changeLanguageHint": "继续前往下一个屏幕，然后点击“语言”。然后，选择你想要的语言。",
+  "@changeLanguageHint": {},
+
+  "dismiss": "取消",
+  "@dismiss": {},
+
+  "light": "浅色",
+  "@light": {},
+  "dark": "深色",
+  "@dark": {},
+  "system": "跟随系统",
+  "@system": {}
+}

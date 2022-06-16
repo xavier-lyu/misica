@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/settings/infrastructure/settings.dart';
 import 'package:misica/src/settings/shared/providers.dart';
 
-class ThemeTile extends ConsumerWidget {
-  const ThemeTile({Key? key}) : super(key: key);
+class AppearanceTile extends ConsumerWidget {
+  const AppearanceTile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final settings = ref.watch(settingsNotifierProvider);
 
     return ListTile(
-      title: const Text('Theme'),
-      trailing: Text(settings.themeMode.name.toUpperCase()),
+      title: Text(context.loc.appearance),
+      trailing: Text(settings.themeMode.localizedName(context)),
       onTap: () => _updateTheme(settings, ref),
     );
   }
@@ -23,5 +24,18 @@ class ThemeTile extends ConsumerWidget {
     final next =
         ThemeMode.values[(settings.themeMode.index + count - 1) % count];
     ref.read(settingsNotifierProvider.notifier).updateTheme(next);
+  }
+}
+
+extension ThemeName on ThemeMode {
+  String localizedName(BuildContext context) {
+    switch (this) {
+      case ThemeMode.light:
+        return context.loc.light;
+      case ThemeMode.dark:
+        return context.loc.dark;
+      case ThemeMode.system:
+        return context.loc.system;
+    }
   }
 }

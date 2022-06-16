@@ -7,3 +7,16 @@ export 'package:flutter_gen/gen_l10n/app_localizations.dart'
 extension LocalizedBuildContext on BuildContext {
   AppLocalizations get loc => AppLocalizations.of(this);
 }
+
+String languageName(String languageCode) {
+  switch (languageCode) {
+    case 'en':
+      return 'English';
+    case 'es':
+      return 'Español';
+    case 'zh':
+      return '简体中文';
+  }
+
+  throw FlutterError('This language is not supported in Misica');
+}

@@ -1,5 +1,5 @@
 {
-  "appTitle": "misica",
+  "appTitle": "Misica",
   "@appTitle": {
     "description": "The title of the application"
   },
@@ -34,13 +34,13 @@
   "play": "Play",
   "@play": {},
 
-  "pause": "pause",
+  "pause": "Pause",
   "@pause": {},
 
-  "shuffle": "shuffle",
+  "shuffle": "Shuffle",
   "@shuffle": {},
 
-  "song": "song",
+  "song": "Song",
   "@song": {},
 
   "more": "More",
@@ -74,5 +74,28 @@
   "@liked": {},
 
   "settings": "Settings",
-  "@settings": {}
+  "@settings": {},
+
+  "yourLibrary": "Your Library",
+  "@yourLibrary": {},
+
+  "appearance": "Appearance",
+  "@appearance": {},
+
+  "language": "Language",
+  "@language": {},
+  "changeLanguageTitle": "Change your language settings",
+  "@changeLanguageTitle": {},
+  "changeLanguageHint": "Continue to the next screen, and tap Language. Then, select the language you want.",
+  "@changeLanguageHint": {},
+
+  "dismiss": "Dismiss",
+  "@dismiss": {},
+
+  "light": "Light",
+  "@light": {},
+  "dark": "Dark",
+  "@dark": {},
+  "system": "Follow System",
+  "@system": {}
 }

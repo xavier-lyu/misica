@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
+import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/presentation/resource_card.dart';
 import 'package:misica/src/music/core/presentation/resource_tile.dart';
@@ -61,7 +62,7 @@ class _LikedResourcesViewState extends State<LikedResourcesView>
       slivers: [
         SliverAppBar(
           title: Text(
-            'Your Library',
+            context.loc.yourLibrary,
             style: context.ttoc.titleLarge,
           ),
           centerTitle: false,
