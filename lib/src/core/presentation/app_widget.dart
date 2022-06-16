@@ -11,8 +11,8 @@ import 'package:misica/src/settings/shared/providers.dart';
 import 'package:misica/src/theme/theme.dart';
 
 final initializationProvider = FutureProvider<Unit>((ref) async {
-  ref.read(sembastProvider).init();
-  ref.read(settingsNotifierProvider.notifier).checkAndUpdateSettings();
+  await ref.read(sembastProvider).init();
+  await ref.read(settingsNotifierProvider.notifier).checkAndUpdateSettings();
 
   ref
       .read(musicDioProvider)
