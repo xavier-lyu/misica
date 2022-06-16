@@ -71,5 +71,8 @@
   "@like": {},
 
   "liked": "Liked",
-  "@liked": {}
+  "@liked": {},
+
+  "settings": "Settings",
+  "@settings": {}
 }

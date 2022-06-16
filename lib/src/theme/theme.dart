@@ -2,13 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:misica/src/core/shared/color_extensions.dart';
 
 class CustomTheme {
-  // static const eerieBlack = Color(0xff191919);
-  // static const eggshell = Color(0xfff3f4f5);
-  // static const antiqueRuby = Color(0xff832232);
-  // static const spaceCadet = Color(0xff2b2d42);
-  // static const cultured = Color(0xffeeeeee);
-  // static const darkSalmon = Color(0xffe39774);
-
   // static const _primaryKeyColor = Color(0xffe51234);
   // static const _primaryKeyColor = Color(0xffbf0024);
   // static const _primaryKeyColor = Color(0xff9c4237);

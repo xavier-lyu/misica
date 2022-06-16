@@ -7,10 +7,12 @@ import 'package:misica/src/authorization/shared/providers.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
 import 'package:misica/src/core/shared/providers.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
+import 'package:misica/src/settings/shared/providers.dart';
 import 'package:misica/src/theme/theme.dart';
 
 final initializationProvider = FutureProvider<Unit>((ref) async {
   ref.read(sembastProvider).init();
+  ref.read(settingsNotifierProvider.notifier).checkAndUpdateSettings();
 
   ref
       .read(musicDioProvider)
@@ -47,6 +49,8 @@ class AppWidget extends ConsumerWidget {
       );
     });
 
+    final settings = ref.watch(settingsNotifierProvider);
+
     return MaterialApp.router(
       restorationScopeId: 'app',
       localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -54,7 +58,7 @@ class AppWidget extends ConsumerWidget {
       onGenerateTitle: (BuildContext context) => context.loc.appTitle,
       theme: CustomTheme.light(),
       darkTheme: CustomTheme.dark(),
-      themeMode: ThemeMode.system,
+      themeMode: settings.themeMode,
       routerDelegate: _appRouter.delegate(),
       routeInformationParser: _appRouter.defaultRouteParser(),
     );
