@@ -97,5 +97,10 @@
   "dark": "深色",
   "@dark": {},
   "system": "跟随系统",
-  "@system": {}
+  "@system": {},
+
+  "clearCache": "清理缓存",
+  "@clearCache": {},
+  "calculating": "计算中",
+  "@calculating": {}
 }

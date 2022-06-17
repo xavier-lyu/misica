@@ -7,7 +7,8 @@ import 'package:misica/src/authorization/shared/providers.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
 import 'package:misica/src/core/shared/providers.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
-import 'package:misica/src/settings/shared/providers.dart';
+import 'package:misica/src/settings/core/shared/providers.dart';
+
 import 'package:misica/src/theme/theme.dart';
 
 final initializationProvider = FutureProvider<Unit>((ref) async {

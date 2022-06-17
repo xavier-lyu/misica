@@ -1,5 +1,6 @@
 import 'package:misica/src/core/infrastructure/sembast_database.dart';
-import 'package:misica/src/settings/infrastructure/settings.dart';
+import 'package:misica/src/settings/core/infrastructure/settings.dart';
+
 import 'package:sembast/sembast.dart';
 
 import 'settings_storage.dart';

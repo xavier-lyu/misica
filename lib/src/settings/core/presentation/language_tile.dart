@@ -2,8 +2,8 @@ import 'package:app_settings/app_settings.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
-import 'package:misica/src/settings/infrastructure/settings.dart';
-import 'package:misica/src/settings/shared/providers.dart';
+import 'package:misica/src/settings/core/infrastructure/settings.dart';
+import 'package:misica/src/settings/core/shared/providers.dart';
 
 class LanguageTile extends ConsumerWidget {
   const LanguageTile({Key? key}) : super(key: key);

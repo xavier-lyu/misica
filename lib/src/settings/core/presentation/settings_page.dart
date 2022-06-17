@@ -1,0 +1,37 @@
+import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:misica/src/localization/app_localizations_context.dart';
+import 'package:misica/src/settings/cache/presentation/clear_cache_tile.dart';
+
+import 'appearance_tile.dart';
+import 'language_tile.dart';
+
+class SettingsPage extends HookConsumerWidget {
+  const SettingsPage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          context.loc.settings,
+        ),
+      ),
+      body: GestureDetector(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: ListView.builder(
+            itemCount: 3,
+            itemBuilder: (context, index) {
+              if (index == 0) return const AppearanceTile();
+              if (index == 1) return const LanguageTile();
+              if (index == 2) return const ClearCacheTile();
+
+              return Container();
+            },
+          ),
+        ),
+      ),
+    );
+  }
+}

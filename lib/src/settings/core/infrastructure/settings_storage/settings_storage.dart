@@ -1,4 +1,4 @@
-import 'package:misica/src/settings/infrastructure/settings.dart';
+import 'package:misica/src/settings/core/infrastructure/settings.dart';
 
 abstract class SettingsStorage {
   Future<Settings> read();

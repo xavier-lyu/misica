@@ -9,7 +9,8 @@ import 'package:misica/src/music/playlist/presentation/playlist_page.dart';
 import 'package:misica/src/music/radio/presentation/genre_stations_page.dart';
 import 'package:misica/src/music/radio/presentation/radio_page.dart';
 import 'package:misica/src/music/search/presentation/search_page.dart';
-import 'package:misica/src/settings/presentation/settings_page.dart';
+import 'package:misica/src/settings/core/presentation/settings_page.dart';
+
 import 'package:misica/src/splash/presentation/splash_page.dart';
 
 @MaterialAutoRouter(
@@ -30,7 +31,7 @@ import 'package:misica/src/splash/presentation/splash_page.dart';
     AutoRoute(path: '/playlist', page: PlaylistPage),
     AutoRoute(path: '/artist', page: ArtistPage),
     AutoRoute(path: '/radio/genre/:id/:name/stations', page: GenreStationsPage),
-    AutoRoute(path: '/settings', page: SettingsPage)
+    AutoRoute(path: '/settings', page: SettingsPage),
   ],
   replaceInRouteName: 'Page,Route',
 )

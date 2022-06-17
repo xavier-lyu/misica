@@ -97,5 +97,10 @@
   "dark": "Oscuro",
   "@dark": {},
   "system": "Sistema de seguimiento",
-  "@system": {}
+  "@system": {},
+
+  "clearCache": "Borrar el caché",
+  "@clearCache": {},
+  "calculating": "Calculando",
+  "@calculating": {}
 }

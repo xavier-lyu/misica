@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:misica/src/settings/infrastructure/settings_storage/settings_storage.dart';
 
 import 'settings.dart';
+import 'settings_storage/settings_storage.dart';
 
 class SettingsRepository {
   SettingsRepository(this._storage);

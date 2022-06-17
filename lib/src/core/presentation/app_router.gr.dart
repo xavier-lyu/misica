@@ -23,7 +23,7 @@ import '../../music/playlist/presentation/playlist_page.dart' as _i5;
 import '../../music/radio/presentation/genre_stations_page.dart' as _i7;
 import '../../music/radio/presentation/radio_page.dart' as _i10;
 import '../../music/search/presentation/search_page.dart' as _i12;
-import '../../settings/presentation/settings_page.dart' as _i8;
+import '../../settings/core/presentation/settings_page.dart' as _i8;
 import '../../splash/presentation/splash_page.dart' as _i1;
 
 class AppRouter extends _i13.RootStackRouter {

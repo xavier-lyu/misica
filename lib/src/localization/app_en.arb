@@ -97,5 +97,10 @@
   "dark": "Dark",
   "@dark": {},
   "system": "Follow System",
-  "@system": {}
+  "@system": {},
+
+  "clearCache": "Clear cache",
+  "@clearCache": {},
+  "calculating": "Calculating",
+  "@calculating": {}
 }

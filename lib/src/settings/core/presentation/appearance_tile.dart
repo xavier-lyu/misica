@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
-import 'package:misica/src/settings/infrastructure/settings.dart';
-import 'package:misica/src/settings/shared/providers.dart';
+import 'package:misica/src/settings/core/infrastructure/settings.dart';
+import 'package:misica/src/settings/core/shared/providers.dart';
 
 class AppearanceTile extends ConsumerWidget {
   const AppearanceTile({Key? key}) : super(key: key);
