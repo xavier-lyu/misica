@@ -530,8 +530,8 @@ packages:
     description:
       path: music_kit
       ref: "v1.0.0"
-      resolved-ref: "27c30e4a39bb7d4f1f0c6a5df2fd23d5be33152a"
-      url: "git@github.com:misiio/flutter_music_kit.git"
+      resolved-ref: "3b8f4af3b6d4919f887ca427b12ad695f28a958d"
+      url: "https://github.com/misiio/flutter_music_kit"
     source: git
     version: "1.0.0"
   music_kit_platform_interface:
@@ -539,8 +539,8 @@ packages:
     description:
       path: music_kit_platform_interface
       ref: "v1.0.0"
-      resolved-ref: "27c30e4a39bb7d4f1f0c6a5df2fd23d5be33152a"
-      url: "git@github.com:misiio/flutter_music_kit.git"
+      resolved-ref: "3b8f4af3b6d4919f887ca427b12ad695f28a958d"
+      url: "https://github.com/misiio/flutter_music_kit"
     source: git
     version: "1.0.0"
   octo_image:

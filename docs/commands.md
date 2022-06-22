@@ -11,3 +11,9 @@ flutter gen-l10n
 ```bash
 flutter pub run build_runner watch --delete-conflicting-outputs
 ```
+
+### Generate keystore
+
+```bash
+keytool -genkey -v -keystore [keystore_name].jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias [alias_name]
+```
