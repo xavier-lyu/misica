@@ -34,7 +34,7 @@ class ResourceCard extends ConsumerWidget {
             context.router.push(PlaylistRoute(id: playlist.id));
           },
           station: (station) {
-            ref.read(musicPlayerProvider).playSingle(item: station);
+            ref.read(musicPlayerProvider).playSingle(station);
           },
         );
       },

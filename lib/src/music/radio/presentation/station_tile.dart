@@ -15,7 +15,7 @@ class StationTile extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final shortNote = station.attributes?.editorialNotes?.short;
     return InkWell(
-      onTap: () => ref.read(musicPlayerProvider).playSingle(item: station),
+      onTap: () => ref.read(musicPlayerProvider).playSingle(station),
       child: Row(
         children: [
           ArtworkWidget(

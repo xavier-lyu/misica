@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:misica/src/authorization/domain/auth_failure.dart';
 import 'package:misica/src/authorization/domain/credentials.dart';
 import 'package:misica/src/authorization/infrastructure/credentials_storage/credentials_storage.dart';
+import 'package:misica/src/core/shared/constants.dart';
 import 'package:music_kit/music_kit.dart';
 
 class MusicAuthenticator {
@@ -31,8 +32,8 @@ class MusicAuthenticator {
 
   Future<Either<AuthFailure, Credentials>> refresh() async {
     try {
-      final developerToken = await _musicKit.developerToken;
-      final userToken = await _musicKit.fetchUserToken(developerToken);
+      final developerToken = await _musicKit.requestDeveloperToken();
+      final userToken = await _musicKit.requestUserToken(developerToken);
       final credentials = Credentials(
         developerToken: developerToken,
         userToken: userToken,
@@ -46,6 +47,18 @@ class MusicAuthenticator {
         return left(const AuthFailure.platform());
       }
       return left(const AuthFailure.storage());
+    }
+  }
+
+  Future<void> update(String musicUserToken) async {
+    final storedCredentials = await _credentialStorage.read();
+    if (storedCredentials == null) {
+      await _credentialStorage.save(Credentials(
+          developerToken: developerTokenFromEnvironment,
+          userToken: musicUserToken));
+    } else {
+      await _credentialStorage
+          .save(storedCredentials.copyWith(userToken: musicUserToken));
     }
   }
 }

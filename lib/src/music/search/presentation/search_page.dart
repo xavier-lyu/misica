@@ -61,12 +61,11 @@ class SearchPage extends HookConsumerWidget {
                   playlist: (playlist) => AutoRouter.of(context)
                       .push(PlaylistRoute(id: playlist.id)),
                   song: (song) =>
-                      ref.read(musicPlayerProvider).playSingle(item: song),
+                      ref.read(musicPlayerProvider).playSingle(song),
                   station: (station) =>
-                      ref.read(musicPlayerProvider).playSingle(item: station),
-                  musicVideo: (musicVideo) => ref
-                      .read(musicPlayerProvider)
-                      .playSingle(item: musicVideo),
+                      ref.read(musicPlayerProvider).playSingle(station),
+                  musicVideo: (musicVideo) =>
+                      ref.read(musicPlayerProvider).playSingle(musicVideo),
                 );
               },
             ),

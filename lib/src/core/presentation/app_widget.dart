@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
@@ -5,6 +7,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/authorization/application/auth_notifier.dart';
 import 'package:misica/src/authorization/shared/providers.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
+import 'package:misica/src/core/shared/constants.dart';
 import 'package:misica/src/core/shared/providers.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/settings/core/shared/providers.dart';
@@ -14,6 +17,14 @@ import 'package:misica/src/theme/theme.dart';
 final initializationProvider = FutureProvider<Unit>((ref) async {
   await ref.read(sembastProvider).init();
   await ref.read(settingsNotifierProvider.notifier).checkAndUpdateSettings();
+
+  final credentials = await ref.read(credentialsStorageProvider).read();
+  if (!Platform.isIOS) {
+    debugPrint(
+        "initialize() musicUserToken: ${credentials?.userToken.length ?? 0}");
+    await ref.read(musicKitProvider).initialize(developerTokenFromEnvironment,
+        musicUserToken: credentials?.userToken);
+  }
 
   ref
       .read(musicDioProvider)
@@ -36,15 +47,13 @@ class AppWidget extends ConsumerWidget {
     ref.listen<AuthState>(authNotifierProvider, (previous, next) {
       next.maybeWhen(
         orElse: () {
-          _appRouter.pushAndPopUntil(
+          _appRouter.replace(
             const AuthorizationRoute(),
-            predicate: (route) => route.settings.name == SplashRoute.name,
           );
         },
-        authorized: () {
-          _appRouter.pushAndPopUntil(
+        authorized: (_) {
+          _appRouter.replace(
             const IndexRoute(),
-            predicate: (route) => route.settings.name == SplashRoute.name,
           );
         },
       );

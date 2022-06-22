@@ -18,7 +18,7 @@ class PlayButton extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return ElevatedButton(
       onPressed: () {
-        ref.read(musicPlayerProvider).playSingle(item: item);
+        ref.read(musicPlayerProvider).playSingle(item);
       },
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,

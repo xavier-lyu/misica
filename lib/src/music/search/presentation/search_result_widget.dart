@@ -36,9 +36,8 @@ class SearchResultWidget extends ConsumerWidget {
               playlist: (playlist) =>
                   context.router.push(PlaylistRoute(id: playlist.id)),
               station: (station) =>
-                  ref.read(musicPlayerProvider).playSingle(item: station),
-              song: (song) =>
-                  ref.read(musicPlayerProvider).playSingle(item: song),
+                  ref.read(musicPlayerProvider).playSingle(station),
+              song: (song) => ref.read(musicPlayerProvider).playSingle(song),
               artist: (artist) =>
                   context.router.push(ArtistRoute(id: artist.id)),
             );

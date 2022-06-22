@@ -97,9 +97,11 @@ class AppRouter extends _i13.RootStackRouter {
 
   @override
   List<_i13.RouteConfig> get routes => [
+        _i13.RouteConfig('/#redirect',
+            path: '/', redirectTo: '/splash', fullMatch: true),
         _i13.RouteConfig(SplashRoute.name, path: '/splash'),
         _i13.RouteConfig(AuthorizationRoute.name, path: '/auth'),
-        _i13.RouteConfig(IndexRoute.name, path: '/', children: [
+        _i13.RouteConfig(IndexRoute.name, path: '/home', children: [
           _i13.RouteConfig(HomeRoute.name, path: '', parent: IndexRoute.name),
           _i13.RouteConfig(RadioRoute.name,
               path: 'radio', parent: IndexRoute.name),
@@ -137,7 +139,7 @@ class AuthorizationRoute extends _i13.PageRouteInfo<void> {
 /// [_i3.IndexPage]
 class IndexRoute extends _i13.PageRouteInfo<void> {
   const IndexRoute({List<_i13.PageRouteInfo>? children})
-      : super(IndexRoute.name, path: '/', initialChildren: children);
+      : super(IndexRoute.name, path: '/home', initialChildren: children);
 
   static const String name = 'IndexRoute';
 }

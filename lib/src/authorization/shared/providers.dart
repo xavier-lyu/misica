@@ -8,7 +8,10 @@ import 'package:misica/src/authorization/infrastructure/music_authenticator.dart
 import 'package:misica/src/core/shared/providers.dart';
 
 final authNotifierProvider = StateNotifierProvider<AuthNotifier, AuthState>(
-  (ref) => AuthNotifier(ref.watch(musicKitProvider)),
+  (ref) => AuthNotifier(
+    ref.watch(musicKitProvider),
+    ref.watch(musicAuthenticatorProvider),
+  ),
 );
 
 final flutterSecureStorage = Provider((_) => const FlutterSecureStorage());

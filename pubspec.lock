@@ -528,17 +528,21 @@ packages:
   music_kit:
     dependency: "direct main"
     description:
-      path: "../flutter_music_kit/music_kit"
-      relative: true
-    source: path
-    version: "0.0.1+4"
+      path: music_kit
+      ref: "v1.0.0"
+      resolved-ref: "27c30e4a39bb7d4f1f0c6a5df2fd23d5be33152a"
+      url: "git@github.com:misiio/flutter_music_kit.git"
+    source: git
+    version: "1.0.0"
   music_kit_platform_interface:
-    dependency: "direct overridden"
+    dependency: transitive
     description:
-      path: "../flutter_music_kit/music_kit_platform_interface"
-      relative: true
-    source: path
-    version: "0.0.1+4"
+      path: music_kit_platform_interface
+      ref: "v1.0.0"
+      resolved-ref: "27c30e4a39bb7d4f1f0c6a5df2fd23d5be33152a"
+      url: "git@github.com:misiio/flutter_music_kit.git"
+    source: git
+    version: "1.0.0"
   octo_image:
     dependency: transitive
     description:

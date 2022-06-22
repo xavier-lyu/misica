@@ -18,7 +18,7 @@ import 'package:misica/src/splash/presentation/splash_page.dart';
     AutoRoute(path: '/splash', page: SplashPage, initial: true),
     AutoRoute(path: '/auth', page: AuthorizationPage),
     AutoRoute(
-      path: '/',
+      path: '/home',
       page: IndexPage,
       children: [
         AutoRoute(path: '', page: HomePage, initial: true),

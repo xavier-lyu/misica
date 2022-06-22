@@ -21,7 +21,9 @@ class MusicPlayer {
     }
   }
 
-  Future<void> playSingle({required Resource item}) async {
+  Future<void> playSingle(Resource item, {bool shuffle = false}) async {
+    await _musicKit.setShuffleMode(
+        shuffle ? MusicPlayerShuffleMode.songs : MusicPlayerShuffleMode.off);
     await _musicKit.setQueue(item.type, item: item.toJson());
     await _musicKit.play();
   }
@@ -52,8 +54,7 @@ class MusicPlayer {
 
   Future<void> playSingleShuffle({required Resource item}) async {
     try {
-      await _musicKit.setShuffleMode(MusicPlayerShuffleMode.songs);
-      await playSingle(item: item);
+      await playSingle(item, shuffle: true);
     } on PlatformException catch (e) {
       debugPrint(e.toString());
     }

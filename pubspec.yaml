@@ -4,7 +4,7 @@ description: A new Flutter project.
 # Prevent accidental publishing to pub.dev.
 publish_to: "none"
 
-version: 1.0.0+1
+version: 1.0.0+2
 
 environment:
   sdk: ">=2.17.1 <3.0.0"
@@ -33,7 +33,7 @@ dependencies:
   music_kit:
     git:
       url: git@github.com:misiio/flutter_music_kit.git
-      ref: master
+      ref: v1.0.0
       path: music_kit
   path: ^1.8.1
   path_provider: ^2.0.11
@@ -50,12 +50,6 @@ dev_dependencies:
   json_serializable: ^6.2.0
   auto_route_generator: ^4.0.0
   retrofit_generator: ^4.0.1
-
-dependency_overrides:
-  music_kit:
-    path: ../flutter_music_kit/music_kit
-  music_kit_platform_interface:
-    path: ../flutter_music_kit/music_kit_platform_interface
 
 flutter:
   uses-material-design: true
