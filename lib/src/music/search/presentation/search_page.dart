@@ -27,20 +27,21 @@ class SearchPage extends HookConsumerWidget {
               builder: (context, ref, child) {
                 final resultsState = ref.watch(searchNotifierProvider);
                 return resultsState.when(
-                    initial: () => Container(),
-                    data: (data) {
-                      if (data.results?.isNotEmpty == false) {
-                        return Center(
-                          child: Text(
-                              '${context.loc.noResultsFor} "${termState.value}"'),
-                        );
-                      }
+                  initial: () => Container(),
+                  data: (data) {
+                    if (data.results?.isNotEmpty == false) {
+                      return Center(
+                        child: Text(
+                            '${context.loc.noResultsFor} "${termState.value}"'),
+                      );
+                    }
 
-                      return SearchResultsView(results: data.results!);
-                    },
-                    error: (error) =>
-                        Center(child: Text('undexpected error $error')),
-                    loading: () => const Loader());
+                    return SearchResultsView(results: data.results!);
+                  },
+                  error: (error) =>
+                      Center(child: Text('undexpected error $error')),
+                  loading: () => const Center(child: Loader()),
+                );
               },
             ),
             SearchBar(

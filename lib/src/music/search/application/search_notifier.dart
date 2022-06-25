@@ -23,6 +23,7 @@ class SearchNotifier extends StateNotifier<SearchResultsState> {
       : super(const SearchResultsState.initial());
 
   void search(String term) async {
+    state = const SearchResultsState.loading();
     final storefront = await _read(storefrontProvider.future);
     final failureOrResults = await _repository.search(storefront, term);
     state = failureOrResults.fold(
