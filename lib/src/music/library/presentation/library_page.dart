@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/presentation/loader.dart';
 import 'package:misica/src/music/library/presentation/liked_resources_view.dart';
 import 'package:misica/src/music/library/shared/providers.dart';
@@ -29,15 +30,15 @@ class _LibraryPageState extends ConsumerState<LibraryPage> {
         return likedResourcesState.map(
             data: (resources) {
               if (resources.value.isEmpty) {
-                return const Center(
-                  child: Text('no results'),
+                return Center(
+                  child: Text(context.loc.nothingHereYet),
                 );
               }
 
               return LikedResourcesView(resources: resources.value);
             },
             error: (_) => Center(
-                  child: Text('unexpected error ${_.error}'),
+                  child: Text('${_.error}'),
                 ),
             loading: (_) => const Loader());
       }),

@@ -102,5 +102,8 @@
   "clearCache": "Clear cache",
   "@clearCache": {},
   "calculating": "Calculating",
-  "@calculating": {}
+  "@calculating": {},
+
+  "nothingHereYet": "Nothing here yet",
+  "@nothingHereYet": {}
 }

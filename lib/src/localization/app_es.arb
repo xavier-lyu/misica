@@ -102,5 +102,8 @@
   "clearCache": "Borrar el caché",
   "@clearCache": {},
   "calculating": "Calculando",
-  "@calculating": {}
+  "@calculating": {},
+
+  "nothingHereYet": "Todavía no hay nada aquí",
+  "@nothingHereYet": {}
 }

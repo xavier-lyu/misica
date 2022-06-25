@@ -102,5 +102,8 @@
   "clearCache": "清理缓存",
   "@clearCache": {},
   "calculating": "计算中",
-  "@calculating": {}
+  "@calculating": {},
+
+  "nothingHereYet": "这里还什么都没有",
+  "@nothingHereYet": {}
 }
