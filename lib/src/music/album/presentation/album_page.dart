@@ -38,80 +38,78 @@ class _AlbumPageState extends ConsumerState<AlbumPage> {
   Widget build(BuildContext context) {
     final scrollOffset = useState<double>(0);
 
-    return Scaffold(
-      body: Consumer(builder: (context, ref, child) {
-        final state = ref.watch(albumsNotifierProvider);
+    final state = ref.watch(albumsNotifierProvider);
 
-        return state.maybeWhen(
-          orElse: () => CustomScrollView(
-            slivers: [
-              const SliverAppBar(),
-              SliverFillRemaining(
-                child: RetryWidget(onRetry: () {
-                  ref
-                      .read(albumsNotifierProvider.notifier)
-                      .fetchCatalogAlbum(widget.id);
-                }),
-              )
-            ],
-          ),
-          loading: () => const SliverLoader(),
-          data: (album) => HookScrollView(
-            onOffsetChanged: (offset) => scrollOffset.value = offset,
-            slivers: [
-              SliverAppBar(
-                title: scrollOffset.value >= 264
-                    ? Text(
-                        album.name,
-                        style: context.ttoc.titleLarge,
-                      )
-                    : null,
-                pinned: true,
-                actions: [
-                  FavoriteActionWidget(resource: album),
-                ],
+    return Scaffold(
+      body: state.maybeWhen(
+        orElse: () => CustomScrollView(
+          slivers: [
+            const SliverAppBar(),
+            SliverFillRemaining(
+              child: RetryWidget(onRetry: () {
+                ref
+                    .read(albumsNotifierProvider.notifier)
+                    .fetchCatalogAlbum(widget.id);
+              }),
+            )
+          ],
+        ),
+        loading: () => const SliverLoader(),
+        data: (album) => HookScrollView(
+          onOffsetChanged: (offset) => scrollOffset.value = offset,
+          slivers: [
+            SliverAppBar(
+              title: scrollOffset.value >= 264
+                  ? Text(
+                      album.name,
+                      style: context.ttoc.titleLarge,
+                    )
+                  : null,
+              pinned: true,
+              actions: [
+                FavoriteActionWidget(resource: album),
+              ],
+            ),
+            SliverPadding(
+              padding: const EdgeInsetsDirectional.only(
+                top: 5,
+                start: 20,
+                end: 20,
               ),
-              SliverPadding(
-                padding: const EdgeInsetsDirectional.only(
-                  top: 5,
-                  start: 20,
-                  end: 20,
-                ),
-                sliver: SliverToBoxAdapter(
-                  child: AlbumHeaderView(album: album),
+              sliver: SliverToBoxAdapter(
+                child: AlbumHeaderView(album: album),
+              ),
+            ),
+            SliverPadding(
+              padding: const EdgeInsetsDirectional.only(
+                top: 20,
+                start: 20,
+                end: 20,
+              ),
+              sliver: TracksList(
+                tracks: album.tracks,
+                indent: 30.0,
+                itemBuilder: (context, index) => AlbumTrackTile(
+                  track: album.tracks[index],
+                  onTap: () => ref
+                      .read(musicPlayerProvider)
+                      .playTracks(tracks: album.tracks, startingAt: index),
                 ),
               ),
-              SliverPadding(
-                padding: const EdgeInsetsDirectional.only(
-                  top: 20,
-                  start: 20,
-                  end: 20,
-                ),
-                sliver: TracksList(
-                  tracks: album.tracks,
-                  indent: 30.0,
-                  itemBuilder: (context, index) => AlbumTrackTile(
-                    track: album.tracks[index],
-                    onTap: () => ref
-                        .read(musicPlayerProvider)
-                        .playTracks(tracks: album.tracks, startingAt: index),
-                  ),
-                ),
-              ),
-              SliverPadding(
-                padding: const EdgeInsetsDirectional.only(
-                    top: 10, start: 20, end: 20, bottom: 10),
-                sliver: SliverToBoxAdapter(
-                    child: AlbumFooter(
-                  album: album,
-                )),
-              ),
-              if (album.views?.isNotEmpty == true)
-                ResourceViewsList(views: album.views!),
-            ],
-          ),
-        );
-      }),
+            ),
+            SliverPadding(
+              padding: const EdgeInsetsDirectional.only(
+                  top: 10, start: 20, end: 20, bottom: 10),
+              sliver: SliverToBoxAdapter(
+                  child: AlbumFooter(
+                album: album,
+              )),
+            ),
+            if (album.views?.isNotEmpty == true)
+              ResourceViewsList(views: album.views!),
+          ],
+        ),
+      ),
     );
   }
 }

@@ -71,6 +71,7 @@ class _RadioPageState extends ConsumerState<RadioPage> {
         onRefresh: _handleRefreshing,
         edgeOffset: 140,
         child: HookScrollView(
+          physics: const AlwaysScrollableScrollPhysics(),
           onOffsetChanged: (offset) => scrollOffset.value = offset,
           slivers: [
             AppNavbar(

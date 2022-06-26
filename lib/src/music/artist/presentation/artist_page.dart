@@ -41,62 +41,61 @@ class _ArtistPageState extends ConsumerState<ArtistPage> {
 
     final screenWidth = context.mqoc.size.width;
 
+    final state = ref.watch(artistNotifierProvider);
+
     return Scaffold(
       body: SafeArea(
         top: false,
-        child: Consumer(builder: (context, ref, child) {
-          final state = ref.watch(artistNotifierProvider);
-          return state.when(
-            error: (_, __) => SliverRetryView(
-              onRetry: () => ref
-                  .watch(artistNotifierProvider.notifier)
-                  .fetchArtist(widget.id),
-            ),
-            loading: () => const SliverLoader(),
-            data: (artist) {
-              final expandedHeight = screenWidth - context.mqoc.viewPadding.top;
-              final isAppBarCollapsed =
-                  scrollOffset.value >= expandedHeight - kToolbarHeight - 44.0;
-              final offsetRatio =
-                  min(1.0, max(0, scrollOffset.value) / expandedHeight);
-              final opacity = 1.0 - offsetRatio;
+        child: state.when(
+          error: (_, __) => SliverRetryView(
+            onRetry: () => ref
+                .watch(artistNotifierProvider.notifier)
+                .fetchArtist(widget.id),
+          ),
+          loading: () => const SliverLoader(),
+          data: (artist) {
+            final expandedHeight = screenWidth - context.mqoc.viewPadding.top;
+            final isAppBarCollapsed =
+                scrollOffset.value >= expandedHeight - kToolbarHeight - 44.0;
+            final offsetRatio =
+                min(1.0, max(0, scrollOffset.value) / expandedHeight);
+            final opacity = 1.0 - offsetRatio;
 
-              return HookScrollView(
-                onOffsetChanged: (offset) => scrollOffset.value = offset,
-                slivers: [
-                  ExpandableAppBar(
-                    title: Text(artist.name),
-                    isCollapsed: isAppBarCollapsed,
-                    background: ArtworkWidget(
-                      artwork: artist.artwork,
-                      width: screenWidth,
-                      height: screenWidth,
-                      radius: 0,
-                    ),
-                    expandedHeight: expandedHeight,
-                    expandedTitle: isAppBarCollapsed
-                        ? null
-                        : ArtistExpandedTitle(
-                            title: artist.name,
-                            opacity: opacity,
-                          ),
-                    actions: [
-                      FavoriteActionWidget(resource: artist),
-                    ],
+            return HookScrollView(
+              onOffsetChanged: (offset) => scrollOffset.value = offset,
+              slivers: [
+                ExpandableAppBar(
+                  title: Text(artist.name),
+                  isCollapsed: isAppBarCollapsed,
+                  background: ArtworkWidget(
+                    artwork: artist.artwork,
+                    width: screenWidth,
+                    height: screenWidth,
+                    radius: 0,
                   ),
-                  if (artist.views?.isNotEmpty == true)
-                    ResourceViewsList(views: artist.views!),
-                  if (artist.description != null)
-                    SliverToBoxAdapter(
-                      child: ArtistFooterView(
-                        description: artist.description!,
-                      ),
-                    )
-                ],
-              );
-            },
-          );
-        }),
+                  expandedHeight: expandedHeight,
+                  expandedTitle: isAppBarCollapsed
+                      ? null
+                      : ArtistExpandedTitle(
+                          title: artist.name,
+                          opacity: opacity,
+                        ),
+                  actions: [
+                    FavoriteActionWidget(resource: artist),
+                  ],
+                ),
+                if (artist.views?.isNotEmpty == true)
+                  ResourceViewsList(views: artist.views!),
+                if (artist.description != null)
+                  SliverToBoxAdapter(
+                    child: ArtistFooterView(
+                      description: artist.description!,
+                    ),
+                  )
+              ],
+            );
+          },
+        ),
       ),
     );
   }

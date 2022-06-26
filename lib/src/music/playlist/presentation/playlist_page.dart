@@ -42,81 +42,78 @@ class _PlaylistPageState extends ConsumerState<PlaylistPage> {
   @override
   Widget build(BuildContext context) {
     final scrollOffset = useState<double>(0);
+    final state = ref.watch(playlistsNotifierProvider);
+    final tracksState = ref.watch(playlistTracksNotifierProvider);
 
     return Scaffold(
-      body: Consumer(builder: (context, ref, child) {
-        final state = ref.watch(playlistsNotifierProvider);
-        final tracksState = ref.watch(playlistTracksNotifierProvider);
-
-        return state.maybeWhen(
-          orElse: () => SliverRetryView(
-            onRetry: () => ref
-                .read(playlistsNotifierProvider.notifier)
-                .fetchCatalogPlaylist(widget.id),
-          ),
-          loading: () => const SliverLoader(),
-          data: (playlist) => HookScrollView(
-            onOffsetChanged: (offset) => scrollOffset.value = offset,
-            slivers: [
-              SliverAppBar(
-                title: scrollOffset.value >= 264
-                    ? Text(
-                        playlist.name,
-                        style: context.ttoc.titleLarge,
-                      )
-                    : null,
-                pinned: true,
-                actions: [
-                  FavoriteActionWidget(resource: playlist),
-                ],
+      body: state.maybeWhen(
+        orElse: () => SliverRetryView(
+          onRetry: () => ref
+              .read(playlistsNotifierProvider.notifier)
+              .fetchCatalogPlaylist(widget.id),
+        ),
+        loading: () => const SliverLoader(),
+        data: (playlist) => HookScrollView(
+          onOffsetChanged: (offset) => scrollOffset.value = offset,
+          slivers: [
+            SliverAppBar(
+              title: scrollOffset.value >= 264
+                  ? Text(
+                      playlist.name,
+                      style: context.ttoc.titleLarge,
+                    )
+                  : null,
+              pinned: true,
+              actions: [
+                FavoriteActionWidget(resource: playlist),
+              ],
+            ),
+            SliverPadding(
+              padding: const EdgeInsetsDirectional.only(
+                top: 5,
+                start: 20,
+                end: 20,
               ),
-              SliverPadding(
-                padding: const EdgeInsetsDirectional.only(
-                  top: 5,
-                  start: 20,
-                  end: 20,
-                ),
-                sliver: SliverToBoxAdapter(
-                  child: PlaylistHeaderView(playlist: playlist),
-                ),
+              sliver: SliverToBoxAdapter(
+                child: PlaylistHeaderView(playlist: playlist),
               ),
-              SliverPadding(
-                padding: const EdgeInsetsDirectional.only(
-                  top: 20,
-                  start: 20,
-                  end: 20,
-                  bottom: 44,
+            ),
+            SliverPadding(
+              padding: const EdgeInsetsDirectional.only(
+                top: 20,
+                start: 20,
+                end: 20,
+                bottom: 44,
+              ),
+              sliver: tracksState.when(
+                error: (_, __) => SliverToBoxAdapter(child: Container()),
+                loading: () => const SliverToBoxAdapter(
+                  child: Loader(),
                 ),
-                sliver: tracksState.when(
-                  error: (_, __) => SliverToBoxAdapter(child: Container()),
-                  loading: () => const SliverToBoxAdapter(
-                    child: Loader(),
-                  ),
-                  data: (tracks) {
-                    return TracksList(
-                      tracks: tracks,
-                      indent: 70.0,
-                      itemBuilder: (_, index) => PlaylistTrackTile(
-                        track: tracks[index],
-                        onTap: () => ref
-                            .read(musicPlayerProvider)
-                            .playTracks(tracks: tracks, startingAt: index),
+                data: (tracks) {
+                  return TracksList(
+                    tracks: tracks,
+                    indent: 70.0,
+                    itemBuilder: (_, index) => PlaylistTrackTile(
+                      track: tracks[index],
+                      onTap: () => ref
+                          .read(musicPlayerProvider)
+                          .playTracks(tracks: tracks, startingAt: index),
+                    ),
+                    footerBuilder: (_) => Padding(
+                      padding: const EdgeInsetsDirectional.only(top: 15),
+                      child: PlaylistFooterView(
+                        songsCount: tracks.length,
+                        duration: durationOfSongs(tracks),
                       ),
-                      footerBuilder: (_) => Padding(
-                        padding: const EdgeInsetsDirectional.only(top: 15),
-                        child: PlaylistFooterView(
-                          songsCount: tracks.length,
-                          duration: durationOfSongs(tracks),
-                        ),
-                      ),
-                    );
-                  },
-                ),
+                    ),
+                  );
+                },
               ),
-            ],
-          ),
-        );
-      }),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

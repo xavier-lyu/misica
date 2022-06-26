@@ -24,24 +24,23 @@ class _LibraryPageState extends ConsumerState<LibraryPage> {
 
   @override
   Widget build(BuildContext context) {
+    final likedResourcesState = ref.watch(likedResourcesNotifierProvider);
     return Scaffold(
-      body: Consumer(builder: (context, ref, child) {
-        final likedResourcesState = ref.watch(likedResourcesNotifierProvider);
-        return likedResourcesState.map(
-            data: (resources) {
-              if (resources.value.isEmpty) {
-                return Center(
-                  child: Text(context.loc.nothingHereYet),
-                );
-              }
+      body: likedResourcesState.map(
+        data: (resources) {
+          if (resources.value.isEmpty) {
+            return Center(
+              child: Text(context.loc.nothingHereYet),
+            );
+          }
 
-              return LikedResourcesView(resources: resources.value);
-            },
-            error: (_) => Center(
-                  child: Text('${_.error}'),
-                ),
-            loading: (_) => const Loader());
-      }),
+          return LikedResourcesView(resources: resources.value);
+        },
+        error: (_) => Center(
+          child: Text('${_.error}'),
+        ),
+        loading: (_) => const Loader(),
+      ),
     );
   }
 }
