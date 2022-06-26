@@ -16,6 +16,8 @@ dependencies:
   cached_network_image: ^3.2.1
   dartz: ^0.10.1
   dio: ^4.0.6
+  dio_cache_interceptor: ^3.2.7
+  dio_cache_interceptor_sembast_store: ^1.0.0
   duration: ^3.0.11
   expandable_text: ^2.3.0
   flutter:
