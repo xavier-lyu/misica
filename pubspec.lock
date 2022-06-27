@@ -521,9 +521,11 @@ packages:
   material_floating_search_bar:
     dependency: "direct main"
     description:
-      name: material_floating_search_bar
-      url: "https://pub.dartlang.org"
-    source: hosted
+      path: "."
+      ref: "0.3.7"
+      resolved-ref: c465beaeba3186461a765edcf3f449d420afc058
+      url: "https://github.com/xavier-lyu/material_floating_search_bar.git"
+    source: git
     version: "0.3.7"
   meta:
     dependency: transitive
@@ -542,20 +544,16 @@ packages:
   music_kit:
     dependency: "direct main"
     description:
-      path: music_kit
-      ref: "v1.0.0"
-      resolved-ref: "3b8f4af3b6d4919f887ca427b12ad695f28a958d"
-      url: "https://github.com/misiio/flutter_music_kit"
-    source: git
+      name: music_kit
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "1.0.0"
   music_kit_platform_interface:
     dependency: transitive
     description:
-      path: music_kit_platform_interface
-      ref: "v1.0.0"
-      resolved-ref: "3b8f4af3b6d4919f887ca427b12ad695f28a958d"
-      url: "https://github.com/misiio/flutter_music_kit"
-    source: git
+      name: music_kit_platform_interface
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "1.0.0"
   octo_image:
     dependency: transitive

@@ -1,5 +1,5 @@
 name: misica
-description: A new Flutter project.
+description: Yet another Apple Music Player.
 
 # Prevent accidental publishing to pub.dev.
 publish_to: "none"
@@ -32,11 +32,7 @@ dependencies:
   json_annotation: ^4.5.0
   jwt_decoder: ^2.0.1
   material_floating_search_bar: ^0.3.7
-  music_kit:
-    git:
-      url: https://github.com/misiio/flutter_music_kit
-      ref: v1.0.0
-      path: music_kit
+  music_kit: ^1.0.0
   path: ^1.8.1
   path_provider: ^2.0.11
   retrofit: ^3.0.1+1
@@ -52,6 +48,12 @@ dev_dependencies:
   json_serializable: ^6.2.0
   auto_route_generator: ^4.0.0
   retrofit_generator: ^4.0.1
+
+dependency_overrides:
+  material_floating_search_bar:
+    git:
+      url: https://github.com/xavier-lyu/material_floating_search_bar.git
+      ref: 0.3.7
 
 flutter:
   uses-material-design: true
