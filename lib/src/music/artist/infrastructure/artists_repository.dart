@@ -14,8 +14,20 @@ class ArtistsRepository {
   Future<Either<MusicFailure, Artist>> fetchArtist(
       String storefront, String id) async {
     try {
-      final artist = await _remoteService.fetchArtist(storefront, id);
-      return right(artist.data.first.toDomain() as Artist);
+      final resp = await _remoteService.fetchArtist(storefront, id);
+      return right(resp.data.first.toDomain() as Artist);
+    } on DioError catch (e) {
+      return left(MusicFailure.api(e.response?.statusCode));
+    } on StateError {
+      return left(const MusicFailure.api(HttpStatus.notFound));
+    }
+  }
+
+  Future<Either<MusicFailure, Artist>> defaultPlayableContent(
+      String storefront, String id) async {
+    try {
+      final resp = await _remoteService.defaultPlayableContent(storefront, id);
+      return right(resp.data.first.toDomain() as Artist);
     } on DioError catch (e) {
       return left(MusicFailure.api(e.response?.statusCode));
     } on StateError {

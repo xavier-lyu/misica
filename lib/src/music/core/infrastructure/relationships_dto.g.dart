@@ -78,6 +78,10 @@ _$_ArtistRelationshipsDTO _$$_ArtistRelationshipsDTOFromJson(Map json) =>
           ? null
           : ResourceRelationshipDTO.fromJson(
               Map<String, dynamic>.from(json['catalog'] as Map)),
+      defaultPlayableContent: json['default-playable-content'] == null
+          ? null
+          : ResourceRelationshipDTO.fromJson(Map<String, dynamic>.from(
+              json['default-playable-content'] as Map)),
     );
 
 Map<String, dynamic> _$$_ArtistRelationshipsDTOToJson(
@@ -88,6 +92,7 @@ Map<String, dynamic> _$$_ArtistRelationshipsDTOToJson(
       'musicVideos': instance.musicVideos?.toJson(),
       'station': instance.station?.toJson(),
       'catalog': instance.catalog?.toJson(),
+      'default-playable-content': instance.defaultPlayableContent?.toJson(),
     };
 
 _$_PlaylistRelationshipsDTO _$$_PlaylistRelationshipsDTOFromJson(Map json) =>

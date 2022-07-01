@@ -53,6 +53,8 @@ class ArtistRelationshipsDTO with _$ArtistRelationshipsDTO {
     ResourceRelationshipDTO? musicVideos,
     ResourceRelationshipDTO? station,
     ResourceRelationshipDTO? catalog,
+    @JsonKey(name: 'default-playable-content')
+        ResourceRelationshipDTO? defaultPlayableContent,
   }) = _ArtistRelationshipsDTO;
 
   factory ArtistRelationshipsDTO.fromJson(Map<String, dynamic> json) =>
@@ -65,6 +67,7 @@ class ArtistRelationshipsDTO with _$ArtistRelationshipsDTO {
       musicVideos: musicVideos?.data.toDomain(),
       station: station?.data.toDomain(),
       catalog: catalog?.data.toDomain(),
+      defaultPlayableContent: defaultPlayableContent?.data.toDomain(),
     );
   }
 }

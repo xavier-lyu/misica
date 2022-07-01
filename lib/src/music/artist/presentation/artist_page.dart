@@ -7,6 +7,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/artist/domain/artist.dart';
 import 'package:misica/src/music/artist/shared/providers.dart';
+import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/presentation/artwork_widget.dart';
 import 'package:misica/src/music/core/presentation/expandable_app_bar.dart';
 import 'package:misica/src/music/core/presentation/favorite_action_widget.dart';
@@ -14,6 +15,7 @@ import 'package:misica/src/music/core/presentation/hook_scroll_view.dart';
 import 'package:misica/src/music/core/presentation/loader.dart';
 import 'package:misica/src/music/core/presentation/resource_views_list.dart';
 import 'package:misica/src/music/core/presentation/retry_widget.dart';
+import 'package:misica/src/music/player/shared/providers.dart';
 
 import 'artist_footer_view.dart';
 
@@ -33,6 +35,12 @@ class _ArtistPageState extends ConsumerState<ArtistPage> {
     Future.microtask(() {
       ref.read(artistNotifierProvider.notifier).fetchArtist(widget.id);
     });
+  }
+
+  void _handlePlaying(Resource? playabled) {
+    if (playabled != null) {
+      ref.read(musicPlayerProvider).playSingle(playabled);
+    }
   }
 
   @override
@@ -79,6 +87,8 @@ class _ArtistPageState extends ConsumerState<ArtistPage> {
                       : ArtistExpandedTitle(
                           title: artist.name,
                           opacity: opacity,
+                          onPlayed: () =>
+                              _handlePlaying(artist.defaultPlayableContent),
                         ),
                   actions: [
                     FavoriteActionWidget(resource: artist),
@@ -107,11 +117,13 @@ class ArtistExpandedTitle extends StatelessWidget {
     this.child,
     required this.opacity,
     required this.title,
+    this.onPlayed,
   }) : super(key: key);
 
   final Widget? child;
   final String title;
   final double opacity;
+  final VoidCallback? onPlayed;
 
   @override
   Widget build(BuildContext context) {
@@ -153,9 +165,7 @@ class ArtistExpandedTitle extends StatelessWidget {
                 Icons.play_circle_fill_rounded,
                 // size: 44,
               ),
-              onPressed: () {
-                //TODO: play
-              },
+              onPressed: onPlayed,
             ),
           ],
         ),

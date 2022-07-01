@@ -15,4 +15,11 @@ abstract class ArtistsService {
     @Path('storefront') String storefront,
     @Path('id') String id,
   );
+
+  @GET(
+      '/catalog/{storefront}/artists/{id}?art[url]=f&fields[artists]=inFavorites&fields[stations]=playParams,name&include=default-playable-content&omit[resource]=autos')
+  Future<MusicResponse> defaultPlayableContent(
+    @Path('storefront') String storefront,
+    @Path('id') String id,
+  );
 }

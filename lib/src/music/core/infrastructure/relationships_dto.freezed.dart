@@ -498,6 +498,9 @@ mixin _$ArtistRelationshipsDTO {
       throw _privateConstructorUsedError;
   ResourceRelationshipDTO? get station => throw _privateConstructorUsedError;
   ResourceRelationshipDTO? get catalog => throw _privateConstructorUsedError;
+  @JsonKey(name: 'default-playable-content')
+  ResourceRelationshipDTO? get defaultPlayableContent =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -515,13 +518,16 @@ abstract class $ArtistRelationshipsDTOCopyWith<$Res> {
       ResourceRelationshipDTO? playlists,
       ResourceRelationshipDTO? musicVideos,
       ResourceRelationshipDTO? station,
-      ResourceRelationshipDTO? catalog});
+      ResourceRelationshipDTO? catalog,
+      @JsonKey(name: 'default-playable-content')
+          ResourceRelationshipDTO? defaultPlayableContent});
 
   $ResourceRelationshipDTOCopyWith<$Res>? get albums;
   $ResourceRelationshipDTOCopyWith<$Res>? get playlists;
   $ResourceRelationshipDTOCopyWith<$Res>? get musicVideos;
   $ResourceRelationshipDTOCopyWith<$Res>? get station;
   $ResourceRelationshipDTOCopyWith<$Res>? get catalog;
+  $ResourceRelationshipDTOCopyWith<$Res>? get defaultPlayableContent;
 }
 
 /// @nodoc
@@ -540,6 +546,7 @@ class _$ArtistRelationshipsDTOCopyWithImpl<$Res>
     Object? musicVideos = freezed,
     Object? station = freezed,
     Object? catalog = freezed,
+    Object? defaultPlayableContent = freezed,
   }) {
     return _then(_value.copyWith(
       albums: albums == freezed
@@ -561,6 +568,10 @@ class _$ArtistRelationshipsDTOCopyWithImpl<$Res>
       catalog: catalog == freezed
           ? _value.catalog
           : catalog // ignore: cast_nullable_to_non_nullable
+              as ResourceRelationshipDTO?,
+      defaultPlayableContent: defaultPlayableContent == freezed
+          ? _value.defaultPlayableContent
+          : defaultPlayableContent // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
     ));
   }
@@ -619,6 +630,18 @@ class _$ArtistRelationshipsDTOCopyWithImpl<$Res>
       return _then(_value.copyWith(catalog: value));
     });
   }
+
+  @override
+  $ResourceRelationshipDTOCopyWith<$Res>? get defaultPlayableContent {
+    if (_value.defaultPlayableContent == null) {
+      return null;
+    }
+
+    return $ResourceRelationshipDTOCopyWith<$Res>(
+        _value.defaultPlayableContent!, (value) {
+      return _then(_value.copyWith(defaultPlayableContent: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -633,7 +656,9 @@ abstract class _$$_ArtistRelationshipsDTOCopyWith<$Res>
       ResourceRelationshipDTO? playlists,
       ResourceRelationshipDTO? musicVideos,
       ResourceRelationshipDTO? station,
-      ResourceRelationshipDTO? catalog});
+      ResourceRelationshipDTO? catalog,
+      @JsonKey(name: 'default-playable-content')
+          ResourceRelationshipDTO? defaultPlayableContent});
 
   @override
   $ResourceRelationshipDTOCopyWith<$Res>? get albums;
@@ -645,6 +670,8 @@ abstract class _$$_ArtistRelationshipsDTOCopyWith<$Res>
   $ResourceRelationshipDTOCopyWith<$Res>? get station;
   @override
   $ResourceRelationshipDTOCopyWith<$Res>? get catalog;
+  @override
+  $ResourceRelationshipDTOCopyWith<$Res>? get defaultPlayableContent;
 }
 
 /// @nodoc
@@ -666,6 +693,7 @@ class __$$_ArtistRelationshipsDTOCopyWithImpl<$Res>
     Object? musicVideos = freezed,
     Object? station = freezed,
     Object? catalog = freezed,
+    Object? defaultPlayableContent = freezed,
   }) {
     return _then(_$_ArtistRelationshipsDTO(
       albums: albums == freezed
@@ -688,6 +716,10 @@ class __$$_ArtistRelationshipsDTOCopyWithImpl<$Res>
           ? _value.catalog
           : catalog // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
+      defaultPlayableContent: defaultPlayableContent == freezed
+          ? _value.defaultPlayableContent
+          : defaultPlayableContent // ignore: cast_nullable_to_non_nullable
+              as ResourceRelationshipDTO?,
     ));
   }
 }
@@ -700,7 +732,8 @@ class _$_ArtistRelationshipsDTO extends _ArtistRelationshipsDTO {
       this.playlists,
       this.musicVideos,
       this.station,
-      this.catalog})
+      this.catalog,
+      @JsonKey(name: 'default-playable-content') this.defaultPlayableContent})
       : super._();
 
   factory _$_ArtistRelationshipsDTO.fromJson(Map<String, dynamic> json) =>
@@ -716,10 +749,13 @@ class _$_ArtistRelationshipsDTO extends _ArtistRelationshipsDTO {
   final ResourceRelationshipDTO? station;
   @override
   final ResourceRelationshipDTO? catalog;
+  @override
+  @JsonKey(name: 'default-playable-content')
+  final ResourceRelationshipDTO? defaultPlayableContent;
 
   @override
   String toString() {
-    return 'ArtistRelationshipsDTO(albums: $albums, playlists: $playlists, musicVideos: $musicVideos, station: $station, catalog: $catalog)';
+    return 'ArtistRelationshipsDTO(albums: $albums, playlists: $playlists, musicVideos: $musicVideos, station: $station, catalog: $catalog, defaultPlayableContent: $defaultPlayableContent)';
   }
 
   @override
@@ -732,7 +768,9 @@ class _$_ArtistRelationshipsDTO extends _ArtistRelationshipsDTO {
             const DeepCollectionEquality()
                 .equals(other.musicVideos, musicVideos) &&
             const DeepCollectionEquality().equals(other.station, station) &&
-            const DeepCollectionEquality().equals(other.catalog, catalog));
+            const DeepCollectionEquality().equals(other.catalog, catalog) &&
+            const DeepCollectionEquality()
+                .equals(other.defaultPlayableContent, defaultPlayableContent));
   }
 
   @JsonKey(ignore: true)
@@ -743,7 +781,8 @@ class _$_ArtistRelationshipsDTO extends _ArtistRelationshipsDTO {
       const DeepCollectionEquality().hash(playlists),
       const DeepCollectionEquality().hash(musicVideos),
       const DeepCollectionEquality().hash(station),
-      const DeepCollectionEquality().hash(catalog));
+      const DeepCollectionEquality().hash(catalog),
+      const DeepCollectionEquality().hash(defaultPlayableContent));
 
   @JsonKey(ignore: true)
   @override
@@ -759,11 +798,14 @@ class _$_ArtistRelationshipsDTO extends _ArtistRelationshipsDTO {
 
 abstract class _ArtistRelationshipsDTO extends ArtistRelationshipsDTO {
   const factory _ArtistRelationshipsDTO(
-      {final ResourceRelationshipDTO? albums,
-      final ResourceRelationshipDTO? playlists,
-      final ResourceRelationshipDTO? musicVideos,
-      final ResourceRelationshipDTO? station,
-      final ResourceRelationshipDTO? catalog}) = _$_ArtistRelationshipsDTO;
+          {final ResourceRelationshipDTO? albums,
+          final ResourceRelationshipDTO? playlists,
+          final ResourceRelationshipDTO? musicVideos,
+          final ResourceRelationshipDTO? station,
+          final ResourceRelationshipDTO? catalog,
+          @JsonKey(name: 'default-playable-content')
+              final ResourceRelationshipDTO? defaultPlayableContent}) =
+      _$_ArtistRelationshipsDTO;
   const _ArtistRelationshipsDTO._() : super._();
 
   factory _ArtistRelationshipsDTO.fromJson(Map<String, dynamic> json) =
@@ -780,6 +822,10 @@ abstract class _ArtistRelationshipsDTO extends ArtistRelationshipsDTO {
   ResourceRelationshipDTO? get station => throw _privateConstructorUsedError;
   @override
   ResourceRelationshipDTO? get catalog => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'default-playable-content')
+  ResourceRelationshipDTO? get defaultPlayableContent =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_ArtistRelationshipsDTOCopyWith<_$_ArtistRelationshipsDTO> get copyWith =>

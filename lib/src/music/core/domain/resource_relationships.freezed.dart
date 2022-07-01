@@ -241,6 +241,9 @@ mixin _$ArtistRelationships {
   List<MusicVideo>? get musicVideos => throw _privateConstructorUsedError;
   List<Station>? get station => throw _privateConstructorUsedError;
   List<Artist>? get catalog => throw _privateConstructorUsedError;
+  @ResourceDTOConverter()
+  List<Resource>? get defaultPlayableContent =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $ArtistRelationshipsCopyWith<ArtistRelationships> get copyWith =>
@@ -257,7 +260,8 @@ abstract class $ArtistRelationshipsCopyWith<$Res> {
       List<Playlist>? playlists,
       List<MusicVideo>? musicVideos,
       List<Station>? station,
-      List<Artist>? catalog});
+      List<Artist>? catalog,
+      @ResourceDTOConverter() List<Resource>? defaultPlayableContent});
 }
 
 /// @nodoc
@@ -276,6 +280,7 @@ class _$ArtistRelationshipsCopyWithImpl<$Res>
     Object? musicVideos = freezed,
     Object? station = freezed,
     Object? catalog = freezed,
+    Object? defaultPlayableContent = freezed,
   }) {
     return _then(_value.copyWith(
       albums: albums == freezed
@@ -298,6 +303,10 @@ class _$ArtistRelationshipsCopyWithImpl<$Res>
           ? _value.catalog
           : catalog // ignore: cast_nullable_to_non_nullable
               as List<Artist>?,
+      defaultPlayableContent: defaultPlayableContent == freezed
+          ? _value.defaultPlayableContent
+          : defaultPlayableContent // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
     ));
   }
 }
@@ -314,7 +323,8 @@ abstract class _$$_ArtistRelationshipsCopyWith<$Res>
       List<Playlist>? playlists,
       List<MusicVideo>? musicVideos,
       List<Station>? station,
-      List<Artist>? catalog});
+      List<Artist>? catalog,
+      @ResourceDTOConverter() List<Resource>? defaultPlayableContent});
 }
 
 /// @nodoc
@@ -335,6 +345,7 @@ class __$$_ArtistRelationshipsCopyWithImpl<$Res>
     Object? musicVideos = freezed,
     Object? station = freezed,
     Object? catalog = freezed,
+    Object? defaultPlayableContent = freezed,
   }) {
     return _then(_$_ArtistRelationships(
       albums: albums == freezed
@@ -357,6 +368,10 @@ class __$$_ArtistRelationshipsCopyWithImpl<$Res>
           ? _value._catalog
           : catalog // ignore: cast_nullable_to_non_nullable
               as List<Artist>?,
+      defaultPlayableContent: defaultPlayableContent == freezed
+          ? _value._defaultPlayableContent
+          : defaultPlayableContent // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
     ));
   }
 }
@@ -369,12 +384,15 @@ class _$_ArtistRelationships extends _ArtistRelationships {
       required final List<Playlist>? playlists,
       required final List<MusicVideo>? musicVideos,
       required final List<Station>? station,
-      required final List<Artist>? catalog})
+      required final List<Artist>? catalog,
+      @ResourceDTOConverter()
+          required final List<Resource>? defaultPlayableContent})
       : _albums = albums,
         _playlists = playlists,
         _musicVideos = musicVideos,
         _station = station,
         _catalog = catalog,
+        _defaultPlayableContent = defaultPlayableContent,
         super._();
 
   final List<Album>? _albums;
@@ -422,9 +440,19 @@ class _$_ArtistRelationships extends _ArtistRelationships {
     return EqualUnmodifiableListView(value);
   }
 
+  final List<Resource>? _defaultPlayableContent;
+  @override
+  @ResourceDTOConverter()
+  List<Resource>? get defaultPlayableContent {
+    final value = _defaultPlayableContent;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   String toString() {
-    return 'ArtistRelationships(albums: $albums, playlists: $playlists, musicVideos: $musicVideos, station: $station, catalog: $catalog)';
+    return 'ArtistRelationships(albums: $albums, playlists: $playlists, musicVideos: $musicVideos, station: $station, catalog: $catalog, defaultPlayableContent: $defaultPlayableContent)';
   }
 
   @override
@@ -438,7 +466,9 @@ class _$_ArtistRelationships extends _ArtistRelationships {
             const DeepCollectionEquality()
                 .equals(other._musicVideos, _musicVideos) &&
             const DeepCollectionEquality().equals(other._station, _station) &&
-            const DeepCollectionEquality().equals(other._catalog, _catalog));
+            const DeepCollectionEquality().equals(other._catalog, _catalog) &&
+            const DeepCollectionEquality().equals(
+                other._defaultPlayableContent, _defaultPlayableContent));
   }
 
   @override
@@ -448,7 +478,8 @@ class _$_ArtistRelationships extends _ArtistRelationships {
       const DeepCollectionEquality().hash(_playlists),
       const DeepCollectionEquality().hash(_musicVideos),
       const DeepCollectionEquality().hash(_station),
-      const DeepCollectionEquality().hash(_catalog));
+      const DeepCollectionEquality().hash(_catalog),
+      const DeepCollectionEquality().hash(_defaultPlayableContent));
 
   @JsonKey(ignore: true)
   @override
@@ -459,11 +490,14 @@ class _$_ArtistRelationships extends _ArtistRelationships {
 
 abstract class _ArtistRelationships extends ArtistRelationships {
   const factory _ArtistRelationships(
-      {required final List<Album>? albums,
-      required final List<Playlist>? playlists,
-      required final List<MusicVideo>? musicVideos,
-      required final List<Station>? station,
-      required final List<Artist>? catalog}) = _$_ArtistRelationships;
+          {required final List<Album>? albums,
+          required final List<Playlist>? playlists,
+          required final List<MusicVideo>? musicVideos,
+          required final List<Station>? station,
+          required final List<Artist>? catalog,
+          @ResourceDTOConverter()
+              required final List<Resource>? defaultPlayableContent}) =
+      _$_ArtistRelationships;
   const _ArtistRelationships._() : super._();
 
   @override
@@ -476,6 +510,10 @@ abstract class _ArtistRelationships extends ArtistRelationships {
   List<Station>? get station => throw _privateConstructorUsedError;
   @override
   List<Artist>? get catalog => throw _privateConstructorUsedError;
+  @override
+  @ResourceDTOConverter()
+  List<Resource>? get defaultPlayableContent =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_ArtistRelationshipsCopyWith<_$_ArtistRelationships> get copyWith =>

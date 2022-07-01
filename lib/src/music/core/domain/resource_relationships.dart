@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
+import 'package:misica/src/music/core/shared/json_converters.dart';
 
 import 'track.dart';
 
@@ -26,6 +27,7 @@ class ArtistRelationships with _$ArtistRelationships {
     required List<MusicVideo>? musicVideos,
     required List<Station>? station,
     required List<Artist>? catalog,
+    @ResourceDTOConverter() required List<Resource>? defaultPlayableContent,
   }) = _ArtistRelationships;
 }
 

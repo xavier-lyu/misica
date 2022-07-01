@@ -20,7 +20,7 @@ class MusicAuthIntercepter extends Interceptor {
               ? {}
               : {
                   'Authorization': 'Bearer ${credentials.developerToken}',
-                  'Music-User-Token': options.path.contains('/me/')
+                  'Music-User-Token': options.authenticationRequired
                       ? credentials.userToken
                       : '',
                 },
@@ -60,7 +60,7 @@ class MusicAuthIntercepter extends Interceptor {
                     'Authorization':
                         'Bearer ${refreshedCredentials.developerToken}',
                     'Music-User-Token':
-                        errResp.requestOptions.path.contains('/me/')
+                        errResp.requestOptions.authenticationRequired
                             ? refreshedCredentials.userToken
                             : '',
                   },
@@ -85,4 +85,7 @@ extension MusicAuthOptions on RequestOptions {
   bool get disableRetry => (extra[_kDisableRetryKey] as bool?) ?? false;
 
   set disableRetry(bool value) => extra[_kDisableRetryKey] = value;
+
+  bool get authenticationRequired =>
+      path.contains('/me/') || path.contains('default-playable-content');
 }
