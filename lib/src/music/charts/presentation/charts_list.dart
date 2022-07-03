@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/charts/presentation/chart_widget.dart';
 import 'package:misica/src/music/charts/shared/providers.dart';
-import 'package:misica/src/music/core/presentation/divider_widget.dart';
-import 'package:misica/src/music/core/presentation/loader.dart';
+import 'package:misica/src/music/core/presentation/widgets/divider_widget.dart';
+import 'package:misica/src/music/core/presentation/widgets/loader.dart';
 
 class ChartsList extends ConsumerWidget {
   const ChartsList({Key? key}) : super(key: key);

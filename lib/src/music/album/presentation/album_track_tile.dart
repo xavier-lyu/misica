@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/core/domain/track.dart';
-import 'package:misica/src/music/core/presentation/explicit_icon.dart';
-import 'package:misica/src/music/core/presentation/music_video_icon.dart';
-import 'package:misica/src/music/core/presentation/resource_context_menu.dart';
+import 'package:misica/src/music/core/presentation/widgets/explicit_icon.dart';
+import 'package:misica/src/music/core/presentation/widgets/music_video_icon.dart';
+import 'package:misica/src/music/core/presentation/widgets/resource_context_menu.dart';
 
 class AlbumTrackTile extends ConsumerWidget {
   const AlbumTrackTile({

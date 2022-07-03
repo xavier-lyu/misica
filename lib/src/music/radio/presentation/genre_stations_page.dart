@@ -3,9 +3,9 @@ import 'dart:math';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:misica/src/music/core/presentation/divider_widget.dart';
-import 'package:misica/src/music/core/presentation/loader.dart';
-import 'package:misica/src/music/core/presentation/retry_widget.dart';
+import 'package:misica/src/music/core/presentation/widgets/divider_widget.dart';
+import 'package:misica/src/music/core/presentation/widgets/loader.dart';
+import 'package:misica/src/music/core/presentation/widgets/retry_widget.dart';
 import 'package:misica/src/music/radio/presentation/station_tile.dart';
 import 'package:misica/src/music/radio/shared/providers.dart';
 

@@ -6,10 +6,10 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
-import 'package:misica/src/music/core/presentation/app_navbar.dart';
-import 'package:misica/src/music/core/presentation/hook_scroll_view.dart';
-import 'package:misica/src/music/core/presentation/loader.dart';
-import 'package:misica/src/music/core/presentation/resource_cards_list.dart';
+import 'package:misica/src/music/core/presentation/widgets/app_navbar.dart';
+import 'package:misica/src/music/core/presentation/widgets/hook_scroll_view.dart';
+import 'package:misica/src/music/core/presentation/widgets/loader.dart';
+import 'package:misica/src/music/core/presentation/widgets/resource_cards_list.dart';
 import 'package:misica/src/music/radio/presentation/section_title_widget.dart';
 import 'package:misica/src/music/radio/shared/providers.dart';
 

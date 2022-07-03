@@ -4,7 +4,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
-import 'package:misica/src/music/core/presentation/loader.dart';
+import 'package:misica/src/music/core/presentation/widgets/loader.dart';
 import 'package:misica/src/music/player/shared/providers.dart';
 import 'package:misica/src/music/search/presentation/search_bar.dart';
 import 'package:misica/src/music/search/shared/providers.dart';

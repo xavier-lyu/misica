@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/charts/domain/charts.dart';
-import 'package:misica/src/music/core/presentation/resource_cards_list.dart';
-import 'package:misica/src/music/core/presentation/resource_tile.dart';
-import 'package:misica/src/music/core/presentation/resources_list.dart';
+import 'package:misica/src/music/core/presentation/widgets/resource_cards_list.dart';
+import 'package:misica/src/music/core/presentation/widgets/resource_tile.dart';
+import 'package:misica/src/music/core/presentation/widgets/resources_list.dart';
 import 'package:misica/src/music/player/shared/providers.dart';
 
 class ChartWidget extends ConsumerWidget {

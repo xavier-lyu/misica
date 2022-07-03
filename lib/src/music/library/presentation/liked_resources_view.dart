@@ -7,8 +7,8 @@ import 'package:misica/src/core/presentation/app_router.gr.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
-import 'package:misica/src/music/core/presentation/resource_card.dart';
-import 'package:misica/src/music/core/presentation/resource_tile.dart';
+import 'package:misica/src/music/core/presentation/widgets/resource_card.dart';
+import 'package:misica/src/music/core/presentation/widgets/resource_tile.dart';
 import 'package:misica/src/music/player/shared/providers.dart';
 
 class LikedResourcesView extends StatefulWidget {

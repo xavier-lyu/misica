@@ -10,12 +10,12 @@ import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/charts/domain/charts.dart';
 import 'package:misica/src/music/charts/presentation/charts_list.dart';
 import 'package:misica/src/music/charts/shared/providers.dart';
-import 'package:misica/src/music/core/presentation/hook_scroll_view.dart';
+import 'package:misica/src/music/core/presentation/widgets/hook_scroll_view.dart';
 import 'package:misica/src/music/recommendations/domain/recommendation.dart';
 import 'package:misica/src/music/recommendations/presentation/recommendations_list.dart';
 import 'package:misica/src/music/recommendations/shared/providers.dart';
 
-import 'app_navbar.dart';
+import 'widgets/app_navbar.dart';
 
 class HomePage extends StatefulHookConsumerWidget {
   const HomePage({Key? key}) : super(key: key);

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
-import 'package:misica/src/music/core/presentation/artwork_widget.dart';
-import 'package:misica/src/music/core/presentation/expandable_text.dart';
-import 'package:misica/src/music/core/presentation/play_button.dart';
-import 'package:misica/src/music/core/presentation/shuffle_button.dart';
+import 'package:misica/src/music/core/presentation/widgets/artwork_widget.dart';
+import 'package:misica/src/music/core/presentation/widgets/expandable_text.dart';
+import 'package:misica/src/music/core/presentation/widgets/play_button.dart';
+import 'package:misica/src/music/core/presentation/widgets/shuffle_button.dart';
 import 'package:misica/src/music/playlist/domain/playlist.dart';
 
 class PlaylistHeaderView extends ConsumerWidget {

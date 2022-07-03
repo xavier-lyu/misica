@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:misica/src/music/core/domain/track.dart';
-import 'package:misica/src/music/core/presentation/divider_widget.dart';
+import 'package:misica/src/music/core/presentation/widgets/divider_widget.dart';
 
 typedef TracksListItemBuilder = Widget Function(
     BuildContext context, int index);

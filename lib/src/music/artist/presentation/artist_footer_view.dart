@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
-import 'package:misica/src/music/core/presentation/expandable_text.dart';
+import 'package:misica/src/music/core/presentation/widgets/expandable_text.dart';
 
 class ArtistFooterView extends StatelessWidget {
   const ArtistFooterView({

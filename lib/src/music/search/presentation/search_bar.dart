@@ -5,7 +5,7 @@ import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 import 'package:misica/src/core/shared/color_extensions.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
-import 'package:misica/src/music/core/presentation/artwork_widget.dart';
+import 'package:misica/src/music/core/presentation/widgets/artwork_widget.dart';
 import 'package:misica/src/music/search/shared/providers.dart';
 
 typedef ResourceCallback = void Function(Resource resource);

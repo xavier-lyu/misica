@@ -4,7 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/domain/track.dart';
-import 'package:misica/src/music/core/presentation/artwork_widget.dart';
+import 'package:misica/src/music/core/presentation/widgets/artwork_widget.dart';
 import 'package:misica/src/music/player/infrastructure/player_queue_entry.dart';
 import 'package:misica/src/music/player/shared/providers.dart';
 import 'package:misica/src/music/songs/shared/providers.dart';

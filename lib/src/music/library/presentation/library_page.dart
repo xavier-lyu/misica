@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
-import 'package:misica/src/music/core/presentation/loader.dart';
+import 'package:misica/src/music/core/presentation/widgets/loader.dart';
 import 'package:misica/src/music/library/presentation/liked_resources_view.dart';
 import 'package:misica/src/music/library/shared/providers.dart';
 

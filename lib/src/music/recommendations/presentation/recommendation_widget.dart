@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
-import 'package:misica/src/music/core/presentation/resource_cards_list.dart';
+import 'package:misica/src/music/core/presentation/widgets/resource_cards_list.dart';
 import 'package:misica/src/music/recommendations/domain/recommendation.dart';
 
 class RecommendationWidget extends StatelessWidget {

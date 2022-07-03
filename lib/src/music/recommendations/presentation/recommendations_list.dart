@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:misica/src/music/core/presentation/divider_widget.dart';
+import 'package:misica/src/music/core/presentation/widgets/divider_widget.dart';
 import 'package:misica/src/music/recommendations/presentation/recommendation_widget.dart';
 import 'package:misica/src/music/recommendations/shared/providers.dart';
 

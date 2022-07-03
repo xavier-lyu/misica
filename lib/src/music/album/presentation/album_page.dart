@@ -4,12 +4,12 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/album.dart';
 import 'package:misica/src/music/album/shared/providers.dart';
-import 'package:misica/src/music/core/presentation/favorite_action_widget.dart';
-import 'package:misica/src/music/core/presentation/hook_scroll_view.dart';
-import 'package:misica/src/music/core/presentation/loader.dart';
-import 'package:misica/src/music/core/presentation/resource_views_list.dart';
-import 'package:misica/src/music/core/presentation/retry_widget.dart';
-import 'package:misica/src/music/core/presentation/tracks_list.dart';
+import 'package:misica/src/music/core/presentation/widgets/favorite_action_widget.dart';
+import 'package:misica/src/music/core/presentation/widgets/hook_scroll_view.dart';
+import 'package:misica/src/music/core/presentation/widgets/loader.dart';
+import 'package:misica/src/music/core/presentation/widgets/resource_views_list.dart';
+import 'package:misica/src/music/core/presentation/widgets/retry_widget.dart';
+import 'package:misica/src/music/core/presentation/widgets/tracks_list.dart';
 import 'package:misica/src/music/player/shared/providers.dart';
 
 import 'album_footer.dart';

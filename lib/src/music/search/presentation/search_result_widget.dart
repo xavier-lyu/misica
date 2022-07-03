@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
-import 'package:misica/src/music/core/presentation/resource_tile.dart';
+import 'package:misica/src/music/core/presentation/widgets/resource_tile.dart';
 import 'package:misica/src/music/player/shared/providers.dart';
 import 'package:misica/src/music/search/domain/search_results.dart';
 
