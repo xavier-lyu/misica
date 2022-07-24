@@ -17,18 +17,19 @@ class SettingsPage extends HookConsumerWidget {
           context.loc.settings,
         ),
       ),
-      body: GestureDetector(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: ListView.builder(
-            itemCount: 3,
-            itemBuilder: (context, index) {
-              if (index == 0) return const AppearanceTile();
-              if (index == 1) return const LanguageTile();
-              if (index == 2) return const ClearCacheTile();
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: ListView.separated(
+          itemCount: 3,
+          itemBuilder: (context, index) {
+            if (index == 0) return const AppearanceTile();
+            if (index == 1) return const LanguageTile();
+            if (index == 2) return const ClearCacheTile();
 
-              return Container();
-            },
+            return Container();
+          },
+          separatorBuilder: (context, index) => const Divider(
+            height: 5,
           ),
         ),
       ),
