@@ -4,6 +4,9 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/library/shared/providers.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
+
+import 'artwork_widget.dart';
 
 enum ResourceContextMenu { toggleLiked }
 
@@ -19,27 +22,54 @@ class ResourceContextMenuButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<ResourceContextMenu>(
-      padding: EdgeInsets.zero,
-      onSelected: onSelected,
-      itemBuilder: (context) => [
-        PopupMenuItem(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
-          value: ResourceContextMenu.toggleLiked,
-          child: LikeOrUnlikeWidget(
-            resource: resource,
-            builder: (context, value) => Row(
-              children: [
-                Icon(value
+    return IconButton(
+      icon: const Icon(Icons.more_horiz_rounded),
+      onPressed: () {
+        showCupertinoModalBottomSheet(
+            context: context,
+            builder: (_) => ResourceMenuModal(
+                  resource: resource,
+                ));
+      },
+    );
+  }
+}
+
+class ResourceMenuModal extends ConsumerWidget {
+  const ResourceMenuModal({Key? key, required this.resource}) : super(key: key);
+
+  final Resource resource;
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return Material(
+      child: SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ListTile(
+              leading: ArtworkWidget(
+                artwork: resource.artwork,
+                width: 48,
+                height: 48,
+              ),
+              title: Text(resource.name),
+              subtitle: Text(resource.creatorName),
+              trailing: const CloseButton(),
+            ),
+            const Divider(),
+            LikeOrUnlikeWidget(
+              resource: resource,
+              builder: (context, value) => ListTile(
+                leading: Icon(value
                     ? Icons.favorite_rounded
                     : Icons.favorite_border_rounded),
-                const SizedBox(width: 10),
-                Text(value ? context.loc.liked : context.loc.like),
-              ],
+                title: Text(value ? context.loc.liked : context.loc.like),
+              ),
             ),
-          ),
+          ],
         ),
-      ],
+      ),
     );
   }
 }
