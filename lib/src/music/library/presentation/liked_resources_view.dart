@@ -1,15 +1,12 @@
 import 'dart:math';
 
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:misica/src/core/presentation/app_router.gr.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
-import 'package:misica/src/music/core/presentation/widgets/resource_card.dart';
-import 'package:misica/src/music/core/presentation/widgets/resource_tile.dart';
-import 'package:misica/src/music/player/shared/providers.dart';
+
+import 'resources_grid_view.dart';
+import 'resources_list_view.dart';
 
 class LikedResourcesView extends StatefulWidget {
   const LikedResourcesView({
@@ -99,74 +96,6 @@ class _LikedResourcesViewState extends State<LikedResourcesView>
           ),
         )
       ],
-    );
-  }
-}
-
-class ResourcesListView extends StatelessWidget {
-  const ResourcesListView({Key? key, required this.resources})
-      : super(key: key);
-
-  final List<Resource> resources;
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      itemExtent: 70,
-      padding: const EdgeInsetsDirectional.only(top: 10, start: 20, end: 20),
-      itemCount: resources.length,
-      itemBuilder: (context, index) => Consumer(builder: (context, ref, _) {
-        final item = resources[index];
-        return ResourceTile(
-          resource: item,
-          onTap: () {
-            item.mapOrNull(
-              (value) => null,
-              song: (song) => ref.read(musicPlayerProvider).playMany(
-                    items: resources,
-                    startingAt: index,
-                  ),
-              artist: (artist) =>
-                  context.router.push(ArtistRoute(id: artist.id)),
-            );
-          },
-        );
-      }),
-    );
-  }
-}
-
-class ResourcesGridView extends StatelessWidget {
-  const ResourcesGridView({Key? key, required this.resources})
-      : super(key: key);
-
-  final List<Resource> resources;
-
-  @override
-  Widget build(BuildContext context) {
-    final screenWidth = context.mqoc.size.width;
-    final itemWidth = (screenWidth - 50) / 2;
-    final childAspectRatio = itemWidth / (itemWidth + 50);
-
-    return GridView.builder(
-      padding: const EdgeInsetsDirectional.only(
-        start: 20,
-        end: 20,
-        top: 10,
-      ),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        childAspectRatio: childAspectRatio,
-        crossAxisSpacing: 10,
-      ),
-      itemBuilder: (context, index) {
-        return ResourceCard(
-          resource: resources[index],
-          aspectRatio: childAspectRatio,
-          artworkWidth: itemWidth,
-        );
-      },
-      itemCount: resources.length,
     );
   }
 }

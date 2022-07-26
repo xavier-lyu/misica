@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
-import 'package:misica/src/music/core/presentation/widgets/favorite_action_widget.dart';
 import 'package:misica/src/music/core/presentation/widgets/hook_scroll_view.dart';
 import 'package:misica/src/music/core/presentation/widgets/loader.dart';
+import 'package:misica/src/music/core/presentation/widgets/resource_context_menu.dart';
 import 'package:misica/src/music/core/presentation/widgets/retry_widget.dart';
 import 'package:misica/src/music/core/presentation/widgets/tracks_list.dart';
 import 'package:misica/src/music/core/shared/formatters.dart';
@@ -65,7 +65,7 @@ class _PlaylistPageState extends ConsumerState<PlaylistPage> {
                   : null,
               pinned: true,
               actions: [
-                FavoriteActionWidget(resource: playlist),
+                ResourceContextMenuButton(resource: playlist),
               ],
             ),
             SliverPadding(

@@ -4,9 +4,9 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/album.dart';
 import 'package:misica/src/music/album/shared/providers.dart';
-import 'package:misica/src/music/core/presentation/widgets/favorite_action_widget.dart';
 import 'package:misica/src/music/core/presentation/widgets/hook_scroll_view.dart';
 import 'package:misica/src/music/core/presentation/widgets/loader.dart';
+import 'package:misica/src/music/core/presentation/widgets/resource_context_menu.dart';
 import 'package:misica/src/music/core/presentation/widgets/resource_views_list.dart';
 import 'package:misica/src/music/core/presentation/widgets/retry_widget.dart';
 import 'package:misica/src/music/core/presentation/widgets/tracks_list.dart';
@@ -67,7 +67,7 @@ class _AlbumPageState extends ConsumerState<AlbumPage> {
                   : null,
               pinned: true,
               actions: [
-                FavoriteActionWidget(resource: album),
+                ResourceContextMenuButton(resource: album),
               ],
             ),
             SliverPadding(

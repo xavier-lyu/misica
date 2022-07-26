@@ -10,9 +10,9 @@ import 'package:misica/src/music/artist/shared/providers.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/presentation/widgets/artwork_widget.dart';
 import 'package:misica/src/music/core/presentation/widgets/expandable_app_bar.dart';
-import 'package:misica/src/music/core/presentation/widgets/favorite_action_widget.dart';
 import 'package:misica/src/music/core/presentation/widgets/hook_scroll_view.dart';
 import 'package:misica/src/music/core/presentation/widgets/loader.dart';
+import 'package:misica/src/music/core/presentation/widgets/resource_context_menu.dart';
 import 'package:misica/src/music/core/presentation/widgets/resource_views_list.dart';
 import 'package:misica/src/music/core/presentation/widgets/retry_widget.dart';
 import 'package:misica/src/music/player/shared/providers.dart';
@@ -91,7 +91,7 @@ class _ArtistPageState extends ConsumerState<ArtistPage> {
                               _handlePlaying(artist.defaultPlayableContent),
                         ),
                   actions: [
-                    FavoriteActionWidget(resource: artist),
+                    ResourceContextMenuButton(resource: artist),
                   ],
                 ),
                 if (artist.views?.isNotEmpty == true)

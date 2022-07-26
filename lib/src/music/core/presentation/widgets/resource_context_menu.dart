@@ -54,7 +54,9 @@ class ResourceMenuModal extends ConsumerWidget {
                 height: 48,
               ),
               title: Text(resource.name),
-              subtitle: Text(resource.creatorName),
+              subtitle: resource.creatorName.isNotEmpty
+                  ? Text(resource.creatorName)
+                  : null,
               trailing: const CloseButton(),
             ),
             const Divider(),
