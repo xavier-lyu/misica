@@ -27,10 +27,7 @@ class ArtworkWidget extends StatelessWidget {
         : context.toc.colorScheme.surfaceVariant;
 
     return Container(
-      decoration: BoxDecoration(
-        color: bgColor,
-        borderRadius: BorderRadius.all(Radius.circular(radius)),
-      ),
+      decoration: artworkShadow(bgColor, context.toc.brightness, radius),
       height: height,
       width: width,
       child: ClipRRect(
@@ -56,4 +53,28 @@ class ArtworkWidget extends StatelessWidget {
       ),
     );
   }
+}
+
+BoxDecoration artworkShadow(
+  Color bgColor,
+  Brightness brightness,
+  double radius,
+) {
+  final isLightTheme = brightness == Brightness.light;
+  final shadowColor =
+      isLightTheme ? Colors.black.withAlpha(25) : Colors.white.withAlpha(50);
+
+  return BoxDecoration(
+    borderRadius: BorderRadius.circular(radius),
+    color: bgColor,
+    shape: BoxShape.rectangle,
+    boxShadow: [
+      BoxShadow(
+        offset: const Offset(0, 5),
+        color: shadowColor,
+        blurRadius: 24,
+        spreadRadius: 0,
+      ),
+    ],
+  );
 }
