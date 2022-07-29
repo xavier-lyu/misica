@@ -10,7 +10,7 @@ import 'package:misica/src/music/player/shared/providers.dart';
 import 'package:misica/src/music/songs/shared/providers.dart';
 import 'package:music_kit/music_kit.dart';
 
-class NowPlayingBar extends HookConsumerWidget {
+class NowPlayingBar extends ConsumerWidget {
   const NowPlayingBar({Key? key}) : super(key: key);
 
   @override

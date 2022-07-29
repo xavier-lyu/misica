@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/settings/cache/presentation/clear_cache_tile.dart';
 
 import 'appearance_tile.dart';
 import 'language_tile.dart';
 
-class SettingsPage extends HookConsumerWidget {
+class SettingsPage extends StatelessWidget {
   const SettingsPage({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(

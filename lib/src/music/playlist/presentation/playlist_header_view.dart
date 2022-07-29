@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/presentation/widgets/artwork_widget.dart';
@@ -8,7 +7,7 @@ import 'package:misica/src/music/core/presentation/widgets/play_button.dart';
 import 'package:misica/src/music/core/presentation/widgets/shuffle_button.dart';
 import 'package:misica/src/music/playlist/domain/playlist.dart';
 
-class PlaylistHeaderView extends ConsumerWidget {
+class PlaylistHeaderView extends StatelessWidget {
   const PlaylistHeaderView({
     Key? key,
     required this.playlist,
@@ -17,7 +16,7 @@ class PlaylistHeaderView extends ConsumerWidget {
   final Playlist playlist;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Column(
       children: [
         ArtworkWidget(

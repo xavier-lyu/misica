@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/album.dart';
@@ -9,7 +8,7 @@ import 'package:misica/src/music/core/presentation/widgets/expandable_text.dart'
 import 'package:misica/src/music/core/presentation/widgets/play_button.dart';
 import 'package:misica/src/music/core/presentation/widgets/shuffle_button.dart';
 
-class AlbumHeaderView extends ConsumerWidget {
+class AlbumHeaderView extends StatelessWidget {
   const AlbumHeaderView({
     Key? key,
     required this.album,
@@ -18,7 +17,7 @@ class AlbumHeaderView extends ConsumerWidget {
   final Album album;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Column(
       children: [
         ArtworkWidget(

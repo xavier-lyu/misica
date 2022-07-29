@@ -5,7 +5,7 @@ import 'package:misica/src/authorization/shared/providers.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 
-class AuthorizationPage extends HookConsumerWidget {
+class AuthorizationPage extends ConsumerWidget {
   const AuthorizationPage({Key? key}) : super(key: key);
 
   @override

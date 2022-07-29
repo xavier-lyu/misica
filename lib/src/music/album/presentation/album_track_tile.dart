@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/core/domain/track.dart';
 import 'package:misica/src/music/core/presentation/widgets/explicit_icon.dart';
 import 'package:misica/src/music/core/presentation/widgets/music_video_icon.dart';
 import 'package:misica/src/music/core/presentation/widgets/resource_context_menu.dart';
 
-class AlbumTrackTile extends ConsumerWidget {
+class AlbumTrackTile extends StatelessWidget {
   const AlbumTrackTile({
     Key? key,
     required this.track,
@@ -16,7 +15,7 @@ class AlbumTrackTile extends ConsumerWidget {
   final VoidCallback? onTap;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
       child: Row(

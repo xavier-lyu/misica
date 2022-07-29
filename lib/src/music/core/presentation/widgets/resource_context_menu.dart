@@ -35,13 +35,13 @@ class ResourceContextMenuButton extends StatelessWidget {
   }
 }
 
-class ResourceMenuModal extends ConsumerWidget {
+class ResourceMenuModal extends StatelessWidget {
   const ResourceMenuModal({Key? key, required this.resource}) : super(key: key);
 
   final Resource resource;
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Material(
       child: SafeArea(
         child: Column(
