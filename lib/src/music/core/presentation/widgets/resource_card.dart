@@ -61,9 +61,9 @@ class ResourceCard extends ConsumerWidget {
                       resource.name,
                       overflow: TextOverflow.ellipsis,
                     ),
-                  if (resource.creatorName.isNotEmpty)
+                  if (resource.creatorName?.isNotEmpty == true)
                     Text(
-                      resource.creatorName,
+                      resource.creatorName!,
                       style: const TextStyle(),
                       overflow: TextOverflow.ellipsis,
                     ),

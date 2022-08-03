@@ -35,9 +35,9 @@ class PlaylistHeaderView extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
-        if (playlist.creatorName.isNotEmpty)
+        if (playlist.creatorName?.isNotEmpty == true)
           Text(
-            playlist.creatorName,
+            playlist.creatorName!,
             style: context.ttoc.titleLarge?.copyWith(
               color: context.toc.primaryColor,
             ),

@@ -91,8 +91,7 @@ class Resource with _$Resource {
         genre: (_) => null,
       );
 
-  String get creatorName =>
-      map(
+  String? get creatorName => map(
         (value) =>
             value.attributes?.artistName ?? value.attributes?.curatorName,
         album: (album) => album.attributes?.artistName,
@@ -103,8 +102,7 @@ class Resource with _$Resource {
         station: (station) => station.attributes?.editorialNotes?.short,
         curator: (curator) => null,
         genre: (_) => null,
-      ) ??
-      '';
+      );
 
   String get name =>
       map(

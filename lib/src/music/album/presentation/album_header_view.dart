@@ -36,10 +36,10 @@ class AlbumHeaderView extends StatelessWidget {
             ),
             textAlign: TextAlign.center,
           ),
-        if (album.creatorName.isNotEmpty)
+        if (album.creatorName?.isNotEmpty == true)
           TextButton(
             child: Text(
-              album.creatorName,
+              album.creatorName!,
               style: context.ttoc.titleLarge?.copyWith(
                 color: context.toc.primaryColor,
               ),

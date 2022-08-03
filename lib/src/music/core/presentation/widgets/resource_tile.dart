@@ -65,11 +65,11 @@ class ResourceTile extends StatelessWidget {
                           const Icon(Icons.explicit_rounded),
                       ],
                     ),
-                    if (caption.isNotEmpty)
+                    if (caption?.isNotEmpty == true)
                       Container(
                         margin: const EdgeInsetsDirectional.only(top: 5),
                         child: Text(
-                          caption,
+                          caption!,
                           overflow: TextOverflow.ellipsis,
                           style: context.ttoc.labelLarge,
                         ),

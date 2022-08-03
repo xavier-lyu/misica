@@ -54,8 +54,8 @@ class ResourceMenuModal extends StatelessWidget {
                 height: 48,
               ),
               title: Text(resource.name),
-              subtitle: resource.creatorName.isNotEmpty
-                  ? Text(resource.creatorName)
+              subtitle: resource.creatorName?.isNotEmpty == true
+                  ? Text(resource.creatorName!)
                   : null,
               trailing: const CloseButton(),
             ),
