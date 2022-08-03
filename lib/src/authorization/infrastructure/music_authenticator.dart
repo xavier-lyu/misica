@@ -1,5 +1,5 @@
-import 'package:dartz/dartz.dart';
 import 'package:flutter/services.dart';
+import 'package:fpdart/fpdart.dart';
 import 'package:misica/src/authorization/domain/auth_failure.dart';
 import 'package:misica/src/authorization/domain/credentials.dart';
 import 'package:misica/src/authorization/infrastructure/credentials_storage/credentials_storage.dart';

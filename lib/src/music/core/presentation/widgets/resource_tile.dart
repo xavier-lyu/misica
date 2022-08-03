@@ -1,5 +1,5 @@
-import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
+import 'package:fpdart/fpdart.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/domain/song.dart';

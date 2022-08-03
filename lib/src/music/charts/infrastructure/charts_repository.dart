@@ -1,5 +1,5 @@
-import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:fpdart/fpdart.dart';
 import 'package:misica/src/music/charts/domain/charts.dart';
 import 'package:misica/src/music/charts/infrastructure/charts_service.dart';
 import 'package:misica/src/music/core/domain/music_failure.dart';

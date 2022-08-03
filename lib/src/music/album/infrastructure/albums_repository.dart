@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:fpdart/fpdart.dart';
 import 'package:misica/src/music/core/domain/music_failure.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 

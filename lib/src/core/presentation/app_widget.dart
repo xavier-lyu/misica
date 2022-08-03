@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:fpdart/fpdart.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/authorization/application/auth_notifier.dart';
 import 'package:misica/src/authorization/shared/providers.dart';
