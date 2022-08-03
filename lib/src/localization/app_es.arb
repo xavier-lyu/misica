@@ -105,5 +105,10 @@
   "@calculating": {},
 
   "nothingHereYet": "Todavía no hay nada aquí",
-  "@nothingHereYet": {}
+  "@nothingHereYet": {},
+
+  "goToAlbum": "Ir al álbum",
+  "@goToAlbum": {},
+  "goToArtist": "Ir al artista",
+  "@goToArtist": {}
 }

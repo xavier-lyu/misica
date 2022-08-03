@@ -51,6 +51,7 @@ class AlbumTrackTile extends StatelessWidget {
               song: (song) => song,
               musicVideo: (musicVideo) => musicVideo,
             ),
+            container: ResourceContainer.album,
           )
         ],
       ),

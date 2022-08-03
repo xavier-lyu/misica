@@ -40,9 +40,9 @@ class ResourceTile extends StatelessWidget {
           children: [
             ArtworkWidget(
               artwork: resource.artwork,
-              width: styles.value1,
+              width: styles.first,
               height: 60.0,
-              radius: styles.value2,
+              radius: styles.second,
             ),
             Expanded(
               child: Padding(

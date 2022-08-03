@@ -72,7 +72,7 @@ class _AlbumPageState extends ConsumerState<AlbumPage> {
             ),
             SliverPadding(
               padding: const EdgeInsetsDirectional.only(
-                top: 5,
+                top: 15,
                 start: 20,
                 end: 20,
               ),

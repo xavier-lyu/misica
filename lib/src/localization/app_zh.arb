@@ -105,5 +105,10 @@
   "@calculating": {},
 
   "nothingHereYet": "这里还什么都没有",
-  "@nothingHereYet": {}
+  "@nothingHereYet": {},
+
+  "goToAlbum": "转到专辑页面",
+  "@goToAlbum": {},
+  "goToArtist": "转到艺术家页面",
+  "@goToArtist": {}
 }
