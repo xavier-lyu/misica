@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
@@ -160,6 +161,7 @@ class LikeOrUnlikeWidget extends HookConsumerWidget {
       onTap: () {
         ref.read(likedResourcesNotifierProvider.notifier).toggleLikes(resource);
         liked.value = !liked.value;
+        HapticFeedback.mediumImpact();
         context.router.pop();
       },
       child: likedState.maybeWhen(

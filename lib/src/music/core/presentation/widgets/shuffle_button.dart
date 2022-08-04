@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
@@ -17,6 +18,7 @@ class ShuffleButton extends ConsumerWidget {
     return ElevatedButton(
         onPressed: () {
           ref.read(musicPlayerProvider).playSingleShuffle(item: item);
+          HapticFeedback.mediumImpact();
         },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

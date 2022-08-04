@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
@@ -19,6 +20,7 @@ class PlayButton extends ConsumerWidget {
     return ElevatedButton(
       onPressed: () {
         ref.read(musicPlayerProvider).playSingle(item);
+        HapticFeedback.mediumImpact();
       },
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,

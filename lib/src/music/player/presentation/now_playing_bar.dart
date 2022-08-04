@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
@@ -81,13 +82,23 @@ class NowPlayingItemWidget extends HookConsumerWidget {
           ),
         ),
         IconButton(
-          onPressed: isNotPlaying ? null : () => player.playOrPause(),
+          onPressed: isNotPlaying
+              ? null
+              : () {
+                  player.playOrPause();
+                  HapticFeedback.mediumImpact();
+                },
           icon: Icon(playbackStatus.value != MusicPlayerPlaybackStatus.playing
               ? Icons.play_arrow_rounded
               : Icons.pause_rounded),
         ),
         IconButton(
-          onPressed: isNotPlaying ? null : () => player.skipToNext(),
+          onPressed: isNotPlaying
+              ? null
+              : () {
+                  player.skipToNext();
+                  HapticFeedback.mediumImpact();
+                },
           icon: const Icon(Icons.fast_forward_rounded),
         ),
       ]),
