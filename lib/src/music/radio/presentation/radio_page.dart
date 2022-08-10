@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
+import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/presentation/widgets/app_navbar.dart';
@@ -114,7 +115,10 @@ class _RadioPageState extends ConsumerState<RadioPage> {
                 ),
                 SliverPadding(
                   padding: const EdgeInsetsDirectional.only(
-                      start: 20, end: 20, bottom: 80),
+                    start: PADDING_M,
+                    end: PADDING_M,
+                    bottom: 80,
+                  ),
                   sliver: SliverGrid(
                     delegate: SliverChildBuilderDelegate(
                       (context, index) => GenrePillWidget(genre: genres[index]),

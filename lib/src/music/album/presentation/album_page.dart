@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
+import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/music/core/domain/album.dart';
 import 'package:misica/src/music/album/shared/providers.dart';
 import 'package:misica/src/music/core/presentation/widgets/hook_scroll_view.dart';
@@ -72,9 +73,9 @@ class _AlbumPageState extends ConsumerState<AlbumPage> {
             ),
             SliverPadding(
               padding: const EdgeInsetsDirectional.only(
-                top: 15,
-                start: 20,
-                end: 20,
+                top: PADDING_M,
+                start: PADDING_M,
+                end: PADDING_M,
               ),
               sliver: SliverToBoxAdapter(
                 child: AlbumHeaderView(album: album),
@@ -82,9 +83,9 @@ class _AlbumPageState extends ConsumerState<AlbumPage> {
             ),
             SliverPadding(
               padding: const EdgeInsetsDirectional.only(
-                top: 20,
-                start: 20,
-                end: 20,
+                top: PADDING_M,
+                start: PADDING_M,
+                end: PADDING_M,
               ),
               sliver: TracksList(
                 tracks: album.tracks,
@@ -98,8 +99,12 @@ class _AlbumPageState extends ConsumerState<AlbumPage> {
               ),
             ),
             SliverPadding(
-              padding: const EdgeInsetsDirectional.only(
-                  top: 10, start: 20, end: 20, bottom: 10),
+              padding: const EdgeInsetsDirectional.fromSTEB(
+                PADDING_M,
+                PADDING_S,
+                PADDING_M,
+                PADDING_S,
+              ),
               sliver: SliverToBoxAdapter(
                   child: AlbumFooter(
                 album: album,

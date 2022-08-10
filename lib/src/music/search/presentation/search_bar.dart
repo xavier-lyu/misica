@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:material_floating_search_bar/material_floating_search_bar.dart';
 import 'package:misica/src/core/shared/color_extensions.dart';
+import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/presentation/widgets/artwork_widget.dart';
@@ -65,7 +66,7 @@ class _SearchBarState extends ConsumerState<SearchBar> {
           style: context.ttoc.titleMedium,
         ),
         hint: widget.hint,
-        scrollPadding: const EdgeInsets.only(top: 15, bottom: 75),
+        scrollPadding: const EdgeInsets.only(top: PADDING_M, bottom: 75),
         automaticallyImplyBackButton: false,
         debounceDelay: const Duration(milliseconds: 500),
         backdropColor: context.toc.colorScheme.surface.darken(),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/music/charts/domain/charts.dart';
 import 'package:misica/src/music/core/presentation/widgets/resource_cards_list.dart';
 import 'package:misica/src/music/core/presentation/widgets/resource_tile.dart';
@@ -16,7 +17,7 @@ class ChartWidget extends ConsumerWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsetsDirectional.only(start: 20),
+          padding: const EdgeInsetsDirectional.only(start: PADDING_M),
           child: Text(
             chart.name,
             style: const TextStyle(

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
+import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/charts/domain/charts.dart';
@@ -68,7 +69,7 @@ class _HomePageState extends ConsumerState<HomePage> {
 
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(bottom: 66.0),
+        padding: const EdgeInsets.only(bottom: NOW_PLAYING_BAR_HEIGHT),
         child: RefreshIndicator(
           onRefresh: _handleRefreshing,
           edgeOffset: 140,
@@ -99,12 +100,12 @@ class _HomePageState extends ConsumerState<HomePage> {
               ),
               const SliverPadding(
                 padding: EdgeInsetsDirectional.only(
-                  top: 15,
+                  top: PADDING_M,
                 ),
                 sliver: RecommendationsList(),
               ),
               const SliverPadding(
-                padding: EdgeInsetsDirectional.only(top: 15),
+                padding: EdgeInsetsDirectional.only(top: PADDING_M),
                 sliver: ChartsList(),
               ),
             ],

@@ -25,18 +25,15 @@ class ResourceCard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return InkWell(
       onTap: () {
-        resource.mapOrNull(
-          (value) => null,
-          album: (album) {
-            context.router.push(AlbumRoute(id: album.id));
-          },
-          playlist: (playlist) {
-            context.router.push(PlaylistRoute(id: playlist.id));
-          },
-          station: (station) {
-            ref.read(musicPlayerProvider).playSingle(station);
-          },
-        );
+        resource.mapOrNull((value) => null, album: (album) {
+          context.router.push(AlbumRoute(id: album.id));
+        }, playlist: (playlist) {
+          context.router.push(PlaylistRoute(id: playlist.id));
+        }, station: (station) {
+          ref.read(musicPlayerProvider).playSingle(station);
+        }, musicVideo: (mv) {
+          ref.read(musicPlayerProvider).playSingle(mv);
+        });
       },
       child: AspectRatio(
         aspectRatio: aspectRatio,

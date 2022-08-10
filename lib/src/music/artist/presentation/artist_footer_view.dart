@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
+import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/presentation/widgets/expandable_text.dart';
 
@@ -14,7 +15,7 @@ class ArtistFooterView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(PADDING_M),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

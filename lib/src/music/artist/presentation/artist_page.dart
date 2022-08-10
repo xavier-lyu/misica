@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
+import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/music/artist/domain/artist.dart';
 import 'package:misica/src/music/artist/shared/providers.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
@@ -141,8 +142,11 @@ class ArtistExpandedTitle extends StatelessWidget {
                 Colors.black.withOpacity(0),
               ]),
         ),
-        padding:
-            const EdgeInsetsDirectional.only(start: 20, end: 20, bottom: 2),
+        padding: const EdgeInsetsDirectional.only(
+          start: PADDING_M,
+          end: PADDING_M,
+          bottom: 2,
+        ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

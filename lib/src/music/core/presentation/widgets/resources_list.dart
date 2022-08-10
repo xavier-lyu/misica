@@ -18,7 +18,7 @@ class ResourcesList extends StatelessWidget {
     required this.resources,
     required this.itemBuilder,
     this.itemsPerPage = 3,
-    this.pagePadding = 20.0,
+    this.pagePadding = 15.0,
     this.itemSpacing = 10.0,
     this.itemHeight = 60.0,
   }) : super(key: key);

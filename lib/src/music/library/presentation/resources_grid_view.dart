@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
+import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/presentation/widgets/resource_card.dart';
 
@@ -17,9 +18,9 @@ class ResourcesGridView extends StatelessWidget {
 
     return GridView.builder(
       padding: const EdgeInsetsDirectional.only(
-        start: 20,
-        end: 20,
-        top: 10,
+        start: PADDING_M,
+        end: PADDING_M,
+        top: PADDING_S,
       ),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,

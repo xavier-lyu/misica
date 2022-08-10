@@ -22,7 +22,7 @@ class ResourceCardsList extends StatelessWidget {
     this.mainAxisCount = 1,
     this.crossAxisCount = 1,
     this.scrollDirection = Axis.horizontal,
-    this.containerPadding = 20.0,
+    this.containerPadding = 16.0,
     this.itemSpacing = 10.0,
     this.itemHeightOffset = 0.0,
     this.artworkAspectRatio = 1.0,

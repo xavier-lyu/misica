@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/domain/track.dart';
@@ -47,8 +48,9 @@ class NowPlayingItemWidget extends HookConsumerWidget {
     final player = ref.watch(musicPlayerProvider);
 
     return Container(
-      height: 58,
-      padding: const EdgeInsetsDirectional.fromSTEB(20, 5, 15, 5),
+      height: NOW_PLAYING_BAR_HEIGHT,
+      padding: const EdgeInsetsDirectional.fromSTEB(
+          PADDING_M, PADDING_XS, PADDING_M, PADDING_XS),
       decoration: BoxDecoration(
         border: Border.symmetric(
           horizontal: Divider.createBorderSide(context),

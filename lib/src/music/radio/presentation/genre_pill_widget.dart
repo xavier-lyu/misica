@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
+import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 
@@ -24,7 +25,8 @@ class GenrePillWidget extends StatelessWidget {
           color: context.toc.colorScheme.surface,
           borderRadius: BorderRadius.circular(5),
         ),
-        padding: const EdgeInsetsDirectional.only(start: 10, end: 10),
+        padding:
+            const EdgeInsetsDirectional.only(start: PADDING_S, end: PADDING_S),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

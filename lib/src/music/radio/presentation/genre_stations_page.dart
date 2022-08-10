@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/music/core/presentation/widgets/divider_widget.dart';
 import 'package:misica/src/music/core/presentation/widgets/loader.dart';
 import 'package:misica/src/music/core/presentation/widgets/retry_widget.dart';
@@ -44,7 +45,7 @@ class _GenreStationsPageState extends ConsumerState<GenreStationsPage> {
       ),
       body: state.when(
           data: (stations) => ListView.builder(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(PADDING_M),
                 itemBuilder: (context, index) {
                   if (index.isOdd) {
                     return const DividerWidget(

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class DividerWidget extends StatelessWidget {
   const DividerWidget({
     Key? key,
-    this.indent = 20,
-    this.endIndent = 20,
+    this.indent = 15,
+    this.endIndent = 15,
     this.color,
     this.height = 10,
   }) : super(key: key);

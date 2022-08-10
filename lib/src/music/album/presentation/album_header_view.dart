@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
+import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/album.dart';
 import 'package:misica/src/music/core/presentation/widgets/artwork_widget.dart';
@@ -53,7 +54,7 @@ class AlbumHeaderView extends StatelessWidget {
           ),
         if (album.description != null)
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10),
+            padding: const EdgeInsets.symmetric(vertical: PADDING_S),
             child: ExpandableText(album.description!),
           ),
         Row(

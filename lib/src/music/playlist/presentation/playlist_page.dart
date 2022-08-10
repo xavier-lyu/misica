@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
+import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/music/core/presentation/widgets/hook_scroll_view.dart';
 import 'package:misica/src/music/core/presentation/widgets/loader.dart';
 import 'package:misica/src/music/core/presentation/widgets/resource_context_menu.dart';
@@ -70,9 +71,9 @@ class _PlaylistPageState extends ConsumerState<PlaylistPage> {
             ),
             SliverPadding(
               padding: const EdgeInsetsDirectional.only(
-                top: 15,
-                start: 20,
-                end: 20,
+                top: PADDING_M,
+                start: PADDING_M,
+                end: PADDING_M,
               ),
               sliver: SliverToBoxAdapter(
                 child: PlaylistHeaderView(playlist: playlist),
@@ -80,9 +81,9 @@ class _PlaylistPageState extends ConsumerState<PlaylistPage> {
             ),
             SliverPadding(
               padding: const EdgeInsetsDirectional.only(
-                top: 20,
-                start: 20,
-                end: 20,
+                top: PADDING_M,
+                start: PADDING_M,
+                end: PADDING_M,
                 bottom: 44,
               ),
               sliver: tracksState.when(
@@ -101,7 +102,7 @@ class _PlaylistPageState extends ConsumerState<PlaylistPage> {
                           .playTracks(tracks: tracks, startingAt: index),
                     ),
                     footerBuilder: (_) => Padding(
-                      padding: const EdgeInsetsDirectional.only(top: 15),
+                      padding: const EdgeInsetsDirectional.only(top: PADDING_M),
                       child: PlaylistFooterView(
                         songsCount: tracks.length,
                         duration: durationOfSongs(tracks),

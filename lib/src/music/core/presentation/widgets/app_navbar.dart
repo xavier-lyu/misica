@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:misica/src/core/shared/dimensions.dart';
 
 class AppNavbar extends StatelessWidget {
   final bool? centerTitle;
@@ -20,7 +21,8 @@ class AppNavbar extends StatelessWidget {
       expandedHeight: expandedHeight,
       pinned: true,
       flexibleSpace: FlexibleSpaceBar(
-        titlePadding: const EdgeInsetsDirectional.only(start: 20, bottom: 16),
+        titlePadding: const EdgeInsetsDirectional.only(
+            start: PADDING_L, bottom: PADDING_M),
         title: title,
         centerTitle: centerTitle,
       ),

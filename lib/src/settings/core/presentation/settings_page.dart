@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/settings/cache/presentation/clear_cache_tile.dart';
 
@@ -17,7 +18,7 @@ class SettingsPage extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(PADDING_M),
         child: ListView.separated(
           itemCount: 3,
           itemBuilder: (context, index) {

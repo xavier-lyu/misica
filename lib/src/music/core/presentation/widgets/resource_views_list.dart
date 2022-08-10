@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
+import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/music/core/domain/album.dart';
 import 'package:misica/src/music/core/domain/resource_view.dart';
 import 'package:misica/src/music/core/presentation/widgets/artwork_widget.dart';
@@ -33,7 +34,7 @@ class ResourceViewsList extends StatelessWidget {
               views.entries.elementAt(index ~/ 2);
           return Container(
             padding: EdgeInsets.symmetric(
-              vertical: (index.isOdd ? 0 : 10),
+              vertical: (index.isOdd ? 0 : PADDING_S),
             ),
             color: context.toc.colorScheme.surface,
             child: (index.isOdd)
@@ -69,7 +70,7 @@ class ResourceViewWidget extends ConsumerWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsetsDirectional.only(start: 20),
+          padding: const EdgeInsetsDirectional.only(start: PADDING_M),
           child: Text(
             resourceView.title,
             style: const TextStyle(
@@ -130,7 +131,7 @@ class ResourceViewWidget extends ConsumerWidget {
   Widget _buildLatestRelease(BuildContext context) {
     final latest = resourceView.data.first as Album;
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: PADDING_M),
       child: Row(
         children: [
           ArtworkWidget(
@@ -140,7 +141,8 @@ class ResourceViewWidget extends ConsumerWidget {
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsetsDirectional.only(start: 10, end: 10),
+              padding: const EdgeInsetsDirectional.only(
+                  start: PADDING_S, end: PADDING_S),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

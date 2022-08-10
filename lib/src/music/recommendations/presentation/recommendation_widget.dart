@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
+import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/music/core/presentation/widgets/resource_cards_list.dart';
 import 'package:misica/src/music/recommendations/domain/recommendation.dart';
 
@@ -14,7 +15,7 @@ class RecommendationWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsetsDirectional.only(start: 20),
+          padding: const EdgeInsetsDirectional.only(start: PADDING_M),
           child: Text(
             recommendation.title,
             style: context.ttoc.headlineSmall,
