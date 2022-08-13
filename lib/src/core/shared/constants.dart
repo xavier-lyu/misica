@@ -1,4 +1,5 @@
-const musicApiBaseUrl = 'https://api.music.apple.com/v1/';
+abstract class Constants {
+  static const musicApiBaseUrl = 'https://api.music.apple.com/v1/';
 
-const developerTokenFromEnvironment =
-    String.fromEnvironment("AM_DEVELOPER_TOKEN");
+  static const developerToken = String.fromEnvironment("AM_DEVELOPER_TOKEN");
+}

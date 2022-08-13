@@ -54,8 +54,7 @@ class MusicAuthenticator {
     final storedCredentials = await _credentialStorage.read();
     if (storedCredentials == null) {
       await _credentialStorage.save(Credentials(
-          developerToken: developerTokenFromEnvironment,
-          userToken: musicUserToken));
+          developerToken: Constants.developerToken, userToken: musicUserToken));
     } else {
       await _credentialStorage
           .save(storedCredentials.copyWith(userToken: musicUserToken));

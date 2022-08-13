@@ -7,7 +7,7 @@ import 'search_suggestions_dto.dart';
 
 part 'search_service.g.dart';
 
-@RestApi(baseUrl: musicApiBaseUrl)
+@RestApi(baseUrl: Constants.musicApiBaseUrl)
 abstract class SearchService {
   factory SearchService(Dio dio, {String baseUrl}) = _SearchService;
 

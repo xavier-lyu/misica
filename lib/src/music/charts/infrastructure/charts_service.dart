@@ -5,7 +5,7 @@ import 'package:retrofit/retrofit.dart';
 
 part 'charts_service.g.dart';
 
-@RestApi(baseUrl: musicApiBaseUrl)
+@RestApi(baseUrl: Constants.musicApiBaseUrl)
 abstract class ChartsService {
   factory ChartsService(Dio dio, {String baseUrl}) = _ChartsService;
 

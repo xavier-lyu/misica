@@ -5,7 +5,7 @@ import 'package:retrofit/retrofit.dart';
 
 part 'recommendations_service.g.dart';
 
-@RestApi(baseUrl: musicApiBaseUrl)
+@RestApi(baseUrl: Constants.musicApiBaseUrl)
 abstract class RecommendationsService {
   factory RecommendationsService(Dio dio, {String baseUrl}) =
       _RecommendationsService;

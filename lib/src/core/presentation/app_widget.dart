@@ -23,7 +23,7 @@ final initializationProvider = FutureProvider<Unit>((ref) async {
   if (!Platform.isIOS) {
     debugPrint(
         "initialize() musicUserToken: ${credentials?.userToken.length ?? 0}");
-    await ref.read(musicKitProvider).initialize(developerTokenFromEnvironment,
+    await ref.read(musicKitProvider).initialize(Constants.developerToken,
         musicUserToken: credentials?.userToken);
   }
 

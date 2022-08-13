@@ -5,7 +5,7 @@ import 'package:retrofit/retrofit.dart';
 
 part 'song_service.g.dart';
 
-@RestApi(baseUrl: musicApiBaseUrl)
+@RestApi(baseUrl: Constants.musicApiBaseUrl)
 abstract class SongService {
   factory SongService(Dio dio, {String baseUrl}) = _SongService;
 

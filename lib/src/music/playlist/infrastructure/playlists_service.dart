@@ -5,7 +5,7 @@ import 'package:retrofit/retrofit.dart';
 
 part 'playlists_service.g.dart';
 
-@RestApi(baseUrl: musicApiBaseUrl)
+@RestApi(baseUrl: Constants.musicApiBaseUrl)
 abstract class PlaylistsService {
   factory PlaylistsService(Dio dio, {String baseUrl}) = _PlaylistsService;
 
