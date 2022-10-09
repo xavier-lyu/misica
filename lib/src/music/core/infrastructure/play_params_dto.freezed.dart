@@ -315,7 +315,9 @@ class _$_PlayParamsDTO extends _PlayParamsDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlayParamsDTOToJson(this);
+    return _$$_PlayParamsDTOToJson(
+      this,
+    );
   }
 }
 
@@ -338,27 +340,27 @@ abstract class _PlayParamsDTO extends PlayParamsDTO {
       _$_PlayParamsDTO.fromJson;
 
   @override
-  String? get catalogId => throw _privateConstructorUsedError;
+  String? get catalogId;
   @override
-  String? get globalId => throw _privateConstructorUsedError;
+  String? get globalId;
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  bool? get isLibrary => throw _privateConstructorUsedError;
+  bool? get isLibrary;
   @override
-  String get kind => throw _privateConstructorUsedError;
+  String get kind;
   @override
-  bool? get reporting => throw _privateConstructorUsedError;
+  bool? get reporting;
   @override
-  String? get format => throw _privateConstructorUsedError;
+  String? get format;
   @override
-  String? get stationHash => throw _privateConstructorUsedError;
+  String? get stationHash;
   @override
-  int? get mediaType => throw _privateConstructorUsedError;
+  int? get mediaType;
   @override
-  int? get streamingKind => throw _privateConstructorUsedError;
+  int? get streamingKind;
   @override
-  bool? get hasDrm => throw _privateConstructorUsedError;
+  bool? get hasDrm;
   @override
   @JsonKey(ignore: true)
   _$$_PlayParamsDTOCopyWith<_$_PlayParamsDTO> get copyWith =>

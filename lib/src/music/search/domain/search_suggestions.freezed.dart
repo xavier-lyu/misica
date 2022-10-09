@@ -258,9 +258,9 @@ abstract class SearchSuggestionTerms extends SearchSuggestion {
   const SearchSuggestionTerms._() : super._();
 
   @override
-  String get kind => throw _privateConstructorUsedError;
-  String get searchTerm => throw _privateConstructorUsedError;
-  String? get displayTerm => throw _privateConstructorUsedError;
+  String get kind;
+  String get searchTerm;
+  String? get displayTerm;
   @override
   @JsonKey(ignore: true)
   _$$SearchSuggestionTermsCopyWith<_$SearchSuggestionTerms> get copyWith =>
@@ -430,8 +430,8 @@ abstract class SearchSuggestionTopResults extends SearchSuggestion {
   const SearchSuggestionTopResults._() : super._();
 
   @override
-  String get kind => throw _privateConstructorUsedError;
-  Resource get content => throw _privateConstructorUsedError;
+  String get kind;
+  Resource get content;
   @override
   @JsonKey(ignore: true)
   _$$SearchSuggestionTopResultsCopyWith<_$SearchSuggestionTopResults>

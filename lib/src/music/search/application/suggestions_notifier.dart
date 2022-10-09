@@ -5,18 +5,18 @@ import 'package:misica/src/music/search/infrastructure/search_repository.dart';
 
 class SuggestionsNotifier
     extends StateNotifier<AsyncValue<List<SearchSuggestion>>> {
-  SuggestionsNotifier(this._repository, this._read)
+  SuggestionsNotifier(this._repository, this._ref)
       : super(const AsyncLoading());
 
   final SearchRepository _repository;
-  final Reader _read;
+  final Ref _ref;
 
   void fetchSuggestions(String term) async {
-    final storefront = await _read(storefrontProvider.future);
+    final storefront = await _ref.read(storefrontProvider.future);
     final failureOrSuggestions =
         await _repository.searchSuggestions(storefront, term);
     state = failureOrSuggestions.fold(
-      (l) => AsyncError(l),
+      (l) => AsyncError(l, StackTrace.current),
       (r) => AsyncData(r),
     );
   }

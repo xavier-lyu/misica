@@ -171,7 +171,9 @@ class _$_SearchResultsDTO extends _SearchResultsDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SearchResultsDTOToJson(this);
+    return _$$_SearchResultsDTOToJson(
+      this,
+    );
   }
 }
 
@@ -185,10 +187,9 @@ abstract class _SearchResultsDTO extends SearchResultsDTO {
       _$_SearchResultsDTO.fromJson;
 
   @override
-  Map<String, SearchResultDTO>? get results =>
-      throw _privateConstructorUsedError;
+  Map<String, SearchResultDTO>? get results;
   @override
-  ResourceMetaDTO? get meta => throw _privateConstructorUsedError;
+  ResourceMetaDTO? get meta;
   @override
   @JsonKey(ignore: true)
   _$$_SearchResultsDTOCopyWith<_$_SearchResultsDTO> get copyWith =>
@@ -394,7 +395,9 @@ class _$_SearchResultDTO extends _SearchResultDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SearchResultDTOToJson(this);
+    return _$$_SearchResultDTOToJson(
+      this,
+    );
   }
 }
 
@@ -411,16 +414,16 @@ abstract class _SearchResultDTO extends SearchResultDTO {
       _$_SearchResultDTO.fromJson;
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get groupId => throw _privateConstructorUsedError;
+  String get groupId;
   @override
   @ResourceDTOConverter()
-  List<ResourceDTO> get data => throw _privateConstructorUsedError;
+  List<ResourceDTO> get data;
   @override
-  String? get href => throw _privateConstructorUsedError;
+  String? get href;
   @override
-  String? get next => throw _privateConstructorUsedError;
+  String? get next;
   @override
   @JsonKey(ignore: true)
   _$$_SearchResultDTOCopyWith<_$_SearchResultDTO> get copyWith =>

@@ -17,14 +17,14 @@ class SearchResultsState with _$SearchResultsState {
 
 class SearchNotifier extends StateNotifier<SearchResultsState> {
   final SearchRepository _repository;
-  final Reader _read;
+  final Ref _ref;
 
-  SearchNotifier(this._repository, this._read)
+  SearchNotifier(this._repository, this._ref)
       : super(const SearchResultsState.initial());
 
   void search(String term) async {
     state = const SearchResultsState.loading();
-    final storefront = await _read(storefrontProvider.future);
+    final storefront = await _ref.read(storefrontProvider.future);
     final failureOrResults = await _repository.search(storefront, term);
     state = failureOrResults.fold(
       (l) => SearchResultsState.error(l),

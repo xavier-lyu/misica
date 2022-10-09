@@ -191,7 +191,9 @@ class _$_Artwork extends _Artwork {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ArtworkToJson(this);
+    return _$$_ArtworkToJson(
+      this,
+    );
   }
 }
 
@@ -207,15 +209,15 @@ abstract class _Artwork extends Artwork {
   factory _Artwork.fromJson(Map<String, dynamic> json) = _$_Artwork.fromJson;
 
   @override
-  String? get bgColor => throw _privateConstructorUsedError;
+  String? get bgColor;
   @override
-  int get height => throw _privateConstructorUsedError;
+  int get height;
   @override
-  String get url => throw _privateConstructorUsedError;
+  String get url;
   @override
-  int get width => throw _privateConstructorUsedError;
+  int get width;
   @override
-  String? get textColor => throw _privateConstructorUsedError;
+  String? get textColor;
   @override
   @JsonKey(ignore: true)
   _$$_ArtworkCopyWith<_$_Artwork> get copyWith =>

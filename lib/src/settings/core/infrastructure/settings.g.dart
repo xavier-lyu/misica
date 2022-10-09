@@ -12,7 +12,7 @@ _$_Settings _$$_SettingsFromJson(Map json) => _$_Settings(
 
 Map<String, dynamic> _$$_SettingsToJson(_$_Settings instance) =>
     <String, dynamic>{
-      'themeMode': _$ThemeModeEnumMap[instance.themeMode],
+      'themeMode': _$ThemeModeEnumMap[instance.themeMode]!,
     };
 
 const _$ThemeModeEnumMap = {

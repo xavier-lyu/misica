@@ -11,7 +11,7 @@ class RecommendationsNotifier
   void fetchRecommendations() async {
     final failureOrList = await _repository.fetchRecommendations();
     state = failureOrList.fold(
-      (error) => AsyncError(error),
+      (error) => AsyncError(error, StackTrace.current),
       (value) => AsyncData(value),
     );
   }

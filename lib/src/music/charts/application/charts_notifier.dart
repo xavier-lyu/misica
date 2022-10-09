@@ -5,16 +5,16 @@ import 'package:misica/src/music/core/shared/providers.dart';
 
 class ChartsNotifier extends StateNotifier<AsyncValue<Charts>> {
   final ChartsRepository _repository;
-  final Reader _read;
+  final Ref _ref;
 
-  ChartsNotifier(this._repository, this._read)
+  ChartsNotifier(this._repository, this._ref)
       : super(const AsyncValue.loading());
 
   void fetchTopCharts() async {
-    final storefront = await _read(storefrontProvider.future);
+    final storefront = await _ref.read(storefrontProvider.future);
     final failureOrCharts = await _repository.fetchTopCharts(storefront);
     state = failureOrCharts.fold(
-      (l) => AsyncError(l),
+      (l) => AsyncError(l, StackTrace.current),
       (r) => AsyncData(r),
     );
   }

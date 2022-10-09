@@ -5,15 +5,15 @@ import 'package:misica/src/music/core/shared/providers.dart';
 
 class AlbumsNotfier extends StateNotifier<AsyncValue<Album>> {
   final AlbumsRepository _repository;
-  final Reader _read;
+  final Ref _ref;
 
-  AlbumsNotfier(this._repository, this._read) : super(const AsyncLoading());
+  AlbumsNotfier(this._repository, this._ref) : super(const AsyncLoading());
 
   void fetchCatalogAlbum(String id) async {
-    final storefront = await _read(storefrontProvider.future);
+    final storefront = await _ref.read(storefrontProvider.future);
     final failureOrAlbum = await _repository.fetchCatalogAlbum(storefront, id);
     state = failureOrAlbum.fold(
-      (error) => AsyncError(error),
+      (error) => AsyncError(error, StackTrace.current),
       (album) => AsyncData(album),
     );
   }

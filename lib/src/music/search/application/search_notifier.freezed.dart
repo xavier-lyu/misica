@@ -466,7 +466,7 @@ abstract class _Data extends SearchResultsState {
   const factory _Data(final SearchResults value) = _$_Data;
   const _Data._() : super._();
 
-  SearchResults get value => throw _privateConstructorUsedError;
+  SearchResults get value;
   @JsonKey(ignore: true)
   _$$_DataCopyWith<_$_Data> get copyWith => throw _privateConstructorUsedError;
 }
@@ -610,7 +610,7 @@ abstract class _Error extends SearchResultsState {
   const factory _Error(final Object error) = _$_Error;
   const _Error._() : super._();
 
-  Object get error => throw _privateConstructorUsedError;
+  Object get error;
   @JsonKey(ignore: true)
   _$$_ErrorCopyWith<_$_Error> get copyWith =>
       throw _privateConstructorUsedError;

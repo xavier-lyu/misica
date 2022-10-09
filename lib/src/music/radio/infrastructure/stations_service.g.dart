@@ -6,10 +6,13 @@ part of 'stations_service.dart';
 // RetrofitGenerator
 // **************************************************************************
 
-// ignore_for_file: unnecessary_brace_in_string_interps
+// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers
 
 class _StationsService implements StationsService {
-  _StationsService(this._dio, {this.baseUrl}) {
+  _StationsService(
+    this._dio, {
+    this.baseUrl,
+  }) {
     baseUrl ??= 'https://api.music.apple.com/v1/';
   }
 
@@ -23,12 +26,19 @@ class _StationsService implements StationsService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<MusicResponse>(
-            Options(method: 'GET', headers: _headers, extra: _extra)
-                .compose(_dio.options, '/me/recent/radio-stations?art[url]=f',
-                    queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<MusicResponse>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              '/me/recent/radio-stations?art[url]=f',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = MusicResponse.fromJson(_result.data!);
     return value;
   }
@@ -39,29 +49,45 @@ class _StationsService implements StationsService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<MusicResponse>(
-            Options(method: 'GET', headers: _headers, extra: _extra)
-                .compose(_dio.options, '/catalog/${storefront}/station-genres',
-                    queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<MusicResponse>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              '/catalog/${storefront}/station-genres',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = MusicResponse.fromJson(_result.data!);
     return value;
   }
 
   @override
-  Future<MusicResponse> fetchGenreStations(storefront, id) async {
+  Future<MusicResponse> fetchGenreStations(
+    storefront,
+    id,
+  ) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<MusicResponse>(
-            Options(method: 'GET', headers: _headers, extra: _extra)
-                .compose(_dio.options,
-                    '/catalog/${storefront}/station-genres/${id}/stations',
-                    queryParameters: queryParameters, data: _data)
-                .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final _result = await _dio
+        .fetch<Map<String, dynamic>>(_setStreamType<MusicResponse>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              '/catalog/${storefront}/station-genres/${id}/stations',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
     final value = MusicResponse.fromJson(_result.data!);
     return value;
   }

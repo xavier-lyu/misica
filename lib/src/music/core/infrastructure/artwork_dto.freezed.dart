@@ -261,7 +261,9 @@ class _$_ArtworkDTO extends _ArtworkDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ArtworkDTOToJson(this);
+    return _$$_ArtworkDTOToJson(
+      this,
+    );
   }
 }
 
@@ -281,21 +283,21 @@ abstract class _ArtworkDTO extends ArtworkDTO {
       _$_ArtworkDTO.fromJson;
 
   @override
-  String? get bgColor => throw _privateConstructorUsedError;
+  String? get bgColor;
   @override
-  int get height => throw _privateConstructorUsedError;
+  int get height;
   @override
-  String? get textColor1 => throw _privateConstructorUsedError;
+  String? get textColor1;
   @override
-  String? get textColor2 => throw _privateConstructorUsedError;
+  String? get textColor2;
   @override
-  String? get textColor3 => throw _privateConstructorUsedError;
+  String? get textColor3;
   @override
-  String? get textColor4 => throw _privateConstructorUsedError;
+  String? get textColor4;
   @override
-  String get url => throw _privateConstructorUsedError;
+  String get url;
   @override
-  int get width => throw _privateConstructorUsedError;
+  int get width;
   @override
   @JsonKey(ignore: true)
   _$$_ArtworkDTOCopyWith<_$_ArtworkDTO> get copyWith =>

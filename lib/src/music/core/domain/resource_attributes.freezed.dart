@@ -293,7 +293,9 @@ class _$_ResourceAttributes extends _ResourceAttributes {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResourceAttributesToJson(this);
+    return _$$_ResourceAttributesToJson(
+      this,
+    );
   }
 }
 
@@ -313,21 +315,21 @@ abstract class _ResourceAttributes extends ResourceAttributes {
       _$_ResourceAttributes.fromJson;
 
   @override
-  String? get albumName => throw _privateConstructorUsedError;
+  String? get albumName;
   @override
-  String? get artistName => throw _privateConstructorUsedError;
+  String? get artistName;
   @override
-  String? get artistUrl => throw _privateConstructorUsedError;
+  String? get artistUrl;
   @override
-  String? get curatorName => throw _privateConstructorUsedError;
+  String? get curatorName;
   @override
-  Artwork? get artwork => throw _privateConstructorUsedError;
+  Artwork? get artwork;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  PlayParams? get playParams => throw _privateConstructorUsedError;
+  PlayParams? get playParams;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
   @JsonKey(ignore: true)
   _$$_ResourceAttributesCopyWith<_$_ResourceAttributes> get copyWith =>
@@ -683,7 +685,9 @@ class _$_AlbumAttributes extends _AlbumAttributes {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AlbumAttributesToJson(this);
+    return _$$_AlbumAttributesToJson(
+      this,
+    );
   }
 }
 
@@ -706,27 +710,27 @@ abstract class _AlbumAttributes extends AlbumAttributes {
       _$_AlbumAttributes.fromJson;
 
   @override
-  String get artistName => throw _privateConstructorUsedError;
+  String get artistName;
   @override
-  String? get artistUrl => throw _privateConstructorUsedError;
+  String? get artistUrl;
   @override
-  Artwork? get artwork => throw _privateConstructorUsedError;
+  Artwork? get artwork;
   @override
-  String? get contentRating => throw _privateConstructorUsedError;
+  String? get contentRating;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  PlayParams? get playParams => throw _privateConstructorUsedError;
+  PlayParams? get playParams;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
-  DateTime? get releaseDate => throw _privateConstructorUsedError;
+  DateTime? get releaseDate;
   @override
-  String? get recordLabel => throw _privateConstructorUsedError;
+  String? get recordLabel;
   @override
-  String? get copyright => throw _privateConstructorUsedError;
+  String? get copyright;
   @override
-  EditorialNotes? get editorialNotes => throw _privateConstructorUsedError;
+  EditorialNotes? get editorialNotes;
   @override
   @JsonKey(ignore: true)
   _$$_AlbumAttributesCopyWith<_$_AlbumAttributes> get copyWith =>
@@ -937,7 +941,9 @@ class _$_ArtistAttributes extends _ArtistAttributes {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ArtistAttributesToJson(this);
+    return _$$_ArtistAttributesToJson(
+      this,
+    );
   }
 }
 
@@ -953,13 +959,13 @@ abstract class _ArtistAttributes extends ArtistAttributes {
       _$_ArtistAttributes.fromJson;
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
-  Artwork? get artwork => throw _privateConstructorUsedError;
+  Artwork? get artwork;
   @override
-  EditorialNotes? get editorialNotes => throw _privateConstructorUsedError;
+  EditorialNotes? get editorialNotes;
   @override
   @JsonKey(ignore: true)
   _$$_ArtistAttributesCopyWith<_$_ArtistAttributes> get copyWith =>
@@ -1292,7 +1298,9 @@ class _$_MusicVideoAttributes extends _MusicVideoAttributes {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MusicVideoAttributesToJson(this);
+    return _$$_MusicVideoAttributesToJson(
+      this,
+    );
   }
 }
 
@@ -1314,26 +1322,25 @@ abstract class _MusicVideoAttributes extends MusicVideoAttributes {
       _$_MusicVideoAttributes.fromJson;
 
   @override
-  String get artistName => throw _privateConstructorUsedError;
+  String get artistName;
   @override
-  String? get artistUrl => throw _privateConstructorUsedError;
+  String? get artistUrl;
   @override
-  Artwork? get artwork => throw _privateConstructorUsedError;
+  Artwork? get artwork;
   @override
-  int get durationInMillis => throw _privateConstructorUsedError;
+  int get durationInMillis;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  PlayParams? get playParams => throw _privateConstructorUsedError;
+  PlayParams? get playParams;
   @override
-  List<Map<String, dynamic>>? get previews =>
-      throw _privateConstructorUsedError;
+  List<Map<String, dynamic>>? get previews;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
-  int? get trackNumber => throw _privateConstructorUsedError;
+  int? get trackNumber;
   @override
-  String? get contentRating => throw _privateConstructorUsedError;
+  String? get contentRating;
   @override
   @JsonKey(ignore: true)
   _$$_MusicVideoAttributesCopyWith<_$_MusicVideoAttributes> get copyWith =>
@@ -1597,7 +1604,9 @@ class _$_PlaylistAttributes extends _PlaylistAttributes {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlaylistAttributesToJson(this);
+    return _$$_PlaylistAttributesToJson(
+      this,
+    );
   }
 }
 
@@ -1615,17 +1624,17 @@ abstract class _PlaylistAttributes extends PlaylistAttributes {
       _$_PlaylistAttributes.fromJson;
 
   @override
-  Artwork? get artwork => throw _privateConstructorUsedError;
+  Artwork? get artwork;
   @override
-  String? get curatorName => throw _privateConstructorUsedError;
+  String? get curatorName;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  PlayParams? get playParams => throw _privateConstructorUsedError;
+  PlayParams? get playParams;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
-  EditorialNotes? get editorialNotes => throw _privateConstructorUsedError;
+  EditorialNotes? get editorialNotes;
   @override
   @JsonKey(ignore: true)
   _$$_PlaylistAttributesCopyWith<_$_PlaylistAttributes> get copyWith =>
@@ -1648,7 +1657,7 @@ mixin _$SongAttributes {
   PlayParams? get playParams => throw _privateConstructorUsedError;
   List<Map<String, dynamic>>? get previews =>
       throw _privateConstructorUsedError;
-  int get trackNumber => throw _privateConstructorUsedError;
+  int? get trackNumber => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1672,7 +1681,7 @@ abstract class $SongAttributesCopyWith<$Res> {
       String name,
       PlayParams? playParams,
       List<Map<String, dynamic>>? previews,
-      int trackNumber,
+      int? trackNumber,
       String? url});
 
   $ArtworkCopyWith<$Res>? get artwork;
@@ -1742,7 +1751,7 @@ class _$SongAttributesCopyWithImpl<$Res>
       trackNumber: trackNumber == freezed
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -1790,7 +1799,7 @@ abstract class _$$_SongAttributesCopyWith<$Res>
       String name,
       PlayParams? playParams,
       List<Map<String, dynamic>>? previews,
-      int trackNumber,
+      int? trackNumber,
       String? url});
 
   @override
@@ -1864,7 +1873,7 @@ class __$$_SongAttributesCopyWithImpl<$Res>
       trackNumber: trackNumber == freezed
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -1920,7 +1929,7 @@ class _$_SongAttributes extends _SongAttributes {
   }
 
   @override
-  final int trackNumber;
+  final int? trackNumber;
   @override
   final String? url;
 
@@ -1975,7 +1984,9 @@ class _$_SongAttributes extends _SongAttributes {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SongAttributesToJson(this);
+    return _$$_SongAttributesToJson(
+      this,
+    );
   }
 }
 
@@ -1990,7 +2001,7 @@ abstract class _SongAttributes extends SongAttributes {
       required final String name,
       required final PlayParams? playParams,
       required final List<Map<String, dynamic>>? previews,
-      required final int trackNumber,
+      required final int? trackNumber,
       required final String? url}) = _$_SongAttributes;
   const _SongAttributes._() : super._();
 
@@ -1998,28 +2009,27 @@ abstract class _SongAttributes extends SongAttributes {
       _$_SongAttributes.fromJson;
 
   @override
-  String? get albumName => throw _privateConstructorUsedError;
+  String? get albumName;
   @override
-  String? get artistUrl => throw _privateConstructorUsedError;
+  String? get artistUrl;
   @override
-  String get artistName => throw _privateConstructorUsedError;
+  String get artistName;
   @override
-  Artwork? get artwork => throw _privateConstructorUsedError;
+  Artwork? get artwork;
   @override
-  String? get contentRating => throw _privateConstructorUsedError;
+  String? get contentRating;
   @override
-  int get durationInMillis => throw _privateConstructorUsedError;
+  int get durationInMillis;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  PlayParams? get playParams => throw _privateConstructorUsedError;
+  PlayParams? get playParams;
   @override
-  List<Map<String, dynamic>>? get previews =>
-      throw _privateConstructorUsedError;
+  List<Map<String, dynamic>>? get previews;
   @override
-  int get trackNumber => throw _privateConstructorUsedError;
+  int? get trackNumber;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
   @JsonKey(ignore: true)
   _$$_SongAttributesCopyWith<_$_SongAttributes> get copyWith =>
@@ -2283,7 +2293,9 @@ class _$_StationAttributes extends _StationAttributes {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StationAttributesToJson(this);
+    return _$$_StationAttributesToJson(
+      this,
+    );
   }
 }
 
@@ -2301,17 +2313,17 @@ abstract class _StationAttributes extends StationAttributes {
       _$_StationAttributes.fromJson;
 
   @override
-  Artwork? get artwork => throw _privateConstructorUsedError;
+  Artwork? get artwork;
   @override
-  PlayParams? get playParams => throw _privateConstructorUsedError;
+  PlayParams? get playParams;
   @override
-  int? get durationInMillis => throw _privateConstructorUsedError;
+  int? get durationInMillis;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
-  EditorialNotes? get editorialNotes => throw _privateConstructorUsedError;
+  EditorialNotes? get editorialNotes;
   @override
   @JsonKey(ignore: true)
   _$$_StationAttributesCopyWith<_$_StationAttributes> get copyWith =>
@@ -2482,7 +2494,9 @@ class _$_CuratorAttributes extends _CuratorAttributes {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CuratorAttributesToJson(this);
+    return _$$_CuratorAttributesToJson(
+      this,
+    );
   }
 }
 
@@ -2497,11 +2511,11 @@ abstract class _CuratorAttributes extends CuratorAttributes {
       _$_CuratorAttributes.fromJson;
 
   @override
-  Artwork? get artwork => throw _privateConstructorUsedError;
+  Artwork? get artwork;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
   @JsonKey(ignore: true)
   _$$_CuratorAttributesCopyWith<_$_CuratorAttributes> get copyWith =>
@@ -2622,7 +2636,9 @@ class _$_GenreAttributes extends _GenreAttributes {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GenreAttributesToJson(this);
+    return _$$_GenreAttributesToJson(
+      this,
+    );
   }
 }
 
@@ -2635,7 +2651,7 @@ abstract class _GenreAttributes extends GenreAttributes {
       _$_GenreAttributes.fromJson;
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
   @JsonKey(ignore: true)
   _$$_GenreAttributesCopyWith<_$_GenreAttributes> get copyWith =>

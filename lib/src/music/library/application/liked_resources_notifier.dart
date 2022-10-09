@@ -12,7 +12,8 @@ class LikedResourcesNotifier
     _repository
         .watchLikedResources()
         .listen((data) => state = AsyncValue.data(data))
-        .onError((Object error) => state = AsyncError(error));
+        .onError(
+            (Object error) => state = AsyncError(error, StackTrace.current));
   }
 
   Future<void> addLikedResource(Resource resource) =>
@@ -36,8 +37,8 @@ class LikedResourcesNotifier
   Future<void> getResources() async {
     try {
       state = AsyncData(await _repository.getResources());
-    } catch (error) {
-      state = AsyncError(error);
+    } catch (error, st) {
+      state = AsyncError(error, st);
     }
   }
 }

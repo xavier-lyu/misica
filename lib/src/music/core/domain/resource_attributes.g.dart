@@ -178,7 +178,7 @@ _$_SongAttributes _$$_SongAttributesFromJson(Map json) => _$_SongAttributes(
       previews: (json['previews'] as List<dynamic>?)
           ?.map((e) => Map<String, dynamic>.from(e as Map))
           .toList(),
-      trackNumber: json['trackNumber'] as int,
+      trackNumber: json['trackNumber'] as int?,
       url: json['url'] as String?,
     );
 

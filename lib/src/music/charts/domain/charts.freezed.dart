@@ -269,18 +269,17 @@ abstract class _Charts extends Charts {
   const _Charts._() : super._();
 
   @override
-  List<SongsChart>? get songs => throw _privateConstructorUsedError;
+  List<SongsChart>? get songs;
   @override
-  List<PlaylistsChart>? get cityCharts => throw _privateConstructorUsedError;
+  List<PlaylistsChart>? get cityCharts;
   @override
-  List<PlaylistsChart>? get dailyGlobalTopCharts =>
-      throw _privateConstructorUsedError;
+  List<PlaylistsChart>? get dailyGlobalTopCharts;
   @override
-  List<PlaylistsChart>? get playlists => throw _privateConstructorUsedError;
+  List<PlaylistsChart>? get playlists;
   @override
-  List<AlbumsChart>? get albums => throw _privateConstructorUsedError;
+  List<AlbumsChart>? get albums;
   @override
-  List<MusicVideosChart>? get musicVideos => throw _privateConstructorUsedError;
+  List<MusicVideosChart>? get musicVideos;
   @override
   @JsonKey(ignore: true)
   _$$_ChartsCopyWith<_$_Charts> get copyWith =>
@@ -562,10 +561,10 @@ abstract class AlbumsChart extends Chart {
   const AlbumsChart._() : super._();
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get chart => throw _privateConstructorUsedError;
-  List<Album> get data => throw _privateConstructorUsedError;
+  String get chart;
+  List<Album> get data;
   @override
   @JsonKey(ignore: true)
   _$$AlbumsChartCopyWith<_$AlbumsChart> get copyWith =>
@@ -750,10 +749,10 @@ abstract class PlaylistsChart extends Chart {
   const PlaylistsChart._() : super._();
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get chart => throw _privateConstructorUsedError;
-  List<Playlist> get data => throw _privateConstructorUsedError;
+  String get chart;
+  List<Playlist> get data;
   @override
   @JsonKey(ignore: true)
   _$$PlaylistsChartCopyWith<_$PlaylistsChart> get copyWith =>
@@ -936,10 +935,10 @@ abstract class SongsChart extends Chart {
   const SongsChart._() : super._();
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get chart => throw _privateConstructorUsedError;
-  List<Song> get data => throw _privateConstructorUsedError;
+  String get chart;
+  List<Song> get data;
   @override
   @JsonKey(ignore: true)
   _$$SongsChartCopyWith<_$SongsChart> get copyWith =>
@@ -1125,10 +1124,10 @@ abstract class MusicVideosChart extends Chart {
   const MusicVideosChart._() : super._();
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get chart => throw _privateConstructorUsedError;
-  List<MusicVideo> get data => throw _privateConstructorUsedError;
+  String get chart;
+  List<MusicVideo> get data;
   @override
   @JsonKey(ignore: true)
   _$$MusicVideosChartCopyWith<_$MusicVideosChart> get copyWith =>

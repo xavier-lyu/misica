@@ -206,7 +206,7 @@ abstract class _API extends MusicFailure {
   const _API._() : super._();
 
   @override
-  int? get errCode => throw _privateConstructorUsedError;
+  int? get errCode;
   @override
   @JsonKey(ignore: true)
   _$$_APICopyWith<_$_API> get copyWith => throw _privateConstructorUsedError;

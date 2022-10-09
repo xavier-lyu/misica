@@ -145,7 +145,9 @@ class _$_EditorialNotes extends _EditorialNotes {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EditorialNotesToJson(this);
+    return _$$_EditorialNotesToJson(
+      this,
+    );
   }
 }
 
@@ -159,9 +161,9 @@ abstract class _EditorialNotes extends EditorialNotes {
       _$_EditorialNotes.fromJson;
 
   @override
-  String? get short => throw _privateConstructorUsedError;
+  String? get short;
   @override
-  String? get standard => throw _privateConstructorUsedError;
+  String? get standard;
   @override
   @JsonKey(ignore: true)
   _$$_EditorialNotesCopyWith<_$_EditorialNotes> get copyWith =>

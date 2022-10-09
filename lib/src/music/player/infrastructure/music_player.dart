@@ -7,13 +7,13 @@ import 'package:misica/src/music/player/shared/providers.dart';
 import 'package:music_kit/music_kit.dart';
 
 class MusicPlayer {
-  MusicPlayer(this._musicKit, this._read);
+  MusicPlayer(this._musicKit, this._ref);
 
   final MusicKit _musicKit;
-  final Reader _read;
+  final Ref _ref;
 
   Future<void> playOrPause() async {
-    final state = await _read(playerPlaybackStatusProvider.future);
+    final state = await _ref.read(playerPlaybackStatusProvider.future);
     if (state == MusicPlayerPlaybackStatus.playing) {
       await _musicKit.pause();
     } else {

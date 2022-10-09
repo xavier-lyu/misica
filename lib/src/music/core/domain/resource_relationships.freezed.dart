@@ -221,13 +221,13 @@ abstract class _AlbumRelationships extends AlbumRelationships {
   const _AlbumRelationships._() : super._();
 
   @override
-  List<Artist>? get artists => throw _privateConstructorUsedError;
+  List<Artist>? get artists;
   @override
-  List<Track>? get tracks => throw _privateConstructorUsedError;
+  List<Track>? get tracks;
   @override // required List<RecordLabel>? recordLabels,
-  List<Album>? get library => throw _privateConstructorUsedError;
+  List<Album>? get library;
   @override
-  List<Album>? get catalog => throw _privateConstructorUsedError;
+  List<Album>? get catalog;
   @override
   @JsonKey(ignore: true)
   _$$_AlbumRelationshipsCopyWith<_$_AlbumRelationships> get copyWith =>
@@ -501,19 +501,18 @@ abstract class _ArtistRelationships extends ArtistRelationships {
   const _ArtistRelationships._() : super._();
 
   @override
-  List<Album>? get albums => throw _privateConstructorUsedError;
+  List<Album>? get albums;
   @override
-  List<Playlist>? get playlists => throw _privateConstructorUsedError;
+  List<Playlist>? get playlists;
   @override
-  List<MusicVideo>? get musicVideos => throw _privateConstructorUsedError;
+  List<MusicVideo>? get musicVideos;
   @override
-  List<Station>? get station => throw _privateConstructorUsedError;
+  List<Station>? get station;
   @override
-  List<Artist>? get catalog => throw _privateConstructorUsedError;
+  List<Artist>? get catalog;
   @override
   @ResourceDTOConverter()
-  List<Resource>? get defaultPlayableContent =>
-      throw _privateConstructorUsedError;
+  List<Resource>? get defaultPlayableContent;
   @override
   @JsonKey(ignore: true)
   _$$_ArtistRelationshipsCopyWith<_$_ArtistRelationships> get copyWith =>
@@ -725,13 +724,13 @@ abstract class _PlaylistRelationships extends PlaylistRelationships {
   const _PlaylistRelationships._() : super._();
 
   @override
-  List<Track>? get tracks => throw _privateConstructorUsedError;
+  List<Track>? get tracks;
   @override
-  List<Curator>? get curator => throw _privateConstructorUsedError;
+  List<Curator>? get curator;
   @override
-  List<Playlist>? get library => throw _privateConstructorUsedError;
+  List<Playlist>? get library;
   @override
-  List<Playlist>? get catalog => throw _privateConstructorUsedError;
+  List<Playlist>? get catalog;
   @override
   @JsonKey(ignore: true)
   _$$_PlaylistRelationshipsCopyWith<_$_PlaylistRelationships> get copyWith =>
@@ -1025,19 +1024,19 @@ abstract class _SongRelationships extends SongRelationships {
   const _SongRelationships._() : super._();
 
   @override
-  List<Album>? get albums => throw _privateConstructorUsedError;
+  List<Album>? get albums;
   @override
-  List<Artist>? get artists => throw _privateConstructorUsedError;
+  List<Artist>? get artists;
   @override
-  List<Station>? get station => throw _privateConstructorUsedError;
+  List<Station>? get station;
   @override
-  List<Artist>? get composers => throw _privateConstructorUsedError;
+  List<Artist>? get composers;
   @override
-  List<MusicVideo>? get musicVideos => throw _privateConstructorUsedError;
+  List<MusicVideo>? get musicVideos;
   @override
-  List<Song>? get library => throw _privateConstructorUsedError;
+  List<Song>? get library;
   @override
-  List<Song>? get catalog => throw _privateConstructorUsedError;
+  List<Song>? get catalog;
   @override
   @JsonKey(ignore: true)
   _$$_SongRelationshipsCopyWith<_$_SongRelationships> get copyWith =>
@@ -1277,15 +1276,15 @@ abstract class _MusicVideoRelationships extends MusicVideoRelationships {
   const _MusicVideoRelationships._() : super._();
 
   @override
-  List<Album>? get albums => throw _privateConstructorUsedError;
+  List<Album>? get albums;
   @override
-  List<Artist>? get artists => throw _privateConstructorUsedError;
+  List<Artist>? get artists;
   @override
-  List<Song>? get songs => throw _privateConstructorUsedError;
+  List<Song>? get songs;
   @override
-  List<MusicVideo>? get library => throw _privateConstructorUsedError;
+  List<MusicVideo>? get library;
   @override
-  List<MusicVideo>? get catalog => throw _privateConstructorUsedError;
+  List<MusicVideo>? get catalog;
   @override
   @JsonKey(ignore: true)
   _$$_MusicVideoRelationshipsCopyWith<_$_MusicVideoRelationships>
@@ -1412,7 +1411,7 @@ abstract class _CuratorRelationships extends CuratorRelationships {
   const _CuratorRelationships._() : super._();
 
   @override
-  List<Playlist>? get playlists => throw _privateConstructorUsedError;
+  List<Playlist>? get playlists;
   @override
   @JsonKey(ignore: true)
   _$$_CuratorRelationshipsCopyWith<_$_CuratorRelationships> get copyWith =>

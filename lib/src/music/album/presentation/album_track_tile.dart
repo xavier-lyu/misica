@@ -20,12 +20,13 @@ class AlbumTrackTile extends StatelessWidget {
       onTap: onTap,
       child: Row(
         children: [
-          SizedBox(
-              width: 20,
-              child: Text(
-                '${track.trackNumber}',
-                textAlign: TextAlign.center,
-              )),
+          if (track.trackNumber != null)
+            SizedBox(
+                width: 20,
+                child: Text(
+                  '${track.trackNumber}',
+                  textAlign: TextAlign.center,
+                )),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),

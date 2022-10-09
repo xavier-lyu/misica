@@ -155,7 +155,9 @@ class _$_RecommendationsResponse extends _RecommendationsResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RecommendationsResponseToJson(this);
+    return _$$_RecommendationsResponseToJson(
+      this,
+    );
   }
 }
 
@@ -169,9 +171,9 @@ abstract class _RecommendationsResponse extends RecommendationsResponse {
       _$_RecommendationsResponse.fromJson;
 
   @override
-  String? get next => throw _privateConstructorUsedError;
+  String? get next;
   @override
-  List<RecommendationDTO> get data => throw _privateConstructorUsedError;
+  List<RecommendationDTO> get data;
   @override
   @JsonKey(ignore: true)
   _$$_RecommendationsResponseCopyWith<_$_RecommendationsResponse>
@@ -378,7 +380,9 @@ class _$_RecommendationDTO extends _RecommendationDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RecommendationDTOToJson(this);
+    return _$$_RecommendationDTOToJson(
+      this,
+    );
   }
 }
 
@@ -394,14 +398,13 @@ abstract class _RecommendationDTO extends RecommendationDTO {
       _$_RecommendationDTO.fromJson;
 
   @override
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
-  String get type => throw _privateConstructorUsedError;
+  String get type;
   @override
-  RecommendationAttributesDTO get attributes =>
-      throw _privateConstructorUsedError;
+  RecommendationAttributesDTO get attributes;
   @override
-  RelationshipsDTO get relationships => throw _privateConstructorUsedError;
+  RelationshipsDTO get relationships;
   @override
   @JsonKey(ignore: true)
   _$$_RecommendationDTOCopyWith<_$_RecommendationDTO> get copyWith =>
@@ -575,7 +578,9 @@ class _$_RelationshipsDTO extends _RelationshipsDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RelationshipsDTOToJson(this);
+    return _$$_RelationshipsDTOToJson(
+      this,
+    );
   }
 }
 
@@ -590,10 +595,9 @@ abstract class _RelationshipsDTO extends RelationshipsDTO {
       _$_RelationshipsDTO.fromJson;
 
   @override
-  RelationshipContentsDTO? get contents => throw _privateConstructorUsedError;
+  RelationshipContentsDTO? get contents;
   @override
-  RelationshipRecommendationsDTO? get recommendations =>
-      throw _privateConstructorUsedError;
+  RelationshipRecommendationsDTO? get recommendations;
   @override
   @JsonKey(ignore: true)
   _$$_RelationshipsDTOCopyWith<_$_RelationshipsDTO> get copyWith =>
@@ -745,7 +749,9 @@ class _$_RelationshipRecommendationsDTO
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RelationshipRecommendationsDTOToJson(this);
+    return _$$_RelationshipRecommendationsDTOToJson(
+      this,
+    );
   }
 }
 
@@ -760,9 +766,9 @@ abstract class _RelationshipRecommendationsDTO
       _$_RelationshipRecommendationsDTO.fromJson;
 
   @override
-  String? get href => throw _privateConstructorUsedError;
+  String? get href;
   @override
-  List<RecommendationDTO> get data => throw _privateConstructorUsedError;
+  List<RecommendationDTO> get data;
   @override
   @JsonKey(ignore: true)
   _$$_RelationshipRecommendationsDTOCopyWith<_$_RelationshipRecommendationsDTO>
@@ -913,7 +919,9 @@ class _$_RelationshipContentsDTO extends _RelationshipContentsDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RelationshipContentsDTOToJson(this);
+    return _$$_RelationshipContentsDTOToJson(
+      this,
+    );
   }
 }
 
@@ -928,10 +936,10 @@ abstract class _RelationshipContentsDTO extends RelationshipContentsDTO {
       _$_RelationshipContentsDTO.fromJson;
 
   @override
-  String? get href => throw _privateConstructorUsedError;
+  String? get href;
   @override
   @ResourceDTOConverter()
-  List<ResourceDTO> get data => throw _privateConstructorUsedError;
+  List<ResourceDTO> get data;
   @override
   @JsonKey(ignore: true)
   _$$_RelationshipContentsDTOCopyWith<_$_RelationshipContentsDTO>
@@ -1158,7 +1166,9 @@ class _$_RecommendationAttributesDTO extends _RecommendationAttributesDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RecommendationAttributesDTOToJson(this);
+    return _$$_RecommendationAttributesDTOToJson(
+      this,
+    );
   }
 }
 
@@ -1176,15 +1186,15 @@ abstract class _RecommendationAttributesDTO
       _$_RecommendationAttributesDTO.fromJson;
 
   @override
-  bool? get isGroupRecommendation => throw _privateConstructorUsedError;
+  bool? get isGroupRecommendation;
   @override
-  String? get nextUpdateDate => throw _privateConstructorUsedError;
+  String? get nextUpdateDate;
   @override
-  List<String>? get resourceTypes => throw _privateConstructorUsedError;
+  List<String>? get resourceTypes;
   @override
-  ResourceTitleDTO get title => throw _privateConstructorUsedError;
+  ResourceTitleDTO get title;
   @override
-  String? get kind => throw _privateConstructorUsedError;
+  String? get kind;
   @override
   @JsonKey(ignore: true)
   _$$_RecommendationAttributesDTOCopyWith<_$_RecommendationAttributesDTO>
@@ -1306,7 +1316,9 @@ class _$_ResourceTitleDTO extends _ResourceTitleDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResourceTitleDTOToJson(this);
+    return _$$_ResourceTitleDTOToJson(
+      this,
+    );
   }
 }
 
@@ -1319,7 +1331,7 @@ abstract class _ResourceTitleDTO extends ResourceTitleDTO {
       _$_ResourceTitleDTO.fromJson;
 
   @override
-  String get stringForDisplay => throw _privateConstructorUsedError;
+  String get stringForDisplay;
   @override
   @JsonKey(ignore: true)
   _$$_ResourceTitleDTOCopyWith<_$_ResourceTitleDTO> get copyWith =>

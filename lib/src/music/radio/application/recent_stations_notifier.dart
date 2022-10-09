@@ -10,7 +10,7 @@ class RecentStationsNotifier extends StateNotifier<AsyncValue<List<Station>>> {
   void fetchRecentStations() async {
     final failureOrStations = await _repository.fetchRecentStations();
     state = failureOrStations.fold(
-      (l) => AsyncError(l),
+      (l) => AsyncError(l, StackTrace.current),
       (r) => AsyncData(r),
     );
   }

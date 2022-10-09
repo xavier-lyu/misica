@@ -16,6 +16,6 @@ final chartsNotifierProvider =
     StateNotifierProvider<ChartsNotifier, AsyncValue<Charts>>(
   (ref) => ChartsNotifier(
     ref.watch(chartsRepositoryProvider),
-    ref.read,
+    ref,
   ),
 );

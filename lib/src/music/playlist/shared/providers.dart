@@ -19,7 +19,7 @@ final playlistsNotifierProvider =
     StateNotifierProvider.autoDispose<PlaylistsNotifier, AsyncValue<Playlist>>(
   (ref) => PlaylistsNotifier(
     ref.watch(playlistsRepositoryProvider),
-    ref.read,
+    ref,
   ),
 );
 
@@ -27,6 +27,6 @@ final playlistTracksNotifierProvider = StateNotifierProvider.autoDispose<
     PlaylistTracksNotifier, AsyncValue<List<Track>>>(
   (ref) => PlaylistTracksNotifier(
     ref.watch(playlistsRepositoryProvider),
-    ref.read,
+    ref,
   ),
 );

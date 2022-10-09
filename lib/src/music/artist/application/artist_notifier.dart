@@ -5,17 +5,17 @@ import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/shared/providers.dart';
 
 class ArtistNotifier extends StateNotifier<AsyncValue<Artist>> {
-  ArtistNotifier(this._repository, this._read) : super(const AsyncLoading());
+  ArtistNotifier(this._repository, this._ref) : super(const AsyncLoading());
 
   final ArtistsRepository _repository;
-  final Reader _read;
+  final Ref _ref;
 
   void fetchArtist(String id) async {
-    final storefront = await _read(storefrontProvider.future);
+    final storefront = await _ref.read(storefrontProvider.future);
     final failureOrArtist = await _repository.fetchArtist(storefront, id);
 
     state = failureOrArtist.fold(
-      (l) => AsyncError(l),
+      (l) => AsyncError(l, StackTrace.current),
       (r) => AsyncData(r),
     );
 

@@ -5,16 +5,16 @@ import 'package:misica/src/music/playlist/infrastructure/playlists_repository.da
 
 class PlaylistsNotifier extends StateNotifier<AsyncValue<Playlist>> {
   final PlaylistsRepository _repository;
-  final Reader _read;
+  final Ref _ref;
 
-  PlaylistsNotifier(this._repository, this._read) : super(const AsyncLoading());
+  PlaylistsNotifier(this._repository, this._ref) : super(const AsyncLoading());
 
   void fetchCatalogPlaylist(String id) async {
-    final storefront = await _read(storefrontProvider.future);
+    final storefront = await _ref.read(storefrontProvider.future);
     final failureOrPlaylist =
         await _repository.fetchCatalogPlaylist(storefront, id);
     state = failureOrPlaylist.fold(
-      (error) => AsyncError(error),
+      (error) => AsyncError(error, StackTrace.current),
       (value) => AsyncData(value),
     );
   }

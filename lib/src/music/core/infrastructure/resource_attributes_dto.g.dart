@@ -205,7 +205,7 @@ _$_SongAttributesDTO _$$_SongAttributesDTOFromJson(Map json) =>
           .toList(),
       composerName: json['composerName'] as String?,
       contentRating: json['contentRating'] as String?,
-      discNumber: json['discNumber'] as int,
+      discNumber: json['discNumber'] as int?,
       durationInMillis: json['durationInMillis'] as int,
       genreNames: (json['genreNames'] as List<dynamic>?)
           ?.map((e) => e as String)
@@ -224,7 +224,7 @@ _$_SongAttributesDTO _$$_SongAttributesDTOFromJson(Map json) =>
           .toList(),
       releaseDate:
           const DateTimeConverter().fromJson(json['releaseDate'] as String?),
-      trackNumber: json['trackNumber'] as int,
+      trackNumber: json['trackNumber'] as int?,
       url: json['url'] as String?,
       workName: json['workName'] as String?,
     );

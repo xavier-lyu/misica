@@ -25,5 +25,5 @@ final playerPlaybackStatusProvider = FutureProvider(
 );
 
 final musicPlayerProvider = Provider(
-  (ref) => MusicPlayer(ref.watch(musicKitProvider), ref.read),
+  (ref) => MusicPlayer(ref.watch(musicKitProvider), ref),
 );

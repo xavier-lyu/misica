@@ -158,7 +158,9 @@ class _$_ResourceRelationshipDTO extends _ResourceRelationshipDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResourceRelationshipDTOToJson(this);
+    return _$$_ResourceRelationshipDTOToJson(
+      this,
+    );
   }
 }
 
@@ -173,10 +175,10 @@ abstract class _ResourceRelationshipDTO extends ResourceRelationshipDTO {
       _$_ResourceRelationshipDTO.fromJson;
 
   @override
-  String get href => throw _privateConstructorUsedError;
+  String get href;
   @override
   @ResourceDTOConverter()
-  List<ResourceDTO> get data => throw _privateConstructorUsedError;
+  List<ResourceDTO> get data;
   @override
   @JsonKey(ignore: true)
   _$$_ResourceRelationshipDTOCopyWith<_$_ResourceRelationshipDTO>
@@ -452,7 +454,9 @@ class _$_AlbumRelationshipsDTO extends _AlbumRelationshipsDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AlbumRelationshipsDTOToJson(this);
+    return _$$_AlbumRelationshipsDTOToJson(
+      this,
+    );
   }
 }
 
@@ -469,16 +473,15 @@ abstract class _AlbumRelationshipsDTO extends AlbumRelationshipsDTO {
       _$_AlbumRelationshipsDTO.fromJson;
 
   @override
-  ResourceRelationshipDTO? get artists => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get artists;
   @override
-  ResourceRelationshipDTO? get tracks => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get tracks;
   @override
-  ResourceRelationshipDTO? get recordLabels =>
-      throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get recordLabels;
   @override
-  ResourceRelationshipDTO? get library => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get library;
   @override
-  ResourceRelationshipDTO? get catalog => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get catalog;
   @override
   @JsonKey(ignore: true)
   _$$_AlbumRelationshipsDTOCopyWith<_$_AlbumRelationshipsDTO> get copyWith =>
@@ -792,7 +795,9 @@ class _$_ArtistRelationshipsDTO extends _ArtistRelationshipsDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ArtistRelationshipsDTOToJson(this);
+    return _$$_ArtistRelationshipsDTOToJson(
+      this,
+    );
   }
 }
 
@@ -812,20 +817,18 @@ abstract class _ArtistRelationshipsDTO extends ArtistRelationshipsDTO {
       _$_ArtistRelationshipsDTO.fromJson;
 
   @override
-  ResourceRelationshipDTO? get albums => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get albums;
   @override
-  ResourceRelationshipDTO? get playlists => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get playlists;
   @override
-  ResourceRelationshipDTO? get musicVideos =>
-      throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get musicVideos;
   @override
-  ResourceRelationshipDTO? get station => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get station;
   @override
-  ResourceRelationshipDTO? get catalog => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get catalog;
   @override
   @JsonKey(name: 'default-playable-content')
-  ResourceRelationshipDTO? get defaultPlayableContent =>
-      throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get defaultPlayableContent;
   @override
   @JsonKey(ignore: true)
   _$$_ArtistRelationshipsDTOCopyWith<_$_ArtistRelationshipsDTO> get copyWith =>
@@ -1064,7 +1067,9 @@ class _$_PlaylistRelationshipsDTO extends _PlaylistRelationshipsDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlaylistRelationshipsDTOToJson(this);
+    return _$$_PlaylistRelationshipsDTOToJson(
+      this,
+    );
   }
 }
 
@@ -1080,13 +1085,13 @@ abstract class _PlaylistRelationshipsDTO extends PlaylistRelationshipsDTO {
       _$_PlaylistRelationshipsDTO.fromJson;
 
   @override
-  ResourceRelationshipDTO? get tracks => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get tracks;
   @override
-  ResourceRelationshipDTO? get curator => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get curator;
   @override
-  ResourceRelationshipDTO? get library => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get library;
   @override
-  ResourceRelationshipDTO? get catalog => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get catalog;
   @override
   @JsonKey(ignore: true)
   _$$_PlaylistRelationshipsDTOCopyWith<_$_PlaylistRelationshipsDTO>
@@ -1423,7 +1428,9 @@ class _$_SongRelationshipsDTO extends _SongRelationshipsDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SongRelationshipsDTOToJson(this);
+    return _$$_SongRelationshipsDTOToJson(
+      this,
+    );
   }
 }
 
@@ -1442,20 +1449,19 @@ abstract class _SongRelationshipsDTO extends SongRelationshipsDTO {
       _$_SongRelationshipsDTO.fromJson;
 
   @override
-  ResourceRelationshipDTO? get albums => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get albums;
   @override
-  ResourceRelationshipDTO? get artists => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get artists;
   @override
-  ResourceRelationshipDTO? get station => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get station;
   @override
-  ResourceRelationshipDTO? get composers => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get composers;
   @override
-  ResourceRelationshipDTO? get musicVideos =>
-      throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get musicVideos;
   @override
-  ResourceRelationshipDTO? get library => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get library;
   @override
-  ResourceRelationshipDTO? get catalog => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get catalog;
   @override
   @JsonKey(ignore: true)
   _$$_SongRelationshipsDTOCopyWith<_$_SongRelationshipsDTO> get copyWith =>
@@ -1726,7 +1732,9 @@ class _$_MusicVideoRelationshipsDTO extends _MusicVideoRelationshipsDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MusicVideoRelationshipsDTOToJson(this);
+    return _$$_MusicVideoRelationshipsDTOToJson(
+      this,
+    );
   }
 }
 
@@ -1743,15 +1751,15 @@ abstract class _MusicVideoRelationshipsDTO extends MusicVideoRelationshipsDTO {
       _$_MusicVideoRelationshipsDTO.fromJson;
 
   @override
-  ResourceRelationshipDTO? get albums => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get albums;
   @override
-  ResourceRelationshipDTO? get artists => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get artists;
   @override
-  ResourceRelationshipDTO? get songs => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get songs;
   @override
-  ResourceRelationshipDTO? get library => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get library;
   @override
-  ResourceRelationshipDTO? get catalog => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get catalog;
   @override
   @JsonKey(ignore: true)
   _$$_MusicVideoRelationshipsDTOCopyWith<_$_MusicVideoRelationshipsDTO>
@@ -1892,7 +1900,9 @@ class _$_CuratorRelationshipsDTO extends _CuratorRelationshipsDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CuratorRelationshipsDTOToJson(this);
+    return _$$_CuratorRelationshipsDTOToJson(
+      this,
+    );
   }
 }
 
@@ -1905,7 +1915,7 @@ abstract class _CuratorRelationshipsDTO extends CuratorRelationshipsDTO {
       _$_CuratorRelationshipsDTO.fromJson;
 
   @override
-  ResourceRelationshipDTO? get playlists => throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get playlists;
   @override
   @JsonKey(ignore: true)
   _$$_CuratorRelationshipsDTOCopyWith<_$_CuratorRelationshipsDTO>

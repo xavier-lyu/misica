@@ -144,7 +144,9 @@ class _$_Credentials extends _Credentials {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CredentialsToJson(this);
+    return _$$_CredentialsToJson(
+      this,
+    );
   }
 }
 
@@ -158,9 +160,9 @@ abstract class _Credentials extends Credentials {
       _$_Credentials.fromJson;
 
   @override
-  String get developerToken => throw _privateConstructorUsedError;
+  String get developerToken;
   @override
-  String get userToken => throw _privateConstructorUsedError;
+  String get userToken;
   @override
   @JsonKey(ignore: true)
   _$$_CredentialsCopyWith<_$_Credentials> get copyWith =>

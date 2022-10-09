@@ -22,12 +22,10 @@ final recentStationsNotifierProvider = StateNotifierProvider.autoDispose<
 
 final stationGenresNotifierProvider = StateNotifierProvider.autoDispose<
     StationGenresNotifier, AsyncValue<List<Genre>>>(
-  (ref) =>
-      StationGenresNotifier(ref.watch(stationsRepositoryProvider), ref.read),
+  (ref) => StationGenresNotifier(ref.watch(stationsRepositoryProvider), ref),
 );
 
 final genreStationsNotifierProvider = StateNotifierProvider.autoDispose<
     GenreStationsNotifier, AsyncValue<List<Station>>>(
-  (ref) =>
-      GenreStationsNotifier(ref.watch(stationsRepositoryProvider), ref.read),
+  (ref) => GenreStationsNotifier(ref.watch(stationsRepositoryProvider), ref),
 );

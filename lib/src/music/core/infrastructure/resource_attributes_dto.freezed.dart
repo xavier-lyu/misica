@@ -505,7 +505,9 @@ class _$_AlbumAttributesDTO extends _AlbumAttributesDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AlbumAttributesDTOToJson(this);
+    return _$$_AlbumAttributesDTOToJson(
+      this,
+    );
   }
 }
 
@@ -535,42 +537,42 @@ abstract class _AlbumAttributesDTO extends AlbumAttributesDTO {
       _$_AlbumAttributesDTO.fromJson;
 
   @override
-  String get artistName => throw _privateConstructorUsedError;
+  String get artistName;
   @override
-  String? get artistUrl => throw _privateConstructorUsedError;
+  String? get artistUrl;
   @override
-  ArtworkDTO? get artwork => throw _privateConstructorUsedError;
+  ArtworkDTO? get artwork;
   @override
-  String? get copyright => throw _privateConstructorUsedError;
+  String? get copyright;
   @override
-  String? get contentRating => throw _privateConstructorUsedError;
+  String? get contentRating;
   @override
-  String? get dateAdded => throw _privateConstructorUsedError;
+  String? get dateAdded;
   @override
-  EditorialNotesDTO? get editorialNotes => throw _privateConstructorUsedError;
+  EditorialNotesDTO? get editorialNotes;
   @override
-  List<String>? get genreNames => throw _privateConstructorUsedError;
+  List<String>? get genreNames;
   @override
-  bool? get isCompilation => throw _privateConstructorUsedError;
+  bool? get isCompilation;
   @override
-  bool? get isComplete => throw _privateConstructorUsedError;
+  bool? get isComplete;
   @override
-  bool? get isMasteredForItunes => throw _privateConstructorUsedError;
+  bool? get isMasteredForItunes;
   @override
-  bool? get isSingle => throw _privateConstructorUsedError;
+  bool? get isSingle;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  PlayParamsDTO? get playParams => throw _privateConstructorUsedError;
+  PlayParamsDTO? get playParams;
   @override
-  String? get recordLabel => throw _privateConstructorUsedError;
+  String? get recordLabel;
   @override
   @DateTimeConverter()
-  DateTime? get releaseDate => throw _privateConstructorUsedError;
+  DateTime? get releaseDate;
   @override
-  int? get trackCount => throw _privateConstructorUsedError;
+  int? get trackCount;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
   @JsonKey(ignore: true)
   _$$_AlbumAttributesDTOCopyWith<_$_AlbumAttributesDTO> get copyWith =>
@@ -809,7 +811,9 @@ class _$_ArtistAttributesDTO extends _ArtistAttributesDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ArtistAttributesDTOToJson(this);
+    return _$$_ArtistAttributesDTOToJson(
+      this,
+    );
   }
 }
 
@@ -826,15 +830,15 @@ abstract class _ArtistAttributesDTO extends ArtistAttributesDTO {
       _$_ArtistAttributesDTO.fromJson;
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
-  EditorialNotesDTO? get editorialNotes => throw _privateConstructorUsedError;
+  EditorialNotesDTO? get editorialNotes;
   @override
-  List<String>? get genreNames => throw _privateConstructorUsedError;
+  List<String>? get genreNames;
   @override
-  ArtworkDTO? get artwork => throw _privateConstructorUsedError;
+  ArtworkDTO? get artwork;
   @override
   @JsonKey(ignore: true)
   _$$_ArtistAttributesDTOCopyWith<_$_ArtistAttributesDTO> get copyWith =>
@@ -1305,7 +1309,9 @@ class _$_MusicVideoAttributesDTO extends _MusicVideoAttributesDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MusicVideoAttributesDTOToJson(this);
+    return _$$_MusicVideoAttributesDTOToJson(
+      this,
+    );
   }
 }
 
@@ -1333,39 +1339,38 @@ abstract class _MusicVideoAttributesDTO extends MusicVideoAttributesDTO {
       _$_MusicVideoAttributesDTO.fromJson;
 
   @override
-  String get artistName => throw _privateConstructorUsedError;
+  String get artistName;
   @override
-  String? get artistUrl => throw _privateConstructorUsedError;
+  String? get artistUrl;
   @override
-  ArtworkDTO? get artwork => throw _privateConstructorUsedError;
+  ArtworkDTO? get artwork;
   @override
-  int get durationInMillis => throw _privateConstructorUsedError;
+  int get durationInMillis;
   @override
-  EditorialNotesDTO? get editorialNotes => throw _privateConstructorUsedError;
+  EditorialNotesDTO? get editorialNotes;
   @override
-  List<String>? get genreNames => throw _privateConstructorUsedError;
+  List<String>? get genreNames;
   @override
-  bool? get has4K => throw _privateConstructorUsedError;
+  bool? get has4K;
   @override
-  bool? get hasHDR => throw _privateConstructorUsedError;
+  bool? get hasHDR;
   @override
-  String? get isrc => throw _privateConstructorUsedError;
+  String? get isrc;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  PlayParamsDTO? get playParams => throw _privateConstructorUsedError;
+  PlayParamsDTO? get playParams;
   @override
-  List<Map<String, dynamic>>? get previews =>
-      throw _privateConstructorUsedError;
+  List<Map<String, dynamic>>? get previews;
   @override
   @DateTimeConverter()
-  DateTime? get releaseDate => throw _privateConstructorUsedError;
+  DateTime? get releaseDate;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
-  int? get trackNumber => throw _privateConstructorUsedError;
+  int? get trackNumber;
   @override
-  String? get contentRating => throw _privateConstructorUsedError;
+  String? get contentRating;
   @override
   @JsonKey(ignore: true)
   _$$_MusicVideoAttributesDTOCopyWith<_$_MusicVideoAttributesDTO>
@@ -1761,7 +1766,9 @@ class _$_PlaylistAttributesDTO extends _PlaylistAttributesDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlaylistAttributesDTOToJson(this);
+    return _$$_PlaylistAttributesDTOToJson(
+      this,
+    );
   }
 }
 
@@ -1786,31 +1793,31 @@ abstract class _PlaylistAttributesDTO extends PlaylistAttributesDTO {
       _$_PlaylistAttributesDTO.fromJson;
 
   @override
-  ArtworkDTO? get artwork => throw _privateConstructorUsedError;
+  ArtworkDTO? get artwork;
   @override
-  bool? get canEdit => throw _privateConstructorUsedError;
+  bool? get canEdit;
   @override
-  String? get curatorName => throw _privateConstructorUsedError;
+  String? get curatorName;
   @override
-  String? get dateAdded => throw _privateConstructorUsedError;
+  String? get dateAdded;
   @override
-  EditorialNotesDTO? get description => throw _privateConstructorUsedError;
+  EditorialNotesDTO? get description;
   @override
-  bool? get hasCatalog => throw _privateConstructorUsedError;
+  bool? get hasCatalog;
   @override
-  bool? get isChart => throw _privateConstructorUsedError;
+  bool? get isChart;
   @override
-  String? get lastModifiedDate => throw _privateConstructorUsedError;
+  String? get lastModifiedDate;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String? get playlistType => throw _privateConstructorUsedError;
+  String? get playlistType;
   @override
-  PlayParamsDTO? get playParams => throw _privateConstructorUsedError;
+  PlayParamsDTO? get playParams;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
-  String? get curatorSocialHandle => throw _privateConstructorUsedError;
+  String? get curatorSocialHandle;
   @override
   @JsonKey(ignore: true)
   _$$_PlaylistAttributesDTOCopyWith<_$_PlaylistAttributesDTO> get copyWith =>
@@ -1832,7 +1839,7 @@ mixin _$SongAttributesDTO {
   List<String>? get audioTraits => throw _privateConstructorUsedError;
   String? get composerName => throw _privateConstructorUsedError;
   String? get contentRating => throw _privateConstructorUsedError;
-  int get discNumber => throw _privateConstructorUsedError;
+  int? get discNumber => throw _privateConstructorUsedError;
   int get durationInMillis => throw _privateConstructorUsedError;
   List<String>? get genreNames => throw _privateConstructorUsedError;
   bool? get hasLyrics => throw _privateConstructorUsedError;
@@ -1845,7 +1852,7 @@ mixin _$SongAttributesDTO {
       throw _privateConstructorUsedError;
   @DateTimeConverter()
   DateTime? get releaseDate => throw _privateConstructorUsedError;
-  int get trackNumber => throw _privateConstructorUsedError;
+  int? get trackNumber => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
   String? get workName => throw _privateConstructorUsedError;
 
@@ -1870,7 +1877,7 @@ abstract class $SongAttributesDTOCopyWith<$Res> {
       List<String>? audioTraits,
       String? composerName,
       String? contentRating,
-      int discNumber,
+      int? discNumber,
       int durationInMillis,
       List<String>? genreNames,
       bool? hasLyrics,
@@ -1881,7 +1888,7 @@ abstract class $SongAttributesDTOCopyWith<$Res> {
       PlayParamsDTO? playParams,
       List<Map<String, dynamic>>? previews,
       @DateTimeConverter() DateTime? releaseDate,
-      int trackNumber,
+      int? trackNumber,
       String? url,
       String? workName});
 
@@ -1964,7 +1971,7 @@ class _$SongAttributesDTOCopyWithImpl<$Res>
       discNumber: discNumber == freezed
           ? _value.discNumber
           : discNumber // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       durationInMillis: durationInMillis == freezed
           ? _value.durationInMillis
           : durationInMillis // ignore: cast_nullable_to_non_nullable
@@ -2008,7 +2015,7 @@ class _$SongAttributesDTOCopyWithImpl<$Res>
       trackNumber: trackNumber == freezed
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -2060,7 +2067,7 @@ abstract class _$$_SongAttributesDTOCopyWith<$Res>
       List<String>? audioTraits,
       String? composerName,
       String? contentRating,
-      int discNumber,
+      int? discNumber,
       int durationInMillis,
       List<String>? genreNames,
       bool? hasLyrics,
@@ -2071,7 +2078,7 @@ abstract class _$$_SongAttributesDTOCopyWith<$Res>
       PlayParamsDTO? playParams,
       List<Map<String, dynamic>>? previews,
       @DateTimeConverter() DateTime? releaseDate,
-      int trackNumber,
+      int? trackNumber,
       String? url,
       String? workName});
 
@@ -2158,7 +2165,7 @@ class __$$_SongAttributesDTOCopyWithImpl<$Res>
       discNumber: discNumber == freezed
           ? _value.discNumber
           : discNumber // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       durationInMillis: durationInMillis == freezed
           ? _value.durationInMillis
           : durationInMillis // ignore: cast_nullable_to_non_nullable
@@ -2202,7 +2209,7 @@ class __$$_SongAttributesDTOCopyWithImpl<$Res>
       trackNumber: trackNumber == freezed
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
@@ -2228,7 +2235,7 @@ class _$_SongAttributesDTO extends _SongAttributesDTO {
       final List<String>? audioTraits,
       this.composerName,
       this.contentRating,
-      required this.discNumber,
+      this.discNumber,
       required this.durationInMillis,
       final List<String>? genreNames,
       this.hasLyrics,
@@ -2239,7 +2246,7 @@ class _$_SongAttributesDTO extends _SongAttributesDTO {
       this.playParams,
       final List<Map<String, dynamic>>? previews,
       @DateTimeConverter() this.releaseDate,
-      required this.trackNumber,
+      this.trackNumber,
       this.url,
       this.workName})
       : _audioTraits = audioTraits,
@@ -2276,7 +2283,7 @@ class _$_SongAttributesDTO extends _SongAttributesDTO {
   @override
   final String? contentRating;
   @override
-  final int discNumber;
+  final int? discNumber;
   @override
   final int durationInMillis;
   final List<String>? _genreNames;
@@ -2313,7 +2320,7 @@ class _$_SongAttributesDTO extends _SongAttributesDTO {
   @DateTimeConverter()
   final DateTime? releaseDate;
   @override
-  final int trackNumber;
+  final int? trackNumber;
   @override
   final String? url;
   @override
@@ -2405,7 +2412,9 @@ class _$_SongAttributesDTO extends _SongAttributesDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SongAttributesDTOToJson(this);
+    return _$$_SongAttributesDTOToJson(
+      this,
+    );
   }
 }
 
@@ -2420,7 +2429,7 @@ abstract class _SongAttributesDTO extends SongAttributesDTO {
       final List<String>? audioTraits,
       final String? composerName,
       final String? contentRating,
-      required final int discNumber,
+      final int? discNumber,
       required final int durationInMillis,
       final List<String>? genreNames,
       final bool? hasLyrics,
@@ -2431,7 +2440,7 @@ abstract class _SongAttributesDTO extends SongAttributesDTO {
       final PlayParamsDTO? playParams,
       final List<Map<String, dynamic>>? previews,
       @DateTimeConverter() final DateTime? releaseDate,
-      required final int trackNumber,
+      final int? trackNumber,
       final String? url,
       final String? workName}) = _$_SongAttributesDTO;
   const _SongAttributesDTO._() : super._();
@@ -2440,53 +2449,52 @@ abstract class _SongAttributesDTO extends SongAttributesDTO {
       _$_SongAttributesDTO.fromJson;
 
   @override
-  String? get albumName => throw _privateConstructorUsedError;
+  String? get albumName;
   @override
-  String? get artistUrl => throw _privateConstructorUsedError;
+  String? get artistUrl;
   @override
-  String? get attribution => throw _privateConstructorUsedError;
+  String? get attribution;
   @override
-  String get artistName => throw _privateConstructorUsedError;
+  String get artistName;
   @override
-  ArtworkDTO? get artwork => throw _privateConstructorUsedError;
+  ArtworkDTO? get artwork;
   @override
-  String? get audioLocale => throw _privateConstructorUsedError;
+  String? get audioLocale;
   @override
-  List<String>? get audioTraits => throw _privateConstructorUsedError;
+  List<String>? get audioTraits;
   @override
-  String? get composerName => throw _privateConstructorUsedError;
+  String? get composerName;
   @override
-  String? get contentRating => throw _privateConstructorUsedError;
+  String? get contentRating;
   @override
-  int get discNumber => throw _privateConstructorUsedError;
+  int? get discNumber;
   @override
-  int get durationInMillis => throw _privateConstructorUsedError;
+  int get durationInMillis;
   @override
-  List<String>? get genreNames => throw _privateConstructorUsedError;
+  List<String>? get genreNames;
   @override
-  bool? get hasLyrics => throw _privateConstructorUsedError;
+  bool? get hasLyrics;
   @override
-  bool? get hasTimeSyncedLyrics => throw _privateConstructorUsedError;
+  bool? get hasTimeSyncedLyrics;
   @override
-  bool? get isMasteredForItunes => throw _privateConstructorUsedError;
+  bool? get isMasteredForItunes;
   @override
-  String? get isrc => throw _privateConstructorUsedError;
+  String? get isrc;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  PlayParamsDTO? get playParams => throw _privateConstructorUsedError;
+  PlayParamsDTO? get playParams;
   @override
-  List<Map<String, dynamic>>? get previews =>
-      throw _privateConstructorUsedError;
+  List<Map<String, dynamic>>? get previews;
   @override
   @DateTimeConverter()
-  DateTime? get releaseDate => throw _privateConstructorUsedError;
+  DateTime? get releaseDate;
   @override
-  int get trackNumber => throw _privateConstructorUsedError;
+  int? get trackNumber;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
-  String? get workName => throw _privateConstructorUsedError;
+  String? get workName;
   @override
   @JsonKey(ignore: true)
   _$$_SongAttributesDTOCopyWith<_$_SongAttributesDTO> get copyWith =>
@@ -2805,7 +2813,9 @@ class _$_StationAttributesDTO extends _StationAttributesDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StationAttributesDTOToJson(this);
+    return _$$_StationAttributesDTOToJson(
+      this,
+    );
   }
 }
 
@@ -2826,23 +2836,23 @@ abstract class _StationAttributesDTO extends StationAttributesDTO {
       _$_StationAttributesDTO.fromJson;
 
   @override
-  bool? get isLive => throw _privateConstructorUsedError;
+  bool? get isLive;
   @override
-  ArtworkDTO? get artwork => throw _privateConstructorUsedError;
+  ArtworkDTO? get artwork;
   @override
-  PlayParamsDTO? get playParams => throw _privateConstructorUsedError;
+  PlayParamsDTO? get playParams;
   @override
-  EditorialNotesDTO? get editorialNotes => throw _privateConstructorUsedError;
+  EditorialNotesDTO? get editorialNotes;
   @override
-  int? get durationInMillis => throw _privateConstructorUsedError;
+  int? get durationInMillis;
   @override
-  String? get mediaKind => throw _privateConstructorUsedError;
+  String? get mediaKind;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String? get streamingRadioSubType => throw _privateConstructorUsedError;
+  String? get streamingRadioSubType;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
   @JsonKey(ignore: true)
   _$$_StationAttributesDTOCopyWith<_$_StationAttributesDTO> get copyWith =>
@@ -3051,7 +3061,9 @@ class _$_CuratorAttributesDTO extends _CuratorAttributesDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CuratorAttributesDTOToJson(this);
+    return _$$_CuratorAttributesDTOToJson(
+      this,
+    );
   }
 }
 
@@ -3067,13 +3079,13 @@ abstract class _CuratorAttributesDTO extends CuratorAttributesDTO {
       _$_CuratorAttributesDTO.fromJson;
 
   @override
-  ArtworkDTO? get artwork => throw _privateConstructorUsedError;
+  ArtworkDTO? get artwork;
   @override
-  EditorialNotesDTO? get editorialNotes => throw _privateConstructorUsedError;
+  EditorialNotesDTO? get editorialNotes;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String? get url => throw _privateConstructorUsedError;
+  String? get url;
   @override
   @JsonKey(ignore: true)
   _$$_CuratorAttributesDTOCopyWith<_$_CuratorAttributesDTO> get copyWith =>
@@ -3229,7 +3241,9 @@ class _$_GenreAttributesDTO extends _GenreAttributesDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GenreAttributesDTOToJson(this);
+    return _$$_GenreAttributesDTOToJson(
+      this,
+    );
   }
 }
 
@@ -3244,11 +3258,11 @@ abstract class _GenreAttributesDTO extends GenreAttributesDTO {
       _$_GenreAttributesDTO.fromJson;
 
   @override
-  String? get parentId => throw _privateConstructorUsedError;
+  String? get parentId;
   @override
-  String? get parentName => throw _privateConstructorUsedError;
+  String? get parentName;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
   @JsonKey(ignore: true)
   _$$_GenreAttributesDTOCopyWith<_$_GenreAttributesDTO> get copyWith =>

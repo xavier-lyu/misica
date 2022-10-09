@@ -15,5 +15,5 @@ final songRepositoryProvider = Provider(
 
 final songNotifierProvider =
     StateNotifierProvider.autoDispose<SongNotifier, AsyncValue<Track>>(
-  (ref) => SongNotifier(ref.watch(songRepositoryProvider), ref.read),
+  (ref) => SongNotifier(ref.watch(songRepositoryProvider), ref),
 );

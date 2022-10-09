@@ -161,7 +161,9 @@ class _$_EditorialNotesDTO extends _EditorialNotesDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EditorialNotesDTOToJson(this);
+    return _$$_EditorialNotesDTOToJson(
+      this,
+    );
   }
 }
 
@@ -176,11 +178,11 @@ abstract class _EditorialNotesDTO extends EditorialNotesDTO {
       _$_EditorialNotesDTO.fromJson;
 
   @override
-  String? get short => throw _privateConstructorUsedError;
+  String? get short;
   @override
-  String? get standard => throw _privateConstructorUsedError;
+  String? get standard;
   @override
-  String? get name => throw _privateConstructorUsedError;
+  String? get name;
   @override
   @JsonKey(ignore: true)
   _$$_EditorialNotesDTOCopyWith<_$_EditorialNotesDTO> get copyWith =>

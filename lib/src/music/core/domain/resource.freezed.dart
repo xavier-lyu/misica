@@ -562,7 +562,9 @@ class _$ResourceRaw extends ResourceRaw {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ResourceRawToJson(this);
+    return _$$ResourceRawToJson(
+      this,
+    );
   }
 }
 
@@ -577,10 +579,10 @@ abstract class ResourceRaw extends Resource {
       _$ResourceRaw.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get type => throw _privateConstructorUsedError;
-  ResourceAttributes? get attributes => throw _privateConstructorUsedError;
+  String get type;
+  ResourceAttributes? get attributes;
   @override
   @JsonKey(ignore: true)
   _$$ResourceRawCopyWith<_$ResourceRaw> get copyWith =>
@@ -937,7 +939,9 @@ class _$Album extends Album {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AlbumToJson(this);
+    return _$$AlbumToJson(
+      this,
+    );
   }
 }
 
@@ -953,14 +957,14 @@ abstract class Album extends Resource {
   factory Album.fromJson(Map<String, dynamic> json) = _$Album.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get type => throw _privateConstructorUsedError;
-  AlbumAttributes? get attributes => throw _privateConstructorUsedError;
+  String get type;
+  AlbumAttributes? get attributes;
   @JsonKey(ignore: true)
-  AlbumRelationships? get relationships => throw _privateConstructorUsedError;
+  AlbumRelationships? get relationships;
   @JsonKey(ignore: true)
-  Map<String, ResourceView>? get views => throw _privateConstructorUsedError;
+  Map<String, ResourceView>? get views;
   @override
   @JsonKey(ignore: true)
   _$$AlbumCopyWith<_$Album> get copyWith => throw _privateConstructorUsedError;
@@ -1317,7 +1321,9 @@ class _$Artist extends Artist {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ArtistToJson(this);
+    return _$$ArtistToJson(
+      this,
+    );
   }
 }
 
@@ -1334,14 +1340,14 @@ abstract class Artist extends Resource {
   factory Artist.fromJson(Map<String, dynamic> json) = _$Artist.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get type => throw _privateConstructorUsedError;
-  ArtistAttributes? get attributes => throw _privateConstructorUsedError;
+  String get type;
+  ArtistAttributes? get attributes;
   @JsonKey(ignore: true)
-  ArtistRelationships? get relationships => throw _privateConstructorUsedError;
+  ArtistRelationships? get relationships;
   @JsonKey(ignore: true)
-  Map<String, ResourceView>? get views => throw _privateConstructorUsedError;
+  Map<String, ResourceView>? get views;
   @override
   @JsonKey(ignore: true)
   _$$ArtistCopyWith<_$Artist> get copyWith =>
@@ -1683,7 +1689,9 @@ class _$MusicVideo extends MusicVideo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MusicVideoToJson(this);
+    return _$$MusicVideoToJson(
+      this,
+    );
   }
 }
 
@@ -1700,13 +1708,12 @@ abstract class MusicVideo extends Resource {
       _$MusicVideo.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get type => throw _privateConstructorUsedError;
-  MusicVideoAttributes? get attributes => throw _privateConstructorUsedError;
+  String get type;
+  MusicVideoAttributes? get attributes;
   @JsonKey(ignore: true)
-  MusicVideoRelationships? get relationships =>
-      throw _privateConstructorUsedError;
+  MusicVideoRelationships? get relationships;
   @override
   @JsonKey(ignore: true)
   _$$MusicVideoCopyWith<_$MusicVideo> get copyWith =>
@@ -2065,7 +2072,9 @@ class _$Playlist extends Playlist {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PlaylistToJson(this);
+    return _$$PlaylistToJson(
+      this,
+    );
   }
 }
 
@@ -2082,15 +2091,14 @@ abstract class Playlist extends Resource {
   factory Playlist.fromJson(Map<String, dynamic> json) = _$Playlist.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get type => throw _privateConstructorUsedError;
-  PlaylistAttributes? get attributes => throw _privateConstructorUsedError;
+  String get type;
+  PlaylistAttributes? get attributes;
   @JsonKey(ignore: true)
-  PlaylistRelationships? get relationships =>
-      throw _privateConstructorUsedError;
+  PlaylistRelationships? get relationships;
   @JsonKey(ignore: true)
-  Map<String, ResourceView>? get views => throw _privateConstructorUsedError;
+  Map<String, ResourceView>? get views;
   @override
   @JsonKey(ignore: true)
   _$$PlaylistCopyWith<_$Playlist> get copyWith =>
@@ -2428,7 +2436,9 @@ class _$Song extends Song {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SongToJson(this);
+    return _$$SongToJson(
+      this,
+    );
   }
 }
 
@@ -2443,12 +2453,12 @@ abstract class Song extends Resource {
   factory Song.fromJson(Map<String, dynamic> json) = _$Song.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get type => throw _privateConstructorUsedError;
-  SongAttributes? get attributes => throw _privateConstructorUsedError;
+  String get type;
+  SongAttributes? get attributes;
   @JsonKey(ignore: true)
-  SongRelationships? get relationships => throw _privateConstructorUsedError;
+  SongRelationships? get relationships;
   @override
   @JsonKey(ignore: true)
   _$$SongCopyWith<_$Song> get copyWith => throw _privateConstructorUsedError;
@@ -2758,7 +2768,9 @@ class _$Station extends Station {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$StationToJson(this);
+    return _$$StationToJson(
+      this,
+    );
   }
 }
 
@@ -2772,10 +2784,10 @@ abstract class Station extends Resource {
   factory Station.fromJson(Map<String, dynamic> json) = _$Station.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get type => throw _privateConstructorUsedError;
-  StationAttributes? get attributes => throw _privateConstructorUsedError;
+  String get type;
+  StationAttributes? get attributes;
   @override
   @JsonKey(ignore: true)
   _$$StationCopyWith<_$Station> get copyWith =>
@@ -3114,7 +3126,9 @@ class _$Curator extends Curator {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CuratorToJson(this);
+    return _$$CuratorToJson(
+      this,
+    );
   }
 }
 
@@ -3130,12 +3144,12 @@ abstract class Curator extends Resource {
   factory Curator.fromJson(Map<String, dynamic> json) = _$Curator.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get type => throw _privateConstructorUsedError;
-  CuratorAttributes? get attributes => throw _privateConstructorUsedError;
+  String get type;
+  CuratorAttributes? get attributes;
   @JsonKey(ignore: true)
-  CuratorRelationships? get relationships => throw _privateConstructorUsedError;
+  CuratorRelationships? get relationships;
   @override
   @JsonKey(ignore: true)
   _$$CuratorCopyWith<_$Curator> get copyWith =>
@@ -3445,7 +3459,9 @@ class _$Genre extends Genre {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GenreToJson(this);
+    return _$$GenreToJson(
+      this,
+    );
   }
 }
 
@@ -3459,10 +3475,10 @@ abstract class Genre extends Resource {
   factory Genre.fromJson(Map<String, dynamic> json) = _$Genre.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get type => throw _privateConstructorUsedError;
-  GenreAttributes? get attributes => throw _privateConstructorUsedError;
+  String get type;
+  GenreAttributes? get attributes;
   @override
   @JsonKey(ignore: true)
   _$$GenreCopyWith<_$Genre> get copyWith => throw _privateConstructorUsedError;

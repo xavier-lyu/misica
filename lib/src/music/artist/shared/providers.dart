@@ -17,6 +17,6 @@ final artistNotifierProvider =
     StateNotifierProvider.autoDispose<ArtistNotifier, AsyncValue<Artist>>(
   (ref) => ArtistNotifier(
     ref.watch(artistRepositoryProvider),
-    ref.read,
+    ref,
   ),
 );

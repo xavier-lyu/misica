@@ -154,7 +154,9 @@ class _$_MusicResponse extends _MusicResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MusicResponseToJson(this);
+    return _$$_MusicResponseToJson(
+      this,
+    );
   }
 }
 
@@ -169,10 +171,10 @@ abstract class _MusicResponse extends MusicResponse {
       _$_MusicResponse.fromJson;
 
   @override
-  String? get next => throw _privateConstructorUsedError;
+  String? get next;
   @override
   @ResourceDTOConverter()
-  List<ResourceDTO> get data => throw _privateConstructorUsedError;
+  List<ResourceDTO> get data;
   @override
   @JsonKey(ignore: true)
   _$$_MusicResponseCopyWith<_$_MusicResponse> get copyWith =>

@@ -146,7 +146,9 @@ class _$_SearchSuggestionsResultsDTO extends _SearchSuggestionsResultsDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SearchSuggestionsResultsDTOToJson(this);
+    return _$$_SearchSuggestionsResultsDTOToJson(
+      this,
+    );
   }
 }
 
@@ -161,7 +163,7 @@ abstract class _SearchSuggestionsResultsDTO
       _$_SearchSuggestionsResultsDTO.fromJson;
 
   @override
-  SearchSuggestionsDTO get results => throw _privateConstructorUsedError;
+  SearchSuggestionsDTO get results;
   @override
   @JsonKey(ignore: true)
   _$$_SearchSuggestionsResultsDTOCopyWith<_$_SearchSuggestionsResultsDTO>
@@ -293,7 +295,9 @@ class _$_SearchSuggestionsDTO extends _SearchSuggestionsDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SearchSuggestionsDTOToJson(this);
+    return _$$_SearchSuggestionsDTOToJson(
+      this,
+    );
   }
 }
 
@@ -306,8 +310,7 @@ abstract class _SearchSuggestionsDTO extends SearchSuggestionsDTO {
       _$_SearchSuggestionsDTO.fromJson;
 
   @override
-  List<SearchSuggestionDTO>? get suggestions =>
-      throw _privateConstructorUsedError;
+  List<SearchSuggestionDTO>? get suggestions;
   @override
   @JsonKey(ignore: true)
   _$$_SearchSuggestionsDTOCopyWith<_$_SearchSuggestionsDTO> get copyWith =>
@@ -577,7 +580,9 @@ class _$SearchSuggestionTermsDTO extends SearchSuggestionTermsDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SearchSuggestionTermsDTOToJson(this);
+    return _$$SearchSuggestionTermsDTOToJson(
+      this,
+    );
   }
 }
 
@@ -592,9 +597,9 @@ abstract class SearchSuggestionTermsDTO extends SearchSuggestionDTO {
       _$SearchSuggestionTermsDTO.fromJson;
 
   @override
-  String get kind => throw _privateConstructorUsedError;
-  String get searchTerm => throw _privateConstructorUsedError;
-  String? get displayTerm => throw _privateConstructorUsedError;
+  String get kind;
+  String get searchTerm;
+  String? get displayTerm;
   @override
   @JsonKey(ignore: true)
   _$$SearchSuggestionTermsDTOCopyWith<_$SearchSuggestionTermsDTO>
@@ -767,7 +772,9 @@ class _$SearchSuggestionTopResultsDTO extends SearchSuggestionTopResultsDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SearchSuggestionTopResultsDTOToJson(this);
+    return _$$SearchSuggestionTopResultsDTOToJson(
+      this,
+    );
   }
 }
 
@@ -781,9 +788,9 @@ abstract class SearchSuggestionTopResultsDTO extends SearchSuggestionDTO {
       _$SearchSuggestionTopResultsDTO.fromJson;
 
   @override
-  String get kind => throw _privateConstructorUsedError;
+  String get kind;
   @ResourceDTOConverter()
-  ResourceDTO get content => throw _privateConstructorUsedError;
+  ResourceDTO get content;
   @override
   @JsonKey(ignore: true)
   _$$SearchSuggestionTopResultsDTOCopyWith<_$SearchSuggestionTopResultsDTO>

@@ -4,17 +4,17 @@ import 'package:misica/src/music/core/shared/providers.dart';
 import 'package:misica/src/music/radio/infrastructure/stations_repository.dart';
 
 class StationGenresNotifier extends StateNotifier<AsyncValue<List<Genre>>> {
-  StationGenresNotifier(this._repository, this._read)
+  StationGenresNotifier(this._repository, this._ref)
       : super(const AsyncLoading());
 
   final StationsRepository _repository;
-  final Reader _read;
+  final Ref _ref;
 
   void fetchStationGenres() async {
-    final storefront = await _read(storefrontProvider.future);
+    final storefront = await _ref.read(storefrontProvider.future);
     final failureOrGenres = await _repository.fetchStationGenres(storefront);
     state = failureOrGenres.fold(
-      (l) => AsyncError(l),
+      (l) => AsyncError(l, StackTrace.current),
       (r) => AsyncData(r),
     );
   }

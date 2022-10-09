@@ -165,7 +165,9 @@ class _$_ChartsResultsDTO extends _ChartsResultsDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ChartsResultsDTOToJson(this);
+    return _$$_ChartsResultsDTOToJson(
+      this,
+    );
   }
 }
 
@@ -179,9 +181,9 @@ abstract class _ChartsResultsDTO extends ChartsResultsDTO {
       _$_ChartsResultsDTO.fromJson;
 
   @override
-  ChartsDTO get results => throw _privateConstructorUsedError;
+  ChartsDTO get results;
   @override
-  Map<String, dynamic>? get meta => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get meta;
   @override
   @JsonKey(ignore: true)
   _$$_ChartsResultsDTOCopyWith<_$_ChartsResultsDTO> get copyWith =>
@@ -449,7 +451,9 @@ class _$_ChartsDTO extends _ChartsDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ChartsDTOToJson(this);
+    return _$$_ChartsDTOToJson(
+      this,
+    );
   }
 }
 
@@ -468,20 +472,18 @@ abstract class _ChartsDTO extends ChartsDTO {
       _$_ChartsDTO.fromJson;
 
   @override
-  List<SongsChartDTO>? get songs => throw _privateConstructorUsedError;
+  List<SongsChartDTO>? get songs;
   @override
-  List<PlaylistsChartDTO>? get cityCharts => throw _privateConstructorUsedError;
+  List<PlaylistsChartDTO>? get cityCharts;
   @override
-  List<PlaylistsChartDTO>? get dailyGlobalTopCharts =>
-      throw _privateConstructorUsedError;
+  List<PlaylistsChartDTO>? get dailyGlobalTopCharts;
   @override
-  List<PlaylistsChartDTO>? get playlists => throw _privateConstructorUsedError;
+  List<PlaylistsChartDTO>? get playlists;
   @override
-  List<AlbumsChartDTO>? get albums => throw _privateConstructorUsedError;
+  List<AlbumsChartDTO>? get albums;
   @override
   @JsonKey(name: 'music-videos')
-  List<MusicVideosChartDTO>? get musicVideos =>
-      throw _privateConstructorUsedError;
+  List<MusicVideosChartDTO>? get musicVideos;
   @override
   @JsonKey(ignore: true)
   _$$_ChartsDTOCopyWith<_$_ChartsDTO> get copyWith =>
@@ -702,7 +704,9 @@ class _$_AlbumsChartDTO extends _AlbumsChartDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AlbumsChartDTOToJson(this);
+    return _$$_AlbumsChartDTOToJson(
+      this,
+    );
   }
 }
 
@@ -720,17 +724,17 @@ abstract class _AlbumsChartDTO extends AlbumsChartDTO {
       _$_AlbumsChartDTO.fromJson;
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get chart => throw _privateConstructorUsedError;
+  String get chart;
   @override
-  String get orderId => throw _privateConstructorUsedError;
+  String get orderId;
   @override
-  String get href => throw _privateConstructorUsedError;
+  String get href;
   @override
-  String? get next => throw _privateConstructorUsedError;
+  String? get next;
   @override
-  List<AlbumDTO> get data => throw _privateConstructorUsedError;
+  List<AlbumDTO> get data;
   @override
   @JsonKey(ignore: true)
   _$$_AlbumsChartDTOCopyWith<_$_AlbumsChartDTO> get copyWith =>
@@ -952,7 +956,9 @@ class _$_PlaylistsChartDTO extends _PlaylistsChartDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlaylistsChartDTOToJson(this);
+    return _$$_PlaylistsChartDTOToJson(
+      this,
+    );
   }
 }
 
@@ -970,17 +976,17 @@ abstract class _PlaylistsChartDTO extends PlaylistsChartDTO {
       _$_PlaylistsChartDTO.fromJson;
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get chart => throw _privateConstructorUsedError;
+  String get chart;
   @override
-  String get orderId => throw _privateConstructorUsedError;
+  String get orderId;
   @override
-  String get href => throw _privateConstructorUsedError;
+  String get href;
   @override
-  String? get next => throw _privateConstructorUsedError;
+  String? get next;
   @override
-  List<PlaylistDTO> get data => throw _privateConstructorUsedError;
+  List<PlaylistDTO> get data;
   @override
   @JsonKey(ignore: true)
   _$$_PlaylistsChartDTOCopyWith<_$_PlaylistsChartDTO> get copyWith =>
@@ -1201,7 +1207,9 @@ class _$_SongsChartDTO extends _SongsChartDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SongsChartDTOToJson(this);
+    return _$$_SongsChartDTOToJson(
+      this,
+    );
   }
 }
 
@@ -1219,17 +1227,17 @@ abstract class _SongsChartDTO extends SongsChartDTO {
       _$_SongsChartDTO.fromJson;
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get chart => throw _privateConstructorUsedError;
+  String get chart;
   @override
-  String get orderId => throw _privateConstructorUsedError;
+  String get orderId;
   @override
-  String get href => throw _privateConstructorUsedError;
+  String get href;
   @override
-  String? get next => throw _privateConstructorUsedError;
+  String? get next;
   @override
-  List<SongDTO> get data => throw _privateConstructorUsedError;
+  List<SongDTO> get data;
   @override
   @JsonKey(ignore: true)
   _$$_SongsChartDTOCopyWith<_$_SongsChartDTO> get copyWith =>
@@ -1451,7 +1459,9 @@ class _$_MusicVideosChartDTO extends _MusicVideosChartDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MusicVideosChartDTOToJson(this);
+    return _$$_MusicVideosChartDTOToJson(
+      this,
+    );
   }
 }
 
@@ -1469,17 +1479,17 @@ abstract class _MusicVideosChartDTO extends MusicVideosChartDTO {
       _$_MusicVideosChartDTO.fromJson;
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get chart => throw _privateConstructorUsedError;
+  String get chart;
   @override
-  String get orderId => throw _privateConstructorUsedError;
+  String get orderId;
   @override
-  String get href => throw _privateConstructorUsedError;
+  String get href;
   @override
-  String? get next => throw _privateConstructorUsedError;
+  String? get next;
   @override
-  List<MusicVideoDTO> get data => throw _privateConstructorUsedError;
+  List<MusicVideoDTO> get data;
   @override
   @JsonKey(ignore: true)
   _$$_MusicVideosChartDTOCopyWith<_$_MusicVideosChartDTO> get copyWith =>

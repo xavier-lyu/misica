@@ -165,7 +165,7 @@ class SongAttributesDTO with _$SongAttributesDTO {
     List<String>? audioTraits,
     String? composerName,
     String? contentRating,
-    required int discNumber,
+    int? discNumber,
     required int durationInMillis,
     List<String>? genreNames,
     bool? hasLyrics,
@@ -176,7 +176,7 @@ class SongAttributesDTO with _$SongAttributesDTO {
     PlayParamsDTO? playParams,
     List<Map<String, dynamic>>? previews,
     @DateTimeConverter() DateTime? releaseDate,
-    required int trackNumber,
+    int? trackNumber,
     String? url,
     String? workName,
   }) = _SongAttributesDTO;

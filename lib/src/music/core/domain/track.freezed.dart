@@ -199,7 +199,7 @@ abstract class TrackSong extends Track {
   const factory TrackSong(final Song value) = _$TrackSong;
   const TrackSong._() : super._();
 
-  Song get value => throw _privateConstructorUsedError;
+  Song get value;
   @JsonKey(ignore: true)
   _$$TrackSongCopyWith<_$TrackSong> get copyWith =>
       throw _privateConstructorUsedError;
@@ -333,7 +333,7 @@ abstract class TrackMusicVideo extends Track {
   const factory TrackMusicVideo(final MusicVideo value) = _$TrackMusicVideo;
   const TrackMusicVideo._() : super._();
 
-  MusicVideo get value => throw _privateConstructorUsedError;
+  MusicVideo get value;
   @JsonKey(ignore: true)
   _$$TrackMusicVideoCopyWith<_$TrackMusicVideo> get copyWith =>
       throw _privateConstructorUsedError;

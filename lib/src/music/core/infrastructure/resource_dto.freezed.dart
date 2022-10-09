@@ -698,7 +698,9 @@ class _$ResourceRawDTO extends ResourceRawDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ResourceRawDTOToJson(this);
+    return _$$ResourceRawDTOToJson(
+      this,
+    );
   }
 }
 
@@ -716,14 +718,13 @@ abstract class ResourceRawDTO extends ResourceDTO {
       _$ResourceRawDTO.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get type => throw _privateConstructorUsedError;
-  Map<String, dynamic>? get attributes => throw _privateConstructorUsedError;
-  Map<String, ResourceRelationshipDTO>? get relationships =>
-      throw _privateConstructorUsedError;
-  Map<String, ResourceViewDTO>? get views => throw _privateConstructorUsedError;
-  ResourceMetaDTO? get meta => throw _privateConstructorUsedError;
+  String get type;
+  Map<String, dynamic>? get attributes;
+  Map<String, ResourceRelationshipDTO>? get relationships;
+  Map<String, ResourceViewDTO>? get views;
+  ResourceMetaDTO? get meta;
   @override
   @JsonKey(ignore: true)
   _$$ResourceRawDTOCopyWith<_$ResourceRawDTO> get copyWith =>
@@ -1135,7 +1136,9 @@ class _$AlbumDTO extends AlbumDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AlbumDTOToJson(this);
+    return _$$AlbumDTOToJson(
+      this,
+    );
   }
 }
 
@@ -1152,14 +1155,13 @@ abstract class AlbumDTO extends ResourceDTO {
   factory AlbumDTO.fromJson(Map<String, dynamic> json) = _$AlbumDTO.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get type => throw _privateConstructorUsedError;
-  AlbumAttributesDTO? get attributes => throw _privateConstructorUsedError;
-  AlbumRelationshipsDTO? get relationships =>
-      throw _privateConstructorUsedError;
-  Map<String, ResourceViewDTO>? get views => throw _privateConstructorUsedError;
-  ResourceMetaDTO? get meta => throw _privateConstructorUsedError;
+  String get type;
+  AlbumAttributesDTO? get attributes;
+  AlbumRelationshipsDTO? get relationships;
+  Map<String, ResourceViewDTO>? get views;
+  ResourceMetaDTO? get meta;
   @override
   @JsonKey(ignore: true)
   _$$AlbumDTOCopyWith<_$AlbumDTO> get copyWith =>
@@ -1574,7 +1576,9 @@ class _$ArtistDTO extends ArtistDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ArtistDTOToJson(this);
+    return _$$ArtistDTOToJson(
+      this,
+    );
   }
 }
 
@@ -1591,14 +1595,13 @@ abstract class ArtistDTO extends ResourceDTO {
   factory ArtistDTO.fromJson(Map<String, dynamic> json) = _$ArtistDTO.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get type => throw _privateConstructorUsedError;
-  ArtistAttributesDTO? get attributes => throw _privateConstructorUsedError;
-  ArtistRelationshipsDTO? get relationships =>
-      throw _privateConstructorUsedError;
-  Map<String, ResourceViewDTO>? get views => throw _privateConstructorUsedError;
-  ResourceMetaDTO? get meta => throw _privateConstructorUsedError;
+  String get type;
+  ArtistAttributesDTO? get attributes;
+  ArtistRelationshipsDTO? get relationships;
+  Map<String, ResourceViewDTO>? get views;
+  ResourceMetaDTO? get meta;
   @override
   @JsonKey(ignore: true)
   _$$ArtistDTOCopyWith<_$ArtistDTO> get copyWith =>
@@ -2013,7 +2016,9 @@ class _$PlaylistDTO extends PlaylistDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PlaylistDTOToJson(this);
+    return _$$PlaylistDTOToJson(
+      this,
+    );
   }
 }
 
@@ -2031,14 +2036,13 @@ abstract class PlaylistDTO extends ResourceDTO {
       _$PlaylistDTO.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get type => throw _privateConstructorUsedError;
-  PlaylistAttributesDTO? get attributes => throw _privateConstructorUsedError;
-  PlaylistRelationshipsDTO? get relationships =>
-      throw _privateConstructorUsedError;
-  Map<String, ResourceViewDTO>? get views => throw _privateConstructorUsedError;
-  ResourceMetaDTO? get meta => throw _privateConstructorUsedError;
+  String get type;
+  PlaylistAttributesDTO? get attributes;
+  PlaylistRelationshipsDTO? get relationships;
+  Map<String, ResourceViewDTO>? get views;
+  ResourceMetaDTO? get meta;
   @override
   @JsonKey(ignore: true)
   _$$PlaylistDTOCopyWith<_$PlaylistDTO> get copyWith =>
@@ -2408,7 +2412,9 @@ class _$SongDTO extends SongDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SongDTOToJson(this);
+    return _$$SongDTOToJson(
+      this,
+    );
   }
 }
 
@@ -2423,11 +2429,11 @@ abstract class SongDTO extends ResourceDTO {
   factory SongDTO.fromJson(Map<String, dynamic> json) = _$SongDTO.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get type => throw _privateConstructorUsedError;
-  SongAttributesDTO? get attributes => throw _privateConstructorUsedError;
-  SongRelationshipsDTO? get relationships => throw _privateConstructorUsedError;
+  String get type;
+  SongAttributesDTO? get attributes;
+  SongRelationshipsDTO? get relationships;
   @override
   @JsonKey(ignore: true)
   _$$SongDTOCopyWith<_$SongDTO> get copyWith =>
@@ -2773,7 +2779,9 @@ class _$StationDTO extends StationDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$StationDTOToJson(this);
+    return _$$StationDTOToJson(
+      this,
+    );
   }
 }
 
@@ -2786,10 +2794,10 @@ abstract class StationDTO extends ResourceDTO {
       _$StationDTO.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get type => throw _privateConstructorUsedError;
-  StationAttributesDTO? get attributes => throw _privateConstructorUsedError;
+  String get type;
+  StationAttributesDTO? get attributes;
   @override
   @JsonKey(ignore: true)
   _$$StationDTOCopyWith<_$StationDTO> get copyWith =>
@@ -3205,7 +3213,9 @@ class _$MusicVideoDTO extends MusicVideoDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MusicVideoDTOToJson(this);
+    return _$$MusicVideoDTOToJson(
+      this,
+    );
   }
 }
 
@@ -3223,14 +3233,13 @@ abstract class MusicVideoDTO extends ResourceDTO {
       _$MusicVideoDTO.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get type => throw _privateConstructorUsedError;
-  MusicVideoAttributesDTO? get attributes => throw _privateConstructorUsedError;
-  MusicVideoRelationshipsDTO? get relationships =>
-      throw _privateConstructorUsedError;
-  Map<String, ResourceViewDTO>? get views => throw _privateConstructorUsedError;
-  ResourceMetaDTO? get meta => throw _privateConstructorUsedError;
+  String get type;
+  MusicVideoAttributesDTO? get attributes;
+  MusicVideoRelationshipsDTO? get relationships;
+  Map<String, ResourceViewDTO>? get views;
+  ResourceMetaDTO? get meta;
   @override
   @JsonKey(ignore: true)
   _$$MusicVideoDTOCopyWith<_$MusicVideoDTO> get copyWith =>
@@ -3604,7 +3613,9 @@ class _$CuratorDTO extends CuratorDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CuratorDTOToJson(this);
+    return _$$CuratorDTOToJson(
+      this,
+    );
   }
 }
 
@@ -3620,12 +3631,11 @@ abstract class CuratorDTO extends ResourceDTO {
       _$CuratorDTO.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get type => throw _privateConstructorUsedError;
-  CuratorAttributesDTO? get attributes => throw _privateConstructorUsedError;
-  CuratorRelationshipsDTO? get relationships =>
-      throw _privateConstructorUsedError;
+  String get type;
+  CuratorAttributesDTO? get attributes;
+  CuratorRelationshipsDTO? get relationships;
   @override
   @JsonKey(ignore: true)
   _$$CuratorDTOCopyWith<_$CuratorDTO> get copyWith =>
@@ -3969,7 +3979,9 @@ class _$GenreDTO extends GenreDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GenreDTOToJson(this);
+    return _$$GenreDTOToJson(
+      this,
+    );
   }
 }
 
@@ -3981,10 +3993,10 @@ abstract class GenreDTO extends ResourceDTO {
   factory GenreDTO.fromJson(Map<String, dynamic> json) = _$GenreDTO.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get type => throw _privateConstructorUsedError;
-  GenreAttributesDTO? get attributes => throw _privateConstructorUsedError;
+  String get type;
+  GenreAttributesDTO? get attributes;
   @override
   @JsonKey(ignore: true)
   _$$GenreDTOCopyWith<_$GenreDTO> get copyWith =>
@@ -4151,7 +4163,9 @@ class _$_ResourceMeta extends _ResourceMeta {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResourceMetaToJson(this);
+    return _$$_ResourceMetaToJson(
+      this,
+    );
   }
 }
 
@@ -4165,9 +4179,9 @@ abstract class _ResourceMeta extends ResourceMetaDTO {
       _$_ResourceMeta.fromJson;
 
   @override
-  ResourceMetaOrderDTO? get views => throw _privateConstructorUsedError;
+  ResourceMetaOrderDTO? get views;
   @override
-  ResourceMetaOrderDTO? get results => throw _privateConstructorUsedError;
+  ResourceMetaOrderDTO? get results;
   @override
   @JsonKey(ignore: true)
   _$$_ResourceMetaCopyWith<_$_ResourceMeta> get copyWith =>
@@ -4297,7 +4311,9 @@ class _$_ResourceMetaOrderDTO extends _ResourceMetaOrderDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResourceMetaOrderDTOToJson(this);
+    return _$$_ResourceMetaOrderDTOToJson(
+      this,
+    );
   }
 }
 
@@ -4310,7 +4326,7 @@ abstract class _ResourceMetaOrderDTO extends ResourceMetaOrderDTO {
       _$_ResourceMetaOrderDTO.fromJson;
 
   @override
-  List<String>? get order => throw _privateConstructorUsedError;
+  List<String>? get order;
   @override
   @JsonKey(ignore: true)
   _$$_ResourceMetaOrderDTOCopyWith<_$_ResourceMetaOrderDTO> get copyWith =>

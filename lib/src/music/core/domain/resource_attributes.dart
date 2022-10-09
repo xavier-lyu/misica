@@ -115,7 +115,7 @@ class SongAttributes with _$SongAttributes {
     required String name,
     required PlayParams? playParams,
     required List<Map<String, dynamic>>? previews,
-    required int trackNumber,
+    required int? trackNumber,
     required String? url,
   }) = _SongAttributes;
 

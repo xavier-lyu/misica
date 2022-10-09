@@ -142,7 +142,9 @@ class _$_PlayParams extends _PlayParams {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlayParamsToJson(this);
+    return _$$_PlayParamsToJson(
+      this,
+    );
   }
 }
 
@@ -155,9 +157,9 @@ abstract class _PlayParams extends PlayParams {
       _$_PlayParams.fromJson;
 
   @override
-  String get id => throw _privateConstructorUsedError;
+  String get id;
   @override
-  String get kind => throw _privateConstructorUsedError;
+  String get kind;
   @override
   @JsonKey(ignore: true)
   _$$_PlayParamsCopyWith<_$_PlayParams> get copyWith =>

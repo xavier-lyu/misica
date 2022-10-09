@@ -190,7 +190,9 @@ class _$_ResourceViewDTO extends _ResourceViewDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResourceViewDTOToJson(this);
+    return _$$_ResourceViewDTOToJson(
+      this,
+    );
   }
 }
 
@@ -206,13 +208,12 @@ abstract class _ResourceViewDTO extends ResourceViewDTO {
       _$_ResourceViewDTO.fromJson;
 
   @override
-  String get href => throw _privateConstructorUsedError;
+  String get href;
   @override
-  ResourceViewAttributesDTO get attributes =>
-      throw _privateConstructorUsedError;
+  ResourceViewAttributesDTO get attributes;
   @override
   @ResourceDTOConverter()
-  List<ResourceDTO> get data => throw _privateConstructorUsedError;
+  List<ResourceDTO> get data;
   @override
   @JsonKey(ignore: true)
   _$$_ResourceViewDTOCopyWith<_$_ResourceViewDTO> get copyWith =>
@@ -338,7 +339,9 @@ class _$_ResourceViewAttributesDTO extends _ResourceViewAttributesDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResourceViewAttributesDTOToJson(this);
+    return _$$_ResourceViewAttributesDTOToJson(
+      this,
+    );
   }
 }
 
@@ -351,7 +354,7 @@ abstract class _ResourceViewAttributesDTO extends ResourceViewAttributesDTO {
       _$_ResourceViewAttributesDTO.fromJson;
 
   @override
-  String get title => throw _privateConstructorUsedError;
+  String get title;
   @override
   @JsonKey(ignore: true)
   _$$_ResourceViewAttributesDTOCopyWith<_$_ResourceViewAttributesDTO>

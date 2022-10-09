@@ -17,6 +17,6 @@ final albumsNotifierProvider =
     StateNotifierProvider.autoDispose<AlbumsNotfier, AsyncValue<Album>>(
   (ref) => AlbumsNotfier(
     ref.watch(albumsRepositoryProvider),
-    ref.read,
+    ref,
   ),
 );

@@ -183,12 +183,11 @@ abstract class _Recommendation implements Recommendation {
       _$_Recommendation;
 
   @override
-  String get title => throw _privateConstructorUsedError;
+  String get title;
   @override
-  List<Resource>? get contents => throw _privateConstructorUsedError;
+  List<Resource>? get contents;
   @override
-  List<Recommendation>? get recommendations =>
-      throw _privateConstructorUsedError;
+  List<Recommendation>? get recommendations;
   @override
   @JsonKey(ignore: true)
   _$$_RecommendationCopyWith<_$_Recommendation> get copyWith =>

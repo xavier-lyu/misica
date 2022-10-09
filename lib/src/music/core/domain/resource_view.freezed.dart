@@ -148,9 +148,9 @@ abstract class _ResourceView extends ResourceView {
   const _ResourceView._() : super._();
 
   @override
-  List<Resource> get data => throw _privateConstructorUsedError;
+  List<Resource> get data;
   @override
-  String get title => throw _privateConstructorUsedError;
+  String get title;
   @override
   @JsonKey(ignore: true)
   _$$_ResourceViewCopyWith<_$_ResourceView> get copyWith =>

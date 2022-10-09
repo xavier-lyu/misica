@@ -7,16 +7,16 @@ publish_to: "none"
 version: 1.0.4+1
 
 environment:
-  sdk: ">=2.17.1 <3.0.0"
+  sdk: ">=2.18.2 <3.0.0"
 
 dependencies:
   app_settings: ^4.1.6
-  auto_route: ^4.0.1
+  auto_route: ^5.0.0
   auto_size_text: ^3.0.0
   cached_network_image: ^3.2.1
   dio: ^4.0.6
   dio_cache_interceptor: ^3.2.7
-  dio_cache_interceptor_sembast_store: ^1.0.0
+  dio_cache_interceptor_sembast_store: ^1.1.0
   duration: ^3.0.11
   expandable_text: ^2.3.0
   flutter:
@@ -24,12 +24,12 @@ dependencies:
   flutter_hooks: ^0.18.4
   flutter_localizations:
     sdk: flutter
-  flutter_secure_storage: ^5.0.2
+  flutter_secure_storage: ^6.0.0
   fpdart: ^0.2.0
   freezed_annotation: ^2.0.3
-  hooks_riverpod: ^2.0.0-dev.9
+  hooks_riverpod: ^2.0.2
   intl: ^0.17.0
-  json_annotation: ^4.5.0
+  json_annotation: ^4.7.0
   jwt_decoder: ^2.0.1
   material_floating_search_bar: ^0.3.7
   modal_bottom_sheet: ^2.1.0
@@ -44,11 +44,11 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
-  freezed: ^2.0.3+1
-  build_runner: ^2.1.11
+  freezed: ^2.1.0+1
+  build_runner: ^2.2.1
   json_serializable: ^6.2.0
-  auto_route_generator: ^4.0.0
-  retrofit_generator: ^4.0.1
+  auto_route_generator: ^5.0.0
+  retrofit_generator: ^4.2.0
 
 dependency_overrides:
   material_floating_search_bar:

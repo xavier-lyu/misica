@@ -124,7 +124,9 @@ class _$_Settings extends _Settings {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SettingsToJson(this);
+    return _$$_SettingsToJson(
+      this,
+    );
   }
 }
 
@@ -135,7 +137,7 @@ abstract class _Settings extends Settings {
   factory _Settings.fromJson(Map<String, dynamic> json) = _$_Settings.fromJson;
 
   @override
-  ThemeMode get themeMode => throw _privateConstructorUsedError;
+  ThemeMode get themeMode;
   @override
   @JsonKey(ignore: true)
   _$$_SettingsCopyWith<_$_Settings> get copyWith =>

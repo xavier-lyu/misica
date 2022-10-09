@@ -132,7 +132,7 @@ abstract class _SearchResults extends SearchResults {
   const _SearchResults._() : super._();
 
   @override
-  Map<String, SearchResult>? get results => throw _privateConstructorUsedError;
+  Map<String, SearchResult>? get results;
   @override
   @JsonKey(ignore: true)
   _$$_SearchResultsCopyWith<_$_SearchResults> get copyWith =>
@@ -290,11 +290,11 @@ abstract class _SearchResult extends SearchResult {
   const _SearchResult._() : super._();
 
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  String get groupId => throw _privateConstructorUsedError;
+  String get groupId;
   @override
-  List<Resource> get data => throw _privateConstructorUsedError;
+  List<Resource> get data;
   @override
   @JsonKey(ignore: true)
   _$$_SearchResultCopyWith<_$_SearchResult> get copyWith =>
