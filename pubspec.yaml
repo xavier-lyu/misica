@@ -4,7 +4,7 @@ description: Yet another Apple Music Player.
 # Prevent accidental publishing to pub.dev.
 publish_to: "none"
 
-version: 1.0.4+1
+version: 1.0.5+1
 
 environment:
   sdk: ">=2.18.2 <3.0.0"
