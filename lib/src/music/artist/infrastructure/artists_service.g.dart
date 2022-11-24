@@ -37,7 +37,7 @@ class _ArtistsService implements ArtistsService {
     )
             .compose(
               _dio.options,
-              '/catalog/${storefront}/artists/${id}?omit[resource]=autos&views=featured-release,full-albums,appears-on-albums,featured-albums,featured-on-albums,singles,compilation-albums,live-albums,latest-release,music-videos,similar-artists,top-songs,playlists,more-to-hear,more-to-see&extend=artistBio,bornOrFormed,editorialArtwork,editorialVideo,isGroup,origin,hero&extend[playlists]=trackCount&omit[resource:songs]=relationships&fields[albums]=artistName,artistUrl,artwork,contentRating,editorialArtwork,name,playParams,releaseDate,url,trackCount&limit[artists:top-songs]=20&art[url]=f',
+              '/catalog/${storefront}/artists/${id}?omit[resource]=autos&views=featured-release,full-albums,appears-on-albums,featured-albums,featured-on-albums,singles,compilation-albums,live-albums,latest-release,music-videos,similar-artists,top-songs,playlists,more-to-hear,more-to-see&extend=artistBio,bornOrFormed,editorialVideo,isGroup,origin&extend[playlists]=trackCount&omit[resource:songs]=relationships&fields[albums]=artistName,artistUrl,artwork,contentRating,editorialArtwork,name,playParams,releaseDate,url,trackCount&limit[artists:top-songs]=20&art[url]=f',
               queryParameters: queryParameters,
               data: _data,
             )
