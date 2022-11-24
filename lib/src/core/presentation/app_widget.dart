@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -28,7 +29,7 @@ final initializationProvider = FutureProvider<Unit>((ref) async {
   }
 
   ref.read(musicDioProvider).interceptors.addAll([
-    LogInterceptor(),
+    LogInterceptor(responseBody: kDebugMode),
     newSembastCacheInterceptor(ref.read(sembastProvider).instance),
     ref.watch(musicAuthIntercepter),
   ]);

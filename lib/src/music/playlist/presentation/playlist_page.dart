@@ -47,72 +47,76 @@ class _PlaylistPageState extends ConsumerState<PlaylistPage> {
     final tracksState = ref.watch(playlistTracksNotifierProvider);
 
     return Scaffold(
-      body: state.maybeWhen(
-        orElse: () => SliverRetryView(
-          onRetry: () => ref
-              .read(playlistsNotifierProvider.notifier)
-              .fetchCatalogPlaylist(widget.id),
-        ),
-        loading: () => const SliverLoader(),
-        data: (playlist) => HookScrollView(
-          onOffsetChanged: (offset) => scrollOffset.value = offset,
-          slivers: [
-            SliverAppBar(
-              title: scrollOffset.value >= 264
-                  ? Text(
-                      playlist.name,
-                      style: context.ttoc.titleLarge,
-                    )
-                  : null,
-              pinned: true,
-              actions: [
-                ResourceContextMenuButton(resource: playlist),
-              ],
-            ),
-            SliverPadding(
-              padding: const EdgeInsetsDirectional.only(
-                top: PADDING_M,
-                start: PADDING_M,
-                end: PADDING_M,
+      body: Padding(
+        padding: const EdgeInsets.only(bottom: NOW_PLAYING_BAR_HEIGHT),
+        child: state.maybeWhen(
+          orElse: () => SliverRetryView(
+            onRetry: () => ref
+                .read(playlistsNotifierProvider.notifier)
+                .fetchCatalogPlaylist(widget.id),
+          ),
+          loading: () => const SliverLoader(),
+          data: (playlist) => HookScrollView(
+            onOffsetChanged: (offset) => scrollOffset.value = offset,
+            slivers: [
+              SliverAppBar(
+                title: scrollOffset.value >= 264
+                    ? Text(
+                        playlist.name,
+                        style: context.ttoc.titleLarge,
+                      )
+                    : null,
+                pinned: true,
+                actions: [
+                  ResourceContextMenuButton(resource: playlist),
+                ],
               ),
-              sliver: SliverToBoxAdapter(
-                child: PlaylistHeaderView(playlist: playlist),
-              ),
-            ),
-            SliverPadding(
-              padding: const EdgeInsetsDirectional.only(
-                top: PADDING_M,
-                start: PADDING_M,
-                end: PADDING_M,
-                bottom: 44,
-              ),
-              sliver: tracksState.when(
-                error: (_, __) => SliverToBoxAdapter(child: Container()),
-                loading: () => const SliverToBoxAdapter(
-                  child: Loader(),
+              SliverPadding(
+                padding: const EdgeInsetsDirectional.only(
+                  top: PADDING_M,
+                  start: PADDING_M,
+                  end: PADDING_M,
                 ),
-                data: (tracks) {
-                  return TracksList(
-                    tracks: tracks,
-                    indent: 70.0,
-                    itemBuilder: (_, index) => PlaylistTrackTile(
-                      track: tracks[index],
-                      onTap: () => ref
-                          .read(musicPlayerProvider)
-                          .playTracks(tracks: tracks, startingAt: index),
-                    ),
-                    footerBuilder: (_) => Padding(
-                      padding: const EdgeInsetsDirectional.only(top: PADDING_M),
-                      child: PlaylistFooterView(
-                        songsCount: tracks.length,
-                        duration: durationOfSongs(tracks),
-                      ),
-                    ),
-                  );
-                },
+                sliver: SliverToBoxAdapter(
+                  child: PlaylistHeaderView(playlist: playlist),
+                ),
               ),
-            ),
-          ],
+              SliverPadding(
+                padding: const EdgeInsetsDirectional.only(
+                  top: PADDING_M,
+                  start: PADDING_M,
+                  end: PADDING_M,
+                  bottom: PADDING_L,
+                ),
+                sliver: tracksState.when(
+                  error: (_, __) => SliverToBoxAdapter(child: Container()),
+                  loading: () => const SliverToBoxAdapter(
+                    child: Loader(),
+                  ),
+                  data: (tracks) {
+                    return TracksList(
+                      tracks: tracks,
+                      indent: 70.0,
+                      itemBuilder: (_, index) => PlaylistTrackTile(
+                        track: tracks[index],
+                        onTap: () => ref
+                            .read(musicPlayerProvider)
+                            .playTracks(tracks: tracks, startingAt: index),
+                      ),
+                      footerBuilder: (_) => Padding(
+                        padding:
+                            const EdgeInsetsDirectional.only(top: PADDING_M),
+                        child: PlaylistFooterView(
+                          songsCount: tracks.length,
+                          duration: durationOfSongs(tracks),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

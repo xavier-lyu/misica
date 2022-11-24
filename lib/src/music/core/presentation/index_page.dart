@@ -12,10 +12,10 @@ class IndexPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
       routes: const [
-        HomeRoute(),
-        RadioRoute(),
-        LibraryRoute(),
-        SearchRoute(),
+        HomeTab(),
+        RadioTab(),
+        LibraryTab(),
+        SearchTab(),
       ],
       bottomNavigationBuilder: (_, tabsRouter) {
         return SalomonBottomBar(

@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
+import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/domain/song.dart';
@@ -53,49 +54,52 @@ class ResourceMenuModal extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       child: SafeArea(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ListTile(
-              leading: ArtworkWidget(
-                artwork: resource.artwork,
-                width: 48,
-                height: 48,
+        child: Padding(
+          padding: const EdgeInsets.only(bottom: NOW_PLAYING_BAR_HEIGHT),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ListTile(
+                leading: ArtworkWidget(
+                  artwork: resource.artwork,
+                  width: 48,
+                  height: 48,
+                ),
+                title: Text(resource.name),
+                subtitle: resource.creatorName?.isNotEmpty == true
+                    ? Text(resource.creatorName!)
+                    : null,
+                trailing: const CloseButton(),
               ),
-              title: Text(resource.name),
-              subtitle: resource.creatorName?.isNotEmpty == true
-                  ? Text(resource.creatorName!)
-                  : null,
-              trailing: const CloseButton(),
-            ),
-            const Divider(),
-            LikeOrUnlikeWidget(
-              resource: resource,
-              builder: (context, value) => ListTile(
-                leading: Icon(value
-                    ? Icons.favorite_rounded
-                    : Icons.favorite_border_rounded),
-                title: Text(value ? context.loc.liked : context.loc.like),
+              const Divider(),
+              LikeOrUnlikeWidget(
+                resource: resource,
+                builder: (context, value) => ListTile(
+                  leading: Icon(value
+                      ? Icons.favorite_rounded
+                      : Icons.favorite_border_rounded),
+                  title: Text(value ? context.loc.liked : context.loc.like),
+                ),
               ),
-            ),
-            ...resource.maybeMap(
-              (value) => [],
-              orElse: () => [],
-              song: (_) {
-                final isInAlbum = container == ResourceContainer.album;
-                if (isInAlbum) return [];
+              ...resource.maybeMap(
+                (value) => [],
+                orElse: () => [],
+                song: (_) {
+                  final isInAlbum = container == ResourceContainer.album;
+                  if (isInAlbum) return [];
 
-                return [
-                  _.albumId == null
-                      ? const SizedBox()
-                      : GoToAlbumTile(albumId: _.albumId!),
-                  _.artistIds?.isNotEmpty == true
-                      ? GoToArtistTile(artistId: _.artistIds![0])
-                      : const SizedBox(),
-                ];
-              },
-            ),
-          ],
+                  return [
+                    _.albumId == null
+                        ? const SizedBox()
+                        : GoToAlbumTile(albumId: _.albumId!),
+                    _.artistIds?.isNotEmpty == true
+                        ? GoToArtistTile(artistId: _.artistIds![0])
+                        : const SizedBox(),
+                  ];
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );

@@ -42,77 +42,80 @@ class _AlbumPageState extends ConsumerState<AlbumPage> {
     final state = ref.watch(albumsNotifierProvider);
 
     return Scaffold(
-      body: state.maybeWhen(
-        orElse: () => CustomScrollView(
-          slivers: [
-            const SliverAppBar(),
-            SliverFillRemaining(
-              child: RetryWidget(onRetry: () {
-                ref
-                    .read(albumsNotifierProvider.notifier)
-                    .fetchCatalogAlbum(widget.id);
-              }),
-            )
-          ],
-        ),
-        loading: () => const SliverLoader(),
-        data: (album) => HookScrollView(
-          onOffsetChanged: (offset) => scrollOffset.value = offset,
-          slivers: [
-            SliverAppBar(
-              title: scrollOffset.value >= 264
-                  ? Text(
-                      album.name,
-                      style: context.ttoc.titleLarge,
-                    )
-                  : null,
-              pinned: true,
-              actions: [
-                ResourceContextMenuButton(resource: album),
-              ],
-            ),
-            SliverPadding(
-              padding: const EdgeInsetsDirectional.only(
-                top: PADDING_M,
-                start: PADDING_M,
-                end: PADDING_M,
+      body: Padding(
+        padding: const EdgeInsets.only(bottom: NOW_PLAYING_BAR_HEIGHT),
+        child: state.maybeWhen(
+          orElse: () => CustomScrollView(
+            slivers: [
+              const SliverAppBar(),
+              SliverFillRemaining(
+                child: RetryWidget(onRetry: () {
+                  ref
+                      .read(albumsNotifierProvider.notifier)
+                      .fetchCatalogAlbum(widget.id);
+                }),
+              )
+            ],
+          ),
+          loading: () => const SliverLoader(),
+          data: (album) => HookScrollView(
+            onOffsetChanged: (offset) => scrollOffset.value = offset,
+            slivers: [
+              SliverAppBar(
+                title: scrollOffset.value >= 264
+                    ? Text(
+                        album.name,
+                        style: context.ttoc.titleLarge,
+                      )
+                    : null,
+                pinned: true,
+                actions: [
+                  ResourceContextMenuButton(resource: album),
+                ],
               ),
-              sliver: SliverToBoxAdapter(
-                child: AlbumHeaderView(album: album),
-              ),
-            ),
-            SliverPadding(
-              padding: const EdgeInsetsDirectional.only(
-                top: PADDING_M,
-                start: PADDING_M,
-                end: PADDING_M,
-              ),
-              sliver: TracksList(
-                tracks: album.tracks,
-                indent: 30.0,
-                itemBuilder: (context, index) => AlbumTrackTile(
-                  track: album.tracks[index],
-                  onTap: () => ref
-                      .read(musicPlayerProvider)
-                      .playTracks(tracks: album.tracks, startingAt: index),
+              SliverPadding(
+                padding: const EdgeInsetsDirectional.only(
+                  top: PADDING_M,
+                  start: PADDING_M,
+                  end: PADDING_M,
+                ),
+                sliver: SliverToBoxAdapter(
+                  child: AlbumHeaderView(album: album),
                 ),
               ),
-            ),
-            SliverPadding(
-              padding: const EdgeInsetsDirectional.fromSTEB(
-                PADDING_M,
-                PADDING_S,
-                PADDING_M,
-                PADDING_S,
+              SliverPadding(
+                padding: const EdgeInsetsDirectional.only(
+                  top: PADDING_M,
+                  start: PADDING_M,
+                  end: PADDING_M,
+                ),
+                sliver: TracksList(
+                  tracks: album.tracks,
+                  indent: 30.0,
+                  itemBuilder: (context, index) => AlbumTrackTile(
+                    track: album.tracks[index],
+                    onTap: () => ref
+                        .read(musicPlayerProvider)
+                        .playTracks(tracks: album.tracks, startingAt: index),
+                  ),
+                ),
               ),
-              sliver: SliverToBoxAdapter(
-                  child: AlbumFooter(
-                album: album,
-              )),
-            ),
-            if (album.views?.isNotEmpty == true)
-              ResourceViewsList(views: album.views!),
-          ],
+              SliverPadding(
+                padding: const EdgeInsetsDirectional.fromSTEB(
+                  PADDING_M,
+                  PADDING_S,
+                  PADDING_M,
+                  PADDING_S,
+                ),
+                sliver: SliverToBoxAdapter(
+                    child: AlbumFooter(
+                  album: album,
+                )),
+              ),
+              if (album.views?.isNotEmpty == true)
+                ResourceViewsList(views: album.views!),
+            ],
+          ),
         ),
       ),
     );
