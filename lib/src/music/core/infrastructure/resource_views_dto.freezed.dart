@@ -36,7 +36,8 @@ mixin _$ResourceViewDTO {
 abstract class $ResourceViewDTOCopyWith<$Res> {
   factory $ResourceViewDTOCopyWith(
           ResourceViewDTO value, $Res Function(ResourceViewDTO) then) =
-      _$ResourceViewDTOCopyWithImpl<$Res>;
+      _$ResourceViewDTOCopyWithImpl<$Res, ResourceViewDTO>;
+  @useResult
   $Res call(
       {String href,
       ResourceViewAttributesDTO attributes,
@@ -46,40 +47,43 @@ abstract class $ResourceViewDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResourceViewDTOCopyWithImpl<$Res>
+class _$ResourceViewDTOCopyWithImpl<$Res, $Val extends ResourceViewDTO>
     implements $ResourceViewDTOCopyWith<$Res> {
   _$ResourceViewDTOCopyWithImpl(this._value, this._then);
 
-  final ResourceViewDTO _value;
   // ignore: unused_field
-  final $Res Function(ResourceViewDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? href = freezed,
-    Object? attributes = freezed,
-    Object? data = freezed,
+    Object? href = null,
+    Object? attributes = null,
+    Object? data = null,
   }) {
     return _then(_value.copyWith(
-      href: href == freezed
+      href: null == href
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes: attributes == freezed
+      attributes: null == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as ResourceViewAttributesDTO,
-      data: data == freezed
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<ResourceDTO>,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceViewAttributesDTOCopyWith<$Res> get attributes {
     return $ResourceViewAttributesDTOCopyWith<$Res>(_value.attributes, (value) {
-      return _then(_value.copyWith(attributes: value));
+      return _then(_value.copyWith(attributes: value) as $Val);
     });
   }
 }
@@ -91,6 +95,7 @@ abstract class _$$_ResourceViewDTOCopyWith<$Res>
           _$_ResourceViewDTO value, $Res Function(_$_ResourceViewDTO) then) =
       __$$_ResourceViewDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String href,
       ResourceViewAttributesDTO attributes,
@@ -102,31 +107,29 @@ abstract class _$$_ResourceViewDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_ResourceViewDTOCopyWithImpl<$Res>
-    extends _$ResourceViewDTOCopyWithImpl<$Res>
+    extends _$ResourceViewDTOCopyWithImpl<$Res, _$_ResourceViewDTO>
     implements _$$_ResourceViewDTOCopyWith<$Res> {
   __$$_ResourceViewDTOCopyWithImpl(
       _$_ResourceViewDTO _value, $Res Function(_$_ResourceViewDTO) _then)
-      : super(_value, (v) => _then(v as _$_ResourceViewDTO));
+      : super(_value, _then);
 
-  @override
-  _$_ResourceViewDTO get _value => super._value as _$_ResourceViewDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? href = freezed,
-    Object? attributes = freezed,
-    Object? data = freezed,
+    Object? href = null,
+    Object? attributes = null,
+    Object? data = null,
   }) {
     return _then(_$_ResourceViewDTO(
-      href: href == freezed
+      href: null == href
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes: attributes == freezed
+      attributes: null == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as ResourceViewAttributesDTO,
-      data: data == freezed
+      data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as List<ResourceDTO>,
@@ -169,22 +172,20 @@ class _$_ResourceViewDTO extends _ResourceViewDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ResourceViewDTO &&
-            const DeepCollectionEquality().equals(other.href, href) &&
-            const DeepCollectionEquality()
-                .equals(other.attributes, attributes) &&
+            (identical(other.href, href) || other.href == href) &&
+            (identical(other.attributes, attributes) ||
+                other.attributes == attributes) &&
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(href),
-      const DeepCollectionEquality().hash(attributes),
+  int get hashCode => Object.hash(runtimeType, href, attributes,
       const DeepCollectionEquality().hash(_data));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ResourceViewDTOCopyWith<_$_ResourceViewDTO> get copyWith =>
       __$$_ResourceViewDTOCopyWithImpl<_$_ResourceViewDTO>(this, _$identity);
 
@@ -239,29 +240,33 @@ mixin _$ResourceViewAttributesDTO {
 abstract class $ResourceViewAttributesDTOCopyWith<$Res> {
   factory $ResourceViewAttributesDTOCopyWith(ResourceViewAttributesDTO value,
           $Res Function(ResourceViewAttributesDTO) then) =
-      _$ResourceViewAttributesDTOCopyWithImpl<$Res>;
+      _$ResourceViewAttributesDTOCopyWithImpl<$Res, ResourceViewAttributesDTO>;
+  @useResult
   $Res call({String title});
 }
 
 /// @nodoc
-class _$ResourceViewAttributesDTOCopyWithImpl<$Res>
+class _$ResourceViewAttributesDTOCopyWithImpl<$Res,
+        $Val extends ResourceViewAttributesDTO>
     implements $ResourceViewAttributesDTOCopyWith<$Res> {
   _$ResourceViewAttributesDTOCopyWithImpl(this._value, this._then);
 
-  final ResourceViewAttributesDTO _value;
   // ignore: unused_field
-  final $Res Function(ResourceViewAttributesDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = freezed,
+    Object? title = null,
   }) {
     return _then(_value.copyWith(
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -273,28 +278,27 @@ abstract class _$$_ResourceViewAttributesDTOCopyWith<$Res>
           $Res Function(_$_ResourceViewAttributesDTO) then) =
       __$$_ResourceViewAttributesDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String title});
 }
 
 /// @nodoc
 class __$$_ResourceViewAttributesDTOCopyWithImpl<$Res>
-    extends _$ResourceViewAttributesDTOCopyWithImpl<$Res>
+    extends _$ResourceViewAttributesDTOCopyWithImpl<$Res,
+        _$_ResourceViewAttributesDTO>
     implements _$$_ResourceViewAttributesDTOCopyWith<$Res> {
   __$$_ResourceViewAttributesDTOCopyWithImpl(
       _$_ResourceViewAttributesDTO _value,
       $Res Function(_$_ResourceViewAttributesDTO) _then)
-      : super(_value, (v) => _then(v as _$_ResourceViewAttributesDTO));
+      : super(_value, _then);
 
-  @override
-  _$_ResourceViewAttributesDTO get _value =>
-      super._value as _$_ResourceViewAttributesDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = freezed,
+    Object? title = null,
   }) {
     return _then(_$_ResourceViewAttributesDTO(
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
@@ -323,16 +327,16 @@ class _$_ResourceViewAttributesDTO extends _ResourceViewAttributesDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ResourceViewAttributesDTO &&
-            const DeepCollectionEquality().equals(other.title, title));
+            (identical(other.title, title) || other.title == title));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(title));
+  int get hashCode => Object.hash(runtimeType, title);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ResourceViewAttributesDTOCopyWith<_$_ResourceViewAttributesDTO>
       get copyWith => __$$_ResourceViewAttributesDTOCopyWithImpl<
           _$_ResourceViewAttributesDTO>(this, _$identity);

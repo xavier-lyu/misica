@@ -28,33 +28,37 @@ mixin _$ResourceView {
 abstract class $ResourceViewCopyWith<$Res> {
   factory $ResourceViewCopyWith(
           ResourceView value, $Res Function(ResourceView) then) =
-      _$ResourceViewCopyWithImpl<$Res>;
+      _$ResourceViewCopyWithImpl<$Res, ResourceView>;
+  @useResult
   $Res call({List<Resource> data, String title});
 }
 
 /// @nodoc
-class _$ResourceViewCopyWithImpl<$Res> implements $ResourceViewCopyWith<$Res> {
+class _$ResourceViewCopyWithImpl<$Res, $Val extends ResourceView>
+    implements $ResourceViewCopyWith<$Res> {
   _$ResourceViewCopyWithImpl(this._value, this._then);
 
-  final ResourceView _value;
   // ignore: unused_field
-  final $Res Function(ResourceView) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = freezed,
-    Object? title = freezed,
+    Object? data = null,
+    Object? title = null,
   }) {
     return _then(_value.copyWith(
-      data: data == freezed
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<Resource>,
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -65,31 +69,30 @@ abstract class _$$_ResourceViewCopyWith<$Res>
           _$_ResourceView value, $Res Function(_$_ResourceView) then) =
       __$$_ResourceViewCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({List<Resource> data, String title});
 }
 
 /// @nodoc
 class __$$_ResourceViewCopyWithImpl<$Res>
-    extends _$ResourceViewCopyWithImpl<$Res>
+    extends _$ResourceViewCopyWithImpl<$Res, _$_ResourceView>
     implements _$$_ResourceViewCopyWith<$Res> {
   __$$_ResourceViewCopyWithImpl(
       _$_ResourceView _value, $Res Function(_$_ResourceView) _then)
-      : super(_value, (v) => _then(v as _$_ResourceView));
+      : super(_value, _then);
 
-  @override
-  _$_ResourceView get _value => super._value as _$_ResourceView;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = freezed,
-    Object? title = freezed,
+    Object? data = null,
+    Object? title = null,
   }) {
     return _then(_$_ResourceView(
-      data: data == freezed
+      data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as List<Resource>,
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
@@ -126,17 +129,16 @@ class _$_ResourceView extends _ResourceView {
         (other.runtimeType == runtimeType &&
             other is _$_ResourceView &&
             const DeepCollectionEquality().equals(other._data, _data) &&
-            const DeepCollectionEquality().equals(other.title, title));
+            (identical(other.title, title) || other.title == title));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_data),
-      const DeepCollectionEquality().hash(title));
+      runtimeType, const DeepCollectionEquality().hash(_data), title);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ResourceViewCopyWith<_$_ResourceView> get copyWith =>
       __$$_ResourceViewCopyWithImpl<_$_ResourceView>(this, _$identity);
 }

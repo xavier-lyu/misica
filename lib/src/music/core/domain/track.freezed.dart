@@ -24,8 +24,8 @@ mixin _$Track {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Song value)? song,
-    TResult Function(MusicVideo value)? musicVideo,
+    TResult? Function(Song value)? song,
+    TResult? Function(MusicVideo value)? musicVideo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -43,8 +43,8 @@ mixin _$Track {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackSong value)? song,
-    TResult Function(TrackMusicVideo value)? musicVideo,
+    TResult? Function(TrackSong value)? song,
+    TResult? Function(TrackMusicVideo value)? musicVideo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,16 +59,18 @@ mixin _$Track {
 /// @nodoc
 abstract class $TrackCopyWith<$Res> {
   factory $TrackCopyWith(Track value, $Res Function(Track) then) =
-      _$TrackCopyWithImpl<$Res>;
+      _$TrackCopyWithImpl<$Res, Track>;
 }
 
 /// @nodoc
-class _$TrackCopyWithImpl<$Res> implements $TrackCopyWith<$Res> {
+class _$TrackCopyWithImpl<$Res, $Val extends Track>
+    implements $TrackCopyWith<$Res> {
   _$TrackCopyWithImpl(this._value, this._then);
 
-  final Track _value;
   // ignore: unused_field
-  final $Res Function(Track) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
@@ -76,25 +78,25 @@ abstract class _$$TrackSongCopyWith<$Res> {
   factory _$$TrackSongCopyWith(
           _$TrackSong value, $Res Function(_$TrackSong) then) =
       __$$TrackSongCopyWithImpl<$Res>;
+  @useResult
   $Res call({Song value});
 }
 
 /// @nodoc
-class __$$TrackSongCopyWithImpl<$Res> extends _$TrackCopyWithImpl<$Res>
+class __$$TrackSongCopyWithImpl<$Res>
+    extends _$TrackCopyWithImpl<$Res, _$TrackSong>
     implements _$$TrackSongCopyWith<$Res> {
   __$$TrackSongCopyWithImpl(
       _$TrackSong _value, $Res Function(_$TrackSong) _then)
-      : super(_value, (v) => _then(v as _$TrackSong));
+      : super(_value, _then);
 
-  @override
-  _$TrackSong get _value => super._value as _$TrackSong;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
+    Object? value = null,
   }) {
     return _then(_$TrackSong(
-      value == freezed
+      null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as Song,
@@ -129,6 +131,7 @@ class _$TrackSong extends TrackSong {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$TrackSongCopyWith<_$TrackSong> get copyWith =>
       __$$TrackSongCopyWithImpl<_$TrackSong>(this, _$identity);
 
@@ -144,8 +147,8 @@ class _$TrackSong extends TrackSong {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Song value)? song,
-    TResult Function(MusicVideo value)? musicVideo,
+    TResult? Function(Song value)? song,
+    TResult? Function(MusicVideo value)? musicVideo,
   }) {
     return song?.call(value);
   }
@@ -175,8 +178,8 @@ class _$TrackSong extends TrackSong {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackSong value)? song,
-    TResult Function(TrackMusicVideo value)? musicVideo,
+    TResult? Function(TrackSong value)? song,
+    TResult? Function(TrackMusicVideo value)? musicVideo,
   }) {
     return song?.call(this);
   }
@@ -210,25 +213,25 @@ abstract class _$$TrackMusicVideoCopyWith<$Res> {
   factory _$$TrackMusicVideoCopyWith(
           _$TrackMusicVideo value, $Res Function(_$TrackMusicVideo) then) =
       __$$TrackMusicVideoCopyWithImpl<$Res>;
+  @useResult
   $Res call({MusicVideo value});
 }
 
 /// @nodoc
-class __$$TrackMusicVideoCopyWithImpl<$Res> extends _$TrackCopyWithImpl<$Res>
+class __$$TrackMusicVideoCopyWithImpl<$Res>
+    extends _$TrackCopyWithImpl<$Res, _$TrackMusicVideo>
     implements _$$TrackMusicVideoCopyWith<$Res> {
   __$$TrackMusicVideoCopyWithImpl(
       _$TrackMusicVideo _value, $Res Function(_$TrackMusicVideo) _then)
-      : super(_value, (v) => _then(v as _$TrackMusicVideo));
+      : super(_value, _then);
 
-  @override
-  _$TrackMusicVideo get _value => super._value as _$TrackMusicVideo;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
+    Object? value = null,
   }) {
     return _then(_$TrackMusicVideo(
-      value == freezed
+      null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as MusicVideo,
@@ -263,6 +266,7 @@ class _$TrackMusicVideo extends TrackMusicVideo {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$TrackMusicVideoCopyWith<_$TrackMusicVideo> get copyWith =>
       __$$TrackMusicVideoCopyWithImpl<_$TrackMusicVideo>(this, _$identity);
 
@@ -278,8 +282,8 @@ class _$TrackMusicVideo extends TrackMusicVideo {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(Song value)? song,
-    TResult Function(MusicVideo value)? musicVideo,
+    TResult? Function(Song value)? song,
+    TResult? Function(MusicVideo value)? musicVideo,
   }) {
     return musicVideo?.call(value);
   }
@@ -309,8 +313,8 @@ class _$TrackMusicVideo extends TrackMusicVideo {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(TrackSong value)? song,
-    TResult Function(TrackMusicVideo value)? musicVideo,
+    TResult? Function(TrackSong value)? song,
+    TResult? Function(TrackMusicVideo value)? musicVideo,
   }) {
     return musicVideo?.call(this);
   }

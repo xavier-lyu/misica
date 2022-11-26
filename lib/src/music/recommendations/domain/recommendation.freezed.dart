@@ -30,7 +30,8 @@ mixin _$Recommendation {
 abstract class $RecommendationCopyWith<$Res> {
   factory $RecommendationCopyWith(
           Recommendation value, $Res Function(Recommendation) then) =
-      _$RecommendationCopyWithImpl<$Res>;
+      _$RecommendationCopyWithImpl<$Res, Recommendation>;
+  @useResult
   $Res call(
       {String title,
       List<Resource>? contents,
@@ -38,34 +39,36 @@ abstract class $RecommendationCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RecommendationCopyWithImpl<$Res>
+class _$RecommendationCopyWithImpl<$Res, $Val extends Recommendation>
     implements $RecommendationCopyWith<$Res> {
   _$RecommendationCopyWithImpl(this._value, this._then);
 
-  final Recommendation _value;
   // ignore: unused_field
-  final $Res Function(Recommendation) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = freezed,
+    Object? title = null,
     Object? contents = freezed,
     Object? recommendations = freezed,
   }) {
     return _then(_value.copyWith(
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      contents: contents == freezed
+      contents: freezed == contents
           ? _value.contents
           : contents // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      recommendations: recommendations == freezed
+      recommendations: freezed == recommendations
           ? _value.recommendations
           : recommendations // ignore: cast_nullable_to_non_nullable
               as List<Recommendation>?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -76,6 +79,7 @@ abstract class _$$_RecommendationCopyWith<$Res>
           _$_Recommendation value, $Res Function(_$_Recommendation) then) =
       __$$_RecommendationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String title,
       List<Resource>? contents,
@@ -84,31 +88,29 @@ abstract class _$$_RecommendationCopyWith<$Res>
 
 /// @nodoc
 class __$$_RecommendationCopyWithImpl<$Res>
-    extends _$RecommendationCopyWithImpl<$Res>
+    extends _$RecommendationCopyWithImpl<$Res, _$_Recommendation>
     implements _$$_RecommendationCopyWith<$Res> {
   __$$_RecommendationCopyWithImpl(
       _$_Recommendation _value, $Res Function(_$_Recommendation) _then)
-      : super(_value, (v) => _then(v as _$_Recommendation));
+      : super(_value, _then);
 
-  @override
-  _$_Recommendation get _value => super._value as _$_Recommendation;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? title = freezed,
+    Object? title = null,
     Object? contents = freezed,
     Object? recommendations = freezed,
   }) {
     return _then(_$_Recommendation(
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      contents: contents == freezed
+      contents: freezed == contents
           ? _value._contents
           : contents // ignore: cast_nullable_to_non_nullable
               as List<Resource>?,
-      recommendations: recommendations == freezed
+      recommendations: freezed == recommendations
           ? _value._recommendations
           : recommendations // ignore: cast_nullable_to_non_nullable
               as List<Recommendation>?,
@@ -156,7 +158,7 @@ class _$_Recommendation implements _Recommendation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Recommendation &&
-            const DeepCollectionEquality().equals(other.title, title) &&
+            (identical(other.title, title) || other.title == title) &&
             const DeepCollectionEquality().equals(other._contents, _contents) &&
             const DeepCollectionEquality()
                 .equals(other._recommendations, _recommendations));
@@ -165,12 +167,13 @@ class _$_Recommendation implements _Recommendation {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(title),
+      title,
       const DeepCollectionEquality().hash(_contents),
       const DeepCollectionEquality().hash(_recommendations));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_RecommendationCopyWith<_$_Recommendation> get copyWith =>
       __$$_RecommendationCopyWithImpl<_$_Recommendation>(this, _$identity);
 }

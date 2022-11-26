@@ -34,34 +34,38 @@ mixin _$RecommendationsResponse {
 abstract class $RecommendationsResponseCopyWith<$Res> {
   factory $RecommendationsResponseCopyWith(RecommendationsResponse value,
           $Res Function(RecommendationsResponse) then) =
-      _$RecommendationsResponseCopyWithImpl<$Res>;
+      _$RecommendationsResponseCopyWithImpl<$Res, RecommendationsResponse>;
+  @useResult
   $Res call({String? next, List<RecommendationDTO> data});
 }
 
 /// @nodoc
-class _$RecommendationsResponseCopyWithImpl<$Res>
+class _$RecommendationsResponseCopyWithImpl<$Res,
+        $Val extends RecommendationsResponse>
     implements $RecommendationsResponseCopyWith<$Res> {
   _$RecommendationsResponseCopyWithImpl(this._value, this._then);
 
-  final RecommendationsResponse _value;
   // ignore: unused_field
-  final $Res Function(RecommendationsResponse) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? next = freezed,
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_value.copyWith(
-      next: next == freezed
+      next: freezed == next
           ? _value.next
           : next // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: data == freezed
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<RecommendationDTO>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -72,32 +76,31 @@ abstract class _$$_RecommendationsResponseCopyWith<$Res>
           $Res Function(_$_RecommendationsResponse) then) =
       __$$_RecommendationsResponseCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String? next, List<RecommendationDTO> data});
 }
 
 /// @nodoc
 class __$$_RecommendationsResponseCopyWithImpl<$Res>
-    extends _$RecommendationsResponseCopyWithImpl<$Res>
+    extends _$RecommendationsResponseCopyWithImpl<$Res,
+        _$_RecommendationsResponse>
     implements _$$_RecommendationsResponseCopyWith<$Res> {
   __$$_RecommendationsResponseCopyWithImpl(_$_RecommendationsResponse _value,
       $Res Function(_$_RecommendationsResponse) _then)
-      : super(_value, (v) => _then(v as _$_RecommendationsResponse));
+      : super(_value, _then);
 
-  @override
-  _$_RecommendationsResponse get _value =>
-      super._value as _$_RecommendationsResponse;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? next = freezed,
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_$_RecommendationsResponse(
-      next: next == freezed
+      next: freezed == next
           ? _value.next
           : next // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: data == freezed
+      data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as List<RecommendationDTO>,
@@ -135,19 +138,18 @@ class _$_RecommendationsResponse extends _RecommendationsResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_RecommendationsResponse &&
-            const DeepCollectionEquality().equals(other.next, next) &&
+            (identical(other.next, next) || other.next == next) &&
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(next),
-      const DeepCollectionEquality().hash(_data));
+      runtimeType, next, const DeepCollectionEquality().hash(_data));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_RecommendationsResponseCopyWith<_$_RecommendationsResponse>
       get copyWith =>
           __$$_RecommendationsResponseCopyWithImpl<_$_RecommendationsResponse>(
@@ -202,7 +204,8 @@ mixin _$RecommendationDTO {
 abstract class $RecommendationDTOCopyWith<$Res> {
   factory $RecommendationDTOCopyWith(
           RecommendationDTO value, $Res Function(RecommendationDTO) then) =
-      _$RecommendationDTOCopyWithImpl<$Res>;
+      _$RecommendationDTOCopyWithImpl<$Res, RecommendationDTO>;
+  @useResult
   $Res call(
       {String? id,
       String type,
@@ -214,53 +217,57 @@ abstract class $RecommendationDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RecommendationDTOCopyWithImpl<$Res>
+class _$RecommendationDTOCopyWithImpl<$Res, $Val extends RecommendationDTO>
     implements $RecommendationDTOCopyWith<$Res> {
   _$RecommendationDTOCopyWithImpl(this._value, this._then);
 
-  final RecommendationDTO _value;
   // ignore: unused_field
-  final $Res Function(RecommendationDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
-    Object? type = freezed,
-    Object? attributes = freezed,
-    Object? relationships = freezed,
+    Object? type = null,
+    Object? attributes = null,
+    Object? relationships = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes: attributes == freezed
+      attributes: null == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as RecommendationAttributesDTO,
-      relationships: relationships == freezed
+      relationships: null == relationships
           ? _value.relationships
           : relationships // ignore: cast_nullable_to_non_nullable
               as RelationshipsDTO,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RecommendationAttributesDTOCopyWith<$Res> get attributes {
     return $RecommendationAttributesDTOCopyWith<$Res>(_value.attributes,
         (value) {
-      return _then(_value.copyWith(attributes: value));
+      return _then(_value.copyWith(attributes: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RelationshipsDTOCopyWith<$Res> get relationships {
     return $RelationshipsDTOCopyWith<$Res>(_value.relationships, (value) {
-      return _then(_value.copyWith(relationships: value));
+      return _then(_value.copyWith(relationships: value) as $Val);
     });
   }
 }
@@ -272,6 +279,7 @@ abstract class _$$_RecommendationDTOCopyWith<$Res>
           $Res Function(_$_RecommendationDTO) then) =
       __$$_RecommendationDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? id,
       String type,
@@ -286,36 +294,34 @@ abstract class _$$_RecommendationDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_RecommendationDTOCopyWithImpl<$Res>
-    extends _$RecommendationDTOCopyWithImpl<$Res>
+    extends _$RecommendationDTOCopyWithImpl<$Res, _$_RecommendationDTO>
     implements _$$_RecommendationDTOCopyWith<$Res> {
   __$$_RecommendationDTOCopyWithImpl(
       _$_RecommendationDTO _value, $Res Function(_$_RecommendationDTO) _then)
-      : super(_value, (v) => _then(v as _$_RecommendationDTO));
+      : super(_value, _then);
 
-  @override
-  _$_RecommendationDTO get _value => super._value as _$_RecommendationDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
-    Object? type = freezed,
-    Object? attributes = freezed,
-    Object? relationships = freezed,
+    Object? type = null,
+    Object? attributes = null,
+    Object? relationships = null,
   }) {
     return _then(_$_RecommendationDTO(
-      id: id == freezed
+      id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String?,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes: attributes == freezed
+      attributes: null == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as RecommendationAttributesDTO,
-      relationships: relationships == freezed
+      relationships: null == relationships
           ? _value.relationships
           : relationships // ignore: cast_nullable_to_non_nullable
               as RelationshipsDTO,
@@ -355,25 +361,22 @@ class _$_RecommendationDTO extends _RecommendationDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_RecommendationDTO &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.attributes, attributes) &&
-            const DeepCollectionEquality()
-                .equals(other.relationships, relationships));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.attributes, attributes) ||
+                other.attributes == attributes) &&
+            (identical(other.relationships, relationships) ||
+                other.relationships == relationships));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes),
-      const DeepCollectionEquality().hash(relationships));
+  int get hashCode =>
+      Object.hash(runtimeType, id, type, attributes, relationships);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_RecommendationDTOCopyWith<_$_RecommendationDTO> get copyWith =>
       __$$_RecommendationDTOCopyWithImpl<_$_RecommendationDTO>(
           this, _$identity);
@@ -431,7 +434,8 @@ mixin _$RelationshipsDTO {
 abstract class $RelationshipsDTOCopyWith<$Res> {
   factory $RelationshipsDTOCopyWith(
           RelationshipsDTO value, $Res Function(RelationshipsDTO) then) =
-      _$RelationshipsDTOCopyWithImpl<$Res>;
+      _$RelationshipsDTOCopyWithImpl<$Res, RelationshipsDTO>;
+  @useResult
   $Res call(
       {RelationshipContentsDTO? contents,
       RelationshipRecommendationsDTO? recommendations});
@@ -441,43 +445,47 @@ abstract class $RelationshipsDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RelationshipsDTOCopyWithImpl<$Res>
+class _$RelationshipsDTOCopyWithImpl<$Res, $Val extends RelationshipsDTO>
     implements $RelationshipsDTOCopyWith<$Res> {
   _$RelationshipsDTOCopyWithImpl(this._value, this._then);
 
-  final RelationshipsDTO _value;
   // ignore: unused_field
-  final $Res Function(RelationshipsDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? contents = freezed,
     Object? recommendations = freezed,
   }) {
     return _then(_value.copyWith(
-      contents: contents == freezed
+      contents: freezed == contents
           ? _value.contents
           : contents // ignore: cast_nullable_to_non_nullable
               as RelationshipContentsDTO?,
-      recommendations: recommendations == freezed
+      recommendations: freezed == recommendations
           ? _value.recommendations
           : recommendations // ignore: cast_nullable_to_non_nullable
               as RelationshipRecommendationsDTO?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RelationshipContentsDTOCopyWith<$Res>? get contents {
     if (_value.contents == null) {
       return null;
     }
 
     return $RelationshipContentsDTOCopyWith<$Res>(_value.contents!, (value) {
-      return _then(_value.copyWith(contents: value));
+      return _then(_value.copyWith(contents: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $RelationshipRecommendationsDTOCopyWith<$Res>? get recommendations {
     if (_value.recommendations == null) {
       return null;
@@ -485,7 +493,7 @@ class _$RelationshipsDTOCopyWithImpl<$Res>
 
     return $RelationshipRecommendationsDTOCopyWith<$Res>(
         _value.recommendations!, (value) {
-      return _then(_value.copyWith(recommendations: value));
+      return _then(_value.copyWith(recommendations: value) as $Val);
     });
   }
 }
@@ -497,6 +505,7 @@ abstract class _$$_RelationshipsDTOCopyWith<$Res>
           _$_RelationshipsDTO value, $Res Function(_$_RelationshipsDTO) then) =
       __$$_RelationshipsDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {RelationshipContentsDTO? contents,
       RelationshipRecommendationsDTO? recommendations});
@@ -509,26 +518,24 @@ abstract class _$$_RelationshipsDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_RelationshipsDTOCopyWithImpl<$Res>
-    extends _$RelationshipsDTOCopyWithImpl<$Res>
+    extends _$RelationshipsDTOCopyWithImpl<$Res, _$_RelationshipsDTO>
     implements _$$_RelationshipsDTOCopyWith<$Res> {
   __$$_RelationshipsDTOCopyWithImpl(
       _$_RelationshipsDTO _value, $Res Function(_$_RelationshipsDTO) _then)
-      : super(_value, (v) => _then(v as _$_RelationshipsDTO));
+      : super(_value, _then);
 
-  @override
-  _$_RelationshipsDTO get _value => super._value as _$_RelationshipsDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? contents = freezed,
     Object? recommendations = freezed,
   }) {
     return _then(_$_RelationshipsDTO(
-      contents: contents == freezed
+      contents: freezed == contents
           ? _value.contents
           : contents // ignore: cast_nullable_to_non_nullable
               as RelationshipContentsDTO?,
-      recommendations: recommendations == freezed
+      recommendations: freezed == recommendations
           ? _value.recommendations
           : recommendations // ignore: cast_nullable_to_non_nullable
               as RelationshipRecommendationsDTO?,
@@ -559,20 +566,19 @@ class _$_RelationshipsDTO extends _RelationshipsDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_RelationshipsDTO &&
-            const DeepCollectionEquality().equals(other.contents, contents) &&
-            const DeepCollectionEquality()
-                .equals(other.recommendations, recommendations));
+            (identical(other.contents, contents) ||
+                other.contents == contents) &&
+            (identical(other.recommendations, recommendations) ||
+                other.recommendations == recommendations));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(contents),
-      const DeepCollectionEquality().hash(recommendations));
+  int get hashCode => Object.hash(runtimeType, contents, recommendations);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_RelationshipsDTOCopyWith<_$_RelationshipsDTO> get copyWith =>
       __$$_RelationshipsDTOCopyWithImpl<_$_RelationshipsDTO>(this, _$identity);
 
@@ -625,34 +631,39 @@ abstract class $RelationshipRecommendationsDTOCopyWith<$Res> {
   factory $RelationshipRecommendationsDTOCopyWith(
           RelationshipRecommendationsDTO value,
           $Res Function(RelationshipRecommendationsDTO) then) =
-      _$RelationshipRecommendationsDTOCopyWithImpl<$Res>;
+      _$RelationshipRecommendationsDTOCopyWithImpl<$Res,
+          RelationshipRecommendationsDTO>;
+  @useResult
   $Res call({String? href, List<RecommendationDTO> data});
 }
 
 /// @nodoc
-class _$RelationshipRecommendationsDTOCopyWithImpl<$Res>
+class _$RelationshipRecommendationsDTOCopyWithImpl<$Res,
+        $Val extends RelationshipRecommendationsDTO>
     implements $RelationshipRecommendationsDTOCopyWith<$Res> {
   _$RelationshipRecommendationsDTOCopyWithImpl(this._value, this._then);
 
-  final RelationshipRecommendationsDTO _value;
   // ignore: unused_field
-  final $Res Function(RelationshipRecommendationsDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? href = freezed,
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_value.copyWith(
-      href: href == freezed
+      href: freezed == href
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: data == freezed
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<RecommendationDTO>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -664,33 +675,32 @@ abstract class _$$_RelationshipRecommendationsDTOCopyWith<$Res>
           $Res Function(_$_RelationshipRecommendationsDTO) then) =
       __$$_RelationshipRecommendationsDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String? href, List<RecommendationDTO> data});
 }
 
 /// @nodoc
 class __$$_RelationshipRecommendationsDTOCopyWithImpl<$Res>
-    extends _$RelationshipRecommendationsDTOCopyWithImpl<$Res>
+    extends _$RelationshipRecommendationsDTOCopyWithImpl<$Res,
+        _$_RelationshipRecommendationsDTO>
     implements _$$_RelationshipRecommendationsDTOCopyWith<$Res> {
   __$$_RelationshipRecommendationsDTOCopyWithImpl(
       _$_RelationshipRecommendationsDTO _value,
       $Res Function(_$_RelationshipRecommendationsDTO) _then)
-      : super(_value, (v) => _then(v as _$_RelationshipRecommendationsDTO));
+      : super(_value, _then);
 
-  @override
-  _$_RelationshipRecommendationsDTO get _value =>
-      super._value as _$_RelationshipRecommendationsDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? href = freezed,
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_$_RelationshipRecommendationsDTO(
-      href: href == freezed
+      href: freezed == href
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: data == freezed
+      data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as List<RecommendationDTO>,
@@ -730,19 +740,18 @@ class _$_RelationshipRecommendationsDTO
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_RelationshipRecommendationsDTO &&
-            const DeepCollectionEquality().equals(other.href, href) &&
+            (identical(other.href, href) || other.href == href) &&
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(href),
-      const DeepCollectionEquality().hash(_data));
+      runtimeType, href, const DeepCollectionEquality().hash(_data));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_RelationshipRecommendationsDTOCopyWith<_$_RelationshipRecommendationsDTO>
       get copyWith => __$$_RelationshipRecommendationsDTOCopyWithImpl<
           _$_RelationshipRecommendationsDTO>(this, _$identity);
@@ -796,34 +805,38 @@ mixin _$RelationshipContentsDTO {
 abstract class $RelationshipContentsDTOCopyWith<$Res> {
   factory $RelationshipContentsDTOCopyWith(RelationshipContentsDTO value,
           $Res Function(RelationshipContentsDTO) then) =
-      _$RelationshipContentsDTOCopyWithImpl<$Res>;
+      _$RelationshipContentsDTOCopyWithImpl<$Res, RelationshipContentsDTO>;
+  @useResult
   $Res call({String? href, @ResourceDTOConverter() List<ResourceDTO> data});
 }
 
 /// @nodoc
-class _$RelationshipContentsDTOCopyWithImpl<$Res>
+class _$RelationshipContentsDTOCopyWithImpl<$Res,
+        $Val extends RelationshipContentsDTO>
     implements $RelationshipContentsDTOCopyWith<$Res> {
   _$RelationshipContentsDTOCopyWithImpl(this._value, this._then);
 
-  final RelationshipContentsDTO _value;
   // ignore: unused_field
-  final $Res Function(RelationshipContentsDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? href = freezed,
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_value.copyWith(
-      href: href == freezed
+      href: freezed == href
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: data == freezed
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<ResourceDTO>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -834,32 +847,31 @@ abstract class _$$_RelationshipContentsDTOCopyWith<$Res>
           $Res Function(_$_RelationshipContentsDTO) then) =
       __$$_RelationshipContentsDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String? href, @ResourceDTOConverter() List<ResourceDTO> data});
 }
 
 /// @nodoc
 class __$$_RelationshipContentsDTOCopyWithImpl<$Res>
-    extends _$RelationshipContentsDTOCopyWithImpl<$Res>
+    extends _$RelationshipContentsDTOCopyWithImpl<$Res,
+        _$_RelationshipContentsDTO>
     implements _$$_RelationshipContentsDTOCopyWith<$Res> {
   __$$_RelationshipContentsDTOCopyWithImpl(_$_RelationshipContentsDTO _value,
       $Res Function(_$_RelationshipContentsDTO) _then)
-      : super(_value, (v) => _then(v as _$_RelationshipContentsDTO));
+      : super(_value, _then);
 
-  @override
-  _$_RelationshipContentsDTO get _value =>
-      super._value as _$_RelationshipContentsDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? href = freezed,
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_$_RelationshipContentsDTO(
-      href: href == freezed
+      href: freezed == href
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: data == freezed
+      data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as List<ResourceDTO>,
@@ -899,19 +911,18 @@ class _$_RelationshipContentsDTO extends _RelationshipContentsDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_RelationshipContentsDTO &&
-            const DeepCollectionEquality().equals(other.href, href) &&
+            (identical(other.href, href) || other.href == href) &&
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(href),
-      const DeepCollectionEquality().hash(_data));
+      runtimeType, href, const DeepCollectionEquality().hash(_data));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_RelationshipContentsDTOCopyWith<_$_RelationshipContentsDTO>
       get copyWith =>
           __$$_RelationshipContentsDTOCopyWithImpl<_$_RelationshipContentsDTO>(
@@ -970,7 +981,9 @@ abstract class $RecommendationAttributesDTOCopyWith<$Res> {
   factory $RecommendationAttributesDTOCopyWith(
           RecommendationAttributesDTO value,
           $Res Function(RecommendationAttributesDTO) then) =
-      _$RecommendationAttributesDTOCopyWithImpl<$Res>;
+      _$RecommendationAttributesDTOCopyWithImpl<$Res,
+          RecommendationAttributesDTO>;
+  @useResult
   $Res call(
       {bool? isGroupRecommendation,
       String? nextUpdateDate,
@@ -982,50 +995,54 @@ abstract class $RecommendationAttributesDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RecommendationAttributesDTOCopyWithImpl<$Res>
+class _$RecommendationAttributesDTOCopyWithImpl<$Res,
+        $Val extends RecommendationAttributesDTO>
     implements $RecommendationAttributesDTOCopyWith<$Res> {
   _$RecommendationAttributesDTOCopyWithImpl(this._value, this._then);
 
-  final RecommendationAttributesDTO _value;
   // ignore: unused_field
-  final $Res Function(RecommendationAttributesDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? isGroupRecommendation = freezed,
     Object? nextUpdateDate = freezed,
     Object? resourceTypes = freezed,
-    Object? title = freezed,
+    Object? title = null,
     Object? kind = freezed,
   }) {
     return _then(_value.copyWith(
-      isGroupRecommendation: isGroupRecommendation == freezed
+      isGroupRecommendation: freezed == isGroupRecommendation
           ? _value.isGroupRecommendation
           : isGroupRecommendation // ignore: cast_nullable_to_non_nullable
               as bool?,
-      nextUpdateDate: nextUpdateDate == freezed
+      nextUpdateDate: freezed == nextUpdateDate
           ? _value.nextUpdateDate
           : nextUpdateDate // ignore: cast_nullable_to_non_nullable
               as String?,
-      resourceTypes: resourceTypes == freezed
+      resourceTypes: freezed == resourceTypes
           ? _value.resourceTypes
           : resourceTypes // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as ResourceTitleDTO,
-      kind: kind == freezed
+      kind: freezed == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceTitleDTOCopyWith<$Res> get title {
     return $ResourceTitleDTOCopyWith<$Res>(_value.title, (value) {
-      return _then(_value.copyWith(title: value));
+      return _then(_value.copyWith(title: value) as $Val);
     });
   }
 }
@@ -1038,6 +1055,7 @@ abstract class _$$_RecommendationAttributesDTOCopyWith<$Res>
           $Res Function(_$_RecommendationAttributesDTO) then) =
       __$$_RecommendationAttributesDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {bool? isGroupRecommendation,
       String? nextUpdateDate,
@@ -1051,43 +1069,41 @@ abstract class _$$_RecommendationAttributesDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_RecommendationAttributesDTOCopyWithImpl<$Res>
-    extends _$RecommendationAttributesDTOCopyWithImpl<$Res>
+    extends _$RecommendationAttributesDTOCopyWithImpl<$Res,
+        _$_RecommendationAttributesDTO>
     implements _$$_RecommendationAttributesDTOCopyWith<$Res> {
   __$$_RecommendationAttributesDTOCopyWithImpl(
       _$_RecommendationAttributesDTO _value,
       $Res Function(_$_RecommendationAttributesDTO) _then)
-      : super(_value, (v) => _then(v as _$_RecommendationAttributesDTO));
+      : super(_value, _then);
 
-  @override
-  _$_RecommendationAttributesDTO get _value =>
-      super._value as _$_RecommendationAttributesDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? isGroupRecommendation = freezed,
     Object? nextUpdateDate = freezed,
     Object? resourceTypes = freezed,
-    Object? title = freezed,
+    Object? title = null,
     Object? kind = freezed,
   }) {
     return _then(_$_RecommendationAttributesDTO(
-      isGroupRecommendation: isGroupRecommendation == freezed
+      isGroupRecommendation: freezed == isGroupRecommendation
           ? _value.isGroupRecommendation
           : isGroupRecommendation // ignore: cast_nullable_to_non_nullable
               as bool?,
-      nextUpdateDate: nextUpdateDate == freezed
+      nextUpdateDate: freezed == nextUpdateDate
           ? _value.nextUpdateDate
           : nextUpdateDate // ignore: cast_nullable_to_non_nullable
               as String?,
-      resourceTypes: resourceTypes == freezed
+      resourceTypes: freezed == resourceTypes
           ? _value._resourceTypes
           : resourceTypes // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      title: title == freezed
+      title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as ResourceTitleDTO,
-      kind: kind == freezed
+      kind: freezed == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -1138,28 +1154,29 @@ class _$_RecommendationAttributesDTO extends _RecommendationAttributesDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_RecommendationAttributesDTO &&
-            const DeepCollectionEquality()
-                .equals(other.isGroupRecommendation, isGroupRecommendation) &&
-            const DeepCollectionEquality()
-                .equals(other.nextUpdateDate, nextUpdateDate) &&
+            (identical(other.isGroupRecommendation, isGroupRecommendation) ||
+                other.isGroupRecommendation == isGroupRecommendation) &&
+            (identical(other.nextUpdateDate, nextUpdateDate) ||
+                other.nextUpdateDate == nextUpdateDate) &&
             const DeepCollectionEquality()
                 .equals(other._resourceTypes, _resourceTypes) &&
-            const DeepCollectionEquality().equals(other.title, title) &&
-            const DeepCollectionEquality().equals(other.kind, kind));
+            (identical(other.title, title) || other.title == title) &&
+            (identical(other.kind, kind) || other.kind == kind));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(isGroupRecommendation),
-      const DeepCollectionEquality().hash(nextUpdateDate),
+      isGroupRecommendation,
+      nextUpdateDate,
       const DeepCollectionEquality().hash(_resourceTypes),
-      const DeepCollectionEquality().hash(title),
-      const DeepCollectionEquality().hash(kind));
+      title,
+      kind);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_RecommendationAttributesDTOCopyWith<_$_RecommendationAttributesDTO>
       get copyWith => __$$_RecommendationAttributesDTOCopyWithImpl<
           _$_RecommendationAttributesDTO>(this, _$identity);
@@ -1219,29 +1236,32 @@ mixin _$ResourceTitleDTO {
 abstract class $ResourceTitleDTOCopyWith<$Res> {
   factory $ResourceTitleDTOCopyWith(
           ResourceTitleDTO value, $Res Function(ResourceTitleDTO) then) =
-      _$ResourceTitleDTOCopyWithImpl<$Res>;
+      _$ResourceTitleDTOCopyWithImpl<$Res, ResourceTitleDTO>;
+  @useResult
   $Res call({String stringForDisplay});
 }
 
 /// @nodoc
-class _$ResourceTitleDTOCopyWithImpl<$Res>
+class _$ResourceTitleDTOCopyWithImpl<$Res, $Val extends ResourceTitleDTO>
     implements $ResourceTitleDTOCopyWith<$Res> {
   _$ResourceTitleDTOCopyWithImpl(this._value, this._then);
 
-  final ResourceTitleDTO _value;
   // ignore: unused_field
-  final $Res Function(ResourceTitleDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? stringForDisplay = freezed,
+    Object? stringForDisplay = null,
   }) {
     return _then(_value.copyWith(
-      stringForDisplay: stringForDisplay == freezed
+      stringForDisplay: null == stringForDisplay
           ? _value.stringForDisplay
           : stringForDisplay // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1252,26 +1272,25 @@ abstract class _$$_ResourceTitleDTOCopyWith<$Res>
           _$_ResourceTitleDTO value, $Res Function(_$_ResourceTitleDTO) then) =
       __$$_ResourceTitleDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String stringForDisplay});
 }
 
 /// @nodoc
 class __$$_ResourceTitleDTOCopyWithImpl<$Res>
-    extends _$ResourceTitleDTOCopyWithImpl<$Res>
+    extends _$ResourceTitleDTOCopyWithImpl<$Res, _$_ResourceTitleDTO>
     implements _$$_ResourceTitleDTOCopyWith<$Res> {
   __$$_ResourceTitleDTOCopyWithImpl(
       _$_ResourceTitleDTO _value, $Res Function(_$_ResourceTitleDTO) _then)
-      : super(_value, (v) => _then(v as _$_ResourceTitleDTO));
+      : super(_value, _then);
 
-  @override
-  _$_ResourceTitleDTO get _value => super._value as _$_ResourceTitleDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? stringForDisplay = freezed,
+    Object? stringForDisplay = null,
   }) {
     return _then(_$_ResourceTitleDTO(
-      stringForDisplay: stringForDisplay == freezed
+      stringForDisplay: null == stringForDisplay
           ? _value.stringForDisplay
           : stringForDisplay // ignore: cast_nullable_to_non_nullable
               as String,
@@ -1300,17 +1319,17 @@ class _$_ResourceTitleDTO extends _ResourceTitleDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ResourceTitleDTO &&
-            const DeepCollectionEquality()
-                .equals(other.stringForDisplay, stringForDisplay));
+            (identical(other.stringForDisplay, stringForDisplay) ||
+                other.stringForDisplay == stringForDisplay));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(stringForDisplay));
+  int get hashCode => Object.hash(runtimeType, stringForDisplay);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ResourceTitleDTOCopyWith<_$_ResourceTitleDTO> get copyWith =>
       __$$_ResourceTitleDTOCopyWithImpl<_$_ResourceTitleDTO>(this, _$identity);
 

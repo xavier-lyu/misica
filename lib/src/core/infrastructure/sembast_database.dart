@@ -11,11 +11,12 @@ class SembastDatabase {
 
   Future<void> init() async {
     if (_hasBeenInitialized) return;
-    _hasBeenInitialized = true;
 
     final dbDirectory = await getApplicationDocumentsDirectory();
     dbDirectory.create(recursive: true);
     final dbPath = join(dbDirectory.path, 'misica.db');
     _instance = await databaseFactoryIo.openDatabase(dbPath);
+
+    _hasBeenInitialized = true;
   }
 }

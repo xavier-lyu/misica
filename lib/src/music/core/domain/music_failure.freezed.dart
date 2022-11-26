@@ -24,7 +24,7 @@ mixin _$MusicFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int? errCode)? api,
+    TResult? Function(int? errCode)? api,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,7 +40,7 @@ mixin _$MusicFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_API value)? api,
+    TResult? Function(_API value)? api,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -59,28 +59,32 @@ mixin _$MusicFailure {
 abstract class $MusicFailureCopyWith<$Res> {
   factory $MusicFailureCopyWith(
           MusicFailure value, $Res Function(MusicFailure) then) =
-      _$MusicFailureCopyWithImpl<$Res>;
+      _$MusicFailureCopyWithImpl<$Res, MusicFailure>;
+  @useResult
   $Res call({int? errCode});
 }
 
 /// @nodoc
-class _$MusicFailureCopyWithImpl<$Res> implements $MusicFailureCopyWith<$Res> {
+class _$MusicFailureCopyWithImpl<$Res, $Val extends MusicFailure>
+    implements $MusicFailureCopyWith<$Res> {
   _$MusicFailureCopyWithImpl(this._value, this._then);
 
-  final MusicFailure _value;
   // ignore: unused_field
-  final $Res Function(MusicFailure) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? errCode = freezed,
   }) {
     return _then(_value.copyWith(
-      errCode: errCode == freezed
+      errCode: freezed == errCode
           ? _value.errCode
           : errCode // ignore: cast_nullable_to_non_nullable
               as int?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -89,24 +93,24 @@ abstract class _$$_APICopyWith<$Res> implements $MusicFailureCopyWith<$Res> {
   factory _$$_APICopyWith(_$_API value, $Res Function(_$_API) then) =
       __$$_APICopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int? errCode});
 }
 
 /// @nodoc
-class __$$_APICopyWithImpl<$Res> extends _$MusicFailureCopyWithImpl<$Res>
+class __$$_APICopyWithImpl<$Res>
+    extends _$MusicFailureCopyWithImpl<$Res, _$_API>
     implements _$$_APICopyWith<$Res> {
   __$$_APICopyWithImpl(_$_API _value, $Res Function(_$_API) _then)
-      : super(_value, (v) => _then(v as _$_API));
+      : super(_value, _then);
 
-  @override
-  _$_API get _value => super._value as _$_API;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? errCode = freezed,
   }) {
     return _then(_$_API(
-      errCode == freezed
+      freezed == errCode
           ? _value.errCode
           : errCode // ignore: cast_nullable_to_non_nullable
               as int?,
@@ -132,15 +136,15 @@ class _$_API extends _API {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_API &&
-            const DeepCollectionEquality().equals(other.errCode, errCode));
+            (identical(other.errCode, errCode) || other.errCode == errCode));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(errCode));
+  int get hashCode => Object.hash(runtimeType, errCode);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_APICopyWith<_$_API> get copyWith =>
       __$$_APICopyWithImpl<_$_API>(this, _$identity);
 
@@ -155,7 +159,7 @@ class _$_API extends _API {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int? errCode)? api,
+    TResult? Function(int? errCode)? api,
   }) {
     return api?.call(errCode);
   }
@@ -183,7 +187,7 @@ class _$_API extends _API {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_API value)? api,
+    TResult? Function(_API value)? api,
   }) {
     return api?.call(this);
   }

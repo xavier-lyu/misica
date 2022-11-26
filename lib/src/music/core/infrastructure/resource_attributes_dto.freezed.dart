@@ -50,7 +50,8 @@ mixin _$AlbumAttributesDTO {
 abstract class $AlbumAttributesDTOCopyWith<$Res> {
   factory $AlbumAttributesDTOCopyWith(
           AlbumAttributesDTO value, $Res Function(AlbumAttributesDTO) then) =
-      _$AlbumAttributesDTOCopyWithImpl<$Res>;
+      _$AlbumAttributesDTOCopyWithImpl<$Res, AlbumAttributesDTO>;
+  @useResult
   $Res call(
       {String artistName,
       String? artistUrl,
@@ -77,17 +78,19 @@ abstract class $AlbumAttributesDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AlbumAttributesDTOCopyWithImpl<$Res>
+class _$AlbumAttributesDTOCopyWithImpl<$Res, $Val extends AlbumAttributesDTO>
     implements $AlbumAttributesDTOCopyWith<$Res> {
   _$AlbumAttributesDTOCopyWithImpl(this._value, this._then);
 
-  final AlbumAttributesDTO _value;
   // ignore: unused_field
-  final $Res Function(AlbumAttributesDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? artistName = freezed,
+    Object? artistName = null,
     Object? artistUrl = freezed,
     Object? artwork = freezed,
     Object? copyright = freezed,
@@ -99,7 +102,7 @@ class _$AlbumAttributesDTOCopyWithImpl<$Res>
     Object? isComplete = freezed,
     Object? isMasteredForItunes = freezed,
     Object? isSingle = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? playParams = freezed,
     Object? recordLabel = freezed,
     Object? releaseDate = freezed,
@@ -107,111 +110,114 @@ class _$AlbumAttributesDTOCopyWithImpl<$Res>
     Object? url = freezed,
   }) {
     return _then(_value.copyWith(
-      artistName: artistName == freezed
+      artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String,
-      artistUrl: artistUrl == freezed
+      artistUrl: freezed == artistUrl
           ? _value.artistUrl
           : artistUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as ArtworkDTO?,
-      copyright: copyright == freezed
+      copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
               as String?,
-      contentRating: contentRating == freezed
+      contentRating: freezed == contentRating
           ? _value.contentRating
           : contentRating // ignore: cast_nullable_to_non_nullable
               as String?,
-      dateAdded: dateAdded == freezed
+      dateAdded: freezed == dateAdded
           ? _value.dateAdded
           : dateAdded // ignore: cast_nullable_to_non_nullable
               as String?,
-      editorialNotes: editorialNotes == freezed
+      editorialNotes: freezed == editorialNotes
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
               as EditorialNotesDTO?,
-      genreNames: genreNames == freezed
+      genreNames: freezed == genreNames
           ? _value.genreNames
           : genreNames // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      isCompilation: isCompilation == freezed
+      isCompilation: freezed == isCompilation
           ? _value.isCompilation
           : isCompilation // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isComplete: isComplete == freezed
+      isComplete: freezed == isComplete
           ? _value.isComplete
           : isComplete // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isMasteredForItunes: isMasteredForItunes == freezed
+      isMasteredForItunes: freezed == isMasteredForItunes
           ? _value.isMasteredForItunes
           : isMasteredForItunes // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isSingle: isSingle == freezed
+      isSingle: freezed == isSingle
           ? _value.isSingle
           : isSingle // ignore: cast_nullable_to_non_nullable
               as bool?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParamsDTO?,
-      recordLabel: recordLabel == freezed
+      recordLabel: freezed == recordLabel
           ? _value.recordLabel
           : recordLabel // ignore: cast_nullable_to_non_nullable
               as String?,
-      releaseDate: releaseDate == freezed
+      releaseDate: freezed == releaseDate
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      trackCount: trackCount == freezed
+      trackCount: freezed == trackCount
           ? _value.trackCount
           : trackCount // ignore: cast_nullable_to_non_nullable
               as int?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ArtworkDTOCopyWith<$Res>? get artwork {
     if (_value.artwork == null) {
       return null;
     }
 
     return $ArtworkDTOCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
+      return _then(_value.copyWith(artwork: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $EditorialNotesDTOCopyWith<$Res>? get editorialNotes {
     if (_value.editorialNotes == null) {
       return null;
     }
 
     return $EditorialNotesDTOCopyWith<$Res>(_value.editorialNotes!, (value) {
-      return _then(_value.copyWith(editorialNotes: value));
+      return _then(_value.copyWith(editorialNotes: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PlayParamsDTOCopyWith<$Res>? get playParams {
     if (_value.playParams == null) {
       return null;
     }
 
     return $PlayParamsDTOCopyWith<$Res>(_value.playParams!, (value) {
-      return _then(_value.copyWith(playParams: value));
+      return _then(_value.copyWith(playParams: value) as $Val);
     });
   }
 }
@@ -223,6 +229,7 @@ abstract class _$$_AlbumAttributesDTOCopyWith<$Res>
           $Res Function(_$_AlbumAttributesDTO) then) =
       __$$_AlbumAttributesDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String artistName,
       String? artistUrl,
@@ -253,18 +260,16 @@ abstract class _$$_AlbumAttributesDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_AlbumAttributesDTOCopyWithImpl<$Res>
-    extends _$AlbumAttributesDTOCopyWithImpl<$Res>
+    extends _$AlbumAttributesDTOCopyWithImpl<$Res, _$_AlbumAttributesDTO>
     implements _$$_AlbumAttributesDTOCopyWith<$Res> {
   __$$_AlbumAttributesDTOCopyWithImpl(
       _$_AlbumAttributesDTO _value, $Res Function(_$_AlbumAttributesDTO) _then)
-      : super(_value, (v) => _then(v as _$_AlbumAttributesDTO));
+      : super(_value, _then);
 
-  @override
-  _$_AlbumAttributesDTO get _value => super._value as _$_AlbumAttributesDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? artistName = freezed,
+    Object? artistName = null,
     Object? artistUrl = freezed,
     Object? artwork = freezed,
     Object? copyright = freezed,
@@ -276,7 +281,7 @@ class __$$_AlbumAttributesDTOCopyWithImpl<$Res>
     Object? isComplete = freezed,
     Object? isMasteredForItunes = freezed,
     Object? isSingle = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? playParams = freezed,
     Object? recordLabel = freezed,
     Object? releaseDate = freezed,
@@ -284,75 +289,75 @@ class __$$_AlbumAttributesDTOCopyWithImpl<$Res>
     Object? url = freezed,
   }) {
     return _then(_$_AlbumAttributesDTO(
-      artistName: artistName == freezed
+      artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String,
-      artistUrl: artistUrl == freezed
+      artistUrl: freezed == artistUrl
           ? _value.artistUrl
           : artistUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as ArtworkDTO?,
-      copyright: copyright == freezed
+      copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
               as String?,
-      contentRating: contentRating == freezed
+      contentRating: freezed == contentRating
           ? _value.contentRating
           : contentRating // ignore: cast_nullable_to_non_nullable
               as String?,
-      dateAdded: dateAdded == freezed
+      dateAdded: freezed == dateAdded
           ? _value.dateAdded
           : dateAdded // ignore: cast_nullable_to_non_nullable
               as String?,
-      editorialNotes: editorialNotes == freezed
+      editorialNotes: freezed == editorialNotes
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
               as EditorialNotesDTO?,
-      genreNames: genreNames == freezed
+      genreNames: freezed == genreNames
           ? _value._genreNames
           : genreNames // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      isCompilation: isCompilation == freezed
+      isCompilation: freezed == isCompilation
           ? _value.isCompilation
           : isCompilation // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isComplete: isComplete == freezed
+      isComplete: freezed == isComplete
           ? _value.isComplete
           : isComplete // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isMasteredForItunes: isMasteredForItunes == freezed
+      isMasteredForItunes: freezed == isMasteredForItunes
           ? _value.isMasteredForItunes
           : isMasteredForItunes // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isSingle: isSingle == freezed
+      isSingle: freezed == isSingle
           ? _value.isSingle
           : isSingle // ignore: cast_nullable_to_non_nullable
               as bool?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParamsDTO?,
-      recordLabel: recordLabel == freezed
+      recordLabel: freezed == recordLabel
           ? _value.recordLabel
           : recordLabel // ignore: cast_nullable_to_non_nullable
               as String?,
-      releaseDate: releaseDate == freezed
+      releaseDate: freezed == releaseDate
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      trackCount: trackCount == freezed
+      trackCount: freezed == trackCount
           ? _value.trackCount
           : trackCount // ignore: cast_nullable_to_non_nullable
               as int?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -443,62 +448,67 @@ class _$_AlbumAttributesDTO extends _AlbumAttributesDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AlbumAttributesDTO &&
-            const DeepCollectionEquality()
-                .equals(other.artistName, artistName) &&
-            const DeepCollectionEquality().equals(other.artistUrl, artistUrl) &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
-            const DeepCollectionEquality().equals(other.copyright, copyright) &&
-            const DeepCollectionEquality()
-                .equals(other.contentRating, contentRating) &&
-            const DeepCollectionEquality().equals(other.dateAdded, dateAdded) &&
-            const DeepCollectionEquality()
-                .equals(other.editorialNotes, editorialNotes) &&
+            (identical(other.artistName, artistName) ||
+                other.artistName == artistName) &&
+            (identical(other.artistUrl, artistUrl) ||
+                other.artistUrl == artistUrl) &&
+            (identical(other.artwork, artwork) || other.artwork == artwork) &&
+            (identical(other.copyright, copyright) ||
+                other.copyright == copyright) &&
+            (identical(other.contentRating, contentRating) ||
+                other.contentRating == contentRating) &&
+            (identical(other.dateAdded, dateAdded) ||
+                other.dateAdded == dateAdded) &&
+            (identical(other.editorialNotes, editorialNotes) ||
+                other.editorialNotes == editorialNotes) &&
             const DeepCollectionEquality()
                 .equals(other._genreNames, _genreNames) &&
-            const DeepCollectionEquality()
-                .equals(other.isCompilation, isCompilation) &&
-            const DeepCollectionEquality()
-                .equals(other.isComplete, isComplete) &&
-            const DeepCollectionEquality()
-                .equals(other.isMasteredForItunes, isMasteredForItunes) &&
-            const DeepCollectionEquality().equals(other.isSingle, isSingle) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.playParams, playParams) &&
-            const DeepCollectionEquality()
-                .equals(other.recordLabel, recordLabel) &&
-            const DeepCollectionEquality()
-                .equals(other.releaseDate, releaseDate) &&
-            const DeepCollectionEquality()
-                .equals(other.trackCount, trackCount) &&
-            const DeepCollectionEquality().equals(other.url, url));
+            (identical(other.isCompilation, isCompilation) ||
+                other.isCompilation == isCompilation) &&
+            (identical(other.isComplete, isComplete) ||
+                other.isComplete == isComplete) &&
+            (identical(other.isMasteredForItunes, isMasteredForItunes) ||
+                other.isMasteredForItunes == isMasteredForItunes) &&
+            (identical(other.isSingle, isSingle) ||
+                other.isSingle == isSingle) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.playParams, playParams) ||
+                other.playParams == playParams) &&
+            (identical(other.recordLabel, recordLabel) ||
+                other.recordLabel == recordLabel) &&
+            (identical(other.releaseDate, releaseDate) ||
+                other.releaseDate == releaseDate) &&
+            (identical(other.trackCount, trackCount) ||
+                other.trackCount == trackCount) &&
+            (identical(other.url, url) || other.url == url));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(artistName),
-      const DeepCollectionEquality().hash(artistUrl),
-      const DeepCollectionEquality().hash(artwork),
-      const DeepCollectionEquality().hash(copyright),
-      const DeepCollectionEquality().hash(contentRating),
-      const DeepCollectionEquality().hash(dateAdded),
-      const DeepCollectionEquality().hash(editorialNotes),
+      artistName,
+      artistUrl,
+      artwork,
+      copyright,
+      contentRating,
+      dateAdded,
+      editorialNotes,
       const DeepCollectionEquality().hash(_genreNames),
-      const DeepCollectionEquality().hash(isCompilation),
-      const DeepCollectionEquality().hash(isComplete),
-      const DeepCollectionEquality().hash(isMasteredForItunes),
-      const DeepCollectionEquality().hash(isSingle),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(playParams),
-      const DeepCollectionEquality().hash(recordLabel),
-      const DeepCollectionEquality().hash(releaseDate),
-      const DeepCollectionEquality().hash(trackCount),
-      const DeepCollectionEquality().hash(url));
+      isCompilation,
+      isComplete,
+      isMasteredForItunes,
+      isSingle,
+      name,
+      playParams,
+      recordLabel,
+      releaseDate,
+      trackCount,
+      url);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_AlbumAttributesDTOCopyWith<_$_AlbumAttributesDTO> get copyWith =>
       __$$_AlbumAttributesDTOCopyWithImpl<_$_AlbumAttributesDTO>(
           this, _$identity);
@@ -601,7 +611,8 @@ mixin _$ArtistAttributesDTO {
 abstract class $ArtistAttributesDTOCopyWith<$Res> {
   factory $ArtistAttributesDTOCopyWith(
           ArtistAttributesDTO value, $Res Function(ArtistAttributesDTO) then) =
-      _$ArtistAttributesDTOCopyWithImpl<$Res>;
+      _$ArtistAttributesDTOCopyWithImpl<$Res, ArtistAttributesDTO>;
+  @useResult
   $Res call(
       {String name,
       String? url,
@@ -614,65 +625,69 @@ abstract class $ArtistAttributesDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ArtistAttributesDTOCopyWithImpl<$Res>
+class _$ArtistAttributesDTOCopyWithImpl<$Res, $Val extends ArtistAttributesDTO>
     implements $ArtistAttributesDTOCopyWith<$Res> {
   _$ArtistAttributesDTOCopyWithImpl(this._value, this._then);
 
-  final ArtistAttributesDTO _value;
   // ignore: unused_field
-  final $Res Function(ArtistAttributesDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
+    Object? name = null,
     Object? url = freezed,
     Object? editorialNotes = freezed,
     Object? genreNames = freezed,
     Object? artwork = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      editorialNotes: editorialNotes == freezed
+      editorialNotes: freezed == editorialNotes
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
               as EditorialNotesDTO?,
-      genreNames: genreNames == freezed
+      genreNames: freezed == genreNames
           ? _value.genreNames
           : genreNames // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as ArtworkDTO?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $EditorialNotesDTOCopyWith<$Res>? get editorialNotes {
     if (_value.editorialNotes == null) {
       return null;
     }
 
     return $EditorialNotesDTOCopyWith<$Res>(_value.editorialNotes!, (value) {
-      return _then(_value.copyWith(editorialNotes: value));
+      return _then(_value.copyWith(editorialNotes: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ArtworkDTOCopyWith<$Res>? get artwork {
     if (_value.artwork == null) {
       return null;
     }
 
     return $ArtworkDTOCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
+      return _then(_value.copyWith(artwork: value) as $Val);
     });
   }
 }
@@ -684,6 +699,7 @@ abstract class _$$_ArtistAttributesDTOCopyWith<$Res>
           $Res Function(_$_ArtistAttributesDTO) then) =
       __$$_ArtistAttributesDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String name,
       String? url,
@@ -699,41 +715,39 @@ abstract class _$$_ArtistAttributesDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_ArtistAttributesDTOCopyWithImpl<$Res>
-    extends _$ArtistAttributesDTOCopyWithImpl<$Res>
+    extends _$ArtistAttributesDTOCopyWithImpl<$Res, _$_ArtistAttributesDTO>
     implements _$$_ArtistAttributesDTOCopyWith<$Res> {
   __$$_ArtistAttributesDTOCopyWithImpl(_$_ArtistAttributesDTO _value,
       $Res Function(_$_ArtistAttributesDTO) _then)
-      : super(_value, (v) => _then(v as _$_ArtistAttributesDTO));
+      : super(_value, _then);
 
-  @override
-  _$_ArtistAttributesDTO get _value => super._value as _$_ArtistAttributesDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
+    Object? name = null,
     Object? url = freezed,
     Object? editorialNotes = freezed,
     Object? genreNames = freezed,
     Object? artwork = freezed,
   }) {
     return _then(_$_ArtistAttributesDTO(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      editorialNotes: editorialNotes == freezed
+      editorialNotes: freezed == editorialNotes
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
               as EditorialNotesDTO?,
-      genreNames: genreNames == freezed
+      genreNames: freezed == genreNames
           ? _value._genreNames
           : genreNames // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as ArtworkDTO?,
@@ -784,27 +798,23 @@ class _$_ArtistAttributesDTO extends _ArtistAttributesDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ArtistAttributesDTO &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality()
-                .equals(other.editorialNotes, editorialNotes) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.editorialNotes, editorialNotes) ||
+                other.editorialNotes == editorialNotes) &&
             const DeepCollectionEquality()
                 .equals(other._genreNames, _genreNames) &&
-            const DeepCollectionEquality().equals(other.artwork, artwork));
+            (identical(other.artwork, artwork) || other.artwork == artwork));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(url),
-      const DeepCollectionEquality().hash(editorialNotes),
-      const DeepCollectionEquality().hash(_genreNames),
-      const DeepCollectionEquality().hash(artwork));
+  int get hashCode => Object.hash(runtimeType, name, url, editorialNotes,
+      const DeepCollectionEquality().hash(_genreNames), artwork);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ArtistAttributesDTOCopyWith<_$_ArtistAttributesDTO> get copyWith =>
       __$$_ArtistAttributesDTOCopyWithImpl<_$_ArtistAttributesDTO>(
           this, _$identity);
@@ -881,7 +891,8 @@ mixin _$MusicVideoAttributesDTO {
 abstract class $MusicVideoAttributesDTOCopyWith<$Res> {
   factory $MusicVideoAttributesDTOCopyWith(MusicVideoAttributesDTO value,
           $Res Function(MusicVideoAttributesDTO) then) =
-      _$MusicVideoAttributesDTOCopyWithImpl<$Res>;
+      _$MusicVideoAttributesDTOCopyWithImpl<$Res, MusicVideoAttributesDTO>;
+  @useResult
   $Res call(
       {String artistName,
       String? artistUrl,
@@ -906,26 +917,29 @@ abstract class $MusicVideoAttributesDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MusicVideoAttributesDTOCopyWithImpl<$Res>
+class _$MusicVideoAttributesDTOCopyWithImpl<$Res,
+        $Val extends MusicVideoAttributesDTO>
     implements $MusicVideoAttributesDTOCopyWith<$Res> {
   _$MusicVideoAttributesDTOCopyWithImpl(this._value, this._then);
 
-  final MusicVideoAttributesDTO _value;
   // ignore: unused_field
-  final $Res Function(MusicVideoAttributesDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? artistName = freezed,
+    Object? artistName = null,
     Object? artistUrl = freezed,
     Object? artwork = freezed,
-    Object? durationInMillis = freezed,
+    Object? durationInMillis = null,
     Object? editorialNotes = freezed,
     Object? genreNames = freezed,
     Object? has4K = freezed,
     Object? hasHDR = freezed,
     Object? isrc = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? playParams = freezed,
     Object? previews = freezed,
     Object? releaseDate = freezed,
@@ -934,103 +948,106 @@ class _$MusicVideoAttributesDTOCopyWithImpl<$Res>
     Object? contentRating = freezed,
   }) {
     return _then(_value.copyWith(
-      artistName: artistName == freezed
+      artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String,
-      artistUrl: artistUrl == freezed
+      artistUrl: freezed == artistUrl
           ? _value.artistUrl
           : artistUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as ArtworkDTO?,
-      durationInMillis: durationInMillis == freezed
+      durationInMillis: null == durationInMillis
           ? _value.durationInMillis
           : durationInMillis // ignore: cast_nullable_to_non_nullable
               as int,
-      editorialNotes: editorialNotes == freezed
+      editorialNotes: freezed == editorialNotes
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
               as EditorialNotesDTO?,
-      genreNames: genreNames == freezed
+      genreNames: freezed == genreNames
           ? _value.genreNames
           : genreNames // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      has4K: has4K == freezed
+      has4K: freezed == has4K
           ? _value.has4K
           : has4K // ignore: cast_nullable_to_non_nullable
               as bool?,
-      hasHDR: hasHDR == freezed
+      hasHDR: freezed == hasHDR
           ? _value.hasHDR
           : hasHDR // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isrc: isrc == freezed
+      isrc: freezed == isrc
           ? _value.isrc
           : isrc // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParamsDTO?,
-      previews: previews == freezed
+      previews: freezed == previews
           ? _value.previews
           : previews // ignore: cast_nullable_to_non_nullable
               as List<Map<String, dynamic>>?,
-      releaseDate: releaseDate == freezed
+      releaseDate: freezed == releaseDate
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      trackNumber: trackNumber == freezed
+      trackNumber: freezed == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      contentRating: contentRating == freezed
+      contentRating: freezed == contentRating
           ? _value.contentRating
           : contentRating // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ArtworkDTOCopyWith<$Res>? get artwork {
     if (_value.artwork == null) {
       return null;
     }
 
     return $ArtworkDTOCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
+      return _then(_value.copyWith(artwork: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $EditorialNotesDTOCopyWith<$Res>? get editorialNotes {
     if (_value.editorialNotes == null) {
       return null;
     }
 
     return $EditorialNotesDTOCopyWith<$Res>(_value.editorialNotes!, (value) {
-      return _then(_value.copyWith(editorialNotes: value));
+      return _then(_value.copyWith(editorialNotes: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PlayParamsDTOCopyWith<$Res>? get playParams {
     if (_value.playParams == null) {
       return null;
     }
 
     return $PlayParamsDTOCopyWith<$Res>(_value.playParams!, (value) {
-      return _then(_value.copyWith(playParams: value));
+      return _then(_value.copyWith(playParams: value) as $Val);
     });
   }
 }
@@ -1042,6 +1059,7 @@ abstract class _$$_MusicVideoAttributesDTOCopyWith<$Res>
           $Res Function(_$_MusicVideoAttributesDTO) then) =
       __$$_MusicVideoAttributesDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String artistName,
       String? artistUrl,
@@ -1070,28 +1088,26 @@ abstract class _$$_MusicVideoAttributesDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_MusicVideoAttributesDTOCopyWithImpl<$Res>
-    extends _$MusicVideoAttributesDTOCopyWithImpl<$Res>
+    extends _$MusicVideoAttributesDTOCopyWithImpl<$Res,
+        _$_MusicVideoAttributesDTO>
     implements _$$_MusicVideoAttributesDTOCopyWith<$Res> {
   __$$_MusicVideoAttributesDTOCopyWithImpl(_$_MusicVideoAttributesDTO _value,
       $Res Function(_$_MusicVideoAttributesDTO) _then)
-      : super(_value, (v) => _then(v as _$_MusicVideoAttributesDTO));
+      : super(_value, _then);
 
-  @override
-  _$_MusicVideoAttributesDTO get _value =>
-      super._value as _$_MusicVideoAttributesDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? artistName = freezed,
+    Object? artistName = null,
     Object? artistUrl = freezed,
     Object? artwork = freezed,
-    Object? durationInMillis = freezed,
+    Object? durationInMillis = null,
     Object? editorialNotes = freezed,
     Object? genreNames = freezed,
     Object? has4K = freezed,
     Object? hasHDR = freezed,
     Object? isrc = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? playParams = freezed,
     Object? previews = freezed,
     Object? releaseDate = freezed,
@@ -1100,67 +1116,67 @@ class __$$_MusicVideoAttributesDTOCopyWithImpl<$Res>
     Object? contentRating = freezed,
   }) {
     return _then(_$_MusicVideoAttributesDTO(
-      artistName: artistName == freezed
+      artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String,
-      artistUrl: artistUrl == freezed
+      artistUrl: freezed == artistUrl
           ? _value.artistUrl
           : artistUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as ArtworkDTO?,
-      durationInMillis: durationInMillis == freezed
+      durationInMillis: null == durationInMillis
           ? _value.durationInMillis
           : durationInMillis // ignore: cast_nullable_to_non_nullable
               as int,
-      editorialNotes: editorialNotes == freezed
+      editorialNotes: freezed == editorialNotes
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
               as EditorialNotesDTO?,
-      genreNames: genreNames == freezed
+      genreNames: freezed == genreNames
           ? _value._genreNames
           : genreNames // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      has4K: has4K == freezed
+      has4K: freezed == has4K
           ? _value.has4K
           : has4K // ignore: cast_nullable_to_non_nullable
               as bool?,
-      hasHDR: hasHDR == freezed
+      hasHDR: freezed == hasHDR
           ? _value.hasHDR
           : hasHDR // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isrc: isrc == freezed
+      isrc: freezed == isrc
           ? _value.isrc
           : isrc // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParamsDTO?,
-      previews: previews == freezed
+      previews: freezed == previews
           ? _value._previews
           : previews // ignore: cast_nullable_to_non_nullable
               as List<Map<String, dynamic>>?,
-      releaseDate: releaseDate == freezed
+      releaseDate: freezed == releaseDate
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      trackNumber: trackNumber == freezed
+      trackNumber: freezed == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      contentRating: contentRating == freezed
+      contentRating: freezed == contentRating
           ? _value.contentRating
           : contentRating // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -1253,55 +1269,57 @@ class _$_MusicVideoAttributesDTO extends _MusicVideoAttributesDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MusicVideoAttributesDTO &&
-            const DeepCollectionEquality()
-                .equals(other.artistName, artistName) &&
-            const DeepCollectionEquality().equals(other.artistUrl, artistUrl) &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
-            const DeepCollectionEquality()
-                .equals(other.durationInMillis, durationInMillis) &&
-            const DeepCollectionEquality()
-                .equals(other.editorialNotes, editorialNotes) &&
+            (identical(other.artistName, artistName) ||
+                other.artistName == artistName) &&
+            (identical(other.artistUrl, artistUrl) ||
+                other.artistUrl == artistUrl) &&
+            (identical(other.artwork, artwork) || other.artwork == artwork) &&
+            (identical(other.durationInMillis, durationInMillis) ||
+                other.durationInMillis == durationInMillis) &&
+            (identical(other.editorialNotes, editorialNotes) ||
+                other.editorialNotes == editorialNotes) &&
             const DeepCollectionEquality()
                 .equals(other._genreNames, _genreNames) &&
-            const DeepCollectionEquality().equals(other.has4K, has4K) &&
-            const DeepCollectionEquality().equals(other.hasHDR, hasHDR) &&
-            const DeepCollectionEquality().equals(other.isrc, isrc) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.playParams, playParams) &&
+            (identical(other.has4K, has4K) || other.has4K == has4K) &&
+            (identical(other.hasHDR, hasHDR) || other.hasHDR == hasHDR) &&
+            (identical(other.isrc, isrc) || other.isrc == isrc) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.playParams, playParams) ||
+                other.playParams == playParams) &&
             const DeepCollectionEquality().equals(other._previews, _previews) &&
-            const DeepCollectionEquality()
-                .equals(other.releaseDate, releaseDate) &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality()
-                .equals(other.trackNumber, trackNumber) &&
-            const DeepCollectionEquality()
-                .equals(other.contentRating, contentRating));
+            (identical(other.releaseDate, releaseDate) ||
+                other.releaseDate == releaseDate) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.trackNumber, trackNumber) ||
+                other.trackNumber == trackNumber) &&
+            (identical(other.contentRating, contentRating) ||
+                other.contentRating == contentRating));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(artistName),
-      const DeepCollectionEquality().hash(artistUrl),
-      const DeepCollectionEquality().hash(artwork),
-      const DeepCollectionEquality().hash(durationInMillis),
-      const DeepCollectionEquality().hash(editorialNotes),
+      artistName,
+      artistUrl,
+      artwork,
+      durationInMillis,
+      editorialNotes,
       const DeepCollectionEquality().hash(_genreNames),
-      const DeepCollectionEquality().hash(has4K),
-      const DeepCollectionEquality().hash(hasHDR),
-      const DeepCollectionEquality().hash(isrc),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(playParams),
+      has4K,
+      hasHDR,
+      isrc,
+      name,
+      playParams,
       const DeepCollectionEquality().hash(_previews),
-      const DeepCollectionEquality().hash(releaseDate),
-      const DeepCollectionEquality().hash(url),
-      const DeepCollectionEquality().hash(trackNumber),
-      const DeepCollectionEquality().hash(contentRating));
+      releaseDate,
+      url,
+      trackNumber,
+      contentRating);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_MusicVideoAttributesDTOCopyWith<_$_MusicVideoAttributesDTO>
       get copyWith =>
           __$$_MusicVideoAttributesDTOCopyWithImpl<_$_MusicVideoAttributesDTO>(
@@ -1408,7 +1426,8 @@ mixin _$PlaylistAttributesDTO {
 abstract class $PlaylistAttributesDTOCopyWith<$Res> {
   factory $PlaylistAttributesDTOCopyWith(PlaylistAttributesDTO value,
           $Res Function(PlaylistAttributesDTO) then) =
-      _$PlaylistAttributesDTOCopyWithImpl<$Res>;
+      _$PlaylistAttributesDTOCopyWithImpl<$Res, PlaylistAttributesDTO>;
+  @useResult
   $Res call(
       {ArtworkDTO? artwork,
       bool? canEdit,
@@ -1430,14 +1449,17 @@ abstract class $PlaylistAttributesDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PlaylistAttributesDTOCopyWithImpl<$Res>
+class _$PlaylistAttributesDTOCopyWithImpl<$Res,
+        $Val extends PlaylistAttributesDTO>
     implements $PlaylistAttributesDTOCopyWith<$Res> {
   _$PlaylistAttributesDTOCopyWithImpl(this._value, this._then);
 
-  final PlaylistAttributesDTO _value;
   // ignore: unused_field
-  final $Res Function(PlaylistAttributesDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artwork = freezed,
@@ -1448,98 +1470,101 @@ class _$PlaylistAttributesDTOCopyWithImpl<$Res>
     Object? hasCatalog = freezed,
     Object? isChart = freezed,
     Object? lastModifiedDate = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? playlistType = freezed,
     Object? playParams = freezed,
     Object? url = freezed,
     Object? curatorSocialHandle = freezed,
   }) {
     return _then(_value.copyWith(
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as ArtworkDTO?,
-      canEdit: canEdit == freezed
+      canEdit: freezed == canEdit
           ? _value.canEdit
           : canEdit // ignore: cast_nullable_to_non_nullable
               as bool?,
-      curatorName: curatorName == freezed
+      curatorName: freezed == curatorName
           ? _value.curatorName
           : curatorName // ignore: cast_nullable_to_non_nullable
               as String?,
-      dateAdded: dateAdded == freezed
+      dateAdded: freezed == dateAdded
           ? _value.dateAdded
           : dateAdded // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as EditorialNotesDTO?,
-      hasCatalog: hasCatalog == freezed
+      hasCatalog: freezed == hasCatalog
           ? _value.hasCatalog
           : hasCatalog // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isChart: isChart == freezed
+      isChart: freezed == isChart
           ? _value.isChart
           : isChart // ignore: cast_nullable_to_non_nullable
               as bool?,
-      lastModifiedDate: lastModifiedDate == freezed
+      lastModifiedDate: freezed == lastModifiedDate
           ? _value.lastModifiedDate
           : lastModifiedDate // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      playlistType: playlistType == freezed
+      playlistType: freezed == playlistType
           ? _value.playlistType
           : playlistType // ignore: cast_nullable_to_non_nullable
               as String?,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParamsDTO?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      curatorSocialHandle: curatorSocialHandle == freezed
+      curatorSocialHandle: freezed == curatorSocialHandle
           ? _value.curatorSocialHandle
           : curatorSocialHandle // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ArtworkDTOCopyWith<$Res>? get artwork {
     if (_value.artwork == null) {
       return null;
     }
 
     return $ArtworkDTOCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
+      return _then(_value.copyWith(artwork: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $EditorialNotesDTOCopyWith<$Res>? get description {
     if (_value.description == null) {
       return null;
     }
 
     return $EditorialNotesDTOCopyWith<$Res>(_value.description!, (value) {
-      return _then(_value.copyWith(description: value));
+      return _then(_value.copyWith(description: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PlayParamsDTOCopyWith<$Res>? get playParams {
     if (_value.playParams == null) {
       return null;
     }
 
     return $PlayParamsDTOCopyWith<$Res>(_value.playParams!, (value) {
-      return _then(_value.copyWith(playParams: value));
+      return _then(_value.copyWith(playParams: value) as $Val);
     });
   }
 }
@@ -1551,6 +1576,7 @@ abstract class _$$_PlaylistAttributesDTOCopyWith<$Res>
           $Res Function(_$_PlaylistAttributesDTO) then) =
       __$$_PlaylistAttributesDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {ArtworkDTO? artwork,
       bool? canEdit,
@@ -1576,16 +1602,13 @@ abstract class _$$_PlaylistAttributesDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_PlaylistAttributesDTOCopyWithImpl<$Res>
-    extends _$PlaylistAttributesDTOCopyWithImpl<$Res>
+    extends _$PlaylistAttributesDTOCopyWithImpl<$Res, _$_PlaylistAttributesDTO>
     implements _$$_PlaylistAttributesDTOCopyWith<$Res> {
   __$$_PlaylistAttributesDTOCopyWithImpl(_$_PlaylistAttributesDTO _value,
       $Res Function(_$_PlaylistAttributesDTO) _then)
-      : super(_value, (v) => _then(v as _$_PlaylistAttributesDTO));
+      : super(_value, _then);
 
-  @override
-  _$_PlaylistAttributesDTO get _value =>
-      super._value as _$_PlaylistAttributesDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artwork = freezed,
@@ -1596,62 +1619,62 @@ class __$$_PlaylistAttributesDTOCopyWithImpl<$Res>
     Object? hasCatalog = freezed,
     Object? isChart = freezed,
     Object? lastModifiedDate = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? playlistType = freezed,
     Object? playParams = freezed,
     Object? url = freezed,
     Object? curatorSocialHandle = freezed,
   }) {
     return _then(_$_PlaylistAttributesDTO(
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as ArtworkDTO?,
-      canEdit: canEdit == freezed
+      canEdit: freezed == canEdit
           ? _value.canEdit
           : canEdit // ignore: cast_nullable_to_non_nullable
               as bool?,
-      curatorName: curatorName == freezed
+      curatorName: freezed == curatorName
           ? _value.curatorName
           : curatorName // ignore: cast_nullable_to_non_nullable
               as String?,
-      dateAdded: dateAdded == freezed
+      dateAdded: freezed == dateAdded
           ? _value.dateAdded
           : dateAdded // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: description == freezed
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
               as EditorialNotesDTO?,
-      hasCatalog: hasCatalog == freezed
+      hasCatalog: freezed == hasCatalog
           ? _value.hasCatalog
           : hasCatalog // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isChart: isChart == freezed
+      isChart: freezed == isChart
           ? _value.isChart
           : isChart // ignore: cast_nullable_to_non_nullable
               as bool?,
-      lastModifiedDate: lastModifiedDate == freezed
+      lastModifiedDate: freezed == lastModifiedDate
           ? _value.lastModifiedDate
           : lastModifiedDate // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      playlistType: playlistType == freezed
+      playlistType: freezed == playlistType
           ? _value.playlistType
           : playlistType // ignore: cast_nullable_to_non_nullable
               as String?,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParamsDTO?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      curatorSocialHandle: curatorSocialHandle == freezed
+      curatorSocialHandle: freezed == curatorSocialHandle
           ? _value.curatorSocialHandle
           : curatorSocialHandle // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -1718,48 +1741,50 @@ class _$_PlaylistAttributesDTO extends _PlaylistAttributesDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PlaylistAttributesDTO &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
-            const DeepCollectionEquality().equals(other.canEdit, canEdit) &&
-            const DeepCollectionEquality()
-                .equals(other.curatorName, curatorName) &&
-            const DeepCollectionEquality().equals(other.dateAdded, dateAdded) &&
-            const DeepCollectionEquality()
-                .equals(other.description, description) &&
-            const DeepCollectionEquality()
-                .equals(other.hasCatalog, hasCatalog) &&
-            const DeepCollectionEquality().equals(other.isChart, isChart) &&
-            const DeepCollectionEquality()
-                .equals(other.lastModifiedDate, lastModifiedDate) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.playlistType, playlistType) &&
-            const DeepCollectionEquality()
-                .equals(other.playParams, playParams) &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality()
-                .equals(other.curatorSocialHandle, curatorSocialHandle));
+            (identical(other.artwork, artwork) || other.artwork == artwork) &&
+            (identical(other.canEdit, canEdit) || other.canEdit == canEdit) &&
+            (identical(other.curatorName, curatorName) ||
+                other.curatorName == curatorName) &&
+            (identical(other.dateAdded, dateAdded) ||
+                other.dateAdded == dateAdded) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.hasCatalog, hasCatalog) ||
+                other.hasCatalog == hasCatalog) &&
+            (identical(other.isChart, isChart) || other.isChart == isChart) &&
+            (identical(other.lastModifiedDate, lastModifiedDate) ||
+                other.lastModifiedDate == lastModifiedDate) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.playlistType, playlistType) ||
+                other.playlistType == playlistType) &&
+            (identical(other.playParams, playParams) ||
+                other.playParams == playParams) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.curatorSocialHandle, curatorSocialHandle) ||
+                other.curatorSocialHandle == curatorSocialHandle));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(artwork),
-      const DeepCollectionEquality().hash(canEdit),
-      const DeepCollectionEquality().hash(curatorName),
-      const DeepCollectionEquality().hash(dateAdded),
-      const DeepCollectionEquality().hash(description),
-      const DeepCollectionEquality().hash(hasCatalog),
-      const DeepCollectionEquality().hash(isChart),
-      const DeepCollectionEquality().hash(lastModifiedDate),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(playlistType),
-      const DeepCollectionEquality().hash(playParams),
-      const DeepCollectionEquality().hash(url),
-      const DeepCollectionEquality().hash(curatorSocialHandle));
+      artwork,
+      canEdit,
+      curatorName,
+      dateAdded,
+      description,
+      hasCatalog,
+      isChart,
+      lastModifiedDate,
+      name,
+      playlistType,
+      playParams,
+      url,
+      curatorSocialHandle);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PlaylistAttributesDTOCopyWith<_$_PlaylistAttributesDTO> get copyWith =>
       __$$_PlaylistAttributesDTOCopyWithImpl<_$_PlaylistAttributesDTO>(
           this, _$identity);
@@ -1866,7 +1891,8 @@ mixin _$SongAttributesDTO {
 abstract class $SongAttributesDTOCopyWith<$Res> {
   factory $SongAttributesDTOCopyWith(
           SongAttributesDTO value, $Res Function(SongAttributesDTO) then) =
-      _$SongAttributesDTOCopyWithImpl<$Res>;
+      _$SongAttributesDTOCopyWithImpl<$Res, SongAttributesDTO>;
+  @useResult
   $Res call(
       {String? albumName,
       String? artistUrl,
@@ -1897,33 +1923,35 @@ abstract class $SongAttributesDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SongAttributesDTOCopyWithImpl<$Res>
+class _$SongAttributesDTOCopyWithImpl<$Res, $Val extends SongAttributesDTO>
     implements $SongAttributesDTOCopyWith<$Res> {
   _$SongAttributesDTOCopyWithImpl(this._value, this._then);
 
-  final SongAttributesDTO _value;
   // ignore: unused_field
-  final $Res Function(SongAttributesDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? albumName = freezed,
     Object? artistUrl = freezed,
     Object? attribution = freezed,
-    Object? artistName = freezed,
+    Object? artistName = null,
     Object? artwork = freezed,
     Object? audioLocale = freezed,
     Object? audioTraits = freezed,
     Object? composerName = freezed,
     Object? contentRating = freezed,
     Object? discNumber = freezed,
-    Object? durationInMillis = freezed,
+    Object? durationInMillis = null,
     Object? genreNames = freezed,
     Object? hasLyrics = freezed,
     Object? hasTimeSyncedLyrics = freezed,
     Object? isMasteredForItunes = freezed,
     Object? isrc = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? playParams = freezed,
     Object? previews = freezed,
     Object? releaseDate = freezed,
@@ -1932,120 +1960,122 @@ class _$SongAttributesDTOCopyWithImpl<$Res>
     Object? workName = freezed,
   }) {
     return _then(_value.copyWith(
-      albumName: albumName == freezed
+      albumName: freezed == albumName
           ? _value.albumName
           : albumName // ignore: cast_nullable_to_non_nullable
               as String?,
-      artistUrl: artistUrl == freezed
+      artistUrl: freezed == artistUrl
           ? _value.artistUrl
           : artistUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      attribution: attribution == freezed
+      attribution: freezed == attribution
           ? _value.attribution
           : attribution // ignore: cast_nullable_to_non_nullable
               as String?,
-      artistName: artistName == freezed
+      artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as ArtworkDTO?,
-      audioLocale: audioLocale == freezed
+      audioLocale: freezed == audioLocale
           ? _value.audioLocale
           : audioLocale // ignore: cast_nullable_to_non_nullable
               as String?,
-      audioTraits: audioTraits == freezed
+      audioTraits: freezed == audioTraits
           ? _value.audioTraits
           : audioTraits // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      composerName: composerName == freezed
+      composerName: freezed == composerName
           ? _value.composerName
           : composerName // ignore: cast_nullable_to_non_nullable
               as String?,
-      contentRating: contentRating == freezed
+      contentRating: freezed == contentRating
           ? _value.contentRating
           : contentRating // ignore: cast_nullable_to_non_nullable
               as String?,
-      discNumber: discNumber == freezed
+      discNumber: freezed == discNumber
           ? _value.discNumber
           : discNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      durationInMillis: durationInMillis == freezed
+      durationInMillis: null == durationInMillis
           ? _value.durationInMillis
           : durationInMillis // ignore: cast_nullable_to_non_nullable
               as int,
-      genreNames: genreNames == freezed
+      genreNames: freezed == genreNames
           ? _value.genreNames
           : genreNames // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      hasLyrics: hasLyrics == freezed
+      hasLyrics: freezed == hasLyrics
           ? _value.hasLyrics
           : hasLyrics // ignore: cast_nullable_to_non_nullable
               as bool?,
-      hasTimeSyncedLyrics: hasTimeSyncedLyrics == freezed
+      hasTimeSyncedLyrics: freezed == hasTimeSyncedLyrics
           ? _value.hasTimeSyncedLyrics
           : hasTimeSyncedLyrics // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isMasteredForItunes: isMasteredForItunes == freezed
+      isMasteredForItunes: freezed == isMasteredForItunes
           ? _value.isMasteredForItunes
           : isMasteredForItunes // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isrc: isrc == freezed
+      isrc: freezed == isrc
           ? _value.isrc
           : isrc // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParamsDTO?,
-      previews: previews == freezed
+      previews: freezed == previews
           ? _value.previews
           : previews // ignore: cast_nullable_to_non_nullable
               as List<Map<String, dynamic>>?,
-      releaseDate: releaseDate == freezed
+      releaseDate: freezed == releaseDate
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      trackNumber: trackNumber == freezed
+      trackNumber: freezed == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      workName: workName == freezed
+      workName: freezed == workName
           ? _value.workName
           : workName // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ArtworkDTOCopyWith<$Res>? get artwork {
     if (_value.artwork == null) {
       return null;
     }
 
     return $ArtworkDTOCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
+      return _then(_value.copyWith(artwork: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PlayParamsDTOCopyWith<$Res>? get playParams {
     if (_value.playParams == null) {
       return null;
     }
 
     return $PlayParamsDTOCopyWith<$Res>(_value.playParams!, (value) {
-      return _then(_value.copyWith(playParams: value));
+      return _then(_value.copyWith(playParams: value) as $Val);
     });
   }
 }
@@ -2057,6 +2087,7 @@ abstract class _$$_SongAttributesDTOCopyWith<$Res>
           $Res Function(_$_SongAttributesDTO) then) =
       __$$_SongAttributesDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? albumName,
       String? artistUrl,
@@ -2090,34 +2121,32 @@ abstract class _$$_SongAttributesDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_SongAttributesDTOCopyWithImpl<$Res>
-    extends _$SongAttributesDTOCopyWithImpl<$Res>
+    extends _$SongAttributesDTOCopyWithImpl<$Res, _$_SongAttributesDTO>
     implements _$$_SongAttributesDTOCopyWith<$Res> {
   __$$_SongAttributesDTOCopyWithImpl(
       _$_SongAttributesDTO _value, $Res Function(_$_SongAttributesDTO) _then)
-      : super(_value, (v) => _then(v as _$_SongAttributesDTO));
+      : super(_value, _then);
 
-  @override
-  _$_SongAttributesDTO get _value => super._value as _$_SongAttributesDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? albumName = freezed,
     Object? artistUrl = freezed,
     Object? attribution = freezed,
-    Object? artistName = freezed,
+    Object? artistName = null,
     Object? artwork = freezed,
     Object? audioLocale = freezed,
     Object? audioTraits = freezed,
     Object? composerName = freezed,
     Object? contentRating = freezed,
     Object? discNumber = freezed,
-    Object? durationInMillis = freezed,
+    Object? durationInMillis = null,
     Object? genreNames = freezed,
     Object? hasLyrics = freezed,
     Object? hasTimeSyncedLyrics = freezed,
     Object? isMasteredForItunes = freezed,
     Object? isrc = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? playParams = freezed,
     Object? previews = freezed,
     Object? releaseDate = freezed,
@@ -2126,95 +2155,95 @@ class __$$_SongAttributesDTOCopyWithImpl<$Res>
     Object? workName = freezed,
   }) {
     return _then(_$_SongAttributesDTO(
-      albumName: albumName == freezed
+      albumName: freezed == albumName
           ? _value.albumName
           : albumName // ignore: cast_nullable_to_non_nullable
               as String?,
-      artistUrl: artistUrl == freezed
+      artistUrl: freezed == artistUrl
           ? _value.artistUrl
           : artistUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      attribution: attribution == freezed
+      attribution: freezed == attribution
           ? _value.attribution
           : attribution // ignore: cast_nullable_to_non_nullable
               as String?,
-      artistName: artistName == freezed
+      artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as ArtworkDTO?,
-      audioLocale: audioLocale == freezed
+      audioLocale: freezed == audioLocale
           ? _value.audioLocale
           : audioLocale // ignore: cast_nullable_to_non_nullable
               as String?,
-      audioTraits: audioTraits == freezed
+      audioTraits: freezed == audioTraits
           ? _value._audioTraits
           : audioTraits // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      composerName: composerName == freezed
+      composerName: freezed == composerName
           ? _value.composerName
           : composerName // ignore: cast_nullable_to_non_nullable
               as String?,
-      contentRating: contentRating == freezed
+      contentRating: freezed == contentRating
           ? _value.contentRating
           : contentRating // ignore: cast_nullable_to_non_nullable
               as String?,
-      discNumber: discNumber == freezed
+      discNumber: freezed == discNumber
           ? _value.discNumber
           : discNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      durationInMillis: durationInMillis == freezed
+      durationInMillis: null == durationInMillis
           ? _value.durationInMillis
           : durationInMillis // ignore: cast_nullable_to_non_nullable
               as int,
-      genreNames: genreNames == freezed
+      genreNames: freezed == genreNames
           ? _value._genreNames
           : genreNames // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-      hasLyrics: hasLyrics == freezed
+      hasLyrics: freezed == hasLyrics
           ? _value.hasLyrics
           : hasLyrics // ignore: cast_nullable_to_non_nullable
               as bool?,
-      hasTimeSyncedLyrics: hasTimeSyncedLyrics == freezed
+      hasTimeSyncedLyrics: freezed == hasTimeSyncedLyrics
           ? _value.hasTimeSyncedLyrics
           : hasTimeSyncedLyrics // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isMasteredForItunes: isMasteredForItunes == freezed
+      isMasteredForItunes: freezed == isMasteredForItunes
           ? _value.isMasteredForItunes
           : isMasteredForItunes // ignore: cast_nullable_to_non_nullable
               as bool?,
-      isrc: isrc == freezed
+      isrc: freezed == isrc
           ? _value.isrc
           : isrc // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParamsDTO?,
-      previews: previews == freezed
+      previews: freezed == previews
           ? _value._previews
           : previews // ignore: cast_nullable_to_non_nullable
               as List<Map<String, dynamic>>?,
-      releaseDate: releaseDate == freezed
+      releaseDate: freezed == releaseDate
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      trackNumber: trackNumber == freezed
+      trackNumber: freezed == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      workName: workName == freezed
+      workName: freezed == workName
           ? _value.workName
           : workName // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -2336,76 +2365,81 @@ class _$_SongAttributesDTO extends _SongAttributesDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SongAttributesDTO &&
-            const DeepCollectionEquality().equals(other.albumName, albumName) &&
-            const DeepCollectionEquality().equals(other.artistUrl, artistUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.attribution, attribution) &&
-            const DeepCollectionEquality()
-                .equals(other.artistName, artistName) &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
-            const DeepCollectionEquality()
-                .equals(other.audioLocale, audioLocale) &&
+            (identical(other.albumName, albumName) ||
+                other.albumName == albumName) &&
+            (identical(other.artistUrl, artistUrl) ||
+                other.artistUrl == artistUrl) &&
+            (identical(other.attribution, attribution) ||
+                other.attribution == attribution) &&
+            (identical(other.artistName, artistName) ||
+                other.artistName == artistName) &&
+            (identical(other.artwork, artwork) || other.artwork == artwork) &&
+            (identical(other.audioLocale, audioLocale) ||
+                other.audioLocale == audioLocale) &&
             const DeepCollectionEquality()
                 .equals(other._audioTraits, _audioTraits) &&
-            const DeepCollectionEquality()
-                .equals(other.composerName, composerName) &&
-            const DeepCollectionEquality()
-                .equals(other.contentRating, contentRating) &&
-            const DeepCollectionEquality()
-                .equals(other.discNumber, discNumber) &&
-            const DeepCollectionEquality()
-                .equals(other.durationInMillis, durationInMillis) &&
+            (identical(other.composerName, composerName) ||
+                other.composerName == composerName) &&
+            (identical(other.contentRating, contentRating) ||
+                other.contentRating == contentRating) &&
+            (identical(other.discNumber, discNumber) ||
+                other.discNumber == discNumber) &&
+            (identical(other.durationInMillis, durationInMillis) ||
+                other.durationInMillis == durationInMillis) &&
             const DeepCollectionEquality()
                 .equals(other._genreNames, _genreNames) &&
-            const DeepCollectionEquality().equals(other.hasLyrics, hasLyrics) &&
-            const DeepCollectionEquality()
-                .equals(other.hasTimeSyncedLyrics, hasTimeSyncedLyrics) &&
-            const DeepCollectionEquality()
-                .equals(other.isMasteredForItunes, isMasteredForItunes) &&
-            const DeepCollectionEquality().equals(other.isrc, isrc) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.playParams, playParams) &&
+            (identical(other.hasLyrics, hasLyrics) ||
+                other.hasLyrics == hasLyrics) &&
+            (identical(other.hasTimeSyncedLyrics, hasTimeSyncedLyrics) ||
+                other.hasTimeSyncedLyrics == hasTimeSyncedLyrics) &&
+            (identical(other.isMasteredForItunes, isMasteredForItunes) ||
+                other.isMasteredForItunes == isMasteredForItunes) &&
+            (identical(other.isrc, isrc) || other.isrc == isrc) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.playParams, playParams) ||
+                other.playParams == playParams) &&
             const DeepCollectionEquality().equals(other._previews, _previews) &&
-            const DeepCollectionEquality()
-                .equals(other.releaseDate, releaseDate) &&
-            const DeepCollectionEquality()
-                .equals(other.trackNumber, trackNumber) &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality().equals(other.workName, workName));
+            (identical(other.releaseDate, releaseDate) ||
+                other.releaseDate == releaseDate) &&
+            (identical(other.trackNumber, trackNumber) ||
+                other.trackNumber == trackNumber) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.workName, workName) ||
+                other.workName == workName));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        const DeepCollectionEquality().hash(albumName),
-        const DeepCollectionEquality().hash(artistUrl),
-        const DeepCollectionEquality().hash(attribution),
-        const DeepCollectionEquality().hash(artistName),
-        const DeepCollectionEquality().hash(artwork),
-        const DeepCollectionEquality().hash(audioLocale),
+        albumName,
+        artistUrl,
+        attribution,
+        artistName,
+        artwork,
+        audioLocale,
         const DeepCollectionEquality().hash(_audioTraits),
-        const DeepCollectionEquality().hash(composerName),
-        const DeepCollectionEquality().hash(contentRating),
-        const DeepCollectionEquality().hash(discNumber),
-        const DeepCollectionEquality().hash(durationInMillis),
+        composerName,
+        contentRating,
+        discNumber,
+        durationInMillis,
         const DeepCollectionEquality().hash(_genreNames),
-        const DeepCollectionEquality().hash(hasLyrics),
-        const DeepCollectionEquality().hash(hasTimeSyncedLyrics),
-        const DeepCollectionEquality().hash(isMasteredForItunes),
-        const DeepCollectionEquality().hash(isrc),
-        const DeepCollectionEquality().hash(name),
-        const DeepCollectionEquality().hash(playParams),
+        hasLyrics,
+        hasTimeSyncedLyrics,
+        isMasteredForItunes,
+        isrc,
+        name,
+        playParams,
         const DeepCollectionEquality().hash(_previews),
-        const DeepCollectionEquality().hash(releaseDate),
-        const DeepCollectionEquality().hash(trackNumber),
-        const DeepCollectionEquality().hash(url),
-        const DeepCollectionEquality().hash(workName)
+        releaseDate,
+        trackNumber,
+        url,
+        workName
       ]);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SongAttributesDTOCopyWith<_$_SongAttributesDTO> get copyWith =>
       __$$_SongAttributesDTOCopyWithImpl<_$_SongAttributesDTO>(
           this, _$identity);
@@ -2527,7 +2561,8 @@ mixin _$StationAttributesDTO {
 abstract class $StationAttributesDTOCopyWith<$Res> {
   factory $StationAttributesDTOCopyWith(StationAttributesDTO value,
           $Res Function(StationAttributesDTO) then) =
-      _$StationAttributesDTOCopyWithImpl<$Res>;
+      _$StationAttributesDTOCopyWithImpl<$Res, StationAttributesDTO>;
+  @useResult
   $Res call(
       {bool? isLive,
       ArtworkDTO? artwork,
@@ -2545,14 +2580,17 @@ abstract class $StationAttributesDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$StationAttributesDTOCopyWithImpl<$Res>
+class _$StationAttributesDTOCopyWithImpl<$Res,
+        $Val extends StationAttributesDTO>
     implements $StationAttributesDTOCopyWith<$Res> {
   _$StationAttributesDTOCopyWithImpl(this._value, this._then);
 
-  final StationAttributesDTO _value;
   // ignore: unused_field
-  final $Res Function(StationAttributesDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? isLive = freezed,
@@ -2561,80 +2599,83 @@ class _$StationAttributesDTOCopyWithImpl<$Res>
     Object? editorialNotes = freezed,
     Object? durationInMillis = freezed,
     Object? mediaKind = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? streamingRadioSubType = freezed,
     Object? url = freezed,
   }) {
     return _then(_value.copyWith(
-      isLive: isLive == freezed
+      isLive: freezed == isLive
           ? _value.isLive
           : isLive // ignore: cast_nullable_to_non_nullable
               as bool?,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as ArtworkDTO?,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParamsDTO?,
-      editorialNotes: editorialNotes == freezed
+      editorialNotes: freezed == editorialNotes
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
               as EditorialNotesDTO?,
-      durationInMillis: durationInMillis == freezed
+      durationInMillis: freezed == durationInMillis
           ? _value.durationInMillis
           : durationInMillis // ignore: cast_nullable_to_non_nullable
               as int?,
-      mediaKind: mediaKind == freezed
+      mediaKind: freezed == mediaKind
           ? _value.mediaKind
           : mediaKind // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      streamingRadioSubType: streamingRadioSubType == freezed
+      streamingRadioSubType: freezed == streamingRadioSubType
           ? _value.streamingRadioSubType
           : streamingRadioSubType // ignore: cast_nullable_to_non_nullable
               as String?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ArtworkDTOCopyWith<$Res>? get artwork {
     if (_value.artwork == null) {
       return null;
     }
 
     return $ArtworkDTOCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
+      return _then(_value.copyWith(artwork: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PlayParamsDTOCopyWith<$Res>? get playParams {
     if (_value.playParams == null) {
       return null;
     }
 
     return $PlayParamsDTOCopyWith<$Res>(_value.playParams!, (value) {
-      return _then(_value.copyWith(playParams: value));
+      return _then(_value.copyWith(playParams: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $EditorialNotesDTOCopyWith<$Res>? get editorialNotes {
     if (_value.editorialNotes == null) {
       return null;
     }
 
     return $EditorialNotesDTOCopyWith<$Res>(_value.editorialNotes!, (value) {
-      return _then(_value.copyWith(editorialNotes: value));
+      return _then(_value.copyWith(editorialNotes: value) as $Val);
     });
   }
 }
@@ -2646,6 +2687,7 @@ abstract class _$$_StationAttributesDTOCopyWith<$Res>
           $Res Function(_$_StationAttributesDTO) then) =
       __$$_StationAttributesDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {bool? isLive,
       ArtworkDTO? artwork,
@@ -2667,15 +2709,13 @@ abstract class _$$_StationAttributesDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_StationAttributesDTOCopyWithImpl<$Res>
-    extends _$StationAttributesDTOCopyWithImpl<$Res>
+    extends _$StationAttributesDTOCopyWithImpl<$Res, _$_StationAttributesDTO>
     implements _$$_StationAttributesDTOCopyWith<$Res> {
   __$$_StationAttributesDTOCopyWithImpl(_$_StationAttributesDTO _value,
       $Res Function(_$_StationAttributesDTO) _then)
-      : super(_value, (v) => _then(v as _$_StationAttributesDTO));
+      : super(_value, _then);
 
-  @override
-  _$_StationAttributesDTO get _value => super._value as _$_StationAttributesDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? isLive = freezed,
@@ -2684,44 +2724,44 @@ class __$$_StationAttributesDTOCopyWithImpl<$Res>
     Object? editorialNotes = freezed,
     Object? durationInMillis = freezed,
     Object? mediaKind = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? streamingRadioSubType = freezed,
     Object? url = freezed,
   }) {
     return _then(_$_StationAttributesDTO(
-      isLive: isLive == freezed
+      isLive: freezed == isLive
           ? _value.isLive
           : isLive // ignore: cast_nullable_to_non_nullable
               as bool?,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as ArtworkDTO?,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParamsDTO?,
-      editorialNotes: editorialNotes == freezed
+      editorialNotes: freezed == editorialNotes
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
               as EditorialNotesDTO?,
-      durationInMillis: durationInMillis == freezed
+      durationInMillis: freezed == durationInMillis
           ? _value.durationInMillis
           : durationInMillis // ignore: cast_nullable_to_non_nullable
               as int?,
-      mediaKind: mediaKind == freezed
+      mediaKind: freezed == mediaKind
           ? _value.mediaKind
           : mediaKind // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      streamingRadioSubType: streamingRadioSubType == freezed
+      streamingRadioSubType: freezed == streamingRadioSubType
           ? _value.streamingRadioSubType
           : streamingRadioSubType // ignore: cast_nullable_to_non_nullable
               as String?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -2776,37 +2816,39 @@ class _$_StationAttributesDTO extends _StationAttributesDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_StationAttributesDTO &&
-            const DeepCollectionEquality().equals(other.isLive, isLive) &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
-            const DeepCollectionEquality()
-                .equals(other.playParams, playParams) &&
-            const DeepCollectionEquality()
-                .equals(other.editorialNotes, editorialNotes) &&
-            const DeepCollectionEquality()
-                .equals(other.durationInMillis, durationInMillis) &&
-            const DeepCollectionEquality().equals(other.mediaKind, mediaKind) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.streamingRadioSubType, streamingRadioSubType) &&
-            const DeepCollectionEquality().equals(other.url, url));
+            (identical(other.isLive, isLive) || other.isLive == isLive) &&
+            (identical(other.artwork, artwork) || other.artwork == artwork) &&
+            (identical(other.playParams, playParams) ||
+                other.playParams == playParams) &&
+            (identical(other.editorialNotes, editorialNotes) ||
+                other.editorialNotes == editorialNotes) &&
+            (identical(other.durationInMillis, durationInMillis) ||
+                other.durationInMillis == durationInMillis) &&
+            (identical(other.mediaKind, mediaKind) ||
+                other.mediaKind == mediaKind) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.streamingRadioSubType, streamingRadioSubType) ||
+                other.streamingRadioSubType == streamingRadioSubType) &&
+            (identical(other.url, url) || other.url == url));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(isLive),
-      const DeepCollectionEquality().hash(artwork),
-      const DeepCollectionEquality().hash(playParams),
-      const DeepCollectionEquality().hash(editorialNotes),
-      const DeepCollectionEquality().hash(durationInMillis),
-      const DeepCollectionEquality().hash(mediaKind),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(streamingRadioSubType),
-      const DeepCollectionEquality().hash(url));
+      isLive,
+      artwork,
+      playParams,
+      editorialNotes,
+      durationInMillis,
+      mediaKind,
+      name,
+      streamingRadioSubType,
+      url);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_StationAttributesDTOCopyWith<_$_StationAttributesDTO> get copyWith =>
       __$$_StationAttributesDTOCopyWithImpl<_$_StationAttributesDTO>(
           this, _$identity);
@@ -2880,7 +2922,8 @@ mixin _$CuratorAttributesDTO {
 abstract class $CuratorAttributesDTOCopyWith<$Res> {
   factory $CuratorAttributesDTOCopyWith(CuratorAttributesDTO value,
           $Res Function(CuratorAttributesDTO) then) =
-      _$CuratorAttributesDTOCopyWithImpl<$Res>;
+      _$CuratorAttributesDTOCopyWithImpl<$Res, CuratorAttributesDTO>;
+  @useResult
   $Res call(
       {ArtworkDTO? artwork,
       EditorialNotesDTO? editorialNotes,
@@ -2892,60 +2935,65 @@ abstract class $CuratorAttributesDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CuratorAttributesDTOCopyWithImpl<$Res>
+class _$CuratorAttributesDTOCopyWithImpl<$Res,
+        $Val extends CuratorAttributesDTO>
     implements $CuratorAttributesDTOCopyWith<$Res> {
   _$CuratorAttributesDTOCopyWithImpl(this._value, this._then);
 
-  final CuratorAttributesDTO _value;
   // ignore: unused_field
-  final $Res Function(CuratorAttributesDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artwork = freezed,
     Object? editorialNotes = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? url = freezed,
   }) {
     return _then(_value.copyWith(
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as ArtworkDTO?,
-      editorialNotes: editorialNotes == freezed
+      editorialNotes: freezed == editorialNotes
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
               as EditorialNotesDTO?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ArtworkDTOCopyWith<$Res>? get artwork {
     if (_value.artwork == null) {
       return null;
     }
 
     return $ArtworkDTOCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
+      return _then(_value.copyWith(artwork: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $EditorialNotesDTOCopyWith<$Res>? get editorialNotes {
     if (_value.editorialNotes == null) {
       return null;
     }
 
     return $EditorialNotesDTOCopyWith<$Res>(_value.editorialNotes!, (value) {
-      return _then(_value.copyWith(editorialNotes: value));
+      return _then(_value.copyWith(editorialNotes: value) as $Val);
     });
   }
 }
@@ -2957,6 +3005,7 @@ abstract class _$$_CuratorAttributesDTOCopyWith<$Res>
           $Res Function(_$_CuratorAttributesDTO) then) =
       __$$_CuratorAttributesDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {ArtworkDTO? artwork,
       EditorialNotesDTO? editorialNotes,
@@ -2971,36 +3020,34 @@ abstract class _$$_CuratorAttributesDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_CuratorAttributesDTOCopyWithImpl<$Res>
-    extends _$CuratorAttributesDTOCopyWithImpl<$Res>
+    extends _$CuratorAttributesDTOCopyWithImpl<$Res, _$_CuratorAttributesDTO>
     implements _$$_CuratorAttributesDTOCopyWith<$Res> {
   __$$_CuratorAttributesDTOCopyWithImpl(_$_CuratorAttributesDTO _value,
       $Res Function(_$_CuratorAttributesDTO) _then)
-      : super(_value, (v) => _then(v as _$_CuratorAttributesDTO));
+      : super(_value, _then);
 
-  @override
-  _$_CuratorAttributesDTO get _value => super._value as _$_CuratorAttributesDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artwork = freezed,
     Object? editorialNotes = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? url = freezed,
   }) {
     return _then(_$_CuratorAttributesDTO(
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as ArtworkDTO?,
-      editorialNotes: editorialNotes == freezed
+      editorialNotes: freezed == editorialNotes
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
               as EditorialNotesDTO?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -3037,24 +3084,21 @@ class _$_CuratorAttributesDTO extends _CuratorAttributesDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CuratorAttributesDTO &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
-            const DeepCollectionEquality()
-                .equals(other.editorialNotes, editorialNotes) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.url, url));
+            (identical(other.artwork, artwork) || other.artwork == artwork) &&
+            (identical(other.editorialNotes, editorialNotes) ||
+                other.editorialNotes == editorialNotes) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(artwork),
-      const DeepCollectionEquality().hash(editorialNotes),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(url));
+  int get hashCode =>
+      Object.hash(runtimeType, artwork, editorialNotes, name, url);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CuratorAttributesDTOCopyWith<_$_CuratorAttributesDTO> get copyWith =>
       __$$_CuratorAttributesDTOCopyWithImpl<_$_CuratorAttributesDTO>(
           this, _$identity);
@@ -3112,39 +3156,42 @@ mixin _$GenreAttributesDTO {
 abstract class $GenreAttributesDTOCopyWith<$Res> {
   factory $GenreAttributesDTOCopyWith(
           GenreAttributesDTO value, $Res Function(GenreAttributesDTO) then) =
-      _$GenreAttributesDTOCopyWithImpl<$Res>;
+      _$GenreAttributesDTOCopyWithImpl<$Res, GenreAttributesDTO>;
+  @useResult
   $Res call({String? parentId, String? parentName, String name});
 }
 
 /// @nodoc
-class _$GenreAttributesDTOCopyWithImpl<$Res>
+class _$GenreAttributesDTOCopyWithImpl<$Res, $Val extends GenreAttributesDTO>
     implements $GenreAttributesDTOCopyWith<$Res> {
   _$GenreAttributesDTOCopyWithImpl(this._value, this._then);
 
-  final GenreAttributesDTO _value;
   // ignore: unused_field
-  final $Res Function(GenreAttributesDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? parentId = freezed,
     Object? parentName = freezed,
-    Object? name = freezed,
+    Object? name = null,
   }) {
     return _then(_value.copyWith(
-      parentId: parentId == freezed
+      parentId: freezed == parentId
           ? _value.parentId
           : parentId // ignore: cast_nullable_to_non_nullable
               as String?,
-      parentName: parentName == freezed
+      parentName: freezed == parentName
           ? _value.parentName
           : parentName // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -3155,36 +3202,35 @@ abstract class _$$_GenreAttributesDTOCopyWith<$Res>
           $Res Function(_$_GenreAttributesDTO) then) =
       __$$_GenreAttributesDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String? parentId, String? parentName, String name});
 }
 
 /// @nodoc
 class __$$_GenreAttributesDTOCopyWithImpl<$Res>
-    extends _$GenreAttributesDTOCopyWithImpl<$Res>
+    extends _$GenreAttributesDTOCopyWithImpl<$Res, _$_GenreAttributesDTO>
     implements _$$_GenreAttributesDTOCopyWith<$Res> {
   __$$_GenreAttributesDTOCopyWithImpl(
       _$_GenreAttributesDTO _value, $Res Function(_$_GenreAttributesDTO) _then)
-      : super(_value, (v) => _then(v as _$_GenreAttributesDTO));
+      : super(_value, _then);
 
-  @override
-  _$_GenreAttributesDTO get _value => super._value as _$_GenreAttributesDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? parentId = freezed,
     Object? parentName = freezed,
-    Object? name = freezed,
+    Object? name = null,
   }) {
     return _then(_$_GenreAttributesDTO(
-      parentId: parentId == freezed
+      parentId: freezed == parentId
           ? _value.parentId
           : parentId // ignore: cast_nullable_to_non_nullable
               as String?,
-      parentName: parentName == freezed
+      parentName: freezed == parentName
           ? _value.parentName
           : parentName // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
@@ -3219,22 +3265,20 @@ class _$_GenreAttributesDTO extends _GenreAttributesDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GenreAttributesDTO &&
-            const DeepCollectionEquality().equals(other.parentId, parentId) &&
-            const DeepCollectionEquality()
-                .equals(other.parentName, parentName) &&
-            const DeepCollectionEquality().equals(other.name, name));
+            (identical(other.parentId, parentId) ||
+                other.parentId == parentId) &&
+            (identical(other.parentName, parentName) ||
+                other.parentName == parentName) &&
+            (identical(other.name, name) || other.name == name));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(parentId),
-      const DeepCollectionEquality().hash(parentName),
-      const DeepCollectionEquality().hash(name));
+  int get hashCode => Object.hash(runtimeType, parentId, parentName, name);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_GenreAttributesDTOCopyWith<_$_GenreAttributesDTO> get copyWith =>
       __$$_GenreAttributesDTOCopyWithImpl<_$_GenreAttributesDTO>(
           this, _$identity);

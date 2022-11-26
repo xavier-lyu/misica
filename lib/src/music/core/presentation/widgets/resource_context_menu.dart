@@ -158,7 +158,8 @@ class LikeOrUnlikeWidget extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final likedState = ref.watch(isResourceLikedProvider(resource.id));
+    final likedState =
+        ref.watch(isResourceLikedProvider(resourceId: resource.id));
     final liked = useState(likedState.value ?? false);
 
     return InkWell(

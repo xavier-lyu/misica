@@ -39,7 +39,8 @@ mixin _$ArtworkDTO {
 abstract class $ArtworkDTOCopyWith<$Res> {
   factory $ArtworkDTOCopyWith(
           ArtworkDTO value, $Res Function(ArtworkDTO) then) =
-      _$ArtworkDTOCopyWithImpl<$Res>;
+      _$ArtworkDTOCopyWithImpl<$Res, ArtworkDTO>;
+  @useResult
   $Res call(
       {String? bgColor,
       int height,
@@ -52,58 +53,61 @@ abstract class $ArtworkDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ArtworkDTOCopyWithImpl<$Res> implements $ArtworkDTOCopyWith<$Res> {
+class _$ArtworkDTOCopyWithImpl<$Res, $Val extends ArtworkDTO>
+    implements $ArtworkDTOCopyWith<$Res> {
   _$ArtworkDTOCopyWithImpl(this._value, this._then);
 
-  final ArtworkDTO _value;
   // ignore: unused_field
-  final $Res Function(ArtworkDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? bgColor = freezed,
-    Object? height = freezed,
+    Object? height = null,
     Object? textColor1 = freezed,
     Object? textColor2 = freezed,
     Object? textColor3 = freezed,
     Object? textColor4 = freezed,
-    Object? url = freezed,
-    Object? width = freezed,
+    Object? url = null,
+    Object? width = null,
   }) {
     return _then(_value.copyWith(
-      bgColor: bgColor == freezed
+      bgColor: freezed == bgColor
           ? _value.bgColor
           : bgColor // ignore: cast_nullable_to_non_nullable
               as String?,
-      height: height == freezed
+      height: null == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as int,
-      textColor1: textColor1 == freezed
+      textColor1: freezed == textColor1
           ? _value.textColor1
           : textColor1 // ignore: cast_nullable_to_non_nullable
               as String?,
-      textColor2: textColor2 == freezed
+      textColor2: freezed == textColor2
           ? _value.textColor2
           : textColor2 // ignore: cast_nullable_to_non_nullable
               as String?,
-      textColor3: textColor3 == freezed
+      textColor3: freezed == textColor3
           ? _value.textColor3
           : textColor3 // ignore: cast_nullable_to_non_nullable
               as String?,
-      textColor4: textColor4 == freezed
+      textColor4: freezed == textColor4
           ? _value.textColor4
           : textColor4 // ignore: cast_nullable_to_non_nullable
               as String?,
-      url: url == freezed
+      url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-      width: width == freezed
+      width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
@@ -114,6 +118,7 @@ abstract class _$$_ArtworkDTOCopyWith<$Res>
           _$_ArtworkDTO value, $Res Function(_$_ArtworkDTO) then) =
       __$$_ArtworkDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? bgColor,
       int height,
@@ -126,56 +131,55 @@ abstract class _$$_ArtworkDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ArtworkDTOCopyWithImpl<$Res> extends _$ArtworkDTOCopyWithImpl<$Res>
+class __$$_ArtworkDTOCopyWithImpl<$Res>
+    extends _$ArtworkDTOCopyWithImpl<$Res, _$_ArtworkDTO>
     implements _$$_ArtworkDTOCopyWith<$Res> {
   __$$_ArtworkDTOCopyWithImpl(
       _$_ArtworkDTO _value, $Res Function(_$_ArtworkDTO) _then)
-      : super(_value, (v) => _then(v as _$_ArtworkDTO));
+      : super(_value, _then);
 
-  @override
-  _$_ArtworkDTO get _value => super._value as _$_ArtworkDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? bgColor = freezed,
-    Object? height = freezed,
+    Object? height = null,
     Object? textColor1 = freezed,
     Object? textColor2 = freezed,
     Object? textColor3 = freezed,
     Object? textColor4 = freezed,
-    Object? url = freezed,
-    Object? width = freezed,
+    Object? url = null,
+    Object? width = null,
   }) {
     return _then(_$_ArtworkDTO(
-      bgColor: bgColor == freezed
+      bgColor: freezed == bgColor
           ? _value.bgColor
           : bgColor // ignore: cast_nullable_to_non_nullable
               as String?,
-      height: height == freezed
+      height: null == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as int,
-      textColor1: textColor1 == freezed
+      textColor1: freezed == textColor1
           ? _value.textColor1
           : textColor1 // ignore: cast_nullable_to_non_nullable
               as String?,
-      textColor2: textColor2 == freezed
+      textColor2: freezed == textColor2
           ? _value.textColor2
           : textColor2 // ignore: cast_nullable_to_non_nullable
               as String?,
-      textColor3: textColor3 == freezed
+      textColor3: freezed == textColor3
           ? _value.textColor3
           : textColor3 // ignore: cast_nullable_to_non_nullable
               as String?,
-      textColor4: textColor4 == freezed
+      textColor4: freezed == textColor4
           ? _value.textColor4
           : textColor4 // ignore: cast_nullable_to_non_nullable
               as String?,
-      url: url == freezed
+      url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-      width: width == freezed
+      width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as int,
@@ -227,35 +231,28 @@ class _$_ArtworkDTO extends _ArtworkDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ArtworkDTO &&
-            const DeepCollectionEquality().equals(other.bgColor, bgColor) &&
-            const DeepCollectionEquality().equals(other.height, height) &&
-            const DeepCollectionEquality()
-                .equals(other.textColor1, textColor1) &&
-            const DeepCollectionEquality()
-                .equals(other.textColor2, textColor2) &&
-            const DeepCollectionEquality()
-                .equals(other.textColor3, textColor3) &&
-            const DeepCollectionEquality()
-                .equals(other.textColor4, textColor4) &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality().equals(other.width, width));
+            (identical(other.bgColor, bgColor) || other.bgColor == bgColor) &&
+            (identical(other.height, height) || other.height == height) &&
+            (identical(other.textColor1, textColor1) ||
+                other.textColor1 == textColor1) &&
+            (identical(other.textColor2, textColor2) ||
+                other.textColor2 == textColor2) &&
+            (identical(other.textColor3, textColor3) ||
+                other.textColor3 == textColor3) &&
+            (identical(other.textColor4, textColor4) ||
+                other.textColor4 == textColor4) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.width, width) || other.width == width));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(bgColor),
-      const DeepCollectionEquality().hash(height),
-      const DeepCollectionEquality().hash(textColor1),
-      const DeepCollectionEquality().hash(textColor2),
-      const DeepCollectionEquality().hash(textColor3),
-      const DeepCollectionEquality().hash(textColor4),
-      const DeepCollectionEquality().hash(url),
-      const DeepCollectionEquality().hash(width));
+  int get hashCode => Object.hash(runtimeType, bgColor, height, textColor1,
+      textColor2, textColor3, textColor4, url, width);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ArtworkDTOCopyWith<_$_ArtworkDTO> get copyWith =>
       __$$_ArtworkDTOCopyWithImpl<_$_ArtworkDTO>(this, _$identity);
 

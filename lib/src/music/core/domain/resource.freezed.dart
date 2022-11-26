@@ -98,41 +98,41 @@ mixin _$Resource {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String id, String type, ResourceAttributes? attributes)?
+    TResult? Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributes? attributes,
             @JsonKey(ignore: true) AlbumRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
             @JsonKey(ignore: true) ArtistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
             @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
             @JsonKey(ignore: true) PlaylistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
+    TResult? Function(String id, String type, SongAttributes? attributes,
             @JsonKey(ignore: true) SongRelationships? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributes? attributes)?
+    TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
+    TResult? Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributes? attributes)?
+    TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
   }) =>
       throw _privateConstructorUsedError;
@@ -192,15 +192,15 @@ mixin _$Resource {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRaw value)? $default, {
-    TResult Function(Album value)? album,
-    TResult Function(Artist value)? artist,
-    TResult Function(MusicVideo value)? musicVideo,
-    TResult Function(Playlist value)? playlist,
-    TResult Function(Song value)? song,
-    TResult Function(Station value)? station,
-    TResult Function(Curator value)? curator,
-    TResult Function(Genre value)? genre,
+    TResult? Function(ResourceRaw value)? $default, {
+    TResult? Function(Album value)? album,
+    TResult? Function(Artist value)? artist,
+    TResult? Function(MusicVideo value)? musicVideo,
+    TResult? Function(Playlist value)? playlist,
+    TResult? Function(Song value)? song,
+    TResult? Function(Station value)? station,
+    TResult? Function(Curator value)? curator,
+    TResult? Function(Genre value)? genre,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -226,33 +226,37 @@ mixin _$Resource {
 /// @nodoc
 abstract class $ResourceCopyWith<$Res> {
   factory $ResourceCopyWith(Resource value, $Res Function(Resource) then) =
-      _$ResourceCopyWithImpl<$Res>;
+      _$ResourceCopyWithImpl<$Res, Resource>;
+  @useResult
   $Res call({String id, String type});
 }
 
 /// @nodoc
-class _$ResourceCopyWithImpl<$Res> implements $ResourceCopyWith<$Res> {
+class _$ResourceCopyWithImpl<$Res, $Val extends Resource>
+    implements $ResourceCopyWith<$Res> {
   _$ResourceCopyWithImpl(this._value, this._then);
 
-  final Resource _value;
   // ignore: unused_field
-  final $Res Function(Resource) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -262,37 +266,37 @@ abstract class _$$ResourceRawCopyWith<$Res> implements $ResourceCopyWith<$Res> {
           _$ResourceRaw value, $Res Function(_$ResourceRaw) then) =
       __$$ResourceRawCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String id, String type, ResourceAttributes? attributes});
 
   $ResourceAttributesCopyWith<$Res>? get attributes;
 }
 
 /// @nodoc
-class __$$ResourceRawCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
+class __$$ResourceRawCopyWithImpl<$Res>
+    extends _$ResourceCopyWithImpl<$Res, _$ResourceRaw>
     implements _$$ResourceRawCopyWith<$Res> {
   __$$ResourceRawCopyWithImpl(
       _$ResourceRaw _value, $Res Function(_$ResourceRaw) _then)
-      : super(_value, (v) => _then(v as _$ResourceRaw));
+      : super(_value, _then);
 
-  @override
-  _$ResourceRaw get _value => super._value as _$ResourceRaw;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
     Object? attributes = freezed,
   }) {
     return _then(_$ResourceRaw(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes: attributes == freezed
+      attributes: freezed == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as ResourceAttributes?,
@@ -300,6 +304,7 @@ class __$$ResourceRawCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceAttributesCopyWith<$Res>? get attributes {
     if (_value.attributes == null) {
       return null;
@@ -345,22 +350,19 @@ class _$ResourceRaw extends ResourceRaw {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResourceRaw &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.attributes, attributes));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.attributes, attributes) ||
+                other.attributes == attributes));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes));
+  int get hashCode => Object.hash(runtimeType, id, type, attributes);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$ResourceRawCopyWith<_$ResourceRaw> get copyWith =>
       __$$ResourceRawCopyWithImpl<_$ResourceRaw>(this, _$identity);
 
@@ -421,41 +423,41 @@ class _$ResourceRaw extends ResourceRaw {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String id, String type, ResourceAttributes? attributes)?
+    TResult? Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributes? attributes,
             @JsonKey(ignore: true) AlbumRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
             @JsonKey(ignore: true) ArtistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
             @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
             @JsonKey(ignore: true) PlaylistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
+    TResult? Function(String id, String type, SongAttributes? attributes,
             @JsonKey(ignore: true) SongRelationships? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributes? attributes)?
+    TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
+    TResult? Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributes? attributes)?
+    TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
   }) {
     return $default?.call(id, type, attributes);
@@ -527,15 +529,15 @@ class _$ResourceRaw extends ResourceRaw {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRaw value)? $default, {
-    TResult Function(Album value)? album,
-    TResult Function(Artist value)? artist,
-    TResult Function(MusicVideo value)? musicVideo,
-    TResult Function(Playlist value)? playlist,
-    TResult Function(Song value)? song,
-    TResult Function(Station value)? station,
-    TResult Function(Curator value)? curator,
-    TResult Function(Genre value)? genre,
+    TResult? Function(ResourceRaw value)? $default, {
+    TResult? Function(Album value)? album,
+    TResult? Function(Artist value)? artist,
+    TResult? Function(MusicVideo value)? musicVideo,
+    TResult? Function(Playlist value)? playlist,
+    TResult? Function(Song value)? song,
+    TResult? Function(Station value)? station,
+    TResult? Function(Curator value)? curator,
+    TResult? Function(Genre value)? genre,
   }) {
     return $default?.call(this);
   }
@@ -594,6 +596,7 @@ abstract class _$$AlbumCopyWith<$Res> implements $ResourceCopyWith<$Res> {
   factory _$$AlbumCopyWith(_$Album value, $Res Function(_$Album) then) =
       __$$AlbumCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       String type,
@@ -606,40 +609,38 @@ abstract class _$$AlbumCopyWith<$Res> implements $ResourceCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$AlbumCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
+class __$$AlbumCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res, _$Album>
     implements _$$AlbumCopyWith<$Res> {
   __$$AlbumCopyWithImpl(_$Album _value, $Res Function(_$Album) _then)
-      : super(_value, (v) => _then(v as _$Album));
+      : super(_value, _then);
 
-  @override
-  _$Album get _value => super._value as _$Album;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
     Object? attributes = freezed,
     Object? relationships = freezed,
     Object? views = freezed,
   }) {
     return _then(_$Album(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes: attributes == freezed
+      attributes: freezed == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as AlbumAttributes?,
-      relationships: relationships == freezed
+      relationships: freezed == relationships
           ? _value.relationships
           : relationships // ignore: cast_nullable_to_non_nullable
               as AlbumRelationships?,
-      views: views == freezed
+      views: freezed == views
           ? _value._views
           : views // ignore: cast_nullable_to_non_nullable
               as Map<String, ResourceView>?,
@@ -647,6 +648,7 @@ class __$$AlbumCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AlbumAttributesCopyWith<$Res>? get attributes {
     if (_value.attributes == null) {
       return null;
@@ -658,6 +660,7 @@ class __$$AlbumCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AlbumRelationshipsCopyWith<$Res>? get relationships {
     if (_value.relationships == null) {
       return null;
@@ -717,27 +720,23 @@ class _$Album extends Album {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$Album &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.attributes, attributes) &&
-            const DeepCollectionEquality()
-                .equals(other.relationships, relationships) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.attributes, attributes) ||
+                other.attributes == attributes) &&
+            (identical(other.relationships, relationships) ||
+                other.relationships == relationships) &&
             const DeepCollectionEquality().equals(other._views, _views));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes),
-      const DeepCollectionEquality().hash(relationships),
-      const DeepCollectionEquality().hash(_views));
+  int get hashCode => Object.hash(runtimeType, id, type, attributes,
+      relationships, const DeepCollectionEquality().hash(_views));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$AlbumCopyWith<_$Album> get copyWith =>
       __$$AlbumCopyWithImpl<_$Album>(this, _$identity);
 
@@ -798,41 +797,41 @@ class _$Album extends Album {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String id, String type, ResourceAttributes? attributes)?
+    TResult? Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributes? attributes,
             @JsonKey(ignore: true) AlbumRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
             @JsonKey(ignore: true) ArtistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
             @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
             @JsonKey(ignore: true) PlaylistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
+    TResult? Function(String id, String type, SongAttributes? attributes,
             @JsonKey(ignore: true) SongRelationships? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributes? attributes)?
+    TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
+    TResult? Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributes? attributes)?
+    TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
   }) {
     return album?.call(id, type, attributes, relationships, views);
@@ -904,15 +903,15 @@ class _$Album extends Album {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRaw value)? $default, {
-    TResult Function(Album value)? album,
-    TResult Function(Artist value)? artist,
-    TResult Function(MusicVideo value)? musicVideo,
-    TResult Function(Playlist value)? playlist,
-    TResult Function(Song value)? song,
-    TResult Function(Station value)? station,
-    TResult Function(Curator value)? curator,
-    TResult Function(Genre value)? genre,
+    TResult? Function(ResourceRaw value)? $default, {
+    TResult? Function(Album value)? album,
+    TResult? Function(Artist value)? artist,
+    TResult? Function(MusicVideo value)? musicVideo,
+    TResult? Function(Playlist value)? playlist,
+    TResult? Function(Song value)? song,
+    TResult? Function(Station value)? station,
+    TResult? Function(Curator value)? curator,
+    TResult? Function(Genre value)? genre,
   }) {
     return album?.call(this);
   }
@@ -975,6 +974,7 @@ abstract class _$$ArtistCopyWith<$Res> implements $ResourceCopyWith<$Res> {
   factory _$$ArtistCopyWith(_$Artist value, $Res Function(_$Artist) then) =
       __$$ArtistCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       String type,
@@ -987,40 +987,39 @@ abstract class _$$ArtistCopyWith<$Res> implements $ResourceCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$ArtistCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
+class __$$ArtistCopyWithImpl<$Res>
+    extends _$ResourceCopyWithImpl<$Res, _$Artist>
     implements _$$ArtistCopyWith<$Res> {
   __$$ArtistCopyWithImpl(_$Artist _value, $Res Function(_$Artist) _then)
-      : super(_value, (v) => _then(v as _$Artist));
+      : super(_value, _then);
 
-  @override
-  _$Artist get _value => super._value as _$Artist;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
     Object? attributes = freezed,
     Object? relationships = freezed,
     Object? views = freezed,
   }) {
     return _then(_$Artist(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes: attributes == freezed
+      attributes: freezed == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as ArtistAttributes?,
-      relationships: relationships == freezed
+      relationships: freezed == relationships
           ? _value.relationships
           : relationships // ignore: cast_nullable_to_non_nullable
               as ArtistRelationships?,
-      views: views == freezed
+      views: freezed == views
           ? _value._views
           : views // ignore: cast_nullable_to_non_nullable
               as Map<String, ResourceView>?,
@@ -1028,6 +1027,7 @@ class __$$ArtistCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ArtistAttributesCopyWith<$Res>? get attributes {
     if (_value.attributes == null) {
       return null;
@@ -1039,6 +1039,7 @@ class __$$ArtistCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ArtistRelationshipsCopyWith<$Res>? get relationships {
     if (_value.relationships == null) {
       return null;
@@ -1099,27 +1100,23 @@ class _$Artist extends Artist {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$Artist &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.attributes, attributes) &&
-            const DeepCollectionEquality()
-                .equals(other.relationships, relationships) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.attributes, attributes) ||
+                other.attributes == attributes) &&
+            (identical(other.relationships, relationships) ||
+                other.relationships == relationships) &&
             const DeepCollectionEquality().equals(other._views, _views));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes),
-      const DeepCollectionEquality().hash(relationships),
-      const DeepCollectionEquality().hash(_views));
+  int get hashCode => Object.hash(runtimeType, id, type, attributes,
+      relationships, const DeepCollectionEquality().hash(_views));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$ArtistCopyWith<_$Artist> get copyWith =>
       __$$ArtistCopyWithImpl<_$Artist>(this, _$identity);
 
@@ -1180,41 +1177,41 @@ class _$Artist extends Artist {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String id, String type, ResourceAttributes? attributes)?
+    TResult? Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributes? attributes,
             @JsonKey(ignore: true) AlbumRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
             @JsonKey(ignore: true) ArtistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
             @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
             @JsonKey(ignore: true) PlaylistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
+    TResult? Function(String id, String type, SongAttributes? attributes,
             @JsonKey(ignore: true) SongRelationships? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributes? attributes)?
+    TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
+    TResult? Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributes? attributes)?
+    TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
   }) {
     return artist?.call(id, type, attributes, relationships, views);
@@ -1286,15 +1283,15 @@ class _$Artist extends Artist {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRaw value)? $default, {
-    TResult Function(Album value)? album,
-    TResult Function(Artist value)? artist,
-    TResult Function(MusicVideo value)? musicVideo,
-    TResult Function(Playlist value)? playlist,
-    TResult Function(Song value)? song,
-    TResult Function(Station value)? station,
-    TResult Function(Curator value)? curator,
-    TResult Function(Genre value)? genre,
+    TResult? Function(ResourceRaw value)? $default, {
+    TResult? Function(Album value)? album,
+    TResult? Function(Artist value)? artist,
+    TResult? Function(MusicVideo value)? musicVideo,
+    TResult? Function(Playlist value)? playlist,
+    TResult? Function(Song value)? song,
+    TResult? Function(Station value)? station,
+    TResult? Function(Curator value)? curator,
+    TResult? Function(Genre value)? genre,
   }) {
     return artist?.call(this);
   }
@@ -1360,6 +1357,7 @@ abstract class _$$MusicVideoCopyWith<$Res> implements $ResourceCopyWith<$Res> {
           _$MusicVideo value, $Res Function(_$MusicVideo) then) =
       __$$MusicVideoCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       String type,
@@ -1371,36 +1369,35 @@ abstract class _$$MusicVideoCopyWith<$Res> implements $ResourceCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$MusicVideoCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
+class __$$MusicVideoCopyWithImpl<$Res>
+    extends _$ResourceCopyWithImpl<$Res, _$MusicVideo>
     implements _$$MusicVideoCopyWith<$Res> {
   __$$MusicVideoCopyWithImpl(
       _$MusicVideo _value, $Res Function(_$MusicVideo) _then)
-      : super(_value, (v) => _then(v as _$MusicVideo));
+      : super(_value, _then);
 
-  @override
-  _$MusicVideo get _value => super._value as _$MusicVideo;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
     Object? attributes = freezed,
     Object? relationships = freezed,
   }) {
     return _then(_$MusicVideo(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes: attributes == freezed
+      attributes: freezed == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as MusicVideoAttributes?,
-      relationships: relationships == freezed
+      relationships: freezed == relationships
           ? _value.relationships
           : relationships // ignore: cast_nullable_to_non_nullable
               as MusicVideoRelationships?,
@@ -1408,6 +1405,7 @@ class __$$MusicVideoCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MusicVideoAttributesCopyWith<$Res>? get attributes {
     if (_value.attributes == null) {
       return null;
@@ -1419,6 +1417,7 @@ class __$$MusicVideoCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MusicVideoRelationshipsCopyWith<$Res>? get relationships {
     if (_value.relationships == null) {
       return null;
@@ -1469,25 +1468,22 @@ class _$MusicVideo extends MusicVideo {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MusicVideo &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.attributes, attributes) &&
-            const DeepCollectionEquality()
-                .equals(other.relationships, relationships));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.attributes, attributes) ||
+                other.attributes == attributes) &&
+            (identical(other.relationships, relationships) ||
+                other.relationships == relationships));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes),
-      const DeepCollectionEquality().hash(relationships));
+  int get hashCode =>
+      Object.hash(runtimeType, id, type, attributes, relationships);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$MusicVideoCopyWith<_$MusicVideo> get copyWith =>
       __$$MusicVideoCopyWithImpl<_$MusicVideo>(this, _$identity);
 
@@ -1548,41 +1544,41 @@ class _$MusicVideo extends MusicVideo {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String id, String type, ResourceAttributes? attributes)?
+    TResult? Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributes? attributes,
             @JsonKey(ignore: true) AlbumRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
             @JsonKey(ignore: true) ArtistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
             @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
             @JsonKey(ignore: true) PlaylistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
+    TResult? Function(String id, String type, SongAttributes? attributes,
             @JsonKey(ignore: true) SongRelationships? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributes? attributes)?
+    TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
+    TResult? Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributes? attributes)?
+    TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
   }) {
     return musicVideo?.call(id, type, attributes, relationships);
@@ -1654,15 +1650,15 @@ class _$MusicVideo extends MusicVideo {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRaw value)? $default, {
-    TResult Function(Album value)? album,
-    TResult Function(Artist value)? artist,
-    TResult Function(MusicVideo value)? musicVideo,
-    TResult Function(Playlist value)? playlist,
-    TResult Function(Song value)? song,
-    TResult Function(Station value)? station,
-    TResult Function(Curator value)? curator,
-    TResult Function(Genre value)? genre,
+    TResult? Function(ResourceRaw value)? $default, {
+    TResult? Function(Album value)? album,
+    TResult? Function(Artist value)? artist,
+    TResult? Function(MusicVideo value)? musicVideo,
+    TResult? Function(Playlist value)? playlist,
+    TResult? Function(Song value)? song,
+    TResult? Function(Station value)? station,
+    TResult? Function(Curator value)? curator,
+    TResult? Function(Genre value)? genre,
   }) {
     return musicVideo?.call(this);
   }
@@ -1726,6 +1722,7 @@ abstract class _$$PlaylistCopyWith<$Res> implements $ResourceCopyWith<$Res> {
           _$Playlist value, $Res Function(_$Playlist) then) =
       __$$PlaylistCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       String type,
@@ -1738,40 +1735,39 @@ abstract class _$$PlaylistCopyWith<$Res> implements $ResourceCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$PlaylistCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
+class __$$PlaylistCopyWithImpl<$Res>
+    extends _$ResourceCopyWithImpl<$Res, _$Playlist>
     implements _$$PlaylistCopyWith<$Res> {
   __$$PlaylistCopyWithImpl(_$Playlist _value, $Res Function(_$Playlist) _then)
-      : super(_value, (v) => _then(v as _$Playlist));
+      : super(_value, _then);
 
-  @override
-  _$Playlist get _value => super._value as _$Playlist;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
     Object? attributes = freezed,
     Object? relationships = freezed,
     Object? views = freezed,
   }) {
     return _then(_$Playlist(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes: attributes == freezed
+      attributes: freezed == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as PlaylistAttributes?,
-      relationships: relationships == freezed
+      relationships: freezed == relationships
           ? _value.relationships
           : relationships // ignore: cast_nullable_to_non_nullable
               as PlaylistRelationships?,
-      views: views == freezed
+      views: freezed == views
           ? _value._views
           : views // ignore: cast_nullable_to_non_nullable
               as Map<String, ResourceView>?,
@@ -1779,6 +1775,7 @@ class __$$PlaylistCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PlaylistAttributesCopyWith<$Res>? get attributes {
     if (_value.attributes == null) {
       return null;
@@ -1790,6 +1787,7 @@ class __$$PlaylistCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PlaylistRelationshipsCopyWith<$Res>? get relationships {
     if (_value.relationships == null) {
       return null;
@@ -1850,27 +1848,23 @@ class _$Playlist extends Playlist {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$Playlist &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.attributes, attributes) &&
-            const DeepCollectionEquality()
-                .equals(other.relationships, relationships) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.attributes, attributes) ||
+                other.attributes == attributes) &&
+            (identical(other.relationships, relationships) ||
+                other.relationships == relationships) &&
             const DeepCollectionEquality().equals(other._views, _views));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes),
-      const DeepCollectionEquality().hash(relationships),
-      const DeepCollectionEquality().hash(_views));
+  int get hashCode => Object.hash(runtimeType, id, type, attributes,
+      relationships, const DeepCollectionEquality().hash(_views));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$PlaylistCopyWith<_$Playlist> get copyWith =>
       __$$PlaylistCopyWithImpl<_$Playlist>(this, _$identity);
 
@@ -1931,41 +1925,41 @@ class _$Playlist extends Playlist {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String id, String type, ResourceAttributes? attributes)?
+    TResult? Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributes? attributes,
             @JsonKey(ignore: true) AlbumRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
             @JsonKey(ignore: true) ArtistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
             @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
             @JsonKey(ignore: true) PlaylistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
+    TResult? Function(String id, String type, SongAttributes? attributes,
             @JsonKey(ignore: true) SongRelationships? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributes? attributes)?
+    TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
+    TResult? Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributes? attributes)?
+    TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
   }) {
     return playlist?.call(id, type, attributes, relationships, views);
@@ -2037,15 +2031,15 @@ class _$Playlist extends Playlist {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRaw value)? $default, {
-    TResult Function(Album value)? album,
-    TResult Function(Artist value)? artist,
-    TResult Function(MusicVideo value)? musicVideo,
-    TResult Function(Playlist value)? playlist,
-    TResult Function(Song value)? song,
-    TResult Function(Station value)? station,
-    TResult Function(Curator value)? curator,
-    TResult Function(Genre value)? genre,
+    TResult? Function(ResourceRaw value)? $default, {
+    TResult? Function(Album value)? album,
+    TResult? Function(Artist value)? artist,
+    TResult? Function(MusicVideo value)? musicVideo,
+    TResult? Function(Playlist value)? playlist,
+    TResult? Function(Song value)? song,
+    TResult? Function(Station value)? station,
+    TResult? Function(Curator value)? curator,
+    TResult? Function(Genre value)? genre,
   }) {
     return playlist?.call(this);
   }
@@ -2110,6 +2104,7 @@ abstract class _$$SongCopyWith<$Res> implements $ResourceCopyWith<$Res> {
   factory _$$SongCopyWith(_$Song value, $Res Function(_$Song) then) =
       __$$SongCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       String type,
@@ -2121,35 +2116,33 @@ abstract class _$$SongCopyWith<$Res> implements $ResourceCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$SongCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
+class __$$SongCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res, _$Song>
     implements _$$SongCopyWith<$Res> {
   __$$SongCopyWithImpl(_$Song _value, $Res Function(_$Song) _then)
-      : super(_value, (v) => _then(v as _$Song));
+      : super(_value, _then);
 
-  @override
-  _$Song get _value => super._value as _$Song;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
     Object? attributes = freezed,
     Object? relationships = freezed,
   }) {
     return _then(_$Song(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes: attributes == freezed
+      attributes: freezed == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as SongAttributes?,
-      relationships: relationships == freezed
+      relationships: freezed == relationships
           ? _value.relationships
           : relationships // ignore: cast_nullable_to_non_nullable
               as SongRelationships?,
@@ -2157,6 +2150,7 @@ class __$$SongCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SongAttributesCopyWith<$Res>? get attributes {
     if (_value.attributes == null) {
       return null;
@@ -2168,6 +2162,7 @@ class __$$SongCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SongRelationshipsCopyWith<$Res>? get relationships {
     if (_value.relationships == null) {
       return null;
@@ -2216,25 +2211,22 @@ class _$Song extends Song {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$Song &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.attributes, attributes) &&
-            const DeepCollectionEquality()
-                .equals(other.relationships, relationships));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.attributes, attributes) ||
+                other.attributes == attributes) &&
+            (identical(other.relationships, relationships) ||
+                other.relationships == relationships));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes),
-      const DeepCollectionEquality().hash(relationships));
+  int get hashCode =>
+      Object.hash(runtimeType, id, type, attributes, relationships);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$SongCopyWith<_$Song> get copyWith =>
       __$$SongCopyWithImpl<_$Song>(this, _$identity);
 
@@ -2295,41 +2287,41 @@ class _$Song extends Song {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String id, String type, ResourceAttributes? attributes)?
+    TResult? Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributes? attributes,
             @JsonKey(ignore: true) AlbumRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
             @JsonKey(ignore: true) ArtistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
             @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
             @JsonKey(ignore: true) PlaylistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
+    TResult? Function(String id, String type, SongAttributes? attributes,
             @JsonKey(ignore: true) SongRelationships? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributes? attributes)?
+    TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
+    TResult? Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributes? attributes)?
+    TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
   }) {
     return song?.call(id, type, attributes, relationships);
@@ -2401,15 +2393,15 @@ class _$Song extends Song {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRaw value)? $default, {
-    TResult Function(Album value)? album,
-    TResult Function(Artist value)? artist,
-    TResult Function(MusicVideo value)? musicVideo,
-    TResult Function(Playlist value)? playlist,
-    TResult Function(Song value)? song,
-    TResult Function(Station value)? station,
-    TResult Function(Curator value)? curator,
-    TResult Function(Genre value)? genre,
+    TResult? Function(ResourceRaw value)? $default, {
+    TResult? Function(Album value)? album,
+    TResult? Function(Artist value)? artist,
+    TResult? Function(MusicVideo value)? musicVideo,
+    TResult? Function(Playlist value)? playlist,
+    TResult? Function(Song value)? song,
+    TResult? Function(Station value)? station,
+    TResult? Function(Curator value)? curator,
+    TResult? Function(Genre value)? genre,
   }) {
     return song?.call(this);
   }
@@ -2469,36 +2461,36 @@ abstract class _$$StationCopyWith<$Res> implements $ResourceCopyWith<$Res> {
   factory _$$StationCopyWith(_$Station value, $Res Function(_$Station) then) =
       __$$StationCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String id, String type, StationAttributes? attributes});
 
   $StationAttributesCopyWith<$Res>? get attributes;
 }
 
 /// @nodoc
-class __$$StationCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
+class __$$StationCopyWithImpl<$Res>
+    extends _$ResourceCopyWithImpl<$Res, _$Station>
     implements _$$StationCopyWith<$Res> {
   __$$StationCopyWithImpl(_$Station _value, $Res Function(_$Station) _then)
-      : super(_value, (v) => _then(v as _$Station));
+      : super(_value, _then);
 
-  @override
-  _$Station get _value => super._value as _$Station;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
     Object? attributes = freezed,
   }) {
     return _then(_$Station(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes: attributes == freezed
+      attributes: freezed == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as StationAttributes?,
@@ -2506,6 +2498,7 @@ class __$$StationCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $StationAttributesCopyWith<$Res>? get attributes {
     if (_value.attributes == null) {
       return null;
@@ -2551,22 +2544,19 @@ class _$Station extends Station {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$Station &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.attributes, attributes));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.attributes, attributes) ||
+                other.attributes == attributes));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes));
+  int get hashCode => Object.hash(runtimeType, id, type, attributes);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$StationCopyWith<_$Station> get copyWith =>
       __$$StationCopyWithImpl<_$Station>(this, _$identity);
 
@@ -2627,41 +2617,41 @@ class _$Station extends Station {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String id, String type, ResourceAttributes? attributes)?
+    TResult? Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributes? attributes,
             @JsonKey(ignore: true) AlbumRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
             @JsonKey(ignore: true) ArtistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
             @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
             @JsonKey(ignore: true) PlaylistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
+    TResult? Function(String id, String type, SongAttributes? attributes,
             @JsonKey(ignore: true) SongRelationships? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributes? attributes)?
+    TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
+    TResult? Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributes? attributes)?
+    TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
   }) {
     return station?.call(id, type, attributes);
@@ -2733,15 +2723,15 @@ class _$Station extends Station {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRaw value)? $default, {
-    TResult Function(Album value)? album,
-    TResult Function(Artist value)? artist,
-    TResult Function(MusicVideo value)? musicVideo,
-    TResult Function(Playlist value)? playlist,
-    TResult Function(Song value)? song,
-    TResult Function(Station value)? station,
-    TResult Function(Curator value)? curator,
-    TResult Function(Genre value)? genre,
+    TResult? Function(ResourceRaw value)? $default, {
+    TResult? Function(Album value)? album,
+    TResult? Function(Artist value)? artist,
+    TResult? Function(MusicVideo value)? musicVideo,
+    TResult? Function(Playlist value)? playlist,
+    TResult? Function(Song value)? song,
+    TResult? Function(Station value)? station,
+    TResult? Function(Curator value)? curator,
+    TResult? Function(Genre value)? genre,
   }) {
     return station?.call(this);
   }
@@ -2799,6 +2789,7 @@ abstract class _$$CuratorCopyWith<$Res> implements $ResourceCopyWith<$Res> {
   factory _$$CuratorCopyWith(_$Curator value, $Res Function(_$Curator) then) =
       __$$CuratorCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       String type,
@@ -2810,35 +2801,34 @@ abstract class _$$CuratorCopyWith<$Res> implements $ResourceCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$CuratorCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
+class __$$CuratorCopyWithImpl<$Res>
+    extends _$ResourceCopyWithImpl<$Res, _$Curator>
     implements _$$CuratorCopyWith<$Res> {
   __$$CuratorCopyWithImpl(_$Curator _value, $Res Function(_$Curator) _then)
-      : super(_value, (v) => _then(v as _$Curator));
+      : super(_value, _then);
 
-  @override
-  _$Curator get _value => super._value as _$Curator;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
     Object? attributes = freezed,
     Object? relationships = freezed,
   }) {
     return _then(_$Curator(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes: attributes == freezed
+      attributes: freezed == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as CuratorAttributes?,
-      relationships: relationships == freezed
+      relationships: freezed == relationships
           ? _value.relationships
           : relationships // ignore: cast_nullable_to_non_nullable
               as CuratorRelationships?,
@@ -2846,6 +2836,7 @@ class __$$CuratorCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CuratorAttributesCopyWith<$Res>? get attributes {
     if (_value.attributes == null) {
       return null;
@@ -2857,6 +2848,7 @@ class __$$CuratorCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CuratorRelationshipsCopyWith<$Res>? get relationships {
     if (_value.relationships == null) {
       return null;
@@ -2906,25 +2898,22 @@ class _$Curator extends Curator {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$Curator &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.attributes, attributes) &&
-            const DeepCollectionEquality()
-                .equals(other.relationships, relationships));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.attributes, attributes) ||
+                other.attributes == attributes) &&
+            (identical(other.relationships, relationships) ||
+                other.relationships == relationships));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes),
-      const DeepCollectionEquality().hash(relationships));
+  int get hashCode =>
+      Object.hash(runtimeType, id, type, attributes, relationships);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$CuratorCopyWith<_$Curator> get copyWith =>
       __$$CuratorCopyWithImpl<_$Curator>(this, _$identity);
 
@@ -2985,41 +2974,41 @@ class _$Curator extends Curator {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String id, String type, ResourceAttributes? attributes)?
+    TResult? Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributes? attributes,
             @JsonKey(ignore: true) AlbumRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
             @JsonKey(ignore: true) ArtistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
             @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
             @JsonKey(ignore: true) PlaylistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
+    TResult? Function(String id, String type, SongAttributes? attributes,
             @JsonKey(ignore: true) SongRelationships? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributes? attributes)?
+    TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
+    TResult? Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributes? attributes)?
+    TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
   }) {
     return curator?.call(id, type, attributes, relationships);
@@ -3091,15 +3080,15 @@ class _$Curator extends Curator {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRaw value)? $default, {
-    TResult Function(Album value)? album,
-    TResult Function(Artist value)? artist,
-    TResult Function(MusicVideo value)? musicVideo,
-    TResult Function(Playlist value)? playlist,
-    TResult Function(Song value)? song,
-    TResult Function(Station value)? station,
-    TResult Function(Curator value)? curator,
-    TResult Function(Genre value)? genre,
+    TResult? Function(ResourceRaw value)? $default, {
+    TResult? Function(Album value)? album,
+    TResult? Function(Artist value)? artist,
+    TResult? Function(MusicVideo value)? musicVideo,
+    TResult? Function(Playlist value)? playlist,
+    TResult? Function(Song value)? song,
+    TResult? Function(Station value)? station,
+    TResult? Function(Curator value)? curator,
+    TResult? Function(Genre value)? genre,
   }) {
     return curator?.call(this);
   }
@@ -3161,36 +3150,35 @@ abstract class _$$GenreCopyWith<$Res> implements $ResourceCopyWith<$Res> {
   factory _$$GenreCopyWith(_$Genre value, $Res Function(_$Genre) then) =
       __$$GenreCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String id, String type, GenreAttributes? attributes});
 
   $GenreAttributesCopyWith<$Res>? get attributes;
 }
 
 /// @nodoc
-class __$$GenreCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
+class __$$GenreCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res, _$Genre>
     implements _$$GenreCopyWith<$Res> {
   __$$GenreCopyWithImpl(_$Genre _value, $Res Function(_$Genre) _then)
-      : super(_value, (v) => _then(v as _$Genre));
+      : super(_value, _then);
 
-  @override
-  _$Genre get _value => super._value as _$Genre;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
     Object? attributes = freezed,
   }) {
     return _then(_$Genre(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes: attributes == freezed
+      attributes: freezed == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as GenreAttributes?,
@@ -3198,6 +3186,7 @@ class __$$GenreCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $GenreAttributesCopyWith<$Res>? get attributes {
     if (_value.attributes == null) {
       return null;
@@ -3242,22 +3231,19 @@ class _$Genre extends Genre {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$Genre &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.attributes, attributes));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.attributes, attributes) ||
+                other.attributes == attributes));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes));
+  int get hashCode => Object.hash(runtimeType, id, type, attributes);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$GenreCopyWith<_$Genre> get copyWith =>
       __$$GenreCopyWithImpl<_$Genre>(this, _$identity);
 
@@ -3318,41 +3304,41 @@ class _$Genre extends Genre {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(String id, String type, ResourceAttributes? attributes)?
+    TResult? Function(String id, String type, ResourceAttributes? attributes)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributes? attributes,
             @JsonKey(ignore: true) AlbumRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
             @JsonKey(ignore: true) ArtistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
+    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
             @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
         musicVideo,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
             @JsonKey(ignore: true) PlaylistRelationships? relationships,
             @JsonKey(ignore: true) Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
+    TResult? Function(String id, String type, SongAttributes? attributes,
             @JsonKey(ignore: true) SongRelationships? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributes? attributes)?
+    TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
+    TResult? Function(String id, String type, CuratorAttributes? attributes,
             @JsonKey(ignore: true) CuratorRelationships? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributes? attributes)?
+    TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
   }) {
     return genre?.call(id, type, attributes);
@@ -3424,15 +3410,15 @@ class _$Genre extends Genre {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRaw value)? $default, {
-    TResult Function(Album value)? album,
-    TResult Function(Artist value)? artist,
-    TResult Function(MusicVideo value)? musicVideo,
-    TResult Function(Playlist value)? playlist,
-    TResult Function(Song value)? song,
-    TResult Function(Station value)? station,
-    TResult Function(Curator value)? curator,
-    TResult Function(Genre value)? genre,
+    TResult? Function(ResourceRaw value)? $default, {
+    TResult? Function(Album value)? album,
+    TResult? Function(Artist value)? artist,
+    TResult? Function(MusicVideo value)? musicVideo,
+    TResult? Function(Playlist value)? playlist,
+    TResult? Function(Song value)? song,
+    TResult? Function(Station value)? station,
+    TResult? Function(Curator value)? curator,
+    TResult? Function(Genre value)? genre,
   }) {
     return genre?.call(this);
   }

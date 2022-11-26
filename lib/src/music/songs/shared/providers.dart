@@ -4,14 +4,19 @@ import 'package:misica/src/music/core/domain/track.dart';
 import 'package:misica/src/music/songs/application/song_notifier.dart';
 import 'package:misica/src/music/songs/infrastructure/song_repository.dart';
 import 'package:misica/src/music/songs/infrastructure/song_service.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-final songServiceProvider = Provider(
-  (ref) => SongService(ref.watch(musicDioProvider)),
-);
+part 'providers.g.dart';
 
-final songRepositoryProvider = Provider(
-  (ref) => SongRepository(ref.watch(songServiceProvider)),
-);
+@riverpod
+SongService songService(SongServiceRef ref) {
+  return SongService(ref.watch(musicDioProvider));
+}
+
+@riverpod
+SongRepository songRepository(SongRepositoryRef ref) {
+  return SongRepository(ref.watch(songServiceProvider));
+}
 
 final songNotifierProvider =
     StateNotifierProvider.autoDispose<SongNotifier, AsyncValue<Track>>(

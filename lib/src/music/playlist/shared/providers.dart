@@ -6,14 +6,19 @@ import 'package:misica/src/music/playlist/application/playlist_tracks_notifier.d
 import 'package:misica/src/music/playlist/application/playlists_notifier.dart';
 import 'package:misica/src/music/playlist/infrastructure/playlists_repository.dart';
 import 'package:misica/src/music/playlist/infrastructure/playlists_service.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-final playlistsServiceProvider = Provider(
-  (ref) => PlaylistsService(ref.watch(musicDioProvider)),
-);
+part 'providers.g.dart';
 
-final playlistsRepositoryProvider = Provider(
-  (ref) => PlaylistsRepository(ref.watch(playlistsServiceProvider)),
-);
+@riverpod
+PlaylistsService playlistsService(PlaylistsServiceRef ref) {
+  return PlaylistsService(ref.watch(musicDioProvider));
+}
+
+@riverpod
+PlaylistsRepository playlistsRepository(PlaylistsRepositoryRef ref) {
+  return PlaylistsRepository(ref.watch(playlistsServiceProvider));
+}
 
 final playlistsNotifierProvider =
     StateNotifierProvider.autoDispose<PlaylistsNotifier, AsyncValue<Playlist>>(

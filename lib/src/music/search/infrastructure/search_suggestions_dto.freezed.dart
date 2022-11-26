@@ -34,37 +34,43 @@ abstract class $SearchSuggestionsResultsDTOCopyWith<$Res> {
   factory $SearchSuggestionsResultsDTOCopyWith(
           SearchSuggestionsResultsDTO value,
           $Res Function(SearchSuggestionsResultsDTO) then) =
-      _$SearchSuggestionsResultsDTOCopyWithImpl<$Res>;
+      _$SearchSuggestionsResultsDTOCopyWithImpl<$Res,
+          SearchSuggestionsResultsDTO>;
+  @useResult
   $Res call({SearchSuggestionsDTO results});
 
   $SearchSuggestionsDTOCopyWith<$Res> get results;
 }
 
 /// @nodoc
-class _$SearchSuggestionsResultsDTOCopyWithImpl<$Res>
+class _$SearchSuggestionsResultsDTOCopyWithImpl<$Res,
+        $Val extends SearchSuggestionsResultsDTO>
     implements $SearchSuggestionsResultsDTOCopyWith<$Res> {
   _$SearchSuggestionsResultsDTOCopyWithImpl(this._value, this._then);
 
-  final SearchSuggestionsResultsDTO _value;
   // ignore: unused_field
-  final $Res Function(SearchSuggestionsResultsDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? results = freezed,
+    Object? results = null,
   }) {
     return _then(_value.copyWith(
-      results: results == freezed
+      results: null == results
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
               as SearchSuggestionsDTO,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SearchSuggestionsDTOCopyWith<$Res> get results {
     return $SearchSuggestionsDTOCopyWith<$Res>(_value.results, (value) {
-      return _then(_value.copyWith(results: value));
+      return _then(_value.copyWith(results: value) as $Val);
     });
   }
 }
@@ -77,6 +83,7 @@ abstract class _$$_SearchSuggestionsResultsDTOCopyWith<$Res>
           $Res Function(_$_SearchSuggestionsResultsDTO) then) =
       __$$_SearchSuggestionsResultsDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({SearchSuggestionsDTO results});
 
   @override
@@ -85,23 +92,21 @@ abstract class _$$_SearchSuggestionsResultsDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_SearchSuggestionsResultsDTOCopyWithImpl<$Res>
-    extends _$SearchSuggestionsResultsDTOCopyWithImpl<$Res>
+    extends _$SearchSuggestionsResultsDTOCopyWithImpl<$Res,
+        _$_SearchSuggestionsResultsDTO>
     implements _$$_SearchSuggestionsResultsDTOCopyWith<$Res> {
   __$$_SearchSuggestionsResultsDTOCopyWithImpl(
       _$_SearchSuggestionsResultsDTO _value,
       $Res Function(_$_SearchSuggestionsResultsDTO) _then)
-      : super(_value, (v) => _then(v as _$_SearchSuggestionsResultsDTO));
+      : super(_value, _then);
 
-  @override
-  _$_SearchSuggestionsResultsDTO get _value =>
-      super._value as _$_SearchSuggestionsResultsDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? results = freezed,
+    Object? results = null,
   }) {
     return _then(_$_SearchSuggestionsResultsDTO(
-      results: results == freezed
+      results: null == results
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
               as SearchSuggestionsDTO,
@@ -130,16 +135,16 @@ class _$_SearchSuggestionsResultsDTO extends _SearchSuggestionsResultsDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SearchSuggestionsResultsDTO &&
-            const DeepCollectionEquality().equals(other.results, results));
+            (identical(other.results, results) || other.results == results));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(results));
+  int get hashCode => Object.hash(runtimeType, results);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SearchSuggestionsResultsDTOCopyWith<_$_SearchSuggestionsResultsDTO>
       get copyWith => __$$_SearchSuggestionsResultsDTOCopyWithImpl<
           _$_SearchSuggestionsResultsDTO>(this, _$identity);
@@ -189,29 +194,33 @@ mixin _$SearchSuggestionsDTO {
 abstract class $SearchSuggestionsDTOCopyWith<$Res> {
   factory $SearchSuggestionsDTOCopyWith(SearchSuggestionsDTO value,
           $Res Function(SearchSuggestionsDTO) then) =
-      _$SearchSuggestionsDTOCopyWithImpl<$Res>;
+      _$SearchSuggestionsDTOCopyWithImpl<$Res, SearchSuggestionsDTO>;
+  @useResult
   $Res call({List<SearchSuggestionDTO>? suggestions});
 }
 
 /// @nodoc
-class _$SearchSuggestionsDTOCopyWithImpl<$Res>
+class _$SearchSuggestionsDTOCopyWithImpl<$Res,
+        $Val extends SearchSuggestionsDTO>
     implements $SearchSuggestionsDTOCopyWith<$Res> {
   _$SearchSuggestionsDTOCopyWithImpl(this._value, this._then);
 
-  final SearchSuggestionsDTO _value;
   // ignore: unused_field
-  final $Res Function(SearchSuggestionsDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? suggestions = freezed,
   }) {
     return _then(_value.copyWith(
-      suggestions: suggestions == freezed
+      suggestions: freezed == suggestions
           ? _value.suggestions
           : suggestions // ignore: cast_nullable_to_non_nullable
               as List<SearchSuggestionDTO>?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -222,26 +231,25 @@ abstract class _$$_SearchSuggestionsDTOCopyWith<$Res>
           $Res Function(_$_SearchSuggestionsDTO) then) =
       __$$_SearchSuggestionsDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({List<SearchSuggestionDTO>? suggestions});
 }
 
 /// @nodoc
 class __$$_SearchSuggestionsDTOCopyWithImpl<$Res>
-    extends _$SearchSuggestionsDTOCopyWithImpl<$Res>
+    extends _$SearchSuggestionsDTOCopyWithImpl<$Res, _$_SearchSuggestionsDTO>
     implements _$$_SearchSuggestionsDTOCopyWith<$Res> {
   __$$_SearchSuggestionsDTOCopyWithImpl(_$_SearchSuggestionsDTO _value,
       $Res Function(_$_SearchSuggestionsDTO) _then)
-      : super(_value, (v) => _then(v as _$_SearchSuggestionsDTO));
+      : super(_value, _then);
 
-  @override
-  _$_SearchSuggestionsDTO get _value => super._value as _$_SearchSuggestionsDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? suggestions = freezed,
   }) {
     return _then(_$_SearchSuggestionsDTO(
-      suggestions: suggestions == freezed
+      suggestions: freezed == suggestions
           ? _value._suggestions
           : suggestions // ignore: cast_nullable_to_non_nullable
               as List<SearchSuggestionDTO>?,
@@ -289,6 +297,7 @@ class _$_SearchSuggestionsDTO extends _SearchSuggestionsDTO {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SearchSuggestionsDTOCopyWith<_$_SearchSuggestionsDTO> get copyWith =>
       __$$_SearchSuggestionsDTOCopyWithImpl<_$_SearchSuggestionsDTO>(
           this, _$identity);
@@ -345,9 +354,9 @@ mixin _$SearchSuggestionDTO {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String kind, String searchTerm, String? displayTerm)?
+    TResult? Function(String kind, String searchTerm, String? displayTerm)?
         terms,
-    TResult Function(String kind, @ResourceDTOConverter() ResourceDTO content)?
+    TResult? Function(String kind, @ResourceDTOConverter() ResourceDTO content)?
         topResults,
   }) =>
       throw _privateConstructorUsedError;
@@ -368,8 +377,8 @@ mixin _$SearchSuggestionDTO {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(SearchSuggestionTermsDTO value)? terms,
-    TResult Function(SearchSuggestionTopResultsDTO value)? topResults,
+    TResult? Function(SearchSuggestionTermsDTO value)? terms,
+    TResult? Function(SearchSuggestionTopResultsDTO value)? topResults,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -389,29 +398,32 @@ mixin _$SearchSuggestionDTO {
 abstract class $SearchSuggestionDTOCopyWith<$Res> {
   factory $SearchSuggestionDTOCopyWith(
           SearchSuggestionDTO value, $Res Function(SearchSuggestionDTO) then) =
-      _$SearchSuggestionDTOCopyWithImpl<$Res>;
+      _$SearchSuggestionDTOCopyWithImpl<$Res, SearchSuggestionDTO>;
+  @useResult
   $Res call({String kind});
 }
 
 /// @nodoc
-class _$SearchSuggestionDTOCopyWithImpl<$Res>
+class _$SearchSuggestionDTOCopyWithImpl<$Res, $Val extends SearchSuggestionDTO>
     implements $SearchSuggestionDTOCopyWith<$Res> {
   _$SearchSuggestionDTOCopyWithImpl(this._value, this._then);
 
-  final SearchSuggestionDTO _value;
   // ignore: unused_field
-  final $Res Function(SearchSuggestionDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? kind = freezed,
+    Object? kind = null,
   }) {
     return _then(_value.copyWith(
-      kind: kind == freezed
+      kind: null == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -422,37 +434,35 @@ abstract class _$$SearchSuggestionTermsDTOCopyWith<$Res>
           $Res Function(_$SearchSuggestionTermsDTO) then) =
       __$$SearchSuggestionTermsDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String kind, String searchTerm, String? displayTerm});
 }
 
 /// @nodoc
 class __$$SearchSuggestionTermsDTOCopyWithImpl<$Res>
-    extends _$SearchSuggestionDTOCopyWithImpl<$Res>
+    extends _$SearchSuggestionDTOCopyWithImpl<$Res, _$SearchSuggestionTermsDTO>
     implements _$$SearchSuggestionTermsDTOCopyWith<$Res> {
   __$$SearchSuggestionTermsDTOCopyWithImpl(_$SearchSuggestionTermsDTO _value,
       $Res Function(_$SearchSuggestionTermsDTO) _then)
-      : super(_value, (v) => _then(v as _$SearchSuggestionTermsDTO));
+      : super(_value, _then);
 
-  @override
-  _$SearchSuggestionTermsDTO get _value =>
-      super._value as _$SearchSuggestionTermsDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? kind = freezed,
-    Object? searchTerm = freezed,
+    Object? kind = null,
+    Object? searchTerm = null,
     Object? displayTerm = freezed,
   }) {
     return _then(_$SearchSuggestionTermsDTO(
-      kind == freezed
+      null == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
               as String,
-      searchTerm == freezed
+      null == searchTerm
           ? _value.searchTerm
           : searchTerm // ignore: cast_nullable_to_non_nullable
               as String,
-      displayTerm == freezed
+      freezed == displayTerm
           ? _value.displayTerm
           : displayTerm // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -486,23 +496,20 @@ class _$SearchSuggestionTermsDTO extends SearchSuggestionTermsDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SearchSuggestionTermsDTO &&
-            const DeepCollectionEquality().equals(other.kind, kind) &&
-            const DeepCollectionEquality()
-                .equals(other.searchTerm, searchTerm) &&
-            const DeepCollectionEquality()
-                .equals(other.displayTerm, displayTerm));
+            (identical(other.kind, kind) || other.kind == kind) &&
+            (identical(other.searchTerm, searchTerm) ||
+                other.searchTerm == searchTerm) &&
+            (identical(other.displayTerm, displayTerm) ||
+                other.displayTerm == displayTerm));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(kind),
-      const DeepCollectionEquality().hash(searchTerm),
-      const DeepCollectionEquality().hash(displayTerm));
+  int get hashCode => Object.hash(runtimeType, kind, searchTerm, displayTerm);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$SearchSuggestionTermsDTOCopyWith<_$SearchSuggestionTermsDTO>
       get copyWith =>
           __$$SearchSuggestionTermsDTOCopyWithImpl<_$SearchSuggestionTermsDTO>(
@@ -524,9 +531,9 @@ class _$SearchSuggestionTermsDTO extends SearchSuggestionTermsDTO {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String kind, String searchTerm, String? displayTerm)?
+    TResult? Function(String kind, String searchTerm, String? displayTerm)?
         terms,
-    TResult Function(String kind, @ResourceDTOConverter() ResourceDTO content)?
+    TResult? Function(String kind, @ResourceDTOConverter() ResourceDTO content)?
         topResults,
   }) {
     return terms?.call(kind, searchTerm, displayTerm);
@@ -559,8 +566,8 @@ class _$SearchSuggestionTermsDTO extends SearchSuggestionTermsDTO {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(SearchSuggestionTermsDTO value)? terms,
-    TResult Function(SearchSuggestionTopResultsDTO value)? topResults,
+    TResult? Function(SearchSuggestionTermsDTO value)? terms,
+    TResult? Function(SearchSuggestionTopResultsDTO value)? topResults,
   }) {
     return terms?.call(this);
   }
@@ -614,6 +621,7 @@ abstract class _$$SearchSuggestionTopResultsDTOCopyWith<$Res>
           $Res Function(_$SearchSuggestionTopResultsDTO) then) =
       __$$SearchSuggestionTopResultsDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String kind, @ResourceDTOConverter() ResourceDTO content});
 
   $ResourceDTOCopyWith<$Res> get content;
@@ -621,28 +629,26 @@ abstract class _$$SearchSuggestionTopResultsDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$SearchSuggestionTopResultsDTOCopyWithImpl<$Res>
-    extends _$SearchSuggestionDTOCopyWithImpl<$Res>
+    extends _$SearchSuggestionDTOCopyWithImpl<$Res,
+        _$SearchSuggestionTopResultsDTO>
     implements _$$SearchSuggestionTopResultsDTOCopyWith<$Res> {
   __$$SearchSuggestionTopResultsDTOCopyWithImpl(
       _$SearchSuggestionTopResultsDTO _value,
       $Res Function(_$SearchSuggestionTopResultsDTO) _then)
-      : super(_value, (v) => _then(v as _$SearchSuggestionTopResultsDTO));
+      : super(_value, _then);
 
-  @override
-  _$SearchSuggestionTopResultsDTO get _value =>
-      super._value as _$SearchSuggestionTopResultsDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? kind = freezed,
-    Object? content = freezed,
+    Object? kind = null,
+    Object? content = null,
   }) {
     return _then(_$SearchSuggestionTopResultsDTO(
-      kind == freezed
+      null == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
               as String,
-      content == freezed
+      null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as ResourceDTO,
@@ -650,6 +656,7 @@ class __$$SearchSuggestionTopResultsDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceDTOCopyWith<$Res> get content {
     return $ResourceDTOCopyWith<$Res>(_value.content, (value) {
       return _then(_value.copyWith(content: value));
@@ -683,19 +690,17 @@ class _$SearchSuggestionTopResultsDTO extends SearchSuggestionTopResultsDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SearchSuggestionTopResultsDTO &&
-            const DeepCollectionEquality().equals(other.kind, kind) &&
-            const DeepCollectionEquality().equals(other.content, content));
+            (identical(other.kind, kind) || other.kind == kind) &&
+            (identical(other.content, content) || other.content == content));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(kind),
-      const DeepCollectionEquality().hash(content));
+  int get hashCode => Object.hash(runtimeType, kind, content);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$SearchSuggestionTopResultsDTOCopyWith<_$SearchSuggestionTopResultsDTO>
       get copyWith => __$$SearchSuggestionTopResultsDTOCopyWithImpl<
           _$SearchSuggestionTopResultsDTO>(this, _$identity);
@@ -716,9 +721,9 @@ class _$SearchSuggestionTopResultsDTO extends SearchSuggestionTopResultsDTO {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String kind, String searchTerm, String? displayTerm)?
+    TResult? Function(String kind, String searchTerm, String? displayTerm)?
         terms,
-    TResult Function(String kind, @ResourceDTOConverter() ResourceDTO content)?
+    TResult? Function(String kind, @ResourceDTOConverter() ResourceDTO content)?
         topResults,
   }) {
     return topResults?.call(kind, content);
@@ -751,8 +756,8 @@ class _$SearchSuggestionTopResultsDTO extends SearchSuggestionTopResultsDTO {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(SearchSuggestionTermsDTO value)? terms,
-    TResult Function(SearchSuggestionTopResultsDTO value)? topResults,
+    TResult? Function(SearchSuggestionTermsDTO value)? terms,
+    TResult? Function(SearchSuggestionTopResultsDTO value)? topResults,
   }) {
     return topResults?.call(this);
   }

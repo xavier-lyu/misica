@@ -4,25 +4,28 @@ import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/library/application/liked_resources_notifier.dart';
 import 'package:misica/src/music/library/infrastructure/liked_resources_repository.dart';
 import 'package:misica/src/music/library/infrastructure/liked_resources_local_service.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-final likedLocalServiceProvider = Provider(
-  (ref) => LikedResourcesLocalService(ref.watch(sembastProvider)),
-);
+part 'providers.g.dart';
 
-final likedResourcesRepositoryProvider = Provider(
-  (ref) => LikedResourcesRepository(ref.watch(likedLocalServiceProvider)),
-);
+@riverpod
+LikedResourcesLocalService likedLocalService(LikedLocalServiceRef ref) {
+  return LikedResourcesLocalService(ref.watch(sembastProvider));
+}
+
+@riverpod
+LikedResourcesRepository likedResourcesRepository(
+    LikedResourcesRepositoryRef ref) {
+  return LikedResourcesRepository(ref.watch(likedLocalServiceProvider));
+}
 
 final likedResourcesNotifierProvider = StateNotifierProvider<
     LikedResourcesNotifier, AsyncValue<Map<String, List<Resource>>>>(
-  (ref) => LikedResourcesNotifier(ref.watch(likedResourcesRepositoryProvider)),
+  (ref) => LikedResourcesNotifier(ref.read(likedResourcesRepositoryProvider)),
 );
 
-final isResourceLikedProvider = FutureProvider.autoDispose.family<bool, String>(
-  (ref, resourceId) async {
-    final state = await ref
-        .watch(likedResourcesNotifierProvider.notifier)
-        .isLiked(resourceId);
-    return state;
-  },
-);
+@riverpod
+Future<bool> isResourceLiked(IsResourceLikedRef ref,
+    {required String resourceId}) async {
+  return ref.watch(likedResourcesNotifierProvider.notifier).isLiked(resourceId);
+}

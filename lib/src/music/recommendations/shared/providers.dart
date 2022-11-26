@@ -5,17 +5,23 @@ import 'package:misica/src/music/recommendations/domain/recommendation.dart';
 
 import 'package:misica/src/music/recommendations/infrastructure/recommendations_repository.dart';
 import 'package:misica/src/music/recommendations/infrastructure/recommendations_service.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-final recosServiceProvider = Provider(
-  (ref) => RecommendationsService(ref.watch(musicDioProvider)),
-);
-final recosRepositoryProvider = Provider(
-  (ref) => RecommendationsRepository(ref.watch(recosServiceProvider)),
-);
+part 'providers.g.dart';
+
+@riverpod
+RecommendationsService recosService(RecosServiceRef ref) {
+  return RecommendationsService(ref.watch(musicDioProvider));
+}
+
+@riverpod
+RecommendationsRepository recosRepository(RecosRepositoryRef ref) {
+  return RecommendationsRepository(ref.watch(recosServiceProvider));
+}
 
 final recosNotifierProvider = StateNotifierProvider<RecommendationsNotifier,
     AsyncValue<List<Recommendation>>>(
   (ref) => RecommendationsNotifier(
-    ref.watch(recosRepositoryProvider),
+    ref.read(recosRepositoryProvider),
   ),
 );

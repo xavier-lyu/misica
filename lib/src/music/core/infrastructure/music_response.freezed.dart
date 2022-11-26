@@ -34,34 +34,37 @@ mixin _$MusicResponse {
 abstract class $MusicResponseCopyWith<$Res> {
   factory $MusicResponseCopyWith(
           MusicResponse value, $Res Function(MusicResponse) then) =
-      _$MusicResponseCopyWithImpl<$Res>;
+      _$MusicResponseCopyWithImpl<$Res, MusicResponse>;
+  @useResult
   $Res call({String? next, @ResourceDTOConverter() List<ResourceDTO> data});
 }
 
 /// @nodoc
-class _$MusicResponseCopyWithImpl<$Res>
+class _$MusicResponseCopyWithImpl<$Res, $Val extends MusicResponse>
     implements $MusicResponseCopyWith<$Res> {
   _$MusicResponseCopyWithImpl(this._value, this._then);
 
-  final MusicResponse _value;
   // ignore: unused_field
-  final $Res Function(MusicResponse) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? next = freezed,
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_value.copyWith(
-      next: next == freezed
+      next: freezed == next
           ? _value.next
           : next // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: data == freezed
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<ResourceDTO>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -72,31 +75,30 @@ abstract class _$$_MusicResponseCopyWith<$Res>
           _$_MusicResponse value, $Res Function(_$_MusicResponse) then) =
       __$$_MusicResponseCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String? next, @ResourceDTOConverter() List<ResourceDTO> data});
 }
 
 /// @nodoc
 class __$$_MusicResponseCopyWithImpl<$Res>
-    extends _$MusicResponseCopyWithImpl<$Res>
+    extends _$MusicResponseCopyWithImpl<$Res, _$_MusicResponse>
     implements _$$_MusicResponseCopyWith<$Res> {
   __$$_MusicResponseCopyWithImpl(
       _$_MusicResponse _value, $Res Function(_$_MusicResponse) _then)
-      : super(_value, (v) => _then(v as _$_MusicResponse));
+      : super(_value, _then);
 
-  @override
-  _$_MusicResponse get _value => super._value as _$_MusicResponse;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? next = freezed,
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_$_MusicResponse(
-      next: next == freezed
+      next: freezed == next
           ? _value.next
           : next // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: data == freezed
+      data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as List<ResourceDTO>,
@@ -136,19 +138,18 @@ class _$_MusicResponse extends _MusicResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MusicResponse &&
-            const DeepCollectionEquality().equals(other.next, next) &&
+            (identical(other.next, next) || other.next == next) &&
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(next),
-      const DeepCollectionEquality().hash(_data));
+      runtimeType, next, const DeepCollectionEquality().hash(_data));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_MusicResponseCopyWith<_$_MusicResponse> get copyWith =>
       __$$_MusicResponseCopyWithImpl<_$_MusicResponse>(this, _$identity);
 

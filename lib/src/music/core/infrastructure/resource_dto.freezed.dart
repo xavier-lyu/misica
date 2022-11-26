@@ -106,7 +106,7 @@ mixin _$ResourceDTO {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             Map<String, dynamic>? attributes,
@@ -114,7 +114,7 @@ mixin _$ResourceDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
@@ -122,7 +122,7 @@ mixin _$ResourceDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
@@ -130,7 +130,7 @@ mixin _$ResourceDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         artist,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
@@ -138,12 +138,12 @@ mixin _$ResourceDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         playlist,
-    TResult Function(String id, String type, SongAttributesDTO? attributes,
+    TResult? Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributesDTO? attributes)?
+    TResult? Function(String id, String type, StationAttributesDTO? attributes)?
         station,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             MusicVideoAttributesDTO? attributes,
@@ -151,10 +151,10 @@ mixin _$ResourceDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         musicVideo,
-    TResult Function(String id, String type, CuratorAttributesDTO? attributes,
+    TResult? Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+    TResult? Function(String id, String type, GenreAttributesDTO? attributes)?
         genre,
   }) =>
       throw _privateConstructorUsedError;
@@ -228,15 +228,15 @@ mixin _$ResourceDTO {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRawDTO value)? $default, {
-    TResult Function(AlbumDTO value)? album,
-    TResult Function(ArtistDTO value)? artist,
-    TResult Function(PlaylistDTO value)? playlist,
-    TResult Function(SongDTO value)? song,
-    TResult Function(StationDTO value)? station,
-    TResult Function(MusicVideoDTO value)? musicVideo,
-    TResult Function(CuratorDTO value)? curator,
-    TResult Function(GenreDTO value)? genre,
+    TResult? Function(ResourceRawDTO value)? $default, {
+    TResult? Function(AlbumDTO value)? album,
+    TResult? Function(ArtistDTO value)? artist,
+    TResult? Function(PlaylistDTO value)? playlist,
+    TResult? Function(SongDTO value)? song,
+    TResult? Function(StationDTO value)? station,
+    TResult? Function(MusicVideoDTO value)? musicVideo,
+    TResult? Function(CuratorDTO value)? curator,
+    TResult? Function(GenreDTO value)? genre,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -263,33 +263,37 @@ mixin _$ResourceDTO {
 abstract class $ResourceDTOCopyWith<$Res> {
   factory $ResourceDTOCopyWith(
           ResourceDTO value, $Res Function(ResourceDTO) then) =
-      _$ResourceDTOCopyWithImpl<$Res>;
+      _$ResourceDTOCopyWithImpl<$Res, ResourceDTO>;
+  @useResult
   $Res call({String id, String type});
 }
 
 /// @nodoc
-class _$ResourceDTOCopyWithImpl<$Res> implements $ResourceDTOCopyWith<$Res> {
+class _$ResourceDTOCopyWithImpl<$Res, $Val extends ResourceDTO>
+    implements $ResourceDTOCopyWith<$Res> {
   _$ResourceDTOCopyWithImpl(this._value, this._then);
 
-  final ResourceDTO _value;
   // ignore: unused_field
-  final $Res Function(ResourceDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type: type == freezed
+      type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -300,6 +304,7 @@ abstract class _$$ResourceRawDTOCopyWith<$Res>
           _$ResourceRawDTO value, $Res Function(_$ResourceRawDTO) then) =
       __$$ResourceRawDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       String type,
@@ -313,46 +318,44 @@ abstract class _$$ResourceRawDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$ResourceRawDTOCopyWithImpl<$Res>
-    extends _$ResourceDTOCopyWithImpl<$Res>
+    extends _$ResourceDTOCopyWithImpl<$Res, _$ResourceRawDTO>
     implements _$$ResourceRawDTOCopyWith<$Res> {
   __$$ResourceRawDTOCopyWithImpl(
       _$ResourceRawDTO _value, $Res Function(_$ResourceRawDTO) _then)
-      : super(_value, (v) => _then(v as _$ResourceRawDTO));
+      : super(_value, _then);
 
-  @override
-  _$ResourceRawDTO get _value => super._value as _$ResourceRawDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
     Object? attributes = freezed,
     Object? relationships = freezed,
     Object? views = freezed,
     Object? meta = freezed,
   }) {
     return _then(_$ResourceRawDTO(
-      id == freezed
+      null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type == freezed
+      null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes == freezed
+      freezed == attributes
           ? _value._attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      relationships == freezed
+      freezed == relationships
           ? _value._relationships
           : relationships // ignore: cast_nullable_to_non_nullable
               as Map<String, ResourceRelationshipDTO>?,
-      views == freezed
+      freezed == views
           ? _value._views
           : views // ignore: cast_nullable_to_non_nullable
               as Map<String, ResourceViewDTO>?,
-      meta == freezed
+      freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as ResourceMetaDTO?,
@@ -360,6 +363,7 @@ class __$$ResourceRawDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceMetaDTOCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
@@ -438,29 +442,30 @@ class _$ResourceRawDTO extends ResourceRawDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResourceRawDTO &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
             const DeepCollectionEquality()
                 .equals(other._attributes, _attributes) &&
             const DeepCollectionEquality()
                 .equals(other._relationships, _relationships) &&
             const DeepCollectionEquality().equals(other._views, _views) &&
-            const DeepCollectionEquality().equals(other.meta, meta));
+            (identical(other.meta, meta) || other.meta == meta));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
+      id,
+      type,
       const DeepCollectionEquality().hash(_attributes),
       const DeepCollectionEquality().hash(_relationships),
       const DeepCollectionEquality().hash(_views),
-      const DeepCollectionEquality().hash(meta));
+      meta);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$ResourceRawDTOCopyWith<_$ResourceRawDTO> get copyWith =>
       __$$ResourceRawDTOCopyWithImpl<_$ResourceRawDTO>(this, _$identity);
 
@@ -529,7 +534,7 @@ class _$ResourceRawDTO extends ResourceRawDTO {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             Map<String, dynamic>? attributes,
@@ -537,7 +542,7 @@ class _$ResourceRawDTO extends ResourceRawDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
@@ -545,7 +550,7 @@ class _$ResourceRawDTO extends ResourceRawDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
@@ -553,7 +558,7 @@ class _$ResourceRawDTO extends ResourceRawDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         artist,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
@@ -561,12 +566,12 @@ class _$ResourceRawDTO extends ResourceRawDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         playlist,
-    TResult Function(String id, String type, SongAttributesDTO? attributes,
+    TResult? Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributesDTO? attributes)?
+    TResult? Function(String id, String type, StationAttributesDTO? attributes)?
         station,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             MusicVideoAttributesDTO? attributes,
@@ -574,10 +579,10 @@ class _$ResourceRawDTO extends ResourceRawDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         musicVideo,
-    TResult Function(String id, String type, CuratorAttributesDTO? attributes,
+    TResult? Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+    TResult? Function(String id, String type, GenreAttributesDTO? attributes)?
         genre,
   }) {
     return $default?.call(id, type, attributes, relationships, views, meta);
@@ -663,15 +668,15 @@ class _$ResourceRawDTO extends ResourceRawDTO {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRawDTO value)? $default, {
-    TResult Function(AlbumDTO value)? album,
-    TResult Function(ArtistDTO value)? artist,
-    TResult Function(PlaylistDTO value)? playlist,
-    TResult Function(SongDTO value)? song,
-    TResult Function(StationDTO value)? station,
-    TResult Function(MusicVideoDTO value)? musicVideo,
-    TResult Function(CuratorDTO value)? curator,
-    TResult Function(GenreDTO value)? genre,
+    TResult? Function(ResourceRawDTO value)? $default, {
+    TResult? Function(AlbumDTO value)? album,
+    TResult? Function(ArtistDTO value)? artist,
+    TResult? Function(PlaylistDTO value)? playlist,
+    TResult? Function(SongDTO value)? song,
+    TResult? Function(StationDTO value)? station,
+    TResult? Function(MusicVideoDTO value)? musicVideo,
+    TResult? Function(CuratorDTO value)? curator,
+    TResult? Function(GenreDTO value)? genre,
   }) {
     return $default?.call(this);
   }
@@ -737,6 +742,7 @@ abstract class _$$AlbumDTOCopyWith<$Res> implements $ResourceDTOCopyWith<$Res> {
           _$AlbumDTO value, $Res Function(_$AlbumDTO) then) =
       __$$AlbumDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       String type,
@@ -751,45 +757,44 @@ abstract class _$$AlbumDTOCopyWith<$Res> implements $ResourceDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$AlbumDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
+class __$$AlbumDTOCopyWithImpl<$Res>
+    extends _$ResourceDTOCopyWithImpl<$Res, _$AlbumDTO>
     implements _$$AlbumDTOCopyWith<$Res> {
   __$$AlbumDTOCopyWithImpl(_$AlbumDTO _value, $Res Function(_$AlbumDTO) _then)
-      : super(_value, (v) => _then(v as _$AlbumDTO));
+      : super(_value, _then);
 
-  @override
-  _$AlbumDTO get _value => super._value as _$AlbumDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
     Object? attributes = freezed,
     Object? relationships = freezed,
     Object? views = freezed,
     Object? meta = freezed,
   }) {
     return _then(_$AlbumDTO(
-      id == freezed
+      null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type == freezed
+      null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes == freezed
+      freezed == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as AlbumAttributesDTO?,
-      relationships == freezed
+      freezed == relationships
           ? _value.relationships
           : relationships // ignore: cast_nullable_to_non_nullable
               as AlbumRelationshipsDTO?,
-      views == freezed
+      freezed == views
           ? _value._views
           : views // ignore: cast_nullable_to_non_nullable
               as Map<String, ResourceViewDTO>?,
-      meta == freezed
+      freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as ResourceMetaDTO?,
@@ -797,6 +802,7 @@ class __$$AlbumDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AlbumAttributesDTOCopyWith<$Res>? get attributes {
     if (_value.attributes == null) {
       return null;
@@ -808,6 +814,7 @@ class __$$AlbumDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $AlbumRelationshipsDTOCopyWith<$Res>? get relationships {
     if (_value.relationships == null) {
       return null;
@@ -819,6 +826,7 @@ class __$$AlbumDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceMetaDTOCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
@@ -876,29 +884,24 @@ class _$AlbumDTO extends AlbumDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AlbumDTO &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.attributes, attributes) &&
-            const DeepCollectionEquality()
-                .equals(other.relationships, relationships) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.attributes, attributes) ||
+                other.attributes == attributes) &&
+            (identical(other.relationships, relationships) ||
+                other.relationships == relationships) &&
             const DeepCollectionEquality().equals(other._views, _views) &&
-            const DeepCollectionEquality().equals(other.meta, meta));
+            (identical(other.meta, meta) || other.meta == meta));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes),
-      const DeepCollectionEquality().hash(relationships),
-      const DeepCollectionEquality().hash(_views),
-      const DeepCollectionEquality().hash(meta));
+  int get hashCode => Object.hash(runtimeType, id, type, attributes,
+      relationships, const DeepCollectionEquality().hash(_views), meta);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$AlbumDTOCopyWith<_$AlbumDTO> get copyWith =>
       __$$AlbumDTOCopyWithImpl<_$AlbumDTO>(this, _$identity);
 
@@ -967,7 +970,7 @@ class _$AlbumDTO extends AlbumDTO {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             Map<String, dynamic>? attributes,
@@ -975,7 +978,7 @@ class _$AlbumDTO extends AlbumDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
@@ -983,7 +986,7 @@ class _$AlbumDTO extends AlbumDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
@@ -991,7 +994,7 @@ class _$AlbumDTO extends AlbumDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         artist,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
@@ -999,12 +1002,12 @@ class _$AlbumDTO extends AlbumDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         playlist,
-    TResult Function(String id, String type, SongAttributesDTO? attributes,
+    TResult? Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributesDTO? attributes)?
+    TResult? Function(String id, String type, StationAttributesDTO? attributes)?
         station,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             MusicVideoAttributesDTO? attributes,
@@ -1012,10 +1015,10 @@ class _$AlbumDTO extends AlbumDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         musicVideo,
-    TResult Function(String id, String type, CuratorAttributesDTO? attributes,
+    TResult? Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+    TResult? Function(String id, String type, GenreAttributesDTO? attributes)?
         genre,
   }) {
     return album?.call(id, type, attributes, relationships, views, meta);
@@ -1101,15 +1104,15 @@ class _$AlbumDTO extends AlbumDTO {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRawDTO value)? $default, {
-    TResult Function(AlbumDTO value)? album,
-    TResult Function(ArtistDTO value)? artist,
-    TResult Function(PlaylistDTO value)? playlist,
-    TResult Function(SongDTO value)? song,
-    TResult Function(StationDTO value)? station,
-    TResult Function(MusicVideoDTO value)? musicVideo,
-    TResult Function(CuratorDTO value)? curator,
-    TResult Function(GenreDTO value)? genre,
+    TResult? Function(ResourceRawDTO value)? $default, {
+    TResult? Function(AlbumDTO value)? album,
+    TResult? Function(ArtistDTO value)? artist,
+    TResult? Function(PlaylistDTO value)? playlist,
+    TResult? Function(SongDTO value)? song,
+    TResult? Function(StationDTO value)? station,
+    TResult? Function(MusicVideoDTO value)? musicVideo,
+    TResult? Function(CuratorDTO value)? curator,
+    TResult? Function(GenreDTO value)? genre,
   }) {
     return album?.call(this);
   }
@@ -1175,6 +1178,7 @@ abstract class _$$ArtistDTOCopyWith<$Res>
           _$ArtistDTO value, $Res Function(_$ArtistDTO) then) =
       __$$ArtistDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       String type,
@@ -1189,46 +1193,45 @@ abstract class _$$ArtistDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ArtistDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
+class __$$ArtistDTOCopyWithImpl<$Res>
+    extends _$ResourceDTOCopyWithImpl<$Res, _$ArtistDTO>
     implements _$$ArtistDTOCopyWith<$Res> {
   __$$ArtistDTOCopyWithImpl(
       _$ArtistDTO _value, $Res Function(_$ArtistDTO) _then)
-      : super(_value, (v) => _then(v as _$ArtistDTO));
+      : super(_value, _then);
 
-  @override
-  _$ArtistDTO get _value => super._value as _$ArtistDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
     Object? attributes = freezed,
     Object? relationships = freezed,
     Object? views = freezed,
     Object? meta = freezed,
   }) {
     return _then(_$ArtistDTO(
-      id == freezed
+      null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type == freezed
+      null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes == freezed
+      freezed == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as ArtistAttributesDTO?,
-      relationships == freezed
+      freezed == relationships
           ? _value.relationships
           : relationships // ignore: cast_nullable_to_non_nullable
               as ArtistRelationshipsDTO?,
-      views == freezed
+      freezed == views
           ? _value._views
           : views // ignore: cast_nullable_to_non_nullable
               as Map<String, ResourceViewDTO>?,
-      meta == freezed
+      freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as ResourceMetaDTO?,
@@ -1236,6 +1239,7 @@ class __$$ArtistDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ArtistAttributesDTOCopyWith<$Res>? get attributes {
     if (_value.attributes == null) {
       return null;
@@ -1247,6 +1251,7 @@ class __$$ArtistDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ArtistRelationshipsDTOCopyWith<$Res>? get relationships {
     if (_value.relationships == null) {
       return null;
@@ -1259,6 +1264,7 @@ class __$$ArtistDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceMetaDTOCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
@@ -1316,29 +1322,24 @@ class _$ArtistDTO extends ArtistDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ArtistDTO &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.attributes, attributes) &&
-            const DeepCollectionEquality()
-                .equals(other.relationships, relationships) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.attributes, attributes) ||
+                other.attributes == attributes) &&
+            (identical(other.relationships, relationships) ||
+                other.relationships == relationships) &&
             const DeepCollectionEquality().equals(other._views, _views) &&
-            const DeepCollectionEquality().equals(other.meta, meta));
+            (identical(other.meta, meta) || other.meta == meta));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes),
-      const DeepCollectionEquality().hash(relationships),
-      const DeepCollectionEquality().hash(_views),
-      const DeepCollectionEquality().hash(meta));
+  int get hashCode => Object.hash(runtimeType, id, type, attributes,
+      relationships, const DeepCollectionEquality().hash(_views), meta);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$ArtistDTOCopyWith<_$ArtistDTO> get copyWith =>
       __$$ArtistDTOCopyWithImpl<_$ArtistDTO>(this, _$identity);
 
@@ -1407,7 +1408,7 @@ class _$ArtistDTO extends ArtistDTO {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             Map<String, dynamic>? attributes,
@@ -1415,7 +1416,7 @@ class _$ArtistDTO extends ArtistDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
@@ -1423,7 +1424,7 @@ class _$ArtistDTO extends ArtistDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
@@ -1431,7 +1432,7 @@ class _$ArtistDTO extends ArtistDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         artist,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
@@ -1439,12 +1440,12 @@ class _$ArtistDTO extends ArtistDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         playlist,
-    TResult Function(String id, String type, SongAttributesDTO? attributes,
+    TResult? Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributesDTO? attributes)?
+    TResult? Function(String id, String type, StationAttributesDTO? attributes)?
         station,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             MusicVideoAttributesDTO? attributes,
@@ -1452,10 +1453,10 @@ class _$ArtistDTO extends ArtistDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         musicVideo,
-    TResult Function(String id, String type, CuratorAttributesDTO? attributes,
+    TResult? Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+    TResult? Function(String id, String type, GenreAttributesDTO? attributes)?
         genre,
   }) {
     return artist?.call(id, type, attributes, relationships, views, meta);
@@ -1541,15 +1542,15 @@ class _$ArtistDTO extends ArtistDTO {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRawDTO value)? $default, {
-    TResult Function(AlbumDTO value)? album,
-    TResult Function(ArtistDTO value)? artist,
-    TResult Function(PlaylistDTO value)? playlist,
-    TResult Function(SongDTO value)? song,
-    TResult Function(StationDTO value)? station,
-    TResult Function(MusicVideoDTO value)? musicVideo,
-    TResult Function(CuratorDTO value)? curator,
-    TResult Function(GenreDTO value)? genre,
+    TResult? Function(ResourceRawDTO value)? $default, {
+    TResult? Function(AlbumDTO value)? album,
+    TResult? Function(ArtistDTO value)? artist,
+    TResult? Function(PlaylistDTO value)? playlist,
+    TResult? Function(SongDTO value)? song,
+    TResult? Function(StationDTO value)? station,
+    TResult? Function(MusicVideoDTO value)? musicVideo,
+    TResult? Function(CuratorDTO value)? curator,
+    TResult? Function(GenreDTO value)? genre,
   }) {
     return artist?.call(this);
   }
@@ -1615,6 +1616,7 @@ abstract class _$$PlaylistDTOCopyWith<$Res>
           _$PlaylistDTO value, $Res Function(_$PlaylistDTO) then) =
       __$$PlaylistDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       String type,
@@ -1629,46 +1631,45 @@ abstract class _$$PlaylistDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PlaylistDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
+class __$$PlaylistDTOCopyWithImpl<$Res>
+    extends _$ResourceDTOCopyWithImpl<$Res, _$PlaylistDTO>
     implements _$$PlaylistDTOCopyWith<$Res> {
   __$$PlaylistDTOCopyWithImpl(
       _$PlaylistDTO _value, $Res Function(_$PlaylistDTO) _then)
-      : super(_value, (v) => _then(v as _$PlaylistDTO));
+      : super(_value, _then);
 
-  @override
-  _$PlaylistDTO get _value => super._value as _$PlaylistDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
     Object? attributes = freezed,
     Object? relationships = freezed,
     Object? views = freezed,
     Object? meta = freezed,
   }) {
     return _then(_$PlaylistDTO(
-      id == freezed
+      null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type == freezed
+      null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes == freezed
+      freezed == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as PlaylistAttributesDTO?,
-      relationships == freezed
+      freezed == relationships
           ? _value.relationships
           : relationships // ignore: cast_nullable_to_non_nullable
               as PlaylistRelationshipsDTO?,
-      views == freezed
+      freezed == views
           ? _value._views
           : views // ignore: cast_nullable_to_non_nullable
               as Map<String, ResourceViewDTO>?,
-      meta == freezed
+      freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as ResourceMetaDTO?,
@@ -1676,6 +1677,7 @@ class __$$PlaylistDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PlaylistAttributesDTOCopyWith<$Res>? get attributes {
     if (_value.attributes == null) {
       return null;
@@ -1687,6 +1689,7 @@ class __$$PlaylistDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PlaylistRelationshipsDTOCopyWith<$Res>? get relationships {
     if (_value.relationships == null) {
       return null;
@@ -1699,6 +1702,7 @@ class __$$PlaylistDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceMetaDTOCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
@@ -1756,29 +1760,24 @@ class _$PlaylistDTO extends PlaylistDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PlaylistDTO &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.attributes, attributes) &&
-            const DeepCollectionEquality()
-                .equals(other.relationships, relationships) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.attributes, attributes) ||
+                other.attributes == attributes) &&
+            (identical(other.relationships, relationships) ||
+                other.relationships == relationships) &&
             const DeepCollectionEquality().equals(other._views, _views) &&
-            const DeepCollectionEquality().equals(other.meta, meta));
+            (identical(other.meta, meta) || other.meta == meta));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes),
-      const DeepCollectionEquality().hash(relationships),
-      const DeepCollectionEquality().hash(_views),
-      const DeepCollectionEquality().hash(meta));
+  int get hashCode => Object.hash(runtimeType, id, type, attributes,
+      relationships, const DeepCollectionEquality().hash(_views), meta);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$PlaylistDTOCopyWith<_$PlaylistDTO> get copyWith =>
       __$$PlaylistDTOCopyWithImpl<_$PlaylistDTO>(this, _$identity);
 
@@ -1847,7 +1846,7 @@ class _$PlaylistDTO extends PlaylistDTO {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             Map<String, dynamic>? attributes,
@@ -1855,7 +1854,7 @@ class _$PlaylistDTO extends PlaylistDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
@@ -1863,7 +1862,7 @@ class _$PlaylistDTO extends PlaylistDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
@@ -1871,7 +1870,7 @@ class _$PlaylistDTO extends PlaylistDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         artist,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
@@ -1879,12 +1878,12 @@ class _$PlaylistDTO extends PlaylistDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         playlist,
-    TResult Function(String id, String type, SongAttributesDTO? attributes,
+    TResult? Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributesDTO? attributes)?
+    TResult? Function(String id, String type, StationAttributesDTO? attributes)?
         station,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             MusicVideoAttributesDTO? attributes,
@@ -1892,10 +1891,10 @@ class _$PlaylistDTO extends PlaylistDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         musicVideo,
-    TResult Function(String id, String type, CuratorAttributesDTO? attributes,
+    TResult? Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+    TResult? Function(String id, String type, GenreAttributesDTO? attributes)?
         genre,
   }) {
     return playlist?.call(id, type, attributes, relationships, views, meta);
@@ -1981,15 +1980,15 @@ class _$PlaylistDTO extends PlaylistDTO {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRawDTO value)? $default, {
-    TResult Function(AlbumDTO value)? album,
-    TResult Function(ArtistDTO value)? artist,
-    TResult Function(PlaylistDTO value)? playlist,
-    TResult Function(SongDTO value)? song,
-    TResult Function(StationDTO value)? station,
-    TResult Function(MusicVideoDTO value)? musicVideo,
-    TResult Function(CuratorDTO value)? curator,
-    TResult Function(GenreDTO value)? genre,
+    TResult? Function(ResourceRawDTO value)? $default, {
+    TResult? Function(AlbumDTO value)? album,
+    TResult? Function(ArtistDTO value)? artist,
+    TResult? Function(PlaylistDTO value)? playlist,
+    TResult? Function(SongDTO value)? song,
+    TResult? Function(StationDTO value)? station,
+    TResult? Function(MusicVideoDTO value)? musicVideo,
+    TResult? Function(CuratorDTO value)? curator,
+    TResult? Function(GenreDTO value)? genre,
   }) {
     return playlist?.call(this);
   }
@@ -2054,6 +2053,7 @@ abstract class _$$SongDTOCopyWith<$Res> implements $ResourceDTOCopyWith<$Res> {
   factory _$$SongDTOCopyWith(_$SongDTO value, $Res Function(_$SongDTO) then) =
       __$$SongDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       String type,
@@ -2065,35 +2065,34 @@ abstract class _$$SongDTOCopyWith<$Res> implements $ResourceDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$SongDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
+class __$$SongDTOCopyWithImpl<$Res>
+    extends _$ResourceDTOCopyWithImpl<$Res, _$SongDTO>
     implements _$$SongDTOCopyWith<$Res> {
   __$$SongDTOCopyWithImpl(_$SongDTO _value, $Res Function(_$SongDTO) _then)
-      : super(_value, (v) => _then(v as _$SongDTO));
+      : super(_value, _then);
 
-  @override
-  _$SongDTO get _value => super._value as _$SongDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
     Object? attributes = freezed,
     Object? relationships = freezed,
   }) {
     return _then(_$SongDTO(
-      id == freezed
+      null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type == freezed
+      null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes == freezed
+      freezed == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as SongAttributesDTO?,
-      relationships == freezed
+      freezed == relationships
           ? _value.relationships
           : relationships // ignore: cast_nullable_to_non_nullable
               as SongRelationshipsDTO?,
@@ -2101,6 +2100,7 @@ class __$$SongDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SongAttributesDTOCopyWith<$Res>? get attributes {
     if (_value.attributes == null) {
       return null;
@@ -2112,6 +2112,7 @@ class __$$SongDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SongRelationshipsDTOCopyWith<$Res>? get relationships {
     if (_value.relationships == null) {
       return null;
@@ -2156,25 +2157,22 @@ class _$SongDTO extends SongDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SongDTO &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.attributes, attributes) &&
-            const DeepCollectionEquality()
-                .equals(other.relationships, relationships));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.attributes, attributes) ||
+                other.attributes == attributes) &&
+            (identical(other.relationships, relationships) ||
+                other.relationships == relationships));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes),
-      const DeepCollectionEquality().hash(relationships));
+  int get hashCode =>
+      Object.hash(runtimeType, id, type, attributes, relationships);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$SongDTOCopyWith<_$SongDTO> get copyWith =>
       __$$SongDTOCopyWithImpl<_$SongDTO>(this, _$identity);
 
@@ -2243,7 +2241,7 @@ class _$SongDTO extends SongDTO {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             Map<String, dynamic>? attributes,
@@ -2251,7 +2249,7 @@ class _$SongDTO extends SongDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
@@ -2259,7 +2257,7 @@ class _$SongDTO extends SongDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
@@ -2267,7 +2265,7 @@ class _$SongDTO extends SongDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         artist,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
@@ -2275,12 +2273,12 @@ class _$SongDTO extends SongDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         playlist,
-    TResult Function(String id, String type, SongAttributesDTO? attributes,
+    TResult? Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributesDTO? attributes)?
+    TResult? Function(String id, String type, StationAttributesDTO? attributes)?
         station,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             MusicVideoAttributesDTO? attributes,
@@ -2288,10 +2286,10 @@ class _$SongDTO extends SongDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         musicVideo,
-    TResult Function(String id, String type, CuratorAttributesDTO? attributes,
+    TResult? Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+    TResult? Function(String id, String type, GenreAttributesDTO? attributes)?
         genre,
   }) {
     return song?.call(id, type, attributes, relationships);
@@ -2377,15 +2375,15 @@ class _$SongDTO extends SongDTO {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRawDTO value)? $default, {
-    TResult Function(AlbumDTO value)? album,
-    TResult Function(ArtistDTO value)? artist,
-    TResult Function(PlaylistDTO value)? playlist,
-    TResult Function(SongDTO value)? song,
-    TResult Function(StationDTO value)? station,
-    TResult Function(MusicVideoDTO value)? musicVideo,
-    TResult Function(CuratorDTO value)? curator,
-    TResult Function(GenreDTO value)? genre,
+    TResult? Function(ResourceRawDTO value)? $default, {
+    TResult? Function(AlbumDTO value)? album,
+    TResult? Function(ArtistDTO value)? artist,
+    TResult? Function(PlaylistDTO value)? playlist,
+    TResult? Function(SongDTO value)? song,
+    TResult? Function(StationDTO value)? station,
+    TResult? Function(MusicVideoDTO value)? musicVideo,
+    TResult? Function(CuratorDTO value)? curator,
+    TResult? Function(GenreDTO value)? genre,
   }) {
     return song?.call(this);
   }
@@ -2447,37 +2445,37 @@ abstract class _$$StationDTOCopyWith<$Res>
           _$StationDTO value, $Res Function(_$StationDTO) then) =
       __$$StationDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String id, String type, StationAttributesDTO? attributes});
 
   $StationAttributesDTOCopyWith<$Res>? get attributes;
 }
 
 /// @nodoc
-class __$$StationDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
+class __$$StationDTOCopyWithImpl<$Res>
+    extends _$ResourceDTOCopyWithImpl<$Res, _$StationDTO>
     implements _$$StationDTOCopyWith<$Res> {
   __$$StationDTOCopyWithImpl(
       _$StationDTO _value, $Res Function(_$StationDTO) _then)
-      : super(_value, (v) => _then(v as _$StationDTO));
+      : super(_value, _then);
 
-  @override
-  _$StationDTO get _value => super._value as _$StationDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
     Object? attributes = freezed,
   }) {
     return _then(_$StationDTO(
-      id == freezed
+      null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type == freezed
+      null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes == freezed
+      freezed == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as StationAttributesDTO?,
@@ -2485,6 +2483,7 @@ class __$$StationDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $StationAttributesDTOCopyWith<$Res>? get attributes {
     if (_value.attributes == null) {
       return null;
@@ -2526,22 +2525,19 @@ class _$StationDTO extends StationDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$StationDTO &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.attributes, attributes));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.attributes, attributes) ||
+                other.attributes == attributes));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes));
+  int get hashCode => Object.hash(runtimeType, id, type, attributes);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$StationDTOCopyWith<_$StationDTO> get copyWith =>
       __$$StationDTOCopyWithImpl<_$StationDTO>(this, _$identity);
 
@@ -2610,7 +2606,7 @@ class _$StationDTO extends StationDTO {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             Map<String, dynamic>? attributes,
@@ -2618,7 +2614,7 @@ class _$StationDTO extends StationDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
@@ -2626,7 +2622,7 @@ class _$StationDTO extends StationDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
@@ -2634,7 +2630,7 @@ class _$StationDTO extends StationDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         artist,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
@@ -2642,12 +2638,12 @@ class _$StationDTO extends StationDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         playlist,
-    TResult Function(String id, String type, SongAttributesDTO? attributes,
+    TResult? Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributesDTO? attributes)?
+    TResult? Function(String id, String type, StationAttributesDTO? attributes)?
         station,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             MusicVideoAttributesDTO? attributes,
@@ -2655,10 +2651,10 @@ class _$StationDTO extends StationDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         musicVideo,
-    TResult Function(String id, String type, CuratorAttributesDTO? attributes,
+    TResult? Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+    TResult? Function(String id, String type, GenreAttributesDTO? attributes)?
         genre,
   }) {
     return station?.call(id, type, attributes);
@@ -2744,15 +2740,15 @@ class _$StationDTO extends StationDTO {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRawDTO value)? $default, {
-    TResult Function(AlbumDTO value)? album,
-    TResult Function(ArtistDTO value)? artist,
-    TResult Function(PlaylistDTO value)? playlist,
-    TResult Function(SongDTO value)? song,
-    TResult Function(StationDTO value)? station,
-    TResult Function(MusicVideoDTO value)? musicVideo,
-    TResult Function(CuratorDTO value)? curator,
-    TResult Function(GenreDTO value)? genre,
+    TResult? Function(ResourceRawDTO value)? $default, {
+    TResult? Function(AlbumDTO value)? album,
+    TResult? Function(ArtistDTO value)? artist,
+    TResult? Function(PlaylistDTO value)? playlist,
+    TResult? Function(SongDTO value)? song,
+    TResult? Function(StationDTO value)? station,
+    TResult? Function(MusicVideoDTO value)? musicVideo,
+    TResult? Function(CuratorDTO value)? curator,
+    TResult? Function(GenreDTO value)? genre,
   }) {
     return station?.call(this);
   }
@@ -2811,6 +2807,7 @@ abstract class _$$MusicVideoDTOCopyWith<$Res>
           _$MusicVideoDTO value, $Res Function(_$MusicVideoDTO) then) =
       __$$MusicVideoDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       String type,
@@ -2826,46 +2823,44 @@ abstract class _$$MusicVideoDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$MusicVideoDTOCopyWithImpl<$Res>
-    extends _$ResourceDTOCopyWithImpl<$Res>
+    extends _$ResourceDTOCopyWithImpl<$Res, _$MusicVideoDTO>
     implements _$$MusicVideoDTOCopyWith<$Res> {
   __$$MusicVideoDTOCopyWithImpl(
       _$MusicVideoDTO _value, $Res Function(_$MusicVideoDTO) _then)
-      : super(_value, (v) => _then(v as _$MusicVideoDTO));
+      : super(_value, _then);
 
-  @override
-  _$MusicVideoDTO get _value => super._value as _$MusicVideoDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
     Object? attributes = freezed,
     Object? relationships = freezed,
     Object? views = freezed,
     Object? meta = freezed,
   }) {
     return _then(_$MusicVideoDTO(
-      id == freezed
+      null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type == freezed
+      null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes == freezed
+      freezed == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as MusicVideoAttributesDTO?,
-      relationships == freezed
+      freezed == relationships
           ? _value.relationships
           : relationships // ignore: cast_nullable_to_non_nullable
               as MusicVideoRelationshipsDTO?,
-      views == freezed
+      freezed == views
           ? _value._views
           : views // ignore: cast_nullable_to_non_nullable
               as Map<String, ResourceViewDTO>?,
-      meta == freezed
+      freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as ResourceMetaDTO?,
@@ -2873,6 +2868,7 @@ class __$$MusicVideoDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MusicVideoAttributesDTOCopyWith<$Res>? get attributes {
     if (_value.attributes == null) {
       return null;
@@ -2884,6 +2880,7 @@ class __$$MusicVideoDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $MusicVideoRelationshipsDTOCopyWith<$Res>? get relationships {
     if (_value.relationships == null) {
       return null;
@@ -2896,6 +2893,7 @@ class __$$MusicVideoDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceMetaDTOCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
@@ -2953,29 +2951,24 @@ class _$MusicVideoDTO extends MusicVideoDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MusicVideoDTO &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.attributes, attributes) &&
-            const DeepCollectionEquality()
-                .equals(other.relationships, relationships) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.attributes, attributes) ||
+                other.attributes == attributes) &&
+            (identical(other.relationships, relationships) ||
+                other.relationships == relationships) &&
             const DeepCollectionEquality().equals(other._views, _views) &&
-            const DeepCollectionEquality().equals(other.meta, meta));
+            (identical(other.meta, meta) || other.meta == meta));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes),
-      const DeepCollectionEquality().hash(relationships),
-      const DeepCollectionEquality().hash(_views),
-      const DeepCollectionEquality().hash(meta));
+  int get hashCode => Object.hash(runtimeType, id, type, attributes,
+      relationships, const DeepCollectionEquality().hash(_views), meta);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$MusicVideoDTOCopyWith<_$MusicVideoDTO> get copyWith =>
       __$$MusicVideoDTOCopyWithImpl<_$MusicVideoDTO>(this, _$identity);
 
@@ -3044,7 +3037,7 @@ class _$MusicVideoDTO extends MusicVideoDTO {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             Map<String, dynamic>? attributes,
@@ -3052,7 +3045,7 @@ class _$MusicVideoDTO extends MusicVideoDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
@@ -3060,7 +3053,7 @@ class _$MusicVideoDTO extends MusicVideoDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
@@ -3068,7 +3061,7 @@ class _$MusicVideoDTO extends MusicVideoDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         artist,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
@@ -3076,12 +3069,12 @@ class _$MusicVideoDTO extends MusicVideoDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         playlist,
-    TResult Function(String id, String type, SongAttributesDTO? attributes,
+    TResult? Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributesDTO? attributes)?
+    TResult? Function(String id, String type, StationAttributesDTO? attributes)?
         station,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             MusicVideoAttributesDTO? attributes,
@@ -3089,10 +3082,10 @@ class _$MusicVideoDTO extends MusicVideoDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         musicVideo,
-    TResult Function(String id, String type, CuratorAttributesDTO? attributes,
+    TResult? Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+    TResult? Function(String id, String type, GenreAttributesDTO? attributes)?
         genre,
   }) {
     return musicVideo?.call(id, type, attributes, relationships, views, meta);
@@ -3178,15 +3171,15 @@ class _$MusicVideoDTO extends MusicVideoDTO {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRawDTO value)? $default, {
-    TResult Function(AlbumDTO value)? album,
-    TResult Function(ArtistDTO value)? artist,
-    TResult Function(PlaylistDTO value)? playlist,
-    TResult Function(SongDTO value)? song,
-    TResult Function(StationDTO value)? station,
-    TResult Function(MusicVideoDTO value)? musicVideo,
-    TResult Function(CuratorDTO value)? curator,
-    TResult Function(GenreDTO value)? genre,
+    TResult? Function(ResourceRawDTO value)? $default, {
+    TResult? Function(AlbumDTO value)? album,
+    TResult? Function(ArtistDTO value)? artist,
+    TResult? Function(PlaylistDTO value)? playlist,
+    TResult? Function(SongDTO value)? song,
+    TResult? Function(StationDTO value)? station,
+    TResult? Function(MusicVideoDTO value)? musicVideo,
+    TResult? Function(CuratorDTO value)? curator,
+    TResult? Function(GenreDTO value)? genre,
   }) {
     return musicVideo?.call(this);
   }
@@ -3253,6 +3246,7 @@ abstract class _$$CuratorDTOCopyWith<$Res>
           _$CuratorDTO value, $Res Function(_$CuratorDTO) then) =
       __$$CuratorDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       String type,
@@ -3264,36 +3258,35 @@ abstract class _$$CuratorDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CuratorDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
+class __$$CuratorDTOCopyWithImpl<$Res>
+    extends _$ResourceDTOCopyWithImpl<$Res, _$CuratorDTO>
     implements _$$CuratorDTOCopyWith<$Res> {
   __$$CuratorDTOCopyWithImpl(
       _$CuratorDTO _value, $Res Function(_$CuratorDTO) _then)
-      : super(_value, (v) => _then(v as _$CuratorDTO));
+      : super(_value, _then);
 
-  @override
-  _$CuratorDTO get _value => super._value as _$CuratorDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
     Object? attributes = freezed,
     Object? relationships = freezed,
   }) {
     return _then(_$CuratorDTO(
-      id == freezed
+      null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type == freezed
+      null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes == freezed
+      freezed == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as CuratorAttributesDTO?,
-      relationships == freezed
+      freezed == relationships
           ? _value.relationships
           : relationships // ignore: cast_nullable_to_non_nullable
               as CuratorRelationshipsDTO?,
@@ -3301,6 +3294,7 @@ class __$$CuratorDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CuratorAttributesDTOCopyWith<$Res>? get attributes {
     if (_value.attributes == null) {
       return null;
@@ -3312,6 +3306,7 @@ class __$$CuratorDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CuratorRelationshipsDTOCopyWith<$Res>? get relationships {
     if (_value.relationships == null) {
       return null;
@@ -3357,25 +3352,22 @@ class _$CuratorDTO extends CuratorDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CuratorDTO &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.attributes, attributes) &&
-            const DeepCollectionEquality()
-                .equals(other.relationships, relationships));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.attributes, attributes) ||
+                other.attributes == attributes) &&
+            (identical(other.relationships, relationships) ||
+                other.relationships == relationships));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes),
-      const DeepCollectionEquality().hash(relationships));
+  int get hashCode =>
+      Object.hash(runtimeType, id, type, attributes, relationships);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$CuratorDTOCopyWith<_$CuratorDTO> get copyWith =>
       __$$CuratorDTOCopyWithImpl<_$CuratorDTO>(this, _$identity);
 
@@ -3444,7 +3436,7 @@ class _$CuratorDTO extends CuratorDTO {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             Map<String, dynamic>? attributes,
@@ -3452,7 +3444,7 @@ class _$CuratorDTO extends CuratorDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
@@ -3460,7 +3452,7 @@ class _$CuratorDTO extends CuratorDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
@@ -3468,7 +3460,7 @@ class _$CuratorDTO extends CuratorDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         artist,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
@@ -3476,12 +3468,12 @@ class _$CuratorDTO extends CuratorDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         playlist,
-    TResult Function(String id, String type, SongAttributesDTO? attributes,
+    TResult? Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributesDTO? attributes)?
+    TResult? Function(String id, String type, StationAttributesDTO? attributes)?
         station,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             MusicVideoAttributesDTO? attributes,
@@ -3489,10 +3481,10 @@ class _$CuratorDTO extends CuratorDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         musicVideo,
-    TResult Function(String id, String type, CuratorAttributesDTO? attributes,
+    TResult? Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+    TResult? Function(String id, String type, GenreAttributesDTO? attributes)?
         genre,
   }) {
     return curator?.call(id, type, attributes, relationships);
@@ -3578,15 +3570,15 @@ class _$CuratorDTO extends CuratorDTO {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRawDTO value)? $default, {
-    TResult Function(AlbumDTO value)? album,
-    TResult Function(ArtistDTO value)? artist,
-    TResult Function(PlaylistDTO value)? playlist,
-    TResult Function(SongDTO value)? song,
-    TResult Function(StationDTO value)? station,
-    TResult Function(MusicVideoDTO value)? musicVideo,
-    TResult Function(CuratorDTO value)? curator,
-    TResult Function(GenreDTO value)? genre,
+    TResult? Function(ResourceRawDTO value)? $default, {
+    TResult? Function(AlbumDTO value)? album,
+    TResult? Function(ArtistDTO value)? artist,
+    TResult? Function(PlaylistDTO value)? playlist,
+    TResult? Function(SongDTO value)? song,
+    TResult? Function(StationDTO value)? station,
+    TResult? Function(MusicVideoDTO value)? musicVideo,
+    TResult? Function(CuratorDTO value)? curator,
+    TResult? Function(GenreDTO value)? genre,
   }) {
     return curator?.call(this);
   }
@@ -3648,36 +3640,36 @@ abstract class _$$GenreDTOCopyWith<$Res> implements $ResourceDTOCopyWith<$Res> {
           _$GenreDTO value, $Res Function(_$GenreDTO) then) =
       __$$GenreDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String id, String type, GenreAttributesDTO? attributes});
 
   $GenreAttributesDTOCopyWith<$Res>? get attributes;
 }
 
 /// @nodoc
-class __$$GenreDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
+class __$$GenreDTOCopyWithImpl<$Res>
+    extends _$ResourceDTOCopyWithImpl<$Res, _$GenreDTO>
     implements _$$GenreDTOCopyWith<$Res> {
   __$$GenreDTOCopyWithImpl(_$GenreDTO _value, $Res Function(_$GenreDTO) _then)
-      : super(_value, (v) => _then(v as _$GenreDTO));
+      : super(_value, _then);
 
-  @override
-  _$GenreDTO get _value => super._value as _$GenreDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? type = freezed,
+    Object? id = null,
+    Object? type = null,
     Object? attributes = freezed,
   }) {
     return _then(_$GenreDTO(
-      id == freezed
+      null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      type == freezed
+      null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String,
-      attributes == freezed
+      freezed == attributes
           ? _value.attributes
           : attributes // ignore: cast_nullable_to_non_nullable
               as GenreAttributesDTO?,
@@ -3685,6 +3677,7 @@ class __$$GenreDTOCopyWithImpl<$Res> extends _$ResourceDTOCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $GenreAttributesDTOCopyWith<$Res>? get attributes {
     if (_value.attributes == null) {
       return null;
@@ -3726,22 +3719,19 @@ class _$GenreDTO extends GenreDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GenreDTO &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
-            const DeepCollectionEquality()
-                .equals(other.attributes, attributes));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.attributes, attributes) ||
+                other.attributes == attributes));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(type),
-      const DeepCollectionEquality().hash(attributes));
+  int get hashCode => Object.hash(runtimeType, id, type, attributes);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$GenreDTOCopyWith<_$GenreDTO> get copyWith =>
       __$$GenreDTOCopyWithImpl<_$GenreDTO>(this, _$identity);
 
@@ -3810,7 +3800,7 @@ class _$GenreDTO extends GenreDTO {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>(
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             Map<String, dynamic>? attributes,
@@ -3818,7 +3808,7 @@ class _$GenreDTO extends GenreDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         $default, {
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             AlbumAttributesDTO? attributes,
@@ -3826,7 +3816,7 @@ class _$GenreDTO extends GenreDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         album,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             ArtistAttributesDTO? attributes,
@@ -3834,7 +3824,7 @@ class _$GenreDTO extends GenreDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         artist,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             PlaylistAttributesDTO? attributes,
@@ -3842,12 +3832,12 @@ class _$GenreDTO extends GenreDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         playlist,
-    TResult Function(String id, String type, SongAttributesDTO? attributes,
+    TResult? Function(String id, String type, SongAttributesDTO? attributes,
             SongRelationshipsDTO? relationships)?
         song,
-    TResult Function(String id, String type, StationAttributesDTO? attributes)?
+    TResult? Function(String id, String type, StationAttributesDTO? attributes)?
         station,
-    TResult Function(
+    TResult? Function(
             String id,
             String type,
             MusicVideoAttributesDTO? attributes,
@@ -3855,10 +3845,10 @@ class _$GenreDTO extends GenreDTO {
             Map<String, ResourceViewDTO>? views,
             ResourceMetaDTO? meta)?
         musicVideo,
-    TResult Function(String id, String type, CuratorAttributesDTO? attributes,
+    TResult? Function(String id, String type, CuratorAttributesDTO? attributes,
             CuratorRelationshipsDTO? relationships)?
         curator,
-    TResult Function(String id, String type, GenreAttributesDTO? attributes)?
+    TResult? Function(String id, String type, GenreAttributesDTO? attributes)?
         genre,
   }) {
     return genre?.call(id, type, attributes);
@@ -3944,15 +3934,15 @@ class _$GenreDTO extends GenreDTO {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>(
-    TResult Function(ResourceRawDTO value)? $default, {
-    TResult Function(AlbumDTO value)? album,
-    TResult Function(ArtistDTO value)? artist,
-    TResult Function(PlaylistDTO value)? playlist,
-    TResult Function(SongDTO value)? song,
-    TResult Function(StationDTO value)? station,
-    TResult Function(MusicVideoDTO value)? musicVideo,
-    TResult Function(CuratorDTO value)? curator,
-    TResult Function(GenreDTO value)? genre,
+    TResult? Function(ResourceRawDTO value)? $default, {
+    TResult? Function(AlbumDTO value)? album,
+    TResult? Function(ArtistDTO value)? artist,
+    TResult? Function(PlaylistDTO value)? playlist,
+    TResult? Function(SongDTO value)? song,
+    TResult? Function(StationDTO value)? station,
+    TResult? Function(MusicVideoDTO value)? musicVideo,
+    TResult? Function(CuratorDTO value)? curator,
+    TResult? Function(GenreDTO value)? genre,
   }) {
     return genre?.call(this);
   }
@@ -4022,7 +4012,8 @@ mixin _$ResourceMetaDTO {
 abstract class $ResourceMetaDTOCopyWith<$Res> {
   factory $ResourceMetaDTOCopyWith(
           ResourceMetaDTO value, $Res Function(ResourceMetaDTO) then) =
-      _$ResourceMetaDTOCopyWithImpl<$Res>;
+      _$ResourceMetaDTOCopyWithImpl<$Res, ResourceMetaDTO>;
+  @useResult
   $Res call({ResourceMetaOrderDTO? views, ResourceMetaOrderDTO? results});
 
   $ResourceMetaOrderDTOCopyWith<$Res>? get views;
@@ -4030,50 +4021,54 @@ abstract class $ResourceMetaDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResourceMetaDTOCopyWithImpl<$Res>
+class _$ResourceMetaDTOCopyWithImpl<$Res, $Val extends ResourceMetaDTO>
     implements $ResourceMetaDTOCopyWith<$Res> {
   _$ResourceMetaDTOCopyWithImpl(this._value, this._then);
 
-  final ResourceMetaDTO _value;
   // ignore: unused_field
-  final $Res Function(ResourceMetaDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? views = freezed,
     Object? results = freezed,
   }) {
     return _then(_value.copyWith(
-      views: views == freezed
+      views: freezed == views
           ? _value.views
           : views // ignore: cast_nullable_to_non_nullable
               as ResourceMetaOrderDTO?,
-      results: results == freezed
+      results: freezed == results
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
               as ResourceMetaOrderDTO?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceMetaOrderDTOCopyWith<$Res>? get views {
     if (_value.views == null) {
       return null;
     }
 
     return $ResourceMetaOrderDTOCopyWith<$Res>(_value.views!, (value) {
-      return _then(_value.copyWith(views: value));
+      return _then(_value.copyWith(views: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceMetaOrderDTOCopyWith<$Res>? get results {
     if (_value.results == null) {
       return null;
     }
 
     return $ResourceMetaOrderDTOCopyWith<$Res>(_value.results!, (value) {
-      return _then(_value.copyWith(results: value));
+      return _then(_value.copyWith(results: value) as $Val);
     });
   }
 }
@@ -4085,6 +4080,7 @@ abstract class _$$_ResourceMetaCopyWith<$Res>
           _$_ResourceMeta value, $Res Function(_$_ResourceMeta) then) =
       __$$_ResourceMetaCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({ResourceMetaOrderDTO? views, ResourceMetaOrderDTO? results});
 
   @override
@@ -4095,26 +4091,24 @@ abstract class _$$_ResourceMetaCopyWith<$Res>
 
 /// @nodoc
 class __$$_ResourceMetaCopyWithImpl<$Res>
-    extends _$ResourceMetaDTOCopyWithImpl<$Res>
+    extends _$ResourceMetaDTOCopyWithImpl<$Res, _$_ResourceMeta>
     implements _$$_ResourceMetaCopyWith<$Res> {
   __$$_ResourceMetaCopyWithImpl(
       _$_ResourceMeta _value, $Res Function(_$_ResourceMeta) _then)
-      : super(_value, (v) => _then(v as _$_ResourceMeta));
+      : super(_value, _then);
 
-  @override
-  _$_ResourceMeta get _value => super._value as _$_ResourceMeta;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? views = freezed,
     Object? results = freezed,
   }) {
     return _then(_$_ResourceMeta(
-      views: views == freezed
+      views: freezed == views
           ? _value.views
           : views // ignore: cast_nullable_to_non_nullable
               as ResourceMetaOrderDTO?,
-      results: results == freezed
+      results: freezed == results
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
               as ResourceMetaOrderDTO?,
@@ -4145,19 +4139,17 @@ class _$_ResourceMeta extends _ResourceMeta {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ResourceMeta &&
-            const DeepCollectionEquality().equals(other.views, views) &&
-            const DeepCollectionEquality().equals(other.results, results));
+            (identical(other.views, views) || other.views == views) &&
+            (identical(other.results, results) || other.results == results));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(views),
-      const DeepCollectionEquality().hash(results));
+  int get hashCode => Object.hash(runtimeType, views, results);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ResourceMetaCopyWith<_$_ResourceMeta> get copyWith =>
       __$$_ResourceMetaCopyWithImpl<_$_ResourceMeta>(this, _$identity);
 
@@ -4206,29 +4198,33 @@ mixin _$ResourceMetaOrderDTO {
 abstract class $ResourceMetaOrderDTOCopyWith<$Res> {
   factory $ResourceMetaOrderDTOCopyWith(ResourceMetaOrderDTO value,
           $Res Function(ResourceMetaOrderDTO) then) =
-      _$ResourceMetaOrderDTOCopyWithImpl<$Res>;
+      _$ResourceMetaOrderDTOCopyWithImpl<$Res, ResourceMetaOrderDTO>;
+  @useResult
   $Res call({List<String>? order});
 }
 
 /// @nodoc
-class _$ResourceMetaOrderDTOCopyWithImpl<$Res>
+class _$ResourceMetaOrderDTOCopyWithImpl<$Res,
+        $Val extends ResourceMetaOrderDTO>
     implements $ResourceMetaOrderDTOCopyWith<$Res> {
   _$ResourceMetaOrderDTOCopyWithImpl(this._value, this._then);
 
-  final ResourceMetaOrderDTO _value;
   // ignore: unused_field
-  final $Res Function(ResourceMetaOrderDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? order = freezed,
   }) {
     return _then(_value.copyWith(
-      order: order == freezed
+      order: freezed == order
           ? _value.order
           : order // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -4239,26 +4235,25 @@ abstract class _$$_ResourceMetaOrderDTOCopyWith<$Res>
           $Res Function(_$_ResourceMetaOrderDTO) then) =
       __$$_ResourceMetaOrderDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({List<String>? order});
 }
 
 /// @nodoc
 class __$$_ResourceMetaOrderDTOCopyWithImpl<$Res>
-    extends _$ResourceMetaOrderDTOCopyWithImpl<$Res>
+    extends _$ResourceMetaOrderDTOCopyWithImpl<$Res, _$_ResourceMetaOrderDTO>
     implements _$$_ResourceMetaOrderDTOCopyWith<$Res> {
   __$$_ResourceMetaOrderDTOCopyWithImpl(_$_ResourceMetaOrderDTO _value,
       $Res Function(_$_ResourceMetaOrderDTO) _then)
-      : super(_value, (v) => _then(v as _$_ResourceMetaOrderDTO));
+      : super(_value, _then);
 
-  @override
-  _$_ResourceMetaOrderDTO get _value => super._value as _$_ResourceMetaOrderDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? order = freezed,
   }) {
     return _then(_$_ResourceMetaOrderDTO(
-      order: order == freezed
+      order: freezed == order
           ? _value._order
           : order // ignore: cast_nullable_to_non_nullable
               as List<String>?,
@@ -4305,6 +4300,7 @@ class _$_ResourceMetaOrderDTO extends _ResourceMetaOrderDTO {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ResourceMetaOrderDTOCopyWith<_$_ResourceMetaOrderDTO> get copyWith =>
       __$$_ResourceMetaOrderDTOCopyWithImpl<_$_ResourceMetaOrderDTO>(
           this, _$identity);

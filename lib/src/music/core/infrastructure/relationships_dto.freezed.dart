@@ -35,34 +35,38 @@ mixin _$ResourceRelationshipDTO {
 abstract class $ResourceRelationshipDTOCopyWith<$Res> {
   factory $ResourceRelationshipDTOCopyWith(ResourceRelationshipDTO value,
           $Res Function(ResourceRelationshipDTO) then) =
-      _$ResourceRelationshipDTOCopyWithImpl<$Res>;
+      _$ResourceRelationshipDTOCopyWithImpl<$Res, ResourceRelationshipDTO>;
+  @useResult
   $Res call({String href, @ResourceDTOConverter() List<ResourceDTO> data});
 }
 
 /// @nodoc
-class _$ResourceRelationshipDTOCopyWithImpl<$Res>
+class _$ResourceRelationshipDTOCopyWithImpl<$Res,
+        $Val extends ResourceRelationshipDTO>
     implements $ResourceRelationshipDTOCopyWith<$Res> {
   _$ResourceRelationshipDTOCopyWithImpl(this._value, this._then);
 
-  final ResourceRelationshipDTO _value;
   // ignore: unused_field
-  final $Res Function(ResourceRelationshipDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? href = freezed,
-    Object? data = freezed,
+    Object? href = null,
+    Object? data = null,
   }) {
     return _then(_value.copyWith(
-      href: href == freezed
+      href: null == href
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String,
-      data: data == freezed
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<ResourceDTO>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -73,32 +77,31 @@ abstract class _$$_ResourceRelationshipDTOCopyWith<$Res>
           $Res Function(_$_ResourceRelationshipDTO) then) =
       __$$_ResourceRelationshipDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String href, @ResourceDTOConverter() List<ResourceDTO> data});
 }
 
 /// @nodoc
 class __$$_ResourceRelationshipDTOCopyWithImpl<$Res>
-    extends _$ResourceRelationshipDTOCopyWithImpl<$Res>
+    extends _$ResourceRelationshipDTOCopyWithImpl<$Res,
+        _$_ResourceRelationshipDTO>
     implements _$$_ResourceRelationshipDTOCopyWith<$Res> {
   __$$_ResourceRelationshipDTOCopyWithImpl(_$_ResourceRelationshipDTO _value,
       $Res Function(_$_ResourceRelationshipDTO) _then)
-      : super(_value, (v) => _then(v as _$_ResourceRelationshipDTO));
+      : super(_value, _then);
 
-  @override
-  _$_ResourceRelationshipDTO get _value =>
-      super._value as _$_ResourceRelationshipDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? href = freezed,
-    Object? data = freezed,
+    Object? href = null,
+    Object? data = null,
   }) {
     return _then(_$_ResourceRelationshipDTO(
-      href: href == freezed
+      href: null == href
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String,
-      data: data == freezed
+      data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as List<ResourceDTO>,
@@ -138,19 +141,18 @@ class _$_ResourceRelationshipDTO extends _ResourceRelationshipDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ResourceRelationshipDTO &&
-            const DeepCollectionEquality().equals(other.href, href) &&
+            (identical(other.href, href) || other.href == href) &&
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(href),
-      const DeepCollectionEquality().hash(_data));
+      runtimeType, href, const DeepCollectionEquality().hash(_data));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ResourceRelationshipDTOCopyWith<_$_ResourceRelationshipDTO>
       get copyWith =>
           __$$_ResourceRelationshipDTOCopyWithImpl<_$_ResourceRelationshipDTO>(
@@ -209,7 +211,8 @@ mixin _$AlbumRelationshipsDTO {
 abstract class $AlbumRelationshipsDTOCopyWith<$Res> {
   factory $AlbumRelationshipsDTOCopyWith(AlbumRelationshipsDTO value,
           $Res Function(AlbumRelationshipsDTO) then) =
-      _$AlbumRelationshipsDTOCopyWithImpl<$Res>;
+      _$AlbumRelationshipsDTOCopyWithImpl<$Res, AlbumRelationshipsDTO>;
+  @useResult
   $Res call(
       {ResourceRelationshipDTO? artists,
       ResourceRelationshipDTO? tracks,
@@ -225,14 +228,17 @@ abstract class $AlbumRelationshipsDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AlbumRelationshipsDTOCopyWithImpl<$Res>
+class _$AlbumRelationshipsDTOCopyWithImpl<$Res,
+        $Val extends AlbumRelationshipsDTO>
     implements $AlbumRelationshipsDTOCopyWith<$Res> {
   _$AlbumRelationshipsDTOCopyWithImpl(this._value, this._then);
 
-  final AlbumRelationshipsDTO _value;
   // ignore: unused_field
-  final $Res Function(AlbumRelationshipsDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artists = freezed,
@@ -242,52 +248,55 @@ class _$AlbumRelationshipsDTOCopyWithImpl<$Res>
     Object? catalog = freezed,
   }) {
     return _then(_value.copyWith(
-      artists: artists == freezed
+      artists: freezed == artists
           ? _value.artists
           : artists // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      tracks: tracks == freezed
+      tracks: freezed == tracks
           ? _value.tracks
           : tracks // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      recordLabels: recordLabels == freezed
+      recordLabels: freezed == recordLabels
           ? _value.recordLabels
           : recordLabels // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      library: library == freezed
+      library: freezed == library
           ? _value.library
           : library // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      catalog: catalog == freezed
+      catalog: freezed == catalog
           ? _value.catalog
           : catalog // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get artists {
     if (_value.artists == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.artists!, (value) {
-      return _then(_value.copyWith(artists: value));
+      return _then(_value.copyWith(artists: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get tracks {
     if (_value.tracks == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.tracks!, (value) {
-      return _then(_value.copyWith(tracks: value));
+      return _then(_value.copyWith(tracks: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get recordLabels {
     if (_value.recordLabels == null) {
       return null;
@@ -295,29 +304,31 @@ class _$AlbumRelationshipsDTOCopyWithImpl<$Res>
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.recordLabels!,
         (value) {
-      return _then(_value.copyWith(recordLabels: value));
+      return _then(_value.copyWith(recordLabels: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get library {
     if (_value.library == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.library!, (value) {
-      return _then(_value.copyWith(library: value));
+      return _then(_value.copyWith(library: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get catalog {
     if (_value.catalog == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.catalog!, (value) {
-      return _then(_value.copyWith(catalog: value));
+      return _then(_value.copyWith(catalog: value) as $Val);
     });
   }
 }
@@ -329,6 +340,7 @@ abstract class _$$_AlbumRelationshipsDTOCopyWith<$Res>
           $Res Function(_$_AlbumRelationshipsDTO) then) =
       __$$_AlbumRelationshipsDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {ResourceRelationshipDTO? artists,
       ResourceRelationshipDTO? tracks,
@@ -350,16 +362,13 @@ abstract class _$$_AlbumRelationshipsDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_AlbumRelationshipsDTOCopyWithImpl<$Res>
-    extends _$AlbumRelationshipsDTOCopyWithImpl<$Res>
+    extends _$AlbumRelationshipsDTOCopyWithImpl<$Res, _$_AlbumRelationshipsDTO>
     implements _$$_AlbumRelationshipsDTOCopyWith<$Res> {
   __$$_AlbumRelationshipsDTOCopyWithImpl(_$_AlbumRelationshipsDTO _value,
       $Res Function(_$_AlbumRelationshipsDTO) _then)
-      : super(_value, (v) => _then(v as _$_AlbumRelationshipsDTO));
+      : super(_value, _then);
 
-  @override
-  _$_AlbumRelationshipsDTO get _value =>
-      super._value as _$_AlbumRelationshipsDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artists = freezed,
@@ -369,23 +378,23 @@ class __$$_AlbumRelationshipsDTOCopyWithImpl<$Res>
     Object? catalog = freezed,
   }) {
     return _then(_$_AlbumRelationshipsDTO(
-      artists: artists == freezed
+      artists: freezed == artists
           ? _value.artists
           : artists // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      tracks: tracks == freezed
+      tracks: freezed == tracks
           ? _value.tracks
           : tracks // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      recordLabels: recordLabels == freezed
+      recordLabels: freezed == recordLabels
           ? _value.recordLabels
           : recordLabels // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      library: library == freezed
+      library: freezed == library
           ? _value.library
           : library // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      catalog: catalog == freezed
+      catalog: freezed == catalog
           ? _value.catalog
           : catalog // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
@@ -428,26 +437,22 @@ class _$_AlbumRelationshipsDTO extends _AlbumRelationshipsDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AlbumRelationshipsDTO &&
-            const DeepCollectionEquality().equals(other.artists, artists) &&
-            const DeepCollectionEquality().equals(other.tracks, tracks) &&
-            const DeepCollectionEquality()
-                .equals(other.recordLabels, recordLabels) &&
-            const DeepCollectionEquality().equals(other.library, library) &&
-            const DeepCollectionEquality().equals(other.catalog, catalog));
+            (identical(other.artists, artists) || other.artists == artists) &&
+            (identical(other.tracks, tracks) || other.tracks == tracks) &&
+            (identical(other.recordLabels, recordLabels) ||
+                other.recordLabels == recordLabels) &&
+            (identical(other.library, library) || other.library == library) &&
+            (identical(other.catalog, catalog) || other.catalog == catalog));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(artists),
-      const DeepCollectionEquality().hash(tracks),
-      const DeepCollectionEquality().hash(recordLabels),
-      const DeepCollectionEquality().hash(library),
-      const DeepCollectionEquality().hash(catalog));
+  int get hashCode =>
+      Object.hash(runtimeType, artists, tracks, recordLabels, library, catalog);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_AlbumRelationshipsDTOCopyWith<_$_AlbumRelationshipsDTO> get copyWith =>
       __$$_AlbumRelationshipsDTOCopyWithImpl<_$_AlbumRelationshipsDTO>(
           this, _$identity);
@@ -515,7 +520,8 @@ mixin _$ArtistRelationshipsDTO {
 abstract class $ArtistRelationshipsDTOCopyWith<$Res> {
   factory $ArtistRelationshipsDTOCopyWith(ArtistRelationshipsDTO value,
           $Res Function(ArtistRelationshipsDTO) then) =
-      _$ArtistRelationshipsDTOCopyWithImpl<$Res>;
+      _$ArtistRelationshipsDTOCopyWithImpl<$Res, ArtistRelationshipsDTO>;
+  @useResult
   $Res call(
       {ResourceRelationshipDTO? albums,
       ResourceRelationshipDTO? playlists,
@@ -534,14 +540,17 @@ abstract class $ArtistRelationshipsDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ArtistRelationshipsDTOCopyWithImpl<$Res>
+class _$ArtistRelationshipsDTOCopyWithImpl<$Res,
+        $Val extends ArtistRelationshipsDTO>
     implements $ArtistRelationshipsDTOCopyWith<$Res> {
   _$ArtistRelationshipsDTOCopyWithImpl(this._value, this._then);
 
-  final ArtistRelationshipsDTO _value;
   // ignore: unused_field
-  final $Res Function(ArtistRelationshipsDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? albums = freezed,
@@ -552,89 +561,95 @@ class _$ArtistRelationshipsDTOCopyWithImpl<$Res>
     Object? defaultPlayableContent = freezed,
   }) {
     return _then(_value.copyWith(
-      albums: albums == freezed
+      albums: freezed == albums
           ? _value.albums
           : albums // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      playlists: playlists == freezed
+      playlists: freezed == playlists
           ? _value.playlists
           : playlists // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      musicVideos: musicVideos == freezed
+      musicVideos: freezed == musicVideos
           ? _value.musicVideos
           : musicVideos // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      station: station == freezed
+      station: freezed == station
           ? _value.station
           : station // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      catalog: catalog == freezed
+      catalog: freezed == catalog
           ? _value.catalog
           : catalog // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      defaultPlayableContent: defaultPlayableContent == freezed
+      defaultPlayableContent: freezed == defaultPlayableContent
           ? _value.defaultPlayableContent
           : defaultPlayableContent // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get albums {
     if (_value.albums == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.albums!, (value) {
-      return _then(_value.copyWith(albums: value));
+      return _then(_value.copyWith(albums: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get playlists {
     if (_value.playlists == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.playlists!, (value) {
-      return _then(_value.copyWith(playlists: value));
+      return _then(_value.copyWith(playlists: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get musicVideos {
     if (_value.musicVideos == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.musicVideos!, (value) {
-      return _then(_value.copyWith(musicVideos: value));
+      return _then(_value.copyWith(musicVideos: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get station {
     if (_value.station == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.station!, (value) {
-      return _then(_value.copyWith(station: value));
+      return _then(_value.copyWith(station: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get catalog {
     if (_value.catalog == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.catalog!, (value) {
-      return _then(_value.copyWith(catalog: value));
+      return _then(_value.copyWith(catalog: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get defaultPlayableContent {
     if (_value.defaultPlayableContent == null) {
       return null;
@@ -642,7 +657,7 @@ class _$ArtistRelationshipsDTOCopyWithImpl<$Res>
 
     return $ResourceRelationshipDTOCopyWith<$Res>(
         _value.defaultPlayableContent!, (value) {
-      return _then(_value.copyWith(defaultPlayableContent: value));
+      return _then(_value.copyWith(defaultPlayableContent: value) as $Val);
     });
   }
 }
@@ -654,6 +669,7 @@ abstract class _$$_ArtistRelationshipsDTOCopyWith<$Res>
           $Res Function(_$_ArtistRelationshipsDTO) then) =
       __$$_ArtistRelationshipsDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {ResourceRelationshipDTO? albums,
       ResourceRelationshipDTO? playlists,
@@ -679,16 +695,14 @@ abstract class _$$_ArtistRelationshipsDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_ArtistRelationshipsDTOCopyWithImpl<$Res>
-    extends _$ArtistRelationshipsDTOCopyWithImpl<$Res>
+    extends _$ArtistRelationshipsDTOCopyWithImpl<$Res,
+        _$_ArtistRelationshipsDTO>
     implements _$$_ArtistRelationshipsDTOCopyWith<$Res> {
   __$$_ArtistRelationshipsDTOCopyWithImpl(_$_ArtistRelationshipsDTO _value,
       $Res Function(_$_ArtistRelationshipsDTO) _then)
-      : super(_value, (v) => _then(v as _$_ArtistRelationshipsDTO));
+      : super(_value, _then);
 
-  @override
-  _$_ArtistRelationshipsDTO get _value =>
-      super._value as _$_ArtistRelationshipsDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? albums = freezed,
@@ -699,27 +713,27 @@ class __$$_ArtistRelationshipsDTOCopyWithImpl<$Res>
     Object? defaultPlayableContent = freezed,
   }) {
     return _then(_$_ArtistRelationshipsDTO(
-      albums: albums == freezed
+      albums: freezed == albums
           ? _value.albums
           : albums // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      playlists: playlists == freezed
+      playlists: freezed == playlists
           ? _value.playlists
           : playlists // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      musicVideos: musicVideos == freezed
+      musicVideos: freezed == musicVideos
           ? _value.musicVideos
           : musicVideos // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      station: station == freezed
+      station: freezed == station
           ? _value.station
           : station // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      catalog: catalog == freezed
+      catalog: freezed == catalog
           ? _value.catalog
           : catalog // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      defaultPlayableContent: defaultPlayableContent == freezed
+      defaultPlayableContent: freezed == defaultPlayableContent
           ? _value.defaultPlayableContent
           : defaultPlayableContent // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
@@ -766,29 +780,25 @@ class _$_ArtistRelationshipsDTO extends _ArtistRelationshipsDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ArtistRelationshipsDTO &&
-            const DeepCollectionEquality().equals(other.albums, albums) &&
-            const DeepCollectionEquality().equals(other.playlists, playlists) &&
-            const DeepCollectionEquality()
-                .equals(other.musicVideos, musicVideos) &&
-            const DeepCollectionEquality().equals(other.station, station) &&
-            const DeepCollectionEquality().equals(other.catalog, catalog) &&
-            const DeepCollectionEquality()
-                .equals(other.defaultPlayableContent, defaultPlayableContent));
+            (identical(other.albums, albums) || other.albums == albums) &&
+            (identical(other.playlists, playlists) ||
+                other.playlists == playlists) &&
+            (identical(other.musicVideos, musicVideos) ||
+                other.musicVideos == musicVideos) &&
+            (identical(other.station, station) || other.station == station) &&
+            (identical(other.catalog, catalog) || other.catalog == catalog) &&
+            (identical(other.defaultPlayableContent, defaultPlayableContent) ||
+                other.defaultPlayableContent == defaultPlayableContent));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(albums),
-      const DeepCollectionEquality().hash(playlists),
-      const DeepCollectionEquality().hash(musicVideos),
-      const DeepCollectionEquality().hash(station),
-      const DeepCollectionEquality().hash(catalog),
-      const DeepCollectionEquality().hash(defaultPlayableContent));
+  int get hashCode => Object.hash(runtimeType, albums, playlists, musicVideos,
+      station, catalog, defaultPlayableContent);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ArtistRelationshipsDTOCopyWith<_$_ArtistRelationshipsDTO> get copyWith =>
       __$$_ArtistRelationshipsDTOCopyWithImpl<_$_ArtistRelationshipsDTO>(
           this, _$identity);
@@ -857,7 +867,8 @@ mixin _$PlaylistRelationshipsDTO {
 abstract class $PlaylistRelationshipsDTOCopyWith<$Res> {
   factory $PlaylistRelationshipsDTOCopyWith(PlaylistRelationshipsDTO value,
           $Res Function(PlaylistRelationshipsDTO) then) =
-      _$PlaylistRelationshipsDTOCopyWithImpl<$Res>;
+      _$PlaylistRelationshipsDTOCopyWithImpl<$Res, PlaylistRelationshipsDTO>;
+  @useResult
   $Res call(
       {ResourceRelationshipDTO? tracks,
       ResourceRelationshipDTO? curator,
@@ -871,14 +882,17 @@ abstract class $PlaylistRelationshipsDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PlaylistRelationshipsDTOCopyWithImpl<$Res>
+class _$PlaylistRelationshipsDTOCopyWithImpl<$Res,
+        $Val extends PlaylistRelationshipsDTO>
     implements $PlaylistRelationshipsDTOCopyWith<$Res> {
   _$PlaylistRelationshipsDTOCopyWithImpl(this._value, this._then);
 
-  final PlaylistRelationshipsDTO _value;
   // ignore: unused_field
-  final $Res Function(PlaylistRelationshipsDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? tracks = freezed,
@@ -887,66 +901,70 @@ class _$PlaylistRelationshipsDTOCopyWithImpl<$Res>
     Object? catalog = freezed,
   }) {
     return _then(_value.copyWith(
-      tracks: tracks == freezed
+      tracks: freezed == tracks
           ? _value.tracks
           : tracks // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      curator: curator == freezed
+      curator: freezed == curator
           ? _value.curator
           : curator // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      library: library == freezed
+      library: freezed == library
           ? _value.library
           : library // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      catalog: catalog == freezed
+      catalog: freezed == catalog
           ? _value.catalog
           : catalog // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get tracks {
     if (_value.tracks == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.tracks!, (value) {
-      return _then(_value.copyWith(tracks: value));
+      return _then(_value.copyWith(tracks: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get curator {
     if (_value.curator == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.curator!, (value) {
-      return _then(_value.copyWith(curator: value));
+      return _then(_value.copyWith(curator: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get library {
     if (_value.library == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.library!, (value) {
-      return _then(_value.copyWith(library: value));
+      return _then(_value.copyWith(library: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get catalog {
     if (_value.catalog == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.catalog!, (value) {
-      return _then(_value.copyWith(catalog: value));
+      return _then(_value.copyWith(catalog: value) as $Val);
     });
   }
 }
@@ -959,6 +977,7 @@ abstract class _$$_PlaylistRelationshipsDTOCopyWith<$Res>
           $Res Function(_$_PlaylistRelationshipsDTO) then) =
       __$$_PlaylistRelationshipsDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {ResourceRelationshipDTO? tracks,
       ResourceRelationshipDTO? curator,
@@ -977,16 +996,14 @@ abstract class _$$_PlaylistRelationshipsDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_PlaylistRelationshipsDTOCopyWithImpl<$Res>
-    extends _$PlaylistRelationshipsDTOCopyWithImpl<$Res>
+    extends _$PlaylistRelationshipsDTOCopyWithImpl<$Res,
+        _$_PlaylistRelationshipsDTO>
     implements _$$_PlaylistRelationshipsDTOCopyWith<$Res> {
   __$$_PlaylistRelationshipsDTOCopyWithImpl(_$_PlaylistRelationshipsDTO _value,
       $Res Function(_$_PlaylistRelationshipsDTO) _then)
-      : super(_value, (v) => _then(v as _$_PlaylistRelationshipsDTO));
+      : super(_value, _then);
 
-  @override
-  _$_PlaylistRelationshipsDTO get _value =>
-      super._value as _$_PlaylistRelationshipsDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? tracks = freezed,
@@ -995,19 +1012,19 @@ class __$$_PlaylistRelationshipsDTOCopyWithImpl<$Res>
     Object? catalog = freezed,
   }) {
     return _then(_$_PlaylistRelationshipsDTO(
-      tracks: tracks == freezed
+      tracks: freezed == tracks
           ? _value.tracks
           : tracks // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      curator: curator == freezed
+      curator: freezed == curator
           ? _value.curator
           : curator // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      library: library == freezed
+      library: freezed == library
           ? _value.library
           : library // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      catalog: catalog == freezed
+      catalog: freezed == catalog
           ? _value.catalog
           : catalog // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
@@ -1044,23 +1061,20 @@ class _$_PlaylistRelationshipsDTO extends _PlaylistRelationshipsDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PlaylistRelationshipsDTO &&
-            const DeepCollectionEquality().equals(other.tracks, tracks) &&
-            const DeepCollectionEquality().equals(other.curator, curator) &&
-            const DeepCollectionEquality().equals(other.library, library) &&
-            const DeepCollectionEquality().equals(other.catalog, catalog));
+            (identical(other.tracks, tracks) || other.tracks == tracks) &&
+            (identical(other.curator, curator) || other.curator == curator) &&
+            (identical(other.library, library) || other.library == library) &&
+            (identical(other.catalog, catalog) || other.catalog == catalog));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(tracks),
-      const DeepCollectionEquality().hash(curator),
-      const DeepCollectionEquality().hash(library),
-      const DeepCollectionEquality().hash(catalog));
+  int get hashCode =>
+      Object.hash(runtimeType, tracks, curator, library, catalog);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PlaylistRelationshipsDTOCopyWith<_$_PlaylistRelationshipsDTO>
       get copyWith => __$$_PlaylistRelationshipsDTOCopyWithImpl<
           _$_PlaylistRelationshipsDTO>(this, _$identity);
@@ -1123,7 +1137,8 @@ mixin _$SongRelationshipsDTO {
 abstract class $SongRelationshipsDTOCopyWith<$Res> {
   factory $SongRelationshipsDTOCopyWith(SongRelationshipsDTO value,
           $Res Function(SongRelationshipsDTO) then) =
-      _$SongRelationshipsDTOCopyWithImpl<$Res>;
+      _$SongRelationshipsDTOCopyWithImpl<$Res, SongRelationshipsDTO>;
+  @useResult
   $Res call(
       {ResourceRelationshipDTO? albums,
       ResourceRelationshipDTO? artists,
@@ -1143,14 +1158,17 @@ abstract class $SongRelationshipsDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SongRelationshipsDTOCopyWithImpl<$Res>
+class _$SongRelationshipsDTOCopyWithImpl<$Res,
+        $Val extends SongRelationshipsDTO>
     implements $SongRelationshipsDTOCopyWith<$Res> {
   _$SongRelationshipsDTOCopyWithImpl(this._value, this._then);
 
-  final SongRelationshipsDTO _value;
   // ignore: unused_field
-  final $Res Function(SongRelationshipsDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? albums = freezed,
@@ -1162,111 +1180,118 @@ class _$SongRelationshipsDTOCopyWithImpl<$Res>
     Object? catalog = freezed,
   }) {
     return _then(_value.copyWith(
-      albums: albums == freezed
+      albums: freezed == albums
           ? _value.albums
           : albums // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      artists: artists == freezed
+      artists: freezed == artists
           ? _value.artists
           : artists // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      station: station == freezed
+      station: freezed == station
           ? _value.station
           : station // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      composers: composers == freezed
+      composers: freezed == composers
           ? _value.composers
           : composers // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      musicVideos: musicVideos == freezed
+      musicVideos: freezed == musicVideos
           ? _value.musicVideos
           : musicVideos // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      library: library == freezed
+      library: freezed == library
           ? _value.library
           : library // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      catalog: catalog == freezed
+      catalog: freezed == catalog
           ? _value.catalog
           : catalog // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get albums {
     if (_value.albums == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.albums!, (value) {
-      return _then(_value.copyWith(albums: value));
+      return _then(_value.copyWith(albums: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get artists {
     if (_value.artists == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.artists!, (value) {
-      return _then(_value.copyWith(artists: value));
+      return _then(_value.copyWith(artists: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get station {
     if (_value.station == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.station!, (value) {
-      return _then(_value.copyWith(station: value));
+      return _then(_value.copyWith(station: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get composers {
     if (_value.composers == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.composers!, (value) {
-      return _then(_value.copyWith(composers: value));
+      return _then(_value.copyWith(composers: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get musicVideos {
     if (_value.musicVideos == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.musicVideos!, (value) {
-      return _then(_value.copyWith(musicVideos: value));
+      return _then(_value.copyWith(musicVideos: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get library {
     if (_value.library == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.library!, (value) {
-      return _then(_value.copyWith(library: value));
+      return _then(_value.copyWith(library: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get catalog {
     if (_value.catalog == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.catalog!, (value) {
-      return _then(_value.copyWith(catalog: value));
+      return _then(_value.copyWith(catalog: value) as $Val);
     });
   }
 }
@@ -1278,6 +1303,7 @@ abstract class _$$_SongRelationshipsDTOCopyWith<$Res>
           $Res Function(_$_SongRelationshipsDTO) then) =
       __$$_SongRelationshipsDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {ResourceRelationshipDTO? albums,
       ResourceRelationshipDTO? artists,
@@ -1305,15 +1331,13 @@ abstract class _$$_SongRelationshipsDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_SongRelationshipsDTOCopyWithImpl<$Res>
-    extends _$SongRelationshipsDTOCopyWithImpl<$Res>
+    extends _$SongRelationshipsDTOCopyWithImpl<$Res, _$_SongRelationshipsDTO>
     implements _$$_SongRelationshipsDTOCopyWith<$Res> {
   __$$_SongRelationshipsDTOCopyWithImpl(_$_SongRelationshipsDTO _value,
       $Res Function(_$_SongRelationshipsDTO) _then)
-      : super(_value, (v) => _then(v as _$_SongRelationshipsDTO));
+      : super(_value, _then);
 
-  @override
-  _$_SongRelationshipsDTO get _value => super._value as _$_SongRelationshipsDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? albums = freezed,
@@ -1325,31 +1349,31 @@ class __$$_SongRelationshipsDTOCopyWithImpl<$Res>
     Object? catalog = freezed,
   }) {
     return _then(_$_SongRelationshipsDTO(
-      albums: albums == freezed
+      albums: freezed == albums
           ? _value.albums
           : albums // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      artists: artists == freezed
+      artists: freezed == artists
           ? _value.artists
           : artists // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      station: station == freezed
+      station: freezed == station
           ? _value.station
           : station // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      composers: composers == freezed
+      composers: freezed == composers
           ? _value.composers
           : composers // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      musicVideos: musicVideos == freezed
+      musicVideos: freezed == musicVideos
           ? _value.musicVideos
           : musicVideos // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      library: library == freezed
+      library: freezed == library
           ? _value.library
           : library // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      catalog: catalog == freezed
+      catalog: freezed == catalog
           ? _value.catalog
           : catalog // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
@@ -1398,30 +1422,25 @@ class _$_SongRelationshipsDTO extends _SongRelationshipsDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SongRelationshipsDTO &&
-            const DeepCollectionEquality().equals(other.albums, albums) &&
-            const DeepCollectionEquality().equals(other.artists, artists) &&
-            const DeepCollectionEquality().equals(other.station, station) &&
-            const DeepCollectionEquality().equals(other.composers, composers) &&
-            const DeepCollectionEquality()
-                .equals(other.musicVideos, musicVideos) &&
-            const DeepCollectionEquality().equals(other.library, library) &&
-            const DeepCollectionEquality().equals(other.catalog, catalog));
+            (identical(other.albums, albums) || other.albums == albums) &&
+            (identical(other.artists, artists) || other.artists == artists) &&
+            (identical(other.station, station) || other.station == station) &&
+            (identical(other.composers, composers) ||
+                other.composers == composers) &&
+            (identical(other.musicVideos, musicVideos) ||
+                other.musicVideos == musicVideos) &&
+            (identical(other.library, library) || other.library == library) &&
+            (identical(other.catalog, catalog) || other.catalog == catalog));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(albums),
-      const DeepCollectionEquality().hash(artists),
-      const DeepCollectionEquality().hash(station),
-      const DeepCollectionEquality().hash(composers),
-      const DeepCollectionEquality().hash(musicVideos),
-      const DeepCollectionEquality().hash(library),
-      const DeepCollectionEquality().hash(catalog));
+  int get hashCode => Object.hash(runtimeType, albums, artists, station,
+      composers, musicVideos, library, catalog);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SongRelationshipsDTOCopyWith<_$_SongRelationshipsDTO> get copyWith =>
       __$$_SongRelationshipsDTOCopyWithImpl<_$_SongRelationshipsDTO>(
           this, _$identity);
@@ -1491,7 +1510,9 @@ mixin _$MusicVideoRelationshipsDTO {
 abstract class $MusicVideoRelationshipsDTOCopyWith<$Res> {
   factory $MusicVideoRelationshipsDTOCopyWith(MusicVideoRelationshipsDTO value,
           $Res Function(MusicVideoRelationshipsDTO) then) =
-      _$MusicVideoRelationshipsDTOCopyWithImpl<$Res>;
+      _$MusicVideoRelationshipsDTOCopyWithImpl<$Res,
+          MusicVideoRelationshipsDTO>;
+  @useResult
   $Res call(
       {ResourceRelationshipDTO? albums,
       ResourceRelationshipDTO? artists,
@@ -1507,14 +1528,17 @@ abstract class $MusicVideoRelationshipsDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MusicVideoRelationshipsDTOCopyWithImpl<$Res>
+class _$MusicVideoRelationshipsDTOCopyWithImpl<$Res,
+        $Val extends MusicVideoRelationshipsDTO>
     implements $MusicVideoRelationshipsDTOCopyWith<$Res> {
   _$MusicVideoRelationshipsDTOCopyWithImpl(this._value, this._then);
 
-  final MusicVideoRelationshipsDTO _value;
   // ignore: unused_field
-  final $Res Function(MusicVideoRelationshipsDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? albums = freezed,
@@ -1524,81 +1548,86 @@ class _$MusicVideoRelationshipsDTOCopyWithImpl<$Res>
     Object? catalog = freezed,
   }) {
     return _then(_value.copyWith(
-      albums: albums == freezed
+      albums: freezed == albums
           ? _value.albums
           : albums // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      artists: artists == freezed
+      artists: freezed == artists
           ? _value.artists
           : artists // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      songs: songs == freezed
+      songs: freezed == songs
           ? _value.songs
           : songs // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      library: library == freezed
+      library: freezed == library
           ? _value.library
           : library // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      catalog: catalog == freezed
+      catalog: freezed == catalog
           ? _value.catalog
           : catalog // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get albums {
     if (_value.albums == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.albums!, (value) {
-      return _then(_value.copyWith(albums: value));
+      return _then(_value.copyWith(albums: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get artists {
     if (_value.artists == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.artists!, (value) {
-      return _then(_value.copyWith(artists: value));
+      return _then(_value.copyWith(artists: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get songs {
     if (_value.songs == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.songs!, (value) {
-      return _then(_value.copyWith(songs: value));
+      return _then(_value.copyWith(songs: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get library {
     if (_value.library == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.library!, (value) {
-      return _then(_value.copyWith(library: value));
+      return _then(_value.copyWith(library: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get catalog {
     if (_value.catalog == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.catalog!, (value) {
-      return _then(_value.copyWith(catalog: value));
+      return _then(_value.copyWith(catalog: value) as $Val);
     });
   }
 }
@@ -1611,6 +1640,7 @@ abstract class _$$_MusicVideoRelationshipsDTOCopyWith<$Res>
           $Res Function(_$_MusicVideoRelationshipsDTO) then) =
       __$$_MusicVideoRelationshipsDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {ResourceRelationshipDTO? albums,
       ResourceRelationshipDTO? artists,
@@ -1632,17 +1662,15 @@ abstract class _$$_MusicVideoRelationshipsDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_MusicVideoRelationshipsDTOCopyWithImpl<$Res>
-    extends _$MusicVideoRelationshipsDTOCopyWithImpl<$Res>
+    extends _$MusicVideoRelationshipsDTOCopyWithImpl<$Res,
+        _$_MusicVideoRelationshipsDTO>
     implements _$$_MusicVideoRelationshipsDTOCopyWith<$Res> {
   __$$_MusicVideoRelationshipsDTOCopyWithImpl(
       _$_MusicVideoRelationshipsDTO _value,
       $Res Function(_$_MusicVideoRelationshipsDTO) _then)
-      : super(_value, (v) => _then(v as _$_MusicVideoRelationshipsDTO));
+      : super(_value, _then);
 
-  @override
-  _$_MusicVideoRelationshipsDTO get _value =>
-      super._value as _$_MusicVideoRelationshipsDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? albums = freezed,
@@ -1652,23 +1680,23 @@ class __$$_MusicVideoRelationshipsDTOCopyWithImpl<$Res>
     Object? catalog = freezed,
   }) {
     return _then(_$_MusicVideoRelationshipsDTO(
-      albums: albums == freezed
+      albums: freezed == albums
           ? _value.albums
           : albums // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      artists: artists == freezed
+      artists: freezed == artists
           ? _value.artists
           : artists // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      songs: songs == freezed
+      songs: freezed == songs
           ? _value.songs
           : songs // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      library: library == freezed
+      library: freezed == library
           ? _value.library
           : library // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-      catalog: catalog == freezed
+      catalog: freezed == catalog
           ? _value.catalog
           : catalog // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
@@ -1707,25 +1735,21 @@ class _$_MusicVideoRelationshipsDTO extends _MusicVideoRelationshipsDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MusicVideoRelationshipsDTO &&
-            const DeepCollectionEquality().equals(other.albums, albums) &&
-            const DeepCollectionEquality().equals(other.artists, artists) &&
-            const DeepCollectionEquality().equals(other.songs, songs) &&
-            const DeepCollectionEquality().equals(other.library, library) &&
-            const DeepCollectionEquality().equals(other.catalog, catalog));
+            (identical(other.albums, albums) || other.albums == albums) &&
+            (identical(other.artists, artists) || other.artists == artists) &&
+            (identical(other.songs, songs) || other.songs == songs) &&
+            (identical(other.library, library) || other.library == library) &&
+            (identical(other.catalog, catalog) || other.catalog == catalog));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(albums),
-      const DeepCollectionEquality().hash(artists),
-      const DeepCollectionEquality().hash(songs),
-      const DeepCollectionEquality().hash(library),
-      const DeepCollectionEquality().hash(catalog));
+  int get hashCode =>
+      Object.hash(runtimeType, albums, artists, songs, library, catalog);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_MusicVideoRelationshipsDTOCopyWith<_$_MusicVideoRelationshipsDTO>
       get copyWith => __$$_MusicVideoRelationshipsDTOCopyWithImpl<
           _$_MusicVideoRelationshipsDTO>(this, _$identity);
@@ -1785,41 +1809,46 @@ mixin _$CuratorRelationshipsDTO {
 abstract class $CuratorRelationshipsDTOCopyWith<$Res> {
   factory $CuratorRelationshipsDTOCopyWith(CuratorRelationshipsDTO value,
           $Res Function(CuratorRelationshipsDTO) then) =
-      _$CuratorRelationshipsDTOCopyWithImpl<$Res>;
+      _$CuratorRelationshipsDTOCopyWithImpl<$Res, CuratorRelationshipsDTO>;
+  @useResult
   $Res call({ResourceRelationshipDTO? playlists});
 
   $ResourceRelationshipDTOCopyWith<$Res>? get playlists;
 }
 
 /// @nodoc
-class _$CuratorRelationshipsDTOCopyWithImpl<$Res>
+class _$CuratorRelationshipsDTOCopyWithImpl<$Res,
+        $Val extends CuratorRelationshipsDTO>
     implements $CuratorRelationshipsDTOCopyWith<$Res> {
   _$CuratorRelationshipsDTOCopyWithImpl(this._value, this._then);
 
-  final CuratorRelationshipsDTO _value;
   // ignore: unused_field
-  final $Res Function(CuratorRelationshipsDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? playlists = freezed,
   }) {
     return _then(_value.copyWith(
-      playlists: playlists == freezed
+      playlists: freezed == playlists
           ? _value.playlists
           : playlists // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get playlists {
     if (_value.playlists == null) {
       return null;
     }
 
     return $ResourceRelationshipDTOCopyWith<$Res>(_value.playlists!, (value) {
-      return _then(_value.copyWith(playlists: value));
+      return _then(_value.copyWith(playlists: value) as $Val);
     });
   }
 }
@@ -1831,6 +1860,7 @@ abstract class _$$_CuratorRelationshipsDTOCopyWith<$Res>
           $Res Function(_$_CuratorRelationshipsDTO) then) =
       __$$_CuratorRelationshipsDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({ResourceRelationshipDTO? playlists});
 
   @override
@@ -1839,22 +1869,20 @@ abstract class _$$_CuratorRelationshipsDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_CuratorRelationshipsDTOCopyWithImpl<$Res>
-    extends _$CuratorRelationshipsDTOCopyWithImpl<$Res>
+    extends _$CuratorRelationshipsDTOCopyWithImpl<$Res,
+        _$_CuratorRelationshipsDTO>
     implements _$$_CuratorRelationshipsDTOCopyWith<$Res> {
   __$$_CuratorRelationshipsDTOCopyWithImpl(_$_CuratorRelationshipsDTO _value,
       $Res Function(_$_CuratorRelationshipsDTO) _then)
-      : super(_value, (v) => _then(v as _$_CuratorRelationshipsDTO));
+      : super(_value, _then);
 
-  @override
-  _$_CuratorRelationshipsDTO get _value =>
-      super._value as _$_CuratorRelationshipsDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? playlists = freezed,
   }) {
     return _then(_$_CuratorRelationshipsDTO(
-      playlists: playlists == freezed
+      playlists: freezed == playlists
           ? _value.playlists
           : playlists // ignore: cast_nullable_to_non_nullable
               as ResourceRelationshipDTO?,
@@ -1883,16 +1911,17 @@ class _$_CuratorRelationshipsDTO extends _CuratorRelationshipsDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CuratorRelationshipsDTO &&
-            const DeepCollectionEquality().equals(other.playlists, playlists));
+            (identical(other.playlists, playlists) ||
+                other.playlists == playlists));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(playlists));
+  int get hashCode => Object.hash(runtimeType, playlists);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CuratorRelationshipsDTOCopyWith<_$_CuratorRelationshipsDTO>
       get copyWith =>
           __$$_CuratorRelationshipsDTOCopyWithImpl<_$_CuratorRelationshipsDTO>(

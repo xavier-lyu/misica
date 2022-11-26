@@ -39,7 +39,8 @@ mixin _$ResourceAttributes {
 abstract class $ResourceAttributesCopyWith<$Res> {
   factory $ResourceAttributesCopyWith(
           ResourceAttributes value, $Res Function(ResourceAttributes) then) =
-      _$ResourceAttributesCopyWithImpl<$Res>;
+      _$ResourceAttributesCopyWithImpl<$Res, ResourceAttributes>;
+  @useResult
   $Res call(
       {String? albumName,
       String? artistName,
@@ -55,14 +56,16 @@ abstract class $ResourceAttributesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ResourceAttributesCopyWithImpl<$Res>
+class _$ResourceAttributesCopyWithImpl<$Res, $Val extends ResourceAttributes>
     implements $ResourceAttributesCopyWith<$Res> {
   _$ResourceAttributesCopyWithImpl(this._value, this._then);
 
-  final ResourceAttributes _value;
   // ignore: unused_field
-  final $Res Function(ResourceAttributes) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? albumName = freezed,
@@ -70,65 +73,67 @@ class _$ResourceAttributesCopyWithImpl<$Res>
     Object? artistUrl = freezed,
     Object? curatorName = freezed,
     Object? artwork = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? playParams = freezed,
     Object? url = freezed,
   }) {
     return _then(_value.copyWith(
-      albumName: albumName == freezed
+      albumName: freezed == albumName
           ? _value.albumName
           : albumName // ignore: cast_nullable_to_non_nullable
               as String?,
-      artistName: artistName == freezed
+      artistName: freezed == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String?,
-      artistUrl: artistUrl == freezed
+      artistUrl: freezed == artistUrl
           ? _value.artistUrl
           : artistUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      curatorName: curatorName == freezed
+      curatorName: freezed == curatorName
           ? _value.curatorName
           : curatorName // ignore: cast_nullable_to_non_nullable
               as String?,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as Artwork?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParams?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ArtworkCopyWith<$Res>? get artwork {
     if (_value.artwork == null) {
       return null;
     }
 
     return $ArtworkCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
+      return _then(_value.copyWith(artwork: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PlayParamsCopyWith<$Res>? get playParams {
     if (_value.playParams == null) {
       return null;
     }
 
     return $PlayParamsCopyWith<$Res>(_value.playParams!, (value) {
-      return _then(_value.copyWith(playParams: value));
+      return _then(_value.copyWith(playParams: value) as $Val);
     });
   }
 }
@@ -140,6 +145,7 @@ abstract class _$$_ResourceAttributesCopyWith<$Res>
           $Res Function(_$_ResourceAttributes) then) =
       __$$_ResourceAttributesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? albumName,
       String? artistName,
@@ -158,15 +164,13 @@ abstract class _$$_ResourceAttributesCopyWith<$Res>
 
 /// @nodoc
 class __$$_ResourceAttributesCopyWithImpl<$Res>
-    extends _$ResourceAttributesCopyWithImpl<$Res>
+    extends _$ResourceAttributesCopyWithImpl<$Res, _$_ResourceAttributes>
     implements _$$_ResourceAttributesCopyWith<$Res> {
   __$$_ResourceAttributesCopyWithImpl(
       _$_ResourceAttributes _value, $Res Function(_$_ResourceAttributes) _then)
-      : super(_value, (v) => _then(v as _$_ResourceAttributes));
+      : super(_value, _then);
 
-  @override
-  _$_ResourceAttributes get _value => super._value as _$_ResourceAttributes;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? albumName = freezed,
@@ -174,40 +178,40 @@ class __$$_ResourceAttributesCopyWithImpl<$Res>
     Object? artistUrl = freezed,
     Object? curatorName = freezed,
     Object? artwork = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? playParams = freezed,
     Object? url = freezed,
   }) {
     return _then(_$_ResourceAttributes(
-      albumName: albumName == freezed
+      albumName: freezed == albumName
           ? _value.albumName
           : albumName // ignore: cast_nullable_to_non_nullable
               as String?,
-      artistName: artistName == freezed
+      artistName: freezed == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String?,
-      artistUrl: artistUrl == freezed
+      artistUrl: freezed == artistUrl
           ? _value.artistUrl
           : artistUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      curatorName: curatorName == freezed
+      curatorName: freezed == curatorName
           ? _value.curatorName
           : curatorName // ignore: cast_nullable_to_non_nullable
               as String?,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as Artwork?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParams?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -259,34 +263,29 @@ class _$_ResourceAttributes extends _ResourceAttributes {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ResourceAttributes &&
-            const DeepCollectionEquality().equals(other.albumName, albumName) &&
-            const DeepCollectionEquality()
-                .equals(other.artistName, artistName) &&
-            const DeepCollectionEquality().equals(other.artistUrl, artistUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.curatorName, curatorName) &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.playParams, playParams) &&
-            const DeepCollectionEquality().equals(other.url, url));
+            (identical(other.albumName, albumName) ||
+                other.albumName == albumName) &&
+            (identical(other.artistName, artistName) ||
+                other.artistName == artistName) &&
+            (identical(other.artistUrl, artistUrl) ||
+                other.artistUrl == artistUrl) &&
+            (identical(other.curatorName, curatorName) ||
+                other.curatorName == curatorName) &&
+            (identical(other.artwork, artwork) || other.artwork == artwork) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.playParams, playParams) ||
+                other.playParams == playParams) &&
+            (identical(other.url, url) || other.url == url));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(albumName),
-      const DeepCollectionEquality().hash(artistName),
-      const DeepCollectionEquality().hash(artistUrl),
-      const DeepCollectionEquality().hash(curatorName),
-      const DeepCollectionEquality().hash(artwork),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(playParams),
-      const DeepCollectionEquality().hash(url));
+  int get hashCode => Object.hash(runtimeType, albumName, artistName, artistUrl,
+      curatorName, artwork, name, playParams, url);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ResourceAttributesCopyWith<_$_ResourceAttributes> get copyWith =>
       __$$_ResourceAttributesCopyWithImpl<_$_ResourceAttributes>(
           this, _$identity);
@@ -364,7 +363,8 @@ mixin _$AlbumAttributes {
 abstract class $AlbumAttributesCopyWith<$Res> {
   factory $AlbumAttributesCopyWith(
           AlbumAttributes value, $Res Function(AlbumAttributes) then) =
-      _$AlbumAttributesCopyWithImpl<$Res>;
+      _$AlbumAttributesCopyWithImpl<$Res, AlbumAttributes>;
+  @useResult
   $Res call(
       {String artistName,
       String? artistUrl,
@@ -384,21 +384,23 @@ abstract class $AlbumAttributesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AlbumAttributesCopyWithImpl<$Res>
+class _$AlbumAttributesCopyWithImpl<$Res, $Val extends AlbumAttributes>
     implements $AlbumAttributesCopyWith<$Res> {
   _$AlbumAttributesCopyWithImpl(this._value, this._then);
 
-  final AlbumAttributes _value;
   // ignore: unused_field
-  final $Res Function(AlbumAttributes) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? artistName = freezed,
+    Object? artistName = null,
     Object? artistUrl = freezed,
     Object? artwork = freezed,
     Object? contentRating = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? playParams = freezed,
     Object? url = freezed,
     Object? releaseDate = freezed,
@@ -407,83 +409,86 @@ class _$AlbumAttributesCopyWithImpl<$Res>
     Object? editorialNotes = freezed,
   }) {
     return _then(_value.copyWith(
-      artistName: artistName == freezed
+      artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String,
-      artistUrl: artistUrl == freezed
+      artistUrl: freezed == artistUrl
           ? _value.artistUrl
           : artistUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as Artwork?,
-      contentRating: contentRating == freezed
+      contentRating: freezed == contentRating
           ? _value.contentRating
           : contentRating // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParams?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      releaseDate: releaseDate == freezed
+      releaseDate: freezed == releaseDate
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      recordLabel: recordLabel == freezed
+      recordLabel: freezed == recordLabel
           ? _value.recordLabel
           : recordLabel // ignore: cast_nullable_to_non_nullable
               as String?,
-      copyright: copyright == freezed
+      copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
               as String?,
-      editorialNotes: editorialNotes == freezed
+      editorialNotes: freezed == editorialNotes
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
               as EditorialNotes?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ArtworkCopyWith<$Res>? get artwork {
     if (_value.artwork == null) {
       return null;
     }
 
     return $ArtworkCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
+      return _then(_value.copyWith(artwork: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PlayParamsCopyWith<$Res>? get playParams {
     if (_value.playParams == null) {
       return null;
     }
 
     return $PlayParamsCopyWith<$Res>(_value.playParams!, (value) {
-      return _then(_value.copyWith(playParams: value));
+      return _then(_value.copyWith(playParams: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $EditorialNotesCopyWith<$Res>? get editorialNotes {
     if (_value.editorialNotes == null) {
       return null;
     }
 
     return $EditorialNotesCopyWith<$Res>(_value.editorialNotes!, (value) {
-      return _then(_value.copyWith(editorialNotes: value));
+      return _then(_value.copyWith(editorialNotes: value) as $Val);
     });
   }
 }
@@ -495,6 +500,7 @@ abstract class _$$_AlbumAttributesCopyWith<$Res>
           _$_AlbumAttributes value, $Res Function(_$_AlbumAttributes) then) =
       __$$_AlbumAttributesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String artistName,
       String? artistUrl,
@@ -518,22 +524,20 @@ abstract class _$$_AlbumAttributesCopyWith<$Res>
 
 /// @nodoc
 class __$$_AlbumAttributesCopyWithImpl<$Res>
-    extends _$AlbumAttributesCopyWithImpl<$Res>
+    extends _$AlbumAttributesCopyWithImpl<$Res, _$_AlbumAttributes>
     implements _$$_AlbumAttributesCopyWith<$Res> {
   __$$_AlbumAttributesCopyWithImpl(
       _$_AlbumAttributes _value, $Res Function(_$_AlbumAttributes) _then)
-      : super(_value, (v) => _then(v as _$_AlbumAttributes));
+      : super(_value, _then);
 
-  @override
-  _$_AlbumAttributes get _value => super._value as _$_AlbumAttributes;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? artistName = freezed,
+    Object? artistName = null,
     Object? artistUrl = freezed,
     Object? artwork = freezed,
     Object? contentRating = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? playParams = freezed,
     Object? url = freezed,
     Object? releaseDate = freezed,
@@ -542,47 +546,47 @@ class __$$_AlbumAttributesCopyWithImpl<$Res>
     Object? editorialNotes = freezed,
   }) {
     return _then(_$_AlbumAttributes(
-      artistName: artistName == freezed
+      artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String,
-      artistUrl: artistUrl == freezed
+      artistUrl: freezed == artistUrl
           ? _value.artistUrl
           : artistUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as Artwork?,
-      contentRating: contentRating == freezed
+      contentRating: freezed == contentRating
           ? _value.contentRating
           : contentRating // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParams?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      releaseDate: releaseDate == freezed
+      releaseDate: freezed == releaseDate
           ? _value.releaseDate
           : releaseDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      recordLabel: recordLabel == freezed
+      recordLabel: freezed == recordLabel
           ? _value.recordLabel
           : recordLabel // ignore: cast_nullable_to_non_nullable
               as String?,
-      copyright: copyright == freezed
+      copyright: freezed == copyright
           ? _value.copyright
           : copyright // ignore: cast_nullable_to_non_nullable
               as String?,
-      editorialNotes: editorialNotes == freezed
+      editorialNotes: freezed == editorialNotes
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
               as EditorialNotes?,
@@ -643,43 +647,46 @@ class _$_AlbumAttributes extends _AlbumAttributes {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AlbumAttributes &&
-            const DeepCollectionEquality()
-                .equals(other.artistName, artistName) &&
-            const DeepCollectionEquality().equals(other.artistUrl, artistUrl) &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
-            const DeepCollectionEquality()
-                .equals(other.contentRating, contentRating) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.playParams, playParams) &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality()
-                .equals(other.releaseDate, releaseDate) &&
-            const DeepCollectionEquality()
-                .equals(other.recordLabel, recordLabel) &&
-            const DeepCollectionEquality().equals(other.copyright, copyright) &&
-            const DeepCollectionEquality()
-                .equals(other.editorialNotes, editorialNotes));
+            (identical(other.artistName, artistName) ||
+                other.artistName == artistName) &&
+            (identical(other.artistUrl, artistUrl) ||
+                other.artistUrl == artistUrl) &&
+            (identical(other.artwork, artwork) || other.artwork == artwork) &&
+            (identical(other.contentRating, contentRating) ||
+                other.contentRating == contentRating) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.playParams, playParams) ||
+                other.playParams == playParams) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.releaseDate, releaseDate) ||
+                other.releaseDate == releaseDate) &&
+            (identical(other.recordLabel, recordLabel) ||
+                other.recordLabel == recordLabel) &&
+            (identical(other.copyright, copyright) ||
+                other.copyright == copyright) &&
+            (identical(other.editorialNotes, editorialNotes) ||
+                other.editorialNotes == editorialNotes));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(artistName),
-      const DeepCollectionEquality().hash(artistUrl),
-      const DeepCollectionEquality().hash(artwork),
-      const DeepCollectionEquality().hash(contentRating),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(playParams),
-      const DeepCollectionEquality().hash(url),
-      const DeepCollectionEquality().hash(releaseDate),
-      const DeepCollectionEquality().hash(recordLabel),
-      const DeepCollectionEquality().hash(copyright),
-      const DeepCollectionEquality().hash(editorialNotes));
+      artistName,
+      artistUrl,
+      artwork,
+      contentRating,
+      name,
+      playParams,
+      url,
+      releaseDate,
+      recordLabel,
+      copyright,
+      editorialNotes);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_AlbumAttributesCopyWith<_$_AlbumAttributes> get copyWith =>
       __$$_AlbumAttributesCopyWithImpl<_$_AlbumAttributes>(this, _$identity);
 
@@ -758,7 +765,8 @@ mixin _$ArtistAttributes {
 abstract class $ArtistAttributesCopyWith<$Res> {
   factory $ArtistAttributesCopyWith(
           ArtistAttributes value, $Res Function(ArtistAttributes) then) =
-      _$ArtistAttributesCopyWithImpl<$Res>;
+      _$ArtistAttributesCopyWithImpl<$Res, ArtistAttributes>;
+  @useResult
   $Res call(
       {String name,
       String? url,
@@ -770,60 +778,64 @@ abstract class $ArtistAttributesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ArtistAttributesCopyWithImpl<$Res>
+class _$ArtistAttributesCopyWithImpl<$Res, $Val extends ArtistAttributes>
     implements $ArtistAttributesCopyWith<$Res> {
   _$ArtistAttributesCopyWithImpl(this._value, this._then);
 
-  final ArtistAttributes _value;
   // ignore: unused_field
-  final $Res Function(ArtistAttributes) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
+    Object? name = null,
     Object? url = freezed,
     Object? artwork = freezed,
     Object? editorialNotes = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as Artwork?,
-      editorialNotes: editorialNotes == freezed
+      editorialNotes: freezed == editorialNotes
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
               as EditorialNotes?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ArtworkCopyWith<$Res>? get artwork {
     if (_value.artwork == null) {
       return null;
     }
 
     return $ArtworkCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
+      return _then(_value.copyWith(artwork: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $EditorialNotesCopyWith<$Res>? get editorialNotes {
     if (_value.editorialNotes == null) {
       return null;
     }
 
     return $EditorialNotesCopyWith<$Res>(_value.editorialNotes!, (value) {
-      return _then(_value.copyWith(editorialNotes: value));
+      return _then(_value.copyWith(editorialNotes: value) as $Val);
     });
   }
 }
@@ -835,6 +847,7 @@ abstract class _$$_ArtistAttributesCopyWith<$Res>
           _$_ArtistAttributes value, $Res Function(_$_ArtistAttributes) then) =
       __$$_ArtistAttributesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String name,
       String? url,
@@ -849,36 +862,34 @@ abstract class _$$_ArtistAttributesCopyWith<$Res>
 
 /// @nodoc
 class __$$_ArtistAttributesCopyWithImpl<$Res>
-    extends _$ArtistAttributesCopyWithImpl<$Res>
+    extends _$ArtistAttributesCopyWithImpl<$Res, _$_ArtistAttributes>
     implements _$$_ArtistAttributesCopyWith<$Res> {
   __$$_ArtistAttributesCopyWithImpl(
       _$_ArtistAttributes _value, $Res Function(_$_ArtistAttributes) _then)
-      : super(_value, (v) => _then(v as _$_ArtistAttributes));
+      : super(_value, _then);
 
-  @override
-  _$_ArtistAttributes get _value => super._value as _$_ArtistAttributes;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
+    Object? name = null,
     Object? url = freezed,
     Object? artwork = freezed,
     Object? editorialNotes = freezed,
   }) {
     return _then(_$_ArtistAttributes(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as Artwork?,
-      editorialNotes: editorialNotes == freezed
+      editorialNotes: freezed == editorialNotes
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
               as EditorialNotes?,
@@ -918,24 +929,21 @@ class _$_ArtistAttributes extends _ArtistAttributes {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ArtistAttributes &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
-            const DeepCollectionEquality()
-                .equals(other.editorialNotes, editorialNotes));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.artwork, artwork) || other.artwork == artwork) &&
+            (identical(other.editorialNotes, editorialNotes) ||
+                other.editorialNotes == editorialNotes));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(url),
-      const DeepCollectionEquality().hash(artwork),
-      const DeepCollectionEquality().hash(editorialNotes));
+  int get hashCode =>
+      Object.hash(runtimeType, name, url, artwork, editorialNotes);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ArtistAttributesCopyWith<_$_ArtistAttributes> get copyWith =>
       __$$_ArtistAttributesCopyWithImpl<_$_ArtistAttributes>(this, _$identity);
 
@@ -1000,7 +1008,8 @@ mixin _$MusicVideoAttributes {
 abstract class $MusicVideoAttributesCopyWith<$Res> {
   factory $MusicVideoAttributesCopyWith(MusicVideoAttributes value,
           $Res Function(MusicVideoAttributes) then) =
-      _$MusicVideoAttributesCopyWithImpl<$Res>;
+      _$MusicVideoAttributesCopyWithImpl<$Res, MusicVideoAttributes>;
+  @useResult
   $Res call(
       {String artistName,
       String? artistUrl,
@@ -1018,21 +1027,24 @@ abstract class $MusicVideoAttributesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MusicVideoAttributesCopyWithImpl<$Res>
+class _$MusicVideoAttributesCopyWithImpl<$Res,
+        $Val extends MusicVideoAttributes>
     implements $MusicVideoAttributesCopyWith<$Res> {
   _$MusicVideoAttributesCopyWithImpl(this._value, this._then);
 
-  final MusicVideoAttributes _value;
   // ignore: unused_field
-  final $Res Function(MusicVideoAttributes) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? artistName = freezed,
+    Object? artistName = null,
     Object? artistUrl = freezed,
     Object? artwork = freezed,
-    Object? durationInMillis = freezed,
-    Object? name = freezed,
+    Object? durationInMillis = null,
+    Object? name = null,
     Object? playParams = freezed,
     Object? previews = freezed,
     Object? url = freezed,
@@ -1040,68 +1052,70 @@ class _$MusicVideoAttributesCopyWithImpl<$Res>
     Object? contentRating = freezed,
   }) {
     return _then(_value.copyWith(
-      artistName: artistName == freezed
+      artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String,
-      artistUrl: artistUrl == freezed
+      artistUrl: freezed == artistUrl
           ? _value.artistUrl
           : artistUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as Artwork?,
-      durationInMillis: durationInMillis == freezed
+      durationInMillis: null == durationInMillis
           ? _value.durationInMillis
           : durationInMillis // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParams?,
-      previews: previews == freezed
+      previews: freezed == previews
           ? _value.previews
           : previews // ignore: cast_nullable_to_non_nullable
               as List<Map<String, dynamic>>?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      trackNumber: trackNumber == freezed
+      trackNumber: freezed == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      contentRating: contentRating == freezed
+      contentRating: freezed == contentRating
           ? _value.contentRating
           : contentRating // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ArtworkCopyWith<$Res>? get artwork {
     if (_value.artwork == null) {
       return null;
     }
 
     return $ArtworkCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
+      return _then(_value.copyWith(artwork: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PlayParamsCopyWith<$Res>? get playParams {
     if (_value.playParams == null) {
       return null;
     }
 
     return $PlayParamsCopyWith<$Res>(_value.playParams!, (value) {
-      return _then(_value.copyWith(playParams: value));
+      return _then(_value.copyWith(playParams: value) as $Val);
     });
   }
 }
@@ -1113,6 +1127,7 @@ abstract class _$$_MusicVideoAttributesCopyWith<$Res>
           $Res Function(_$_MusicVideoAttributes) then) =
       __$$_MusicVideoAttributesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String artistName,
       String? artistUrl,
@@ -1133,22 +1148,20 @@ abstract class _$$_MusicVideoAttributesCopyWith<$Res>
 
 /// @nodoc
 class __$$_MusicVideoAttributesCopyWithImpl<$Res>
-    extends _$MusicVideoAttributesCopyWithImpl<$Res>
+    extends _$MusicVideoAttributesCopyWithImpl<$Res, _$_MusicVideoAttributes>
     implements _$$_MusicVideoAttributesCopyWith<$Res> {
   __$$_MusicVideoAttributesCopyWithImpl(_$_MusicVideoAttributes _value,
       $Res Function(_$_MusicVideoAttributes) _then)
-      : super(_value, (v) => _then(v as _$_MusicVideoAttributes));
+      : super(_value, _then);
 
-  @override
-  _$_MusicVideoAttributes get _value => super._value as _$_MusicVideoAttributes;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? artistName = freezed,
+    Object? artistName = null,
     Object? artistUrl = freezed,
     Object? artwork = freezed,
-    Object? durationInMillis = freezed,
-    Object? name = freezed,
+    Object? durationInMillis = null,
+    Object? name = null,
     Object? playParams = freezed,
     Object? previews = freezed,
     Object? url = freezed,
@@ -1156,43 +1169,43 @@ class __$$_MusicVideoAttributesCopyWithImpl<$Res>
     Object? contentRating = freezed,
   }) {
     return _then(_$_MusicVideoAttributes(
-      artistName: artistName == freezed
+      artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String,
-      artistUrl: artistUrl == freezed
+      artistUrl: freezed == artistUrl
           ? _value.artistUrl
           : artistUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as Artwork?,
-      durationInMillis: durationInMillis == freezed
+      durationInMillis: null == durationInMillis
           ? _value.durationInMillis
           : durationInMillis // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParams?,
-      previews: previews == freezed
+      previews: freezed == previews
           ? _value._previews
           : previews // ignore: cast_nullable_to_non_nullable
               as List<Map<String, dynamic>>?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      trackNumber: trackNumber == freezed
+      trackNumber: freezed == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      contentRating: contentRating == freezed
+      contentRating: freezed == contentRating
           ? _value.contentRating
           : contentRating // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -1258,40 +1271,42 @@ class _$_MusicVideoAttributes extends _MusicVideoAttributes {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MusicVideoAttributes &&
-            const DeepCollectionEquality()
-                .equals(other.artistName, artistName) &&
-            const DeepCollectionEquality().equals(other.artistUrl, artistUrl) &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
-            const DeepCollectionEquality()
-                .equals(other.durationInMillis, durationInMillis) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.playParams, playParams) &&
+            (identical(other.artistName, artistName) ||
+                other.artistName == artistName) &&
+            (identical(other.artistUrl, artistUrl) ||
+                other.artistUrl == artistUrl) &&
+            (identical(other.artwork, artwork) || other.artwork == artwork) &&
+            (identical(other.durationInMillis, durationInMillis) ||
+                other.durationInMillis == durationInMillis) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.playParams, playParams) ||
+                other.playParams == playParams) &&
             const DeepCollectionEquality().equals(other._previews, _previews) &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality()
-                .equals(other.trackNumber, trackNumber) &&
-            const DeepCollectionEquality()
-                .equals(other.contentRating, contentRating));
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.trackNumber, trackNumber) ||
+                other.trackNumber == trackNumber) &&
+            (identical(other.contentRating, contentRating) ||
+                other.contentRating == contentRating));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(artistName),
-      const DeepCollectionEquality().hash(artistUrl),
-      const DeepCollectionEquality().hash(artwork),
-      const DeepCollectionEquality().hash(durationInMillis),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(playParams),
+      artistName,
+      artistUrl,
+      artwork,
+      durationInMillis,
+      name,
+      playParams,
       const DeepCollectionEquality().hash(_previews),
-      const DeepCollectionEquality().hash(url),
-      const DeepCollectionEquality().hash(trackNumber),
-      const DeepCollectionEquality().hash(contentRating));
+      url,
+      trackNumber,
+      contentRating);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_MusicVideoAttributesCopyWith<_$_MusicVideoAttributes> get copyWith =>
       __$$_MusicVideoAttributesCopyWithImpl<_$_MusicVideoAttributes>(
           this, _$identity);
@@ -1370,7 +1385,8 @@ mixin _$PlaylistAttributes {
 abstract class $PlaylistAttributesCopyWith<$Res> {
   factory $PlaylistAttributesCopyWith(
           PlaylistAttributes value, $Res Function(PlaylistAttributes) then) =
-      _$PlaylistAttributesCopyWithImpl<$Res>;
+      _$PlaylistAttributesCopyWithImpl<$Res, PlaylistAttributes>;
+  @useResult
   $Res call(
       {Artwork? artwork,
       String? curatorName,
@@ -1385,81 +1401,86 @@ abstract class $PlaylistAttributesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PlaylistAttributesCopyWithImpl<$Res>
+class _$PlaylistAttributesCopyWithImpl<$Res, $Val extends PlaylistAttributes>
     implements $PlaylistAttributesCopyWith<$Res> {
   _$PlaylistAttributesCopyWithImpl(this._value, this._then);
 
-  final PlaylistAttributes _value;
   // ignore: unused_field
-  final $Res Function(PlaylistAttributes) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artwork = freezed,
     Object? curatorName = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? playParams = freezed,
     Object? url = freezed,
     Object? editorialNotes = freezed,
   }) {
     return _then(_value.copyWith(
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as Artwork?,
-      curatorName: curatorName == freezed
+      curatorName: freezed == curatorName
           ? _value.curatorName
           : curatorName // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParams?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      editorialNotes: editorialNotes == freezed
+      editorialNotes: freezed == editorialNotes
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
               as EditorialNotes?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ArtworkCopyWith<$Res>? get artwork {
     if (_value.artwork == null) {
       return null;
     }
 
     return $ArtworkCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
+      return _then(_value.copyWith(artwork: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PlayParamsCopyWith<$Res>? get playParams {
     if (_value.playParams == null) {
       return null;
     }
 
     return $PlayParamsCopyWith<$Res>(_value.playParams!, (value) {
-      return _then(_value.copyWith(playParams: value));
+      return _then(_value.copyWith(playParams: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $EditorialNotesCopyWith<$Res>? get editorialNotes {
     if (_value.editorialNotes == null) {
       return null;
     }
 
     return $EditorialNotesCopyWith<$Res>(_value.editorialNotes!, (value) {
-      return _then(_value.copyWith(editorialNotes: value));
+      return _then(_value.copyWith(editorialNotes: value) as $Val);
     });
   }
 }
@@ -1471,6 +1492,7 @@ abstract class _$$_PlaylistAttributesCopyWith<$Res>
           $Res Function(_$_PlaylistAttributes) then) =
       __$$_PlaylistAttributesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Artwork? artwork,
       String? curatorName,
@@ -1489,46 +1511,44 @@ abstract class _$$_PlaylistAttributesCopyWith<$Res>
 
 /// @nodoc
 class __$$_PlaylistAttributesCopyWithImpl<$Res>
-    extends _$PlaylistAttributesCopyWithImpl<$Res>
+    extends _$PlaylistAttributesCopyWithImpl<$Res, _$_PlaylistAttributes>
     implements _$$_PlaylistAttributesCopyWith<$Res> {
   __$$_PlaylistAttributesCopyWithImpl(
       _$_PlaylistAttributes _value, $Res Function(_$_PlaylistAttributes) _then)
-      : super(_value, (v) => _then(v as _$_PlaylistAttributes));
+      : super(_value, _then);
 
-  @override
-  _$_PlaylistAttributes get _value => super._value as _$_PlaylistAttributes;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artwork = freezed,
     Object? curatorName = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? playParams = freezed,
     Object? url = freezed,
     Object? editorialNotes = freezed,
   }) {
     return _then(_$_PlaylistAttributes(
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as Artwork?,
-      curatorName: curatorName == freezed
+      curatorName: freezed == curatorName
           ? _value.curatorName
           : curatorName // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParams?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      editorialNotes: editorialNotes == freezed
+      editorialNotes: freezed == editorialNotes
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
               as EditorialNotes?,
@@ -1574,30 +1594,25 @@ class _$_PlaylistAttributes extends _PlaylistAttributes {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PlaylistAttributes &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
-            const DeepCollectionEquality()
-                .equals(other.curatorName, curatorName) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.playParams, playParams) &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality()
-                .equals(other.editorialNotes, editorialNotes));
+            (identical(other.artwork, artwork) || other.artwork == artwork) &&
+            (identical(other.curatorName, curatorName) ||
+                other.curatorName == curatorName) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.playParams, playParams) ||
+                other.playParams == playParams) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.editorialNotes, editorialNotes) ||
+                other.editorialNotes == editorialNotes));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(artwork),
-      const DeepCollectionEquality().hash(curatorName),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(playParams),
-      const DeepCollectionEquality().hash(url),
-      const DeepCollectionEquality().hash(editorialNotes));
+      runtimeType, artwork, curatorName, name, playParams, url, editorialNotes);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PlaylistAttributesCopyWith<_$_PlaylistAttributes> get copyWith =>
       __$$_PlaylistAttributesCopyWithImpl<_$_PlaylistAttributes>(
           this, _$identity);
@@ -1670,7 +1685,8 @@ mixin _$SongAttributes {
 abstract class $SongAttributesCopyWith<$Res> {
   factory $SongAttributesCopyWith(
           SongAttributes value, $Res Function(SongAttributes) then) =
-      _$SongAttributesCopyWithImpl<$Res>;
+      _$SongAttributesCopyWithImpl<$Res, SongAttributes>;
+  @useResult
   $Res call(
       {String? albumName,
       String? artistUrl,
@@ -1689,95 +1705,99 @@ abstract class $SongAttributesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SongAttributesCopyWithImpl<$Res>
+class _$SongAttributesCopyWithImpl<$Res, $Val extends SongAttributes>
     implements $SongAttributesCopyWith<$Res> {
   _$SongAttributesCopyWithImpl(this._value, this._then);
 
-  final SongAttributes _value;
   // ignore: unused_field
-  final $Res Function(SongAttributes) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? albumName = freezed,
     Object? artistUrl = freezed,
-    Object? artistName = freezed,
+    Object? artistName = null,
     Object? artwork = freezed,
     Object? contentRating = freezed,
-    Object? durationInMillis = freezed,
-    Object? name = freezed,
+    Object? durationInMillis = null,
+    Object? name = null,
     Object? playParams = freezed,
     Object? previews = freezed,
     Object? trackNumber = freezed,
     Object? url = freezed,
   }) {
     return _then(_value.copyWith(
-      albumName: albumName == freezed
+      albumName: freezed == albumName
           ? _value.albumName
           : albumName // ignore: cast_nullable_to_non_nullable
               as String?,
-      artistUrl: artistUrl == freezed
+      artistUrl: freezed == artistUrl
           ? _value.artistUrl
           : artistUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      artistName: artistName == freezed
+      artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as Artwork?,
-      contentRating: contentRating == freezed
+      contentRating: freezed == contentRating
           ? _value.contentRating
           : contentRating // ignore: cast_nullable_to_non_nullable
               as String?,
-      durationInMillis: durationInMillis == freezed
+      durationInMillis: null == durationInMillis
           ? _value.durationInMillis
           : durationInMillis // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParams?,
-      previews: previews == freezed
+      previews: freezed == previews
           ? _value.previews
           : previews // ignore: cast_nullable_to_non_nullable
               as List<Map<String, dynamic>>?,
-      trackNumber: trackNumber == freezed
+      trackNumber: freezed == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ArtworkCopyWith<$Res>? get artwork {
     if (_value.artwork == null) {
       return null;
     }
 
     return $ArtworkCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
+      return _then(_value.copyWith(artwork: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PlayParamsCopyWith<$Res>? get playParams {
     if (_value.playParams == null) {
       return null;
     }
 
     return $PlayParamsCopyWith<$Res>(_value.playParams!, (value) {
-      return _then(_value.copyWith(playParams: value));
+      return _then(_value.copyWith(playParams: value) as $Val);
     });
   }
 }
@@ -1789,6 +1809,7 @@ abstract class _$$_SongAttributesCopyWith<$Res>
           _$_SongAttributes value, $Res Function(_$_SongAttributes) then) =
       __$$_SongAttributesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? albumName,
       String? artistUrl,
@@ -1810,71 +1831,69 @@ abstract class _$$_SongAttributesCopyWith<$Res>
 
 /// @nodoc
 class __$$_SongAttributesCopyWithImpl<$Res>
-    extends _$SongAttributesCopyWithImpl<$Res>
+    extends _$SongAttributesCopyWithImpl<$Res, _$_SongAttributes>
     implements _$$_SongAttributesCopyWith<$Res> {
   __$$_SongAttributesCopyWithImpl(
       _$_SongAttributes _value, $Res Function(_$_SongAttributes) _then)
-      : super(_value, (v) => _then(v as _$_SongAttributes));
+      : super(_value, _then);
 
-  @override
-  _$_SongAttributes get _value => super._value as _$_SongAttributes;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? albumName = freezed,
     Object? artistUrl = freezed,
-    Object? artistName = freezed,
+    Object? artistName = null,
     Object? artwork = freezed,
     Object? contentRating = freezed,
-    Object? durationInMillis = freezed,
-    Object? name = freezed,
+    Object? durationInMillis = null,
+    Object? name = null,
     Object? playParams = freezed,
     Object? previews = freezed,
     Object? trackNumber = freezed,
     Object? url = freezed,
   }) {
     return _then(_$_SongAttributes(
-      albumName: albumName == freezed
+      albumName: freezed == albumName
           ? _value.albumName
           : albumName // ignore: cast_nullable_to_non_nullable
               as String?,
-      artistUrl: artistUrl == freezed
+      artistUrl: freezed == artistUrl
           ? _value.artistUrl
           : artistUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      artistName: artistName == freezed
+      artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
               as String,
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as Artwork?,
-      contentRating: contentRating == freezed
+      contentRating: freezed == contentRating
           ? _value.contentRating
           : contentRating // ignore: cast_nullable_to_non_nullable
               as String?,
-      durationInMillis: durationInMillis == freezed
+      durationInMillis: null == durationInMillis
           ? _value.durationInMillis
           : durationInMillis // ignore: cast_nullable_to_non_nullable
               as int,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParams?,
-      previews: previews == freezed
+      previews: freezed == previews
           ? _value._previews
           : previews // ignore: cast_nullable_to_non_nullable
               as List<Map<String, dynamic>>?,
-      trackNumber: trackNumber == freezed
+      trackNumber: freezed == trackNumber
           ? _value.trackNumber
           : trackNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -1943,42 +1962,45 @@ class _$_SongAttributes extends _SongAttributes {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SongAttributes &&
-            const DeepCollectionEquality().equals(other.albumName, albumName) &&
-            const DeepCollectionEquality().equals(other.artistUrl, artistUrl) &&
-            const DeepCollectionEquality()
-                .equals(other.artistName, artistName) &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
-            const DeepCollectionEquality()
-                .equals(other.contentRating, contentRating) &&
-            const DeepCollectionEquality()
-                .equals(other.durationInMillis, durationInMillis) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality()
-                .equals(other.playParams, playParams) &&
+            (identical(other.albumName, albumName) ||
+                other.albumName == albumName) &&
+            (identical(other.artistUrl, artistUrl) ||
+                other.artistUrl == artistUrl) &&
+            (identical(other.artistName, artistName) ||
+                other.artistName == artistName) &&
+            (identical(other.artwork, artwork) || other.artwork == artwork) &&
+            (identical(other.contentRating, contentRating) ||
+                other.contentRating == contentRating) &&
+            (identical(other.durationInMillis, durationInMillis) ||
+                other.durationInMillis == durationInMillis) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.playParams, playParams) ||
+                other.playParams == playParams) &&
             const DeepCollectionEquality().equals(other._previews, _previews) &&
-            const DeepCollectionEquality()
-                .equals(other.trackNumber, trackNumber) &&
-            const DeepCollectionEquality().equals(other.url, url));
+            (identical(other.trackNumber, trackNumber) ||
+                other.trackNumber == trackNumber) &&
+            (identical(other.url, url) || other.url == url));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(albumName),
-      const DeepCollectionEquality().hash(artistUrl),
-      const DeepCollectionEquality().hash(artistName),
-      const DeepCollectionEquality().hash(artwork),
-      const DeepCollectionEquality().hash(contentRating),
-      const DeepCollectionEquality().hash(durationInMillis),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(playParams),
+      albumName,
+      artistUrl,
+      artistName,
+      artwork,
+      contentRating,
+      durationInMillis,
+      name,
+      playParams,
       const DeepCollectionEquality().hash(_previews),
-      const DeepCollectionEquality().hash(trackNumber),
-      const DeepCollectionEquality().hash(url));
+      trackNumber,
+      url);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SongAttributesCopyWith<_$_SongAttributes> get copyWith =>
       __$$_SongAttributesCopyWithImpl<_$_SongAttributes>(this, _$identity);
 
@@ -2059,7 +2081,8 @@ mixin _$StationAttributes {
 abstract class $StationAttributesCopyWith<$Res> {
   factory $StationAttributesCopyWith(
           StationAttributes value, $Res Function(StationAttributes) then) =
-      _$StationAttributesCopyWithImpl<$Res>;
+      _$StationAttributesCopyWithImpl<$Res, StationAttributes>;
+  @useResult
   $Res call(
       {Artwork? artwork,
       PlayParams? playParams,
@@ -2074,81 +2097,86 @@ abstract class $StationAttributesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$StationAttributesCopyWithImpl<$Res>
+class _$StationAttributesCopyWithImpl<$Res, $Val extends StationAttributes>
     implements $StationAttributesCopyWith<$Res> {
   _$StationAttributesCopyWithImpl(this._value, this._then);
 
-  final StationAttributes _value;
   // ignore: unused_field
-  final $Res Function(StationAttributes) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artwork = freezed,
     Object? playParams = freezed,
     Object? durationInMillis = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? url = freezed,
     Object? editorialNotes = freezed,
   }) {
     return _then(_value.copyWith(
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as Artwork?,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParams?,
-      durationInMillis: durationInMillis == freezed
+      durationInMillis: freezed == durationInMillis
           ? _value.durationInMillis
           : durationInMillis // ignore: cast_nullable_to_non_nullable
               as int?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      editorialNotes: editorialNotes == freezed
+      editorialNotes: freezed == editorialNotes
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
               as EditorialNotes?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ArtworkCopyWith<$Res>? get artwork {
     if (_value.artwork == null) {
       return null;
     }
 
     return $ArtworkCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
+      return _then(_value.copyWith(artwork: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $PlayParamsCopyWith<$Res>? get playParams {
     if (_value.playParams == null) {
       return null;
     }
 
     return $PlayParamsCopyWith<$Res>(_value.playParams!, (value) {
-      return _then(_value.copyWith(playParams: value));
+      return _then(_value.copyWith(playParams: value) as $Val);
     });
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $EditorialNotesCopyWith<$Res>? get editorialNotes {
     if (_value.editorialNotes == null) {
       return null;
     }
 
     return $EditorialNotesCopyWith<$Res>(_value.editorialNotes!, (value) {
-      return _then(_value.copyWith(editorialNotes: value));
+      return _then(_value.copyWith(editorialNotes: value) as $Val);
     });
   }
 }
@@ -2160,6 +2188,7 @@ abstract class _$$_StationAttributesCopyWith<$Res>
           $Res Function(_$_StationAttributes) then) =
       __$$_StationAttributesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Artwork? artwork,
       PlayParams? playParams,
@@ -2178,46 +2207,44 @@ abstract class _$$_StationAttributesCopyWith<$Res>
 
 /// @nodoc
 class __$$_StationAttributesCopyWithImpl<$Res>
-    extends _$StationAttributesCopyWithImpl<$Res>
+    extends _$StationAttributesCopyWithImpl<$Res, _$_StationAttributes>
     implements _$$_StationAttributesCopyWith<$Res> {
   __$$_StationAttributesCopyWithImpl(
       _$_StationAttributes _value, $Res Function(_$_StationAttributes) _then)
-      : super(_value, (v) => _then(v as _$_StationAttributes));
+      : super(_value, _then);
 
-  @override
-  _$_StationAttributes get _value => super._value as _$_StationAttributes;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artwork = freezed,
     Object? playParams = freezed,
     Object? durationInMillis = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? url = freezed,
     Object? editorialNotes = freezed,
   }) {
     return _then(_$_StationAttributes(
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as Artwork?,
-      playParams: playParams == freezed
+      playParams: freezed == playParams
           ? _value.playParams
           : playParams // ignore: cast_nullable_to_non_nullable
               as PlayParams?,
-      durationInMillis: durationInMillis == freezed
+      durationInMillis: freezed == durationInMillis
           ? _value.durationInMillis
           : durationInMillis // ignore: cast_nullable_to_non_nullable
               as int?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      editorialNotes: editorialNotes == freezed
+      editorialNotes: freezed == editorialNotes
           ? _value.editorialNotes
           : editorialNotes // ignore: cast_nullable_to_non_nullable
               as EditorialNotes?,
@@ -2263,30 +2290,25 @@ class _$_StationAttributes extends _StationAttributes {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_StationAttributes &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
-            const DeepCollectionEquality()
-                .equals(other.playParams, playParams) &&
-            const DeepCollectionEquality()
-                .equals(other.durationInMillis, durationInMillis) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality()
-                .equals(other.editorialNotes, editorialNotes));
+            (identical(other.artwork, artwork) || other.artwork == artwork) &&
+            (identical(other.playParams, playParams) ||
+                other.playParams == playParams) &&
+            (identical(other.durationInMillis, durationInMillis) ||
+                other.durationInMillis == durationInMillis) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.editorialNotes, editorialNotes) ||
+                other.editorialNotes == editorialNotes));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(artwork),
-      const DeepCollectionEquality().hash(playParams),
-      const DeepCollectionEquality().hash(durationInMillis),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(url),
-      const DeepCollectionEquality().hash(editorialNotes));
+  int get hashCode => Object.hash(runtimeType, artwork, playParams,
+      durationInMillis, name, url, editorialNotes);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_StationAttributesCopyWith<_$_StationAttributes> get copyWith =>
       __$$_StationAttributesCopyWithImpl<_$_StationAttributes>(
           this, _$identity);
@@ -2350,51 +2372,55 @@ mixin _$CuratorAttributes {
 abstract class $CuratorAttributesCopyWith<$Res> {
   factory $CuratorAttributesCopyWith(
           CuratorAttributes value, $Res Function(CuratorAttributes) then) =
-      _$CuratorAttributesCopyWithImpl<$Res>;
+      _$CuratorAttributesCopyWithImpl<$Res, CuratorAttributes>;
+  @useResult
   $Res call({Artwork? artwork, String name, String? url});
 
   $ArtworkCopyWith<$Res>? get artwork;
 }
 
 /// @nodoc
-class _$CuratorAttributesCopyWithImpl<$Res>
+class _$CuratorAttributesCopyWithImpl<$Res, $Val extends CuratorAttributes>
     implements $CuratorAttributesCopyWith<$Res> {
   _$CuratorAttributesCopyWithImpl(this._value, this._then);
 
-  final CuratorAttributes _value;
   // ignore: unused_field
-  final $Res Function(CuratorAttributes) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artwork = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? url = freezed,
   }) {
     return _then(_value.copyWith(
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as Artwork?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ArtworkCopyWith<$Res>? get artwork {
     if (_value.artwork == null) {
       return null;
     }
 
     return $ArtworkCopyWith<$Res>(_value.artwork!, (value) {
-      return _then(_value.copyWith(artwork: value));
+      return _then(_value.copyWith(artwork: value) as $Val);
     });
   }
 }
@@ -2406,6 +2432,7 @@ abstract class _$$_CuratorAttributesCopyWith<$Res>
           $Res Function(_$_CuratorAttributes) then) =
       __$$_CuratorAttributesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({Artwork? artwork, String name, String? url});
 
   @override
@@ -2414,31 +2441,29 @@ abstract class _$$_CuratorAttributesCopyWith<$Res>
 
 /// @nodoc
 class __$$_CuratorAttributesCopyWithImpl<$Res>
-    extends _$CuratorAttributesCopyWithImpl<$Res>
+    extends _$CuratorAttributesCopyWithImpl<$Res, _$_CuratorAttributes>
     implements _$$_CuratorAttributesCopyWith<$Res> {
   __$$_CuratorAttributesCopyWithImpl(
       _$_CuratorAttributes _value, $Res Function(_$_CuratorAttributes) _then)
-      : super(_value, (v) => _then(v as _$_CuratorAttributes));
+      : super(_value, _then);
 
-  @override
-  _$_CuratorAttributes get _value => super._value as _$_CuratorAttributes;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? artwork = freezed,
-    Object? name = freezed,
+    Object? name = null,
     Object? url = freezed,
   }) {
     return _then(_$_CuratorAttributes(
-      artwork: artwork == freezed
+      artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
               as Artwork?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      url: url == freezed
+      url: freezed == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -2473,21 +2498,18 @@ class _$_CuratorAttributes extends _CuratorAttributes {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_CuratorAttributes &&
-            const DeepCollectionEquality().equals(other.artwork, artwork) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.url, url));
+            (identical(other.artwork, artwork) || other.artwork == artwork) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.url, url) || other.url == url));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(artwork),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(url));
+  int get hashCode => Object.hash(runtimeType, artwork, name, url);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CuratorAttributesCopyWith<_$_CuratorAttributes> get copyWith =>
       __$$_CuratorAttributesCopyWithImpl<_$_CuratorAttributes>(
           this, _$identity);
@@ -2540,29 +2562,32 @@ mixin _$GenreAttributes {
 abstract class $GenreAttributesCopyWith<$Res> {
   factory $GenreAttributesCopyWith(
           GenreAttributes value, $Res Function(GenreAttributes) then) =
-      _$GenreAttributesCopyWithImpl<$Res>;
+      _$GenreAttributesCopyWithImpl<$Res, GenreAttributes>;
+  @useResult
   $Res call({String name});
 }
 
 /// @nodoc
-class _$GenreAttributesCopyWithImpl<$Res>
+class _$GenreAttributesCopyWithImpl<$Res, $Val extends GenreAttributes>
     implements $GenreAttributesCopyWith<$Res> {
   _$GenreAttributesCopyWithImpl(this._value, this._then);
 
-  final GenreAttributes _value;
   // ignore: unused_field
-  final $Res Function(GenreAttributes) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
+    Object? name = null,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -2573,26 +2598,25 @@ abstract class _$$_GenreAttributesCopyWith<$Res>
           _$_GenreAttributes value, $Res Function(_$_GenreAttributes) then) =
       __$$_GenreAttributesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String name});
 }
 
 /// @nodoc
 class __$$_GenreAttributesCopyWithImpl<$Res>
-    extends _$GenreAttributesCopyWithImpl<$Res>
+    extends _$GenreAttributesCopyWithImpl<$Res, _$_GenreAttributes>
     implements _$$_GenreAttributesCopyWith<$Res> {
   __$$_GenreAttributesCopyWithImpl(
       _$_GenreAttributes _value, $Res Function(_$_GenreAttributes) _then)
-      : super(_value, (v) => _then(v as _$_GenreAttributes));
+      : super(_value, _then);
 
-  @override
-  _$_GenreAttributes get _value => super._value as _$_GenreAttributes;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
+    Object? name = null,
   }) {
     return _then(_$_GenreAttributes(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
@@ -2621,16 +2645,16 @@ class _$_GenreAttributes extends _GenreAttributes {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_GenreAttributes &&
-            const DeepCollectionEquality().equals(other.name, name));
+            (identical(other.name, name) || other.name == name));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(name));
+  int get hashCode => Object.hash(runtimeType, name);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_GenreAttributesCopyWith<_$_GenreAttributes> get copyWith =>
       __$$_GenreAttributesCopyWithImpl<_$_GenreAttributes>(this, _$identity);
 

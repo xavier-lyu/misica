@@ -33,42 +33,46 @@ mixin _$ChartsResultsDTO {
 abstract class $ChartsResultsDTOCopyWith<$Res> {
   factory $ChartsResultsDTOCopyWith(
           ChartsResultsDTO value, $Res Function(ChartsResultsDTO) then) =
-      _$ChartsResultsDTOCopyWithImpl<$Res>;
+      _$ChartsResultsDTOCopyWithImpl<$Res, ChartsResultsDTO>;
+  @useResult
   $Res call({ChartsDTO results, Map<String, dynamic>? meta});
 
   $ChartsDTOCopyWith<$Res> get results;
 }
 
 /// @nodoc
-class _$ChartsResultsDTOCopyWithImpl<$Res>
+class _$ChartsResultsDTOCopyWithImpl<$Res, $Val extends ChartsResultsDTO>
     implements $ChartsResultsDTOCopyWith<$Res> {
   _$ChartsResultsDTOCopyWithImpl(this._value, this._then);
 
-  final ChartsResultsDTO _value;
   // ignore: unused_field
-  final $Res Function(ChartsResultsDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? results = freezed,
+    Object? results = null,
     Object? meta = freezed,
   }) {
     return _then(_value.copyWith(
-      results: results == freezed
+      results: null == results
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
               as ChartsDTO,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ChartsDTOCopyWith<$Res> get results {
     return $ChartsDTOCopyWith<$Res>(_value.results, (value) {
-      return _then(_value.copyWith(results: value));
+      return _then(_value.copyWith(results: value) as $Val);
     });
   }
 }
@@ -80,6 +84,7 @@ abstract class _$$_ChartsResultsDTOCopyWith<$Res>
           _$_ChartsResultsDTO value, $Res Function(_$_ChartsResultsDTO) then) =
       __$$_ChartsResultsDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({ChartsDTO results, Map<String, dynamic>? meta});
 
   @override
@@ -88,26 +93,24 @@ abstract class _$$_ChartsResultsDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_ChartsResultsDTOCopyWithImpl<$Res>
-    extends _$ChartsResultsDTOCopyWithImpl<$Res>
+    extends _$ChartsResultsDTOCopyWithImpl<$Res, _$_ChartsResultsDTO>
     implements _$$_ChartsResultsDTOCopyWith<$Res> {
   __$$_ChartsResultsDTOCopyWithImpl(
       _$_ChartsResultsDTO _value, $Res Function(_$_ChartsResultsDTO) _then)
-      : super(_value, (v) => _then(v as _$_ChartsResultsDTO));
+      : super(_value, _then);
 
-  @override
-  _$_ChartsResultsDTO get _value => super._value as _$_ChartsResultsDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? results = freezed,
+    Object? results = null,
     Object? meta = freezed,
   }) {
     return _then(_$_ChartsResultsDTO(
-      results: results == freezed
+      results: null == results
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
               as ChartsDTO,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value._meta
           : meta // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
@@ -147,19 +150,18 @@ class _$_ChartsResultsDTO extends _ChartsResultsDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ChartsResultsDTO &&
-            const DeepCollectionEquality().equals(other.results, results) &&
+            (identical(other.results, results) || other.results == results) &&
             const DeepCollectionEquality().equals(other._meta, _meta));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(results),
-      const DeepCollectionEquality().hash(_meta));
+      runtimeType, results, const DeepCollectionEquality().hash(_meta));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ChartsResultsDTOCopyWith<_$_ChartsResultsDTO> get copyWith =>
       __$$_ChartsResultsDTOCopyWithImpl<_$_ChartsResultsDTO>(this, _$identity);
 
@@ -215,7 +217,8 @@ mixin _$ChartsDTO {
 /// @nodoc
 abstract class $ChartsDTOCopyWith<$Res> {
   factory $ChartsDTOCopyWith(ChartsDTO value, $Res Function(ChartsDTO) then) =
-      _$ChartsDTOCopyWithImpl<$Res>;
+      _$ChartsDTOCopyWithImpl<$Res, ChartsDTO>;
+  @useResult
   $Res call(
       {List<SongsChartDTO>? songs,
       List<PlaylistsChartDTO>? cityCharts,
@@ -226,13 +229,16 @@ abstract class $ChartsDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ChartsDTOCopyWithImpl<$Res> implements $ChartsDTOCopyWith<$Res> {
+class _$ChartsDTOCopyWithImpl<$Res, $Val extends ChartsDTO>
+    implements $ChartsDTOCopyWith<$Res> {
   _$ChartsDTOCopyWithImpl(this._value, this._then);
 
-  final ChartsDTO _value;
   // ignore: unused_field
-  final $Res Function(ChartsDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? songs = freezed,
@@ -243,31 +249,31 @@ class _$ChartsDTOCopyWithImpl<$Res> implements $ChartsDTOCopyWith<$Res> {
     Object? musicVideos = freezed,
   }) {
     return _then(_value.copyWith(
-      songs: songs == freezed
+      songs: freezed == songs
           ? _value.songs
           : songs // ignore: cast_nullable_to_non_nullable
               as List<SongsChartDTO>?,
-      cityCharts: cityCharts == freezed
+      cityCharts: freezed == cityCharts
           ? _value.cityCharts
           : cityCharts // ignore: cast_nullable_to_non_nullable
               as List<PlaylistsChartDTO>?,
-      dailyGlobalTopCharts: dailyGlobalTopCharts == freezed
+      dailyGlobalTopCharts: freezed == dailyGlobalTopCharts
           ? _value.dailyGlobalTopCharts
           : dailyGlobalTopCharts // ignore: cast_nullable_to_non_nullable
               as List<PlaylistsChartDTO>?,
-      playlists: playlists == freezed
+      playlists: freezed == playlists
           ? _value.playlists
           : playlists // ignore: cast_nullable_to_non_nullable
               as List<PlaylistsChartDTO>?,
-      albums: albums == freezed
+      albums: freezed == albums
           ? _value.albums
           : albums // ignore: cast_nullable_to_non_nullable
               as List<AlbumsChartDTO>?,
-      musicVideos: musicVideos == freezed
+      musicVideos: freezed == musicVideos
           ? _value.musicVideos
           : musicVideos // ignore: cast_nullable_to_non_nullable
               as List<MusicVideosChartDTO>?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -277,6 +283,7 @@ abstract class _$$_ChartsDTOCopyWith<$Res> implements $ChartsDTOCopyWith<$Res> {
           _$_ChartsDTO value, $Res Function(_$_ChartsDTO) then) =
       __$$_ChartsDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {List<SongsChartDTO>? songs,
       List<PlaylistsChartDTO>? cityCharts,
@@ -287,15 +294,14 @@ abstract class _$$_ChartsDTOCopyWith<$Res> implements $ChartsDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ChartsDTOCopyWithImpl<$Res> extends _$ChartsDTOCopyWithImpl<$Res>
+class __$$_ChartsDTOCopyWithImpl<$Res>
+    extends _$ChartsDTOCopyWithImpl<$Res, _$_ChartsDTO>
     implements _$$_ChartsDTOCopyWith<$Res> {
   __$$_ChartsDTOCopyWithImpl(
       _$_ChartsDTO _value, $Res Function(_$_ChartsDTO) _then)
-      : super(_value, (v) => _then(v as _$_ChartsDTO));
+      : super(_value, _then);
 
-  @override
-  _$_ChartsDTO get _value => super._value as _$_ChartsDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? songs = freezed,
@@ -306,27 +312,27 @@ class __$$_ChartsDTOCopyWithImpl<$Res> extends _$ChartsDTOCopyWithImpl<$Res>
     Object? musicVideos = freezed,
   }) {
     return _then(_$_ChartsDTO(
-      songs: songs == freezed
+      songs: freezed == songs
           ? _value._songs
           : songs // ignore: cast_nullable_to_non_nullable
               as List<SongsChartDTO>?,
-      cityCharts: cityCharts == freezed
+      cityCharts: freezed == cityCharts
           ? _value._cityCharts
           : cityCharts // ignore: cast_nullable_to_non_nullable
               as List<PlaylistsChartDTO>?,
-      dailyGlobalTopCharts: dailyGlobalTopCharts == freezed
+      dailyGlobalTopCharts: freezed == dailyGlobalTopCharts
           ? _value._dailyGlobalTopCharts
           : dailyGlobalTopCharts // ignore: cast_nullable_to_non_nullable
               as List<PlaylistsChartDTO>?,
-      playlists: playlists == freezed
+      playlists: freezed == playlists
           ? _value._playlists
           : playlists // ignore: cast_nullable_to_non_nullable
               as List<PlaylistsChartDTO>?,
-      albums: albums == freezed
+      albums: freezed == albums
           ? _value._albums
           : albums // ignore: cast_nullable_to_non_nullable
               as List<AlbumsChartDTO>?,
-      musicVideos: musicVideos == freezed
+      musicVideos: freezed == musicVideos
           ? _value._musicVideos
           : musicVideos // ignore: cast_nullable_to_non_nullable
               as List<MusicVideosChartDTO>?,
@@ -446,6 +452,7 @@ class _$_ChartsDTO extends _ChartsDTO {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ChartsDTOCopyWith<_$_ChartsDTO> get copyWith =>
       __$$_ChartsDTOCopyWithImpl<_$_ChartsDTO>(this, _$identity);
 
@@ -513,7 +520,8 @@ mixin _$AlbumsChartDTO {
 abstract class $AlbumsChartDTOCopyWith<$Res> {
   factory $AlbumsChartDTOCopyWith(
           AlbumsChartDTO value, $Res Function(AlbumsChartDTO) then) =
-      _$AlbumsChartDTOCopyWithImpl<$Res>;
+      _$AlbumsChartDTOCopyWithImpl<$Res, AlbumsChartDTO>;
+  @useResult
   $Res call(
       {String name,
       String chart,
@@ -524,49 +532,51 @@ abstract class $AlbumsChartDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AlbumsChartDTOCopyWithImpl<$Res>
+class _$AlbumsChartDTOCopyWithImpl<$Res, $Val extends AlbumsChartDTO>
     implements $AlbumsChartDTOCopyWith<$Res> {
   _$AlbumsChartDTOCopyWithImpl(this._value, this._then);
 
-  final AlbumsChartDTO _value;
   // ignore: unused_field
-  final $Res Function(AlbumsChartDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? chart = freezed,
-    Object? orderId = freezed,
-    Object? href = freezed,
+    Object? name = null,
+    Object? chart = null,
+    Object? orderId = null,
+    Object? href = null,
     Object? next = freezed,
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      chart: chart == freezed
+      chart: null == chart
           ? _value.chart
           : chart // ignore: cast_nullable_to_non_nullable
               as String,
-      orderId: orderId == freezed
+      orderId: null == orderId
           ? _value.orderId
           : orderId // ignore: cast_nullable_to_non_nullable
               as String,
-      href: href == freezed
+      href: null == href
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String,
-      next: next == freezed
+      next: freezed == next
           ? _value.next
           : next // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: data == freezed
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<AlbumDTO>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -577,6 +587,7 @@ abstract class _$$_AlbumsChartDTOCopyWith<$Res>
           _$_AlbumsChartDTO value, $Res Function(_$_AlbumsChartDTO) then) =
       __$$_AlbumsChartDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String name,
       String chart,
@@ -588,46 +599,44 @@ abstract class _$$_AlbumsChartDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_AlbumsChartDTOCopyWithImpl<$Res>
-    extends _$AlbumsChartDTOCopyWithImpl<$Res>
+    extends _$AlbumsChartDTOCopyWithImpl<$Res, _$_AlbumsChartDTO>
     implements _$$_AlbumsChartDTOCopyWith<$Res> {
   __$$_AlbumsChartDTOCopyWithImpl(
       _$_AlbumsChartDTO _value, $Res Function(_$_AlbumsChartDTO) _then)
-      : super(_value, (v) => _then(v as _$_AlbumsChartDTO));
+      : super(_value, _then);
 
-  @override
-  _$_AlbumsChartDTO get _value => super._value as _$_AlbumsChartDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? chart = freezed,
-    Object? orderId = freezed,
-    Object? href = freezed,
+    Object? name = null,
+    Object? chart = null,
+    Object? orderId = null,
+    Object? href = null,
     Object? next = freezed,
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_$_AlbumsChartDTO(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      chart: chart == freezed
+      chart: null == chart
           ? _value.chart
           : chart // ignore: cast_nullable_to_non_nullable
               as String,
-      orderId: orderId == freezed
+      orderId: null == orderId
           ? _value.orderId
           : orderId // ignore: cast_nullable_to_non_nullable
               as String,
-      href: href == freezed
+      href: null == href
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String,
-      next: next == freezed
+      next: freezed == next
           ? _value.next
           : next // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: data == freezed
+      data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as List<AlbumDTO>,
@@ -678,27 +687,22 @@ class _$_AlbumsChartDTO extends _AlbumsChartDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AlbumsChartDTO &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.chart, chart) &&
-            const DeepCollectionEquality().equals(other.orderId, orderId) &&
-            const DeepCollectionEquality().equals(other.href, href) &&
-            const DeepCollectionEquality().equals(other.next, next) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.chart, chart) || other.chart == chart) &&
+            (identical(other.orderId, orderId) || other.orderId == orderId) &&
+            (identical(other.href, href) || other.href == href) &&
+            (identical(other.next, next) || other.next == next) &&
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(chart),
-      const DeepCollectionEquality().hash(orderId),
-      const DeepCollectionEquality().hash(href),
-      const DeepCollectionEquality().hash(next),
+  int get hashCode => Object.hash(runtimeType, name, chart, orderId, href, next,
       const DeepCollectionEquality().hash(_data));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_AlbumsChartDTOCopyWith<_$_AlbumsChartDTO> get copyWith =>
       __$$_AlbumsChartDTOCopyWithImpl<_$_AlbumsChartDTO>(this, _$identity);
 
@@ -764,7 +768,8 @@ mixin _$PlaylistsChartDTO {
 abstract class $PlaylistsChartDTOCopyWith<$Res> {
   factory $PlaylistsChartDTOCopyWith(
           PlaylistsChartDTO value, $Res Function(PlaylistsChartDTO) then) =
-      _$PlaylistsChartDTOCopyWithImpl<$Res>;
+      _$PlaylistsChartDTOCopyWithImpl<$Res, PlaylistsChartDTO>;
+  @useResult
   $Res call(
       {String name,
       String chart,
@@ -775,49 +780,51 @@ abstract class $PlaylistsChartDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PlaylistsChartDTOCopyWithImpl<$Res>
+class _$PlaylistsChartDTOCopyWithImpl<$Res, $Val extends PlaylistsChartDTO>
     implements $PlaylistsChartDTOCopyWith<$Res> {
   _$PlaylistsChartDTOCopyWithImpl(this._value, this._then);
 
-  final PlaylistsChartDTO _value;
   // ignore: unused_field
-  final $Res Function(PlaylistsChartDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? chart = freezed,
-    Object? orderId = freezed,
-    Object? href = freezed,
+    Object? name = null,
+    Object? chart = null,
+    Object? orderId = null,
+    Object? href = null,
     Object? next = freezed,
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      chart: chart == freezed
+      chart: null == chart
           ? _value.chart
           : chart // ignore: cast_nullable_to_non_nullable
               as String,
-      orderId: orderId == freezed
+      orderId: null == orderId
           ? _value.orderId
           : orderId // ignore: cast_nullable_to_non_nullable
               as String,
-      href: href == freezed
+      href: null == href
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String,
-      next: next == freezed
+      next: freezed == next
           ? _value.next
           : next // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: data == freezed
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<PlaylistDTO>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -828,6 +835,7 @@ abstract class _$$_PlaylistsChartDTOCopyWith<$Res>
           $Res Function(_$_PlaylistsChartDTO) then) =
       __$$_PlaylistsChartDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String name,
       String chart,
@@ -839,46 +847,44 @@ abstract class _$$_PlaylistsChartDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_PlaylistsChartDTOCopyWithImpl<$Res>
-    extends _$PlaylistsChartDTOCopyWithImpl<$Res>
+    extends _$PlaylistsChartDTOCopyWithImpl<$Res, _$_PlaylistsChartDTO>
     implements _$$_PlaylistsChartDTOCopyWith<$Res> {
   __$$_PlaylistsChartDTOCopyWithImpl(
       _$_PlaylistsChartDTO _value, $Res Function(_$_PlaylistsChartDTO) _then)
-      : super(_value, (v) => _then(v as _$_PlaylistsChartDTO));
+      : super(_value, _then);
 
-  @override
-  _$_PlaylistsChartDTO get _value => super._value as _$_PlaylistsChartDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? chart = freezed,
-    Object? orderId = freezed,
-    Object? href = freezed,
+    Object? name = null,
+    Object? chart = null,
+    Object? orderId = null,
+    Object? href = null,
     Object? next = freezed,
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_$_PlaylistsChartDTO(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      chart: chart == freezed
+      chart: null == chart
           ? _value.chart
           : chart // ignore: cast_nullable_to_non_nullable
               as String,
-      orderId: orderId == freezed
+      orderId: null == orderId
           ? _value.orderId
           : orderId // ignore: cast_nullable_to_non_nullable
               as String,
-      href: href == freezed
+      href: null == href
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String,
-      next: next == freezed
+      next: freezed == next
           ? _value.next
           : next // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: data == freezed
+      data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as List<PlaylistDTO>,
@@ -929,27 +935,22 @@ class _$_PlaylistsChartDTO extends _PlaylistsChartDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PlaylistsChartDTO &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.chart, chart) &&
-            const DeepCollectionEquality().equals(other.orderId, orderId) &&
-            const DeepCollectionEquality().equals(other.href, href) &&
-            const DeepCollectionEquality().equals(other.next, next) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.chart, chart) || other.chart == chart) &&
+            (identical(other.orderId, orderId) || other.orderId == orderId) &&
+            (identical(other.href, href) || other.href == href) &&
+            (identical(other.next, next) || other.next == next) &&
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(chart),
-      const DeepCollectionEquality().hash(orderId),
-      const DeepCollectionEquality().hash(href),
-      const DeepCollectionEquality().hash(next),
+  int get hashCode => Object.hash(runtimeType, name, chart, orderId, href, next,
       const DeepCollectionEquality().hash(_data));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PlaylistsChartDTOCopyWith<_$_PlaylistsChartDTO> get copyWith =>
       __$$_PlaylistsChartDTOCopyWithImpl<_$_PlaylistsChartDTO>(
           this, _$identity);
@@ -1016,7 +1017,8 @@ mixin _$SongsChartDTO {
 abstract class $SongsChartDTOCopyWith<$Res> {
   factory $SongsChartDTOCopyWith(
           SongsChartDTO value, $Res Function(SongsChartDTO) then) =
-      _$SongsChartDTOCopyWithImpl<$Res>;
+      _$SongsChartDTOCopyWithImpl<$Res, SongsChartDTO>;
+  @useResult
   $Res call(
       {String name,
       String chart,
@@ -1027,49 +1029,51 @@ abstract class $SongsChartDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SongsChartDTOCopyWithImpl<$Res>
+class _$SongsChartDTOCopyWithImpl<$Res, $Val extends SongsChartDTO>
     implements $SongsChartDTOCopyWith<$Res> {
   _$SongsChartDTOCopyWithImpl(this._value, this._then);
 
-  final SongsChartDTO _value;
   // ignore: unused_field
-  final $Res Function(SongsChartDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? chart = freezed,
-    Object? orderId = freezed,
-    Object? href = freezed,
+    Object? name = null,
+    Object? chart = null,
+    Object? orderId = null,
+    Object? href = null,
     Object? next = freezed,
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      chart: chart == freezed
+      chart: null == chart
           ? _value.chart
           : chart // ignore: cast_nullable_to_non_nullable
               as String,
-      orderId: orderId == freezed
+      orderId: null == orderId
           ? _value.orderId
           : orderId // ignore: cast_nullable_to_non_nullable
               as String,
-      href: href == freezed
+      href: null == href
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String,
-      next: next == freezed
+      next: freezed == next
           ? _value.next
           : next // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: data == freezed
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<SongDTO>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1080,6 +1084,7 @@ abstract class _$$_SongsChartDTOCopyWith<$Res>
           _$_SongsChartDTO value, $Res Function(_$_SongsChartDTO) then) =
       __$$_SongsChartDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String name,
       String chart,
@@ -1091,46 +1096,44 @@ abstract class _$$_SongsChartDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_SongsChartDTOCopyWithImpl<$Res>
-    extends _$SongsChartDTOCopyWithImpl<$Res>
+    extends _$SongsChartDTOCopyWithImpl<$Res, _$_SongsChartDTO>
     implements _$$_SongsChartDTOCopyWith<$Res> {
   __$$_SongsChartDTOCopyWithImpl(
       _$_SongsChartDTO _value, $Res Function(_$_SongsChartDTO) _then)
-      : super(_value, (v) => _then(v as _$_SongsChartDTO));
+      : super(_value, _then);
 
-  @override
-  _$_SongsChartDTO get _value => super._value as _$_SongsChartDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? chart = freezed,
-    Object? orderId = freezed,
-    Object? href = freezed,
+    Object? name = null,
+    Object? chart = null,
+    Object? orderId = null,
+    Object? href = null,
     Object? next = freezed,
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_$_SongsChartDTO(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      chart: chart == freezed
+      chart: null == chart
           ? _value.chart
           : chart // ignore: cast_nullable_to_non_nullable
               as String,
-      orderId: orderId == freezed
+      orderId: null == orderId
           ? _value.orderId
           : orderId // ignore: cast_nullable_to_non_nullable
               as String,
-      href: href == freezed
+      href: null == href
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String,
-      next: next == freezed
+      next: freezed == next
           ? _value.next
           : next // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: data == freezed
+      data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as List<SongDTO>,
@@ -1181,27 +1184,22 @@ class _$_SongsChartDTO extends _SongsChartDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SongsChartDTO &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.chart, chart) &&
-            const DeepCollectionEquality().equals(other.orderId, orderId) &&
-            const DeepCollectionEquality().equals(other.href, href) &&
-            const DeepCollectionEquality().equals(other.next, next) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.chart, chart) || other.chart == chart) &&
+            (identical(other.orderId, orderId) || other.orderId == orderId) &&
+            (identical(other.href, href) || other.href == href) &&
+            (identical(other.next, next) || other.next == next) &&
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(chart),
-      const DeepCollectionEquality().hash(orderId),
-      const DeepCollectionEquality().hash(href),
-      const DeepCollectionEquality().hash(next),
+  int get hashCode => Object.hash(runtimeType, name, chart, orderId, href, next,
       const DeepCollectionEquality().hash(_data));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SongsChartDTOCopyWith<_$_SongsChartDTO> get copyWith =>
       __$$_SongsChartDTOCopyWithImpl<_$_SongsChartDTO>(this, _$identity);
 
@@ -1267,7 +1265,8 @@ mixin _$MusicVideosChartDTO {
 abstract class $MusicVideosChartDTOCopyWith<$Res> {
   factory $MusicVideosChartDTOCopyWith(
           MusicVideosChartDTO value, $Res Function(MusicVideosChartDTO) then) =
-      _$MusicVideosChartDTOCopyWithImpl<$Res>;
+      _$MusicVideosChartDTOCopyWithImpl<$Res, MusicVideosChartDTO>;
+  @useResult
   $Res call(
       {String name,
       String chart,
@@ -1278,49 +1277,51 @@ abstract class $MusicVideosChartDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MusicVideosChartDTOCopyWithImpl<$Res>
+class _$MusicVideosChartDTOCopyWithImpl<$Res, $Val extends MusicVideosChartDTO>
     implements $MusicVideosChartDTOCopyWith<$Res> {
   _$MusicVideosChartDTOCopyWithImpl(this._value, this._then);
 
-  final MusicVideosChartDTO _value;
   // ignore: unused_field
-  final $Res Function(MusicVideosChartDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? chart = freezed,
-    Object? orderId = freezed,
-    Object? href = freezed,
+    Object? name = null,
+    Object? chart = null,
+    Object? orderId = null,
+    Object? href = null,
     Object? next = freezed,
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      chart: chart == freezed
+      chart: null == chart
           ? _value.chart
           : chart // ignore: cast_nullable_to_non_nullable
               as String,
-      orderId: orderId == freezed
+      orderId: null == orderId
           ? _value.orderId
           : orderId // ignore: cast_nullable_to_non_nullable
               as String,
-      href: href == freezed
+      href: null == href
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String,
-      next: next == freezed
+      next: freezed == next
           ? _value.next
           : next // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: data == freezed
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<MusicVideoDTO>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -1331,6 +1332,7 @@ abstract class _$$_MusicVideosChartDTOCopyWith<$Res>
           $Res Function(_$_MusicVideosChartDTO) then) =
       __$$_MusicVideosChartDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String name,
       String chart,
@@ -1342,46 +1344,44 @@ abstract class _$$_MusicVideosChartDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_MusicVideosChartDTOCopyWithImpl<$Res>
-    extends _$MusicVideosChartDTOCopyWithImpl<$Res>
+    extends _$MusicVideosChartDTOCopyWithImpl<$Res, _$_MusicVideosChartDTO>
     implements _$$_MusicVideosChartDTOCopyWith<$Res> {
   __$$_MusicVideosChartDTOCopyWithImpl(_$_MusicVideosChartDTO _value,
       $Res Function(_$_MusicVideosChartDTO) _then)
-      : super(_value, (v) => _then(v as _$_MusicVideosChartDTO));
+      : super(_value, _then);
 
-  @override
-  _$_MusicVideosChartDTO get _value => super._value as _$_MusicVideosChartDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? chart = freezed,
-    Object? orderId = freezed,
-    Object? href = freezed,
+    Object? name = null,
+    Object? chart = null,
+    Object? orderId = null,
+    Object? href = null,
     Object? next = freezed,
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_$_MusicVideosChartDTO(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      chart: chart == freezed
+      chart: null == chart
           ? _value.chart
           : chart // ignore: cast_nullable_to_non_nullable
               as String,
-      orderId: orderId == freezed
+      orderId: null == orderId
           ? _value.orderId
           : orderId // ignore: cast_nullable_to_non_nullable
               as String,
-      href: href == freezed
+      href: null == href
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String,
-      next: next == freezed
+      next: freezed == next
           ? _value.next
           : next // ignore: cast_nullable_to_non_nullable
               as String?,
-      data: data == freezed
+      data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as List<MusicVideoDTO>,
@@ -1432,27 +1432,22 @@ class _$_MusicVideosChartDTO extends _MusicVideosChartDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_MusicVideosChartDTO &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.chart, chart) &&
-            const DeepCollectionEquality().equals(other.orderId, orderId) &&
-            const DeepCollectionEquality().equals(other.href, href) &&
-            const DeepCollectionEquality().equals(other.next, next) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.chart, chart) || other.chart == chart) &&
+            (identical(other.orderId, orderId) || other.orderId == orderId) &&
+            (identical(other.href, href) || other.href == href) &&
+            (identical(other.next, next) || other.next == next) &&
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(chart),
-      const DeepCollectionEquality().hash(orderId),
-      const DeepCollectionEquality().hash(href),
-      const DeepCollectionEquality().hash(next),
+  int get hashCode => Object.hash(runtimeType, name, chart, orderId, href, next,
       const DeepCollectionEquality().hash(_data));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_MusicVideosChartDTOCopyWith<_$_MusicVideosChartDTO> get copyWith =>
       __$$_MusicVideosChartDTOCopyWithImpl<_$_MusicVideosChartDTO>(
           this, _$identity);

@@ -33,33 +33,37 @@ mixin _$Credentials {
 abstract class $CredentialsCopyWith<$Res> {
   factory $CredentialsCopyWith(
           Credentials value, $Res Function(Credentials) then) =
-      _$CredentialsCopyWithImpl<$Res>;
+      _$CredentialsCopyWithImpl<$Res, Credentials>;
+  @useResult
   $Res call({String developerToken, String userToken});
 }
 
 /// @nodoc
-class _$CredentialsCopyWithImpl<$Res> implements $CredentialsCopyWith<$Res> {
+class _$CredentialsCopyWithImpl<$Res, $Val extends Credentials>
+    implements $CredentialsCopyWith<$Res> {
   _$CredentialsCopyWithImpl(this._value, this._then);
 
-  final Credentials _value;
   // ignore: unused_field
-  final $Res Function(Credentials) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? developerToken = freezed,
-    Object? userToken = freezed,
+    Object? developerToken = null,
+    Object? userToken = null,
   }) {
     return _then(_value.copyWith(
-      developerToken: developerToken == freezed
+      developerToken: null == developerToken
           ? _value.developerToken
           : developerToken // ignore: cast_nullable_to_non_nullable
               as String,
-      userToken: userToken == freezed
+      userToken: null == userToken
           ? _value.userToken
           : userToken // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -70,30 +74,30 @@ abstract class _$$_CredentialsCopyWith<$Res>
           _$_Credentials value, $Res Function(_$_Credentials) then) =
       __$$_CredentialsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String developerToken, String userToken});
 }
 
 /// @nodoc
-class __$$_CredentialsCopyWithImpl<$Res> extends _$CredentialsCopyWithImpl<$Res>
+class __$$_CredentialsCopyWithImpl<$Res>
+    extends _$CredentialsCopyWithImpl<$Res, _$_Credentials>
     implements _$$_CredentialsCopyWith<$Res> {
   __$$_CredentialsCopyWithImpl(
       _$_Credentials _value, $Res Function(_$_Credentials) _then)
-      : super(_value, (v) => _then(v as _$_Credentials));
+      : super(_value, _then);
 
-  @override
-  _$_Credentials get _value => super._value as _$_Credentials;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? developerToken = freezed,
-    Object? userToken = freezed,
+    Object? developerToken = null,
+    Object? userToken = null,
   }) {
     return _then(_$_Credentials(
-      developerToken: developerToken == freezed
+      developerToken: null == developerToken
           ? _value.developerToken
           : developerToken // ignore: cast_nullable_to_non_nullable
               as String,
-      userToken: userToken == freezed
+      userToken: null == userToken
           ? _value.userToken
           : userToken // ignore: cast_nullable_to_non_nullable
               as String,
@@ -125,20 +129,19 @@ class _$_Credentials extends _Credentials {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Credentials &&
-            const DeepCollectionEquality()
-                .equals(other.developerToken, developerToken) &&
-            const DeepCollectionEquality().equals(other.userToken, userToken));
+            (identical(other.developerToken, developerToken) ||
+                other.developerToken == developerToken) &&
+            (identical(other.userToken, userToken) ||
+                other.userToken == userToken));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(developerToken),
-      const DeepCollectionEquality().hash(userToken));
+  int get hashCode => Object.hash(runtimeType, developerToken, userToken);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_CredentialsCopyWith<_$_Credentials> get copyWith =>
       __$$_CredentialsCopyWithImpl<_$_Credentials>(this, _$identity);
 

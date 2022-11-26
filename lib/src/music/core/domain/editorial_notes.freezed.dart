@@ -33,34 +33,37 @@ mixin _$EditorialNotes {
 abstract class $EditorialNotesCopyWith<$Res> {
   factory $EditorialNotesCopyWith(
           EditorialNotes value, $Res Function(EditorialNotes) then) =
-      _$EditorialNotesCopyWithImpl<$Res>;
+      _$EditorialNotesCopyWithImpl<$Res, EditorialNotes>;
+  @useResult
   $Res call({String? short, String? standard});
 }
 
 /// @nodoc
-class _$EditorialNotesCopyWithImpl<$Res>
+class _$EditorialNotesCopyWithImpl<$Res, $Val extends EditorialNotes>
     implements $EditorialNotesCopyWith<$Res> {
   _$EditorialNotesCopyWithImpl(this._value, this._then);
 
-  final EditorialNotes _value;
   // ignore: unused_field
-  final $Res Function(EditorialNotes) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? short = freezed,
     Object? standard = freezed,
   }) {
     return _then(_value.copyWith(
-      short: short == freezed
+      short: freezed == short
           ? _value.short
           : short // ignore: cast_nullable_to_non_nullable
               as String?,
-      standard: standard == freezed
+      standard: freezed == standard
           ? _value.standard
           : standard // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -71,31 +74,30 @@ abstract class _$$_EditorialNotesCopyWith<$Res>
           _$_EditorialNotes value, $Res Function(_$_EditorialNotes) then) =
       __$$_EditorialNotesCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String? short, String? standard});
 }
 
 /// @nodoc
 class __$$_EditorialNotesCopyWithImpl<$Res>
-    extends _$EditorialNotesCopyWithImpl<$Res>
+    extends _$EditorialNotesCopyWithImpl<$Res, _$_EditorialNotes>
     implements _$$_EditorialNotesCopyWith<$Res> {
   __$$_EditorialNotesCopyWithImpl(
       _$_EditorialNotes _value, $Res Function(_$_EditorialNotes) _then)
-      : super(_value, (v) => _then(v as _$_EditorialNotes));
+      : super(_value, _then);
 
-  @override
-  _$_EditorialNotes get _value => super._value as _$_EditorialNotes;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? short = freezed,
     Object? standard = freezed,
   }) {
     return _then(_$_EditorialNotes(
-      short: short == freezed
+      short: freezed == short
           ? _value.short
           : short // ignore: cast_nullable_to_non_nullable
               as String?,
-      standard: standard == freezed
+      standard: freezed == standard
           ? _value.standard
           : standard // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -127,19 +129,18 @@ class _$_EditorialNotes extends _EditorialNotes {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_EditorialNotes &&
-            const DeepCollectionEquality().equals(other.short, short) &&
-            const DeepCollectionEquality().equals(other.standard, standard));
+            (identical(other.short, short) || other.short == short) &&
+            (identical(other.standard, standard) ||
+                other.standard == standard));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(short),
-      const DeepCollectionEquality().hash(standard));
+  int get hashCode => Object.hash(runtimeType, short, standard);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_EditorialNotesCopyWith<_$_EditorialNotes> get copyWith =>
       __$$_EditorialNotesCopyWithImpl<_$_EditorialNotes>(this, _$identity);
 

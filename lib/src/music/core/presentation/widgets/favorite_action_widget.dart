@@ -19,7 +19,7 @@ class FavoriteActionWidget extends ConsumerStatefulWidget {
 
 class _FavoriteActionWidgetState extends ConsumerState<FavoriteActionWidget> {
   final fav = StateNotifierProvider<FavoriteNotifier, AsyncValue<bool>>((ref) {
-    return FavoriteNotifier(ref.watch(likedResourcesRepositoryProvider));
+    return FavoriteNotifier(ref.read(likedResourcesRepositoryProvider));
   });
 
   @override

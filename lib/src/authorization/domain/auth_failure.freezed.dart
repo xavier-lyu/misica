@@ -24,8 +24,8 @@ mixin _$AuthFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? storage,
-    TResult Function()? platform,
+    TResult? Function()? storage,
+    TResult? Function()? platform,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -43,8 +43,8 @@ mixin _$AuthFailure {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Storage value)? storage,
-    TResult Function(_Platform value)? platform,
+    TResult? Function(_Storage value)? storage,
+    TResult? Function(_Platform value)? platform,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,16 +60,18 @@ mixin _$AuthFailure {
 abstract class $AuthFailureCopyWith<$Res> {
   factory $AuthFailureCopyWith(
           AuthFailure value, $Res Function(AuthFailure) then) =
-      _$AuthFailureCopyWithImpl<$Res>;
+      _$AuthFailureCopyWithImpl<$Res, AuthFailure>;
 }
 
 /// @nodoc
-class _$AuthFailureCopyWithImpl<$Res> implements $AuthFailureCopyWith<$Res> {
+class _$AuthFailureCopyWithImpl<$Res, $Val extends AuthFailure>
+    implements $AuthFailureCopyWith<$Res> {
   _$AuthFailureCopyWithImpl(this._value, this._then);
 
-  final AuthFailure _value;
   // ignore: unused_field
-  final $Res Function(AuthFailure) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
@@ -80,13 +82,11 @@ abstract class _$$_StorageCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_StorageCopyWithImpl<$Res> extends _$AuthFailureCopyWithImpl<$Res>
+class __$$_StorageCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$_Storage>
     implements _$$_StorageCopyWith<$Res> {
   __$$_StorageCopyWithImpl(_$_Storage _value, $Res Function(_$_Storage) _then)
-      : super(_value, (v) => _then(v as _$_Storage));
-
-  @override
-  _$_Storage get _value => super._value as _$_Storage;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -120,8 +120,8 @@ class _$_Storage extends _Storage {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? storage,
-    TResult Function()? platform,
+    TResult? Function()? storage,
+    TResult? Function()? platform,
   }) {
     return storage?.call();
   }
@@ -151,8 +151,8 @@ class _$_Storage extends _Storage {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Storage value)? storage,
-    TResult Function(_Platform value)? platform,
+    TResult? Function(_Storage value)? storage,
+    TResult? Function(_Platform value)? platform,
   }) {
     return storage?.call(this);
   }
@@ -184,14 +184,12 @@ abstract class _$$_PlatformCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_PlatformCopyWithImpl<$Res> extends _$AuthFailureCopyWithImpl<$Res>
+class __$$_PlatformCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$_Platform>
     implements _$$_PlatformCopyWith<$Res> {
   __$$_PlatformCopyWithImpl(
       _$_Platform _value, $Res Function(_$_Platform) _then)
-      : super(_value, (v) => _then(v as _$_Platform));
-
-  @override
-  _$_Platform get _value => super._value as _$_Platform;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -225,8 +223,8 @@ class _$_Platform extends _Platform {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? storage,
-    TResult Function()? platform,
+    TResult? Function()? storage,
+    TResult? Function()? platform,
   }) {
     return platform?.call();
   }
@@ -256,8 +254,8 @@ class _$_Platform extends _Platform {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Storage value)? storage,
-    TResult Function(_Platform value)? platform,
+    TResult? Function(_Storage value)? storage,
+    TResult? Function(_Platform value)? platform,
   }) {
     return platform?.call(this);
   }

@@ -33,33 +33,37 @@ mixin _$PlayParams {
 abstract class $PlayParamsCopyWith<$Res> {
   factory $PlayParamsCopyWith(
           PlayParams value, $Res Function(PlayParams) then) =
-      _$PlayParamsCopyWithImpl<$Res>;
+      _$PlayParamsCopyWithImpl<$Res, PlayParams>;
+  @useResult
   $Res call({String id, String kind});
 }
 
 /// @nodoc
-class _$PlayParamsCopyWithImpl<$Res> implements $PlayParamsCopyWith<$Res> {
+class _$PlayParamsCopyWithImpl<$Res, $Val extends PlayParams>
+    implements $PlayParamsCopyWith<$Res> {
   _$PlayParamsCopyWithImpl(this._value, this._then);
 
-  final PlayParams _value;
   // ignore: unused_field
-  final $Res Function(PlayParams) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? kind = freezed,
+    Object? id = null,
+    Object? kind = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      kind: kind == freezed
+      kind: null == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -70,30 +74,30 @@ abstract class _$$_PlayParamsCopyWith<$Res>
           _$_PlayParams value, $Res Function(_$_PlayParams) then) =
       __$$_PlayParamsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String id, String kind});
 }
 
 /// @nodoc
-class __$$_PlayParamsCopyWithImpl<$Res> extends _$PlayParamsCopyWithImpl<$Res>
+class __$$_PlayParamsCopyWithImpl<$Res>
+    extends _$PlayParamsCopyWithImpl<$Res, _$_PlayParams>
     implements _$$_PlayParamsCopyWith<$Res> {
   __$$_PlayParamsCopyWithImpl(
       _$_PlayParams _value, $Res Function(_$_PlayParams) _then)
-      : super(_value, (v) => _then(v as _$_PlayParams));
+      : super(_value, _then);
 
-  @override
-  _$_PlayParams get _value => super._value as _$_PlayParams;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
-    Object? kind = freezed,
+    Object? id = null,
+    Object? kind = null,
   }) {
     return _then(_$_PlayParams(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      kind: kind == freezed
+      kind: null == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
               as String,
@@ -124,19 +128,17 @@ class _$_PlayParams extends _PlayParams {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PlayParams &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.kind, kind));
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.kind, kind) || other.kind == kind));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(kind));
+  int get hashCode => Object.hash(runtimeType, id, kind);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_PlayParamsCopyWith<_$_PlayParams> get copyWith =>
       __$$_PlayParamsCopyWithImpl<_$_PlayParams>(this, _$identity);
 

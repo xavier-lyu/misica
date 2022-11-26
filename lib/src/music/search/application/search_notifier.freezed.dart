@@ -26,10 +26,10 @@ mixin _$SearchResultsState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(SearchResults value)? data,
-    TResult Function(Object error)? error,
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(SearchResults value)? data,
+    TResult? Function(Object error)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -51,10 +51,10 @@ mixin _$SearchResultsState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Data value)? data,
-    TResult Function(_Error value)? error,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Data value)? data,
+    TResult? Function(_Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -72,17 +72,18 @@ mixin _$SearchResultsState {
 abstract class $SearchResultsStateCopyWith<$Res> {
   factory $SearchResultsStateCopyWith(
           SearchResultsState value, $Res Function(SearchResultsState) then) =
-      _$SearchResultsStateCopyWithImpl<$Res>;
+      _$SearchResultsStateCopyWithImpl<$Res, SearchResultsState>;
 }
 
 /// @nodoc
-class _$SearchResultsStateCopyWithImpl<$Res>
+class _$SearchResultsStateCopyWithImpl<$Res, $Val extends SearchResultsState>
     implements $SearchResultsStateCopyWith<$Res> {
   _$SearchResultsStateCopyWithImpl(this._value, this._then);
 
-  final SearchResultsState _value;
   // ignore: unused_field
-  final $Res Function(SearchResultsState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
@@ -94,13 +95,10 @@ abstract class _$$_InitialCopyWith<$Res> {
 
 /// @nodoc
 class __$$_InitialCopyWithImpl<$Res>
-    extends _$SearchResultsStateCopyWithImpl<$Res>
+    extends _$SearchResultsStateCopyWithImpl<$Res, _$_Initial>
     implements _$$_InitialCopyWith<$Res> {
   __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
-      : super(_value, (v) => _then(v as _$_Initial));
-
-  @override
-  _$_Initial get _value => super._value as _$_Initial;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -136,10 +134,10 @@ class _$_Initial extends _Initial {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(SearchResults value)? data,
-    TResult Function(Object error)? error,
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(SearchResults value)? data,
+    TResult? Function(Object error)? error,
   }) {
     return initial?.call();
   }
@@ -173,10 +171,10 @@ class _$_Initial extends _Initial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Data value)? data,
-    TResult Function(_Error value)? error,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Data value)? data,
+    TResult? Function(_Error value)? error,
   }) {
     return initial?.call(this);
   }
@@ -211,13 +209,10 @@ abstract class _$$_LoadingCopyWith<$Res> {
 
 /// @nodoc
 class __$$_LoadingCopyWithImpl<$Res>
-    extends _$SearchResultsStateCopyWithImpl<$Res>
+    extends _$SearchResultsStateCopyWithImpl<$Res, _$_Loading>
     implements _$$_LoadingCopyWith<$Res> {
   __$$_LoadingCopyWithImpl(_$_Loading _value, $Res Function(_$_Loading) _then)
-      : super(_value, (v) => _then(v as _$_Loading));
-
-  @override
-  _$_Loading get _value => super._value as _$_Loading;
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -253,10 +248,10 @@ class _$_Loading extends _Loading {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(SearchResults value)? data,
-    TResult Function(Object error)? error,
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(SearchResults value)? data,
+    TResult? Function(Object error)? error,
   }) {
     return loading?.call();
   }
@@ -290,10 +285,10 @@ class _$_Loading extends _Loading {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Data value)? data,
-    TResult Function(_Error value)? error,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Data value)? data,
+    TResult? Function(_Error value)? error,
   }) {
     return loading?.call(this);
   }
@@ -323,26 +318,26 @@ abstract class _Loading extends SearchResultsState {
 abstract class _$$_DataCopyWith<$Res> {
   factory _$$_DataCopyWith(_$_Data value, $Res Function(_$_Data) then) =
       __$$_DataCopyWithImpl<$Res>;
+  @useResult
   $Res call({SearchResults value});
 
   $SearchResultsCopyWith<$Res> get value;
 }
 
 /// @nodoc
-class __$$_DataCopyWithImpl<$Res> extends _$SearchResultsStateCopyWithImpl<$Res>
+class __$$_DataCopyWithImpl<$Res>
+    extends _$SearchResultsStateCopyWithImpl<$Res, _$_Data>
     implements _$$_DataCopyWith<$Res> {
   __$$_DataCopyWithImpl(_$_Data _value, $Res Function(_$_Data) _then)
-      : super(_value, (v) => _then(v as _$_Data));
+      : super(_value, _then);
 
-  @override
-  _$_Data get _value => super._value as _$_Data;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
+    Object? value = null,
   }) {
     return _then(_$_Data(
-      value == freezed
+      null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as SearchResults,
@@ -350,6 +345,7 @@ class __$$_DataCopyWithImpl<$Res> extends _$SearchResultsStateCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $SearchResultsCopyWith<$Res> get value {
     return $SearchResultsCopyWith<$Res>(_value.value, (value) {
       return _then(_value.copyWith(value: value));
@@ -375,15 +371,15 @@ class _$_Data extends _Data {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Data &&
-            const DeepCollectionEquality().equals(other.value, value));
+            (identical(other.value, value) || other.value == value));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
+  int get hashCode => Object.hash(runtimeType, value);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_DataCopyWith<_$_Data> get copyWith =>
       __$$_DataCopyWithImpl<_$_Data>(this, _$identity);
 
@@ -401,10 +397,10 @@ class _$_Data extends _Data {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(SearchResults value)? data,
-    TResult Function(Object error)? error,
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(SearchResults value)? data,
+    TResult? Function(Object error)? error,
   }) {
     return data?.call(value);
   }
@@ -438,10 +434,10 @@ class _$_Data extends _Data {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Data value)? data,
-    TResult Function(_Error value)? error,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Data value)? data,
+    TResult? Function(_Error value)? error,
   }) {
     return data?.call(this);
   }
@@ -475,28 +471,24 @@ abstract class _Data extends SearchResultsState {
 abstract class _$$_ErrorCopyWith<$Res> {
   factory _$$_ErrorCopyWith(_$_Error value, $Res Function(_$_Error) then) =
       __$$_ErrorCopyWithImpl<$Res>;
+  @useResult
   $Res call({Object error});
 }
 
 /// @nodoc
 class __$$_ErrorCopyWithImpl<$Res>
-    extends _$SearchResultsStateCopyWithImpl<$Res>
+    extends _$SearchResultsStateCopyWithImpl<$Res, _$_Error>
     implements _$$_ErrorCopyWith<$Res> {
   __$$_ErrorCopyWithImpl(_$_Error _value, $Res Function(_$_Error) _then)
-      : super(_value, (v) => _then(v as _$_Error));
+      : super(_value, _then);
 
-  @override
-  _$_Error get _value => super._value as _$_Error;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? error = null,
   }) {
     return _then(_$_Error(
-      error == freezed
-          ? _value.error
-          : error // ignore: cast_nullable_to_non_nullable
-              as Object,
+      null == error ? _value.error : error,
     ));
   }
 }
@@ -528,6 +520,7 @@ class _$_Error extends _Error {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ErrorCopyWith<_$_Error> get copyWith =>
       __$$_ErrorCopyWithImpl<_$_Error>(this, _$identity);
 
@@ -545,10 +538,10 @@ class _$_Error extends _Error {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(SearchResults value)? data,
-    TResult Function(Object error)? error,
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(SearchResults value)? data,
+    TResult? Function(Object error)? error,
   }) {
     return error?.call(this.error);
   }
@@ -582,10 +575,10 @@ class _$_Error extends _Error {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Data value)? data,
-    TResult Function(_Error value)? error,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Data value)? data,
+    TResult? Function(_Error value)? error,
   }) {
     return error?.call(this);
   }

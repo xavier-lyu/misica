@@ -5,14 +5,19 @@ import 'package:misica/src/music/search/application/suggestions_notifier.dart';
 import 'package:misica/src/music/search/domain/search_suggestions.dart';
 import 'package:misica/src/music/search/infrastructure/search_repository.dart';
 import 'package:misica/src/music/search/infrastructure/search_service.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-final searchServiceProvider = Provider(
-  (ref) => SearchService(ref.watch(musicDioProvider)),
-);
+part 'providers.g.dart';
 
-final searchRepositoryProvider = Provider(
-  (ref) => SearchRepository(ref.watch(searchServiceProvider)),
-);
+@riverpod
+SearchService searchService(SearchServiceRef ref) {
+  return SearchService(ref.watch(musicDioProvider));
+}
+
+@riverpod
+SearchRepository searchRepository(SearchRepositoryRef ref) {
+  return SearchRepository(ref.watch(searchServiceProvider));
+}
 
 final searchNotifierProvider =
     StateNotifierProvider.autoDispose<SearchNotifier, SearchResultsState>(

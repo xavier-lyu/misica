@@ -27,9 +27,9 @@ mixin _$SearchSuggestion {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String kind, String searchTerm, String? displayTerm)?
+    TResult? Function(String kind, String searchTerm, String? displayTerm)?
         terms,
-    TResult Function(String kind, Resource content)? topResults,
+    TResult? Function(String kind, Resource content)? topResults,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -48,8 +48,8 @@ mixin _$SearchSuggestion {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(SearchSuggestionTerms value)? terms,
-    TResult Function(SearchSuggestionTopResults value)? topResults,
+    TResult? Function(SearchSuggestionTerms value)? terms,
+    TResult? Function(SearchSuggestionTopResults value)? topResults,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -69,29 +69,32 @@ mixin _$SearchSuggestion {
 abstract class $SearchSuggestionCopyWith<$Res> {
   factory $SearchSuggestionCopyWith(
           SearchSuggestion value, $Res Function(SearchSuggestion) then) =
-      _$SearchSuggestionCopyWithImpl<$Res>;
+      _$SearchSuggestionCopyWithImpl<$Res, SearchSuggestion>;
+  @useResult
   $Res call({String kind});
 }
 
 /// @nodoc
-class _$SearchSuggestionCopyWithImpl<$Res>
+class _$SearchSuggestionCopyWithImpl<$Res, $Val extends SearchSuggestion>
     implements $SearchSuggestionCopyWith<$Res> {
   _$SearchSuggestionCopyWithImpl(this._value, this._then);
 
-  final SearchSuggestion _value;
   // ignore: unused_field
-  final $Res Function(SearchSuggestion) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? kind = freezed,
+    Object? kind = null,
   }) {
     return _then(_value.copyWith(
-      kind: kind == freezed
+      kind: null == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
@@ -102,36 +105,35 @@ abstract class _$$SearchSuggestionTermsCopyWith<$Res>
           $Res Function(_$SearchSuggestionTerms) then) =
       __$$SearchSuggestionTermsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String kind, String searchTerm, String? displayTerm});
 }
 
 /// @nodoc
 class __$$SearchSuggestionTermsCopyWithImpl<$Res>
-    extends _$SearchSuggestionCopyWithImpl<$Res>
+    extends _$SearchSuggestionCopyWithImpl<$Res, _$SearchSuggestionTerms>
     implements _$$SearchSuggestionTermsCopyWith<$Res> {
   __$$SearchSuggestionTermsCopyWithImpl(_$SearchSuggestionTerms _value,
       $Res Function(_$SearchSuggestionTerms) _then)
-      : super(_value, (v) => _then(v as _$SearchSuggestionTerms));
+      : super(_value, _then);
 
-  @override
-  _$SearchSuggestionTerms get _value => super._value as _$SearchSuggestionTerms;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? kind = freezed,
-    Object? searchTerm = freezed,
+    Object? kind = null,
+    Object? searchTerm = null,
     Object? displayTerm = freezed,
   }) {
     return _then(_$SearchSuggestionTerms(
-      kind: kind == freezed
+      kind: null == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
               as String,
-      searchTerm: searchTerm == freezed
+      searchTerm: null == searchTerm
           ? _value.searchTerm
           : searchTerm // ignore: cast_nullable_to_non_nullable
               as String,
-      displayTerm: displayTerm == freezed
+      displayTerm: freezed == displayTerm
           ? _value.displayTerm
           : displayTerm // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -163,22 +165,19 @@ class _$SearchSuggestionTerms extends SearchSuggestionTerms {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SearchSuggestionTerms &&
-            const DeepCollectionEquality().equals(other.kind, kind) &&
-            const DeepCollectionEquality()
-                .equals(other.searchTerm, searchTerm) &&
-            const DeepCollectionEquality()
-                .equals(other.displayTerm, displayTerm));
+            (identical(other.kind, kind) || other.kind == kind) &&
+            (identical(other.searchTerm, searchTerm) ||
+                other.searchTerm == searchTerm) &&
+            (identical(other.displayTerm, displayTerm) ||
+                other.displayTerm == displayTerm));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(kind),
-      const DeepCollectionEquality().hash(searchTerm),
-      const DeepCollectionEquality().hash(displayTerm));
+  int get hashCode => Object.hash(runtimeType, kind, searchTerm, displayTerm);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$SearchSuggestionTermsCopyWith<_$SearchSuggestionTerms> get copyWith =>
       __$$SearchSuggestionTermsCopyWithImpl<_$SearchSuggestionTerms>(
           this, _$identity);
@@ -197,9 +196,9 @@ class _$SearchSuggestionTerms extends SearchSuggestionTerms {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String kind, String searchTerm, String? displayTerm)?
+    TResult? Function(String kind, String searchTerm, String? displayTerm)?
         terms,
-    TResult Function(String kind, Resource content)? topResults,
+    TResult? Function(String kind, Resource content)? topResults,
   }) {
     return terms?.call(kind, searchTerm, displayTerm);
   }
@@ -230,8 +229,8 @@ class _$SearchSuggestionTerms extends SearchSuggestionTerms {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(SearchSuggestionTerms value)? terms,
-    TResult Function(SearchSuggestionTopResults value)? topResults,
+    TResult? Function(SearchSuggestionTerms value)? terms,
+    TResult? Function(SearchSuggestionTopResults value)? topResults,
   }) {
     return terms?.call(this);
   }
@@ -275,6 +274,7 @@ abstract class _$$SearchSuggestionTopResultsCopyWith<$Res>
           $Res Function(_$SearchSuggestionTopResults) then) =
       __$$SearchSuggestionTopResultsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String kind, Resource content});
 
   $ResourceCopyWith<$Res> get content;
@@ -282,28 +282,25 @@ abstract class _$$SearchSuggestionTopResultsCopyWith<$Res>
 
 /// @nodoc
 class __$$SearchSuggestionTopResultsCopyWithImpl<$Res>
-    extends _$SearchSuggestionCopyWithImpl<$Res>
+    extends _$SearchSuggestionCopyWithImpl<$Res, _$SearchSuggestionTopResults>
     implements _$$SearchSuggestionTopResultsCopyWith<$Res> {
   __$$SearchSuggestionTopResultsCopyWithImpl(
       _$SearchSuggestionTopResults _value,
       $Res Function(_$SearchSuggestionTopResults) _then)
-      : super(_value, (v) => _then(v as _$SearchSuggestionTopResults));
+      : super(_value, _then);
 
-  @override
-  _$SearchSuggestionTopResults get _value =>
-      super._value as _$SearchSuggestionTopResults;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? kind = freezed,
-    Object? content = freezed,
+    Object? kind = null,
+    Object? content = null,
   }) {
     return _then(_$SearchSuggestionTopResults(
-      kind: kind == freezed
+      kind: null == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
               as String,
-      content: content == freezed
+      content: null == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as Resource,
@@ -311,6 +308,7 @@ class __$$SearchSuggestionTopResultsCopyWithImpl<$Res>
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceCopyWith<$Res> get content {
     return $ResourceCopyWith<$Res>(_value.content, (value) {
       return _then(_value.copyWith(content: value));
@@ -340,18 +338,16 @@ class _$SearchSuggestionTopResults extends SearchSuggestionTopResults {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SearchSuggestionTopResults &&
-            const DeepCollectionEquality().equals(other.kind, kind) &&
-            const DeepCollectionEquality().equals(other.content, content));
+            (identical(other.kind, kind) || other.kind == kind) &&
+            (identical(other.content, content) || other.content == content));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(kind),
-      const DeepCollectionEquality().hash(content));
+  int get hashCode => Object.hash(runtimeType, kind, content);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$SearchSuggestionTopResultsCopyWith<_$SearchSuggestionTopResults>
       get copyWith => __$$SearchSuggestionTopResultsCopyWithImpl<
           _$SearchSuggestionTopResults>(this, _$identity);
@@ -370,9 +366,9 @@ class _$SearchSuggestionTopResults extends SearchSuggestionTopResults {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String kind, String searchTerm, String? displayTerm)?
+    TResult? Function(String kind, String searchTerm, String? displayTerm)?
         terms,
-    TResult Function(String kind, Resource content)? topResults,
+    TResult? Function(String kind, Resource content)? topResults,
   }) {
     return topResults?.call(kind, content);
   }
@@ -403,8 +399,8 @@ class _$SearchSuggestionTopResults extends SearchSuggestionTopResults {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(SearchSuggestionTerms value)? terms,
-    TResult Function(SearchSuggestionTopResults value)? topResults,
+    TResult? Function(SearchSuggestionTerms value)? terms,
+    TResult? Function(SearchSuggestionTopResults value)? topResults,
   }) {
     return topResults?.call(this);
   }

@@ -4,16 +4,21 @@ import 'package:misica/src/settings/core/application/settings_notifier.dart';
 import 'package:misica/src/settings/core/infrastructure/settings.dart';
 import 'package:misica/src/settings/core/infrastructure/settings_repository.dart';
 import 'package:misica/src/settings/core/infrastructure/settings_storage/sembast_settings.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-final settingsStorageProvider = Provider(
-  (ref) => SembastSettings(ref.watch(sembastProvider)),
-);
+part 'providers.g.dart';
 
-final settingsRepositoryProvider = Provider(
-  (ref) => SettingsRepository(ref.watch(settingsStorageProvider)),
-);
+@riverpod
+SembastSettings settingsStorage(SettingsStorageRef ref) {
+  return SembastSettings(ref.watch(sembastProvider));
+}
+
+@riverpod
+SettingsRepository settingsRepository(SettingsRepositoryRef ref) {
+  return SettingsRepository(ref.watch(settingsStorageProvider));
+}
 
 final settingsNotifierProvider =
     StateNotifierProvider<SettingsNotifier, Settings>(
-  (ref) => SettingsNotifier(ref.watch(settingsRepositoryProvider)),
+  (ref) => SettingsNotifier(ref.read(settingsRepositoryProvider)),
 );

@@ -27,29 +27,32 @@ mixin _$SearchResults {
 abstract class $SearchResultsCopyWith<$Res> {
   factory $SearchResultsCopyWith(
           SearchResults value, $Res Function(SearchResults) then) =
-      _$SearchResultsCopyWithImpl<$Res>;
+      _$SearchResultsCopyWithImpl<$Res, SearchResults>;
+  @useResult
   $Res call({Map<String, SearchResult>? results});
 }
 
 /// @nodoc
-class _$SearchResultsCopyWithImpl<$Res>
+class _$SearchResultsCopyWithImpl<$Res, $Val extends SearchResults>
     implements $SearchResultsCopyWith<$Res> {
   _$SearchResultsCopyWithImpl(this._value, this._then);
 
-  final SearchResults _value;
   // ignore: unused_field
-  final $Res Function(SearchResults) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? results = freezed,
   }) {
     return _then(_value.copyWith(
-      results: results == freezed
+      results: freezed == results
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
               as Map<String, SearchResult>?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -60,26 +63,25 @@ abstract class _$$_SearchResultsCopyWith<$Res>
           _$_SearchResults value, $Res Function(_$_SearchResults) then) =
       __$$_SearchResultsCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({Map<String, SearchResult>? results});
 }
 
 /// @nodoc
 class __$$_SearchResultsCopyWithImpl<$Res>
-    extends _$SearchResultsCopyWithImpl<$Res>
+    extends _$SearchResultsCopyWithImpl<$Res, _$_SearchResults>
     implements _$$_SearchResultsCopyWith<$Res> {
   __$$_SearchResultsCopyWithImpl(
       _$_SearchResults _value, $Res Function(_$_SearchResults) _then)
-      : super(_value, (v) => _then(v as _$_SearchResults));
+      : super(_value, _then);
 
-  @override
-  _$_SearchResults get _value => super._value as _$_SearchResults;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? results = freezed,
   }) {
     return _then(_$_SearchResults(
-      results: results == freezed
+      results: freezed == results
           ? _value._results
           : results // ignore: cast_nullable_to_non_nullable
               as Map<String, SearchResult>?,
@@ -122,6 +124,7 @@ class _$_SearchResults extends _SearchResults {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SearchResultsCopyWith<_$_SearchResults> get copyWith =>
       __$$_SearchResultsCopyWithImpl<_$_SearchResults>(this, _$identity);
 }
@@ -154,38 +157,42 @@ mixin _$SearchResult {
 abstract class $SearchResultCopyWith<$Res> {
   factory $SearchResultCopyWith(
           SearchResult value, $Res Function(SearchResult) then) =
-      _$SearchResultCopyWithImpl<$Res>;
+      _$SearchResultCopyWithImpl<$Res, SearchResult>;
+  @useResult
   $Res call({String name, String groupId, List<Resource> data});
 }
 
 /// @nodoc
-class _$SearchResultCopyWithImpl<$Res> implements $SearchResultCopyWith<$Res> {
+class _$SearchResultCopyWithImpl<$Res, $Val extends SearchResult>
+    implements $SearchResultCopyWith<$Res> {
   _$SearchResultCopyWithImpl(this._value, this._then);
 
-  final SearchResult _value;
   // ignore: unused_field
-  final $Res Function(SearchResult) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? groupId = freezed,
-    Object? data = freezed,
+    Object? name = null,
+    Object? groupId = null,
+    Object? data = null,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      groupId: groupId == freezed
+      groupId: null == groupId
           ? _value.groupId
           : groupId // ignore: cast_nullable_to_non_nullable
               as String,
-      data: data == freezed
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<Resource>,
-    ));
+    ) as $Val);
   }
 }
 
@@ -196,36 +203,35 @@ abstract class _$$_SearchResultCopyWith<$Res>
           _$_SearchResult value, $Res Function(_$_SearchResult) then) =
       __$$_SearchResultCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String name, String groupId, List<Resource> data});
 }
 
 /// @nodoc
 class __$$_SearchResultCopyWithImpl<$Res>
-    extends _$SearchResultCopyWithImpl<$Res>
+    extends _$SearchResultCopyWithImpl<$Res, _$_SearchResult>
     implements _$$_SearchResultCopyWith<$Res> {
   __$$_SearchResultCopyWithImpl(
       _$_SearchResult _value, $Res Function(_$_SearchResult) _then)
-      : super(_value, (v) => _then(v as _$_SearchResult));
+      : super(_value, _then);
 
-  @override
-  _$_SearchResult get _value => super._value as _$_SearchResult;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? groupId = freezed,
-    Object? data = freezed,
+    Object? name = null,
+    Object? groupId = null,
+    Object? data = null,
   }) {
     return _then(_$_SearchResult(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      groupId: groupId == freezed
+      groupId: null == groupId
           ? _value.groupId
           : groupId // ignore: cast_nullable_to_non_nullable
               as String,
-      data: data == freezed
+      data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as List<Resource>,
@@ -264,20 +270,18 @@ class _$_SearchResult extends _SearchResult {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SearchResult &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.groupId, groupId) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.groupId, groupId) || other.groupId == groupId) &&
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(groupId),
-      const DeepCollectionEquality().hash(_data));
+      runtimeType, name, groupId, const DeepCollectionEquality().hash(_data));
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SearchResultCopyWith<_$_SearchResult> get copyWith =>
       __$$_SearchResultCopyWithImpl<_$_SearchResult>(this, _$identity);
 }

@@ -34,49 +34,53 @@ mixin _$Artwork {
 /// @nodoc
 abstract class $ArtworkCopyWith<$Res> {
   factory $ArtworkCopyWith(Artwork value, $Res Function(Artwork) then) =
-      _$ArtworkCopyWithImpl<$Res>;
+      _$ArtworkCopyWithImpl<$Res, Artwork>;
+  @useResult
   $Res call(
       {String? bgColor, int height, String url, int width, String? textColor});
 }
 
 /// @nodoc
-class _$ArtworkCopyWithImpl<$Res> implements $ArtworkCopyWith<$Res> {
+class _$ArtworkCopyWithImpl<$Res, $Val extends Artwork>
+    implements $ArtworkCopyWith<$Res> {
   _$ArtworkCopyWithImpl(this._value, this._then);
 
-  final Artwork _value;
   // ignore: unused_field
-  final $Res Function(Artwork) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? bgColor = freezed,
-    Object? height = freezed,
-    Object? url = freezed,
-    Object? width = freezed,
+    Object? height = null,
+    Object? url = null,
+    Object? width = null,
     Object? textColor = freezed,
   }) {
     return _then(_value.copyWith(
-      bgColor: bgColor == freezed
+      bgColor: freezed == bgColor
           ? _value.bgColor
           : bgColor // ignore: cast_nullable_to_non_nullable
               as String?,
-      height: height == freezed
+      height: null == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as int,
-      url: url == freezed
+      url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-      width: width == freezed
+      width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as int,
-      textColor: textColor == freezed
+      textColor: freezed == textColor
           ? _value.textColor
           : textColor // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -86,45 +90,45 @@ abstract class _$$_ArtworkCopyWith<$Res> implements $ArtworkCopyWith<$Res> {
           _$_Artwork value, $Res Function(_$_Artwork) then) =
       __$$_ArtworkCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? bgColor, int height, String url, int width, String? textColor});
 }
 
 /// @nodoc
-class __$$_ArtworkCopyWithImpl<$Res> extends _$ArtworkCopyWithImpl<$Res>
+class __$$_ArtworkCopyWithImpl<$Res>
+    extends _$ArtworkCopyWithImpl<$Res, _$_Artwork>
     implements _$$_ArtworkCopyWith<$Res> {
   __$$_ArtworkCopyWithImpl(_$_Artwork _value, $Res Function(_$_Artwork) _then)
-      : super(_value, (v) => _then(v as _$_Artwork));
+      : super(_value, _then);
 
-  @override
-  _$_Artwork get _value => super._value as _$_Artwork;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? bgColor = freezed,
-    Object? height = freezed,
-    Object? url = freezed,
-    Object? width = freezed,
+    Object? height = null,
+    Object? url = null,
+    Object? width = null,
     Object? textColor = freezed,
   }) {
     return _then(_$_Artwork(
-      bgColor: bgColor == freezed
+      bgColor: freezed == bgColor
           ? _value.bgColor
           : bgColor // ignore: cast_nullable_to_non_nullable
               as String?,
-      height: height == freezed
+      height: null == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as int,
-      url: url == freezed
+      url: null == url
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-      width: width == freezed
+      width: null == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
               as int,
-      textColor: textColor == freezed
+      textColor: freezed == textColor
           ? _value.textColor
           : textColor // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -167,25 +171,22 @@ class _$_Artwork extends _Artwork {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Artwork &&
-            const DeepCollectionEquality().equals(other.bgColor, bgColor) &&
-            const DeepCollectionEquality().equals(other.height, height) &&
-            const DeepCollectionEquality().equals(other.url, url) &&
-            const DeepCollectionEquality().equals(other.width, width) &&
-            const DeepCollectionEquality().equals(other.textColor, textColor));
+            (identical(other.bgColor, bgColor) || other.bgColor == bgColor) &&
+            (identical(other.height, height) || other.height == height) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.width, width) || other.width == width) &&
+            (identical(other.textColor, textColor) ||
+                other.textColor == textColor));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(bgColor),
-      const DeepCollectionEquality().hash(height),
-      const DeepCollectionEquality().hash(url),
-      const DeepCollectionEquality().hash(width),
-      const DeepCollectionEquality().hash(textColor));
+  int get hashCode =>
+      Object.hash(runtimeType, bgColor, height, url, width, textColor);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ArtworkCopyWith<_$_Artwork> get copyWith =>
       __$$_ArtworkCopyWithImpl<_$_Artwork>(this, _$identity);
 

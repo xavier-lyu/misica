@@ -34,19 +34,22 @@ mixin _$EditorialNotesDTO {
 abstract class $EditorialNotesDTOCopyWith<$Res> {
   factory $EditorialNotesDTOCopyWith(
           EditorialNotesDTO value, $Res Function(EditorialNotesDTO) then) =
-      _$EditorialNotesDTOCopyWithImpl<$Res>;
+      _$EditorialNotesDTOCopyWithImpl<$Res, EditorialNotesDTO>;
+  @useResult
   $Res call({String? short, String? standard, String? name});
 }
 
 /// @nodoc
-class _$EditorialNotesDTOCopyWithImpl<$Res>
+class _$EditorialNotesDTOCopyWithImpl<$Res, $Val extends EditorialNotesDTO>
     implements $EditorialNotesDTOCopyWith<$Res> {
   _$EditorialNotesDTOCopyWithImpl(this._value, this._then);
 
-  final EditorialNotesDTO _value;
   // ignore: unused_field
-  final $Res Function(EditorialNotesDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? short = freezed,
@@ -54,19 +57,19 @@ class _$EditorialNotesDTOCopyWithImpl<$Res>
     Object? name = freezed,
   }) {
     return _then(_value.copyWith(
-      short: short == freezed
+      short: freezed == short
           ? _value.short
           : short // ignore: cast_nullable_to_non_nullable
               as String?,
-      standard: standard == freezed
+      standard: freezed == standard
           ? _value.standard
           : standard // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -77,20 +80,19 @@ abstract class _$$_EditorialNotesDTOCopyWith<$Res>
           $Res Function(_$_EditorialNotesDTO) then) =
       __$$_EditorialNotesDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String? short, String? standard, String? name});
 }
 
 /// @nodoc
 class __$$_EditorialNotesDTOCopyWithImpl<$Res>
-    extends _$EditorialNotesDTOCopyWithImpl<$Res>
+    extends _$EditorialNotesDTOCopyWithImpl<$Res, _$_EditorialNotesDTO>
     implements _$$_EditorialNotesDTOCopyWith<$Res> {
   __$$_EditorialNotesDTOCopyWithImpl(
       _$_EditorialNotesDTO _value, $Res Function(_$_EditorialNotesDTO) _then)
-      : super(_value, (v) => _then(v as _$_EditorialNotesDTO));
+      : super(_value, _then);
 
-  @override
-  _$_EditorialNotesDTO get _value => super._value as _$_EditorialNotesDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? short = freezed,
@@ -98,15 +100,15 @@ class __$$_EditorialNotesDTOCopyWithImpl<$Res>
     Object? name = freezed,
   }) {
     return _then(_$_EditorialNotesDTO(
-      short: short == freezed
+      short: freezed == short
           ? _value.short
           : short // ignore: cast_nullable_to_non_nullable
               as String?,
-      standard: standard == freezed
+      standard: freezed == standard
           ? _value.standard
           : standard // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -140,21 +142,19 @@ class _$_EditorialNotesDTO extends _EditorialNotesDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_EditorialNotesDTO &&
-            const DeepCollectionEquality().equals(other.short, short) &&
-            const DeepCollectionEquality().equals(other.standard, standard) &&
-            const DeepCollectionEquality().equals(other.name, name));
+            (identical(other.short, short) || other.short == short) &&
+            (identical(other.standard, standard) ||
+                other.standard == standard) &&
+            (identical(other.name, name) || other.name == name));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(short),
-      const DeepCollectionEquality().hash(standard),
-      const DeepCollectionEquality().hash(name));
+  int get hashCode => Object.hash(runtimeType, short, standard, name);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_EditorialNotesDTOCopyWith<_$_EditorialNotesDTO> get copyWith =>
       __$$_EditorialNotesDTOCopyWithImpl<_$_EditorialNotesDTO>(
           this, _$identity);

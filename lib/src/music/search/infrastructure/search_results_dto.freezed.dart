@@ -34,46 +34,50 @@ mixin _$SearchResultsDTO {
 abstract class $SearchResultsDTOCopyWith<$Res> {
   factory $SearchResultsDTOCopyWith(
           SearchResultsDTO value, $Res Function(SearchResultsDTO) then) =
-      _$SearchResultsDTOCopyWithImpl<$Res>;
+      _$SearchResultsDTOCopyWithImpl<$Res, SearchResultsDTO>;
+  @useResult
   $Res call({Map<String, SearchResultDTO>? results, ResourceMetaDTO? meta});
 
   $ResourceMetaDTOCopyWith<$Res>? get meta;
 }
 
 /// @nodoc
-class _$SearchResultsDTOCopyWithImpl<$Res>
+class _$SearchResultsDTOCopyWithImpl<$Res, $Val extends SearchResultsDTO>
     implements $SearchResultsDTOCopyWith<$Res> {
   _$SearchResultsDTOCopyWithImpl(this._value, this._then);
 
-  final SearchResultsDTO _value;
   // ignore: unused_field
-  final $Res Function(SearchResultsDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? results = freezed,
     Object? meta = freezed,
   }) {
     return _then(_value.copyWith(
-      results: results == freezed
+      results: freezed == results
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
               as Map<String, SearchResultDTO>?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as ResourceMetaDTO?,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $ResourceMetaDTOCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
 
     return $ResourceMetaDTOCopyWith<$Res>(_value.meta!, (value) {
-      return _then(_value.copyWith(meta: value));
+      return _then(_value.copyWith(meta: value) as $Val);
     });
   }
 }
@@ -85,6 +89,7 @@ abstract class _$$_SearchResultsDTOCopyWith<$Res>
           _$_SearchResultsDTO value, $Res Function(_$_SearchResultsDTO) then) =
       __$$_SearchResultsDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({Map<String, SearchResultDTO>? results, ResourceMetaDTO? meta});
 
   @override
@@ -93,26 +98,24 @@ abstract class _$$_SearchResultsDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_SearchResultsDTOCopyWithImpl<$Res>
-    extends _$SearchResultsDTOCopyWithImpl<$Res>
+    extends _$SearchResultsDTOCopyWithImpl<$Res, _$_SearchResultsDTO>
     implements _$$_SearchResultsDTOCopyWith<$Res> {
   __$$_SearchResultsDTOCopyWithImpl(
       _$_SearchResultsDTO _value, $Res Function(_$_SearchResultsDTO) _then)
-      : super(_value, (v) => _then(v as _$_SearchResultsDTO));
+      : super(_value, _then);
 
-  @override
-  _$_SearchResultsDTO get _value => super._value as _$_SearchResultsDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? results = freezed,
     Object? meta = freezed,
   }) {
     return _then(_$_SearchResultsDTO(
-      results: results == freezed
+      results: freezed == results
           ? _value._results
           : results // ignore: cast_nullable_to_non_nullable
               as Map<String, SearchResultDTO>?,
-      meta: meta == freezed
+      meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
               as ResourceMetaDTO?,
@@ -154,18 +157,17 @@ class _$_SearchResultsDTO extends _SearchResultsDTO {
         (other.runtimeType == runtimeType &&
             other is _$_SearchResultsDTO &&
             const DeepCollectionEquality().equals(other._results, _results) &&
-            const DeepCollectionEquality().equals(other.meta, meta));
+            (identical(other.meta, meta) || other.meta == meta));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_results),
-      const DeepCollectionEquality().hash(meta));
+      runtimeType, const DeepCollectionEquality().hash(_results), meta);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SearchResultsDTOCopyWith<_$_SearchResultsDTO> get copyWith =>
       __$$_SearchResultsDTOCopyWithImpl<_$_SearchResultsDTO>(this, _$identity);
 
@@ -219,7 +221,8 @@ mixin _$SearchResultDTO {
 abstract class $SearchResultDTOCopyWith<$Res> {
   factory $SearchResultDTOCopyWith(
           SearchResultDTO value, $Res Function(SearchResultDTO) then) =
-      _$SearchResultDTOCopyWithImpl<$Res>;
+      _$SearchResultDTOCopyWithImpl<$Res, SearchResultDTO>;
+  @useResult
   $Res call(
       {String name,
       String groupId,
@@ -229,44 +232,46 @@ abstract class $SearchResultDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SearchResultDTOCopyWithImpl<$Res>
+class _$SearchResultDTOCopyWithImpl<$Res, $Val extends SearchResultDTO>
     implements $SearchResultDTOCopyWith<$Res> {
   _$SearchResultDTOCopyWithImpl(this._value, this._then);
 
-  final SearchResultDTO _value;
   // ignore: unused_field
-  final $Res Function(SearchResultDTO) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? groupId = freezed,
-    Object? data = freezed,
+    Object? name = null,
+    Object? groupId = null,
+    Object? data = null,
     Object? href = freezed,
     Object? next = freezed,
   }) {
     return _then(_value.copyWith(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      groupId: groupId == freezed
+      groupId: null == groupId
           ? _value.groupId
           : groupId // ignore: cast_nullable_to_non_nullable
               as String,
-      data: data == freezed
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as List<ResourceDTO>,
-      href: href == freezed
+      href: freezed == href
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String?,
-      next: next == freezed
+      next: freezed == next
           ? _value.next
           : next // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -277,6 +282,7 @@ abstract class _$$_SearchResultDTOCopyWith<$Res>
           _$_SearchResultDTO value, $Res Function(_$_SearchResultDTO) then) =
       __$$_SearchResultDTOCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String name,
       String groupId,
@@ -287,41 +293,39 @@ abstract class _$$_SearchResultDTOCopyWith<$Res>
 
 /// @nodoc
 class __$$_SearchResultDTOCopyWithImpl<$Res>
-    extends _$SearchResultDTOCopyWithImpl<$Res>
+    extends _$SearchResultDTOCopyWithImpl<$Res, _$_SearchResultDTO>
     implements _$$_SearchResultDTOCopyWith<$Res> {
   __$$_SearchResultDTOCopyWithImpl(
       _$_SearchResultDTO _value, $Res Function(_$_SearchResultDTO) _then)
-      : super(_value, (v) => _then(v as _$_SearchResultDTO));
+      : super(_value, _then);
 
-  @override
-  _$_SearchResultDTO get _value => super._value as _$_SearchResultDTO;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? name = freezed,
-    Object? groupId = freezed,
-    Object? data = freezed,
+    Object? name = null,
+    Object? groupId = null,
+    Object? data = null,
     Object? href = freezed,
     Object? next = freezed,
   }) {
     return _then(_$_SearchResultDTO(
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      groupId: groupId == freezed
+      groupId: null == groupId
           ? _value.groupId
           : groupId // ignore: cast_nullable_to_non_nullable
               as String,
-      data: data == freezed
+      data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as List<ResourceDTO>,
-      href: href == freezed
+      href: freezed == href
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
               as String?,
-      next: next == freezed
+      next: freezed == next
           ? _value.next
           : next // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -371,25 +375,21 @@ class _$_SearchResultDTO extends _SearchResultDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SearchResultDTO &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.groupId, groupId) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.groupId, groupId) || other.groupId == groupId) &&
             const DeepCollectionEquality().equals(other._data, _data) &&
-            const DeepCollectionEquality().equals(other.href, href) &&
-            const DeepCollectionEquality().equals(other.next, next));
+            (identical(other.href, href) || other.href == href) &&
+            (identical(other.next, next) || other.next == next));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(groupId),
-      const DeepCollectionEquality().hash(_data),
-      const DeepCollectionEquality().hash(href),
-      const DeepCollectionEquality().hash(next));
+  int get hashCode => Object.hash(runtimeType, name, groupId,
+      const DeepCollectionEquality().hash(_data), href, next);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_SearchResultDTOCopyWith<_$_SearchResultDTO> get copyWith =>
       __$$_SearchResultDTOCopyWithImpl<_$_SearchResultDTO>(this, _$identity);
 
