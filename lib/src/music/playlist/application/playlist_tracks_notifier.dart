@@ -1,3 +1,4 @@
+import 'package:fpdart/fpdart.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/core/domain/track.dart';
 import 'package:misica/src/music/core/shared/providers.dart';
@@ -10,7 +11,7 @@ class PlaylistTracksNotifier extends StateNotifier<AsyncValue<List<Track>>> {
   final PlaylistsRepository _repository;
   final Ref _ref;
 
-  void fetchPlaylistTracks(String id) async {
+  Future<Unit> fetchPlaylistTracks(String id) async {
     final storefront = await _ref.read(storefrontProvider.future);
     final failureOrTracks =
         await _repository.fetchCatalogPlaylistTracks(storefront, id);
@@ -18,5 +19,6 @@ class PlaylistTracksNotifier extends StateNotifier<AsyncValue<List<Track>>> {
       (error) => AsyncError(error, StackTrace.current),
       (value) => AsyncData(value),
     );
+    return unit;
   }
 }

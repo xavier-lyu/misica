@@ -1,3 +1,4 @@
+import 'package:fpdart/fpdart.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/core/shared/providers.dart';
@@ -22,7 +23,7 @@ class SearchNotifier extends StateNotifier<SearchResultsState> {
   SearchNotifier(this._repository, this._ref)
       : super(const SearchResultsState.initial());
 
-  void search(String term) async {
+  Future<Unit> search(String term) async {
     state = const SearchResultsState.loading();
     final storefront = await _ref.read(storefrontProvider.future);
     final failureOrResults = await _repository.search(storefront, term);
@@ -30,5 +31,6 @@ class SearchNotifier extends StateNotifier<SearchResultsState> {
       (l) => SearchResultsState.error(l),
       (r) => SearchResultsState.data(r),
     );
+    return unit;
   }
 }

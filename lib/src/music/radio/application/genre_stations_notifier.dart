@@ -1,3 +1,4 @@
+import 'package:fpdart/fpdart.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/shared/providers.dart';
@@ -10,7 +11,7 @@ class GenreStationsNotifier extends StateNotifier<AsyncValue<List<Station>>> {
   final StationsRepository _repository;
   final Ref _ref;
 
-  void fetchStationGenres(String id) async {
+  Future<Unit> fetchStationGenres(String id) async {
     final storefront = await _ref.read(storefrontProvider.future);
     final failureOrStations =
         await _repository.fetchGenreStations(storefront, id);
@@ -18,5 +19,6 @@ class GenreStationsNotifier extends StateNotifier<AsyncValue<List<Station>>> {
       (l) => AsyncError(l, StackTrace.current),
       (r) => AsyncData(r),
     );
+    return unit;
   }
 }

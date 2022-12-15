@@ -1,3 +1,4 @@
+import 'package:fpdart/fpdart.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/core/domain/track.dart';
 import 'package:misica/src/music/core/shared/providers.dart';
@@ -9,7 +10,7 @@ class SongNotifier extends StateNotifier<AsyncValue<Track>> {
   final SongRepository _repository;
   final Ref _ref;
 
-  void fetchTrack(String id, String kind) async {
+  Future<Unit> fetchTrack(String id, String kind) async {
     final storefront = await _ref.read(storefrontProvider.future);
     if (kind.contains('song')) {
       final failureOrSong = await _repository.getCatalogSong(storefront, id);
@@ -25,5 +26,6 @@ class SongNotifier extends StateNotifier<AsyncValue<Track>> {
         (r) => AsyncData(Track.musicVideo(r)),
       );
     }
+    return unit;
   }
 }

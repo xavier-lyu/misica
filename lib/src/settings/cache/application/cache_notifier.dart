@@ -1,3 +1,4 @@
+import 'package:fpdart/fpdart.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/settings/cache/infrastructure/cache_service.dart';
 
@@ -11,9 +12,10 @@ class CacheNotifier extends StateNotifier<AsyncValue<String>> {
     state = AsyncData(size);
   }
 
-  void clear() async {
+  Future<Unit> clear() async {
     state = const AsyncLoading();
     await _cacheService.clearCache();
     await calculating();
+    return unit;
   }
 }

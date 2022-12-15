@@ -1,3 +1,4 @@
+import 'package:fpdart/fpdart.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:misica/src/music/artist/infrastructure/artists_repository.dart';
@@ -10,7 +11,7 @@ class ArtistNotifier extends StateNotifier<AsyncValue<Artist>> {
   final ArtistsRepository _repository;
   final Ref _ref;
 
-  void fetchArtist(String id) async {
+  Future<Unit> fetchArtist(String id) async {
     final storefront = await _ref.read(storefrontProvider.future);
     final failureOrArtist = await _repository.fetchArtist(storefront, id);
 
@@ -20,9 +21,11 @@ class ArtistNotifier extends StateNotifier<AsyncValue<Artist>> {
     );
 
     _getDefaultPlayableContent(storefront, id);
+
+    return unit;
   }
 
-  void _getDefaultPlayableContent(String storefront, String id) async {
+  Future<Unit> _getDefaultPlayableContent(String storefront, String id) async {
     final failureOrArtist =
         await _repository.defaultPlayableContent(storefront, id);
 
@@ -40,5 +43,7 @@ class ArtistNotifier extends StateNotifier<AsyncValue<Artist>> {
         )),
       ),
     );
+
+    return unit;
   }
 }

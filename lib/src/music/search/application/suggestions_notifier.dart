@@ -1,3 +1,4 @@
+import 'package:fpdart/fpdart.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/core/shared/providers.dart';
 import 'package:misica/src/music/search/domain/search_suggestions.dart';
@@ -11,7 +12,7 @@ class SuggestionsNotifier
   final SearchRepository _repository;
   final Ref _ref;
 
-  void fetchSuggestions(String term) async {
+  Future<Unit> fetchSuggestions(String term) async {
     final storefront = await _ref.read(storefrontProvider.future);
     final failureOrSuggestions =
         await _repository.searchSuggestions(storefront, term);
@@ -19,5 +20,6 @@ class SuggestionsNotifier
       (l) => AsyncError(l, StackTrace.current),
       (r) => AsyncData(r),
     );
+    return unit;
   }
 }

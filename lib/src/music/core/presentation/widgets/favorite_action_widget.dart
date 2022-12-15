@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fpdart/fpdart.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/library/infrastructure/liked_resources_repository.dart';
@@ -58,18 +59,21 @@ class FavoriteNotifier extends StateNotifier<AsyncValue<bool>> {
 
   final LikedResourcesRepository _repository;
 
-  void load(Resource resource) async {
+  Future<Unit> load(Resource resource) async {
     final isLiked = await _repository.isLiked(resource.id);
     state = AsyncData(isLiked);
+    return unit;
   }
 
-  void like(Resource resource) async {
+  Future<Unit> like(Resource resource) async {
     await _repository.addLikedResource(resource);
     state = const AsyncData(true);
+    return unit;
   }
 
-  void unlike(Resource resource) async {
+  Future<Unit> unlike(Resource resource) async {
     await _repository.deleteLikedResource(resource.id);
     state = const AsyncData(false);
+    return unit;
   }
 }
