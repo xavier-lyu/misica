@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/presentation/widgets/artwork_widget.dart';
 import 'package:misica/src/music/core/presentation/widgets/expandable_text.dart';
 import 'package:misica/src/music/core/presentation/widgets/play_button.dart';
-import 'package:misica/src/music/core/presentation/widgets/shuffle_button.dart';
+import 'package:misica/src/music/core/presentation/widgets/shuffle_play_button.dart';
 import 'package:misica/src/music/playlist/domain/playlist.dart';
 
 class PlaylistHeaderView extends StatelessWidget {
@@ -21,8 +22,8 @@ class PlaylistHeaderView extends StatelessWidget {
       children: [
         ArtworkWidget(
           artwork: playlist.artwork,
-          width: 220,
-          height: 220,
+          width: ARTWORK_COVER_SIZE,
+          height: ARTWORK_COVER_SIZE,
         ),
         const SizedBox(
           height: 15,
@@ -56,7 +57,7 @@ class PlaylistHeaderView extends StatelessWidget {
               item: playlist,
             )),
             const SizedBox(width: 15),
-            Flexible(child: ShuffleButton(item: playlist))
+            Flexible(child: ShufflePlayButton(item: playlist))
           ],
         )
       ],

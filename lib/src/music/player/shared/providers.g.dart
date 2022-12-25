@@ -39,6 +39,16 @@ final currentEntryProvider = AutoDisposeFutureProvider<MusicPlayerQueueEntry?>(
       const bool.fromEnvironment('dart.vm.product') ? null : $currentEntryHash,
 );
 typedef CurrentEntryRef = AutoDisposeFutureProviderRef<MusicPlayerQueueEntry?>;
+String $isPlayingHash() => r'46a5422e61a27bae625d583e3f72c9481408850e';
+
+/// See also [isPlaying].
+final isPlayingProvider = AutoDisposeFutureProvider<bool>(
+  isPlaying,
+  name: r'isPlayingProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : $isPlayingHash,
+);
+typedef IsPlayingRef = AutoDisposeFutureProviderRef<bool>;
 String $playerStateHash() => r'9d6876d719d8601fe7b6b111bb6bf543b9d433db';
 
 /// See also [playerState].

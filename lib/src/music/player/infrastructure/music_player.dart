@@ -67,4 +67,8 @@ class MusicPlayer {
   Future<void> skipToNext() async {
     await _musicKit.skipToNextEntry();
   }
+
+  Future<void> skipToPrevious() async {
+    await _musicKit.skipToPreviousEntry();
+  }
 }

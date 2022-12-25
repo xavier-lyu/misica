@@ -7,7 +7,7 @@ import 'package:misica/src/music/core/domain/album.dart';
 import 'package:misica/src/music/core/presentation/widgets/artwork_widget.dart';
 import 'package:misica/src/music/core/presentation/widgets/expandable_text.dart';
 import 'package:misica/src/music/core/presentation/widgets/play_button.dart';
-import 'package:misica/src/music/core/presentation/widgets/shuffle_button.dart';
+import 'package:misica/src/music/core/presentation/widgets/shuffle_play_button.dart';
 
 class AlbumHeaderView extends StatelessWidget {
   const AlbumHeaderView({
@@ -23,8 +23,8 @@ class AlbumHeaderView extends StatelessWidget {
       children: [
         ArtworkWidget(
           artwork: album.artwork,
-          width: 220,
-          height: 220,
+          width: ARTWORK_COVER_SIZE,
+          height: ARTWORK_COVER_SIZE,
         ),
         const SizedBox(
           height: 15,
@@ -65,7 +65,7 @@ class AlbumHeaderView extends StatelessWidget {
               item: album,
             )),
             const SizedBox(width: 15),
-            Flexible(child: ShuffleButton(item: album))
+            Flexible(child: ShufflePlayButton(item: album))
           ],
         )
       ],

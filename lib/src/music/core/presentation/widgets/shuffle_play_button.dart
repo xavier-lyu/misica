@@ -5,8 +5,8 @@ import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/player/shared/providers.dart';
 
-class ShuffleButton extends ConsumerWidget {
-  const ShuffleButton({
+class ShufflePlayButton extends ConsumerWidget {
+  const ShufflePlayButton({
     Key? key,
     required this.item,
   }) : super(key: key);

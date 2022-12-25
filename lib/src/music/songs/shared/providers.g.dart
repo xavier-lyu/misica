@@ -50,3 +50,81 @@ final songRepositoryProvider = AutoDisposeProvider<SongRepository>(
       : $songRepositoryHash,
 );
 typedef SongRepositoryRef = AutoDisposeProviderRef<SongRepository>;
+String $catalogTrackHash() => r'00b6440bbb86d41d4d18fac16ae909bc014e70a8';
+
+/// See also [catalogTrack].
+class CatalogTrackProvider extends AutoDisposeFutureProvider<Track?> {
+  CatalogTrackProvider({
+    required this.id,
+    required this.kind,
+  }) : super(
+          (ref) => catalogTrack(
+            ref,
+            id: id,
+            kind: kind,
+          ),
+          from: catalogTrackProvider,
+          name: r'catalogTrackProvider',
+          debugGetCreateSourceHash:
+              const bool.fromEnvironment('dart.vm.product')
+                  ? null
+                  : $catalogTrackHash,
+        );
+
+  final String id;
+  final String kind;
+
+  @override
+  bool operator ==(Object other) {
+    return other is CatalogTrackProvider &&
+        other.id == id &&
+        other.kind == kind;
+  }
+
+  @override
+  int get hashCode {
+    var hash = _SystemHash.combine(0, runtimeType.hashCode);
+    hash = _SystemHash.combine(hash, id.hashCode);
+    hash = _SystemHash.combine(hash, kind.hashCode);
+
+    return _SystemHash.finish(hash);
+  }
+}
+
+typedef CatalogTrackRef = AutoDisposeFutureProviderRef<Track?>;
+
+/// See also [catalogTrack].
+final catalogTrackProvider = CatalogTrackFamily();
+
+class CatalogTrackFamily extends Family<AsyncValue<Track?>> {
+  CatalogTrackFamily();
+
+  CatalogTrackProvider call({
+    required String id,
+    required String kind,
+  }) {
+    return CatalogTrackProvider(
+      id: id,
+      kind: kind,
+    );
+  }
+
+  @override
+  AutoDisposeFutureProvider<Track?> getProviderOverride(
+    covariant CatalogTrackProvider provider,
+  ) {
+    return call(
+      id: provider.id,
+      kind: provider.kind,
+    );
+  }
+
+  @override
+  List<ProviderOrFamily>? get allTransitiveDependencies => null;
+
+  @override
+  List<ProviderOrFamily>? get dependencies => null;
+
+  @override
+  String? get name => r'catalogTrackProvider';
+}

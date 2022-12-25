@@ -17,6 +17,11 @@ Future<MusicPlayerQueueEntry?> currentEntry(CurrentEntryRef ref) {
 }
 
 @riverpod
+Future<bool> isPlaying(IsPlayingRef ref) {
+  return ref.watch(currentEntryProvider.selectAsync((data) => data != null));
+}
+
+@riverpod
 Future<MusicPlayerState> playerState(PlayerStateRef ref) {
   return ref.watch(musicKitProvider).musicPlayerState;
 }
