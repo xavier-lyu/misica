@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:misica/src/authorization/application/auth_notifier.dart';
 import 'package:misica/src/authorization/shared/providers.dart';
+import 'package:misica/src/core/infrastructure/dio_json_transformer.dart';
 import 'package:misica/src/core/infrastructure/sembast_database.dart';
 import 'package:misica/src/settings/core/shared/providers.dart';
 import 'package:music_kit/music_kit.dart';
@@ -19,7 +20,9 @@ part 'providers.g.dart';
 MusicKit musicKit(MusicKitRef ref) => MusicKit();
 
 @riverpod
-Dio musicDio(MusicDioRef ref) => Dio();
+Dio musicDio(MusicDioRef ref) {
+  return Dio()..transformer = DioJsonTransformer();
+}
 
 @Riverpod(keepAlive: true)
 SembastDatabase sembast(SembastRef ref) => SembastDatabase();

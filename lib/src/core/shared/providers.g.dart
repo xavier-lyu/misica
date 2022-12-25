@@ -39,7 +39,7 @@ final musicKitProvider = Provider<MusicKit>(
       const bool.fromEnvironment('dart.vm.product') ? null : $musicKitHash,
 );
 typedef MusicKitRef = ProviderRef<MusicKit>;
-String $musicDioHash() => r'268023dfa60bb2f299d68825b887335ad3256e6e';
+String $musicDioHash() => r'06a0d2ea23ef1b1a6d276b2a4ef6bd6922e6a8d3';
 
 /// See also [musicDio].
 final musicDioProvider = AutoDisposeProvider<Dio>(
