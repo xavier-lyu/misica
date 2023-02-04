@@ -23,6 +23,9 @@ class CustomTheme {
           borderSide: BorderSide(width: 2.0, color: colorScheme.primary),
         ),
       ),
+      bottomSheetTheme: const BottomSheetThemeData(
+        shape: BeveledRectangleBorder(),
+      ),
     );
   }
 
@@ -41,6 +44,9 @@ class CustomTheme {
         indicator: UnderlineTabIndicator(
           borderSide: BorderSide(width: 2.0, color: colorScheme.primary),
         ),
+      ),
+      bottomSheetTheme: const BottomSheetThemeData(
+        shape: BeveledRectangleBorder(),
       ),
     );
   }
