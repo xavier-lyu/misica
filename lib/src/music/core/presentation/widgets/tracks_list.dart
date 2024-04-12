@@ -9,12 +9,12 @@ typedef TracksListFooterBuilder = Widget? Function(BuildContext context);
 
 class TracksList extends StatelessWidget {
   const TracksList({
-    Key? key,
+    super.key,
     required this.tracks,
     required this.itemBuilder,
     this.footerBuilder,
     this.indent = 0,
-  }) : super(key: key);
+  });
 
   final List<Track> tracks;
   final TracksListItemBuilder itemBuilder;

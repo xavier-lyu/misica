@@ -16,7 +16,7 @@ class SongRepository {
     try {
       final song = await _remoteService.getCatalogSong(storefront, id);
       return right(song.data.first.toDomain() as Song);
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       return left(MusicFailure.api(e.response?.statusCode));
     } on StateError {
       return left(const MusicFailure.api(HttpStatus.notFound));
@@ -28,7 +28,7 @@ class SongRepository {
     try {
       final song = await _remoteService.getCatalogMusicVideo(storefront, id);
       return right(song.data.first.toDomain() as MusicVideo);
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       return left(MusicFailure.api(e.response?.statusCode));
     } on StateError {
       return left(const MusicFailure.api(HttpStatus.notFound));

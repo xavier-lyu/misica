@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'search_suggestions.dart';
 
@@ -12,7 +12,7 @@ part of 'search_suggestions.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$SearchSuggestion {
@@ -99,22 +99,23 @@ class _$SearchSuggestionCopyWithImpl<$Res, $Val extends SearchSuggestion>
 }
 
 /// @nodoc
-abstract class _$$SearchSuggestionTermsCopyWith<$Res>
+abstract class _$$SearchSuggestionTermsImplCopyWith<$Res>
     implements $SearchSuggestionCopyWith<$Res> {
-  factory _$$SearchSuggestionTermsCopyWith(_$SearchSuggestionTerms value,
-          $Res Function(_$SearchSuggestionTerms) then) =
-      __$$SearchSuggestionTermsCopyWithImpl<$Res>;
+  factory _$$SearchSuggestionTermsImplCopyWith(
+          _$SearchSuggestionTermsImpl value,
+          $Res Function(_$SearchSuggestionTermsImpl) then) =
+      __$$SearchSuggestionTermsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String kind, String searchTerm, String? displayTerm});
 }
 
 /// @nodoc
-class __$$SearchSuggestionTermsCopyWithImpl<$Res>
-    extends _$SearchSuggestionCopyWithImpl<$Res, _$SearchSuggestionTerms>
-    implements _$$SearchSuggestionTermsCopyWith<$Res> {
-  __$$SearchSuggestionTermsCopyWithImpl(_$SearchSuggestionTerms _value,
-      $Res Function(_$SearchSuggestionTerms) _then)
+class __$$SearchSuggestionTermsImplCopyWithImpl<$Res>
+    extends _$SearchSuggestionCopyWithImpl<$Res, _$SearchSuggestionTermsImpl>
+    implements _$$SearchSuggestionTermsImplCopyWith<$Res> {
+  __$$SearchSuggestionTermsImplCopyWithImpl(_$SearchSuggestionTermsImpl _value,
+      $Res Function(_$SearchSuggestionTermsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -124,7 +125,7 @@ class __$$SearchSuggestionTermsCopyWithImpl<$Res>
     Object? searchTerm = null,
     Object? displayTerm = freezed,
   }) {
-    return _then(_$SearchSuggestionTerms(
+    return _then(_$SearchSuggestionTermsImpl(
       kind: null == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
@@ -143,10 +144,11 @@ class __$$SearchSuggestionTermsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SearchSuggestionTerms extends SearchSuggestionTerms {
-  const _$SearchSuggestionTerms(
-      {required this.kind, required this.searchTerm, required this.displayTerm})
-      : super._();
+class _$SearchSuggestionTermsImpl implements SearchSuggestionTerms {
+  const _$SearchSuggestionTermsImpl(
+      {required this.kind,
+      required this.searchTerm,
+      required this.displayTerm});
 
   @override
   final String kind;
@@ -161,10 +163,10 @@ class _$SearchSuggestionTerms extends SearchSuggestionTerms {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SearchSuggestionTerms &&
+            other is _$SearchSuggestionTermsImpl &&
             (identical(other.kind, kind) || other.kind == kind) &&
             (identical(other.searchTerm, searchTerm) ||
                 other.searchTerm == searchTerm) &&
@@ -178,9 +180,9 @@ class _$SearchSuggestionTerms extends SearchSuggestionTerms {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SearchSuggestionTermsCopyWith<_$SearchSuggestionTerms> get copyWith =>
-      __$$SearchSuggestionTermsCopyWithImpl<_$SearchSuggestionTerms>(
-          this, _$identity);
+  _$$SearchSuggestionTermsImplCopyWith<_$SearchSuggestionTermsImpl>
+      get copyWith => __$$SearchSuggestionTermsImplCopyWithImpl<
+          _$SearchSuggestionTermsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -249,12 +251,11 @@ class _$SearchSuggestionTerms extends SearchSuggestionTerms {
   }
 }
 
-abstract class SearchSuggestionTerms extends SearchSuggestion {
+abstract class SearchSuggestionTerms implements SearchSuggestion {
   const factory SearchSuggestionTerms(
       {required final String kind,
       required final String searchTerm,
-      required final String? displayTerm}) = _$SearchSuggestionTerms;
-  const SearchSuggestionTerms._() : super._();
+      required final String? displayTerm}) = _$SearchSuggestionTermsImpl;
 
   @override
   String get kind;
@@ -262,17 +263,17 @@ abstract class SearchSuggestionTerms extends SearchSuggestion {
   String? get displayTerm;
   @override
   @JsonKey(ignore: true)
-  _$$SearchSuggestionTermsCopyWith<_$SearchSuggestionTerms> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SearchSuggestionTermsImplCopyWith<_$SearchSuggestionTermsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SearchSuggestionTopResultsCopyWith<$Res>
+abstract class _$$SearchSuggestionTopResultsImplCopyWith<$Res>
     implements $SearchSuggestionCopyWith<$Res> {
-  factory _$$SearchSuggestionTopResultsCopyWith(
-          _$SearchSuggestionTopResults value,
-          $Res Function(_$SearchSuggestionTopResults) then) =
-      __$$SearchSuggestionTopResultsCopyWithImpl<$Res>;
+  factory _$$SearchSuggestionTopResultsImplCopyWith(
+          _$SearchSuggestionTopResultsImpl value,
+          $Res Function(_$SearchSuggestionTopResultsImpl) then) =
+      __$$SearchSuggestionTopResultsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String kind, Resource content});
@@ -281,12 +282,13 @@ abstract class _$$SearchSuggestionTopResultsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$SearchSuggestionTopResultsCopyWithImpl<$Res>
-    extends _$SearchSuggestionCopyWithImpl<$Res, _$SearchSuggestionTopResults>
-    implements _$$SearchSuggestionTopResultsCopyWith<$Res> {
-  __$$SearchSuggestionTopResultsCopyWithImpl(
-      _$SearchSuggestionTopResults _value,
-      $Res Function(_$SearchSuggestionTopResults) _then)
+class __$$SearchSuggestionTopResultsImplCopyWithImpl<$Res>
+    extends _$SearchSuggestionCopyWithImpl<$Res,
+        _$SearchSuggestionTopResultsImpl>
+    implements _$$SearchSuggestionTopResultsImplCopyWith<$Res> {
+  __$$SearchSuggestionTopResultsImplCopyWithImpl(
+      _$SearchSuggestionTopResultsImpl _value,
+      $Res Function(_$SearchSuggestionTopResultsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -295,7 +297,7 @@ class __$$SearchSuggestionTopResultsCopyWithImpl<$Res>
     Object? kind = null,
     Object? content = null,
   }) {
-    return _then(_$SearchSuggestionTopResults(
+    return _then(_$SearchSuggestionTopResultsImpl(
       kind: null == kind
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
@@ -318,10 +320,9 @@ class __$$SearchSuggestionTopResultsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SearchSuggestionTopResults extends SearchSuggestionTopResults {
-  const _$SearchSuggestionTopResults(
-      {required this.kind, required this.content})
-      : super._();
+class _$SearchSuggestionTopResultsImpl implements SearchSuggestionTopResults {
+  const _$SearchSuggestionTopResultsImpl(
+      {required this.kind, required this.content});
 
   @override
   final String kind;
@@ -334,10 +335,10 @@ class _$SearchSuggestionTopResults extends SearchSuggestionTopResults {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SearchSuggestionTopResults &&
+            other is _$SearchSuggestionTopResultsImpl &&
             (identical(other.kind, kind) || other.kind == kind) &&
             (identical(other.content, content) || other.content == content));
   }
@@ -348,9 +349,9 @@ class _$SearchSuggestionTopResults extends SearchSuggestionTopResults {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SearchSuggestionTopResultsCopyWith<_$SearchSuggestionTopResults>
-      get copyWith => __$$SearchSuggestionTopResultsCopyWithImpl<
-          _$SearchSuggestionTopResults>(this, _$identity);
+  _$$SearchSuggestionTopResultsImplCopyWith<_$SearchSuggestionTopResultsImpl>
+      get copyWith => __$$SearchSuggestionTopResultsImplCopyWithImpl<
+          _$SearchSuggestionTopResultsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -419,17 +420,16 @@ class _$SearchSuggestionTopResults extends SearchSuggestionTopResults {
   }
 }
 
-abstract class SearchSuggestionTopResults extends SearchSuggestion {
+abstract class SearchSuggestionTopResults implements SearchSuggestion {
   const factory SearchSuggestionTopResults(
       {required final String kind,
-      required final Resource content}) = _$SearchSuggestionTopResults;
-  const SearchSuggestionTopResults._() : super._();
+      required final Resource content}) = _$SearchSuggestionTopResultsImpl;
 
   @override
   String get kind;
   Resource get content;
   @override
   @JsonKey(ignore: true)
-  _$$SearchSuggestionTopResultsCopyWith<_$SearchSuggestionTopResults>
+  _$$SearchSuggestionTopResultsImplCopyWith<_$SearchSuggestionTopResultsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

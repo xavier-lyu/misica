@@ -4,10 +4,10 @@ import 'package:misica/src/music/core/presentation/widgets/resource_tile.dart';
 
 class PlaylistTrackTile extends StatelessWidget {
   const PlaylistTrackTile({
-    Key? key,
+    super.key,
     required this.track,
     this.onTap,
-  }) : super(key: key);
+  });
 
   final Track track;
   final VoidCallback? onTap;

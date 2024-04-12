@@ -6,42 +6,20 @@ part of 'song_notifier.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-// ignore_for_file: avoid_private_typedef_functions, non_constant_identifier_names, subtype_of_sealed_class, invalid_use_of_internal_member, unused_element, constant_identifier_names, unnecessary_raw_strings, library_private_types_in_public_api
-
-/// Copied from Dart SDK
-class _SystemHash {
-  _SystemHash._();
-
-  static int combine(int hash, int value) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + value);
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x0007ffff & hash) << 10));
-    return hash ^ (hash >> 6);
-  }
-
-  static int finish(int hash) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x03ffffff & hash) << 3));
-    // ignore: parameter_assignments
-    hash = hash ^ (hash >> 11);
-    return 0x1fffffff & (hash + ((0x00003fff & hash) << 15));
-  }
-}
-
-String $SongNotifierHash() => r'2ef2c77d3d525b43b6cbe066e348c36d08dee817';
+String _$songNotifierHash() => r'2ef2c77d3d525b43b6cbe066e348c36d08dee817';
 
 /// See also [SongNotifier].
+@ProviderFor(SongNotifier)
 final songNotifierProvider =
-    AutoDisposeAsyncNotifierProvider<SongNotifier, Track?>(
+    AutoDisposeAsyncNotifierProvider<SongNotifier, Track?>.internal(
   SongNotifier.new,
   name: r'songNotifierProvider',
   debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : $SongNotifierHash,
+      const bool.fromEnvironment('dart.vm.product') ? null : _$songNotifierHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
 );
-typedef SongNotifierRef = AutoDisposeAsyncNotifierProviderRef<Track?>;
 
-abstract class _$SongNotifier extends AutoDisposeAsyncNotifier<Track?> {
-  @override
-  FutureOr<Track?> build();
-}
+typedef _$SongNotifier = AutoDisposeAsyncNotifier<Track?>;
+// ignore_for_file: type=lint
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

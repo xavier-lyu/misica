@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MusicVideoIcon extends StatelessWidget {
-  const MusicVideoIcon({Key? key}) : super(key: key);
+  const MusicVideoIcon({super.key});
 
   @override
   Widget build(BuildContext context) {

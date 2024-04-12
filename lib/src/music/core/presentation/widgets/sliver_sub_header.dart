@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 
 class SliverSubHeader extends StatelessWidget {
   const SliverSubHeader({
-    Key? key,
+    super.key,
     required this.child,
     this.pinned = false,
     this.minHeight = 44,
     this.maxHeight = 44,
-  }) : super(key: key);
+  });
 
   final Widget child;
   final bool pinned;

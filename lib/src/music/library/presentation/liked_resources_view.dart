@@ -10,9 +10,9 @@ import 'resources_list_view.dart';
 
 class LikedResourcesView extends StatefulWidget {
   const LikedResourcesView({
-    Key? key,
+    super.key,
     required this.resources,
-  }) : super(key: key);
+  });
 
   final Map<String, List<Resource>> resources;
 

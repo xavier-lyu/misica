@@ -4,8 +4,7 @@ import 'package:misica/src/music/core/shared/formatters.dart';
 
 class PlaylistFooterView extends StatelessWidget {
   const PlaylistFooterView(
-      {Key? key, required this.songsCount, required this.duration})
-      : super(key: key);
+      {super.key, required this.songsCount, required this.duration});
 
   final int songsCount;
   final Duration duration;

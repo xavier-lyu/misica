@@ -1,4 +1,3 @@
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/providers.dart';
 import 'package:misica/src/music/player/infrastructure/music_player.dart';
 import 'package:music_kit/music_kit.dart';

@@ -6,7 +6,8 @@ part of 'resource_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ResourceRawDTO _$$ResourceRawDTOFromJson(Map json) => _$ResourceRawDTO(
+_$ResourceRawDTOImpl _$$ResourceRawDTOImplFromJson(Map json) =>
+    _$ResourceRawDTOImpl(
       json['id'] as String,
       json['type'] as String,
       (json['attributes'] as Map?)?.map(
@@ -29,7 +30,8 @@ _$ResourceRawDTO _$$ResourceRawDTOFromJson(Map json) => _$ResourceRawDTO(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$ResourceRawDTOToJson(_$ResourceRawDTO instance) =>
+Map<String, dynamic> _$$ResourceRawDTOImplToJson(
+        _$ResourceRawDTOImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
@@ -41,7 +43,7 @@ Map<String, dynamic> _$$ResourceRawDTOToJson(_$ResourceRawDTO instance) =>
       'runtimeType': instance.$type,
     };
 
-_$AlbumDTO _$$AlbumDTOFromJson(Map json) => _$AlbumDTO(
+_$AlbumDTOImpl _$$AlbumDTOImplFromJson(Map json) => _$AlbumDTOImpl(
       json['id'] as String,
       json['type'] as String,
       json['attributes'] == null
@@ -63,7 +65,7 @@ _$AlbumDTO _$$AlbumDTOFromJson(Map json) => _$AlbumDTO(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$AlbumDTOToJson(_$AlbumDTO instance) =>
+Map<String, dynamic> _$$AlbumDTOImplToJson(_$AlbumDTOImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
@@ -74,7 +76,7 @@ Map<String, dynamic> _$$AlbumDTOToJson(_$AlbumDTO instance) =>
       'runtimeType': instance.$type,
     };
 
-_$ArtistDTO _$$ArtistDTOFromJson(Map json) => _$ArtistDTO(
+_$ArtistDTOImpl _$$ArtistDTOImplFromJson(Map json) => _$ArtistDTOImpl(
       json['id'] as String,
       json['type'] as String,
       json['attributes'] == null
@@ -96,7 +98,7 @@ _$ArtistDTO _$$ArtistDTOFromJson(Map json) => _$ArtistDTO(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$ArtistDTOToJson(_$ArtistDTO instance) =>
+Map<String, dynamic> _$$ArtistDTOImplToJson(_$ArtistDTOImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
@@ -107,7 +109,7 @@ Map<String, dynamic> _$$ArtistDTOToJson(_$ArtistDTO instance) =>
       'runtimeType': instance.$type,
     };
 
-_$PlaylistDTO _$$PlaylistDTOFromJson(Map json) => _$PlaylistDTO(
+_$PlaylistDTOImpl _$$PlaylistDTOImplFromJson(Map json) => _$PlaylistDTOImpl(
       json['id'] as String,
       json['type'] as String,
       json['attributes'] == null
@@ -129,7 +131,7 @@ _$PlaylistDTO _$$PlaylistDTOFromJson(Map json) => _$PlaylistDTO(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$PlaylistDTOToJson(_$PlaylistDTO instance) =>
+Map<String, dynamic> _$$PlaylistDTOImplToJson(_$PlaylistDTOImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
@@ -140,7 +142,7 @@ Map<String, dynamic> _$$PlaylistDTOToJson(_$PlaylistDTO instance) =>
       'runtimeType': instance.$type,
     };
 
-_$SongDTO _$$SongDTOFromJson(Map json) => _$SongDTO(
+_$SongDTOImpl _$$SongDTOImplFromJson(Map json) => _$SongDTOImpl(
       json['id'] as String,
       json['type'] as String,
       json['attributes'] == null
@@ -154,7 +156,8 @@ _$SongDTO _$$SongDTOFromJson(Map json) => _$SongDTO(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$SongDTOToJson(_$SongDTO instance) => <String, dynamic>{
+Map<String, dynamic> _$$SongDTOImplToJson(_$SongDTOImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
       'attributes': instance.attributes?.toJson(),
@@ -162,7 +165,7 @@ Map<String, dynamic> _$$SongDTOToJson(_$SongDTO instance) => <String, dynamic>{
       'runtimeType': instance.$type,
     };
 
-_$StationDTO _$$StationDTOFromJson(Map json) => _$StationDTO(
+_$StationDTOImpl _$$StationDTOImplFromJson(Map json) => _$StationDTOImpl(
       json['id'] as String,
       json['type'] as String,
       json['attributes'] == null
@@ -172,7 +175,7 @@ _$StationDTO _$$StationDTOFromJson(Map json) => _$StationDTO(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$StationDTOToJson(_$StationDTO instance) =>
+Map<String, dynamic> _$$StationDTOImplToJson(_$StationDTOImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
@@ -180,7 +183,8 @@ Map<String, dynamic> _$$StationDTOToJson(_$StationDTO instance) =>
       'runtimeType': instance.$type,
     };
 
-_$MusicVideoDTO _$$MusicVideoDTOFromJson(Map json) => _$MusicVideoDTO(
+_$MusicVideoDTOImpl _$$MusicVideoDTOImplFromJson(Map json) =>
+    _$MusicVideoDTOImpl(
       json['id'] as String,
       json['type'] as String,
       json['attributes'] == null
@@ -202,7 +206,7 @@ _$MusicVideoDTO _$$MusicVideoDTOFromJson(Map json) => _$MusicVideoDTO(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$MusicVideoDTOToJson(_$MusicVideoDTO instance) =>
+Map<String, dynamic> _$$MusicVideoDTOImplToJson(_$MusicVideoDTOImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
@@ -213,7 +217,7 @@ Map<String, dynamic> _$$MusicVideoDTOToJson(_$MusicVideoDTO instance) =>
       'runtimeType': instance.$type,
     };
 
-_$CuratorDTO _$$CuratorDTOFromJson(Map json) => _$CuratorDTO(
+_$CuratorDTOImpl _$$CuratorDTOImplFromJson(Map json) => _$CuratorDTOImpl(
       json['id'] as String,
       json['type'] as String,
       json['attributes'] == null
@@ -227,7 +231,7 @@ _$CuratorDTO _$$CuratorDTOFromJson(Map json) => _$CuratorDTO(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$CuratorDTOToJson(_$CuratorDTO instance) =>
+Map<String, dynamic> _$$CuratorDTOImplToJson(_$CuratorDTOImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
@@ -236,7 +240,7 @@ Map<String, dynamic> _$$CuratorDTOToJson(_$CuratorDTO instance) =>
       'runtimeType': instance.$type,
     };
 
-_$GenreDTO _$$GenreDTOFromJson(Map json) => _$GenreDTO(
+_$GenreDTOImpl _$$GenreDTOImplFromJson(Map json) => _$GenreDTOImpl(
       json['id'] as String,
       json['type'] as String,
       json['attributes'] == null
@@ -246,7 +250,7 @@ _$GenreDTO _$$GenreDTOFromJson(Map json) => _$GenreDTO(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$GenreDTOToJson(_$GenreDTO instance) =>
+Map<String, dynamic> _$$GenreDTOImplToJson(_$GenreDTOImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
@@ -254,7 +258,7 @@ Map<String, dynamic> _$$GenreDTOToJson(_$GenreDTO instance) =>
       'runtimeType': instance.$type,
     };
 
-_$_ResourceMeta _$$_ResourceMetaFromJson(Map json) => _$_ResourceMeta(
+_$ResourceMetaImpl _$$ResourceMetaImplFromJson(Map json) => _$ResourceMetaImpl(
       views: json['views'] == null
           ? null
           : ResourceMetaOrderDTO.fromJson(
@@ -265,20 +269,20 @@ _$_ResourceMeta _$$_ResourceMetaFromJson(Map json) => _$_ResourceMeta(
               Map<String, dynamic>.from(json['results'] as Map)),
     );
 
-Map<String, dynamic> _$$_ResourceMetaToJson(_$_ResourceMeta instance) =>
+Map<String, dynamic> _$$ResourceMetaImplToJson(_$ResourceMetaImpl instance) =>
     <String, dynamic>{
       'views': instance.views?.toJson(),
       'results': instance.results?.toJson(),
     };
 
-_$_ResourceMetaOrderDTO _$$_ResourceMetaOrderDTOFromJson(Map json) =>
-    _$_ResourceMetaOrderDTO(
+_$ResourceMetaOrderDTOImpl _$$ResourceMetaOrderDTOImplFromJson(Map json) =>
+    _$ResourceMetaOrderDTOImpl(
       order:
           (json['order'] as List<dynamic>?)?.map((e) => e as String).toList(),
     );
 
-Map<String, dynamic> _$$_ResourceMetaOrderDTOToJson(
-        _$_ResourceMetaOrderDTO instance) =>
+Map<String, dynamic> _$$ResourceMetaOrderDTOImplToJson(
+        _$ResourceMetaOrderDTOImpl instance) =>
     <String, dynamic>{
       'order': instance.order,
     };

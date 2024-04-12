@@ -1,7 +1,7 @@
 import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:material_floating_search_bar/material_floating_search_bar.dart';
+import 'package:material_floating_search_bar_2/material_floating_search_bar_2.dart';
 import 'package:misica/src/core/shared/color_extensions.dart';
 import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
@@ -13,13 +13,13 @@ typedef ResourceCallback = void Function(Resource resource);
 
 class SearchBar extends ConsumerStatefulWidget {
   const SearchBar({
-    Key? key,
+    super.key,
     this.body,
     required this.title,
     this.hint,
     this.onSubmitted,
     this.onNavigateToResultPage,
-  }) : super(key: key);
+  });
 
   final Widget? body;
   final String title;

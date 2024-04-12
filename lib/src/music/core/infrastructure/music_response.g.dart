@@ -6,7 +6,8 @@ part of 'music_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MusicResponse _$$_MusicResponseFromJson(Map json) => _$_MusicResponse(
+_$MusicResponseImpl _$$MusicResponseImplFromJson(Map json) =>
+    _$MusicResponseImpl(
       next: json['next'] as String?,
       data: (json['data'] as List<dynamic>)
           .map((e) =>
@@ -14,7 +15,7 @@ _$_MusicResponse _$$_MusicResponseFromJson(Map json) => _$_MusicResponse(
           .toList(),
     );
 
-Map<String, dynamic> _$$_MusicResponseToJson(_$_MusicResponse instance) =>
+Map<String, dynamic> _$$MusicResponseImplToJson(_$MusicResponseImpl instance) =>
     <String, dynamic>{
       'next': instance.next,
       'data': instance.data.map(const ResourceDTOConverter().toJson).toList(),

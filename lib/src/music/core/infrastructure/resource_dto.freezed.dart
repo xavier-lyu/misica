@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'resource_dto.dart';
 
@@ -12,7 +12,7 @@ part of 'resource_dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ResourceDTO _$ResourceDTOFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
@@ -45,6 +45,7 @@ ResourceDTO _$ResourceDTOFromJson(Map<String, dynamic> json) {
 mixin _$ResourceDTO {
   String get id => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
+  Object? get attributes => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
     TResult Function(
@@ -298,11 +299,11 @@ class _$ResourceDTOCopyWithImpl<$Res, $Val extends ResourceDTO>
 }
 
 /// @nodoc
-abstract class _$$ResourceRawDTOCopyWith<$Res>
+abstract class _$$ResourceRawDTOImplCopyWith<$Res>
     implements $ResourceDTOCopyWith<$Res> {
-  factory _$$ResourceRawDTOCopyWith(
-          _$ResourceRawDTO value, $Res Function(_$ResourceRawDTO) then) =
-      __$$ResourceRawDTOCopyWithImpl<$Res>;
+  factory _$$ResourceRawDTOImplCopyWith(_$ResourceRawDTOImpl value,
+          $Res Function(_$ResourceRawDTOImpl) then) =
+      __$$ResourceRawDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -317,11 +318,11 @@ abstract class _$$ResourceRawDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ResourceRawDTOCopyWithImpl<$Res>
-    extends _$ResourceDTOCopyWithImpl<$Res, _$ResourceRawDTO>
-    implements _$$ResourceRawDTOCopyWith<$Res> {
-  __$$ResourceRawDTOCopyWithImpl(
-      _$ResourceRawDTO _value, $Res Function(_$ResourceRawDTO) _then)
+class __$$ResourceRawDTOImplCopyWithImpl<$Res>
+    extends _$ResourceDTOCopyWithImpl<$Res, _$ResourceRawDTOImpl>
+    implements _$$ResourceRawDTOImplCopyWith<$Res> {
+  __$$ResourceRawDTOImplCopyWithImpl(
+      _$ResourceRawDTOImpl _value, $Res Function(_$ResourceRawDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -334,7 +335,7 @@ class __$$ResourceRawDTOCopyWithImpl<$Res>
     Object? views = freezed,
     Object? meta = freezed,
   }) {
-    return _then(_$ResourceRawDTO(
+    return _then(_$ResourceRawDTOImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -377,8 +378,8 @@ class __$$ResourceRawDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ResourceRawDTO extends ResourceRawDTO {
-  const _$ResourceRawDTO(
+class _$ResourceRawDTOImpl extends ResourceRawDTO {
+  const _$ResourceRawDTOImpl(
       this.id,
       this.type,
       final Map<String, dynamic>? attributes,
@@ -392,8 +393,8 @@ class _$ResourceRawDTO extends ResourceRawDTO {
         $type = $type ?? 'default',
         super._();
 
-  factory _$ResourceRawDTO.fromJson(Map<String, dynamic> json) =>
-      _$$ResourceRawDTOFromJson(json);
+  factory _$ResourceRawDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResourceRawDTOImplFromJson(json);
 
   @override
   final String id;
@@ -404,6 +405,7 @@ class _$ResourceRawDTO extends ResourceRawDTO {
   Map<String, dynamic>? get attributes {
     final value = _attributes;
     if (value == null) return null;
+    if (_attributes is EqualUnmodifiableMapView) return _attributes;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
@@ -413,6 +415,7 @@ class _$ResourceRawDTO extends ResourceRawDTO {
   Map<String, ResourceRelationshipDTO>? get relationships {
     final value = _relationships;
     if (value == null) return null;
+    if (_relationships is EqualUnmodifiableMapView) return _relationships;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
@@ -422,6 +425,7 @@ class _$ResourceRawDTO extends ResourceRawDTO {
   Map<String, ResourceViewDTO>? get views {
     final value = _views;
     if (value == null) return null;
+    if (_views is EqualUnmodifiableMapView) return _views;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
@@ -438,10 +442,10 @@ class _$ResourceRawDTO extends ResourceRawDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ResourceRawDTO &&
+            other is _$ResourceRawDTOImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
             const DeepCollectionEquality()
@@ -466,8 +470,9 @@ class _$ResourceRawDTO extends ResourceRawDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ResourceRawDTOCopyWith<_$ResourceRawDTO> get copyWith =>
-      __$$ResourceRawDTOCopyWithImpl<_$ResourceRawDTO>(this, _$identity);
+  _$$ResourceRawDTOImplCopyWith<_$ResourceRawDTOImpl> get copyWith =>
+      __$$ResourceRawDTOImplCopyWithImpl<_$ResourceRawDTOImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -703,7 +708,7 @@ class _$ResourceRawDTO extends ResourceRawDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ResourceRawDTOToJson(
+    return _$$ResourceRawDTOImplToJson(
       this,
     );
   }
@@ -716,31 +721,33 @@ abstract class ResourceRawDTO extends ResourceDTO {
       final Map<String, dynamic>? attributes,
       final Map<String, ResourceRelationshipDTO>? relationships,
       final Map<String, ResourceViewDTO>? views,
-      final ResourceMetaDTO? meta) = _$ResourceRawDTO;
+      final ResourceMetaDTO? meta) = _$ResourceRawDTOImpl;
   const ResourceRawDTO._() : super._();
 
   factory ResourceRawDTO.fromJson(Map<String, dynamic> json) =
-      _$ResourceRawDTO.fromJson;
+      _$ResourceRawDTOImpl.fromJson;
 
   @override
   String get id;
   @override
   String get type;
+  @override
   Map<String, dynamic>? get attributes;
   Map<String, ResourceRelationshipDTO>? get relationships;
   Map<String, ResourceViewDTO>? get views;
   ResourceMetaDTO? get meta;
   @override
   @JsonKey(ignore: true)
-  _$$ResourceRawDTOCopyWith<_$ResourceRawDTO> get copyWith =>
+  _$$ResourceRawDTOImplCopyWith<_$ResourceRawDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$AlbumDTOCopyWith<$Res> implements $ResourceDTOCopyWith<$Res> {
-  factory _$$AlbumDTOCopyWith(
-          _$AlbumDTO value, $Res Function(_$AlbumDTO) then) =
-      __$$AlbumDTOCopyWithImpl<$Res>;
+abstract class _$$AlbumDTOImplCopyWith<$Res>
+    implements $ResourceDTOCopyWith<$Res> {
+  factory _$$AlbumDTOImplCopyWith(
+          _$AlbumDTOImpl value, $Res Function(_$AlbumDTOImpl) then) =
+      __$$AlbumDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -757,10 +764,11 @@ abstract class _$$AlbumDTOCopyWith<$Res> implements $ResourceDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$AlbumDTOCopyWithImpl<$Res>
-    extends _$ResourceDTOCopyWithImpl<$Res, _$AlbumDTO>
-    implements _$$AlbumDTOCopyWith<$Res> {
-  __$$AlbumDTOCopyWithImpl(_$AlbumDTO _value, $Res Function(_$AlbumDTO) _then)
+class __$$AlbumDTOImplCopyWithImpl<$Res>
+    extends _$ResourceDTOCopyWithImpl<$Res, _$AlbumDTOImpl>
+    implements _$$AlbumDTOImplCopyWith<$Res> {
+  __$$AlbumDTOImplCopyWithImpl(
+      _$AlbumDTOImpl _value, $Res Function(_$AlbumDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -773,7 +781,7 @@ class __$$AlbumDTOCopyWithImpl<$Res>
     Object? views = freezed,
     Object? meta = freezed,
   }) {
-    return _then(_$AlbumDTO(
+    return _then(_$AlbumDTOImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -840,16 +848,16 @@ class __$$AlbumDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$AlbumDTO extends AlbumDTO {
-  const _$AlbumDTO(this.id, this.type, this.attributes, this.relationships,
+class _$AlbumDTOImpl extends AlbumDTO {
+  const _$AlbumDTOImpl(this.id, this.type, this.attributes, this.relationships,
       final Map<String, ResourceViewDTO>? views, this.meta,
       {final String? $type})
       : _views = views,
         $type = $type ?? 'album',
         super._();
 
-  factory _$AlbumDTO.fromJson(Map<String, dynamic> json) =>
-      _$$AlbumDTOFromJson(json);
+  factory _$AlbumDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AlbumDTOImplFromJson(json);
 
   @override
   final String id;
@@ -864,6 +872,7 @@ class _$AlbumDTO extends AlbumDTO {
   Map<String, ResourceViewDTO>? get views {
     final value = _views;
     if (value == null) return null;
+    if (_views is EqualUnmodifiableMapView) return _views;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
@@ -880,10 +889,10 @@ class _$AlbumDTO extends AlbumDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$AlbumDTO &&
+            other is _$AlbumDTOImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.attributes, attributes) ||
@@ -902,8 +911,8 @@ class _$AlbumDTO extends AlbumDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$AlbumDTOCopyWith<_$AlbumDTO> get copyWith =>
-      __$$AlbumDTOCopyWithImpl<_$AlbumDTO>(this, _$identity);
+  _$$AlbumDTOImplCopyWith<_$AlbumDTOImpl> get copyWith =>
+      __$$AlbumDTOImplCopyWithImpl<_$AlbumDTOImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1139,7 +1148,7 @@ class _$AlbumDTO extends AlbumDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AlbumDTOToJson(
+    return _$$AlbumDTOImplToJson(
       this,
     );
   }
@@ -1152,31 +1161,33 @@ abstract class AlbumDTO extends ResourceDTO {
       final AlbumAttributesDTO? attributes,
       final AlbumRelationshipsDTO? relationships,
       final Map<String, ResourceViewDTO>? views,
-      final ResourceMetaDTO? meta) = _$AlbumDTO;
+      final ResourceMetaDTO? meta) = _$AlbumDTOImpl;
   const AlbumDTO._() : super._();
 
-  factory AlbumDTO.fromJson(Map<String, dynamic> json) = _$AlbumDTO.fromJson;
+  factory AlbumDTO.fromJson(Map<String, dynamic> json) =
+      _$AlbumDTOImpl.fromJson;
 
   @override
   String get id;
   @override
   String get type;
+  @override
   AlbumAttributesDTO? get attributes;
   AlbumRelationshipsDTO? get relationships;
   Map<String, ResourceViewDTO>? get views;
   ResourceMetaDTO? get meta;
   @override
   @JsonKey(ignore: true)
-  _$$AlbumDTOCopyWith<_$AlbumDTO> get copyWith =>
+  _$$AlbumDTOImplCopyWith<_$AlbumDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ArtistDTOCopyWith<$Res>
+abstract class _$$ArtistDTOImplCopyWith<$Res>
     implements $ResourceDTOCopyWith<$Res> {
-  factory _$$ArtistDTOCopyWith(
-          _$ArtistDTO value, $Res Function(_$ArtistDTO) then) =
-      __$$ArtistDTOCopyWithImpl<$Res>;
+  factory _$$ArtistDTOImplCopyWith(
+          _$ArtistDTOImpl value, $Res Function(_$ArtistDTOImpl) then) =
+      __$$ArtistDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1193,11 +1204,11 @@ abstract class _$$ArtistDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ArtistDTOCopyWithImpl<$Res>
-    extends _$ResourceDTOCopyWithImpl<$Res, _$ArtistDTO>
-    implements _$$ArtistDTOCopyWith<$Res> {
-  __$$ArtistDTOCopyWithImpl(
-      _$ArtistDTO _value, $Res Function(_$ArtistDTO) _then)
+class __$$ArtistDTOImplCopyWithImpl<$Res>
+    extends _$ResourceDTOCopyWithImpl<$Res, _$ArtistDTOImpl>
+    implements _$$ArtistDTOImplCopyWith<$Res> {
+  __$$ArtistDTOImplCopyWithImpl(
+      _$ArtistDTOImpl _value, $Res Function(_$ArtistDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1210,7 +1221,7 @@ class __$$ArtistDTOCopyWithImpl<$Res>
     Object? views = freezed,
     Object? meta = freezed,
   }) {
-    return _then(_$ArtistDTO(
+    return _then(_$ArtistDTOImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1278,16 +1289,16 @@ class __$$ArtistDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ArtistDTO extends ArtistDTO {
-  const _$ArtistDTO(this.id, this.type, this.attributes, this.relationships,
+class _$ArtistDTOImpl extends ArtistDTO {
+  const _$ArtistDTOImpl(this.id, this.type, this.attributes, this.relationships,
       final Map<String, ResourceViewDTO>? views, this.meta,
       {final String? $type})
       : _views = views,
         $type = $type ?? 'artist',
         super._();
 
-  factory _$ArtistDTO.fromJson(Map<String, dynamic> json) =>
-      _$$ArtistDTOFromJson(json);
+  factory _$ArtistDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ArtistDTOImplFromJson(json);
 
   @override
   final String id;
@@ -1302,6 +1313,7 @@ class _$ArtistDTO extends ArtistDTO {
   Map<String, ResourceViewDTO>? get views {
     final value = _views;
     if (value == null) return null;
+    if (_views is EqualUnmodifiableMapView) return _views;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
@@ -1318,10 +1330,10 @@ class _$ArtistDTO extends ArtistDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ArtistDTO &&
+            other is _$ArtistDTOImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.attributes, attributes) ||
@@ -1340,8 +1352,8 @@ class _$ArtistDTO extends ArtistDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ArtistDTOCopyWith<_$ArtistDTO> get copyWith =>
-      __$$ArtistDTOCopyWithImpl<_$ArtistDTO>(this, _$identity);
+  _$$ArtistDTOImplCopyWith<_$ArtistDTOImpl> get copyWith =>
+      __$$ArtistDTOImplCopyWithImpl<_$ArtistDTOImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1577,7 +1589,7 @@ class _$ArtistDTO extends ArtistDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ArtistDTOToJson(
+    return _$$ArtistDTOImplToJson(
       this,
     );
   }
@@ -1590,31 +1602,33 @@ abstract class ArtistDTO extends ResourceDTO {
       final ArtistAttributesDTO? attributes,
       final ArtistRelationshipsDTO? relationships,
       final Map<String, ResourceViewDTO>? views,
-      final ResourceMetaDTO? meta) = _$ArtistDTO;
+      final ResourceMetaDTO? meta) = _$ArtistDTOImpl;
   const ArtistDTO._() : super._();
 
-  factory ArtistDTO.fromJson(Map<String, dynamic> json) = _$ArtistDTO.fromJson;
+  factory ArtistDTO.fromJson(Map<String, dynamic> json) =
+      _$ArtistDTOImpl.fromJson;
 
   @override
   String get id;
   @override
   String get type;
+  @override
   ArtistAttributesDTO? get attributes;
   ArtistRelationshipsDTO? get relationships;
   Map<String, ResourceViewDTO>? get views;
   ResourceMetaDTO? get meta;
   @override
   @JsonKey(ignore: true)
-  _$$ArtistDTOCopyWith<_$ArtistDTO> get copyWith =>
+  _$$ArtistDTOImplCopyWith<_$ArtistDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$PlaylistDTOCopyWith<$Res>
+abstract class _$$PlaylistDTOImplCopyWith<$Res>
     implements $ResourceDTOCopyWith<$Res> {
-  factory _$$PlaylistDTOCopyWith(
-          _$PlaylistDTO value, $Res Function(_$PlaylistDTO) then) =
-      __$$PlaylistDTOCopyWithImpl<$Res>;
+  factory _$$PlaylistDTOImplCopyWith(
+          _$PlaylistDTOImpl value, $Res Function(_$PlaylistDTOImpl) then) =
+      __$$PlaylistDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1631,11 +1645,11 @@ abstract class _$$PlaylistDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PlaylistDTOCopyWithImpl<$Res>
-    extends _$ResourceDTOCopyWithImpl<$Res, _$PlaylistDTO>
-    implements _$$PlaylistDTOCopyWith<$Res> {
-  __$$PlaylistDTOCopyWithImpl(
-      _$PlaylistDTO _value, $Res Function(_$PlaylistDTO) _then)
+class __$$PlaylistDTOImplCopyWithImpl<$Res>
+    extends _$ResourceDTOCopyWithImpl<$Res, _$PlaylistDTOImpl>
+    implements _$$PlaylistDTOImplCopyWith<$Res> {
+  __$$PlaylistDTOImplCopyWithImpl(
+      _$PlaylistDTOImpl _value, $Res Function(_$PlaylistDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1648,7 +1662,7 @@ class __$$PlaylistDTOCopyWithImpl<$Res>
     Object? views = freezed,
     Object? meta = freezed,
   }) {
-    return _then(_$PlaylistDTO(
+    return _then(_$PlaylistDTOImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1716,16 +1730,16 @@ class __$$PlaylistDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$PlaylistDTO extends PlaylistDTO {
-  const _$PlaylistDTO(this.id, this.type, this.attributes, this.relationships,
-      final Map<String, ResourceViewDTO>? views, this.meta,
+class _$PlaylistDTOImpl extends PlaylistDTO {
+  const _$PlaylistDTOImpl(this.id, this.type, this.attributes,
+      this.relationships, final Map<String, ResourceViewDTO>? views, this.meta,
       {final String? $type})
       : _views = views,
         $type = $type ?? 'playlist',
         super._();
 
-  factory _$PlaylistDTO.fromJson(Map<String, dynamic> json) =>
-      _$$PlaylistDTOFromJson(json);
+  factory _$PlaylistDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PlaylistDTOImplFromJson(json);
 
   @override
   final String id;
@@ -1740,6 +1754,7 @@ class _$PlaylistDTO extends PlaylistDTO {
   Map<String, ResourceViewDTO>? get views {
     final value = _views;
     if (value == null) return null;
+    if (_views is EqualUnmodifiableMapView) return _views;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
@@ -1756,10 +1771,10 @@ class _$PlaylistDTO extends PlaylistDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PlaylistDTO &&
+            other is _$PlaylistDTOImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.attributes, attributes) ||
@@ -1778,8 +1793,8 @@ class _$PlaylistDTO extends PlaylistDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PlaylistDTOCopyWith<_$PlaylistDTO> get copyWith =>
-      __$$PlaylistDTOCopyWithImpl<_$PlaylistDTO>(this, _$identity);
+  _$$PlaylistDTOImplCopyWith<_$PlaylistDTOImpl> get copyWith =>
+      __$$PlaylistDTOImplCopyWithImpl<_$PlaylistDTOImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2015,7 +2030,7 @@ class _$PlaylistDTO extends PlaylistDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PlaylistDTOToJson(
+    return _$$PlaylistDTOImplToJson(
       this,
     );
   }
@@ -2028,30 +2043,33 @@ abstract class PlaylistDTO extends ResourceDTO {
       final PlaylistAttributesDTO? attributes,
       final PlaylistRelationshipsDTO? relationships,
       final Map<String, ResourceViewDTO>? views,
-      final ResourceMetaDTO? meta) = _$PlaylistDTO;
+      final ResourceMetaDTO? meta) = _$PlaylistDTOImpl;
   const PlaylistDTO._() : super._();
 
   factory PlaylistDTO.fromJson(Map<String, dynamic> json) =
-      _$PlaylistDTO.fromJson;
+      _$PlaylistDTOImpl.fromJson;
 
   @override
   String get id;
   @override
   String get type;
+  @override
   PlaylistAttributesDTO? get attributes;
   PlaylistRelationshipsDTO? get relationships;
   Map<String, ResourceViewDTO>? get views;
   ResourceMetaDTO? get meta;
   @override
   @JsonKey(ignore: true)
-  _$$PlaylistDTOCopyWith<_$PlaylistDTO> get copyWith =>
+  _$$PlaylistDTOImplCopyWith<_$PlaylistDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SongDTOCopyWith<$Res> implements $ResourceDTOCopyWith<$Res> {
-  factory _$$SongDTOCopyWith(_$SongDTO value, $Res Function(_$SongDTO) then) =
-      __$$SongDTOCopyWithImpl<$Res>;
+abstract class _$$SongDTOImplCopyWith<$Res>
+    implements $ResourceDTOCopyWith<$Res> {
+  factory _$$SongDTOImplCopyWith(
+          _$SongDTOImpl value, $Res Function(_$SongDTOImpl) then) =
+      __$$SongDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2065,10 +2083,11 @@ abstract class _$$SongDTOCopyWith<$Res> implements $ResourceDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$SongDTOCopyWithImpl<$Res>
-    extends _$ResourceDTOCopyWithImpl<$Res, _$SongDTO>
-    implements _$$SongDTOCopyWith<$Res> {
-  __$$SongDTOCopyWithImpl(_$SongDTO _value, $Res Function(_$SongDTO) _then)
+class __$$SongDTOImplCopyWithImpl<$Res>
+    extends _$ResourceDTOCopyWithImpl<$Res, _$SongDTOImpl>
+    implements _$$SongDTOImplCopyWith<$Res> {
+  __$$SongDTOImplCopyWithImpl(
+      _$SongDTOImpl _value, $Res Function(_$SongDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2079,7 +2098,7 @@ class __$$SongDTOCopyWithImpl<$Res>
     Object? attributes = freezed,
     Object? relationships = freezed,
   }) {
-    return _then(_$SongDTO(
+    return _then(_$SongDTOImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2126,14 +2145,14 @@ class __$$SongDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$SongDTO extends SongDTO {
-  const _$SongDTO(this.id, this.type, this.attributes, this.relationships,
+class _$SongDTOImpl extends SongDTO {
+  const _$SongDTOImpl(this.id, this.type, this.attributes, this.relationships,
       {final String? $type})
       : $type = $type ?? 'song',
         super._();
 
-  factory _$SongDTO.fromJson(Map<String, dynamic> json) =>
-      _$$SongDTOFromJson(json);
+  factory _$SongDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SongDTOImplFromJson(json);
 
   @override
   final String id;
@@ -2153,10 +2172,10 @@ class _$SongDTO extends SongDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SongDTO &&
+            other is _$SongDTOImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.attributes, attributes) ||
@@ -2173,8 +2192,8 @@ class _$SongDTO extends SongDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SongDTOCopyWith<_$SongDTO> get copyWith =>
-      __$$SongDTOCopyWithImpl<_$SongDTO>(this, _$identity);
+  _$$SongDTOImplCopyWith<_$SongDTOImpl> get copyWith =>
+      __$$SongDTOImplCopyWithImpl<_$SongDTOImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2410,7 +2429,7 @@ class _$SongDTO extends SongDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SongDTOToJson(
+    return _$$SongDTOImplToJson(
       this,
     );
   }
@@ -2421,29 +2440,30 @@ abstract class SongDTO extends ResourceDTO {
       final String id,
       final String type,
       final SongAttributesDTO? attributes,
-      final SongRelationshipsDTO? relationships) = _$SongDTO;
+      final SongRelationshipsDTO? relationships) = _$SongDTOImpl;
   const SongDTO._() : super._();
 
-  factory SongDTO.fromJson(Map<String, dynamic> json) = _$SongDTO.fromJson;
+  factory SongDTO.fromJson(Map<String, dynamic> json) = _$SongDTOImpl.fromJson;
 
   @override
   String get id;
   @override
   String get type;
+  @override
   SongAttributesDTO? get attributes;
   SongRelationshipsDTO? get relationships;
   @override
   @JsonKey(ignore: true)
-  _$$SongDTOCopyWith<_$SongDTO> get copyWith =>
+  _$$SongDTOImplCopyWith<_$SongDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$StationDTOCopyWith<$Res>
+abstract class _$$StationDTOImplCopyWith<$Res>
     implements $ResourceDTOCopyWith<$Res> {
-  factory _$$StationDTOCopyWith(
-          _$StationDTO value, $Res Function(_$StationDTO) then) =
-      __$$StationDTOCopyWithImpl<$Res>;
+  factory _$$StationDTOImplCopyWith(
+          _$StationDTOImpl value, $Res Function(_$StationDTOImpl) then) =
+      __$$StationDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, String type, StationAttributesDTO? attributes});
@@ -2452,11 +2472,11 @@ abstract class _$$StationDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$StationDTOCopyWithImpl<$Res>
-    extends _$ResourceDTOCopyWithImpl<$Res, _$StationDTO>
-    implements _$$StationDTOCopyWith<$Res> {
-  __$$StationDTOCopyWithImpl(
-      _$StationDTO _value, $Res Function(_$StationDTO) _then)
+class __$$StationDTOImplCopyWithImpl<$Res>
+    extends _$ResourceDTOCopyWithImpl<$Res, _$StationDTOImpl>
+    implements _$$StationDTOImplCopyWith<$Res> {
+  __$$StationDTOImplCopyWithImpl(
+      _$StationDTOImpl _value, $Res Function(_$StationDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2466,7 +2486,7 @@ class __$$StationDTOCopyWithImpl<$Res>
     Object? type = null,
     Object? attributes = freezed,
   }) {
-    return _then(_$StationDTO(
+    return _then(_$StationDTOImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2497,13 +2517,14 @@ class __$$StationDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$StationDTO extends StationDTO {
-  const _$StationDTO(this.id, this.type, this.attributes, {final String? $type})
+class _$StationDTOImpl extends StationDTO {
+  const _$StationDTOImpl(this.id, this.type, this.attributes,
+      {final String? $type})
       : $type = $type ?? 'station',
         super._();
 
-  factory _$StationDTO.fromJson(Map<String, dynamic> json) =>
-      _$$StationDTOFromJson(json);
+  factory _$StationDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$StationDTOImplFromJson(json);
 
   @override
   final String id;
@@ -2521,10 +2542,10 @@ class _$StationDTO extends StationDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$StationDTO &&
+            other is _$StationDTOImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.attributes, attributes) ||
@@ -2538,8 +2559,8 @@ class _$StationDTO extends StationDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$StationDTOCopyWith<_$StationDTO> get copyWith =>
-      __$$StationDTOCopyWithImpl<_$StationDTO>(this, _$identity);
+  _$$StationDTOImplCopyWith<_$StationDTOImpl> get copyWith =>
+      __$$StationDTOImplCopyWithImpl<_$StationDTOImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2775,7 +2796,7 @@ class _$StationDTO extends StationDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$StationDTOToJson(
+    return _$$StationDTOImplToJson(
       this,
     );
   }
@@ -2783,29 +2804,30 @@ class _$StationDTO extends StationDTO {
 
 abstract class StationDTO extends ResourceDTO {
   const factory StationDTO(final String id, final String type,
-      final StationAttributesDTO? attributes) = _$StationDTO;
+      final StationAttributesDTO? attributes) = _$StationDTOImpl;
   const StationDTO._() : super._();
 
   factory StationDTO.fromJson(Map<String, dynamic> json) =
-      _$StationDTO.fromJson;
+      _$StationDTOImpl.fromJson;
 
   @override
   String get id;
   @override
   String get type;
+  @override
   StationAttributesDTO? get attributes;
   @override
   @JsonKey(ignore: true)
-  _$$StationDTOCopyWith<_$StationDTO> get copyWith =>
+  _$$StationDTOImplCopyWith<_$StationDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$MusicVideoDTOCopyWith<$Res>
+abstract class _$$MusicVideoDTOImplCopyWith<$Res>
     implements $ResourceDTOCopyWith<$Res> {
-  factory _$$MusicVideoDTOCopyWith(
-          _$MusicVideoDTO value, $Res Function(_$MusicVideoDTO) then) =
-      __$$MusicVideoDTOCopyWithImpl<$Res>;
+  factory _$$MusicVideoDTOImplCopyWith(
+          _$MusicVideoDTOImpl value, $Res Function(_$MusicVideoDTOImpl) then) =
+      __$$MusicVideoDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2822,11 +2844,11 @@ abstract class _$$MusicVideoDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$MusicVideoDTOCopyWithImpl<$Res>
-    extends _$ResourceDTOCopyWithImpl<$Res, _$MusicVideoDTO>
-    implements _$$MusicVideoDTOCopyWith<$Res> {
-  __$$MusicVideoDTOCopyWithImpl(
-      _$MusicVideoDTO _value, $Res Function(_$MusicVideoDTO) _then)
+class __$$MusicVideoDTOImplCopyWithImpl<$Res>
+    extends _$ResourceDTOCopyWithImpl<$Res, _$MusicVideoDTOImpl>
+    implements _$$MusicVideoDTOImplCopyWith<$Res> {
+  __$$MusicVideoDTOImplCopyWithImpl(
+      _$MusicVideoDTOImpl _value, $Res Function(_$MusicVideoDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2839,7 +2861,7 @@ class __$$MusicVideoDTOCopyWithImpl<$Res>
     Object? views = freezed,
     Object? meta = freezed,
   }) {
-    return _then(_$MusicVideoDTO(
+    return _then(_$MusicVideoDTOImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2907,16 +2929,16 @@ class __$$MusicVideoDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$MusicVideoDTO extends MusicVideoDTO {
-  const _$MusicVideoDTO(this.id, this.type, this.attributes, this.relationships,
-      final Map<String, ResourceViewDTO>? views, this.meta,
+class _$MusicVideoDTOImpl extends MusicVideoDTO {
+  const _$MusicVideoDTOImpl(this.id, this.type, this.attributes,
+      this.relationships, final Map<String, ResourceViewDTO>? views, this.meta,
       {final String? $type})
       : _views = views,
         $type = $type ?? 'musicVideo',
         super._();
 
-  factory _$MusicVideoDTO.fromJson(Map<String, dynamic> json) =>
-      _$$MusicVideoDTOFromJson(json);
+  factory _$MusicVideoDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MusicVideoDTOImplFromJson(json);
 
   @override
   final String id;
@@ -2931,6 +2953,7 @@ class _$MusicVideoDTO extends MusicVideoDTO {
   Map<String, ResourceViewDTO>? get views {
     final value = _views;
     if (value == null) return null;
+    if (_views is EqualUnmodifiableMapView) return _views;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
@@ -2947,10 +2970,10 @@ class _$MusicVideoDTO extends MusicVideoDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MusicVideoDTO &&
+            other is _$MusicVideoDTOImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.attributes, attributes) ||
@@ -2969,8 +2992,8 @@ class _$MusicVideoDTO extends MusicVideoDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$MusicVideoDTOCopyWith<_$MusicVideoDTO> get copyWith =>
-      __$$MusicVideoDTOCopyWithImpl<_$MusicVideoDTO>(this, _$identity);
+  _$$MusicVideoDTOImplCopyWith<_$MusicVideoDTOImpl> get copyWith =>
+      __$$MusicVideoDTOImplCopyWithImpl<_$MusicVideoDTOImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3206,7 +3229,7 @@ class _$MusicVideoDTO extends MusicVideoDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MusicVideoDTOToJson(
+    return _$$MusicVideoDTOImplToJson(
       this,
     );
   }
@@ -3219,32 +3242,33 @@ abstract class MusicVideoDTO extends ResourceDTO {
       final MusicVideoAttributesDTO? attributes,
       final MusicVideoRelationshipsDTO? relationships,
       final Map<String, ResourceViewDTO>? views,
-      final ResourceMetaDTO? meta) = _$MusicVideoDTO;
+      final ResourceMetaDTO? meta) = _$MusicVideoDTOImpl;
   const MusicVideoDTO._() : super._();
 
   factory MusicVideoDTO.fromJson(Map<String, dynamic> json) =
-      _$MusicVideoDTO.fromJson;
+      _$MusicVideoDTOImpl.fromJson;
 
   @override
   String get id;
   @override
   String get type;
+  @override
   MusicVideoAttributesDTO? get attributes;
   MusicVideoRelationshipsDTO? get relationships;
   Map<String, ResourceViewDTO>? get views;
   ResourceMetaDTO? get meta;
   @override
   @JsonKey(ignore: true)
-  _$$MusicVideoDTOCopyWith<_$MusicVideoDTO> get copyWith =>
+  _$$MusicVideoDTOImplCopyWith<_$MusicVideoDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$CuratorDTOCopyWith<$Res>
+abstract class _$$CuratorDTOImplCopyWith<$Res>
     implements $ResourceDTOCopyWith<$Res> {
-  factory _$$CuratorDTOCopyWith(
-          _$CuratorDTO value, $Res Function(_$CuratorDTO) then) =
-      __$$CuratorDTOCopyWithImpl<$Res>;
+  factory _$$CuratorDTOImplCopyWith(
+          _$CuratorDTOImpl value, $Res Function(_$CuratorDTOImpl) then) =
+      __$$CuratorDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3258,11 +3282,11 @@ abstract class _$$CuratorDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CuratorDTOCopyWithImpl<$Res>
-    extends _$ResourceDTOCopyWithImpl<$Res, _$CuratorDTO>
-    implements _$$CuratorDTOCopyWith<$Res> {
-  __$$CuratorDTOCopyWithImpl(
-      _$CuratorDTO _value, $Res Function(_$CuratorDTO) _then)
+class __$$CuratorDTOImplCopyWithImpl<$Res>
+    extends _$ResourceDTOCopyWithImpl<$Res, _$CuratorDTOImpl>
+    implements _$$CuratorDTOImplCopyWith<$Res> {
+  __$$CuratorDTOImplCopyWithImpl(
+      _$CuratorDTOImpl _value, $Res Function(_$CuratorDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3273,7 +3297,7 @@ class __$$CuratorDTOCopyWithImpl<$Res>
     Object? attributes = freezed,
     Object? relationships = freezed,
   }) {
-    return _then(_$CuratorDTO(
+    return _then(_$CuratorDTOImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3321,14 +3345,15 @@ class __$$CuratorDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$CuratorDTO extends CuratorDTO {
-  const _$CuratorDTO(this.id, this.type, this.attributes, this.relationships,
+class _$CuratorDTOImpl extends CuratorDTO {
+  const _$CuratorDTOImpl(
+      this.id, this.type, this.attributes, this.relationships,
       {final String? $type})
       : $type = $type ?? 'curator',
         super._();
 
-  factory _$CuratorDTO.fromJson(Map<String, dynamic> json) =>
-      _$$CuratorDTOFromJson(json);
+  factory _$CuratorDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CuratorDTOImplFromJson(json);
 
   @override
   final String id;
@@ -3348,10 +3373,10 @@ class _$CuratorDTO extends CuratorDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$CuratorDTO &&
+            other is _$CuratorDTOImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.attributes, attributes) ||
@@ -3368,8 +3393,8 @@ class _$CuratorDTO extends CuratorDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CuratorDTOCopyWith<_$CuratorDTO> get copyWith =>
-      __$$CuratorDTOCopyWithImpl<_$CuratorDTO>(this, _$identity);
+  _$$CuratorDTOImplCopyWith<_$CuratorDTOImpl> get copyWith =>
+      __$$CuratorDTOImplCopyWithImpl<_$CuratorDTOImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3605,7 +3630,7 @@ class _$CuratorDTO extends CuratorDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CuratorDTOToJson(
+    return _$$CuratorDTOImplToJson(
       this,
     );
   }
@@ -3616,29 +3641,31 @@ abstract class CuratorDTO extends ResourceDTO {
       final String id,
       final String type,
       final CuratorAttributesDTO? attributes,
-      final CuratorRelationshipsDTO? relationships) = _$CuratorDTO;
+      final CuratorRelationshipsDTO? relationships) = _$CuratorDTOImpl;
   const CuratorDTO._() : super._();
 
   factory CuratorDTO.fromJson(Map<String, dynamic> json) =
-      _$CuratorDTO.fromJson;
+      _$CuratorDTOImpl.fromJson;
 
   @override
   String get id;
   @override
   String get type;
+  @override
   CuratorAttributesDTO? get attributes;
   CuratorRelationshipsDTO? get relationships;
   @override
   @JsonKey(ignore: true)
-  _$$CuratorDTOCopyWith<_$CuratorDTO> get copyWith =>
+  _$$CuratorDTOImplCopyWith<_$CuratorDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$GenreDTOCopyWith<$Res> implements $ResourceDTOCopyWith<$Res> {
-  factory _$$GenreDTOCopyWith(
-          _$GenreDTO value, $Res Function(_$GenreDTO) then) =
-      __$$GenreDTOCopyWithImpl<$Res>;
+abstract class _$$GenreDTOImplCopyWith<$Res>
+    implements $ResourceDTOCopyWith<$Res> {
+  factory _$$GenreDTOImplCopyWith(
+          _$GenreDTOImpl value, $Res Function(_$GenreDTOImpl) then) =
+      __$$GenreDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, String type, GenreAttributesDTO? attributes});
@@ -3647,10 +3674,11 @@ abstract class _$$GenreDTOCopyWith<$Res> implements $ResourceDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$GenreDTOCopyWithImpl<$Res>
-    extends _$ResourceDTOCopyWithImpl<$Res, _$GenreDTO>
-    implements _$$GenreDTOCopyWith<$Res> {
-  __$$GenreDTOCopyWithImpl(_$GenreDTO _value, $Res Function(_$GenreDTO) _then)
+class __$$GenreDTOImplCopyWithImpl<$Res>
+    extends _$ResourceDTOCopyWithImpl<$Res, _$GenreDTOImpl>
+    implements _$$GenreDTOImplCopyWith<$Res> {
+  __$$GenreDTOImplCopyWithImpl(
+      _$GenreDTOImpl _value, $Res Function(_$GenreDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3660,7 +3688,7 @@ class __$$GenreDTOCopyWithImpl<$Res>
     Object? type = null,
     Object? attributes = freezed,
   }) {
-    return _then(_$GenreDTO(
+    return _then(_$GenreDTOImpl(
       null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3691,13 +3719,14 @@ class __$$GenreDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$GenreDTO extends GenreDTO {
-  const _$GenreDTO(this.id, this.type, this.attributes, {final String? $type})
+class _$GenreDTOImpl extends GenreDTO {
+  const _$GenreDTOImpl(this.id, this.type, this.attributes,
+      {final String? $type})
       : $type = $type ?? 'genre',
         super._();
 
-  factory _$GenreDTO.fromJson(Map<String, dynamic> json) =>
-      _$$GenreDTOFromJson(json);
+  factory _$GenreDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GenreDTOImplFromJson(json);
 
   @override
   final String id;
@@ -3715,10 +3744,10 @@ class _$GenreDTO extends GenreDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$GenreDTO &&
+            other is _$GenreDTOImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.attributes, attributes) ||
@@ -3732,8 +3761,8 @@ class _$GenreDTO extends GenreDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GenreDTOCopyWith<_$GenreDTO> get copyWith =>
-      __$$GenreDTOCopyWithImpl<_$GenreDTO>(this, _$identity);
+  _$$GenreDTOImplCopyWith<_$GenreDTOImpl> get copyWith =>
+      __$$GenreDTOImplCopyWithImpl<_$GenreDTOImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3969,7 +3998,7 @@ class _$GenreDTO extends GenreDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GenreDTOToJson(
+    return _$$GenreDTOImplToJson(
       this,
     );
   }
@@ -3977,19 +4006,21 @@ class _$GenreDTO extends GenreDTO {
 
 abstract class GenreDTO extends ResourceDTO {
   const factory GenreDTO(final String id, final String type,
-      final GenreAttributesDTO? attributes) = _$GenreDTO;
+      final GenreAttributesDTO? attributes) = _$GenreDTOImpl;
   const GenreDTO._() : super._();
 
-  factory GenreDTO.fromJson(Map<String, dynamic> json) = _$GenreDTO.fromJson;
+  factory GenreDTO.fromJson(Map<String, dynamic> json) =
+      _$GenreDTOImpl.fromJson;
 
   @override
   String get id;
   @override
   String get type;
+  @override
   GenreAttributesDTO? get attributes;
   @override
   @JsonKey(ignore: true)
-  _$$GenreDTOCopyWith<_$GenreDTO> get copyWith =>
+  _$$GenreDTOImplCopyWith<_$GenreDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4074,11 +4105,11 @@ class _$ResourceMetaDTOCopyWithImpl<$Res, $Val extends ResourceMetaDTO>
 }
 
 /// @nodoc
-abstract class _$$_ResourceMetaCopyWith<$Res>
+abstract class _$$ResourceMetaImplCopyWith<$Res>
     implements $ResourceMetaDTOCopyWith<$Res> {
-  factory _$$_ResourceMetaCopyWith(
-          _$_ResourceMeta value, $Res Function(_$_ResourceMeta) then) =
-      __$$_ResourceMetaCopyWithImpl<$Res>;
+  factory _$$ResourceMetaImplCopyWith(
+          _$ResourceMetaImpl value, $Res Function(_$ResourceMetaImpl) then) =
+      __$$ResourceMetaImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({ResourceMetaOrderDTO? views, ResourceMetaOrderDTO? results});
@@ -4090,11 +4121,11 @@ abstract class _$$_ResourceMetaCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ResourceMetaCopyWithImpl<$Res>
-    extends _$ResourceMetaDTOCopyWithImpl<$Res, _$_ResourceMeta>
-    implements _$$_ResourceMetaCopyWith<$Res> {
-  __$$_ResourceMetaCopyWithImpl(
-      _$_ResourceMeta _value, $Res Function(_$_ResourceMeta) _then)
+class __$$ResourceMetaImplCopyWithImpl<$Res>
+    extends _$ResourceMetaDTOCopyWithImpl<$Res, _$ResourceMetaImpl>
+    implements _$$ResourceMetaImplCopyWith<$Res> {
+  __$$ResourceMetaImplCopyWithImpl(
+      _$ResourceMetaImpl _value, $Res Function(_$ResourceMetaImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4103,7 +4134,7 @@ class __$$_ResourceMetaCopyWithImpl<$Res>
     Object? views = freezed,
     Object? results = freezed,
   }) {
-    return _then(_$_ResourceMeta(
+    return _then(_$ResourceMetaImpl(
       views: freezed == views
           ? _value.views
           : views // ignore: cast_nullable_to_non_nullable
@@ -4118,11 +4149,11 @@ class __$$_ResourceMetaCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResourceMeta extends _ResourceMeta {
-  const _$_ResourceMeta({this.views, this.results}) : super._();
+class _$ResourceMetaImpl extends _ResourceMeta {
+  const _$ResourceMetaImpl({this.views, this.results}) : super._();
 
-  factory _$_ResourceMeta.fromJson(Map<String, dynamic> json) =>
-      _$$_ResourceMetaFromJson(json);
+  factory _$ResourceMetaImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResourceMetaImplFromJson(json);
 
   @override
   final ResourceMetaOrderDTO? views;
@@ -4135,10 +4166,10 @@ class _$_ResourceMeta extends _ResourceMeta {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResourceMeta &&
+            other is _$ResourceMetaImpl &&
             (identical(other.views, views) || other.views == views) &&
             (identical(other.results, results) || other.results == results));
   }
@@ -4150,12 +4181,12 @@ class _$_ResourceMeta extends _ResourceMeta {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResourceMetaCopyWith<_$_ResourceMeta> get copyWith =>
-      __$$_ResourceMetaCopyWithImpl<_$_ResourceMeta>(this, _$identity);
+  _$$ResourceMetaImplCopyWith<_$ResourceMetaImpl> get copyWith =>
+      __$$ResourceMetaImplCopyWithImpl<_$ResourceMetaImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResourceMetaToJson(
+    return _$$ResourceMetaImplToJson(
       this,
     );
   }
@@ -4164,11 +4195,11 @@ class _$_ResourceMeta extends _ResourceMeta {
 abstract class _ResourceMeta extends ResourceMetaDTO {
   const factory _ResourceMeta(
       {final ResourceMetaOrderDTO? views,
-      final ResourceMetaOrderDTO? results}) = _$_ResourceMeta;
+      final ResourceMetaOrderDTO? results}) = _$ResourceMetaImpl;
   const _ResourceMeta._() : super._();
 
   factory _ResourceMeta.fromJson(Map<String, dynamic> json) =
-      _$_ResourceMeta.fromJson;
+      _$ResourceMetaImpl.fromJson;
 
   @override
   ResourceMetaOrderDTO? get views;
@@ -4176,7 +4207,7 @@ abstract class _ResourceMeta extends ResourceMetaDTO {
   ResourceMetaOrderDTO? get results;
   @override
   @JsonKey(ignore: true)
-  _$$_ResourceMetaCopyWith<_$_ResourceMeta> get copyWith =>
+  _$$ResourceMetaImplCopyWith<_$ResourceMetaImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4229,22 +4260,22 @@ class _$ResourceMetaOrderDTOCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ResourceMetaOrderDTOCopyWith<$Res>
+abstract class _$$ResourceMetaOrderDTOImplCopyWith<$Res>
     implements $ResourceMetaOrderDTOCopyWith<$Res> {
-  factory _$$_ResourceMetaOrderDTOCopyWith(_$_ResourceMetaOrderDTO value,
-          $Res Function(_$_ResourceMetaOrderDTO) then) =
-      __$$_ResourceMetaOrderDTOCopyWithImpl<$Res>;
+  factory _$$ResourceMetaOrderDTOImplCopyWith(_$ResourceMetaOrderDTOImpl value,
+          $Res Function(_$ResourceMetaOrderDTOImpl) then) =
+      __$$ResourceMetaOrderDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<String>? order});
 }
 
 /// @nodoc
-class __$$_ResourceMetaOrderDTOCopyWithImpl<$Res>
-    extends _$ResourceMetaOrderDTOCopyWithImpl<$Res, _$_ResourceMetaOrderDTO>
-    implements _$$_ResourceMetaOrderDTOCopyWith<$Res> {
-  __$$_ResourceMetaOrderDTOCopyWithImpl(_$_ResourceMetaOrderDTO _value,
-      $Res Function(_$_ResourceMetaOrderDTO) _then)
+class __$$ResourceMetaOrderDTOImplCopyWithImpl<$Res>
+    extends _$ResourceMetaOrderDTOCopyWithImpl<$Res, _$ResourceMetaOrderDTOImpl>
+    implements _$$ResourceMetaOrderDTOImplCopyWith<$Res> {
+  __$$ResourceMetaOrderDTOImplCopyWithImpl(_$ResourceMetaOrderDTOImpl _value,
+      $Res Function(_$ResourceMetaOrderDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4252,7 +4283,7 @@ class __$$_ResourceMetaOrderDTOCopyWithImpl<$Res>
   $Res call({
     Object? order = freezed,
   }) {
-    return _then(_$_ResourceMetaOrderDTO(
+    return _then(_$ResourceMetaOrderDTOImpl(
       order: freezed == order
           ? _value._order
           : order // ignore: cast_nullable_to_non_nullable
@@ -4263,19 +4294,20 @@ class __$$_ResourceMetaOrderDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResourceMetaOrderDTO extends _ResourceMetaOrderDTO {
-  const _$_ResourceMetaOrderDTO({final List<String>? order})
+class _$ResourceMetaOrderDTOImpl extends _ResourceMetaOrderDTO {
+  const _$ResourceMetaOrderDTOImpl({final List<String>? order})
       : _order = order,
         super._();
 
-  factory _$_ResourceMetaOrderDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_ResourceMetaOrderDTOFromJson(json);
+  factory _$ResourceMetaOrderDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResourceMetaOrderDTOImplFromJson(json);
 
   final List<String>? _order;
   @override
   List<String>? get order {
     final value = _order;
     if (value == null) return null;
+    if (_order is EqualUnmodifiableListView) return _order;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -4286,10 +4318,10 @@ class _$_ResourceMetaOrderDTO extends _ResourceMetaOrderDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResourceMetaOrderDTO &&
+            other is _$ResourceMetaOrderDTOImpl &&
             const DeepCollectionEquality().equals(other._order, _order));
   }
 
@@ -4301,13 +4333,14 @@ class _$_ResourceMetaOrderDTO extends _ResourceMetaOrderDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResourceMetaOrderDTOCopyWith<_$_ResourceMetaOrderDTO> get copyWith =>
-      __$$_ResourceMetaOrderDTOCopyWithImpl<_$_ResourceMetaOrderDTO>(
-          this, _$identity);
+  _$$ResourceMetaOrderDTOImplCopyWith<_$ResourceMetaOrderDTOImpl>
+      get copyWith =>
+          __$$ResourceMetaOrderDTOImplCopyWithImpl<_$ResourceMetaOrderDTOImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResourceMetaOrderDTOToJson(
+    return _$$ResourceMetaOrderDTOImplToJson(
       this,
     );
   }
@@ -4315,16 +4348,16 @@ class _$_ResourceMetaOrderDTO extends _ResourceMetaOrderDTO {
 
 abstract class _ResourceMetaOrderDTO extends ResourceMetaOrderDTO {
   const factory _ResourceMetaOrderDTO({final List<String>? order}) =
-      _$_ResourceMetaOrderDTO;
+      _$ResourceMetaOrderDTOImpl;
   const _ResourceMetaOrderDTO._() : super._();
 
   factory _ResourceMetaOrderDTO.fromJson(Map<String, dynamic> json) =
-      _$_ResourceMetaOrderDTO.fromJson;
+      _$ResourceMetaOrderDTOImpl.fromJson;
 
   @override
   List<String>? get order;
   @override
   @JsonKey(ignore: true)
-  _$$_ResourceMetaOrderDTOCopyWith<_$_ResourceMetaOrderDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ResourceMetaOrderDTOImplCopyWith<_$ResourceMetaOrderDTOImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

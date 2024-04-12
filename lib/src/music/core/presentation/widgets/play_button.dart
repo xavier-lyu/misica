@@ -7,10 +7,10 @@ import 'package:misica/src/music/player/shared/providers.dart';
 
 class PlayButton extends ConsumerWidget {
   const PlayButton({
-    Key? key,
+    super.key,
     required this.kind,
     required this.item,
-  }) : super(key: key);
+  });
 
   final String kind;
   final Resource item;

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'resource_view.dart';
 
@@ -12,7 +12,7 @@ part of 'resource_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ResourceView {
@@ -63,22 +63,22 @@ class _$ResourceViewCopyWithImpl<$Res, $Val extends ResourceView>
 }
 
 /// @nodoc
-abstract class _$$_ResourceViewCopyWith<$Res>
+abstract class _$$ResourceViewImplCopyWith<$Res>
     implements $ResourceViewCopyWith<$Res> {
-  factory _$$_ResourceViewCopyWith(
-          _$_ResourceView value, $Res Function(_$_ResourceView) then) =
-      __$$_ResourceViewCopyWithImpl<$Res>;
+  factory _$$ResourceViewImplCopyWith(
+          _$ResourceViewImpl value, $Res Function(_$ResourceViewImpl) then) =
+      __$$ResourceViewImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<Resource> data, String title});
 }
 
 /// @nodoc
-class __$$_ResourceViewCopyWithImpl<$Res>
-    extends _$ResourceViewCopyWithImpl<$Res, _$_ResourceView>
-    implements _$$_ResourceViewCopyWith<$Res> {
-  __$$_ResourceViewCopyWithImpl(
-      _$_ResourceView _value, $Res Function(_$_ResourceView) _then)
+class __$$ResourceViewImplCopyWithImpl<$Res>
+    extends _$ResourceViewCopyWithImpl<$Res, _$ResourceViewImpl>
+    implements _$$ResourceViewImplCopyWith<$Res> {
+  __$$ResourceViewImplCopyWithImpl(
+      _$ResourceViewImpl _value, $Res Function(_$ResourceViewImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -87,7 +87,7 @@ class __$$_ResourceViewCopyWithImpl<$Res>
     Object? data = null,
     Object? title = null,
   }) {
-    return _then(_$_ResourceView(
+    return _then(_$ResourceViewImpl(
       data: null == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
@@ -102,8 +102,8 @@ class __$$_ResourceViewCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ResourceView extends _ResourceView {
-  const _$_ResourceView(
+class _$ResourceViewImpl extends _ResourceView {
+  const _$ResourceViewImpl(
       {required final List<Resource> data, required this.title})
       : _data = data,
         super._();
@@ -111,6 +111,7 @@ class _$_ResourceView extends _ResourceView {
   final List<Resource> _data;
   @override
   List<Resource> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_data);
   }
@@ -124,10 +125,10 @@ class _$_ResourceView extends _ResourceView {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResourceView &&
+            other is _$ResourceViewImpl &&
             const DeepCollectionEquality().equals(other._data, _data) &&
             (identical(other.title, title) || other.title == title));
   }
@@ -139,14 +140,14 @@ class _$_ResourceView extends _ResourceView {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResourceViewCopyWith<_$_ResourceView> get copyWith =>
-      __$$_ResourceViewCopyWithImpl<_$_ResourceView>(this, _$identity);
+  _$$ResourceViewImplCopyWith<_$ResourceViewImpl> get copyWith =>
+      __$$ResourceViewImplCopyWithImpl<_$ResourceViewImpl>(this, _$identity);
 }
 
 abstract class _ResourceView extends ResourceView {
   const factory _ResourceView(
       {required final List<Resource> data,
-      required final String title}) = _$_ResourceView;
+      required final String title}) = _$ResourceViewImpl;
   const _ResourceView._() : super._();
 
   @override
@@ -155,6 +156,6 @@ abstract class _ResourceView extends ResourceView {
   String get title;
   @override
   @JsonKey(ignore: true)
-  _$$_ResourceViewCopyWith<_$_ResourceView> get copyWith =>
+  _$$ResourceViewImplCopyWith<_$ResourceViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

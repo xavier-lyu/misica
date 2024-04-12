@@ -6,7 +6,7 @@ part of 'artwork.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Artwork _$$_ArtworkFromJson(Map json) => _$_Artwork(
+_$ArtworkImpl _$$ArtworkImplFromJson(Map json) => _$ArtworkImpl(
       bgColor: json['bgColor'] as String?,
       height: json['height'] as int,
       url: json['url'] as String,
@@ -14,7 +14,7 @@ _$_Artwork _$$_ArtworkFromJson(Map json) => _$_Artwork(
       textColor: json['textColor'] as String?,
     );
 
-Map<String, dynamic> _$$_ArtworkToJson(_$_Artwork instance) =>
+Map<String, dynamic> _$$ArtworkImplToJson(_$ArtworkImpl instance) =>
     <String, dynamic>{
       'bgColor': instance.bgColor,
       'height': instance.height,

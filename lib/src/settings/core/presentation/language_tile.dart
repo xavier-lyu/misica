@@ -6,7 +6,7 @@ import 'package:misica/src/settings/core/infrastructure/settings.dart';
 import 'package:misica/src/settings/core/shared/providers.dart';
 
 class LanguageTile extends ConsumerWidget {
-  const LanguageTile({Key? key}) : super(key: key);
+  const LanguageTile({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

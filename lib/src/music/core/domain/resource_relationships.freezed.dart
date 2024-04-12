@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'resource_relationships.dart';
 
@@ -12,7 +12,7 @@ part of 'resource_relationships.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AlbumRelationships {
@@ -80,11 +80,11 @@ class _$AlbumRelationshipsCopyWithImpl<$Res, $Val extends AlbumRelationships>
 }
 
 /// @nodoc
-abstract class _$$_AlbumRelationshipsCopyWith<$Res>
+abstract class _$$AlbumRelationshipsImplCopyWith<$Res>
     implements $AlbumRelationshipsCopyWith<$Res> {
-  factory _$$_AlbumRelationshipsCopyWith(_$_AlbumRelationships value,
-          $Res Function(_$_AlbumRelationships) then) =
-      __$$_AlbumRelationshipsCopyWithImpl<$Res>;
+  factory _$$AlbumRelationshipsImplCopyWith(_$AlbumRelationshipsImpl value,
+          $Res Function(_$AlbumRelationshipsImpl) then) =
+      __$$AlbumRelationshipsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -95,11 +95,11 @@ abstract class _$$_AlbumRelationshipsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AlbumRelationshipsCopyWithImpl<$Res>
-    extends _$AlbumRelationshipsCopyWithImpl<$Res, _$_AlbumRelationships>
-    implements _$$_AlbumRelationshipsCopyWith<$Res> {
-  __$$_AlbumRelationshipsCopyWithImpl(
-      _$_AlbumRelationships _value, $Res Function(_$_AlbumRelationships) _then)
+class __$$AlbumRelationshipsImplCopyWithImpl<$Res>
+    extends _$AlbumRelationshipsCopyWithImpl<$Res, _$AlbumRelationshipsImpl>
+    implements _$$AlbumRelationshipsImplCopyWith<$Res> {
+  __$$AlbumRelationshipsImplCopyWithImpl(_$AlbumRelationshipsImpl _value,
+      $Res Function(_$AlbumRelationshipsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -110,7 +110,7 @@ class __$$_AlbumRelationshipsCopyWithImpl<$Res>
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_$_AlbumRelationships(
+    return _then(_$AlbumRelationshipsImpl(
       artists: freezed == artists
           ? _value._artists
           : artists // ignore: cast_nullable_to_non_nullable
@@ -133,8 +133,8 @@ class __$$_AlbumRelationshipsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_AlbumRelationships extends _AlbumRelationships {
-  const _$_AlbumRelationships(
+class _$AlbumRelationshipsImpl extends _AlbumRelationships {
+  const _$AlbumRelationshipsImpl(
       {required final List<Artist>? artists,
       required final List<Track>? tracks,
       required final List<Album>? library,
@@ -150,6 +150,7 @@ class _$_AlbumRelationships extends _AlbumRelationships {
   List<Artist>? get artists {
     final value = _artists;
     if (value == null) return null;
+    if (_artists is EqualUnmodifiableListView) return _artists;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -159,6 +160,7 @@ class _$_AlbumRelationships extends _AlbumRelationships {
   List<Track>? get tracks {
     final value = _tracks;
     if (value == null) return null;
+    if (_tracks is EqualUnmodifiableListView) return _tracks;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -170,6 +172,7 @@ class _$_AlbumRelationships extends _AlbumRelationships {
   List<Album>? get library {
     final value = _library;
     if (value == null) return null;
+    if (_library is EqualUnmodifiableListView) return _library;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -179,6 +182,7 @@ class _$_AlbumRelationships extends _AlbumRelationships {
   List<Album>? get catalog {
     final value = _catalog;
     if (value == null) return null;
+    if (_catalog is EqualUnmodifiableListView) return _catalog;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -189,10 +193,10 @@ class _$_AlbumRelationships extends _AlbumRelationships {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AlbumRelationships &&
+            other is _$AlbumRelationshipsImpl &&
             const DeepCollectionEquality().equals(other._artists, _artists) &&
             const DeepCollectionEquality().equals(other._tracks, _tracks) &&
             const DeepCollectionEquality().equals(other._library, _library) &&
@@ -210,8 +214,8 @@ class _$_AlbumRelationships extends _AlbumRelationships {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AlbumRelationshipsCopyWith<_$_AlbumRelationships> get copyWith =>
-      __$$_AlbumRelationshipsCopyWithImpl<_$_AlbumRelationships>(
+  _$$AlbumRelationshipsImplCopyWith<_$AlbumRelationshipsImpl> get copyWith =>
+      __$$AlbumRelationshipsImplCopyWithImpl<_$AlbumRelationshipsImpl>(
           this, _$identity);
 }
 
@@ -220,7 +224,7 @@ abstract class _AlbumRelationships extends AlbumRelationships {
       {required final List<Artist>? artists,
       required final List<Track>? tracks,
       required final List<Album>? library,
-      required final List<Album>? catalog}) = _$_AlbumRelationships;
+      required final List<Album>? catalog}) = _$AlbumRelationshipsImpl;
   const _AlbumRelationships._() : super._();
 
   @override
@@ -233,7 +237,7 @@ abstract class _AlbumRelationships extends AlbumRelationships {
   List<Album>? get catalog;
   @override
   @JsonKey(ignore: true)
-  _$$_AlbumRelationshipsCopyWith<_$_AlbumRelationships> get copyWith =>
+  _$$AlbumRelationshipsImplCopyWith<_$AlbumRelationshipsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -318,11 +322,11 @@ class _$ArtistRelationshipsCopyWithImpl<$Res, $Val extends ArtistRelationships>
 }
 
 /// @nodoc
-abstract class _$$_ArtistRelationshipsCopyWith<$Res>
+abstract class _$$ArtistRelationshipsImplCopyWith<$Res>
     implements $ArtistRelationshipsCopyWith<$Res> {
-  factory _$$_ArtistRelationshipsCopyWith(_$_ArtistRelationships value,
-          $Res Function(_$_ArtistRelationships) then) =
-      __$$_ArtistRelationshipsCopyWithImpl<$Res>;
+  factory _$$ArtistRelationshipsImplCopyWith(_$ArtistRelationshipsImpl value,
+          $Res Function(_$ArtistRelationshipsImpl) then) =
+      __$$ArtistRelationshipsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -335,11 +339,11 @@ abstract class _$$_ArtistRelationshipsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ArtistRelationshipsCopyWithImpl<$Res>
-    extends _$ArtistRelationshipsCopyWithImpl<$Res, _$_ArtistRelationships>
-    implements _$$_ArtistRelationshipsCopyWith<$Res> {
-  __$$_ArtistRelationshipsCopyWithImpl(_$_ArtistRelationships _value,
-      $Res Function(_$_ArtistRelationships) _then)
+class __$$ArtistRelationshipsImplCopyWithImpl<$Res>
+    extends _$ArtistRelationshipsCopyWithImpl<$Res, _$ArtistRelationshipsImpl>
+    implements _$$ArtistRelationshipsImplCopyWith<$Res> {
+  __$$ArtistRelationshipsImplCopyWithImpl(_$ArtistRelationshipsImpl _value,
+      $Res Function(_$ArtistRelationshipsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -352,7 +356,7 @@ class __$$_ArtistRelationshipsCopyWithImpl<$Res>
     Object? catalog = freezed,
     Object? defaultPlayableContent = freezed,
   }) {
-    return _then(_$_ArtistRelationships(
+    return _then(_$ArtistRelationshipsImpl(
       albums: freezed == albums
           ? _value._albums
           : albums // ignore: cast_nullable_to_non_nullable
@@ -383,15 +387,15 @@ class __$$_ArtistRelationshipsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ArtistRelationships extends _ArtistRelationships {
-  const _$_ArtistRelationships(
+class _$ArtistRelationshipsImpl extends _ArtistRelationships {
+  const _$ArtistRelationshipsImpl(
       {required final List<Album>? albums,
       required final List<Playlist>? playlists,
       required final List<MusicVideo>? musicVideos,
       required final List<Station>? station,
       required final List<Artist>? catalog,
       @ResourceDTOConverter()
-          required final List<Resource>? defaultPlayableContent})
+      required final List<Resource>? defaultPlayableContent})
       : _albums = albums,
         _playlists = playlists,
         _musicVideos = musicVideos,
@@ -405,6 +409,7 @@ class _$_ArtistRelationships extends _ArtistRelationships {
   List<Album>? get albums {
     final value = _albums;
     if (value == null) return null;
+    if (_albums is EqualUnmodifiableListView) return _albums;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -414,6 +419,7 @@ class _$_ArtistRelationships extends _ArtistRelationships {
   List<Playlist>? get playlists {
     final value = _playlists;
     if (value == null) return null;
+    if (_playlists is EqualUnmodifiableListView) return _playlists;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -423,6 +429,7 @@ class _$_ArtistRelationships extends _ArtistRelationships {
   List<MusicVideo>? get musicVideos {
     final value = _musicVideos;
     if (value == null) return null;
+    if (_musicVideos is EqualUnmodifiableListView) return _musicVideos;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -432,6 +439,7 @@ class _$_ArtistRelationships extends _ArtistRelationships {
   List<Station>? get station {
     final value = _station;
     if (value == null) return null;
+    if (_station is EqualUnmodifiableListView) return _station;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -441,6 +449,7 @@ class _$_ArtistRelationships extends _ArtistRelationships {
   List<Artist>? get catalog {
     final value = _catalog;
     if (value == null) return null;
+    if (_catalog is EqualUnmodifiableListView) return _catalog;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -451,6 +460,8 @@ class _$_ArtistRelationships extends _ArtistRelationships {
   List<Resource>? get defaultPlayableContent {
     final value = _defaultPlayableContent;
     if (value == null) return null;
+    if (_defaultPlayableContent is EqualUnmodifiableListView)
+      return _defaultPlayableContent;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -461,10 +472,10 @@ class _$_ArtistRelationships extends _ArtistRelationships {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ArtistRelationships &&
+            other is _$ArtistRelationshipsImpl &&
             const DeepCollectionEquality().equals(other._albums, _albums) &&
             const DeepCollectionEquality()
                 .equals(other._playlists, _playlists) &&
@@ -489,8 +500,8 @@ class _$_ArtistRelationships extends _ArtistRelationships {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ArtistRelationshipsCopyWith<_$_ArtistRelationships> get copyWith =>
-      __$$_ArtistRelationshipsCopyWithImpl<_$_ArtistRelationships>(
+  _$$ArtistRelationshipsImplCopyWith<_$ArtistRelationshipsImpl> get copyWith =>
+      __$$ArtistRelationshipsImplCopyWithImpl<_$ArtistRelationshipsImpl>(
           this, _$identity);
 }
 
@@ -502,8 +513,8 @@ abstract class _ArtistRelationships extends ArtistRelationships {
           required final List<Station>? station,
           required final List<Artist>? catalog,
           @ResourceDTOConverter()
-              required final List<Resource>? defaultPlayableContent}) =
-      _$_ArtistRelationships;
+          required final List<Resource>? defaultPlayableContent}) =
+      _$ArtistRelationshipsImpl;
   const _ArtistRelationships._() : super._();
 
   @override
@@ -521,7 +532,7 @@ abstract class _ArtistRelationships extends ArtistRelationships {
   List<Resource>? get defaultPlayableContent;
   @override
   @JsonKey(ignore: true)
-  _$$_ArtistRelationshipsCopyWith<_$_ArtistRelationships> get copyWith =>
+  _$$ArtistRelationshipsImplCopyWith<_$ArtistRelationshipsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -591,11 +602,12 @@ class _$PlaylistRelationshipsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PlaylistRelationshipsCopyWith<$Res>
+abstract class _$$PlaylistRelationshipsImplCopyWith<$Res>
     implements $PlaylistRelationshipsCopyWith<$Res> {
-  factory _$$_PlaylistRelationshipsCopyWith(_$_PlaylistRelationships value,
-          $Res Function(_$_PlaylistRelationships) then) =
-      __$$_PlaylistRelationshipsCopyWithImpl<$Res>;
+  factory _$$PlaylistRelationshipsImplCopyWith(
+          _$PlaylistRelationshipsImpl value,
+          $Res Function(_$PlaylistRelationshipsImpl) then) =
+      __$$PlaylistRelationshipsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -606,11 +618,12 @@ abstract class _$$_PlaylistRelationshipsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PlaylistRelationshipsCopyWithImpl<$Res>
-    extends _$PlaylistRelationshipsCopyWithImpl<$Res, _$_PlaylistRelationships>
-    implements _$$_PlaylistRelationshipsCopyWith<$Res> {
-  __$$_PlaylistRelationshipsCopyWithImpl(_$_PlaylistRelationships _value,
-      $Res Function(_$_PlaylistRelationships) _then)
+class __$$PlaylistRelationshipsImplCopyWithImpl<$Res>
+    extends _$PlaylistRelationshipsCopyWithImpl<$Res,
+        _$PlaylistRelationshipsImpl>
+    implements _$$PlaylistRelationshipsImplCopyWith<$Res> {
+  __$$PlaylistRelationshipsImplCopyWithImpl(_$PlaylistRelationshipsImpl _value,
+      $Res Function(_$PlaylistRelationshipsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -621,7 +634,7 @@ class __$$_PlaylistRelationshipsCopyWithImpl<$Res>
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_$_PlaylistRelationships(
+    return _then(_$PlaylistRelationshipsImpl(
       tracks: freezed == tracks
           ? _value._tracks
           : tracks // ignore: cast_nullable_to_non_nullable
@@ -644,8 +657,8 @@ class __$$_PlaylistRelationshipsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_PlaylistRelationships extends _PlaylistRelationships {
-  const _$_PlaylistRelationships(
+class _$PlaylistRelationshipsImpl extends _PlaylistRelationships {
+  const _$PlaylistRelationshipsImpl(
       {required final List<Track>? tracks,
       required final List<Curator>? curator,
       required final List<Playlist>? library,
@@ -661,6 +674,7 @@ class _$_PlaylistRelationships extends _PlaylistRelationships {
   List<Track>? get tracks {
     final value = _tracks;
     if (value == null) return null;
+    if (_tracks is EqualUnmodifiableListView) return _tracks;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -670,6 +684,7 @@ class _$_PlaylistRelationships extends _PlaylistRelationships {
   List<Curator>? get curator {
     final value = _curator;
     if (value == null) return null;
+    if (_curator is EqualUnmodifiableListView) return _curator;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -679,6 +694,7 @@ class _$_PlaylistRelationships extends _PlaylistRelationships {
   List<Playlist>? get library {
     final value = _library;
     if (value == null) return null;
+    if (_library is EqualUnmodifiableListView) return _library;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -688,6 +704,7 @@ class _$_PlaylistRelationships extends _PlaylistRelationships {
   List<Playlist>? get catalog {
     final value = _catalog;
     if (value == null) return null;
+    if (_catalog is EqualUnmodifiableListView) return _catalog;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -698,10 +715,10 @@ class _$_PlaylistRelationships extends _PlaylistRelationships {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PlaylistRelationships &&
+            other is _$PlaylistRelationshipsImpl &&
             const DeepCollectionEquality().equals(other._tracks, _tracks) &&
             const DeepCollectionEquality().equals(other._curator, _curator) &&
             const DeepCollectionEquality().equals(other._library, _library) &&
@@ -719,9 +736,9 @@ class _$_PlaylistRelationships extends _PlaylistRelationships {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PlaylistRelationshipsCopyWith<_$_PlaylistRelationships> get copyWith =>
-      __$$_PlaylistRelationshipsCopyWithImpl<_$_PlaylistRelationships>(
-          this, _$identity);
+  _$$PlaylistRelationshipsImplCopyWith<_$PlaylistRelationshipsImpl>
+      get copyWith => __$$PlaylistRelationshipsImplCopyWithImpl<
+          _$PlaylistRelationshipsImpl>(this, _$identity);
 }
 
 abstract class _PlaylistRelationships extends PlaylistRelationships {
@@ -729,7 +746,7 @@ abstract class _PlaylistRelationships extends PlaylistRelationships {
       {required final List<Track>? tracks,
       required final List<Curator>? curator,
       required final List<Playlist>? library,
-      required final List<Playlist>? catalog}) = _$_PlaylistRelationships;
+      required final List<Playlist>? catalog}) = _$PlaylistRelationshipsImpl;
   const _PlaylistRelationships._() : super._();
 
   @override
@@ -742,8 +759,8 @@ abstract class _PlaylistRelationships extends PlaylistRelationships {
   List<Playlist>? get catalog;
   @override
   @JsonKey(ignore: true)
-  _$$_PlaylistRelationshipsCopyWith<_$_PlaylistRelationships> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PlaylistRelationshipsImplCopyWith<_$PlaylistRelationshipsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -832,11 +849,11 @@ class _$SongRelationshipsCopyWithImpl<$Res, $Val extends SongRelationships>
 }
 
 /// @nodoc
-abstract class _$$_SongRelationshipsCopyWith<$Res>
+abstract class _$$SongRelationshipsImplCopyWith<$Res>
     implements $SongRelationshipsCopyWith<$Res> {
-  factory _$$_SongRelationshipsCopyWith(_$_SongRelationships value,
-          $Res Function(_$_SongRelationships) then) =
-      __$$_SongRelationshipsCopyWithImpl<$Res>;
+  factory _$$SongRelationshipsImplCopyWith(_$SongRelationshipsImpl value,
+          $Res Function(_$SongRelationshipsImpl) then) =
+      __$$SongRelationshipsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -850,11 +867,11 @@ abstract class _$$_SongRelationshipsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SongRelationshipsCopyWithImpl<$Res>
-    extends _$SongRelationshipsCopyWithImpl<$Res, _$_SongRelationships>
-    implements _$$_SongRelationshipsCopyWith<$Res> {
-  __$$_SongRelationshipsCopyWithImpl(
-      _$_SongRelationships _value, $Res Function(_$_SongRelationships) _then)
+class __$$SongRelationshipsImplCopyWithImpl<$Res>
+    extends _$SongRelationshipsCopyWithImpl<$Res, _$SongRelationshipsImpl>
+    implements _$$SongRelationshipsImplCopyWith<$Res> {
+  __$$SongRelationshipsImplCopyWithImpl(_$SongRelationshipsImpl _value,
+      $Res Function(_$SongRelationshipsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -868,7 +885,7 @@ class __$$_SongRelationshipsCopyWithImpl<$Res>
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_$_SongRelationships(
+    return _then(_$SongRelationshipsImpl(
       albums: freezed == albums
           ? _value._albums
           : albums // ignore: cast_nullable_to_non_nullable
@@ -903,8 +920,8 @@ class __$$_SongRelationshipsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SongRelationships extends _SongRelationships {
-  const _$_SongRelationships(
+class _$SongRelationshipsImpl extends _SongRelationships {
+  const _$SongRelationshipsImpl(
       {required final List<Album>? albums,
       required final List<Artist>? artists,
       required final List<Station>? station,
@@ -926,6 +943,7 @@ class _$_SongRelationships extends _SongRelationships {
   List<Album>? get albums {
     final value = _albums;
     if (value == null) return null;
+    if (_albums is EqualUnmodifiableListView) return _albums;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -935,6 +953,7 @@ class _$_SongRelationships extends _SongRelationships {
   List<Artist>? get artists {
     final value = _artists;
     if (value == null) return null;
+    if (_artists is EqualUnmodifiableListView) return _artists;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -944,6 +963,7 @@ class _$_SongRelationships extends _SongRelationships {
   List<Station>? get station {
     final value = _station;
     if (value == null) return null;
+    if (_station is EqualUnmodifiableListView) return _station;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -953,6 +973,7 @@ class _$_SongRelationships extends _SongRelationships {
   List<Artist>? get composers {
     final value = _composers;
     if (value == null) return null;
+    if (_composers is EqualUnmodifiableListView) return _composers;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -962,6 +983,7 @@ class _$_SongRelationships extends _SongRelationships {
   List<MusicVideo>? get musicVideos {
     final value = _musicVideos;
     if (value == null) return null;
+    if (_musicVideos is EqualUnmodifiableListView) return _musicVideos;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -971,6 +993,7 @@ class _$_SongRelationships extends _SongRelationships {
   List<Song>? get library {
     final value = _library;
     if (value == null) return null;
+    if (_library is EqualUnmodifiableListView) return _library;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -980,6 +1003,7 @@ class _$_SongRelationships extends _SongRelationships {
   List<Song>? get catalog {
     final value = _catalog;
     if (value == null) return null;
+    if (_catalog is EqualUnmodifiableListView) return _catalog;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -990,10 +1014,10 @@ class _$_SongRelationships extends _SongRelationships {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SongRelationships &&
+            other is _$SongRelationshipsImpl &&
             const DeepCollectionEquality().equals(other._albums, _albums) &&
             const DeepCollectionEquality().equals(other._artists, _artists) &&
             const DeepCollectionEquality().equals(other._station, _station) &&
@@ -1019,8 +1043,8 @@ class _$_SongRelationships extends _SongRelationships {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SongRelationshipsCopyWith<_$_SongRelationships> get copyWith =>
-      __$$_SongRelationshipsCopyWithImpl<_$_SongRelationships>(
+  _$$SongRelationshipsImplCopyWith<_$SongRelationshipsImpl> get copyWith =>
+      __$$SongRelationshipsImplCopyWithImpl<_$SongRelationshipsImpl>(
           this, _$identity);
 }
 
@@ -1032,7 +1056,7 @@ abstract class _SongRelationships extends SongRelationships {
       required final List<Artist>? composers,
       required final List<MusicVideo>? musicVideos,
       required final List<Song>? library,
-      required final List<Song>? catalog}) = _$_SongRelationships;
+      required final List<Song>? catalog}) = _$SongRelationshipsImpl;
   const _SongRelationships._() : super._();
 
   @override
@@ -1051,7 +1075,7 @@ abstract class _SongRelationships extends SongRelationships {
   List<Song>? get catalog;
   @override
   @JsonKey(ignore: true)
-  _$$_SongRelationshipsCopyWith<_$_SongRelationships> get copyWith =>
+  _$$SongRelationshipsImplCopyWith<_$SongRelationshipsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1128,11 +1152,12 @@ class _$MusicVideoRelationshipsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MusicVideoRelationshipsCopyWith<$Res>
+abstract class _$$MusicVideoRelationshipsImplCopyWith<$Res>
     implements $MusicVideoRelationshipsCopyWith<$Res> {
-  factory _$$_MusicVideoRelationshipsCopyWith(_$_MusicVideoRelationships value,
-          $Res Function(_$_MusicVideoRelationships) then) =
-      __$$_MusicVideoRelationshipsCopyWithImpl<$Res>;
+  factory _$$MusicVideoRelationshipsImplCopyWith(
+          _$MusicVideoRelationshipsImpl value,
+          $Res Function(_$MusicVideoRelationshipsImpl) then) =
+      __$$MusicVideoRelationshipsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1144,12 +1169,13 @@ abstract class _$$_MusicVideoRelationshipsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MusicVideoRelationshipsCopyWithImpl<$Res>
+class __$$MusicVideoRelationshipsImplCopyWithImpl<$Res>
     extends _$MusicVideoRelationshipsCopyWithImpl<$Res,
-        _$_MusicVideoRelationships>
-    implements _$$_MusicVideoRelationshipsCopyWith<$Res> {
-  __$$_MusicVideoRelationshipsCopyWithImpl(_$_MusicVideoRelationships _value,
-      $Res Function(_$_MusicVideoRelationships) _then)
+        _$MusicVideoRelationshipsImpl>
+    implements _$$MusicVideoRelationshipsImplCopyWith<$Res> {
+  __$$MusicVideoRelationshipsImplCopyWithImpl(
+      _$MusicVideoRelationshipsImpl _value,
+      $Res Function(_$MusicVideoRelationshipsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1161,7 +1187,7 @@ class __$$_MusicVideoRelationshipsCopyWithImpl<$Res>
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_$_MusicVideoRelationships(
+    return _then(_$MusicVideoRelationshipsImpl(
       albums: freezed == albums
           ? _value._albums
           : albums // ignore: cast_nullable_to_non_nullable
@@ -1188,8 +1214,8 @@ class __$$_MusicVideoRelationshipsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_MusicVideoRelationships extends _MusicVideoRelationships {
-  const _$_MusicVideoRelationships(
+class _$MusicVideoRelationshipsImpl extends _MusicVideoRelationships {
+  const _$MusicVideoRelationshipsImpl(
       {required final List<Album>? albums,
       required final List<Artist>? artists,
       required final List<Song>? songs,
@@ -1207,6 +1233,7 @@ class _$_MusicVideoRelationships extends _MusicVideoRelationships {
   List<Album>? get albums {
     final value = _albums;
     if (value == null) return null;
+    if (_albums is EqualUnmodifiableListView) return _albums;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1216,6 +1243,7 @@ class _$_MusicVideoRelationships extends _MusicVideoRelationships {
   List<Artist>? get artists {
     final value = _artists;
     if (value == null) return null;
+    if (_artists is EqualUnmodifiableListView) return _artists;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1225,6 +1253,7 @@ class _$_MusicVideoRelationships extends _MusicVideoRelationships {
   List<Song>? get songs {
     final value = _songs;
     if (value == null) return null;
+    if (_songs is EqualUnmodifiableListView) return _songs;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1234,6 +1263,7 @@ class _$_MusicVideoRelationships extends _MusicVideoRelationships {
   List<MusicVideo>? get library {
     final value = _library;
     if (value == null) return null;
+    if (_library is EqualUnmodifiableListView) return _library;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1243,6 +1273,7 @@ class _$_MusicVideoRelationships extends _MusicVideoRelationships {
   List<MusicVideo>? get catalog {
     final value = _catalog;
     if (value == null) return null;
+    if (_catalog is EqualUnmodifiableListView) return _catalog;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1253,10 +1284,10 @@ class _$_MusicVideoRelationships extends _MusicVideoRelationships {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MusicVideoRelationships &&
+            other is _$MusicVideoRelationshipsImpl &&
             const DeepCollectionEquality().equals(other._albums, _albums) &&
             const DeepCollectionEquality().equals(other._artists, _artists) &&
             const DeepCollectionEquality().equals(other._songs, _songs) &&
@@ -1276,19 +1307,19 @@ class _$_MusicVideoRelationships extends _MusicVideoRelationships {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MusicVideoRelationshipsCopyWith<_$_MusicVideoRelationships>
-      get copyWith =>
-          __$$_MusicVideoRelationshipsCopyWithImpl<_$_MusicVideoRelationships>(
-              this, _$identity);
+  _$$MusicVideoRelationshipsImplCopyWith<_$MusicVideoRelationshipsImpl>
+      get copyWith => __$$MusicVideoRelationshipsImplCopyWithImpl<
+          _$MusicVideoRelationshipsImpl>(this, _$identity);
 }
 
 abstract class _MusicVideoRelationships extends MusicVideoRelationships {
   const factory _MusicVideoRelationships(
-      {required final List<Album>? albums,
-      required final List<Artist>? artists,
-      required final List<Song>? songs,
-      required final List<MusicVideo>? library,
-      required final List<MusicVideo>? catalog}) = _$_MusicVideoRelationships;
+          {required final List<Album>? albums,
+          required final List<Artist>? artists,
+          required final List<Song>? songs,
+          required final List<MusicVideo>? library,
+          required final List<MusicVideo>? catalog}) =
+      _$MusicVideoRelationshipsImpl;
   const _MusicVideoRelationships._() : super._();
 
   @override
@@ -1303,7 +1334,7 @@ abstract class _MusicVideoRelationships extends MusicVideoRelationships {
   List<MusicVideo>? get catalog;
   @override
   @JsonKey(ignore: true)
-  _$$_MusicVideoRelationshipsCopyWith<_$_MusicVideoRelationships>
+  _$$MusicVideoRelationshipsImplCopyWith<_$MusicVideoRelationshipsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1351,22 +1382,22 @@ class _$CuratorRelationshipsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CuratorRelationshipsCopyWith<$Res>
+abstract class _$$CuratorRelationshipsImplCopyWith<$Res>
     implements $CuratorRelationshipsCopyWith<$Res> {
-  factory _$$_CuratorRelationshipsCopyWith(_$_CuratorRelationships value,
-          $Res Function(_$_CuratorRelationships) then) =
-      __$$_CuratorRelationshipsCopyWithImpl<$Res>;
+  factory _$$CuratorRelationshipsImplCopyWith(_$CuratorRelationshipsImpl value,
+          $Res Function(_$CuratorRelationshipsImpl) then) =
+      __$$CuratorRelationshipsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<Playlist>? playlists});
 }
 
 /// @nodoc
-class __$$_CuratorRelationshipsCopyWithImpl<$Res>
-    extends _$CuratorRelationshipsCopyWithImpl<$Res, _$_CuratorRelationships>
-    implements _$$_CuratorRelationshipsCopyWith<$Res> {
-  __$$_CuratorRelationshipsCopyWithImpl(_$_CuratorRelationships _value,
-      $Res Function(_$_CuratorRelationships) _then)
+class __$$CuratorRelationshipsImplCopyWithImpl<$Res>
+    extends _$CuratorRelationshipsCopyWithImpl<$Res, _$CuratorRelationshipsImpl>
+    implements _$$CuratorRelationshipsImplCopyWith<$Res> {
+  __$$CuratorRelationshipsImplCopyWithImpl(_$CuratorRelationshipsImpl _value,
+      $Res Function(_$CuratorRelationshipsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1374,7 +1405,7 @@ class __$$_CuratorRelationshipsCopyWithImpl<$Res>
   $Res call({
     Object? playlists = freezed,
   }) {
-    return _then(_$_CuratorRelationships(
+    return _then(_$CuratorRelationshipsImpl(
       playlists: freezed == playlists
           ? _value._playlists
           : playlists // ignore: cast_nullable_to_non_nullable
@@ -1385,8 +1416,8 @@ class __$$_CuratorRelationshipsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_CuratorRelationships extends _CuratorRelationships {
-  const _$_CuratorRelationships({required final List<Playlist>? playlists})
+class _$CuratorRelationshipsImpl extends _CuratorRelationships {
+  const _$CuratorRelationshipsImpl({required final List<Playlist>? playlists})
       : _playlists = playlists,
         super._();
 
@@ -1395,6 +1426,7 @@ class _$_CuratorRelationships extends _CuratorRelationships {
   List<Playlist>? get playlists {
     final value = _playlists;
     if (value == null) return null;
+    if (_playlists is EqualUnmodifiableListView) return _playlists;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1405,10 +1437,10 @@ class _$_CuratorRelationships extends _CuratorRelationships {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CuratorRelationships &&
+            other is _$CuratorRelationshipsImpl &&
             const DeepCollectionEquality()
                 .equals(other._playlists, _playlists));
   }
@@ -1420,20 +1452,21 @@ class _$_CuratorRelationships extends _CuratorRelationships {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CuratorRelationshipsCopyWith<_$_CuratorRelationships> get copyWith =>
-      __$$_CuratorRelationshipsCopyWithImpl<_$_CuratorRelationships>(
-          this, _$identity);
+  _$$CuratorRelationshipsImplCopyWith<_$CuratorRelationshipsImpl>
+      get copyWith =>
+          __$$CuratorRelationshipsImplCopyWithImpl<_$CuratorRelationshipsImpl>(
+              this, _$identity);
 }
 
 abstract class _CuratorRelationships extends CuratorRelationships {
   const factory _CuratorRelationships(
-      {required final List<Playlist>? playlists}) = _$_CuratorRelationships;
+      {required final List<Playlist>? playlists}) = _$CuratorRelationshipsImpl;
   const _CuratorRelationships._() : super._();
 
   @override
   List<Playlist>? get playlists;
   @override
   @JsonKey(ignore: true)
-  _$$_CuratorRelationshipsCopyWith<_$_CuratorRelationships> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CuratorRelationshipsImplCopyWith<_$CuratorRelationshipsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/dimensions.dart';
@@ -13,6 +14,7 @@ import 'widgets/shuffle_button.dart';
 import 'widgets/skip_next_button.dart';
 import 'widgets/skip_prev_button.dart';
 
+@RoutePage()
 class PlayerPage extends HookConsumerWidget {
   const PlayerPage({super.key});
 
@@ -76,9 +78,9 @@ class PlayerPage extends HookConsumerWidget {
               Builder(builder: (context) {
                 const iconSize = 44.0;
 
-                return Row(
+                return const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     ShuffleButton(iconSize: iconSize),
                     SkipPreviousButton(iconSize: iconSize),
                     PlayOrPauseButton(iconSize: iconSize * 2),

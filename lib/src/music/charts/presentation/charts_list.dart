@@ -6,7 +6,7 @@ import 'package:misica/src/music/core/presentation/widgets/divider_widget.dart';
 import 'package:misica/src/music/core/presentation/widgets/loader.dart';
 
 class ChartsList extends ConsumerWidget {
-  const ChartsList({Key? key}) : super(key: key);
+  const ChartsList({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

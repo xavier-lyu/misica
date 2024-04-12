@@ -6,8 +6,8 @@ part of 'charts_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ChartsResultsDTO _$$_ChartsResultsDTOFromJson(Map json) =>
-    _$_ChartsResultsDTO(
+_$ChartsResultsDTOImpl _$$ChartsResultsDTOImplFromJson(Map json) =>
+    _$ChartsResultsDTOImpl(
       results:
           ChartsDTO.fromJson(Map<String, dynamic>.from(json['results'] as Map)),
       meta: (json['meta'] as Map?)?.map(
@@ -15,13 +15,14 @@ _$_ChartsResultsDTO _$$_ChartsResultsDTOFromJson(Map json) =>
       ),
     );
 
-Map<String, dynamic> _$$_ChartsResultsDTOToJson(_$_ChartsResultsDTO instance) =>
+Map<String, dynamic> _$$ChartsResultsDTOImplToJson(
+        _$ChartsResultsDTOImpl instance) =>
     <String, dynamic>{
       'results': instance.results.toJson(),
       'meta': instance.meta,
     };
 
-_$_ChartsDTO _$$_ChartsDTOFromJson(Map json) => _$_ChartsDTO(
+_$ChartsDTOImpl _$$ChartsDTOImplFromJson(Map json) => _$ChartsDTOImpl(
       songs: (json['songs'] as List<dynamic>?)
           ?.map((e) =>
               SongsChartDTO.fromJson(Map<String, dynamic>.from(e as Map)))
@@ -48,7 +49,7 @@ _$_ChartsDTO _$$_ChartsDTOFromJson(Map json) => _$_ChartsDTO(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ChartsDTOToJson(_$_ChartsDTO instance) =>
+Map<String, dynamic> _$$ChartsDTOImplToJson(_$ChartsDTOImpl instance) =>
     <String, dynamic>{
       'songs': instance.songs?.map((e) => e.toJson()).toList(),
       'cityCharts': instance.cityCharts?.map((e) => e.toJson()).toList(),
@@ -59,7 +60,8 @@ Map<String, dynamic> _$$_ChartsDTOToJson(_$_ChartsDTO instance) =>
       'music-videos': instance.musicVideos?.map((e) => e.toJson()).toList(),
     };
 
-_$_AlbumsChartDTO _$$_AlbumsChartDTOFromJson(Map json) => _$_AlbumsChartDTO(
+_$AlbumsChartDTOImpl _$$AlbumsChartDTOImplFromJson(Map json) =>
+    _$AlbumsChartDTOImpl(
       name: json['name'] as String,
       chart: json['chart'] as String,
       orderId: json['orderId'] as String,
@@ -70,7 +72,8 @@ _$_AlbumsChartDTO _$$_AlbumsChartDTOFromJson(Map json) => _$_AlbumsChartDTO(
           .toList(),
     );
 
-Map<String, dynamic> _$$_AlbumsChartDTOToJson(_$_AlbumsChartDTO instance) =>
+Map<String, dynamic> _$$AlbumsChartDTOImplToJson(
+        _$AlbumsChartDTOImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
       'chart': instance.chart,
@@ -80,8 +83,8 @@ Map<String, dynamic> _$$_AlbumsChartDTOToJson(_$_AlbumsChartDTO instance) =>
       'data': instance.data.map((e) => e.toJson()).toList(),
     };
 
-_$_PlaylistsChartDTO _$$_PlaylistsChartDTOFromJson(Map json) =>
-    _$_PlaylistsChartDTO(
+_$PlaylistsChartDTOImpl _$$PlaylistsChartDTOImplFromJson(Map json) =>
+    _$PlaylistsChartDTOImpl(
       name: json['name'] as String,
       chart: json['chart'] as String,
       orderId: json['orderId'] as String,
@@ -92,8 +95,8 @@ _$_PlaylistsChartDTO _$$_PlaylistsChartDTOFromJson(Map json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_PlaylistsChartDTOToJson(
-        _$_PlaylistsChartDTO instance) =>
+Map<String, dynamic> _$$PlaylistsChartDTOImplToJson(
+        _$PlaylistsChartDTOImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
       'chart': instance.chart,
@@ -103,7 +106,8 @@ Map<String, dynamic> _$$_PlaylistsChartDTOToJson(
       'data': instance.data.map((e) => e.toJson()).toList(),
     };
 
-_$_SongsChartDTO _$$_SongsChartDTOFromJson(Map json) => _$_SongsChartDTO(
+_$SongsChartDTOImpl _$$SongsChartDTOImplFromJson(Map json) =>
+    _$SongsChartDTOImpl(
       name: json['name'] as String,
       chart: json['chart'] as String,
       orderId: json['orderId'] as String,
@@ -114,7 +118,7 @@ _$_SongsChartDTO _$$_SongsChartDTOFromJson(Map json) => _$_SongsChartDTO(
           .toList(),
     );
 
-Map<String, dynamic> _$$_SongsChartDTOToJson(_$_SongsChartDTO instance) =>
+Map<String, dynamic> _$$SongsChartDTOImplToJson(_$SongsChartDTOImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
       'chart': instance.chart,
@@ -124,8 +128,8 @@ Map<String, dynamic> _$$_SongsChartDTOToJson(_$_SongsChartDTO instance) =>
       'data': instance.data.map((e) => e.toJson()).toList(),
     };
 
-_$_MusicVideosChartDTO _$$_MusicVideosChartDTOFromJson(Map json) =>
-    _$_MusicVideosChartDTO(
+_$MusicVideosChartDTOImpl _$$MusicVideosChartDTOImplFromJson(Map json) =>
+    _$MusicVideosChartDTOImpl(
       name: json['name'] as String,
       chart: json['chart'] as String,
       orderId: json['orderId'] as String,
@@ -137,8 +141,8 @@ _$_MusicVideosChartDTO _$$_MusicVideosChartDTOFromJson(Map json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_MusicVideosChartDTOToJson(
-        _$_MusicVideosChartDTO instance) =>
+Map<String, dynamic> _$$MusicVideosChartDTOImplToJson(
+        _$MusicVideosChartDTOImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
       'chart': instance.chart,

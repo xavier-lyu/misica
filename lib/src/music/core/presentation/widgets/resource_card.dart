@@ -14,12 +14,12 @@ class ResourceCard extends ConsumerWidget {
   final double artworkWidth;
 
   const ResourceCard({
-    Key? key,
+    super.key,
     required this.resource,
     required this.aspectRatio,
     this.artworkAspectRatio = 1.0,
     required this.artworkWidth,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

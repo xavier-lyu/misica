@@ -18,8 +18,9 @@ import 'package:misica/src/music/recommendations/shared/providers.dart';
 
 import 'widgets/app_navbar.dart';
 
+@RoutePage()
 class HomePage extends StatefulHookConsumerWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   ConsumerState<ConsumerStatefulWidget> createState() => _HomePageState();
@@ -125,8 +126,8 @@ class _HomePageState extends ConsumerState<HomePage> {
 
 class SettingsActionWidget extends StatelessWidget {
   const SettingsActionWidget({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

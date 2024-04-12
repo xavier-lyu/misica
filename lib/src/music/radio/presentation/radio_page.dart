@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -16,8 +17,9 @@ import 'package:misica/src/music/radio/shared/providers.dart';
 
 import 'genre_pill_widget.dart';
 
+@RoutePage()
 class RadioPage extends StatefulHookConsumerWidget {
-  const RadioPage({Key? key}) : super(key: key);
+  const RadioPage({super.key});
 
   @override
   ConsumerState<ConsumerStatefulWidget> createState() => _RadioPageState();

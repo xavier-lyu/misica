@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'artwork.dart';
 
@@ -12,7 +12,7 @@ part of 'artwork.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Artwork _$ArtworkFromJson(Map<String, dynamic> json) {
   return _Artwork.fromJson(json);
@@ -85,10 +85,10 @@ class _$ArtworkCopyWithImpl<$Res, $Val extends Artwork>
 }
 
 /// @nodoc
-abstract class _$$_ArtworkCopyWith<$Res> implements $ArtworkCopyWith<$Res> {
-  factory _$$_ArtworkCopyWith(
-          _$_Artwork value, $Res Function(_$_Artwork) then) =
-      __$$_ArtworkCopyWithImpl<$Res>;
+abstract class _$$ArtworkImplCopyWith<$Res> implements $ArtworkCopyWith<$Res> {
+  factory _$$ArtworkImplCopyWith(
+          _$ArtworkImpl value, $Res Function(_$ArtworkImpl) then) =
+      __$$ArtworkImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -96,10 +96,11 @@ abstract class _$$_ArtworkCopyWith<$Res> implements $ArtworkCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ArtworkCopyWithImpl<$Res>
-    extends _$ArtworkCopyWithImpl<$Res, _$_Artwork>
-    implements _$$_ArtworkCopyWith<$Res> {
-  __$$_ArtworkCopyWithImpl(_$_Artwork _value, $Res Function(_$_Artwork) _then)
+class __$$ArtworkImplCopyWithImpl<$Res>
+    extends _$ArtworkCopyWithImpl<$Res, _$ArtworkImpl>
+    implements _$$ArtworkImplCopyWith<$Res> {
+  __$$ArtworkImplCopyWithImpl(
+      _$ArtworkImpl _value, $Res Function(_$ArtworkImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -111,7 +112,7 @@ class __$$_ArtworkCopyWithImpl<$Res>
     Object? width = null,
     Object? textColor = freezed,
   }) {
-    return _then(_$_Artwork(
+    return _then(_$ArtworkImpl(
       bgColor: freezed == bgColor
           ? _value.bgColor
           : bgColor // ignore: cast_nullable_to_non_nullable
@@ -138,8 +139,8 @@ class __$$_ArtworkCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Artwork extends _Artwork {
-  const _$_Artwork(
+class _$ArtworkImpl extends _Artwork {
+  const _$ArtworkImpl(
       {required this.bgColor,
       required this.height,
       required this.url,
@@ -147,8 +148,8 @@ class _$_Artwork extends _Artwork {
       required this.textColor})
       : super._();
 
-  factory _$_Artwork.fromJson(Map<String, dynamic> json) =>
-      _$$_ArtworkFromJson(json);
+  factory _$ArtworkImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ArtworkImplFromJson(json);
 
   @override
   final String? bgColor;
@@ -167,10 +168,10 @@ class _$_Artwork extends _Artwork {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Artwork &&
+            other is _$ArtworkImpl &&
             (identical(other.bgColor, bgColor) || other.bgColor == bgColor) &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.url, url) || other.url == url) &&
@@ -187,12 +188,12 @@ class _$_Artwork extends _Artwork {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ArtworkCopyWith<_$_Artwork> get copyWith =>
-      __$$_ArtworkCopyWithImpl<_$_Artwork>(this, _$identity);
+  _$$ArtworkImplCopyWith<_$ArtworkImpl> get copyWith =>
+      __$$ArtworkImplCopyWithImpl<_$ArtworkImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ArtworkToJson(
+    return _$$ArtworkImplToJson(
       this,
     );
   }
@@ -204,10 +205,10 @@ abstract class _Artwork extends Artwork {
       required final int height,
       required final String url,
       required final int width,
-      required final String? textColor}) = _$_Artwork;
+      required final String? textColor}) = _$ArtworkImpl;
   const _Artwork._() : super._();
 
-  factory _Artwork.fromJson(Map<String, dynamic> json) = _$_Artwork.fromJson;
+  factory _Artwork.fromJson(Map<String, dynamic> json) = _$ArtworkImpl.fromJson;
 
   @override
   String? get bgColor;
@@ -221,6 +222,6 @@ abstract class _Artwork extends Artwork {
   String? get textColor;
   @override
   @JsonKey(ignore: true)
-  _$$_ArtworkCopyWith<_$_Artwork> get copyWith =>
+  _$$ArtworkImplCopyWith<_$ArtworkImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

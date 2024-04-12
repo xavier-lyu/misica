@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ExpandableAppBar extends StatelessWidget {
   const ExpandableAppBar({
-    Key? key,
+    super.key,
     required this.title,
     this.isCollapsed = true,
     this.expandedHeight,
@@ -10,7 +10,7 @@ class ExpandableAppBar extends StatelessWidget {
     this.expandedTitle,
     this.centerTitle,
     this.actions,
-  }) : super(key: key);
+  });
 
   final Widget title;
   final bool isCollapsed;

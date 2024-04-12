@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'resource_attributes_dto.dart';
 
@@ -12,7 +12,7 @@ part of 'resource_attributes_dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AlbumAttributesDTO _$AlbumAttributesDTOFromJson(Map<String, dynamic> json) {
   return _AlbumAttributesDTO.fromJson(json);
@@ -223,11 +223,11 @@ class _$AlbumAttributesDTOCopyWithImpl<$Res, $Val extends AlbumAttributesDTO>
 }
 
 /// @nodoc
-abstract class _$$_AlbumAttributesDTOCopyWith<$Res>
+abstract class _$$AlbumAttributesDTOImplCopyWith<$Res>
     implements $AlbumAttributesDTOCopyWith<$Res> {
-  factory _$$_AlbumAttributesDTOCopyWith(_$_AlbumAttributesDTO value,
-          $Res Function(_$_AlbumAttributesDTO) then) =
-      __$$_AlbumAttributesDTOCopyWithImpl<$Res>;
+  factory _$$AlbumAttributesDTOImplCopyWith(_$AlbumAttributesDTOImpl value,
+          $Res Function(_$AlbumAttributesDTOImpl) then) =
+      __$$AlbumAttributesDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -259,11 +259,11 @@ abstract class _$$_AlbumAttributesDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AlbumAttributesDTOCopyWithImpl<$Res>
-    extends _$AlbumAttributesDTOCopyWithImpl<$Res, _$_AlbumAttributesDTO>
-    implements _$$_AlbumAttributesDTOCopyWith<$Res> {
-  __$$_AlbumAttributesDTOCopyWithImpl(
-      _$_AlbumAttributesDTO _value, $Res Function(_$_AlbumAttributesDTO) _then)
+class __$$AlbumAttributesDTOImplCopyWithImpl<$Res>
+    extends _$AlbumAttributesDTOCopyWithImpl<$Res, _$AlbumAttributesDTOImpl>
+    implements _$$AlbumAttributesDTOImplCopyWith<$Res> {
+  __$$AlbumAttributesDTOImplCopyWithImpl(_$AlbumAttributesDTOImpl _value,
+      $Res Function(_$AlbumAttributesDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -288,7 +288,7 @@ class __$$_AlbumAttributesDTOCopyWithImpl<$Res>
     Object? trackCount = freezed,
     Object? url = freezed,
   }) {
-    return _then(_$_AlbumAttributesDTO(
+    return _then(_$AlbumAttributesDTOImpl(
       artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
@@ -367,8 +367,8 @@ class __$$_AlbumAttributesDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AlbumAttributesDTO extends _AlbumAttributesDTO {
-  const _$_AlbumAttributesDTO(
+class _$AlbumAttributesDTOImpl extends _AlbumAttributesDTO {
+  const _$AlbumAttributesDTOImpl(
       {required this.artistName,
       this.artistUrl,
       this.artwork,
@@ -390,8 +390,8 @@ class _$_AlbumAttributesDTO extends _AlbumAttributesDTO {
       : _genreNames = genreNames,
         super._();
 
-  factory _$_AlbumAttributesDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_AlbumAttributesDTOFromJson(json);
+  factory _$AlbumAttributesDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AlbumAttributesDTOImplFromJson(json);
 
   @override
   final String artistName;
@@ -412,6 +412,7 @@ class _$_AlbumAttributesDTO extends _AlbumAttributesDTO {
   List<String>? get genreNames {
     final value = _genreNames;
     if (value == null) return null;
+    if (_genreNames is EqualUnmodifiableListView) return _genreNames;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -444,10 +445,10 @@ class _$_AlbumAttributesDTO extends _AlbumAttributesDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AlbumAttributesDTO &&
+            other is _$AlbumAttributesDTOImpl &&
             (identical(other.artistName, artistName) ||
                 other.artistName == artistName) &&
             (identical(other.artistUrl, artistUrl) ||
@@ -509,13 +510,13 @@ class _$_AlbumAttributesDTO extends _AlbumAttributesDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AlbumAttributesDTOCopyWith<_$_AlbumAttributesDTO> get copyWith =>
-      __$$_AlbumAttributesDTOCopyWithImpl<_$_AlbumAttributesDTO>(
+  _$$AlbumAttributesDTOImplCopyWith<_$AlbumAttributesDTOImpl> get copyWith =>
+      __$$AlbumAttributesDTOImplCopyWithImpl<_$AlbumAttributesDTOImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AlbumAttributesDTOToJson(
+    return _$$AlbumAttributesDTOImplToJson(
       this,
     );
   }
@@ -540,11 +541,11 @@ abstract class _AlbumAttributesDTO extends AlbumAttributesDTO {
       final String? recordLabel,
       @DateTimeConverter() final DateTime? releaseDate,
       final int? trackCount,
-      final String? url}) = _$_AlbumAttributesDTO;
+      final String? url}) = _$AlbumAttributesDTOImpl;
   const _AlbumAttributesDTO._() : super._();
 
   factory _AlbumAttributesDTO.fromJson(Map<String, dynamic> json) =
-      _$_AlbumAttributesDTO.fromJson;
+      _$AlbumAttributesDTOImpl.fromJson;
 
   @override
   String get artistName;
@@ -585,7 +586,7 @@ abstract class _AlbumAttributesDTO extends AlbumAttributesDTO {
   String? get url;
   @override
   @JsonKey(ignore: true)
-  _$$_AlbumAttributesDTOCopyWith<_$_AlbumAttributesDTO> get copyWith =>
+  _$$AlbumAttributesDTOImplCopyWith<_$AlbumAttributesDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -693,11 +694,11 @@ class _$ArtistAttributesDTOCopyWithImpl<$Res, $Val extends ArtistAttributesDTO>
 }
 
 /// @nodoc
-abstract class _$$_ArtistAttributesDTOCopyWith<$Res>
+abstract class _$$ArtistAttributesDTOImplCopyWith<$Res>
     implements $ArtistAttributesDTOCopyWith<$Res> {
-  factory _$$_ArtistAttributesDTOCopyWith(_$_ArtistAttributesDTO value,
-          $Res Function(_$_ArtistAttributesDTO) then) =
-      __$$_ArtistAttributesDTOCopyWithImpl<$Res>;
+  factory _$$ArtistAttributesDTOImplCopyWith(_$ArtistAttributesDTOImpl value,
+          $Res Function(_$ArtistAttributesDTOImpl) then) =
+      __$$ArtistAttributesDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -714,11 +715,11 @@ abstract class _$$_ArtistAttributesDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ArtistAttributesDTOCopyWithImpl<$Res>
-    extends _$ArtistAttributesDTOCopyWithImpl<$Res, _$_ArtistAttributesDTO>
-    implements _$$_ArtistAttributesDTOCopyWith<$Res> {
-  __$$_ArtistAttributesDTOCopyWithImpl(_$_ArtistAttributesDTO _value,
-      $Res Function(_$_ArtistAttributesDTO) _then)
+class __$$ArtistAttributesDTOImplCopyWithImpl<$Res>
+    extends _$ArtistAttributesDTOCopyWithImpl<$Res, _$ArtistAttributesDTOImpl>
+    implements _$$ArtistAttributesDTOImplCopyWith<$Res> {
+  __$$ArtistAttributesDTOImplCopyWithImpl(_$ArtistAttributesDTOImpl _value,
+      $Res Function(_$ArtistAttributesDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -730,7 +731,7 @@ class __$$_ArtistAttributesDTOCopyWithImpl<$Res>
     Object? genreNames = freezed,
     Object? artwork = freezed,
   }) {
-    return _then(_$_ArtistAttributesDTO(
+    return _then(_$ArtistAttributesDTOImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -757,8 +758,8 @@ class __$$_ArtistAttributesDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ArtistAttributesDTO extends _ArtistAttributesDTO {
-  const _$_ArtistAttributesDTO(
+class _$ArtistAttributesDTOImpl extends _ArtistAttributesDTO {
+  const _$ArtistAttributesDTOImpl(
       {required this.name,
       this.url,
       this.editorialNotes,
@@ -767,8 +768,8 @@ class _$_ArtistAttributesDTO extends _ArtistAttributesDTO {
       : _genreNames = genreNames,
         super._();
 
-  factory _$_ArtistAttributesDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_ArtistAttributesDTOFromJson(json);
+  factory _$ArtistAttributesDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ArtistAttributesDTOImplFromJson(json);
 
   @override
   final String name;
@@ -781,6 +782,7 @@ class _$_ArtistAttributesDTO extends _ArtistAttributesDTO {
   List<String>? get genreNames {
     final value = _genreNames;
     if (value == null) return null;
+    if (_genreNames is EqualUnmodifiableListView) return _genreNames;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -794,10 +796,10 @@ class _$_ArtistAttributesDTO extends _ArtistAttributesDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ArtistAttributesDTO &&
+            other is _$ArtistAttributesDTOImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.editorialNotes, editorialNotes) ||
@@ -815,13 +817,13 @@ class _$_ArtistAttributesDTO extends _ArtistAttributesDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ArtistAttributesDTOCopyWith<_$_ArtistAttributesDTO> get copyWith =>
-      __$$_ArtistAttributesDTOCopyWithImpl<_$_ArtistAttributesDTO>(
+  _$$ArtistAttributesDTOImplCopyWith<_$ArtistAttributesDTOImpl> get copyWith =>
+      __$$ArtistAttributesDTOImplCopyWithImpl<_$ArtistAttributesDTOImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ArtistAttributesDTOToJson(
+    return _$$ArtistAttributesDTOImplToJson(
       this,
     );
   }
@@ -833,11 +835,11 @@ abstract class _ArtistAttributesDTO extends ArtistAttributesDTO {
       final String? url,
       final EditorialNotesDTO? editorialNotes,
       final List<String>? genreNames,
-      final ArtworkDTO? artwork}) = _$_ArtistAttributesDTO;
+      final ArtworkDTO? artwork}) = _$ArtistAttributesDTOImpl;
   const _ArtistAttributesDTO._() : super._();
 
   factory _ArtistAttributesDTO.fromJson(Map<String, dynamic> json) =
-      _$_ArtistAttributesDTO.fromJson;
+      _$ArtistAttributesDTOImpl.fromJson;
 
   @override
   String get name;
@@ -851,7 +853,7 @@ abstract class _ArtistAttributesDTO extends ArtistAttributesDTO {
   ArtworkDTO? get artwork;
   @override
   @JsonKey(ignore: true)
-  _$$_ArtistAttributesDTOCopyWith<_$_ArtistAttributesDTO> get copyWith =>
+  _$$ArtistAttributesDTOImplCopyWith<_$ArtistAttributesDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1053,11 +1055,12 @@ class _$MusicVideoAttributesDTOCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MusicVideoAttributesDTOCopyWith<$Res>
+abstract class _$$MusicVideoAttributesDTOImplCopyWith<$Res>
     implements $MusicVideoAttributesDTOCopyWith<$Res> {
-  factory _$$_MusicVideoAttributesDTOCopyWith(_$_MusicVideoAttributesDTO value,
-          $Res Function(_$_MusicVideoAttributesDTO) then) =
-      __$$_MusicVideoAttributesDTOCopyWithImpl<$Res>;
+  factory _$$MusicVideoAttributesDTOImplCopyWith(
+          _$MusicVideoAttributesDTOImpl value,
+          $Res Function(_$MusicVideoAttributesDTOImpl) then) =
+      __$$MusicVideoAttributesDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1087,12 +1090,13 @@ abstract class _$$_MusicVideoAttributesDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MusicVideoAttributesDTOCopyWithImpl<$Res>
+class __$$MusicVideoAttributesDTOImplCopyWithImpl<$Res>
     extends _$MusicVideoAttributesDTOCopyWithImpl<$Res,
-        _$_MusicVideoAttributesDTO>
-    implements _$$_MusicVideoAttributesDTOCopyWith<$Res> {
-  __$$_MusicVideoAttributesDTOCopyWithImpl(_$_MusicVideoAttributesDTO _value,
-      $Res Function(_$_MusicVideoAttributesDTO) _then)
+        _$MusicVideoAttributesDTOImpl>
+    implements _$$MusicVideoAttributesDTOImplCopyWith<$Res> {
+  __$$MusicVideoAttributesDTOImplCopyWithImpl(
+      _$MusicVideoAttributesDTOImpl _value,
+      $Res Function(_$MusicVideoAttributesDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1115,7 +1119,7 @@ class __$$_MusicVideoAttributesDTOCopyWithImpl<$Res>
     Object? trackNumber = freezed,
     Object? contentRating = freezed,
   }) {
-    return _then(_$_MusicVideoAttributesDTO(
+    return _then(_$MusicVideoAttributesDTOImpl(
       artistName: null == artistName
           ? _value.artistName
           : artistName // ignore: cast_nullable_to_non_nullable
@@ -1186,8 +1190,8 @@ class __$$_MusicVideoAttributesDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MusicVideoAttributesDTO extends _MusicVideoAttributesDTO {
-  const _$_MusicVideoAttributesDTO(
+class _$MusicVideoAttributesDTOImpl extends _MusicVideoAttributesDTO {
+  const _$MusicVideoAttributesDTOImpl(
       {required this.artistName,
       this.artistUrl,
       this.artwork,
@@ -1208,8 +1212,8 @@ class _$_MusicVideoAttributesDTO extends _MusicVideoAttributesDTO {
         _previews = previews,
         super._();
 
-  factory _$_MusicVideoAttributesDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_MusicVideoAttributesDTOFromJson(json);
+  factory _$MusicVideoAttributesDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MusicVideoAttributesDTOImplFromJson(json);
 
   @override
   final String artistName;
@@ -1226,6 +1230,7 @@ class _$_MusicVideoAttributesDTO extends _MusicVideoAttributesDTO {
   List<String>? get genreNames {
     final value = _genreNames;
     if (value == null) return null;
+    if (_genreNames is EqualUnmodifiableListView) return _genreNames;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1245,6 +1250,7 @@ class _$_MusicVideoAttributesDTO extends _MusicVideoAttributesDTO {
   List<Map<String, dynamic>>? get previews {
     final value = _previews;
     if (value == null) return null;
+    if (_previews is EqualUnmodifiableListView) return _previews;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -1265,10 +1271,10 @@ class _$_MusicVideoAttributesDTO extends _MusicVideoAttributesDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MusicVideoAttributesDTO &&
+            other is _$MusicVideoAttributesDTOImpl &&
             (identical(other.artistName, artistName) ||
                 other.artistName == artistName) &&
             (identical(other.artistUrl, artistUrl) ||
@@ -1320,14 +1326,13 @@ class _$_MusicVideoAttributesDTO extends _MusicVideoAttributesDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MusicVideoAttributesDTOCopyWith<_$_MusicVideoAttributesDTO>
-      get copyWith =>
-          __$$_MusicVideoAttributesDTOCopyWithImpl<_$_MusicVideoAttributesDTO>(
-              this, _$identity);
+  _$$MusicVideoAttributesDTOImplCopyWith<_$MusicVideoAttributesDTOImpl>
+      get copyWith => __$$MusicVideoAttributesDTOImplCopyWithImpl<
+          _$MusicVideoAttributesDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MusicVideoAttributesDTOToJson(
+    return _$$MusicVideoAttributesDTOImplToJson(
       this,
     );
   }
@@ -1350,11 +1355,11 @@ abstract class _MusicVideoAttributesDTO extends MusicVideoAttributesDTO {
       @DateTimeConverter() final DateTime? releaseDate,
       final String? url,
       final int? trackNumber,
-      final String? contentRating}) = _$_MusicVideoAttributesDTO;
+      final String? contentRating}) = _$MusicVideoAttributesDTOImpl;
   const _MusicVideoAttributesDTO._() : super._();
 
   factory _MusicVideoAttributesDTO.fromJson(Map<String, dynamic> json) =
-      _$_MusicVideoAttributesDTO.fromJson;
+      _$MusicVideoAttributesDTOImpl.fromJson;
 
   @override
   String get artistName;
@@ -1391,7 +1396,7 @@ abstract class _MusicVideoAttributesDTO extends MusicVideoAttributesDTO {
   String? get contentRating;
   @override
   @JsonKey(ignore: true)
-  _$$_MusicVideoAttributesDTOCopyWith<_$_MusicVideoAttributesDTO>
+  _$$MusicVideoAttributesDTOImplCopyWith<_$MusicVideoAttributesDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1570,11 +1575,12 @@ class _$PlaylistAttributesDTOCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PlaylistAttributesDTOCopyWith<$Res>
+abstract class _$$PlaylistAttributesDTOImplCopyWith<$Res>
     implements $PlaylistAttributesDTOCopyWith<$Res> {
-  factory _$$_PlaylistAttributesDTOCopyWith(_$_PlaylistAttributesDTO value,
-          $Res Function(_$_PlaylistAttributesDTO) then) =
-      __$$_PlaylistAttributesDTOCopyWithImpl<$Res>;
+  factory _$$PlaylistAttributesDTOImplCopyWith(
+          _$PlaylistAttributesDTOImpl value,
+          $Res Function(_$PlaylistAttributesDTOImpl) then) =
+      __$$PlaylistAttributesDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1601,11 +1607,12 @@ abstract class _$$_PlaylistAttributesDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PlaylistAttributesDTOCopyWithImpl<$Res>
-    extends _$PlaylistAttributesDTOCopyWithImpl<$Res, _$_PlaylistAttributesDTO>
-    implements _$$_PlaylistAttributesDTOCopyWith<$Res> {
-  __$$_PlaylistAttributesDTOCopyWithImpl(_$_PlaylistAttributesDTO _value,
-      $Res Function(_$_PlaylistAttributesDTO) _then)
+class __$$PlaylistAttributesDTOImplCopyWithImpl<$Res>
+    extends _$PlaylistAttributesDTOCopyWithImpl<$Res,
+        _$PlaylistAttributesDTOImpl>
+    implements _$$PlaylistAttributesDTOImplCopyWith<$Res> {
+  __$$PlaylistAttributesDTOImplCopyWithImpl(_$PlaylistAttributesDTOImpl _value,
+      $Res Function(_$PlaylistAttributesDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1625,7 +1632,7 @@ class __$$_PlaylistAttributesDTOCopyWithImpl<$Res>
     Object? url = freezed,
     Object? curatorSocialHandle = freezed,
   }) {
-    return _then(_$_PlaylistAttributesDTO(
+    return _then(_$PlaylistAttributesDTOImpl(
       artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
@@ -1684,8 +1691,8 @@ class __$$_PlaylistAttributesDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PlaylistAttributesDTO extends _PlaylistAttributesDTO {
-  const _$_PlaylistAttributesDTO(
+class _$PlaylistAttributesDTOImpl extends _PlaylistAttributesDTO {
+  const _$PlaylistAttributesDTOImpl(
       {this.artwork,
       this.canEdit,
       this.curatorName,
@@ -1701,8 +1708,8 @@ class _$_PlaylistAttributesDTO extends _PlaylistAttributesDTO {
       this.curatorSocialHandle})
       : super._();
 
-  factory _$_PlaylistAttributesDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_PlaylistAttributesDTOFromJson(json);
+  factory _$PlaylistAttributesDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PlaylistAttributesDTOImplFromJson(json);
 
   @override
   final ArtworkDTO? artwork;
@@ -1737,10 +1744,10 @@ class _$_PlaylistAttributesDTO extends _PlaylistAttributesDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PlaylistAttributesDTO &&
+            other is _$PlaylistAttributesDTOImpl &&
             (identical(other.artwork, artwork) || other.artwork == artwork) &&
             (identical(other.canEdit, canEdit) || other.canEdit == canEdit) &&
             (identical(other.curatorName, curatorName) ||
@@ -1785,13 +1792,13 @@ class _$_PlaylistAttributesDTO extends _PlaylistAttributesDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PlaylistAttributesDTOCopyWith<_$_PlaylistAttributesDTO> get copyWith =>
-      __$$_PlaylistAttributesDTOCopyWithImpl<_$_PlaylistAttributesDTO>(
-          this, _$identity);
+  _$$PlaylistAttributesDTOImplCopyWith<_$PlaylistAttributesDTOImpl>
+      get copyWith => __$$PlaylistAttributesDTOImplCopyWithImpl<
+          _$PlaylistAttributesDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlaylistAttributesDTOToJson(
+    return _$$PlaylistAttributesDTOImplToJson(
       this,
     );
   }
@@ -1811,11 +1818,11 @@ abstract class _PlaylistAttributesDTO extends PlaylistAttributesDTO {
       final String? playlistType,
       final PlayParamsDTO? playParams,
       final String? url,
-      final String? curatorSocialHandle}) = _$_PlaylistAttributesDTO;
+      final String? curatorSocialHandle}) = _$PlaylistAttributesDTOImpl;
   const _PlaylistAttributesDTO._() : super._();
 
   factory _PlaylistAttributesDTO.fromJson(Map<String, dynamic> json) =
-      _$_PlaylistAttributesDTO.fromJson;
+      _$PlaylistAttributesDTOImpl.fromJson;
 
   @override
   ArtworkDTO? get artwork;
@@ -1845,8 +1852,8 @@ abstract class _PlaylistAttributesDTO extends PlaylistAttributesDTO {
   String? get curatorSocialHandle;
   @override
   @JsonKey(ignore: true)
-  _$$_PlaylistAttributesDTOCopyWith<_$_PlaylistAttributesDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PlaylistAttributesDTOImplCopyWith<_$PlaylistAttributesDTOImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 SongAttributesDTO _$SongAttributesDTOFromJson(Map<String, dynamic> json) {
@@ -2081,11 +2088,11 @@ class _$SongAttributesDTOCopyWithImpl<$Res, $Val extends SongAttributesDTO>
 }
 
 /// @nodoc
-abstract class _$$_SongAttributesDTOCopyWith<$Res>
+abstract class _$$SongAttributesDTOImplCopyWith<$Res>
     implements $SongAttributesDTOCopyWith<$Res> {
-  factory _$$_SongAttributesDTOCopyWith(_$_SongAttributesDTO value,
-          $Res Function(_$_SongAttributesDTO) then) =
-      __$$_SongAttributesDTOCopyWithImpl<$Res>;
+  factory _$$SongAttributesDTOImplCopyWith(_$SongAttributesDTOImpl value,
+          $Res Function(_$SongAttributesDTOImpl) then) =
+      __$$SongAttributesDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2120,11 +2127,11 @@ abstract class _$$_SongAttributesDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SongAttributesDTOCopyWithImpl<$Res>
-    extends _$SongAttributesDTOCopyWithImpl<$Res, _$_SongAttributesDTO>
-    implements _$$_SongAttributesDTOCopyWith<$Res> {
-  __$$_SongAttributesDTOCopyWithImpl(
-      _$_SongAttributesDTO _value, $Res Function(_$_SongAttributesDTO) _then)
+class __$$SongAttributesDTOImplCopyWithImpl<$Res>
+    extends _$SongAttributesDTOCopyWithImpl<$Res, _$SongAttributesDTOImpl>
+    implements _$$SongAttributesDTOImplCopyWith<$Res> {
+  __$$SongAttributesDTOImplCopyWithImpl(_$SongAttributesDTOImpl _value,
+      $Res Function(_$SongAttributesDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2154,7 +2161,7 @@ class __$$_SongAttributesDTOCopyWithImpl<$Res>
     Object? url = freezed,
     Object? workName = freezed,
   }) {
-    return _then(_$_SongAttributesDTO(
+    return _then(_$SongAttributesDTOImpl(
       albumName: freezed == albumName
           ? _value.albumName
           : albumName // ignore: cast_nullable_to_non_nullable
@@ -2253,8 +2260,8 @@ class __$$_SongAttributesDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SongAttributesDTO extends _SongAttributesDTO {
-  const _$_SongAttributesDTO(
+class _$SongAttributesDTOImpl extends _SongAttributesDTO {
+  const _$SongAttributesDTOImpl(
       {this.albumName,
       this.artistUrl,
       this.attribution,
@@ -2283,8 +2290,8 @@ class _$_SongAttributesDTO extends _SongAttributesDTO {
         _previews = previews,
         super._();
 
-  factory _$_SongAttributesDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_SongAttributesDTOFromJson(json);
+  factory _$SongAttributesDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SongAttributesDTOImplFromJson(json);
 
   @override
   final String? albumName;
@@ -2303,6 +2310,7 @@ class _$_SongAttributesDTO extends _SongAttributesDTO {
   List<String>? get audioTraits {
     final value = _audioTraits;
     if (value == null) return null;
+    if (_audioTraits is EqualUnmodifiableListView) return _audioTraits;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2320,6 +2328,7 @@ class _$_SongAttributesDTO extends _SongAttributesDTO {
   List<String>? get genreNames {
     final value = _genreNames;
     if (value == null) return null;
+    if (_genreNames is EqualUnmodifiableListView) return _genreNames;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2341,6 +2350,7 @@ class _$_SongAttributesDTO extends _SongAttributesDTO {
   List<Map<String, dynamic>>? get previews {
     final value = _previews;
     if (value == null) return null;
+    if (_previews is EqualUnmodifiableListView) return _previews;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -2361,10 +2371,10 @@ class _$_SongAttributesDTO extends _SongAttributesDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SongAttributesDTO &&
+            other is _$SongAttributesDTOImpl &&
             (identical(other.albumName, albumName) ||
                 other.albumName == albumName) &&
             (identical(other.artistUrl, artistUrl) ||
@@ -2440,13 +2450,13 @@ class _$_SongAttributesDTO extends _SongAttributesDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SongAttributesDTOCopyWith<_$_SongAttributesDTO> get copyWith =>
-      __$$_SongAttributesDTOCopyWithImpl<_$_SongAttributesDTO>(
+  _$$SongAttributesDTOImplCopyWith<_$SongAttributesDTOImpl> get copyWith =>
+      __$$SongAttributesDTOImplCopyWithImpl<_$SongAttributesDTOImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SongAttributesDTOToJson(
+    return _$$SongAttributesDTOImplToJson(
       this,
     );
   }
@@ -2476,11 +2486,11 @@ abstract class _SongAttributesDTO extends SongAttributesDTO {
       @DateTimeConverter() final DateTime? releaseDate,
       final int? trackNumber,
       final String? url,
-      final String? workName}) = _$_SongAttributesDTO;
+      final String? workName}) = _$SongAttributesDTOImpl;
   const _SongAttributesDTO._() : super._();
 
   factory _SongAttributesDTO.fromJson(Map<String, dynamic> json) =
-      _$_SongAttributesDTO.fromJson;
+      _$SongAttributesDTOImpl.fromJson;
 
   @override
   String? get albumName;
@@ -2531,7 +2541,7 @@ abstract class _SongAttributesDTO extends SongAttributesDTO {
   String? get workName;
   @override
   @JsonKey(ignore: true)
-  _$$_SongAttributesDTOCopyWith<_$_SongAttributesDTO> get copyWith =>
+  _$$SongAttributesDTOImplCopyWith<_$SongAttributesDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2681,11 +2691,11 @@ class _$StationAttributesDTOCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_StationAttributesDTOCopyWith<$Res>
+abstract class _$$StationAttributesDTOImplCopyWith<$Res>
     implements $StationAttributesDTOCopyWith<$Res> {
-  factory _$$_StationAttributesDTOCopyWith(_$_StationAttributesDTO value,
-          $Res Function(_$_StationAttributesDTO) then) =
-      __$$_StationAttributesDTOCopyWithImpl<$Res>;
+  factory _$$StationAttributesDTOImplCopyWith(_$StationAttributesDTOImpl value,
+          $Res Function(_$StationAttributesDTOImpl) then) =
+      __$$StationAttributesDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2708,11 +2718,11 @@ abstract class _$$_StationAttributesDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_StationAttributesDTOCopyWithImpl<$Res>
-    extends _$StationAttributesDTOCopyWithImpl<$Res, _$_StationAttributesDTO>
-    implements _$$_StationAttributesDTOCopyWith<$Res> {
-  __$$_StationAttributesDTOCopyWithImpl(_$_StationAttributesDTO _value,
-      $Res Function(_$_StationAttributesDTO) _then)
+class __$$StationAttributesDTOImplCopyWithImpl<$Res>
+    extends _$StationAttributesDTOCopyWithImpl<$Res, _$StationAttributesDTOImpl>
+    implements _$$StationAttributesDTOImplCopyWith<$Res> {
+  __$$StationAttributesDTOImplCopyWithImpl(_$StationAttributesDTOImpl _value,
+      $Res Function(_$StationAttributesDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2728,7 +2738,7 @@ class __$$_StationAttributesDTOCopyWithImpl<$Res>
     Object? streamingRadioSubType = freezed,
     Object? url = freezed,
   }) {
-    return _then(_$_StationAttributesDTO(
+    return _then(_$StationAttributesDTOImpl(
       isLive: freezed == isLive
           ? _value.isLive
           : isLive // ignore: cast_nullable_to_non_nullable
@@ -2771,8 +2781,8 @@ class __$$_StationAttributesDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_StationAttributesDTO extends _StationAttributesDTO {
-  const _$_StationAttributesDTO(
+class _$StationAttributesDTOImpl extends _StationAttributesDTO {
+  const _$StationAttributesDTOImpl(
       {this.isLive,
       this.artwork,
       this.playParams,
@@ -2784,8 +2794,8 @@ class _$_StationAttributesDTO extends _StationAttributesDTO {
       this.url})
       : super._();
 
-  factory _$_StationAttributesDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_StationAttributesDTOFromJson(json);
+  factory _$StationAttributesDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$StationAttributesDTOImplFromJson(json);
 
   @override
   final bool? isLive;
@@ -2812,10 +2822,10 @@ class _$_StationAttributesDTO extends _StationAttributesDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_StationAttributesDTO &&
+            other is _$StationAttributesDTOImpl &&
             (identical(other.isLive, isLive) || other.isLive == isLive) &&
             (identical(other.artwork, artwork) || other.artwork == artwork) &&
             (identical(other.playParams, playParams) ||
@@ -2849,13 +2859,14 @@ class _$_StationAttributesDTO extends _StationAttributesDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_StationAttributesDTOCopyWith<_$_StationAttributesDTO> get copyWith =>
-      __$$_StationAttributesDTOCopyWithImpl<_$_StationAttributesDTO>(
-          this, _$identity);
+  _$$StationAttributesDTOImplCopyWith<_$StationAttributesDTOImpl>
+      get copyWith =>
+          __$$StationAttributesDTOImplCopyWithImpl<_$StationAttributesDTOImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_StationAttributesDTOToJson(
+    return _$$StationAttributesDTOImplToJson(
       this,
     );
   }
@@ -2871,11 +2882,11 @@ abstract class _StationAttributesDTO extends StationAttributesDTO {
       final String? mediaKind,
       required final String name,
       final String? streamingRadioSubType,
-      final String? url}) = _$_StationAttributesDTO;
+      final String? url}) = _$StationAttributesDTOImpl;
   const _StationAttributesDTO._() : super._();
 
   factory _StationAttributesDTO.fromJson(Map<String, dynamic> json) =
-      _$_StationAttributesDTO.fromJson;
+      _$StationAttributesDTOImpl.fromJson;
 
   @override
   bool? get isLive;
@@ -2897,8 +2908,8 @@ abstract class _StationAttributesDTO extends StationAttributesDTO {
   String? get url;
   @override
   @JsonKey(ignore: true)
-  _$$_StationAttributesDTOCopyWith<_$_StationAttributesDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$StationAttributesDTOImplCopyWith<_$StationAttributesDTOImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CuratorAttributesDTO _$CuratorAttributesDTOFromJson(Map<String, dynamic> json) {
@@ -2999,11 +3010,11 @@ class _$CuratorAttributesDTOCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CuratorAttributesDTOCopyWith<$Res>
+abstract class _$$CuratorAttributesDTOImplCopyWith<$Res>
     implements $CuratorAttributesDTOCopyWith<$Res> {
-  factory _$$_CuratorAttributesDTOCopyWith(_$_CuratorAttributesDTO value,
-          $Res Function(_$_CuratorAttributesDTO) then) =
-      __$$_CuratorAttributesDTOCopyWithImpl<$Res>;
+  factory _$$CuratorAttributesDTOImplCopyWith(_$CuratorAttributesDTOImpl value,
+          $Res Function(_$CuratorAttributesDTOImpl) then) =
+      __$$CuratorAttributesDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3019,11 +3030,11 @@ abstract class _$$_CuratorAttributesDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CuratorAttributesDTOCopyWithImpl<$Res>
-    extends _$CuratorAttributesDTOCopyWithImpl<$Res, _$_CuratorAttributesDTO>
-    implements _$$_CuratorAttributesDTOCopyWith<$Res> {
-  __$$_CuratorAttributesDTOCopyWithImpl(_$_CuratorAttributesDTO _value,
-      $Res Function(_$_CuratorAttributesDTO) _then)
+class __$$CuratorAttributesDTOImplCopyWithImpl<$Res>
+    extends _$CuratorAttributesDTOCopyWithImpl<$Res, _$CuratorAttributesDTOImpl>
+    implements _$$CuratorAttributesDTOImplCopyWith<$Res> {
+  __$$CuratorAttributesDTOImplCopyWithImpl(_$CuratorAttributesDTOImpl _value,
+      $Res Function(_$CuratorAttributesDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3034,7 +3045,7 @@ class __$$_CuratorAttributesDTOCopyWithImpl<$Res>
     Object? name = null,
     Object? url = freezed,
   }) {
-    return _then(_$_CuratorAttributesDTO(
+    return _then(_$CuratorAttributesDTOImpl(
       artwork: freezed == artwork
           ? _value.artwork
           : artwork // ignore: cast_nullable_to_non_nullable
@@ -3057,13 +3068,13 @@ class __$$_CuratorAttributesDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CuratorAttributesDTO extends _CuratorAttributesDTO {
-  const _$_CuratorAttributesDTO(
+class _$CuratorAttributesDTOImpl extends _CuratorAttributesDTO {
+  const _$CuratorAttributesDTOImpl(
       {this.artwork, this.editorialNotes, required this.name, this.url})
       : super._();
 
-  factory _$_CuratorAttributesDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_CuratorAttributesDTOFromJson(json);
+  factory _$CuratorAttributesDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CuratorAttributesDTOImplFromJson(json);
 
   @override
   final ArtworkDTO? artwork;
@@ -3080,10 +3091,10 @@ class _$_CuratorAttributesDTO extends _CuratorAttributesDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CuratorAttributesDTO &&
+            other is _$CuratorAttributesDTOImpl &&
             (identical(other.artwork, artwork) || other.artwork == artwork) &&
             (identical(other.editorialNotes, editorialNotes) ||
                 other.editorialNotes == editorialNotes) &&
@@ -3099,13 +3110,14 @@ class _$_CuratorAttributesDTO extends _CuratorAttributesDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CuratorAttributesDTOCopyWith<_$_CuratorAttributesDTO> get copyWith =>
-      __$$_CuratorAttributesDTOCopyWithImpl<_$_CuratorAttributesDTO>(
-          this, _$identity);
+  _$$CuratorAttributesDTOImplCopyWith<_$CuratorAttributesDTOImpl>
+      get copyWith =>
+          __$$CuratorAttributesDTOImplCopyWithImpl<_$CuratorAttributesDTOImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CuratorAttributesDTOToJson(
+    return _$$CuratorAttributesDTOImplToJson(
       this,
     );
   }
@@ -3116,11 +3128,11 @@ abstract class _CuratorAttributesDTO extends CuratorAttributesDTO {
       {final ArtworkDTO? artwork,
       final EditorialNotesDTO? editorialNotes,
       required final String name,
-      final String? url}) = _$_CuratorAttributesDTO;
+      final String? url}) = _$CuratorAttributesDTOImpl;
   const _CuratorAttributesDTO._() : super._();
 
   factory _CuratorAttributesDTO.fromJson(Map<String, dynamic> json) =
-      _$_CuratorAttributesDTO.fromJson;
+      _$CuratorAttributesDTOImpl.fromJson;
 
   @override
   ArtworkDTO? get artwork;
@@ -3132,8 +3144,8 @@ abstract class _CuratorAttributesDTO extends CuratorAttributesDTO {
   String? get url;
   @override
   @JsonKey(ignore: true)
-  _$$_CuratorAttributesDTOCopyWith<_$_CuratorAttributesDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CuratorAttributesDTOImplCopyWith<_$CuratorAttributesDTOImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 GenreAttributesDTO _$GenreAttributesDTOFromJson(Map<String, dynamic> json) {
@@ -3196,22 +3208,22 @@ class _$GenreAttributesDTOCopyWithImpl<$Res, $Val extends GenreAttributesDTO>
 }
 
 /// @nodoc
-abstract class _$$_GenreAttributesDTOCopyWith<$Res>
+abstract class _$$GenreAttributesDTOImplCopyWith<$Res>
     implements $GenreAttributesDTOCopyWith<$Res> {
-  factory _$$_GenreAttributesDTOCopyWith(_$_GenreAttributesDTO value,
-          $Res Function(_$_GenreAttributesDTO) then) =
-      __$$_GenreAttributesDTOCopyWithImpl<$Res>;
+  factory _$$GenreAttributesDTOImplCopyWith(_$GenreAttributesDTOImpl value,
+          $Res Function(_$GenreAttributesDTOImpl) then) =
+      __$$GenreAttributesDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? parentId, String? parentName, String name});
 }
 
 /// @nodoc
-class __$$_GenreAttributesDTOCopyWithImpl<$Res>
-    extends _$GenreAttributesDTOCopyWithImpl<$Res, _$_GenreAttributesDTO>
-    implements _$$_GenreAttributesDTOCopyWith<$Res> {
-  __$$_GenreAttributesDTOCopyWithImpl(
-      _$_GenreAttributesDTO _value, $Res Function(_$_GenreAttributesDTO) _then)
+class __$$GenreAttributesDTOImplCopyWithImpl<$Res>
+    extends _$GenreAttributesDTOCopyWithImpl<$Res, _$GenreAttributesDTOImpl>
+    implements _$$GenreAttributesDTOImplCopyWith<$Res> {
+  __$$GenreAttributesDTOImplCopyWithImpl(_$GenreAttributesDTOImpl _value,
+      $Res Function(_$GenreAttributesDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3221,7 +3233,7 @@ class __$$_GenreAttributesDTOCopyWithImpl<$Res>
     Object? parentName = freezed,
     Object? name = null,
   }) {
-    return _then(_$_GenreAttributesDTO(
+    return _then(_$GenreAttributesDTOImpl(
       parentId: freezed == parentId
           ? _value.parentId
           : parentId // ignore: cast_nullable_to_non_nullable
@@ -3240,13 +3252,13 @@ class __$$_GenreAttributesDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GenreAttributesDTO extends _GenreAttributesDTO {
-  const _$_GenreAttributesDTO(
+class _$GenreAttributesDTOImpl extends _GenreAttributesDTO {
+  const _$GenreAttributesDTOImpl(
       {this.parentId, this.parentName, required this.name})
       : super._();
 
-  factory _$_GenreAttributesDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_GenreAttributesDTOFromJson(json);
+  factory _$GenreAttributesDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GenreAttributesDTOImplFromJson(json);
 
   @override
   final String? parentId;
@@ -3261,10 +3273,10 @@ class _$_GenreAttributesDTO extends _GenreAttributesDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GenreAttributesDTO &&
+            other is _$GenreAttributesDTOImpl &&
             (identical(other.parentId, parentId) ||
                 other.parentId == parentId) &&
             (identical(other.parentName, parentName) ||
@@ -3279,13 +3291,13 @@ class _$_GenreAttributesDTO extends _GenreAttributesDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GenreAttributesDTOCopyWith<_$_GenreAttributesDTO> get copyWith =>
-      __$$_GenreAttributesDTOCopyWithImpl<_$_GenreAttributesDTO>(
+  _$$GenreAttributesDTOImplCopyWith<_$GenreAttributesDTOImpl> get copyWith =>
+      __$$GenreAttributesDTOImplCopyWithImpl<_$GenreAttributesDTOImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GenreAttributesDTOToJson(
+    return _$$GenreAttributesDTOImplToJson(
       this,
     );
   }
@@ -3295,11 +3307,11 @@ abstract class _GenreAttributesDTO extends GenreAttributesDTO {
   const factory _GenreAttributesDTO(
       {final String? parentId,
       final String? parentName,
-      required final String name}) = _$_GenreAttributesDTO;
+      required final String name}) = _$GenreAttributesDTOImpl;
   const _GenreAttributesDTO._() : super._();
 
   factory _GenreAttributesDTO.fromJson(Map<String, dynamic> json) =
-      _$_GenreAttributesDTO.fromJson;
+      _$GenreAttributesDTOImpl.fromJson;
 
   @override
   String? get parentId;
@@ -3309,6 +3321,6 @@ abstract class _GenreAttributesDTO extends GenreAttributesDTO {
   String get name;
   @override
   @JsonKey(ignore: true)
-  _$$_GenreAttributesDTOCopyWith<_$_GenreAttributesDTO> get copyWith =>
+  _$$GenreAttributesDTOImplCopyWith<_$GenreAttributesDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

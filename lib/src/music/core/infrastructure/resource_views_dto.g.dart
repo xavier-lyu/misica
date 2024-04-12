@@ -6,7 +6,8 @@ part of 'resource_views_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ResourceViewDTO _$$_ResourceViewDTOFromJson(Map json) => _$_ResourceViewDTO(
+_$ResourceViewDTOImpl _$$ResourceViewDTOImplFromJson(Map json) =>
+    _$ResourceViewDTOImpl(
       href: json['href'] as String,
       attributes: ResourceViewAttributesDTO.fromJson(
           Map<String, dynamic>.from(json['attributes'] as Map)),
@@ -16,20 +17,22 @@ _$_ResourceViewDTO _$$_ResourceViewDTOFromJson(Map json) => _$_ResourceViewDTO(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ResourceViewDTOToJson(_$_ResourceViewDTO instance) =>
+Map<String, dynamic> _$$ResourceViewDTOImplToJson(
+        _$ResourceViewDTOImpl instance) =>
     <String, dynamic>{
       'href': instance.href,
       'attributes': instance.attributes.toJson(),
       'data': instance.data.map(const ResourceDTOConverter().toJson).toList(),
     };
 
-_$_ResourceViewAttributesDTO _$$_ResourceViewAttributesDTOFromJson(Map json) =>
-    _$_ResourceViewAttributesDTO(
+_$ResourceViewAttributesDTOImpl _$$ResourceViewAttributesDTOImplFromJson(
+        Map json) =>
+    _$ResourceViewAttributesDTOImpl(
       title: json['title'] as String,
     );
 
-Map<String, dynamic> _$$_ResourceViewAttributesDTOToJson(
-        _$_ResourceViewAttributesDTO instance) =>
+Map<String, dynamic> _$$ResourceViewAttributesDTOImplToJson(
+        _$ResourceViewAttributesDTOImpl instance) =>
     <String, dynamic>{
       'title': instance.title,
     };

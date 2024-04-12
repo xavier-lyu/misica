@@ -8,13 +8,17 @@ part 'track.freezed.dart';
 @freezed
 class Track with _$Track {
   const Track._();
-  const factory Track.song(Song value) = TrackSong;
-  const factory Track.musicVideo(MusicVideo value) = TrackMusicVideo;
+  const factory Track.song(Song song) = _TrackSong;
+  const factory Track.musicVideo(MusicVideo mv) = _TrackMusicVideo;
 
   String get id => when(
         song: (song) => song.id,
         musicVideo: (musicVideo) => musicVideo.id,
       );
+  // String get id => switch (this) {
+  //       TrackSong(:final value) => value.id,
+  //       TrackMusicVideo(:final value) => value.id,
+  //     };
 
   String get type => when(
         song: (song) => song.type,

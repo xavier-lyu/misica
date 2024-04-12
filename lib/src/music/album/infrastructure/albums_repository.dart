@@ -19,7 +19,7 @@ class AlbumsRepository {
     try {
       final album = await _remoteService.fetchCatalogAlbum(storefront, id);
       return right(album.data.first.toDomain() as Album);
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       return left(MusicFailure.api(e.response?.statusCode));
     } on StateError {
       return left(const MusicFailure.api(HttpStatus.notFound));

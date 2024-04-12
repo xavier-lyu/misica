@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -20,8 +21,9 @@ import 'package:misica/src/music/player/shared/providers.dart';
 
 import 'artist_footer_view.dart';
 
+@RoutePage()
 class ArtistPage extends StatefulHookConsumerWidget {
-  const ArtistPage({Key? key, required this.id}) : super(key: key);
+  const ArtistPage({super.key, required this.id});
 
   final String id;
 
@@ -117,12 +119,12 @@ class _ArtistPageState extends ConsumerState<ArtistPage> {
 
 class ArtistExpandedTitle extends StatelessWidget {
   const ArtistExpandedTitle({
-    Key? key,
+    super.key,
     this.child,
     required this.opacity,
     required this.title,
     this.onPlayed,
-  }) : super(key: key);
+  });
 
   final Widget? child;
   final String title;

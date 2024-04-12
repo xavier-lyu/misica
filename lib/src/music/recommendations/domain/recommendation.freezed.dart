@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'recommendation.dart';
 
@@ -12,7 +12,7 @@ part of 'recommendation.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$Recommendation {
@@ -73,11 +73,11 @@ class _$RecommendationCopyWithImpl<$Res, $Val extends Recommendation>
 }
 
 /// @nodoc
-abstract class _$$_RecommendationCopyWith<$Res>
+abstract class _$$RecommendationImplCopyWith<$Res>
     implements $RecommendationCopyWith<$Res> {
-  factory _$$_RecommendationCopyWith(
-          _$_Recommendation value, $Res Function(_$_Recommendation) then) =
-      __$$_RecommendationCopyWithImpl<$Res>;
+  factory _$$RecommendationImplCopyWith(_$RecommendationImpl value,
+          $Res Function(_$RecommendationImpl) then) =
+      __$$RecommendationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -87,11 +87,11 @@ abstract class _$$_RecommendationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_RecommendationCopyWithImpl<$Res>
-    extends _$RecommendationCopyWithImpl<$Res, _$_Recommendation>
-    implements _$$_RecommendationCopyWith<$Res> {
-  __$$_RecommendationCopyWithImpl(
-      _$_Recommendation _value, $Res Function(_$_Recommendation) _then)
+class __$$RecommendationImplCopyWithImpl<$Res>
+    extends _$RecommendationCopyWithImpl<$Res, _$RecommendationImpl>
+    implements _$$RecommendationImplCopyWith<$Res> {
+  __$$RecommendationImplCopyWithImpl(
+      _$RecommendationImpl _value, $Res Function(_$RecommendationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -101,7 +101,7 @@ class __$$_RecommendationCopyWithImpl<$Res>
     Object? contents = freezed,
     Object? recommendations = freezed,
   }) {
-    return _then(_$_Recommendation(
+    return _then(_$RecommendationImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -120,8 +120,8 @@ class __$$_RecommendationCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Recommendation implements _Recommendation {
-  const _$_Recommendation(
+class _$RecommendationImpl implements _Recommendation {
+  const _$RecommendationImpl(
       {required this.title,
       required final List<Resource>? contents,
       required final List<Recommendation>? recommendations})
@@ -135,6 +135,7 @@ class _$_Recommendation implements _Recommendation {
   List<Resource>? get contents {
     final value = _contents;
     if (value == null) return null;
+    if (_contents is EqualUnmodifiableListView) return _contents;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -144,6 +145,7 @@ class _$_Recommendation implements _Recommendation {
   List<Recommendation>? get recommendations {
     final value = _recommendations;
     if (value == null) return null;
+    if (_recommendations is EqualUnmodifiableListView) return _recommendations;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -154,10 +156,10 @@ class _$_Recommendation implements _Recommendation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Recommendation &&
+            other is _$RecommendationImpl &&
             (identical(other.title, title) || other.title == title) &&
             const DeepCollectionEquality().equals(other._contents, _contents) &&
             const DeepCollectionEquality()
@@ -174,8 +176,9 @@ class _$_Recommendation implements _Recommendation {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RecommendationCopyWith<_$_Recommendation> get copyWith =>
-      __$$_RecommendationCopyWithImpl<_$_Recommendation>(this, _$identity);
+  _$$RecommendationImplCopyWith<_$RecommendationImpl> get copyWith =>
+      __$$RecommendationImplCopyWithImpl<_$RecommendationImpl>(
+          this, _$identity);
 }
 
 abstract class _Recommendation implements Recommendation {
@@ -183,7 +186,7 @@ abstract class _Recommendation implements Recommendation {
           {required final String title,
           required final List<Resource>? contents,
           required final List<Recommendation>? recommendations}) =
-      _$_Recommendation;
+      _$RecommendationImpl;
 
   @override
   String get title;
@@ -193,6 +196,6 @@ abstract class _Recommendation implements Recommendation {
   List<Recommendation>? get recommendations;
   @override
   @JsonKey(ignore: true)
-  _$$_RecommendationCopyWith<_$_Recommendation> get copyWith =>
+  _$$RecommendationImplCopyWith<_$RecommendationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

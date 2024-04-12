@@ -8,8 +8,7 @@ import 'package:misica/src/music/core/presentation/widgets/resource_tile.dart';
 import 'package:misica/src/music/player/shared/providers.dart';
 
 class ResourcesListView extends StatelessWidget {
-  const ResourcesListView({Key? key, required this.resources})
-      : super(key: key);
+  const ResourcesListView({super.key, required this.resources});
 
   final List<Resource> resources;
 

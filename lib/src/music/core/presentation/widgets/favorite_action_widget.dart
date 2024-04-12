@@ -7,9 +7,9 @@ import 'package:misica/src/music/library/shared/providers.dart';
 
 class FavoriteActionWidget extends ConsumerStatefulWidget {
   const FavoriteActionWidget({
-    Key? key,
+    super.key,
     required this.resource,
-  }) : super(key: key);
+  });
 
   final Resource resource;
 

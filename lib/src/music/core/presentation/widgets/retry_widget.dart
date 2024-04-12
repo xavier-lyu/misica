@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class RetryWidget extends StatelessWidget {
   final VoidCallback? onRetry;
-  const RetryWidget({Key? key, this.onRetry}) : super(key: key);
+  const RetryWidget({super.key, this.onRetry});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class RetryWidget extends StatelessWidget {
 }
 
 class SliverRetryView extends StatelessWidget {
-  const SliverRetryView({Key? key, this.onRetry}) : super(key: key);
+  const SliverRetryView({super.key, this.onRetry});
 
   final VoidCallback? onRetry;
 

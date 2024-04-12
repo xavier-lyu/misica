@@ -20,7 +20,7 @@ class RecommendationsRepository {
       );
       return right(
           remoteRecommendations.data.map((e) => e.toDomain()).toList());
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       return left(MusicFailure.api(e.response?.statusCode));
     }
   }

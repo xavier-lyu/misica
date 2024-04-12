@@ -3,9 +3,9 @@ import 'package:misica/src/core/shared/dimensions.dart';
 
 class SectionTitle extends StatelessWidget {
   const SectionTitle({
-    Key? key,
+    super.key,
     required this.title,
-  }) : super(key: key);
+  });
 
   final String title;
 

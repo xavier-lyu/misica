@@ -45,32 +45,32 @@ class Chart with _$Chart {
   const factory Chart.albums({
     required String name,
     required String chart,
-    required List<Album> data,
+    required List<Album> albums,
   }) = AlbumsChart;
   const factory Chart.playlists({
     required String name,
     required String chart,
-    required List<Playlist> data,
+    required List<Playlist> playlists,
   }) = PlaylistsChart;
   const factory Chart.songs({
     required String name,
     required String chart,
-    required List<Song> data,
+    required List<Song> songs,
   }) = SongsChart;
   const factory Chart.musicVideo({
     required String name,
     required String chart,
-    required List<MusicVideo> data,
+    required List<MusicVideo> mvs,
   }) = MusicVideosChart;
 
-  List<Resource> get data => map(
-        albums: (albums) => albums.data,
-        playlists: (playlists) => playlists.data,
-        songs: (songs) => songs.data,
-        musicVideo: (musicVideo) => musicVideo.data,
+  List<Resource> get value => map(
+        albums: (_) => _.albums,
+        playlists: (_) => _.playlists,
+        songs: (_) => _.songs,
+        musicVideo: (_) => _.mvs,
       );
 
-  bool get isEmpty => data.isEmpty;
+  bool get isEmpty => value.isEmpty;
 }
 
 // @freezed

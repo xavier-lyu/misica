@@ -15,7 +15,7 @@ class SearchRepository {
     try {
       final results = await _remoteService.search(storefront, term);
       return right(results.toDomain());
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       return left(MusicFailure.api(e.response?.statusCode));
     }
   }
@@ -28,7 +28,7 @@ class SearchRepository {
       return right(
           suggestions.results.suggestions?.map((e) => e.toDomain()).toList() ??
               []);
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       return left(MusicFailure.api(e.response?.statusCode));
     }
   }

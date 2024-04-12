@@ -8,12 +8,12 @@ class AppNavbar extends StatelessWidget {
   final List<Widget>? actions;
 
   const AppNavbar({
-    Key? key,
+    super.key,
     this.title,
     this.centerTitle,
     this.expandedHeight = 96,
     this.actions,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

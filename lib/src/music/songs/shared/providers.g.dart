@@ -6,7 +6,36 @@ part of 'providers.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-// ignore_for_file: avoid_private_typedef_functions, non_constant_identifier_names, subtype_of_sealed_class, invalid_use_of_internal_member, unused_element, constant_identifier_names, unnecessary_raw_strings, library_private_types_in_public_api
+String _$songServiceHash() => r'bc14d0ae22851db5788d58ecce94024d772b267e';
+
+/// See also [songService].
+@ProviderFor(songService)
+final songServiceProvider = AutoDisposeProvider<SongService>.internal(
+  songService,
+  name: r'songServiceProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$songServiceHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef SongServiceRef = AutoDisposeProviderRef<SongService>;
+String _$songRepositoryHash() => r'67d8e584ed5b02e817b20790f90516594c7db6b1';
+
+/// See also [songRepository].
+@ProviderFor(songRepository)
+final songRepositoryProvider = AutoDisposeProvider<SongRepository>.internal(
+  songRepository,
+  name: r'songRepositoryProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$songRepositoryHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef SongRepositoryRef = AutoDisposeProviderRef<SongRepository>;
+String _$catalogTrackHash() => r'00b6440bbb86d41d4d18fac16ae909bc014e70a8';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -29,37 +58,60 @@ class _SystemHash {
   }
 }
 
-String $songServiceHash() => r'bc14d0ae22851db5788d58ecce94024d772b267e';
+/// See also [catalogTrack].
+@ProviderFor(catalogTrack)
+const catalogTrackProvider = CatalogTrackFamily();
 
-/// See also [songService].
-final songServiceProvider = AutoDisposeProvider<SongService>(
-  songService,
-  name: r'songServiceProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : $songServiceHash,
-);
-typedef SongServiceRef = AutoDisposeProviderRef<SongService>;
-String $songRepositoryHash() => r'67d8e584ed5b02e817b20790f90516594c7db6b1';
+/// See also [catalogTrack].
+class CatalogTrackFamily extends Family<AsyncValue<Track?>> {
+  /// See also [catalogTrack].
+  const CatalogTrackFamily();
 
-/// See also [songRepository].
-final songRepositoryProvider = AutoDisposeProvider<SongRepository>(
-  songRepository,
-  name: r'songRepositoryProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : $songRepositoryHash,
-);
-typedef SongRepositoryRef = AutoDisposeProviderRef<SongRepository>;
-String $catalogTrackHash() => r'00b6440bbb86d41d4d18fac16ae909bc014e70a8';
+  /// See also [catalogTrack].
+  CatalogTrackProvider call({
+    required String id,
+    required String kind,
+  }) {
+    return CatalogTrackProvider(
+      id: id,
+      kind: kind,
+    );
+  }
+
+  @override
+  CatalogTrackProvider getProviderOverride(
+    covariant CatalogTrackProvider provider,
+  ) {
+    return call(
+      id: provider.id,
+      kind: provider.kind,
+    );
+  }
+
+  static const Iterable<ProviderOrFamily>? _dependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get dependencies => _dependencies;
+
+  static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
+
+  @override
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
+      _allTransitiveDependencies;
+
+  @override
+  String? get name => r'catalogTrackProvider';
+}
 
 /// See also [catalogTrack].
 class CatalogTrackProvider extends AutoDisposeFutureProvider<Track?> {
+  /// See also [catalogTrack].
   CatalogTrackProvider({
-    required this.id,
-    required this.kind,
-  }) : super(
+    required String id,
+    required String kind,
+  }) : this._internal(
           (ref) => catalogTrack(
-            ref,
+            ref as CatalogTrackRef,
             id: id,
             kind: kind,
           ),
@@ -68,11 +120,51 @@ class CatalogTrackProvider extends AutoDisposeFutureProvider<Track?> {
           debugGetCreateSourceHash:
               const bool.fromEnvironment('dart.vm.product')
                   ? null
-                  : $catalogTrackHash,
+                  : _$catalogTrackHash,
+          dependencies: CatalogTrackFamily._dependencies,
+          allTransitiveDependencies:
+              CatalogTrackFamily._allTransitiveDependencies,
+          id: id,
+          kind: kind,
         );
+
+  CatalogTrackProvider._internal(
+    super._createNotifier, {
+    required super.name,
+    required super.dependencies,
+    required super.allTransitiveDependencies,
+    required super.debugGetCreateSourceHash,
+    required super.from,
+    required this.id,
+    required this.kind,
+  }) : super.internal();
 
   final String id;
   final String kind;
+
+  @override
+  Override overrideWith(
+    FutureOr<Track?> Function(CatalogTrackRef provider) create,
+  ) {
+    return ProviderOverride(
+      origin: this,
+      override: CatalogTrackProvider._internal(
+        (ref) => create(ref as CatalogTrackRef),
+        from: from,
+        name: null,
+        dependencies: null,
+        allTransitiveDependencies: null,
+        debugGetCreateSourceHash: null,
+        id: id,
+        kind: kind,
+      ),
+    );
+  }
+
+  @override
+  AutoDisposeFutureProviderElement<Track?> createElement() {
+    return _CatalogTrackProviderElement(this);
+  }
 
   @override
   bool operator ==(Object other) {
@@ -91,40 +183,22 @@ class CatalogTrackProvider extends AutoDisposeFutureProvider<Track?> {
   }
 }
 
-typedef CatalogTrackRef = AutoDisposeFutureProviderRef<Track?>;
+mixin CatalogTrackRef on AutoDisposeFutureProviderRef<Track?> {
+  /// The parameter `id` of this provider.
+  String get id;
 
-/// See also [catalogTrack].
-final catalogTrackProvider = CatalogTrackFamily();
-
-class CatalogTrackFamily extends Family<AsyncValue<Track?>> {
-  CatalogTrackFamily();
-
-  CatalogTrackProvider call({
-    required String id,
-    required String kind,
-  }) {
-    return CatalogTrackProvider(
-      id: id,
-      kind: kind,
-    );
-  }
-
-  @override
-  AutoDisposeFutureProvider<Track?> getProviderOverride(
-    covariant CatalogTrackProvider provider,
-  ) {
-    return call(
-      id: provider.id,
-      kind: provider.kind,
-    );
-  }
-
-  @override
-  List<ProviderOrFamily>? get allTransitiveDependencies => null;
-
-  @override
-  List<ProviderOrFamily>? get dependencies => null;
-
-  @override
-  String? get name => r'catalogTrackProvider';
+  /// The parameter `kind` of this provider.
+  String get kind;
 }
+
+class _CatalogTrackProviderElement
+    extends AutoDisposeFutureProviderElement<Track?> with CatalogTrackRef {
+  _CatalogTrackProviderElement(super.provider);
+
+  @override
+  String get id => (origin as CatalogTrackProvider).id;
+  @override
+  String get kind => (origin as CatalogTrackProvider).kind;
+}
+// ignore_for_file: type=lint
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

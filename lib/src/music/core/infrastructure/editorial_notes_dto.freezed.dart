@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'editorial_notes_dto.dart';
 
@@ -12,7 +12,7 @@ part of 'editorial_notes_dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 EditorialNotesDTO _$EditorialNotesDTOFromJson(Map<String, dynamic> json) {
   return _EditorialNotesDTO.fromJson(json);
@@ -74,22 +74,22 @@ class _$EditorialNotesDTOCopyWithImpl<$Res, $Val extends EditorialNotesDTO>
 }
 
 /// @nodoc
-abstract class _$$_EditorialNotesDTOCopyWith<$Res>
+abstract class _$$EditorialNotesDTOImplCopyWith<$Res>
     implements $EditorialNotesDTOCopyWith<$Res> {
-  factory _$$_EditorialNotesDTOCopyWith(_$_EditorialNotesDTO value,
-          $Res Function(_$_EditorialNotesDTO) then) =
-      __$$_EditorialNotesDTOCopyWithImpl<$Res>;
+  factory _$$EditorialNotesDTOImplCopyWith(_$EditorialNotesDTOImpl value,
+          $Res Function(_$EditorialNotesDTOImpl) then) =
+      __$$EditorialNotesDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? short, String? standard, String? name});
 }
 
 /// @nodoc
-class __$$_EditorialNotesDTOCopyWithImpl<$Res>
-    extends _$EditorialNotesDTOCopyWithImpl<$Res, _$_EditorialNotesDTO>
-    implements _$$_EditorialNotesDTOCopyWith<$Res> {
-  __$$_EditorialNotesDTOCopyWithImpl(
-      _$_EditorialNotesDTO _value, $Res Function(_$_EditorialNotesDTO) _then)
+class __$$EditorialNotesDTOImplCopyWithImpl<$Res>
+    extends _$EditorialNotesDTOCopyWithImpl<$Res, _$EditorialNotesDTOImpl>
+    implements _$$EditorialNotesDTOImplCopyWith<$Res> {
+  __$$EditorialNotesDTOImplCopyWithImpl(_$EditorialNotesDTOImpl _value,
+      $Res Function(_$EditorialNotesDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +99,7 @@ class __$$_EditorialNotesDTOCopyWithImpl<$Res>
     Object? standard = freezed,
     Object? name = freezed,
   }) {
-    return _then(_$_EditorialNotesDTO(
+    return _then(_$EditorialNotesDTOImpl(
       short: freezed == short
           ? _value.short
           : short // ignore: cast_nullable_to_non_nullable
@@ -118,12 +118,12 @@ class __$$_EditorialNotesDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EditorialNotesDTO extends _EditorialNotesDTO {
-  const _$_EditorialNotesDTO({this.short, this.standard, this.name})
+class _$EditorialNotesDTOImpl extends _EditorialNotesDTO {
+  const _$EditorialNotesDTOImpl({this.short, this.standard, this.name})
       : super._();
 
-  factory _$_EditorialNotesDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_EditorialNotesDTOFromJson(json);
+  factory _$EditorialNotesDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EditorialNotesDTOImplFromJson(json);
 
   @override
   final String? short;
@@ -138,10 +138,10 @@ class _$_EditorialNotesDTO extends _EditorialNotesDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EditorialNotesDTO &&
+            other is _$EditorialNotesDTOImpl &&
             (identical(other.short, short) || other.short == short) &&
             (identical(other.standard, standard) ||
                 other.standard == standard) &&
@@ -155,13 +155,13 @@ class _$_EditorialNotesDTO extends _EditorialNotesDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EditorialNotesDTOCopyWith<_$_EditorialNotesDTO> get copyWith =>
-      __$$_EditorialNotesDTOCopyWithImpl<_$_EditorialNotesDTO>(
+  _$$EditorialNotesDTOImplCopyWith<_$EditorialNotesDTOImpl> get copyWith =>
+      __$$EditorialNotesDTOImplCopyWithImpl<_$EditorialNotesDTOImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EditorialNotesDTOToJson(
+    return _$$EditorialNotesDTOImplToJson(
       this,
     );
   }
@@ -171,11 +171,11 @@ abstract class _EditorialNotesDTO extends EditorialNotesDTO {
   const factory _EditorialNotesDTO(
       {final String? short,
       final String? standard,
-      final String? name}) = _$_EditorialNotesDTO;
+      final String? name}) = _$EditorialNotesDTOImpl;
   const _EditorialNotesDTO._() : super._();
 
   factory _EditorialNotesDTO.fromJson(Map<String, dynamic> json) =
-      _$_EditorialNotesDTO.fromJson;
+      _$EditorialNotesDTOImpl.fromJson;
 
   @override
   String? get short;
@@ -185,6 +185,6 @@ abstract class _EditorialNotesDTO extends EditorialNotesDTO {
   String? get name;
   @override
   @JsonKey(ignore: true)
-  _$$_EditorialNotesDTOCopyWith<_$_EditorialNotesDTO> get copyWith =>
+  _$$EditorialNotesDTOImplCopyWith<_$EditorialNotesDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

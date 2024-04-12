@@ -5,8 +5,7 @@ import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/core/presentation/widgets/resource_card.dart';
 
 class ResourcesGridView extends StatelessWidget {
-  const ResourcesGridView({Key? key, required this.resources})
-      : super(key: key);
+  const ResourcesGridView({super.key, required this.resources});
 
   final List<Resource> resources;
 

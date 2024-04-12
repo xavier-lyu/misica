@@ -6,10 +6,10 @@ import 'package:misica/src/music/core/presentation/widgets/resource_context_menu
 
 class AlbumTrackTile extends StatelessWidget {
   const AlbumTrackTile({
-    Key? key,
+    super.key,
     required this.track,
     this.onTap,
-  }) : super(key: key);
+  });
 
   final Track track;
   final VoidCallback? onTap;

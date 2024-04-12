@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'play_params_dto.dart';
 
@@ -12,7 +12,7 @@ part of 'play_params_dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PlayParamsDTO _$PlayParamsDTOFromJson(Map<String, dynamic> json) {
   return _PlayParamsDTO.fromJson(json);
@@ -133,11 +133,11 @@ class _$PlayParamsDTOCopyWithImpl<$Res, $Val extends PlayParamsDTO>
 }
 
 /// @nodoc
-abstract class _$$_PlayParamsDTOCopyWith<$Res>
+abstract class _$$PlayParamsDTOImplCopyWith<$Res>
     implements $PlayParamsDTOCopyWith<$Res> {
-  factory _$$_PlayParamsDTOCopyWith(
-          _$_PlayParamsDTO value, $Res Function(_$_PlayParamsDTO) then) =
-      __$$_PlayParamsDTOCopyWithImpl<$Res>;
+  factory _$$PlayParamsDTOImplCopyWith(
+          _$PlayParamsDTOImpl value, $Res Function(_$PlayParamsDTOImpl) then) =
+      __$$PlayParamsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -155,11 +155,11 @@ abstract class _$$_PlayParamsDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PlayParamsDTOCopyWithImpl<$Res>
-    extends _$PlayParamsDTOCopyWithImpl<$Res, _$_PlayParamsDTO>
-    implements _$$_PlayParamsDTOCopyWith<$Res> {
-  __$$_PlayParamsDTOCopyWithImpl(
-      _$_PlayParamsDTO _value, $Res Function(_$_PlayParamsDTO) _then)
+class __$$PlayParamsDTOImplCopyWithImpl<$Res>
+    extends _$PlayParamsDTOCopyWithImpl<$Res, _$PlayParamsDTOImpl>
+    implements _$$PlayParamsDTOImplCopyWith<$Res> {
+  __$$PlayParamsDTOImplCopyWithImpl(
+      _$PlayParamsDTOImpl _value, $Res Function(_$PlayParamsDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -177,7 +177,7 @@ class __$$_PlayParamsDTOCopyWithImpl<$Res>
     Object? streamingKind = freezed,
     Object? hasDrm = freezed,
   }) {
-    return _then(_$_PlayParamsDTO(
+    return _then(_$PlayParamsDTOImpl(
       catalogId: freezed == catalogId
           ? _value.catalogId
           : catalogId // ignore: cast_nullable_to_non_nullable
@@ -228,8 +228,8 @@ class __$$_PlayParamsDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PlayParamsDTO extends _PlayParamsDTO {
-  const _$_PlayParamsDTO(
+class _$PlayParamsDTOImpl extends _PlayParamsDTO {
+  const _$PlayParamsDTOImpl(
       {this.catalogId,
       this.globalId,
       required this.id,
@@ -243,8 +243,8 @@ class _$_PlayParamsDTO extends _PlayParamsDTO {
       this.hasDrm})
       : super._();
 
-  factory _$_PlayParamsDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_PlayParamsDTOFromJson(json);
+  factory _$PlayParamsDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PlayParamsDTOImplFromJson(json);
 
   @override
   final String? catalogId;
@@ -275,10 +275,10 @@ class _$_PlayParamsDTO extends _PlayParamsDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PlayParamsDTO &&
+            other is _$PlayParamsDTOImpl &&
             (identical(other.catalogId, catalogId) ||
                 other.catalogId == catalogId) &&
             (identical(other.globalId, globalId) ||
@@ -318,12 +318,12 @@ class _$_PlayParamsDTO extends _PlayParamsDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PlayParamsDTOCopyWith<_$_PlayParamsDTO> get copyWith =>
-      __$$_PlayParamsDTOCopyWithImpl<_$_PlayParamsDTO>(this, _$identity);
+  _$$PlayParamsDTOImplCopyWith<_$PlayParamsDTOImpl> get copyWith =>
+      __$$PlayParamsDTOImplCopyWithImpl<_$PlayParamsDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlayParamsDTOToJson(
+    return _$$PlayParamsDTOImplToJson(
       this,
     );
   }
@@ -341,11 +341,11 @@ abstract class _PlayParamsDTO extends PlayParamsDTO {
       final String? stationHash,
       final int? mediaType,
       final int? streamingKind,
-      final bool? hasDrm}) = _$_PlayParamsDTO;
+      final bool? hasDrm}) = _$PlayParamsDTOImpl;
   const _PlayParamsDTO._() : super._();
 
   factory _PlayParamsDTO.fromJson(Map<String, dynamic> json) =
-      _$_PlayParamsDTO.fromJson;
+      _$PlayParamsDTOImpl.fromJson;
 
   @override
   String? get catalogId;
@@ -371,6 +371,6 @@ abstract class _PlayParamsDTO extends PlayParamsDTO {
   bool? get hasDrm;
   @override
   @JsonKey(ignore: true)
-  _$$_PlayParamsDTOCopyWith<_$_PlayParamsDTO> get copyWith =>
+  _$$PlayParamsDTOImplCopyWith<_$PlayParamsDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

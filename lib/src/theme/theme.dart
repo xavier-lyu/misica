@@ -14,7 +14,6 @@ class CustomTheme {
         seedColor: _primaryKeyColor, brightness: Brightness.light);
 
     return light.copyWith(
-      useMaterial3: true,
       colorScheme: colorScheme,
       primaryColor: colorScheme.primary,
       scaffoldBackgroundColor: colorScheme.background.lighten(),
@@ -36,7 +35,6 @@ class CustomTheme {
         seedColor: _primaryKeyColor, brightness: Brightness.dark);
 
     return dark.copyWith(
-      useMaterial3: true,
       colorScheme: colorScheme,
       primaryColor: colorScheme.primary,
       scaffoldBackgroundColor: colorScheme.background.darken(),

@@ -22,7 +22,7 @@ class PlaylistsRepository {
       final playlist =
           await _remoteService.fetchCatalogPlaylist(storefront, id);
       return right(playlist.data.first.toDomain() as Playlist);
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       return left(MusicFailure.api(e.response?.statusCode));
     } on StateError {
       return left(const MusicFailure.api(HttpStatus.notFound));
@@ -37,7 +37,7 @@ class PlaylistsRepository {
       final tracks =
           await _remoteService.fetchCatalogPlaylistTracks(storefront, id);
       return right(tracks.data.toDomainTracks());
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       return left(MusicFailure.api(e.response?.statusCode));
     }
   }

@@ -7,7 +7,7 @@ import 'package:misica/src/music/core/presentation/widgets/resource_context_menu
 import 'package:misica/src/music/player/shared/providers.dart';
 
 class StationTile extends ConsumerWidget {
-  const StationTile({Key? key, required this.station}) : super(key: key);
+  const StationTile({super.key, required this.station});
 
   final Station station;
 

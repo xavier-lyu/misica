@@ -5,17 +5,22 @@ import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/player/presentation/now_playing_bar.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
+@RoutePage()
 class IndexPage extends StatelessWidget {
-  const IndexPage({Key? key}) : super(key: key);
+  const IndexPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
       routes: const [
-        HomeTab(),
-        RadioTab(),
-        LibraryTab(),
-        SearchTab(),
+        HomeRouter(),
+        RadioRouter(),
+        LibraryRouter(),
+        SearchRouter()
+        // HomeTab(),
+        // RadioTab(),
+        // LibraryTab(),
+        // SearchTab(),
       ],
       bottomNavigationBuilder: (_, tabsRouter) {
         return SalomonBottomBar(

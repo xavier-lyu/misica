@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/authorization/application/auth_notifier.dart';
 import 'package:misica/src/authorization/shared/providers.dart';
+import 'package:misica/src/core/presentation/app_router.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
 import 'package:misica/src/core/shared/providers.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
@@ -12,7 +13,7 @@ import 'package:misica/src/theme/theme.dart';
 class AppWidget extends ConsumerWidget {
   final _appRouter = AppRouter();
 
-  AppWidget({Key? key}) : super(key: key);
+  AppWidget({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -42,8 +43,9 @@ class AppWidget extends ConsumerWidget {
       theme: CustomTheme.light(),
       darkTheme: CustomTheme.dark(),
       themeMode: settings.themeMode,
-      routerDelegate: _appRouter.delegate(),
-      routeInformationParser: _appRouter.defaultRouteParser(),
+      routerConfig: _appRouter.config(),
+      // routerDelegate: _appRouter.delegate(),
+      // routeInformationParser: _appRouter.defaultRouteParser(),
     );
   }
 }

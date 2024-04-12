@@ -5,11 +5,11 @@ typedef DoubleCallback = void Function(double);
 
 class HookScrollView extends HookWidget {
   const HookScrollView({
-    Key? key,
+    super.key,
     required this.slivers,
     this.onOffsetChanged,
     this.physics,
-  }) : super(key: key);
+  });
 
   final List<Widget> slivers;
   final DoubleCallback? onOffsetChanged;

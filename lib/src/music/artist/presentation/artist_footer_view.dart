@@ -6,9 +6,9 @@ import 'package:misica/src/music/core/presentation/widgets/expandable_text.dart'
 
 class ArtistFooterView extends StatelessWidget {
   const ArtistFooterView({
-    Key? key,
+    super.key,
     required this.description,
-  }) : super(key: key);
+  });
 
   final String description;
 

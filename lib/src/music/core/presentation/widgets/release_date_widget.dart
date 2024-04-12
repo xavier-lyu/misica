@@ -3,7 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 
 class ReleaseDateWidget extends StatelessWidget {
-  const ReleaseDateWidget({Key? key, this.date}) : super(key: key);
+  const ReleaseDateWidget({super.key, this.date});
 
   final DateTime? date;
 

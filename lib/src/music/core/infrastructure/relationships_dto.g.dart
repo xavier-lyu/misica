@@ -6,8 +6,9 @@ part of 'relationships_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ResourceRelationshipDTO _$$_ResourceRelationshipDTOFromJson(Map json) =>
-    _$_ResourceRelationshipDTO(
+_$ResourceRelationshipDTOImpl _$$ResourceRelationshipDTOImplFromJson(
+        Map json) =>
+    _$ResourceRelationshipDTOImpl(
       href: json['href'] as String,
       data: (json['data'] as List<dynamic>)
           .map((e) =>
@@ -15,15 +16,15 @@ _$_ResourceRelationshipDTO _$$_ResourceRelationshipDTOFromJson(Map json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ResourceRelationshipDTOToJson(
-        _$_ResourceRelationshipDTO instance) =>
+Map<String, dynamic> _$$ResourceRelationshipDTOImplToJson(
+        _$ResourceRelationshipDTOImpl instance) =>
     <String, dynamic>{
       'href': instance.href,
       'data': instance.data.map(const ResourceDTOConverter().toJson).toList(),
     };
 
-_$_AlbumRelationshipsDTO _$$_AlbumRelationshipsDTOFromJson(Map json) =>
-    _$_AlbumRelationshipsDTO(
+_$AlbumRelationshipsDTOImpl _$$AlbumRelationshipsDTOImplFromJson(Map json) =>
+    _$AlbumRelationshipsDTOImpl(
       artists: json['artists'] == null
           ? null
           : ResourceRelationshipDTO.fromJson(
@@ -46,8 +47,8 @@ _$_AlbumRelationshipsDTO _$$_AlbumRelationshipsDTOFromJson(Map json) =>
               Map<String, dynamic>.from(json['catalog'] as Map)),
     );
 
-Map<String, dynamic> _$$_AlbumRelationshipsDTOToJson(
-        _$_AlbumRelationshipsDTO instance) =>
+Map<String, dynamic> _$$AlbumRelationshipsDTOImplToJson(
+        _$AlbumRelationshipsDTOImpl instance) =>
     <String, dynamic>{
       'artists': instance.artists?.toJson(),
       'tracks': instance.tracks?.toJson(),
@@ -56,8 +57,8 @@ Map<String, dynamic> _$$_AlbumRelationshipsDTOToJson(
       'catalog': instance.catalog?.toJson(),
     };
 
-_$_ArtistRelationshipsDTO _$$_ArtistRelationshipsDTOFromJson(Map json) =>
-    _$_ArtistRelationshipsDTO(
+_$ArtistRelationshipsDTOImpl _$$ArtistRelationshipsDTOImplFromJson(Map json) =>
+    _$ArtistRelationshipsDTOImpl(
       albums: json['albums'] == null
           ? null
           : ResourceRelationshipDTO.fromJson(
@@ -84,8 +85,8 @@ _$_ArtistRelationshipsDTO _$$_ArtistRelationshipsDTOFromJson(Map json) =>
               json['default-playable-content'] as Map)),
     );
 
-Map<String, dynamic> _$$_ArtistRelationshipsDTOToJson(
-        _$_ArtistRelationshipsDTO instance) =>
+Map<String, dynamic> _$$ArtistRelationshipsDTOImplToJson(
+        _$ArtistRelationshipsDTOImpl instance) =>
     <String, dynamic>{
       'albums': instance.albums?.toJson(),
       'playlists': instance.playlists?.toJson(),
@@ -95,8 +96,9 @@ Map<String, dynamic> _$$_ArtistRelationshipsDTOToJson(
       'default-playable-content': instance.defaultPlayableContent?.toJson(),
     };
 
-_$_PlaylistRelationshipsDTO _$$_PlaylistRelationshipsDTOFromJson(Map json) =>
-    _$_PlaylistRelationshipsDTO(
+_$PlaylistRelationshipsDTOImpl _$$PlaylistRelationshipsDTOImplFromJson(
+        Map json) =>
+    _$PlaylistRelationshipsDTOImpl(
       tracks: json['tracks'] == null
           ? null
           : ResourceRelationshipDTO.fromJson(
@@ -115,8 +117,8 @@ _$_PlaylistRelationshipsDTO _$$_PlaylistRelationshipsDTOFromJson(Map json) =>
               Map<String, dynamic>.from(json['catalog'] as Map)),
     );
 
-Map<String, dynamic> _$$_PlaylistRelationshipsDTOToJson(
-        _$_PlaylistRelationshipsDTO instance) =>
+Map<String, dynamic> _$$PlaylistRelationshipsDTOImplToJson(
+        _$PlaylistRelationshipsDTOImpl instance) =>
     <String, dynamic>{
       'tracks': instance.tracks?.toJson(),
       'curator': instance.curator?.toJson(),
@@ -124,8 +126,8 @@ Map<String, dynamic> _$$_PlaylistRelationshipsDTOToJson(
       'catalog': instance.catalog?.toJson(),
     };
 
-_$_SongRelationshipsDTO _$$_SongRelationshipsDTOFromJson(Map json) =>
-    _$_SongRelationshipsDTO(
+_$SongRelationshipsDTOImpl _$$SongRelationshipsDTOImplFromJson(Map json) =>
+    _$SongRelationshipsDTOImpl(
       albums: json['albums'] == null
           ? null
           : ResourceRelationshipDTO.fromJson(
@@ -156,8 +158,8 @@ _$_SongRelationshipsDTO _$$_SongRelationshipsDTOFromJson(Map json) =>
               Map<String, dynamic>.from(json['catalog'] as Map)),
     );
 
-Map<String, dynamic> _$$_SongRelationshipsDTOToJson(
-        _$_SongRelationshipsDTO instance) =>
+Map<String, dynamic> _$$SongRelationshipsDTOImplToJson(
+        _$SongRelationshipsDTOImpl instance) =>
     <String, dynamic>{
       'albums': instance.albums?.toJson(),
       'artists': instance.artists?.toJson(),
@@ -168,9 +170,9 @@ Map<String, dynamic> _$$_SongRelationshipsDTOToJson(
       'catalog': instance.catalog?.toJson(),
     };
 
-_$_MusicVideoRelationshipsDTO _$$_MusicVideoRelationshipsDTOFromJson(
+_$MusicVideoRelationshipsDTOImpl _$$MusicVideoRelationshipsDTOImplFromJson(
         Map json) =>
-    _$_MusicVideoRelationshipsDTO(
+    _$MusicVideoRelationshipsDTOImpl(
       albums: json['albums'] == null
           ? null
           : ResourceRelationshipDTO.fromJson(
@@ -193,8 +195,8 @@ _$_MusicVideoRelationshipsDTO _$$_MusicVideoRelationshipsDTOFromJson(
               Map<String, dynamic>.from(json['catalog'] as Map)),
     );
 
-Map<String, dynamic> _$$_MusicVideoRelationshipsDTOToJson(
-        _$_MusicVideoRelationshipsDTO instance) =>
+Map<String, dynamic> _$$MusicVideoRelationshipsDTOImplToJson(
+        _$MusicVideoRelationshipsDTOImpl instance) =>
     <String, dynamic>{
       'albums': instance.albums?.toJson(),
       'artists': instance.artists?.toJson(),
@@ -203,16 +205,17 @@ Map<String, dynamic> _$$_MusicVideoRelationshipsDTOToJson(
       'catalog': instance.catalog?.toJson(),
     };
 
-_$_CuratorRelationshipsDTO _$$_CuratorRelationshipsDTOFromJson(Map json) =>
-    _$_CuratorRelationshipsDTO(
+_$CuratorRelationshipsDTOImpl _$$CuratorRelationshipsDTOImplFromJson(
+        Map json) =>
+    _$CuratorRelationshipsDTOImpl(
       playlists: json['playlists'] == null
           ? null
           : ResourceRelationshipDTO.fromJson(
               Map<String, dynamic>.from(json['playlists'] as Map)),
     );
 
-Map<String, dynamic> _$$_CuratorRelationshipsDTOToJson(
-        _$_CuratorRelationshipsDTO instance) =>
+Map<String, dynamic> _$$CuratorRelationshipsDTOImplToJson(
+        _$CuratorRelationshipsDTOImpl instance) =>
     <String, dynamic>{
       'playlists': instance.playlists?.toJson(),
     };

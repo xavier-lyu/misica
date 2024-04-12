@@ -6,8 +6,8 @@ part of 'resource_attributes_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AlbumAttributesDTO _$$_AlbumAttributesDTOFromJson(Map json) =>
-    _$_AlbumAttributesDTO(
+_$AlbumAttributesDTOImpl _$$AlbumAttributesDTOImplFromJson(Map json) =>
+    _$AlbumAttributesDTOImpl(
       artistName: json['artistName'] as String,
       artistUrl: json['artistUrl'] as String?,
       artwork: json['artwork'] == null
@@ -40,8 +40,8 @@ _$_AlbumAttributesDTO _$$_AlbumAttributesDTOFromJson(Map json) =>
       url: json['url'] as String?,
     );
 
-Map<String, dynamic> _$$_AlbumAttributesDTOToJson(
-        _$_AlbumAttributesDTO instance) =>
+Map<String, dynamic> _$$AlbumAttributesDTOImplToJson(
+        _$AlbumAttributesDTOImpl instance) =>
     <String, dynamic>{
       'artistName': instance.artistName,
       'artistUrl': instance.artistUrl,
@@ -63,8 +63,8 @@ Map<String, dynamic> _$$_AlbumAttributesDTOToJson(
       'url': instance.url,
     };
 
-_$_ArtistAttributesDTO _$$_ArtistAttributesDTOFromJson(Map json) =>
-    _$_ArtistAttributesDTO(
+_$ArtistAttributesDTOImpl _$$ArtistAttributesDTOImplFromJson(Map json) =>
+    _$ArtistAttributesDTOImpl(
       name: json['name'] as String,
       url: json['url'] as String?,
       editorialNotes: json['editorialNotes'] == null
@@ -80,8 +80,8 @@ _$_ArtistAttributesDTO _$$_ArtistAttributesDTOFromJson(Map json) =>
               Map<String, dynamic>.from(json['artwork'] as Map)),
     );
 
-Map<String, dynamic> _$$_ArtistAttributesDTOToJson(
-        _$_ArtistAttributesDTO instance) =>
+Map<String, dynamic> _$$ArtistAttributesDTOImplToJson(
+        _$ArtistAttributesDTOImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
       'url': instance.url,
@@ -90,8 +90,9 @@ Map<String, dynamic> _$$_ArtistAttributesDTOToJson(
       'artwork': instance.artwork?.toJson(),
     };
 
-_$_MusicVideoAttributesDTO _$$_MusicVideoAttributesDTOFromJson(Map json) =>
-    _$_MusicVideoAttributesDTO(
+_$MusicVideoAttributesDTOImpl _$$MusicVideoAttributesDTOImplFromJson(
+        Map json) =>
+    _$MusicVideoAttributesDTOImpl(
       artistName: json['artistName'] as String,
       artistUrl: json['artistUrl'] as String?,
       artwork: json['artwork'] == null
@@ -124,8 +125,8 @@ _$_MusicVideoAttributesDTO _$$_MusicVideoAttributesDTOFromJson(Map json) =>
       contentRating: json['contentRating'] as String?,
     );
 
-Map<String, dynamic> _$$_MusicVideoAttributesDTOToJson(
-        _$_MusicVideoAttributesDTO instance) =>
+Map<String, dynamic> _$$MusicVideoAttributesDTOImplToJson(
+        _$MusicVideoAttributesDTOImpl instance) =>
     <String, dynamic>{
       'artistName': instance.artistName,
       'artistUrl': instance.artistUrl,
@@ -145,8 +146,8 @@ Map<String, dynamic> _$$_MusicVideoAttributesDTOToJson(
       'contentRating': instance.contentRating,
     };
 
-_$_PlaylistAttributesDTO _$$_PlaylistAttributesDTOFromJson(Map json) =>
-    _$_PlaylistAttributesDTO(
+_$PlaylistAttributesDTOImpl _$$PlaylistAttributesDTOImplFromJson(Map json) =>
+    _$PlaylistAttributesDTOImpl(
       artwork: json['artwork'] == null
           ? null
           : ArtworkDTO.fromJson(
@@ -171,8 +172,8 @@ _$_PlaylistAttributesDTO _$$_PlaylistAttributesDTOFromJson(Map json) =>
       curatorSocialHandle: json['curatorSocialHandle'] as String?,
     );
 
-Map<String, dynamic> _$$_PlaylistAttributesDTOToJson(
-        _$_PlaylistAttributesDTO instance) =>
+Map<String, dynamic> _$$PlaylistAttributesDTOImplToJson(
+        _$PlaylistAttributesDTOImpl instance) =>
     <String, dynamic>{
       'artwork': instance.artwork?.toJson(),
       'canEdit': instance.canEdit,
@@ -189,8 +190,8 @@ Map<String, dynamic> _$$_PlaylistAttributesDTOToJson(
       'curatorSocialHandle': instance.curatorSocialHandle,
     };
 
-_$_SongAttributesDTO _$$_SongAttributesDTOFromJson(Map json) =>
-    _$_SongAttributesDTO(
+_$SongAttributesDTOImpl _$$SongAttributesDTOImplFromJson(Map json) =>
+    _$SongAttributesDTOImpl(
       albumName: json['albumName'] as String?,
       artistUrl: json['artistUrl'] as String?,
       attribution: json['attribution'] as String?,
@@ -229,8 +230,8 @@ _$_SongAttributesDTO _$$_SongAttributesDTOFromJson(Map json) =>
       workName: json['workName'] as String?,
     );
 
-Map<String, dynamic> _$$_SongAttributesDTOToJson(
-        _$_SongAttributesDTO instance) =>
+Map<String, dynamic> _$$SongAttributesDTOImplToJson(
+        _$SongAttributesDTOImpl instance) =>
     <String, dynamic>{
       'albumName': instance.albumName,
       'artistUrl': instance.artistUrl,
@@ -257,8 +258,8 @@ Map<String, dynamic> _$$_SongAttributesDTOToJson(
       'workName': instance.workName,
     };
 
-_$_StationAttributesDTO _$$_StationAttributesDTOFromJson(Map json) =>
-    _$_StationAttributesDTO(
+_$StationAttributesDTOImpl _$$StationAttributesDTOImplFromJson(Map json) =>
+    _$StationAttributesDTOImpl(
       isLive: json['isLive'] as bool?,
       artwork: json['artwork'] == null
           ? null
@@ -279,8 +280,8 @@ _$_StationAttributesDTO _$$_StationAttributesDTOFromJson(Map json) =>
       url: json['url'] as String?,
     );
 
-Map<String, dynamic> _$$_StationAttributesDTOToJson(
-        _$_StationAttributesDTO instance) =>
+Map<String, dynamic> _$$StationAttributesDTOImplToJson(
+        _$StationAttributesDTOImpl instance) =>
     <String, dynamic>{
       'isLive': instance.isLive,
       'artwork': instance.artwork?.toJson(),
@@ -293,8 +294,8 @@ Map<String, dynamic> _$$_StationAttributesDTOToJson(
       'url': instance.url,
     };
 
-_$_CuratorAttributesDTO _$$_CuratorAttributesDTOFromJson(Map json) =>
-    _$_CuratorAttributesDTO(
+_$CuratorAttributesDTOImpl _$$CuratorAttributesDTOImplFromJson(Map json) =>
+    _$CuratorAttributesDTOImpl(
       artwork: json['artwork'] == null
           ? null
           : ArtworkDTO.fromJson(
@@ -307,8 +308,8 @@ _$_CuratorAttributesDTO _$$_CuratorAttributesDTOFromJson(Map json) =>
       url: json['url'] as String?,
     );
 
-Map<String, dynamic> _$$_CuratorAttributesDTOToJson(
-        _$_CuratorAttributesDTO instance) =>
+Map<String, dynamic> _$$CuratorAttributesDTOImplToJson(
+        _$CuratorAttributesDTOImpl instance) =>
     <String, dynamic>{
       'artwork': instance.artwork?.toJson(),
       'editorialNotes': instance.editorialNotes?.toJson(),
@@ -316,15 +317,15 @@ Map<String, dynamic> _$$_CuratorAttributesDTOToJson(
       'url': instance.url,
     };
 
-_$_GenreAttributesDTO _$$_GenreAttributesDTOFromJson(Map json) =>
-    _$_GenreAttributesDTO(
+_$GenreAttributesDTOImpl _$$GenreAttributesDTOImplFromJson(Map json) =>
+    _$GenreAttributesDTOImpl(
       parentId: json['parentId'] as String?,
       parentName: json['parentName'] as String?,
       name: json['name'] as String,
     );
 
-Map<String, dynamic> _$$_GenreAttributesDTOToJson(
-        _$_GenreAttributesDTO instance) =>
+Map<String, dynamic> _$$GenreAttributesDTOImplToJson(
+        _$GenreAttributesDTOImpl instance) =>
     <String, dynamic>{
       'parentId': instance.parentId,
       'parentName': instance.parentName,

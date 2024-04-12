@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:fpdart/fpdart.dart';
 import 'package:misica/src/core/shared/dimensions.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
@@ -10,12 +9,12 @@ import 'artwork_widget.dart';
 
 class ResourceTile extends StatelessWidget {
   const ResourceTile({
-    Key? key,
+    super.key,
     required this.resource,
     this.onTap,
     this.padding = EdgeInsets.zero,
     this.subtitle,
-  }) : super(key: key);
+  });
 
   final Resource resource;
   final VoidCallback? onTap;
@@ -25,10 +24,10 @@ class ResourceTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final styles = resource.maybeMap(
-      (value) => const Tuple2(60.0, 5.0),
-      orElse: () => const Tuple2(60.0, 5.0),
-      musicVideo: (_) => const Tuple2(106.6, 5.0),
-      artist: (_) => const Tuple2(60.0, 30.0),
+      (value) => const (60.0, 5.0),
+      orElse: () => const (60.0, 5.0),
+      musicVideo: (_) => const (106.6, 5.0),
+      artist: (_) => const (60.0, 30.0),
     );
 
     final caption = subtitle ?? resource.creatorName;
@@ -41,9 +40,9 @@ class ResourceTile extends StatelessWidget {
           children: [
             ArtworkWidget(
               artwork: resource.artwork,
-              width: styles.first,
+              width: styles.$1,
               height: 60.0,
-              radius: styles.second,
+              radius: styles.$2,
             ),
             Expanded(
               child: Padding(

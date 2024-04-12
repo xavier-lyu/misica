@@ -11,9 +11,9 @@ import 'package:misica/src/music/core/presentation/widgets/shuffle_play_button.d
 
 class AlbumHeaderView extends StatelessWidget {
   const AlbumHeaderView({
-    Key? key,
+    super.key,
     required this.album,
-  }) : super(key: key);
+  });
 
   final Album album;
 

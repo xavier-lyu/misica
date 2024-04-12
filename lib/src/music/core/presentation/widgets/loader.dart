@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class Loader extends StatelessWidget {
   const Loader({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class Loader extends StatelessWidget {
 }
 
 class SliverLoader extends StatelessWidget {
-  const SliverLoader({Key? key}) : super(key: key);
+  const SliverLoader({super.key});
 
   @override
   Widget build(BuildContext context) {

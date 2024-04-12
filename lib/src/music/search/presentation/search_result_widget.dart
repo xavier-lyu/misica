@@ -9,9 +9,9 @@ import 'package:misica/src/music/search/domain/search_results.dart';
 
 class SearchResultWidget extends ConsumerWidget {
   const SearchResultWidget({
-    Key? key,
+    super.key,
     required this.result,
-  }) : super(key: key);
+  });
 
   final SearchResult result;
 

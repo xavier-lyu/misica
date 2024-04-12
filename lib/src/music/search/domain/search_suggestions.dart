@@ -5,7 +5,7 @@ part 'search_suggestions.freezed.dart';
 
 @Freezed(unionKey: 'kind')
 class SearchSuggestion with _$SearchSuggestion {
-  const SearchSuggestion._();
+  // const SearchSuggestion._();
 
   const factory SearchSuggestion.terms({
     required String kind,

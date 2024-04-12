@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'play_params.dart';
 
@@ -12,7 +12,7 @@ part of 'play_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PlayParams _$PlayParamsFromJson(Map<String, dynamic> json) {
   return _PlayParams.fromJson(json);
@@ -68,22 +68,22 @@ class _$PlayParamsCopyWithImpl<$Res, $Val extends PlayParams>
 }
 
 /// @nodoc
-abstract class _$$_PlayParamsCopyWith<$Res>
+abstract class _$$PlayParamsImplCopyWith<$Res>
     implements $PlayParamsCopyWith<$Res> {
-  factory _$$_PlayParamsCopyWith(
-          _$_PlayParams value, $Res Function(_$_PlayParams) then) =
-      __$$_PlayParamsCopyWithImpl<$Res>;
+  factory _$$PlayParamsImplCopyWith(
+          _$PlayParamsImpl value, $Res Function(_$PlayParamsImpl) then) =
+      __$$PlayParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, String kind});
 }
 
 /// @nodoc
-class __$$_PlayParamsCopyWithImpl<$Res>
-    extends _$PlayParamsCopyWithImpl<$Res, _$_PlayParams>
-    implements _$$_PlayParamsCopyWith<$Res> {
-  __$$_PlayParamsCopyWithImpl(
-      _$_PlayParams _value, $Res Function(_$_PlayParams) _then)
+class __$$PlayParamsImplCopyWithImpl<$Res>
+    extends _$PlayParamsCopyWithImpl<$Res, _$PlayParamsImpl>
+    implements _$$PlayParamsImplCopyWith<$Res> {
+  __$$PlayParamsImplCopyWithImpl(
+      _$PlayParamsImpl _value, $Res Function(_$PlayParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$_PlayParamsCopyWithImpl<$Res>
     Object? id = null,
     Object? kind = null,
   }) {
-    return _then(_$_PlayParams(
+    return _then(_$PlayParamsImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -107,11 +107,11 @@ class __$$_PlayParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PlayParams extends _PlayParams {
-  const _$_PlayParams({required this.id, required this.kind}) : super._();
+class _$PlayParamsImpl extends _PlayParams {
+  const _$PlayParamsImpl({required this.id, required this.kind}) : super._();
 
-  factory _$_PlayParams.fromJson(Map<String, dynamic> json) =>
-      _$$_PlayParamsFromJson(json);
+  factory _$PlayParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PlayParamsImplFromJson(json);
 
   @override
   final String id;
@@ -124,10 +124,10 @@ class _$_PlayParams extends _PlayParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PlayParams &&
+            other is _$PlayParamsImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.kind, kind) || other.kind == kind));
   }
@@ -139,12 +139,12 @@ class _$_PlayParams extends _PlayParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PlayParamsCopyWith<_$_PlayParams> get copyWith =>
-      __$$_PlayParamsCopyWithImpl<_$_PlayParams>(this, _$identity);
+  _$$PlayParamsImplCopyWith<_$PlayParamsImpl> get copyWith =>
+      __$$PlayParamsImplCopyWithImpl<_$PlayParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PlayParamsToJson(
+    return _$$PlayParamsImplToJson(
       this,
     );
   }
@@ -152,11 +152,12 @@ class _$_PlayParams extends _PlayParams {
 
 abstract class _PlayParams extends PlayParams {
   const factory _PlayParams(
-      {required final String id, required final String kind}) = _$_PlayParams;
+      {required final String id,
+      required final String kind}) = _$PlayParamsImpl;
   const _PlayParams._() : super._();
 
   factory _PlayParams.fromJson(Map<String, dynamic> json) =
-      _$_PlayParams.fromJson;
+      _$PlayParamsImpl.fromJson;
 
   @override
   String get id;
@@ -164,6 +165,6 @@ abstract class _PlayParams extends PlayParams {
   String get kind;
   @override
   @JsonKey(ignore: true)
-  _$$_PlayParamsCopyWith<_$_PlayParams> get copyWith =>
+  _$$PlayParamsImplCopyWith<_$PlayParamsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

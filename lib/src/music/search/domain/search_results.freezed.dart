@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'search_results.dart';
 
@@ -12,7 +12,7 @@ part of 'search_results.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$SearchResults {
@@ -57,22 +57,22 @@ class _$SearchResultsCopyWithImpl<$Res, $Val extends SearchResults>
 }
 
 /// @nodoc
-abstract class _$$_SearchResultsCopyWith<$Res>
+abstract class _$$SearchResultsImplCopyWith<$Res>
     implements $SearchResultsCopyWith<$Res> {
-  factory _$$_SearchResultsCopyWith(
-          _$_SearchResults value, $Res Function(_$_SearchResults) then) =
-      __$$_SearchResultsCopyWithImpl<$Res>;
+  factory _$$SearchResultsImplCopyWith(
+          _$SearchResultsImpl value, $Res Function(_$SearchResultsImpl) then) =
+      __$$SearchResultsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Map<String, SearchResult>? results});
 }
 
 /// @nodoc
-class __$$_SearchResultsCopyWithImpl<$Res>
-    extends _$SearchResultsCopyWithImpl<$Res, _$_SearchResults>
-    implements _$$_SearchResultsCopyWith<$Res> {
-  __$$_SearchResultsCopyWithImpl(
-      _$_SearchResults _value, $Res Function(_$_SearchResults) _then)
+class __$$SearchResultsImplCopyWithImpl<$Res>
+    extends _$SearchResultsCopyWithImpl<$Res, _$SearchResultsImpl>
+    implements _$$SearchResultsImplCopyWith<$Res> {
+  __$$SearchResultsImplCopyWithImpl(
+      _$SearchResultsImpl _value, $Res Function(_$SearchResultsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -80,7 +80,7 @@ class __$$_SearchResultsCopyWithImpl<$Res>
   $Res call({
     Object? results = freezed,
   }) {
-    return _then(_$_SearchResults(
+    return _then(_$SearchResultsImpl(
       results: freezed == results
           ? _value._results
           : results // ignore: cast_nullable_to_non_nullable
@@ -91,16 +91,16 @@ class __$$_SearchResultsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SearchResults extends _SearchResults {
-  const _$_SearchResults({required final Map<String, SearchResult>? results})
-      : _results = results,
-        super._();
+class _$SearchResultsImpl implements _SearchResults {
+  const _$SearchResultsImpl({required final Map<String, SearchResult>? results})
+      : _results = results;
 
   final Map<String, SearchResult>? _results;
   @override
   Map<String, SearchResult>? get results {
     final value = _results;
     if (value == null) return null;
+    if (_results is EqualUnmodifiableMapView) return _results;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
@@ -111,10 +111,10 @@ class _$_SearchResults extends _SearchResults {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SearchResults &&
+            other is _$SearchResultsImpl &&
             const DeepCollectionEquality().equals(other._results, _results));
   }
 
@@ -125,20 +125,20 @@ class _$_SearchResults extends _SearchResults {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SearchResultsCopyWith<_$_SearchResults> get copyWith =>
-      __$$_SearchResultsCopyWithImpl<_$_SearchResults>(this, _$identity);
+  _$$SearchResultsImplCopyWith<_$SearchResultsImpl> get copyWith =>
+      __$$SearchResultsImplCopyWithImpl<_$SearchResultsImpl>(this, _$identity);
 }
 
-abstract class _SearchResults extends SearchResults {
+abstract class _SearchResults implements SearchResults {
   const factory _SearchResults(
-      {required final Map<String, SearchResult>? results}) = _$_SearchResults;
-  const _SearchResults._() : super._();
+          {required final Map<String, SearchResult>? results}) =
+      _$SearchResultsImpl;
 
   @override
   Map<String, SearchResult>? get results;
   @override
   @JsonKey(ignore: true)
-  _$$_SearchResultsCopyWith<_$_SearchResults> get copyWith =>
+  _$$SearchResultsImplCopyWith<_$SearchResultsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -197,22 +197,22 @@ class _$SearchResultCopyWithImpl<$Res, $Val extends SearchResult>
 }
 
 /// @nodoc
-abstract class _$$_SearchResultCopyWith<$Res>
+abstract class _$$SearchResultImplCopyWith<$Res>
     implements $SearchResultCopyWith<$Res> {
-  factory _$$_SearchResultCopyWith(
-          _$_SearchResult value, $Res Function(_$_SearchResult) then) =
-      __$$_SearchResultCopyWithImpl<$Res>;
+  factory _$$SearchResultImplCopyWith(
+          _$SearchResultImpl value, $Res Function(_$SearchResultImpl) then) =
+      __$$SearchResultImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, String groupId, List<Resource> data});
 }
 
 /// @nodoc
-class __$$_SearchResultCopyWithImpl<$Res>
-    extends _$SearchResultCopyWithImpl<$Res, _$_SearchResult>
-    implements _$$_SearchResultCopyWith<$Res> {
-  __$$_SearchResultCopyWithImpl(
-      _$_SearchResult _value, $Res Function(_$_SearchResult) _then)
+class __$$SearchResultImplCopyWithImpl<$Res>
+    extends _$SearchResultCopyWithImpl<$Res, _$SearchResultImpl>
+    implements _$$SearchResultImplCopyWith<$Res> {
+  __$$SearchResultImplCopyWithImpl(
+      _$SearchResultImpl _value, $Res Function(_$SearchResultImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -222,7 +222,7 @@ class __$$_SearchResultCopyWithImpl<$Res>
     Object? groupId = null,
     Object? data = null,
   }) {
-    return _then(_$_SearchResult(
+    return _then(_$SearchResultImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -241,13 +241,12 @@ class __$$_SearchResultCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SearchResult extends _SearchResult {
-  const _$_SearchResult(
+class _$SearchResultImpl implements _SearchResult {
+  const _$SearchResultImpl(
       {required this.name,
       required this.groupId,
       required final List<Resource> data})
-      : _data = data,
-        super._();
+      : _data = data;
 
   @override
   final String name;
@@ -256,6 +255,7 @@ class _$_SearchResult extends _SearchResult {
   final List<Resource> _data;
   @override
   List<Resource> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_data);
   }
@@ -266,10 +266,10 @@ class _$_SearchResult extends _SearchResult {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SearchResult &&
+            other is _$SearchResultImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.groupId, groupId) || other.groupId == groupId) &&
             const DeepCollectionEquality().equals(other._data, _data));
@@ -282,16 +282,15 @@ class _$_SearchResult extends _SearchResult {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SearchResultCopyWith<_$_SearchResult> get copyWith =>
-      __$$_SearchResultCopyWithImpl<_$_SearchResult>(this, _$identity);
+  _$$SearchResultImplCopyWith<_$SearchResultImpl> get copyWith =>
+      __$$SearchResultImplCopyWithImpl<_$SearchResultImpl>(this, _$identity);
 }
 
-abstract class _SearchResult extends SearchResult {
+abstract class _SearchResult implements SearchResult {
   const factory _SearchResult(
       {required final String name,
       required final String groupId,
-      required final List<Resource> data}) = _$_SearchResult;
-  const _SearchResult._() : super._();
+      required final List<Resource> data}) = _$SearchResultImpl;
 
   @override
   String get name;
@@ -301,6 +300,6 @@ abstract class _SearchResult extends SearchResult {
   List<Resource> get data;
   @override
   @JsonKey(ignore: true)
-  _$$_SearchResultCopyWith<_$_SearchResult> get copyWith =>
+  _$$SearchResultImplCopyWith<_$SearchResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

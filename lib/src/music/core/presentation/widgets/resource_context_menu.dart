@@ -17,10 +17,10 @@ enum ResourceContainer { isolate, album }
 
 class ResourceContextMenuButton extends StatelessWidget {
   const ResourceContextMenuButton({
-    Key? key,
+    super.key,
     required this.resource,
     this.container = ResourceContainer.isolate,
-  }) : super(key: key);
+  });
 
   final Resource resource;
   final ResourceContainer container;
@@ -44,8 +44,7 @@ class ResourceContextMenuButton extends StatelessWidget {
 
 class ResourceMenuModal extends StatelessWidget {
   const ResourceMenuModal(
-      {Key? key, required this.resource, required this.container})
-      : super(key: key);
+      {super.key, required this.resource, required this.container});
 
   final Resource resource;
   final ResourceContainer container;
@@ -108,9 +107,9 @@ class ResourceMenuModal extends StatelessWidget {
 
 class GoToArtistTile extends StatelessWidget {
   const GoToArtistTile({
-    Key? key,
+    super.key,
     required this.artistId,
-  }) : super(key: key);
+  });
 
   final String artistId;
 
@@ -128,9 +127,9 @@ class GoToArtistTile extends StatelessWidget {
 
 class GoToAlbumTile extends StatelessWidget {
   const GoToAlbumTile({
-    Key? key,
+    super.key,
     required this.albumId,
-  }) : super(key: key);
+  });
 
   final String albumId;
 
@@ -148,10 +147,10 @@ class GoToAlbumTile extends StatelessWidget {
 
 class LikeOrUnlikeWidget extends HookConsumerWidget {
   const LikeOrUnlikeWidget({
-    Key? key,
+    super.key,
     required this.resource,
     required this.builder,
-  }) : super(key: key);
+  });
 
   final Resource resource;
   final Widget Function(BuildContext context, bool liked) builder;
@@ -167,7 +166,7 @@ class LikeOrUnlikeWidget extends HookConsumerWidget {
         ref.read(likedResourcesNotifierProvider.notifier).toggleLikes(resource);
         liked.value = !liked.value;
         HapticFeedback.mediumImpact();
-        context.router.pop();
+        context.router.maybePop();
       },
       child: likedState.maybeWhen(
         data: (value) => builder(context, value),

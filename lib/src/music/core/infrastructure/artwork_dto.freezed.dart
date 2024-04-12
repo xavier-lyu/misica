@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'artwork_dto.dart';
 
@@ -12,7 +12,7 @@ part of 'artwork_dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ArtworkDTO _$ArtworkDTOFromJson(Map<String, dynamic> json) {
   return _ArtworkDTO.fromJson(json);
@@ -112,11 +112,11 @@ class _$ArtworkDTOCopyWithImpl<$Res, $Val extends ArtworkDTO>
 }
 
 /// @nodoc
-abstract class _$$_ArtworkDTOCopyWith<$Res>
+abstract class _$$ArtworkDTOImplCopyWith<$Res>
     implements $ArtworkDTOCopyWith<$Res> {
-  factory _$$_ArtworkDTOCopyWith(
-          _$_ArtworkDTO value, $Res Function(_$_ArtworkDTO) then) =
-      __$$_ArtworkDTOCopyWithImpl<$Res>;
+  factory _$$ArtworkDTOImplCopyWith(
+          _$ArtworkDTOImpl value, $Res Function(_$ArtworkDTOImpl) then) =
+      __$$ArtworkDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -131,11 +131,11 @@ abstract class _$$_ArtworkDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ArtworkDTOCopyWithImpl<$Res>
-    extends _$ArtworkDTOCopyWithImpl<$Res, _$_ArtworkDTO>
-    implements _$$_ArtworkDTOCopyWith<$Res> {
-  __$$_ArtworkDTOCopyWithImpl(
-      _$_ArtworkDTO _value, $Res Function(_$_ArtworkDTO) _then)
+class __$$ArtworkDTOImplCopyWithImpl<$Res>
+    extends _$ArtworkDTOCopyWithImpl<$Res, _$ArtworkDTOImpl>
+    implements _$$ArtworkDTOImplCopyWith<$Res> {
+  __$$ArtworkDTOImplCopyWithImpl(
+      _$ArtworkDTOImpl _value, $Res Function(_$ArtworkDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -150,7 +150,7 @@ class __$$_ArtworkDTOCopyWithImpl<$Res>
     Object? url = null,
     Object? width = null,
   }) {
-    return _then(_$_ArtworkDTO(
+    return _then(_$ArtworkDTOImpl(
       bgColor: freezed == bgColor
           ? _value.bgColor
           : bgColor // ignore: cast_nullable_to_non_nullable
@@ -189,8 +189,8 @@ class __$$_ArtworkDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ArtworkDTO extends _ArtworkDTO {
-  const _$_ArtworkDTO(
+class _$ArtworkDTOImpl extends _ArtworkDTO {
+  const _$ArtworkDTOImpl(
       {this.bgColor,
       required this.height,
       this.textColor1,
@@ -201,8 +201,8 @@ class _$_ArtworkDTO extends _ArtworkDTO {
       required this.width})
       : super._();
 
-  factory _$_ArtworkDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_ArtworkDTOFromJson(json);
+  factory _$ArtworkDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ArtworkDTOImplFromJson(json);
 
   @override
   final String? bgColor;
@@ -227,10 +227,10 @@ class _$_ArtworkDTO extends _ArtworkDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ArtworkDTO &&
+            other is _$ArtworkDTOImpl &&
             (identical(other.bgColor, bgColor) || other.bgColor == bgColor) &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.textColor1, textColor1) ||
@@ -253,12 +253,12 @@ class _$_ArtworkDTO extends _ArtworkDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ArtworkDTOCopyWith<_$_ArtworkDTO> get copyWith =>
-      __$$_ArtworkDTOCopyWithImpl<_$_ArtworkDTO>(this, _$identity);
+  _$$ArtworkDTOImplCopyWith<_$ArtworkDTOImpl> get copyWith =>
+      __$$ArtworkDTOImplCopyWithImpl<_$ArtworkDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ArtworkDTOToJson(
+    return _$$ArtworkDTOImplToJson(
       this,
     );
   }
@@ -273,11 +273,11 @@ abstract class _ArtworkDTO extends ArtworkDTO {
       final String? textColor3,
       final String? textColor4,
       required final String url,
-      required final int width}) = _$_ArtworkDTO;
+      required final int width}) = _$ArtworkDTOImpl;
   const _ArtworkDTO._() : super._();
 
   factory _ArtworkDTO.fromJson(Map<String, dynamic> json) =
-      _$_ArtworkDTO.fromJson;
+      _$ArtworkDTOImpl.fromJson;
 
   @override
   String? get bgColor;
@@ -297,6 +297,6 @@ abstract class _ArtworkDTO extends ArtworkDTO {
   int get width;
   @override
   @JsonKey(ignore: true)
-  _$$_ArtworkDTOCopyWith<_$_ArtworkDTO> get copyWith =>
+  _$$ArtworkDTOImplCopyWith<_$ArtworkDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

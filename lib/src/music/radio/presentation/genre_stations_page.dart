@@ -10,12 +10,13 @@ import 'package:misica/src/music/core/presentation/widgets/retry_widget.dart';
 import 'package:misica/src/music/radio/presentation/station_tile.dart';
 import 'package:misica/src/music/radio/shared/providers.dart';
 
+@RoutePage()
 class GenreStationsPage extends StatefulHookConsumerWidget {
   const GenreStationsPage({
-    Key? key,
+    super.key,
     @PathParam('id') required this.genreId,
     @PathParam('name') required this.genreName,
-  }) : super(key: key);
+  });
 
   final String genreId;
   final String genreName;

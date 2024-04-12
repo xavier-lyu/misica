@@ -5,7 +5,7 @@ import 'package:misica/src/music/core/domain/album.dart';
 import 'package:misica/src/music/core/shared/formatters.dart';
 
 class AlbumFooter extends StatelessWidget {
-  const AlbumFooter({Key? key, required this.album}) : super(key: key);
+  const AlbumFooter({super.key, required this.album});
 
   final Album album;
 

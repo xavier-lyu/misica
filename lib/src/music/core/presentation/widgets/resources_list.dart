@@ -14,14 +14,14 @@ class ResourcesList extends StatelessWidget {
   final ResourcesListItemBuilder itemBuilder;
 
   const ResourcesList({
-    Key? key,
+    super.key,
     required this.resources,
     required this.itemBuilder,
     this.itemsPerPage = 3,
     this.pagePadding = 15.0,
     this.itemSpacing = 10.0,
     this.itemHeight = 60.0,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -45,12 +45,9 @@ class ResourcesList extends StatelessWidget {
           return Wrap(
             runSpacing: itemSpacing,
             children: [
-              ...resources
-                  .sublist(start, end)
-                  .map(
+              ...resources.sublist(start, end).map(
                     (e) => itemBuilder(context, e),
                   )
-                  .toList()
             ],
           );
         },

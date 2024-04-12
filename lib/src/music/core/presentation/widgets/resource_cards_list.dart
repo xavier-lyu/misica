@@ -17,7 +17,7 @@ class ResourceCardsList extends StatelessWidget {
   final double itemHeightOffset;
 
   const ResourceCardsList({
-    Key? key,
+    super.key,
     required this.resources,
     this.mainAxisCount = 1,
     this.crossAxisCount = 1,
@@ -26,7 +26,7 @@ class ResourceCardsList extends StatelessWidget {
     this.itemSpacing = 10.0,
     this.itemHeightOffset = 0.0,
     this.artworkAspectRatio = 1.0,
-  }) : super(key: key);
+  });
 
   bool get isHorizontal => scrollDirection == Axis.horizontal;
   int get itemCount => resources.length;

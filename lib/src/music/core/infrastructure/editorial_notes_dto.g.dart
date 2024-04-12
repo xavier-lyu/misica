@@ -6,15 +6,15 @@ part of 'editorial_notes_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_EditorialNotesDTO _$$_EditorialNotesDTOFromJson(Map json) =>
-    _$_EditorialNotesDTO(
+_$EditorialNotesDTOImpl _$$EditorialNotesDTOImplFromJson(Map json) =>
+    _$EditorialNotesDTOImpl(
       short: json['short'] as String?,
       standard: json['standard'] as String?,
       name: json['name'] as String?,
     );
 
-Map<String, dynamic> _$$_EditorialNotesDTOToJson(
-        _$_EditorialNotesDTO instance) =>
+Map<String, dynamic> _$$EditorialNotesDTOImplToJson(
+        _$EditorialNotesDTOImpl instance) =>
     <String, dynamic>{
       'short': instance.short,
       'standard': instance.standard,

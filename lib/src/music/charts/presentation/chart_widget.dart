@@ -9,7 +9,7 @@ import 'package:misica/src/music/player/shared/providers.dart';
 
 class ChartWidget extends ConsumerWidget {
   final Chart chart;
-  const ChartWidget({Key? key, required this.chart}) : super(key: key);
+  const ChartWidget({super.key, required this.chart});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -29,26 +29,26 @@ class ChartWidget extends ConsumerWidget {
         const SizedBox(height: 8),
         chart.maybeMap(
           orElse: () => ResourceCardsList(
-            resources: chart.data,
+            resources: chart.value,
             itemHeightOffset: 50.0,
             mainAxisCount: 2,
           ),
           songs: (value) {
             return ResourcesList(
-              resources: value.data,
+              resources: value.value,
               itemBuilder: (context, item) => ResourceTile(
                 resource: item,
                 onTap: () => ref.read(musicPlayerProvider).playMany(
-                      items: value.data,
-                      startingAt: value.data.indexWhere(
+                      items: value.value,
+                      startingAt: value.value.indexWhere(
                         (element) => element.id == item.id,
                       ),
                     ),
               ),
             );
           },
-          musicVideo: (value) => ResourceCardsList(
-            resources: chart.data,
+          musicVideo: (_) => ResourceCardsList(
+            resources: chart.value,
             itemHeightOffset: 50.0,
             artworkAspectRatio: 16 / 9,
           ),

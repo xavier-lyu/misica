@@ -14,7 +14,7 @@ import 'package:misica/src/music/player/shared/providers.dart';
 import 'package:music_kit/music_kit.dart';
 
 class NowPlayingBar extends ConsumerWidget {
-  const NowPlayingBar({Key? key}) : super(key: key);
+  const NowPlayingBar({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -25,8 +25,7 @@ class NowPlayingBar extends ConsumerWidget {
 }
 
 class NowPlayingItemWidget extends HookConsumerWidget {
-  const NowPlayingItemWidget({Key? key, required this.currentEntry})
-      : super(key: key);
+  const NowPlayingItemWidget({super.key, required this.currentEntry});
 
   final MusicPlayerQueueEntry? currentEntry;
 

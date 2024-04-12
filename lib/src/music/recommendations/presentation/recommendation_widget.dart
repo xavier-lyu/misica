@@ -6,8 +6,7 @@ import 'package:misica/src/music/recommendations/domain/recommendation.dart';
 
 class RecommendationWidget extends StatelessWidget {
   final Recommendation recommendation;
-  const RecommendationWidget({Key? key, required this.recommendation})
-      : super(key: key);
+  const RecommendationWidget({super.key, required this.recommendation});
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +23,7 @@ class RecommendationWidget extends StatelessWidget {
         const SizedBox(height: 8),
         if (recommendation.recommendations?.isNotEmpty == true)
           ...recommendation.recommendations!
-              .map((e) => RecommendationWidget(recommendation: e))
-              .toList(),
+              .map((e) => RecommendationWidget(recommendation: e)),
         if (recommendation.contents?.isNotEmpty == true)
           ResourceCardsList(
             resources: recommendation.contents!,

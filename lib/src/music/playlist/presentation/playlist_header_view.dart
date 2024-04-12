@@ -10,9 +10,9 @@ import 'package:misica/src/music/playlist/domain/playlist.dart';
 
 class PlaylistHeaderView extends StatelessWidget {
   const PlaylistHeaderView({
-    Key? key,
+    super.key,
     required this.playlist,
-  }) : super(key: key);
+  });
 
   final Playlist playlist;
 

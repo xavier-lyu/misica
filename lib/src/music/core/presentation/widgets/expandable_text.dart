@@ -6,9 +6,9 @@ import 'package:misica/src/localization/app_localizations_context.dart';
 class ExpandableText extends StatelessWidget {
   const ExpandableText(
     this.text, {
-    Key? key,
+    super.key,
     this.maxLines = 2,
-  }) : super(key: key);
+  });
 
   final String text;
   final int maxLines;

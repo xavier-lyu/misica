@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'search_results_dto.dart';
 
@@ -12,7 +12,7 @@ part of 'search_results_dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SearchResultsDTO _$SearchResultsDTOFromJson(Map<String, dynamic> json) {
   return _SearchResultsDTO.fromJson(json);
@@ -83,11 +83,11 @@ class _$SearchResultsDTOCopyWithImpl<$Res, $Val extends SearchResultsDTO>
 }
 
 /// @nodoc
-abstract class _$$_SearchResultsDTOCopyWith<$Res>
+abstract class _$$SearchResultsDTOImplCopyWith<$Res>
     implements $SearchResultsDTOCopyWith<$Res> {
-  factory _$$_SearchResultsDTOCopyWith(
-          _$_SearchResultsDTO value, $Res Function(_$_SearchResultsDTO) then) =
-      __$$_SearchResultsDTOCopyWithImpl<$Res>;
+  factory _$$SearchResultsDTOImplCopyWith(_$SearchResultsDTOImpl value,
+          $Res Function(_$SearchResultsDTOImpl) then) =
+      __$$SearchResultsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({Map<String, SearchResultDTO>? results, ResourceMetaDTO? meta});
@@ -97,11 +97,11 @@ abstract class _$$_SearchResultsDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SearchResultsDTOCopyWithImpl<$Res>
-    extends _$SearchResultsDTOCopyWithImpl<$Res, _$_SearchResultsDTO>
-    implements _$$_SearchResultsDTOCopyWith<$Res> {
-  __$$_SearchResultsDTOCopyWithImpl(
-      _$_SearchResultsDTO _value, $Res Function(_$_SearchResultsDTO) _then)
+class __$$SearchResultsDTOImplCopyWithImpl<$Res>
+    extends _$SearchResultsDTOCopyWithImpl<$Res, _$SearchResultsDTOImpl>
+    implements _$$SearchResultsDTOImplCopyWith<$Res> {
+  __$$SearchResultsDTOImplCopyWithImpl(_$SearchResultsDTOImpl _value,
+      $Res Function(_$SearchResultsDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -110,7 +110,7 @@ class __$$_SearchResultsDTOCopyWithImpl<$Res>
     Object? results = freezed,
     Object? meta = freezed,
   }) {
-    return _then(_$_SearchResultsDTO(
+    return _then(_$SearchResultsDTOImpl(
       results: freezed == results
           ? _value._results
           : results // ignore: cast_nullable_to_non_nullable
@@ -125,20 +125,21 @@ class __$$_SearchResultsDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SearchResultsDTO extends _SearchResultsDTO {
-  const _$_SearchResultsDTO(
+class _$SearchResultsDTOImpl extends _SearchResultsDTO {
+  const _$SearchResultsDTOImpl(
       {final Map<String, SearchResultDTO>? results, this.meta})
       : _results = results,
         super._();
 
-  factory _$_SearchResultsDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchResultsDTOFromJson(json);
+  factory _$SearchResultsDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SearchResultsDTOImplFromJson(json);
 
   final Map<String, SearchResultDTO>? _results;
   @override
   Map<String, SearchResultDTO>? get results {
     final value = _results;
     if (value == null) return null;
+    if (_results is EqualUnmodifiableMapView) return _results;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
@@ -152,10 +153,10 @@ class _$_SearchResultsDTO extends _SearchResultsDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SearchResultsDTO &&
+            other is _$SearchResultsDTOImpl &&
             const DeepCollectionEquality().equals(other._results, _results) &&
             (identical(other.meta, meta) || other.meta == meta));
   }
@@ -168,12 +169,13 @@ class _$_SearchResultsDTO extends _SearchResultsDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SearchResultsDTOCopyWith<_$_SearchResultsDTO> get copyWith =>
-      __$$_SearchResultsDTOCopyWithImpl<_$_SearchResultsDTO>(this, _$identity);
+  _$$SearchResultsDTOImplCopyWith<_$SearchResultsDTOImpl> get copyWith =>
+      __$$SearchResultsDTOImplCopyWithImpl<_$SearchResultsDTOImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SearchResultsDTOToJson(
+    return _$$SearchResultsDTOImplToJson(
       this,
     );
   }
@@ -182,11 +184,11 @@ class _$_SearchResultsDTO extends _SearchResultsDTO {
 abstract class _SearchResultsDTO extends SearchResultsDTO {
   const factory _SearchResultsDTO(
       {final Map<String, SearchResultDTO>? results,
-      final ResourceMetaDTO? meta}) = _$_SearchResultsDTO;
+      final ResourceMetaDTO? meta}) = _$SearchResultsDTOImpl;
   const _SearchResultsDTO._() : super._();
 
   factory _SearchResultsDTO.fromJson(Map<String, dynamic> json) =
-      _$_SearchResultsDTO.fromJson;
+      _$SearchResultsDTOImpl.fromJson;
 
   @override
   Map<String, SearchResultDTO>? get results;
@@ -194,7 +196,7 @@ abstract class _SearchResultsDTO extends SearchResultsDTO {
   ResourceMetaDTO? get meta;
   @override
   @JsonKey(ignore: true)
-  _$$_SearchResultsDTOCopyWith<_$_SearchResultsDTO> get copyWith =>
+  _$$SearchResultsDTOImplCopyWith<_$SearchResultsDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -276,11 +278,11 @@ class _$SearchResultDTOCopyWithImpl<$Res, $Val extends SearchResultDTO>
 }
 
 /// @nodoc
-abstract class _$$_SearchResultDTOCopyWith<$Res>
+abstract class _$$SearchResultDTOImplCopyWith<$Res>
     implements $SearchResultDTOCopyWith<$Res> {
-  factory _$$_SearchResultDTOCopyWith(
-          _$_SearchResultDTO value, $Res Function(_$_SearchResultDTO) then) =
-      __$$_SearchResultDTOCopyWithImpl<$Res>;
+  factory _$$SearchResultDTOImplCopyWith(_$SearchResultDTOImpl value,
+          $Res Function(_$SearchResultDTOImpl) then) =
+      __$$SearchResultDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -292,11 +294,11 @@ abstract class _$$_SearchResultDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SearchResultDTOCopyWithImpl<$Res>
-    extends _$SearchResultDTOCopyWithImpl<$Res, _$_SearchResultDTO>
-    implements _$$_SearchResultDTOCopyWith<$Res> {
-  __$$_SearchResultDTOCopyWithImpl(
-      _$_SearchResultDTO _value, $Res Function(_$_SearchResultDTO) _then)
+class __$$SearchResultDTOImplCopyWithImpl<$Res>
+    extends _$SearchResultDTOCopyWithImpl<$Res, _$SearchResultDTOImpl>
+    implements _$$SearchResultDTOImplCopyWith<$Res> {
+  __$$SearchResultDTOImplCopyWithImpl(
+      _$SearchResultDTOImpl _value, $Res Function(_$SearchResultDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -308,7 +310,7 @@ class __$$_SearchResultDTOCopyWithImpl<$Res>
     Object? href = freezed,
     Object? next = freezed,
   }) {
-    return _then(_$_SearchResultDTO(
+    return _then(_$SearchResultDTOImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -335,8 +337,8 @@ class __$$_SearchResultDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SearchResultDTO extends _SearchResultDTO {
-  const _$_SearchResultDTO(
+class _$SearchResultDTOImpl extends _SearchResultDTO {
+  const _$SearchResultDTOImpl(
       {required this.name,
       required this.groupId,
       @ResourceDTOConverter() required final List<ResourceDTO> data,
@@ -345,8 +347,8 @@ class _$_SearchResultDTO extends _SearchResultDTO {
       : _data = data,
         super._();
 
-  factory _$_SearchResultDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_SearchResultDTOFromJson(json);
+  factory _$SearchResultDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SearchResultDTOImplFromJson(json);
 
   @override
   final String name;
@@ -356,6 +358,7 @@ class _$_SearchResultDTO extends _SearchResultDTO {
   @override
   @ResourceDTOConverter()
   List<ResourceDTO> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_data);
   }
@@ -371,10 +374,10 @@ class _$_SearchResultDTO extends _SearchResultDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SearchResultDTO &&
+            other is _$SearchResultDTOImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.groupId, groupId) || other.groupId == groupId) &&
             const DeepCollectionEquality().equals(other._data, _data) &&
@@ -390,12 +393,13 @@ class _$_SearchResultDTO extends _SearchResultDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SearchResultDTOCopyWith<_$_SearchResultDTO> get copyWith =>
-      __$$_SearchResultDTOCopyWithImpl<_$_SearchResultDTO>(this, _$identity);
+  _$$SearchResultDTOImplCopyWith<_$SearchResultDTOImpl> get copyWith =>
+      __$$SearchResultDTOImplCopyWithImpl<_$SearchResultDTOImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SearchResultDTOToJson(
+    return _$$SearchResultDTOImplToJson(
       this,
     );
   }
@@ -407,11 +411,11 @@ abstract class _SearchResultDTO extends SearchResultDTO {
       required final String groupId,
       @ResourceDTOConverter() required final List<ResourceDTO> data,
       final String? href,
-      final String? next}) = _$_SearchResultDTO;
+      final String? next}) = _$SearchResultDTOImpl;
   const _SearchResultDTO._() : super._();
 
   factory _SearchResultDTO.fromJson(Map<String, dynamic> json) =
-      _$_SearchResultDTO.fromJson;
+      _$SearchResultDTOImpl.fromJson;
 
   @override
   String get name;
@@ -426,6 +430,6 @@ abstract class _SearchResultDTO extends SearchResultDTO {
   String? get next;
   @override
   @JsonKey(ignore: true)
-  _$$_SearchResultDTOCopyWith<_$_SearchResultDTO> get copyWith =>
+  _$$SearchResultDTOImplCopyWith<_$SearchResultDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

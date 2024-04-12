@@ -65,7 +65,7 @@ class AlbumsChartDTO with _$AlbumsChartDTO {
     return AlbumsChart(
       name: name,
       chart: chart,
-      data: data.map((e) => e.toDomain()).cast<Album>().toList(),
+      albums: data.map((e) => e.toDomain()).cast<Album>().toList(),
     );
   }
 }
@@ -89,7 +89,7 @@ class PlaylistsChartDTO with _$PlaylistsChartDTO {
     return PlaylistsChart(
       name: name,
       chart: chart,
-      data: data.map((e) => e.toDomain()).cast<Playlist>().toList(),
+      playlists: data.map((e) => e.toDomain()).cast<Playlist>().toList(),
     );
   }
 }
@@ -113,7 +113,7 @@ class SongsChartDTO with _$SongsChartDTO {
     return SongsChart(
       name: name,
       chart: chart,
-      data: data.map((e) => e.toDomain()).cast<Song>().toList(),
+      songs: data.map((e) => e.toDomain()).cast<Song>().toList(),
     );
   }
 }
@@ -137,7 +137,7 @@ class MusicVideosChartDTO with _$MusicVideosChartDTO {
     return MusicVideosChart(
       name: name,
       chart: chart,
-      data: data.map((e) => e.toDomain()).cast<MusicVideo>().toList(),
+      mvs: data.map((e) => e.toDomain()).cast<MusicVideo>().toList(),
     );
   }
 }

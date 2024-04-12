@@ -29,7 +29,8 @@ class MusicAuthIntercepter extends Interceptor {
   }
 
   @override
-  Future<void> onError(DioError err, ErrorInterceptorHandler handler) async {
+  Future<void> onError(
+      DioException err, ErrorInterceptorHandler handler) async {
     if (err.requestOptions.disableRetry) {
       return super.onError(err, handler);
     }
@@ -68,7 +69,7 @@ class MusicAuthIntercepter extends Interceptor {
             )
             .then((value) => handler.resolve(value));
       }
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       super.onError(e, handler);
     }
   }

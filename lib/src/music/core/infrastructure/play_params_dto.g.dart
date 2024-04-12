@@ -6,7 +6,8 @@ part of 'play_params_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PlayParamsDTO _$$_PlayParamsDTOFromJson(Map json) => _$_PlayParamsDTO(
+_$PlayParamsDTOImpl _$$PlayParamsDTOImplFromJson(Map json) =>
+    _$PlayParamsDTOImpl(
       catalogId: json['catalogId'] as String?,
       globalId: json['globalId'] as String?,
       id: json['id'] as String,
@@ -20,7 +21,7 @@ _$_PlayParamsDTO _$$_PlayParamsDTOFromJson(Map json) => _$_PlayParamsDTO(
       hasDrm: json['hasDrm'] as bool?,
     );
 
-Map<String, dynamic> _$$_PlayParamsDTOToJson(_$_PlayParamsDTO instance) =>
+Map<String, dynamic> _$$PlayParamsDTOImplToJson(_$PlayParamsDTOImpl instance) =>
     <String, dynamic>{
       'catalogId': instance.catalogId,
       'globalId': instance.globalId,

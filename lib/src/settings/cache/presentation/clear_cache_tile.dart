@@ -4,7 +4,7 @@ import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/settings/cache/shared/providers.dart';
 
 class ClearCacheTile extends ConsumerStatefulWidget {
-  const ClearCacheTile({Key? key}) : super(key: key);
+  const ClearCacheTile({super.key});
 
   @override
   ConsumerState<ConsumerStatefulWidget> createState() => _ClearCacheTileState();

@@ -24,7 +24,7 @@ class ChartsRepository {
         limit,
       );
       return right(remoteTopCharts.results.toDomain());
-    } on DioError catch (e) {
+    } on DioException catch (e) {
       return left(MusicFailure.api(e.response?.statusCode));
     }
   }

@@ -21,38 +21,46 @@ class Resource with _$Resource {
     required String id,
     required String type,
     required AlbumAttributes? attributes,
-    @JsonKey(ignore: true) AlbumRelationships? relationships,
-    @JsonKey(ignore: true) Map<String, ResourceView>? views,
+    @JsonKey(includeFromJson: false, includeToJson: false)
+    AlbumRelationships? relationships,
+    @JsonKey(includeFromJson: false, includeToJson: false)
+    Map<String, ResourceView>? views,
   }) = Album;
 
   const factory Resource.artist({
     required String id,
     required String type,
     required ArtistAttributes? attributes,
-    @JsonKey(ignore: true) ArtistRelationships? relationships,
-    @JsonKey(ignore: true) Map<String, ResourceView>? views,
+    @JsonKey(includeFromJson: false, includeToJson: false)
+    ArtistRelationships? relationships,
+    @JsonKey(includeFromJson: false, includeToJson: false)
+    Map<String, ResourceView>? views,
   }) = Artist;
 
   const factory Resource.musicVideo({
     required String id,
     required String type,
     required MusicVideoAttributes? attributes,
-    @JsonKey(ignore: true) MusicVideoRelationships? relationships,
+    @JsonKey(includeFromJson: false, includeToJson: false)
+    MusicVideoRelationships? relationships,
   }) = MusicVideo;
 
   const factory Resource.playlist({
     required String id,
     required String type,
     required PlaylistAttributes? attributes,
-    @JsonKey(ignore: true) PlaylistRelationships? relationships,
-    @JsonKey(ignore: true) Map<String, ResourceView>? views,
+    @JsonKey(includeFromJson: false, includeToJson: false)
+    PlaylistRelationships? relationships,
+    @JsonKey(includeFromJson: false, includeToJson: false)
+    Map<String, ResourceView>? views,
   }) = Playlist;
 
   const factory Resource.song({
     required String id,
     required String type,
     required SongAttributes? attributes,
-    @JsonKey(ignore: true) SongRelationships? relationships,
+    @JsonKey(includeFromJson: false, includeToJson: false)
+    SongRelationships? relationships,
   }) = Song;
 
   const factory Resource.station({
@@ -65,7 +73,8 @@ class Resource with _$Resource {
     required String id,
     required String type,
     required CuratorAttributes? attributes,
-    @JsonKey(ignore: true) CuratorRelationships? relationships,
+    @JsonKey(includeFromJson: false, includeToJson: false)
+    CuratorRelationships? relationships,
   }) = Curator;
 
   const factory Resource.genre({

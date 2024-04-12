@@ -6,8 +6,8 @@ part of 'resource_attributes.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ResourceAttributes _$$_ResourceAttributesFromJson(Map json) =>
-    _$_ResourceAttributes(
+_$ResourceAttributesImpl _$$ResourceAttributesImplFromJson(Map json) =>
+    _$ResourceAttributesImpl(
       albumName: json['albumName'] as String?,
       artistName: json['artistName'] as String?,
       artistUrl: json['artistUrl'] as String?,
@@ -23,8 +23,8 @@ _$_ResourceAttributes _$$_ResourceAttributesFromJson(Map json) =>
       url: json['url'] as String?,
     );
 
-Map<String, dynamic> _$$_ResourceAttributesToJson(
-        _$_ResourceAttributes instance) =>
+Map<String, dynamic> _$$ResourceAttributesImplToJson(
+        _$ResourceAttributesImpl instance) =>
     <String, dynamic>{
       'albumName': instance.albumName,
       'artistName': instance.artistName,
@@ -36,7 +36,8 @@ Map<String, dynamic> _$$_ResourceAttributesToJson(
       'url': instance.url,
     };
 
-_$_AlbumAttributes _$$_AlbumAttributesFromJson(Map json) => _$_AlbumAttributes(
+_$AlbumAttributesImpl _$$AlbumAttributesImplFromJson(Map json) =>
+    _$AlbumAttributesImpl(
       artistName: json['artistName'] as String,
       artistUrl: json['artistUrl'] as String?,
       artwork: json['artwork'] == null
@@ -60,7 +61,8 @@ _$_AlbumAttributes _$$_AlbumAttributesFromJson(Map json) => _$_AlbumAttributes(
               Map<String, dynamic>.from(json['editorialNotes'] as Map)),
     );
 
-Map<String, dynamic> _$$_AlbumAttributesToJson(_$_AlbumAttributes instance) =>
+Map<String, dynamic> _$$AlbumAttributesImplToJson(
+        _$AlbumAttributesImpl instance) =>
     <String, dynamic>{
       'artistName': instance.artistName,
       'artistUrl': instance.artistUrl,
@@ -75,8 +77,8 @@ Map<String, dynamic> _$$_AlbumAttributesToJson(_$_AlbumAttributes instance) =>
       'editorialNotes': instance.editorialNotes?.toJson(),
     };
 
-_$_ArtistAttributes _$$_ArtistAttributesFromJson(Map json) =>
-    _$_ArtistAttributes(
+_$ArtistAttributesImpl _$$ArtistAttributesImplFromJson(Map json) =>
+    _$ArtistAttributesImpl(
       name: json['name'] as String,
       url: json['url'] as String?,
       artwork: json['artwork'] == null
@@ -88,7 +90,8 @@ _$_ArtistAttributes _$$_ArtistAttributesFromJson(Map json) =>
               Map<String, dynamic>.from(json['editorialNotes'] as Map)),
     );
 
-Map<String, dynamic> _$$_ArtistAttributesToJson(_$_ArtistAttributes instance) =>
+Map<String, dynamic> _$$ArtistAttributesImplToJson(
+        _$ArtistAttributesImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
       'url': instance.url,
@@ -96,8 +99,8 @@ Map<String, dynamic> _$$_ArtistAttributesToJson(_$_ArtistAttributes instance) =>
       'editorialNotes': instance.editorialNotes?.toJson(),
     };
 
-_$_MusicVideoAttributes _$$_MusicVideoAttributesFromJson(Map json) =>
-    _$_MusicVideoAttributes(
+_$MusicVideoAttributesImpl _$$MusicVideoAttributesImplFromJson(Map json) =>
+    _$MusicVideoAttributesImpl(
       artistName: json['artistName'] as String,
       artistUrl: json['artistUrl'] as String?,
       artwork: json['artwork'] == null
@@ -117,8 +120,8 @@ _$_MusicVideoAttributes _$$_MusicVideoAttributesFromJson(Map json) =>
       contentRating: json['contentRating'] as String?,
     );
 
-Map<String, dynamic> _$$_MusicVideoAttributesToJson(
-        _$_MusicVideoAttributes instance) =>
+Map<String, dynamic> _$$MusicVideoAttributesImplToJson(
+        _$MusicVideoAttributesImpl instance) =>
     <String, dynamic>{
       'artistName': instance.artistName,
       'artistUrl': instance.artistUrl,
@@ -132,8 +135,8 @@ Map<String, dynamic> _$$_MusicVideoAttributesToJson(
       'contentRating': instance.contentRating,
     };
 
-_$_PlaylistAttributes _$$_PlaylistAttributesFromJson(Map json) =>
-    _$_PlaylistAttributes(
+_$PlaylistAttributesImpl _$$PlaylistAttributesImplFromJson(Map json) =>
+    _$PlaylistAttributesImpl(
       artwork: json['artwork'] == null
           ? null
           : Artwork.fromJson(Map<String, dynamic>.from(json['artwork'] as Map)),
@@ -150,8 +153,8 @@ _$_PlaylistAttributes _$$_PlaylistAttributesFromJson(Map json) =>
               Map<String, dynamic>.from(json['editorialNotes'] as Map)),
     );
 
-Map<String, dynamic> _$$_PlaylistAttributesToJson(
-        _$_PlaylistAttributes instance) =>
+Map<String, dynamic> _$$PlaylistAttributesImplToJson(
+        _$PlaylistAttributesImpl instance) =>
     <String, dynamic>{
       'artwork': instance.artwork?.toJson(),
       'curatorName': instance.curatorName,
@@ -161,7 +164,8 @@ Map<String, dynamic> _$$_PlaylistAttributesToJson(
       'editorialNotes': instance.editorialNotes?.toJson(),
     };
 
-_$_SongAttributes _$$_SongAttributesFromJson(Map json) => _$_SongAttributes(
+_$SongAttributesImpl _$$SongAttributesImplFromJson(Map json) =>
+    _$SongAttributesImpl(
       albumName: json['albumName'] as String?,
       artistUrl: json['artistUrl'] as String?,
       artistName: json['artistName'] as String,
@@ -182,7 +186,8 @@ _$_SongAttributes _$$_SongAttributesFromJson(Map json) => _$_SongAttributes(
       url: json['url'] as String?,
     );
 
-Map<String, dynamic> _$$_SongAttributesToJson(_$_SongAttributes instance) =>
+Map<String, dynamic> _$$SongAttributesImplToJson(
+        _$SongAttributesImpl instance) =>
     <String, dynamic>{
       'albumName': instance.albumName,
       'artistUrl': instance.artistUrl,
@@ -197,8 +202,8 @@ Map<String, dynamic> _$$_SongAttributesToJson(_$_SongAttributes instance) =>
       'url': instance.url,
     };
 
-_$_StationAttributes _$$_StationAttributesFromJson(Map json) =>
-    _$_StationAttributes(
+_$StationAttributesImpl _$$StationAttributesImplFromJson(Map json) =>
+    _$StationAttributesImpl(
       artwork: json['artwork'] == null
           ? null
           : Artwork.fromJson(Map<String, dynamic>.from(json['artwork'] as Map)),
@@ -215,8 +220,8 @@ _$_StationAttributes _$$_StationAttributesFromJson(Map json) =>
               Map<String, dynamic>.from(json['editorialNotes'] as Map)),
     );
 
-Map<String, dynamic> _$$_StationAttributesToJson(
-        _$_StationAttributes instance) =>
+Map<String, dynamic> _$$StationAttributesImplToJson(
+        _$StationAttributesImpl instance) =>
     <String, dynamic>{
       'artwork': instance.artwork?.toJson(),
       'playParams': instance.playParams?.toJson(),
@@ -226,8 +231,8 @@ Map<String, dynamic> _$$_StationAttributesToJson(
       'editorialNotes': instance.editorialNotes?.toJson(),
     };
 
-_$_CuratorAttributes _$$_CuratorAttributesFromJson(Map json) =>
-    _$_CuratorAttributes(
+_$CuratorAttributesImpl _$$CuratorAttributesImplFromJson(Map json) =>
+    _$CuratorAttributesImpl(
       artwork: json['artwork'] == null
           ? null
           : Artwork.fromJson(Map<String, dynamic>.from(json['artwork'] as Map)),
@@ -235,19 +240,21 @@ _$_CuratorAttributes _$$_CuratorAttributesFromJson(Map json) =>
       url: json['url'] as String?,
     );
 
-Map<String, dynamic> _$$_CuratorAttributesToJson(
-        _$_CuratorAttributes instance) =>
+Map<String, dynamic> _$$CuratorAttributesImplToJson(
+        _$CuratorAttributesImpl instance) =>
     <String, dynamic>{
       'artwork': instance.artwork?.toJson(),
       'name': instance.name,
       'url': instance.url,
     };
 
-_$_GenreAttributes _$$_GenreAttributesFromJson(Map json) => _$_GenreAttributes(
+_$GenreAttributesImpl _$$GenreAttributesImplFromJson(Map json) =>
+    _$GenreAttributesImpl(
       name: json['name'] as String,
     );
 
-Map<String, dynamic> _$$_GenreAttributesToJson(_$_GenreAttributes instance) =>
+Map<String, dynamic> _$$GenreAttributesImplToJson(
+        _$GenreAttributesImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
     };

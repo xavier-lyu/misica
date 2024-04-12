@@ -7,9 +7,9 @@ import 'package:misica/src/music/core/domain/resource.dart';
 
 class GenrePillWidget extends StatelessWidget {
   const GenrePillWidget({
-    Key? key,
+    super.key,
     required this.genre,
-  }) : super(key: key);
+  });
 
   final Genre genre;
 

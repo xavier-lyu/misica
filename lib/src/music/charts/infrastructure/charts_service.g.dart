@@ -22,17 +22,17 @@ class _ChartsService implements ChartsService {
 
   @override
   Future<ChartsResultsDTO> getTopCharts(
-    storefront,
-    genre,
-    extend,
-    types,
-    include,
-    views,
-    albumsFields,
-    playlistsFields,
-    limit,
+    String storefront,
+    int genre,
+    String extend,
+    String types,
+    String include,
+    String views,
+    String albumsFields,
+    String playlistsFields,
+    int limit,
   ) async {
-    const _extra = <String, dynamic>{};
+    final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'genre': genre,
       r'extend': extend,
@@ -44,7 +44,7 @@ class _ChartsService implements ChartsService {
       r'limit': limit,
     };
     final _headers = <String, dynamic>{};
-    final _data = <String, dynamic>{};
+    const Map<String, dynamic>? _data = null;
     final _result = await _dio
         .fetch<Map<String, dynamic>>(_setStreamType<ChartsResultsDTO>(Options(
       method: 'GET',
@@ -57,7 +57,11 @@ class _ChartsService implements ChartsService {
               queryParameters: queryParameters,
               data: _data,
             )
-            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+            .copyWith(
+                baseUrl: _combineBaseUrls(
+              _dio.options.baseUrl,
+              baseUrl,
+            ))));
     final value = ChartsResultsDTO.fromJson(_result.data!);
     return value;
   }
@@ -73,5 +77,22 @@ class _ChartsService implements ChartsService {
       }
     }
     return requestOptions;
+  }
+
+  String _combineBaseUrls(
+    String dioBaseUrl,
+    String? baseUrl,
+  ) {
+    if (baseUrl == null || baseUrl.trim().isEmpty) {
+      return dioBaseUrl;
+    }
+
+    final url = Uri.parse(baseUrl);
+
+    if (url.isAbsolute) {
+      return url.toString();
+    }
+
+    return Uri.parse(dioBaseUrl).resolveUri(url).toString();
   }
 }

@@ -6,7 +6,7 @@ part of 'artwork_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ArtworkDTO _$$_ArtworkDTOFromJson(Map json) => _$_ArtworkDTO(
+_$ArtworkDTOImpl _$$ArtworkDTOImplFromJson(Map json) => _$ArtworkDTOImpl(
       bgColor: json['bgColor'] as String?,
       height: json['height'] as int,
       textColor1: json['textColor1'] as String?,
@@ -17,7 +17,7 @@ _$_ArtworkDTO _$$_ArtworkDTOFromJson(Map json) => _$_ArtworkDTO(
       width: json['width'] as int,
     );
 
-Map<String, dynamic> _$$_ArtworkDTOToJson(_$_ArtworkDTO instance) =>
+Map<String, dynamic> _$$ArtworkDTOImplToJson(_$ArtworkDTOImpl instance) =>
     <String, dynamic>{
       'bgColor': instance.bgColor,
       'height': instance.height,

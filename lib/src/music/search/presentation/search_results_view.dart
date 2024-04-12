@@ -8,9 +8,9 @@ import 'search_result_widget.dart';
 
 class SearchResultsView extends StatefulWidget {
   const SearchResultsView({
-    Key? key,
+    super.key,
     required this.results,
-  }) : super(key: key);
+  });
 
   final Map<String, SearchResult> results;
 

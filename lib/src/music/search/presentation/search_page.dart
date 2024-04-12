@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide SearchBar;
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/presentation/app_router.gr.dart';
@@ -11,8 +11,9 @@ import 'package:misica/src/music/search/shared/providers.dart';
 
 import 'search_results_view.dart';
 
+@RoutePage()
 class SearchPage extends HookConsumerWidget {
-  const SearchPage({Key? key}) : super(key: key);
+  const SearchPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

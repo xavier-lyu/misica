@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'resource_views_dto.dart';
 
@@ -12,7 +12,7 @@ part of 'resource_views_dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ResourceViewDTO _$ResourceViewDTOFromJson(Map<String, dynamic> json) {
   return _ResourceViewDTO.fromJson(json);
@@ -89,11 +89,11 @@ class _$ResourceViewDTOCopyWithImpl<$Res, $Val extends ResourceViewDTO>
 }
 
 /// @nodoc
-abstract class _$$_ResourceViewDTOCopyWith<$Res>
+abstract class _$$ResourceViewDTOImplCopyWith<$Res>
     implements $ResourceViewDTOCopyWith<$Res> {
-  factory _$$_ResourceViewDTOCopyWith(
-          _$_ResourceViewDTO value, $Res Function(_$_ResourceViewDTO) then) =
-      __$$_ResourceViewDTOCopyWithImpl<$Res>;
+  factory _$$ResourceViewDTOImplCopyWith(_$ResourceViewDTOImpl value,
+          $Res Function(_$ResourceViewDTOImpl) then) =
+      __$$ResourceViewDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -106,11 +106,11 @@ abstract class _$$_ResourceViewDTOCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ResourceViewDTOCopyWithImpl<$Res>
-    extends _$ResourceViewDTOCopyWithImpl<$Res, _$_ResourceViewDTO>
-    implements _$$_ResourceViewDTOCopyWith<$Res> {
-  __$$_ResourceViewDTOCopyWithImpl(
-      _$_ResourceViewDTO _value, $Res Function(_$_ResourceViewDTO) _then)
+class __$$ResourceViewDTOImplCopyWithImpl<$Res>
+    extends _$ResourceViewDTOCopyWithImpl<$Res, _$ResourceViewDTOImpl>
+    implements _$$ResourceViewDTOImplCopyWith<$Res> {
+  __$$ResourceViewDTOImplCopyWithImpl(
+      _$ResourceViewDTOImpl _value, $Res Function(_$ResourceViewDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -120,7 +120,7 @@ class __$$_ResourceViewDTOCopyWithImpl<$Res>
     Object? attributes = null,
     Object? data = null,
   }) {
-    return _then(_$_ResourceViewDTO(
+    return _then(_$ResourceViewDTOImpl(
       href: null == href
           ? _value.href
           : href // ignore: cast_nullable_to_non_nullable
@@ -139,16 +139,16 @@ class __$$_ResourceViewDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResourceViewDTO extends _ResourceViewDTO {
-  const _$_ResourceViewDTO(
+class _$ResourceViewDTOImpl extends _ResourceViewDTO {
+  const _$ResourceViewDTOImpl(
       {required this.href,
       required this.attributes,
       @ResourceDTOConverter() required final List<ResourceDTO> data})
       : _data = data,
         super._();
 
-  factory _$_ResourceViewDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_ResourceViewDTOFromJson(json);
+  factory _$ResourceViewDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResourceViewDTOImplFromJson(json);
 
   @override
   final String href;
@@ -158,6 +158,7 @@ class _$_ResourceViewDTO extends _ResourceViewDTO {
   @override
   @ResourceDTOConverter()
   List<ResourceDTO> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_data);
   }
@@ -168,10 +169,10 @@ class _$_ResourceViewDTO extends _ResourceViewDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResourceViewDTO &&
+            other is _$ResourceViewDTOImpl &&
             (identical(other.href, href) || other.href == href) &&
             (identical(other.attributes, attributes) ||
                 other.attributes == attributes) &&
@@ -186,12 +187,13 @@ class _$_ResourceViewDTO extends _ResourceViewDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResourceViewDTOCopyWith<_$_ResourceViewDTO> get copyWith =>
-      __$$_ResourceViewDTOCopyWithImpl<_$_ResourceViewDTO>(this, _$identity);
+  _$$ResourceViewDTOImplCopyWith<_$ResourceViewDTOImpl> get copyWith =>
+      __$$ResourceViewDTOImplCopyWithImpl<_$ResourceViewDTOImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResourceViewDTOToJson(
+    return _$$ResourceViewDTOImplToJson(
       this,
     );
   }
@@ -202,11 +204,11 @@ abstract class _ResourceViewDTO extends ResourceViewDTO {
           {required final String href,
           required final ResourceViewAttributesDTO attributes,
           @ResourceDTOConverter() required final List<ResourceDTO> data}) =
-      _$_ResourceViewDTO;
+      _$ResourceViewDTOImpl;
   const _ResourceViewDTO._() : super._();
 
   factory _ResourceViewDTO.fromJson(Map<String, dynamic> json) =
-      _$_ResourceViewDTO.fromJson;
+      _$ResourceViewDTOImpl.fromJson;
 
   @override
   String get href;
@@ -217,7 +219,7 @@ abstract class _ResourceViewDTO extends ResourceViewDTO {
   List<ResourceDTO> get data;
   @override
   @JsonKey(ignore: true)
-  _$$_ResourceViewDTOCopyWith<_$_ResourceViewDTO> get copyWith =>
+  _$$ResourceViewDTOImplCopyWith<_$ResourceViewDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -271,25 +273,25 @@ class _$ResourceViewAttributesDTOCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ResourceViewAttributesDTOCopyWith<$Res>
+abstract class _$$ResourceViewAttributesDTOImplCopyWith<$Res>
     implements $ResourceViewAttributesDTOCopyWith<$Res> {
-  factory _$$_ResourceViewAttributesDTOCopyWith(
-          _$_ResourceViewAttributesDTO value,
-          $Res Function(_$_ResourceViewAttributesDTO) then) =
-      __$$_ResourceViewAttributesDTOCopyWithImpl<$Res>;
+  factory _$$ResourceViewAttributesDTOImplCopyWith(
+          _$ResourceViewAttributesDTOImpl value,
+          $Res Function(_$ResourceViewAttributesDTOImpl) then) =
+      __$$ResourceViewAttributesDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String title});
 }
 
 /// @nodoc
-class __$$_ResourceViewAttributesDTOCopyWithImpl<$Res>
+class __$$ResourceViewAttributesDTOImplCopyWithImpl<$Res>
     extends _$ResourceViewAttributesDTOCopyWithImpl<$Res,
-        _$_ResourceViewAttributesDTO>
-    implements _$$_ResourceViewAttributesDTOCopyWith<$Res> {
-  __$$_ResourceViewAttributesDTOCopyWithImpl(
-      _$_ResourceViewAttributesDTO _value,
-      $Res Function(_$_ResourceViewAttributesDTO) _then)
+        _$ResourceViewAttributesDTOImpl>
+    implements _$$ResourceViewAttributesDTOImplCopyWith<$Res> {
+  __$$ResourceViewAttributesDTOImplCopyWithImpl(
+      _$ResourceViewAttributesDTOImpl _value,
+      $Res Function(_$ResourceViewAttributesDTOImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -297,7 +299,7 @@ class __$$_ResourceViewAttributesDTOCopyWithImpl<$Res>
   $Res call({
     Object? title = null,
   }) {
-    return _then(_$_ResourceViewAttributesDTO(
+    return _then(_$ResourceViewAttributesDTOImpl(
       title: null == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -308,11 +310,11 @@ class __$$_ResourceViewAttributesDTOCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ResourceViewAttributesDTO extends _ResourceViewAttributesDTO {
-  const _$_ResourceViewAttributesDTO({required this.title}) : super._();
+class _$ResourceViewAttributesDTOImpl extends _ResourceViewAttributesDTO {
+  const _$ResourceViewAttributesDTOImpl({required this.title}) : super._();
 
-  factory _$_ResourceViewAttributesDTO.fromJson(Map<String, dynamic> json) =>
-      _$$_ResourceViewAttributesDTOFromJson(json);
+  factory _$ResourceViewAttributesDTOImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResourceViewAttributesDTOImplFromJson(json);
 
   @override
   final String title;
@@ -323,10 +325,10 @@ class _$_ResourceViewAttributesDTO extends _ResourceViewAttributesDTO {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResourceViewAttributesDTO &&
+            other is _$ResourceViewAttributesDTOImpl &&
             (identical(other.title, title) || other.title == title));
   }
 
@@ -337,13 +339,13 @@ class _$_ResourceViewAttributesDTO extends _ResourceViewAttributesDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResourceViewAttributesDTOCopyWith<_$_ResourceViewAttributesDTO>
-      get copyWith => __$$_ResourceViewAttributesDTOCopyWithImpl<
-          _$_ResourceViewAttributesDTO>(this, _$identity);
+  _$$ResourceViewAttributesDTOImplCopyWith<_$ResourceViewAttributesDTOImpl>
+      get copyWith => __$$ResourceViewAttributesDTOImplCopyWithImpl<
+          _$ResourceViewAttributesDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ResourceViewAttributesDTOToJson(
+    return _$$ResourceViewAttributesDTOImplToJson(
       this,
     );
   }
@@ -351,16 +353,16 @@ class _$_ResourceViewAttributesDTO extends _ResourceViewAttributesDTO {
 
 abstract class _ResourceViewAttributesDTO extends ResourceViewAttributesDTO {
   const factory _ResourceViewAttributesDTO({required final String title}) =
-      _$_ResourceViewAttributesDTO;
+      _$ResourceViewAttributesDTOImpl;
   const _ResourceViewAttributesDTO._() : super._();
 
   factory _ResourceViewAttributesDTO.fromJson(Map<String, dynamic> json) =
-      _$_ResourceViewAttributesDTO.fromJson;
+      _$ResourceViewAttributesDTOImpl.fromJson;
 
   @override
   String get title;
   @override
   @JsonKey(ignore: true)
-  _$$_ResourceViewAttributesDTOCopyWith<_$_ResourceViewAttributesDTO>
+  _$$ResourceViewAttributesDTOImplCopyWith<_$ResourceViewAttributesDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'auth_failure.dart';
 
@@ -12,7 +12,7 @@ part of 'auth_failure.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AuthFailure {
@@ -75,24 +75,25 @@ class _$AuthFailureCopyWithImpl<$Res, $Val extends AuthFailure>
 }
 
 /// @nodoc
-abstract class _$$_StorageCopyWith<$Res> {
-  factory _$$_StorageCopyWith(
-          _$_Storage value, $Res Function(_$_Storage) then) =
-      __$$_StorageCopyWithImpl<$Res>;
+abstract class _$$StorageImplCopyWith<$Res> {
+  factory _$$StorageImplCopyWith(
+          _$StorageImpl value, $Res Function(_$StorageImpl) then) =
+      __$$StorageImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_StorageCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res, _$_Storage>
-    implements _$$_StorageCopyWith<$Res> {
-  __$$_StorageCopyWithImpl(_$_Storage _value, $Res Function(_$_Storage) _then)
+class __$$StorageImplCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$StorageImpl>
+    implements _$$StorageImplCopyWith<$Res> {
+  __$$StorageImplCopyWithImpl(
+      _$StorageImpl _value, $Res Function(_$StorageImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Storage extends _Storage {
-  const _$_Storage() : super._();
+class _$StorageImpl implements _Storage {
+  const _$StorageImpl();
 
   @override
   String toString() {
@@ -100,9 +101,9 @@ class _$_Storage extends _Storage {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Storage);
+        (other.runtimeType == runtimeType && other is _$StorageImpl);
   }
 
   @override
@@ -171,31 +172,30 @@ class _$_Storage extends _Storage {
   }
 }
 
-abstract class _Storage extends AuthFailure {
-  const factory _Storage() = _$_Storage;
-  const _Storage._() : super._();
+abstract class _Storage implements AuthFailure {
+  const factory _Storage() = _$StorageImpl;
 }
 
 /// @nodoc
-abstract class _$$_PlatformCopyWith<$Res> {
-  factory _$$_PlatformCopyWith(
-          _$_Platform value, $Res Function(_$_Platform) then) =
-      __$$_PlatformCopyWithImpl<$Res>;
+abstract class _$$PlatformImplCopyWith<$Res> {
+  factory _$$PlatformImplCopyWith(
+          _$PlatformImpl value, $Res Function(_$PlatformImpl) then) =
+      __$$PlatformImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_PlatformCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res, _$_Platform>
-    implements _$$_PlatformCopyWith<$Res> {
-  __$$_PlatformCopyWithImpl(
-      _$_Platform _value, $Res Function(_$_Platform) _then)
+class __$$PlatformImplCopyWithImpl<$Res>
+    extends _$AuthFailureCopyWithImpl<$Res, _$PlatformImpl>
+    implements _$$PlatformImplCopyWith<$Res> {
+  __$$PlatformImplCopyWithImpl(
+      _$PlatformImpl _value, $Res Function(_$PlatformImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Platform extends _Platform {
-  const _$_Platform() : super._();
+class _$PlatformImpl implements _Platform {
+  const _$PlatformImpl();
 
   @override
   String toString() {
@@ -203,9 +203,9 @@ class _$_Platform extends _Platform {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Platform);
+        (other.runtimeType == runtimeType && other is _$PlatformImpl);
   }
 
   @override
@@ -274,7 +274,6 @@ class _$_Platform extends _Platform {
   }
 }
 
-abstract class _Platform extends AuthFailure {
-  const factory _Platform() = _$_Platform;
-  const _Platform._() : super._();
+abstract class _Platform implements AuthFailure {
+  const factory _Platform() = _$PlatformImpl;
 }

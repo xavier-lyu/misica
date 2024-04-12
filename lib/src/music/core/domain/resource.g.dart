@@ -6,7 +6,7 @@ part of 'resource.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ResourceRaw _$$ResourceRawFromJson(Map json) => _$ResourceRaw(
+_$ResourceRawImpl _$$ResourceRawImplFromJson(Map json) => _$ResourceRawImpl(
       id: json['id'] as String,
       type: json['type'] as String,
       attributes: json['attributes'] == null
@@ -16,7 +16,7 @@ _$ResourceRaw _$$ResourceRawFromJson(Map json) => _$ResourceRaw(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$ResourceRawToJson(_$ResourceRaw instance) =>
+Map<String, dynamic> _$$ResourceRawImplToJson(_$ResourceRawImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
@@ -24,7 +24,7 @@ Map<String, dynamic> _$$ResourceRawToJson(_$ResourceRaw instance) =>
       'runtimeType': instance.$type,
     };
 
-_$Album _$$AlbumFromJson(Map json) => _$Album(
+_$AlbumImpl _$$AlbumImplFromJson(Map json) => _$AlbumImpl(
       id: json['id'] as String,
       type: json['type'] as String,
       attributes: json['attributes'] == null
@@ -34,14 +34,15 @@ _$Album _$$AlbumFromJson(Map json) => _$Album(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$AlbumToJson(_$Album instance) => <String, dynamic>{
+Map<String, dynamic> _$$AlbumImplToJson(_$AlbumImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
       'attributes': instance.attributes?.toJson(),
       'runtimeType': instance.$type,
     };
 
-_$Artist _$$ArtistFromJson(Map json) => _$Artist(
+_$ArtistImpl _$$ArtistImplFromJson(Map json) => _$ArtistImpl(
       id: json['id'] as String,
       type: json['type'] as String,
       attributes: json['attributes'] == null
@@ -51,14 +52,15 @@ _$Artist _$$ArtistFromJson(Map json) => _$Artist(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$ArtistToJson(_$Artist instance) => <String, dynamic>{
+Map<String, dynamic> _$$ArtistImplToJson(_$ArtistImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
       'attributes': instance.attributes?.toJson(),
       'runtimeType': instance.$type,
     };
 
-_$MusicVideo _$$MusicVideoFromJson(Map json) => _$MusicVideo(
+_$MusicVideoImpl _$$MusicVideoImplFromJson(Map json) => _$MusicVideoImpl(
       id: json['id'] as String,
       type: json['type'] as String,
       attributes: json['attributes'] == null
@@ -68,7 +70,7 @@ _$MusicVideo _$$MusicVideoFromJson(Map json) => _$MusicVideo(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$MusicVideoToJson(_$MusicVideo instance) =>
+Map<String, dynamic> _$$MusicVideoImplToJson(_$MusicVideoImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
@@ -76,7 +78,7 @@ Map<String, dynamic> _$$MusicVideoToJson(_$MusicVideo instance) =>
       'runtimeType': instance.$type,
     };
 
-_$Playlist _$$PlaylistFromJson(Map json) => _$Playlist(
+_$PlaylistImpl _$$PlaylistImplFromJson(Map json) => _$PlaylistImpl(
       id: json['id'] as String,
       type: json['type'] as String,
       attributes: json['attributes'] == null
@@ -86,7 +88,7 @@ _$Playlist _$$PlaylistFromJson(Map json) => _$Playlist(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$PlaylistToJson(_$Playlist instance) =>
+Map<String, dynamic> _$$PlaylistImplToJson(_$PlaylistImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
@@ -94,7 +96,7 @@ Map<String, dynamic> _$$PlaylistToJson(_$Playlist instance) =>
       'runtimeType': instance.$type,
     };
 
-_$Song _$$SongFromJson(Map json) => _$Song(
+_$SongImpl _$$SongImplFromJson(Map json) => _$SongImpl(
       id: json['id'] as String,
       type: json['type'] as String,
       attributes: json['attributes'] == null
@@ -104,14 +106,15 @@ _$Song _$$SongFromJson(Map json) => _$Song(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$SongToJson(_$Song instance) => <String, dynamic>{
+Map<String, dynamic> _$$SongImplToJson(_$SongImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
       'attributes': instance.attributes?.toJson(),
       'runtimeType': instance.$type,
     };
 
-_$Station _$$StationFromJson(Map json) => _$Station(
+_$StationImpl _$$StationImplFromJson(Map json) => _$StationImpl(
       id: json['id'] as String,
       type: json['type'] as String,
       attributes: json['attributes'] == null
@@ -121,14 +124,15 @@ _$Station _$$StationFromJson(Map json) => _$Station(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$StationToJson(_$Station instance) => <String, dynamic>{
+Map<String, dynamic> _$$StationImplToJson(_$StationImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
       'attributes': instance.attributes?.toJson(),
       'runtimeType': instance.$type,
     };
 
-_$Curator _$$CuratorFromJson(Map json) => _$Curator(
+_$CuratorImpl _$$CuratorImplFromJson(Map json) => _$CuratorImpl(
       id: json['id'] as String,
       type: json['type'] as String,
       attributes: json['attributes'] == null
@@ -138,14 +142,15 @@ _$Curator _$$CuratorFromJson(Map json) => _$Curator(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$CuratorToJson(_$Curator instance) => <String, dynamic>{
+Map<String, dynamic> _$$CuratorImplToJson(_$CuratorImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
       'attributes': instance.attributes?.toJson(),
       'runtimeType': instance.$type,
     };
 
-_$Genre _$$GenreFromJson(Map json) => _$Genre(
+_$GenreImpl _$$GenreImplFromJson(Map json) => _$GenreImpl(
       id: json['id'] as String,
       type: json['type'] as String,
       attributes: json['attributes'] == null
@@ -155,7 +160,8 @@ _$Genre _$$GenreFromJson(Map json) => _$Genre(
       $type: json['runtimeType'] as String?,
     );
 
-Map<String, dynamic> _$$GenreToJson(_$Genre instance) => <String, dynamic>{
+Map<String, dynamic> _$$GenreImplToJson(_$GenreImpl instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
       'attributes': instance.attributes?.toJson(),

@@ -7,9 +7,9 @@ import 'package:misica/src/music/player/shared/providers.dart';
 
 class ShufflePlayButton extends ConsumerWidget {
   const ShufflePlayButton({
-    Key? key,
+    super.key,
     required this.item,
-  }) : super(key: key);
+  });
 
   final Resource item;
 

@@ -19,9 +19,9 @@ import 'resources_list.dart';
 
 class ResourceViewsList extends StatelessWidget {
   const ResourceViewsList({
-    Key? key,
+    super.key,
     required this.views,
-  }) : super(key: key);
+  });
 
   final Map<String, ResourceView> views;
 
@@ -56,10 +56,10 @@ class ResourceViewsList extends StatelessWidget {
 
 class ResourceViewWidget extends ConsumerWidget {
   const ResourceViewWidget({
-    Key? key,
+    super.key,
     required this.kind,
     required this.resourceView,
-  }) : super(key: key);
+  });
 
   final ResourceView resourceView;
   final String kind;

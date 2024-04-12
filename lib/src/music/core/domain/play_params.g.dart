@@ -6,12 +6,12 @@ part of 'play_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PlayParams _$$_PlayParamsFromJson(Map json) => _$_PlayParams(
+_$PlayParamsImpl _$$PlayParamsImplFromJson(Map json) => _$PlayParamsImpl(
       id: json['id'] as String,
       kind: json['kind'] as String,
     );
 
-Map<String, dynamic> _$$_PlayParamsToJson(_$_PlayParams instance) =>
+Map<String, dynamic> _$$PlayParamsImplToJson(_$PlayParamsImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'kind': instance.kind,

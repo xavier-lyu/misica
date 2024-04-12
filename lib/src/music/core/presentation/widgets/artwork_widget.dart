@@ -12,13 +12,13 @@ class ArtworkWidget extends StatelessWidget {
   final BoxFit? fit;
 
   const ArtworkWidget({
-    Key? key,
+    super.key,
     required this.artwork,
     this.height = 180,
     this.width = 180,
     this.radius = 5.0,
     this.fit = BoxFit.cover,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

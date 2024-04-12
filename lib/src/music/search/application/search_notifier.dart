@@ -9,7 +9,7 @@ part 'search_notifier.freezed.dart';
 
 @freezed
 class SearchResultsState with _$SearchResultsState {
-  const SearchResultsState._();
+  // const SearchResultsState._();
   const factory SearchResultsState.initial() = _Initial;
   const factory SearchResultsState.loading() = _Loading;
   const factory SearchResultsState.data(SearchResults value) = _Data;

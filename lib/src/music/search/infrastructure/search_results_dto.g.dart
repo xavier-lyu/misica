@@ -6,8 +6,8 @@ part of 'search_results_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SearchResultsDTO _$$_SearchResultsDTOFromJson(Map json) =>
-    _$_SearchResultsDTO(
+_$SearchResultsDTOImpl _$$SearchResultsDTOImplFromJson(Map json) =>
+    _$SearchResultsDTOImpl(
       results: (json['results'] as Map?)?.map(
         (k, e) => MapEntry(k as String,
             SearchResultDTO.fromJson(Map<String, dynamic>.from(e as Map))),
@@ -18,13 +18,15 @@ _$_SearchResultsDTO _$$_SearchResultsDTOFromJson(Map json) =>
               Map<String, dynamic>.from(json['meta'] as Map)),
     );
 
-Map<String, dynamic> _$$_SearchResultsDTOToJson(_$_SearchResultsDTO instance) =>
+Map<String, dynamic> _$$SearchResultsDTOImplToJson(
+        _$SearchResultsDTOImpl instance) =>
     <String, dynamic>{
       'results': instance.results?.map((k, e) => MapEntry(k, e.toJson())),
       'meta': instance.meta?.toJson(),
     };
 
-_$_SearchResultDTO _$$_SearchResultDTOFromJson(Map json) => _$_SearchResultDTO(
+_$SearchResultDTOImpl _$$SearchResultDTOImplFromJson(Map json) =>
+    _$SearchResultDTOImpl(
       name: json['name'] as String,
       groupId: json['groupId'] as String,
       data: (json['data'] as List<dynamic>)
@@ -35,7 +37,8 @@ _$_SearchResultDTO _$$_SearchResultDTOFromJson(Map json) => _$_SearchResultDTO(
       next: json['next'] as String?,
     );
 
-Map<String, dynamic> _$$_SearchResultDTOToJson(_$_SearchResultDTO instance) =>
+Map<String, dynamic> _$$SearchResultDTOImplToJson(
+        _$SearchResultDTOImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
       'groupId': instance.groupId,

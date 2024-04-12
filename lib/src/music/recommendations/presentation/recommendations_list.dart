@@ -7,7 +7,7 @@ import 'package:misica/src/music/recommendations/presentation/recommendation_wid
 import 'package:misica/src/music/recommendations/shared/providers.dart';
 
 class RecommendationsList extends ConsumerWidget {
-  const RecommendationsList({Key? key}) : super(key: key);
+  const RecommendationsList({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

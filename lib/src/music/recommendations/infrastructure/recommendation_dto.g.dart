@@ -6,8 +6,9 @@ part of 'recommendation_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RecommendationsResponse _$$_RecommendationsResponseFromJson(Map json) =>
-    _$_RecommendationsResponse(
+_$RecommendationsResponseImpl _$$RecommendationsResponseImplFromJson(
+        Map json) =>
+    _$RecommendationsResponseImpl(
       next: json['next'] as String?,
       data: (json['data'] as List<dynamic>)
           .map((e) =>
@@ -15,15 +16,15 @@ _$_RecommendationsResponse _$$_RecommendationsResponseFromJson(Map json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_RecommendationsResponseToJson(
-        _$_RecommendationsResponse instance) =>
+Map<String, dynamic> _$$RecommendationsResponseImplToJson(
+        _$RecommendationsResponseImpl instance) =>
     <String, dynamic>{
       'next': instance.next,
       'data': instance.data.map((e) => e.toJson()).toList(),
     };
 
-_$_RecommendationDTO _$$_RecommendationDTOFromJson(Map json) =>
-    _$_RecommendationDTO(
+_$RecommendationDTOImpl _$$RecommendationDTOImplFromJson(Map json) =>
+    _$RecommendationDTOImpl(
       id: json['id'] as String?,
       type: json['type'] as String,
       attributes: RecommendationAttributesDTO.fromJson(
@@ -32,8 +33,8 @@ _$_RecommendationDTO _$$_RecommendationDTOFromJson(Map json) =>
           Map<String, dynamic>.from(json['relationships'] as Map)),
     );
 
-Map<String, dynamic> _$$_RecommendationDTOToJson(
-        _$_RecommendationDTO instance) =>
+Map<String, dynamic> _$$RecommendationDTOImplToJson(
+        _$RecommendationDTOImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'type': instance.type,
@@ -41,8 +42,8 @@ Map<String, dynamic> _$$_RecommendationDTOToJson(
       'relationships': instance.relationships.toJson(),
     };
 
-_$_RelationshipsDTO _$$_RelationshipsDTOFromJson(Map json) =>
-    _$_RelationshipsDTO(
+_$RelationshipsDTOImpl _$$RelationshipsDTOImplFromJson(Map json) =>
+    _$RelationshipsDTOImpl(
       contents: json['contents'] == null
           ? null
           : RelationshipContentsDTO.fromJson(
@@ -53,31 +54,33 @@ _$_RelationshipsDTO _$$_RelationshipsDTOFromJson(Map json) =>
               Map<String, dynamic>.from(json['recommendations'] as Map)),
     );
 
-Map<String, dynamic> _$$_RelationshipsDTOToJson(_$_RelationshipsDTO instance) =>
+Map<String, dynamic> _$$RelationshipsDTOImplToJson(
+        _$RelationshipsDTOImpl instance) =>
     <String, dynamic>{
       'contents': instance.contents?.toJson(),
       'recommendations': instance.recommendations?.toJson(),
     };
 
-_$_RelationshipRecommendationsDTO _$$_RelationshipRecommendationsDTOFromJson(
-        Map json) =>
-    _$_RelationshipRecommendationsDTO(
-      href: json['href'] as String?,
-      data: (json['data'] as List<dynamic>)
-          .map((e) =>
-              RecommendationDTO.fromJson(Map<String, dynamic>.from(e as Map)))
-          .toList(),
-    );
+_$RelationshipRecommendationsDTOImpl
+    _$$RelationshipRecommendationsDTOImplFromJson(Map json) =>
+        _$RelationshipRecommendationsDTOImpl(
+          href: json['href'] as String?,
+          data: (json['data'] as List<dynamic>)
+              .map((e) => RecommendationDTO.fromJson(
+                  Map<String, dynamic>.from(e as Map)))
+              .toList(),
+        );
 
-Map<String, dynamic> _$$_RelationshipRecommendationsDTOToJson(
-        _$_RelationshipRecommendationsDTO instance) =>
+Map<String, dynamic> _$$RelationshipRecommendationsDTOImplToJson(
+        _$RelationshipRecommendationsDTOImpl instance) =>
     <String, dynamic>{
       'href': instance.href,
       'data': instance.data.map((e) => e.toJson()).toList(),
     };
 
-_$_RelationshipContentsDTO _$$_RelationshipContentsDTOFromJson(Map json) =>
-    _$_RelationshipContentsDTO(
+_$RelationshipContentsDTOImpl _$$RelationshipContentsDTOImplFromJson(
+        Map json) =>
+    _$RelationshipContentsDTOImpl(
       href: json['href'] as String?,
       data: (json['data'] as List<dynamic>)
           .map((e) =>
@@ -85,16 +88,16 @@ _$_RelationshipContentsDTO _$$_RelationshipContentsDTOFromJson(Map json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_RelationshipContentsDTOToJson(
-        _$_RelationshipContentsDTO instance) =>
+Map<String, dynamic> _$$RelationshipContentsDTOImplToJson(
+        _$RelationshipContentsDTOImpl instance) =>
     <String, dynamic>{
       'href': instance.href,
       'data': instance.data.map(const ResourceDTOConverter().toJson).toList(),
     };
 
-_$_RecommendationAttributesDTO _$$_RecommendationAttributesDTOFromJson(
+_$RecommendationAttributesDTOImpl _$$RecommendationAttributesDTOImplFromJson(
         Map json) =>
-    _$_RecommendationAttributesDTO(
+    _$RecommendationAttributesDTOImpl(
       isGroupRecommendation: json['isGroupRecommendation'] as bool?,
       nextUpdateDate: json['nextUpdateDate'] as String?,
       resourceTypes: (json['resourceTypes'] as List<dynamic>?)
@@ -105,8 +108,8 @@ _$_RecommendationAttributesDTO _$$_RecommendationAttributesDTOFromJson(
       kind: json['kind'] as String?,
     );
 
-Map<String, dynamic> _$$_RecommendationAttributesDTOToJson(
-        _$_RecommendationAttributesDTO instance) =>
+Map<String, dynamic> _$$RecommendationAttributesDTOImplToJson(
+        _$RecommendationAttributesDTOImpl instance) =>
     <String, dynamic>{
       'isGroupRecommendation': instance.isGroupRecommendation,
       'nextUpdateDate': instance.nextUpdateDate,
@@ -115,12 +118,13 @@ Map<String, dynamic> _$$_RecommendationAttributesDTOToJson(
       'kind': instance.kind,
     };
 
-_$_ResourceTitleDTO _$$_ResourceTitleDTOFromJson(Map json) =>
-    _$_ResourceTitleDTO(
+_$ResourceTitleDTOImpl _$$ResourceTitleDTOImplFromJson(Map json) =>
+    _$ResourceTitleDTOImpl(
       stringForDisplay: json['stringForDisplay'] as String,
     );
 
-Map<String, dynamic> _$$_ResourceTitleDTOToJson(_$_ResourceTitleDTO instance) =>
+Map<String, dynamic> _$$ResourceTitleDTOImplToJson(
+        _$ResourceTitleDTOImpl instance) =>
     <String, dynamic>{
       'stringForDisplay': instance.stringForDisplay,
     };

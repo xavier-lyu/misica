@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'resource.dart';
 
@@ -12,7 +12,7 @@ part of 'resource.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 Resource _$ResourceFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
@@ -45,6 +45,7 @@ Resource _$ResourceFromJson(Map<String, dynamic> json) {
 mixin _$Resource {
   String get id => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
+  Object? get attributes => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>(
     TResult Function(String id, String type, ResourceAttributes? attributes)
@@ -53,34 +54,42 @@ mixin _$Resource {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         artist,
     required TResult Function(
             String id,
             String type,
             MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)
         musicVideo,
     required TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         playlist,
     required TResult Function(
             String id,
             String type,
             SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)
         song,
     required TResult Function(
             String id, String type, StationAttributes? attributes)
@@ -89,7 +98,8 @@ mixin _$Resource {
             String id,
             String type,
             CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)
         curator,
     required TResult Function(
             String id, String type, GenreAttributes? attributes)
@@ -104,33 +114,51 @@ mixin _$Resource {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult? Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult? Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -144,33 +172,51 @@ mixin _$Resource {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -261,10 +307,11 @@ class _$ResourceCopyWithImpl<$Res, $Val extends Resource>
 }
 
 /// @nodoc
-abstract class _$$ResourceRawCopyWith<$Res> implements $ResourceCopyWith<$Res> {
-  factory _$$ResourceRawCopyWith(
-          _$ResourceRaw value, $Res Function(_$ResourceRaw) then) =
-      __$$ResourceRawCopyWithImpl<$Res>;
+abstract class _$$ResourceRawImplCopyWith<$Res>
+    implements $ResourceCopyWith<$Res> {
+  factory _$$ResourceRawImplCopyWith(
+          _$ResourceRawImpl value, $Res Function(_$ResourceRawImpl) then) =
+      __$$ResourceRawImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, String type, ResourceAttributes? attributes});
@@ -273,11 +320,11 @@ abstract class _$$ResourceRawCopyWith<$Res> implements $ResourceCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$ResourceRawCopyWithImpl<$Res>
-    extends _$ResourceCopyWithImpl<$Res, _$ResourceRaw>
-    implements _$$ResourceRawCopyWith<$Res> {
-  __$$ResourceRawCopyWithImpl(
-      _$ResourceRaw _value, $Res Function(_$ResourceRaw) _then)
+class __$$ResourceRawImplCopyWithImpl<$Res>
+    extends _$ResourceCopyWithImpl<$Res, _$ResourceRawImpl>
+    implements _$$ResourceRawImplCopyWith<$Res> {
+  __$$ResourceRawImplCopyWithImpl(
+      _$ResourceRawImpl _value, $Res Function(_$ResourceRawImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -287,7 +334,7 @@ class __$$ResourceRawCopyWithImpl<$Res>
     Object? type = null,
     Object? attributes = freezed,
   }) {
-    return _then(_$ResourceRaw(
+    return _then(_$ResourceRawImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -318,8 +365,8 @@ class __$$ResourceRawCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$ResourceRaw extends ResourceRaw {
-  const _$ResourceRaw(
+class _$ResourceRawImpl extends ResourceRaw {
+  const _$ResourceRawImpl(
       {required this.id,
       required this.type,
       required this.attributes,
@@ -327,8 +374,8 @@ class _$ResourceRaw extends ResourceRaw {
       : $type = $type ?? 'default',
         super._();
 
-  factory _$ResourceRaw.fromJson(Map<String, dynamic> json) =>
-      _$$ResourceRawFromJson(json);
+  factory _$ResourceRawImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ResourceRawImplFromJson(json);
 
   @override
   final String id;
@@ -346,10 +393,10 @@ class _$ResourceRaw extends ResourceRaw {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ResourceRaw &&
+            other is _$ResourceRawImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.attributes, attributes) ||
@@ -363,8 +410,8 @@ class _$ResourceRaw extends ResourceRaw {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ResourceRawCopyWith<_$ResourceRaw> get copyWith =>
-      __$$ResourceRawCopyWithImpl<_$ResourceRaw>(this, _$identity);
+  _$$ResourceRawImplCopyWith<_$ResourceRawImpl> get copyWith =>
+      __$$ResourceRawImplCopyWithImpl<_$ResourceRawImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -375,34 +422,42 @@ class _$ResourceRaw extends ResourceRaw {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         artist,
     required TResult Function(
             String id,
             String type,
             MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)
         musicVideo,
     required TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         playlist,
     required TResult Function(
             String id,
             String type,
             SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)
         song,
     required TResult Function(
             String id, String type, StationAttributes? attributes)
@@ -411,7 +466,8 @@ class _$ResourceRaw extends ResourceRaw {
             String id,
             String type,
             CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)
         curator,
     required TResult Function(
             String id, String type, GenreAttributes? attributes)
@@ -429,33 +485,51 @@ class _$ResourceRaw extends ResourceRaw {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult? Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult? Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -472,33 +546,51 @@ class _$ResourceRaw extends ResourceRaw {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -564,7 +656,7 @@ class _$ResourceRaw extends ResourceRaw {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ResourceRawToJson(
+    return _$$ResourceRawImplToJson(
       this,
     );
   }
@@ -574,44 +666,50 @@ abstract class ResourceRaw extends Resource {
   const factory ResourceRaw(
       {required final String id,
       required final String type,
-      required final ResourceAttributes? attributes}) = _$ResourceRaw;
+      required final ResourceAttributes? attributes}) = _$ResourceRawImpl;
   const ResourceRaw._() : super._();
 
   factory ResourceRaw.fromJson(Map<String, dynamic> json) =
-      _$ResourceRaw.fromJson;
+      _$ResourceRawImpl.fromJson;
 
   @override
   String get id;
   @override
   String get type;
+  @override
   ResourceAttributes? get attributes;
   @override
   @JsonKey(ignore: true)
-  _$$ResourceRawCopyWith<_$ResourceRaw> get copyWith =>
+  _$$ResourceRawImplCopyWith<_$ResourceRawImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$AlbumCopyWith<$Res> implements $ResourceCopyWith<$Res> {
-  factory _$$AlbumCopyWith(_$Album value, $Res Function(_$Album) then) =
-      __$$AlbumCopyWithImpl<$Res>;
+abstract class _$$AlbumImplCopyWith<$Res> implements $ResourceCopyWith<$Res> {
+  factory _$$AlbumImplCopyWith(
+          _$AlbumImpl value, $Res Function(_$AlbumImpl) then) =
+      __$$AlbumImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String id,
       String type,
       AlbumAttributes? attributes,
-      @JsonKey(ignore: true) AlbumRelationships? relationships,
-      @JsonKey(ignore: true) Map<String, ResourceView>? views});
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      AlbumRelationships? relationships,
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      Map<String, ResourceView>? views});
 
   $AlbumAttributesCopyWith<$Res>? get attributes;
   $AlbumRelationshipsCopyWith<$Res>? get relationships;
 }
 
 /// @nodoc
-class __$$AlbumCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res, _$Album>
-    implements _$$AlbumCopyWith<$Res> {
-  __$$AlbumCopyWithImpl(_$Album _value, $Res Function(_$Album) _then)
+class __$$AlbumImplCopyWithImpl<$Res>
+    extends _$ResourceCopyWithImpl<$Res, _$AlbumImpl>
+    implements _$$AlbumImplCopyWith<$Res> {
+  __$$AlbumImplCopyWithImpl(
+      _$AlbumImpl _value, $Res Function(_$AlbumImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -623,7 +721,7 @@ class __$$AlbumCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res, _$Album>
     Object? relationships = freezed,
     Object? views = freezed,
   }) {
-    return _then(_$Album(
+    return _then(_$AlbumImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -674,19 +772,21 @@ class __$$AlbumCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res, _$Album>
 
 /// @nodoc
 @JsonSerializable()
-class _$Album extends Album {
-  const _$Album(
+class _$AlbumImpl extends Album {
+  const _$AlbumImpl(
       {required this.id,
       required this.type,
       required this.attributes,
-      @JsonKey(ignore: true) this.relationships,
-      @JsonKey(ignore: true) final Map<String, ResourceView>? views,
+      @JsonKey(includeFromJson: false, includeToJson: false) this.relationships,
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      final Map<String, ResourceView>? views,
       final String? $type})
       : _views = views,
         $type = $type ?? 'album',
         super._();
 
-  factory _$Album.fromJson(Map<String, dynamic> json) => _$$AlbumFromJson(json);
+  factory _$AlbumImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AlbumImplFromJson(json);
 
   @override
   final String id;
@@ -695,14 +795,15 @@ class _$Album extends Album {
   @override
   final AlbumAttributes? attributes;
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   final AlbumRelationships? relationships;
   final Map<String, ResourceView>? _views;
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   Map<String, ResourceView>? get views {
     final value = _views;
     if (value == null) return null;
+    if (_views is EqualUnmodifiableMapView) return _views;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
@@ -716,10 +817,10 @@ class _$Album extends Album {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$Album &&
+            other is _$AlbumImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.attributes, attributes) ||
@@ -737,8 +838,8 @@ class _$Album extends Album {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$AlbumCopyWith<_$Album> get copyWith =>
-      __$$AlbumCopyWithImpl<_$Album>(this, _$identity);
+  _$$AlbumImplCopyWith<_$AlbumImpl> get copyWith =>
+      __$$AlbumImplCopyWithImpl<_$AlbumImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -749,34 +850,42 @@ class _$Album extends Album {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         artist,
     required TResult Function(
             String id,
             String type,
             MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)
         musicVideo,
     required TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         playlist,
     required TResult Function(
             String id,
             String type,
             SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)
         song,
     required TResult Function(
             String id, String type, StationAttributes? attributes)
@@ -785,7 +894,8 @@ class _$Album extends Album {
             String id,
             String type,
             CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)
         curator,
     required TResult Function(
             String id, String type, GenreAttributes? attributes)
@@ -803,33 +913,51 @@ class _$Album extends Album {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult? Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult? Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -846,33 +974,51 @@ class _$Album extends Album {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -938,7 +1084,7 @@ class _$Album extends Album {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AlbumToJson(
+    return _$$AlbumImplToJson(
       this,
     );
   }
@@ -949,48 +1095,56 @@ abstract class Album extends Resource {
       {required final String id,
       required final String type,
       required final AlbumAttributes? attributes,
-      @JsonKey(ignore: true) final AlbumRelationships? relationships,
-      @JsonKey(ignore: true) final Map<String, ResourceView>? views}) = _$Album;
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      final AlbumRelationships? relationships,
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      final Map<String, ResourceView>? views}) = _$AlbumImpl;
   const Album._() : super._();
 
-  factory Album.fromJson(Map<String, dynamic> json) = _$Album.fromJson;
+  factory Album.fromJson(Map<String, dynamic> json) = _$AlbumImpl.fromJson;
 
   @override
   String get id;
   @override
   String get type;
+  @override
   AlbumAttributes? get attributes;
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   AlbumRelationships? get relationships;
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   Map<String, ResourceView>? get views;
   @override
   @JsonKey(ignore: true)
-  _$$AlbumCopyWith<_$Album> get copyWith => throw _privateConstructorUsedError;
+  _$$AlbumImplCopyWith<_$AlbumImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$ArtistCopyWith<$Res> implements $ResourceCopyWith<$Res> {
-  factory _$$ArtistCopyWith(_$Artist value, $Res Function(_$Artist) then) =
-      __$$ArtistCopyWithImpl<$Res>;
+abstract class _$$ArtistImplCopyWith<$Res> implements $ResourceCopyWith<$Res> {
+  factory _$$ArtistImplCopyWith(
+          _$ArtistImpl value, $Res Function(_$ArtistImpl) then) =
+      __$$ArtistImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String id,
       String type,
       ArtistAttributes? attributes,
-      @JsonKey(ignore: true) ArtistRelationships? relationships,
-      @JsonKey(ignore: true) Map<String, ResourceView>? views});
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      ArtistRelationships? relationships,
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      Map<String, ResourceView>? views});
 
   $ArtistAttributesCopyWith<$Res>? get attributes;
   $ArtistRelationshipsCopyWith<$Res>? get relationships;
 }
 
 /// @nodoc
-class __$$ArtistCopyWithImpl<$Res>
-    extends _$ResourceCopyWithImpl<$Res, _$Artist>
-    implements _$$ArtistCopyWith<$Res> {
-  __$$ArtistCopyWithImpl(_$Artist _value, $Res Function(_$Artist) _then)
+class __$$ArtistImplCopyWithImpl<$Res>
+    extends _$ResourceCopyWithImpl<$Res, _$ArtistImpl>
+    implements _$$ArtistImplCopyWith<$Res> {
+  __$$ArtistImplCopyWithImpl(
+      _$ArtistImpl _value, $Res Function(_$ArtistImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1002,7 +1156,7 @@ class __$$ArtistCopyWithImpl<$Res>
     Object? relationships = freezed,
     Object? views = freezed,
   }) {
-    return _then(_$Artist(
+    return _then(_$ArtistImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1053,20 +1207,21 @@ class __$$ArtistCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$Artist extends Artist {
-  const _$Artist(
+class _$ArtistImpl extends Artist {
+  const _$ArtistImpl(
       {required this.id,
       required this.type,
       required this.attributes,
-      @JsonKey(ignore: true) this.relationships,
-      @JsonKey(ignore: true) final Map<String, ResourceView>? views,
+      @JsonKey(includeFromJson: false, includeToJson: false) this.relationships,
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      final Map<String, ResourceView>? views,
       final String? $type})
       : _views = views,
         $type = $type ?? 'artist',
         super._();
 
-  factory _$Artist.fromJson(Map<String, dynamic> json) =>
-      _$$ArtistFromJson(json);
+  factory _$ArtistImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ArtistImplFromJson(json);
 
   @override
   final String id;
@@ -1075,14 +1230,15 @@ class _$Artist extends Artist {
   @override
   final ArtistAttributes? attributes;
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   final ArtistRelationships? relationships;
   final Map<String, ResourceView>? _views;
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   Map<String, ResourceView>? get views {
     final value = _views;
     if (value == null) return null;
+    if (_views is EqualUnmodifiableMapView) return _views;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
@@ -1096,10 +1252,10 @@ class _$Artist extends Artist {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$Artist &&
+            other is _$ArtistImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.attributes, attributes) ||
@@ -1117,8 +1273,8 @@ class _$Artist extends Artist {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ArtistCopyWith<_$Artist> get copyWith =>
-      __$$ArtistCopyWithImpl<_$Artist>(this, _$identity);
+  _$$ArtistImplCopyWith<_$ArtistImpl> get copyWith =>
+      __$$ArtistImplCopyWithImpl<_$ArtistImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1129,34 +1285,42 @@ class _$Artist extends Artist {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         artist,
     required TResult Function(
             String id,
             String type,
             MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)
         musicVideo,
     required TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         playlist,
     required TResult Function(
             String id,
             String type,
             SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)
         song,
     required TResult Function(
             String id, String type, StationAttributes? attributes)
@@ -1165,7 +1329,8 @@ class _$Artist extends Artist {
             String id,
             String type,
             CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)
         curator,
     required TResult Function(
             String id, String type, GenreAttributes? attributes)
@@ -1183,33 +1348,51 @@ class _$Artist extends Artist {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult? Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult? Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -1226,33 +1409,51 @@ class _$Artist extends Artist {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -1318,7 +1519,7 @@ class _$Artist extends Artist {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ArtistToJson(
+    return _$$ArtistImplToJson(
       this,
     );
   }
@@ -1326,54 +1527,58 @@ class _$Artist extends Artist {
 
 abstract class Artist extends Resource {
   const factory Artist(
-          {required final String id,
-          required final String type,
-          required final ArtistAttributes? attributes,
-          @JsonKey(ignore: true) final ArtistRelationships? relationships,
-          @JsonKey(ignore: true) final Map<String, ResourceView>? views}) =
-      _$Artist;
+      {required final String id,
+      required final String type,
+      required final ArtistAttributes? attributes,
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      final ArtistRelationships? relationships,
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      final Map<String, ResourceView>? views}) = _$ArtistImpl;
   const Artist._() : super._();
 
-  factory Artist.fromJson(Map<String, dynamic> json) = _$Artist.fromJson;
+  factory Artist.fromJson(Map<String, dynamic> json) = _$ArtistImpl.fromJson;
 
   @override
   String get id;
   @override
   String get type;
+  @override
   ArtistAttributes? get attributes;
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   ArtistRelationships? get relationships;
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   Map<String, ResourceView>? get views;
   @override
   @JsonKey(ignore: true)
-  _$$ArtistCopyWith<_$Artist> get copyWith =>
+  _$$ArtistImplCopyWith<_$ArtistImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$MusicVideoCopyWith<$Res> implements $ResourceCopyWith<$Res> {
-  factory _$$MusicVideoCopyWith(
-          _$MusicVideo value, $Res Function(_$MusicVideo) then) =
-      __$$MusicVideoCopyWithImpl<$Res>;
+abstract class _$$MusicVideoImplCopyWith<$Res>
+    implements $ResourceCopyWith<$Res> {
+  factory _$$MusicVideoImplCopyWith(
+          _$MusicVideoImpl value, $Res Function(_$MusicVideoImpl) then) =
+      __$$MusicVideoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String id,
       String type,
       MusicVideoAttributes? attributes,
-      @JsonKey(ignore: true) MusicVideoRelationships? relationships});
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      MusicVideoRelationships? relationships});
 
   $MusicVideoAttributesCopyWith<$Res>? get attributes;
   $MusicVideoRelationshipsCopyWith<$Res>? get relationships;
 }
 
 /// @nodoc
-class __$$MusicVideoCopyWithImpl<$Res>
-    extends _$ResourceCopyWithImpl<$Res, _$MusicVideo>
-    implements _$$MusicVideoCopyWith<$Res> {
-  __$$MusicVideoCopyWithImpl(
-      _$MusicVideo _value, $Res Function(_$MusicVideo) _then)
+class __$$MusicVideoImplCopyWithImpl<$Res>
+    extends _$ResourceCopyWithImpl<$Res, _$MusicVideoImpl>
+    implements _$$MusicVideoImplCopyWith<$Res> {
+  __$$MusicVideoImplCopyWithImpl(
+      _$MusicVideoImpl _value, $Res Function(_$MusicVideoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1384,7 +1589,7 @@ class __$$MusicVideoCopyWithImpl<$Res>
     Object? attributes = freezed,
     Object? relationships = freezed,
   }) {
-    return _then(_$MusicVideo(
+    return _then(_$MusicVideoImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1432,18 +1637,18 @@ class __$$MusicVideoCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$MusicVideo extends MusicVideo {
-  const _$MusicVideo(
+class _$MusicVideoImpl extends MusicVideo {
+  const _$MusicVideoImpl(
       {required this.id,
       required this.type,
       required this.attributes,
-      @JsonKey(ignore: true) this.relationships,
+      @JsonKey(includeFromJson: false, includeToJson: false) this.relationships,
       final String? $type})
       : $type = $type ?? 'musicVideo',
         super._();
 
-  factory _$MusicVideo.fromJson(Map<String, dynamic> json) =>
-      _$$MusicVideoFromJson(json);
+  factory _$MusicVideoImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MusicVideoImplFromJson(json);
 
   @override
   final String id;
@@ -1452,7 +1657,7 @@ class _$MusicVideo extends MusicVideo {
   @override
   final MusicVideoAttributes? attributes;
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   final MusicVideoRelationships? relationships;
 
   @JsonKey(name: 'runtimeType')
@@ -1464,10 +1669,10 @@ class _$MusicVideo extends MusicVideo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MusicVideo &&
+            other is _$MusicVideoImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.attributes, attributes) ||
@@ -1484,8 +1689,8 @@ class _$MusicVideo extends MusicVideo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$MusicVideoCopyWith<_$MusicVideo> get copyWith =>
-      __$$MusicVideoCopyWithImpl<_$MusicVideo>(this, _$identity);
+  _$$MusicVideoImplCopyWith<_$MusicVideoImpl> get copyWith =>
+      __$$MusicVideoImplCopyWithImpl<_$MusicVideoImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1496,34 +1701,42 @@ class _$MusicVideo extends MusicVideo {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         artist,
     required TResult Function(
             String id,
             String type,
             MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)
         musicVideo,
     required TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         playlist,
     required TResult Function(
             String id,
             String type,
             SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)
         song,
     required TResult Function(
             String id, String type, StationAttributes? attributes)
@@ -1532,7 +1745,8 @@ class _$MusicVideo extends MusicVideo {
             String id,
             String type,
             CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)
         curator,
     required TResult Function(
             String id, String type, GenreAttributes? attributes)
@@ -1550,33 +1764,51 @@ class _$MusicVideo extends MusicVideo {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult? Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult? Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -1593,33 +1825,51 @@ class _$MusicVideo extends MusicVideo {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -1685,7 +1935,7 @@ class _$MusicVideo extends MusicVideo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MusicVideoToJson(
+    return _$$MusicVideoImplToJson(
       this,
     );
   }
@@ -1696,49 +1946,54 @@ abstract class MusicVideo extends Resource {
       {required final String id,
       required final String type,
       required final MusicVideoAttributes? attributes,
-      @JsonKey(ignore: true)
-          final MusicVideoRelationships? relationships}) = _$MusicVideo;
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      final MusicVideoRelationships? relationships}) = _$MusicVideoImpl;
   const MusicVideo._() : super._();
 
   factory MusicVideo.fromJson(Map<String, dynamic> json) =
-      _$MusicVideo.fromJson;
+      _$MusicVideoImpl.fromJson;
 
   @override
   String get id;
   @override
   String get type;
+  @override
   MusicVideoAttributes? get attributes;
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   MusicVideoRelationships? get relationships;
   @override
   @JsonKey(ignore: true)
-  _$$MusicVideoCopyWith<_$MusicVideo> get copyWith =>
+  _$$MusicVideoImplCopyWith<_$MusicVideoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$PlaylistCopyWith<$Res> implements $ResourceCopyWith<$Res> {
-  factory _$$PlaylistCopyWith(
-          _$Playlist value, $Res Function(_$Playlist) then) =
-      __$$PlaylistCopyWithImpl<$Res>;
+abstract class _$$PlaylistImplCopyWith<$Res>
+    implements $ResourceCopyWith<$Res> {
+  factory _$$PlaylistImplCopyWith(
+          _$PlaylistImpl value, $Res Function(_$PlaylistImpl) then) =
+      __$$PlaylistImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String id,
       String type,
       PlaylistAttributes? attributes,
-      @JsonKey(ignore: true) PlaylistRelationships? relationships,
-      @JsonKey(ignore: true) Map<String, ResourceView>? views});
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      PlaylistRelationships? relationships,
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      Map<String, ResourceView>? views});
 
   $PlaylistAttributesCopyWith<$Res>? get attributes;
   $PlaylistRelationshipsCopyWith<$Res>? get relationships;
 }
 
 /// @nodoc
-class __$$PlaylistCopyWithImpl<$Res>
-    extends _$ResourceCopyWithImpl<$Res, _$Playlist>
-    implements _$$PlaylistCopyWith<$Res> {
-  __$$PlaylistCopyWithImpl(_$Playlist _value, $Res Function(_$Playlist) _then)
+class __$$PlaylistImplCopyWithImpl<$Res>
+    extends _$ResourceCopyWithImpl<$Res, _$PlaylistImpl>
+    implements _$$PlaylistImplCopyWith<$Res> {
+  __$$PlaylistImplCopyWithImpl(
+      _$PlaylistImpl _value, $Res Function(_$PlaylistImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1750,7 +2005,7 @@ class __$$PlaylistCopyWithImpl<$Res>
     Object? relationships = freezed,
     Object? views = freezed,
   }) {
-    return _then(_$Playlist(
+    return _then(_$PlaylistImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1801,20 +2056,21 @@ class __$$PlaylistCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$Playlist extends Playlist {
-  const _$Playlist(
+class _$PlaylistImpl extends Playlist {
+  const _$PlaylistImpl(
       {required this.id,
       required this.type,
       required this.attributes,
-      @JsonKey(ignore: true) this.relationships,
-      @JsonKey(ignore: true) final Map<String, ResourceView>? views,
+      @JsonKey(includeFromJson: false, includeToJson: false) this.relationships,
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      final Map<String, ResourceView>? views,
       final String? $type})
       : _views = views,
         $type = $type ?? 'playlist',
         super._();
 
-  factory _$Playlist.fromJson(Map<String, dynamic> json) =>
-      _$$PlaylistFromJson(json);
+  factory _$PlaylistImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PlaylistImplFromJson(json);
 
   @override
   final String id;
@@ -1823,14 +2079,15 @@ class _$Playlist extends Playlist {
   @override
   final PlaylistAttributes? attributes;
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   final PlaylistRelationships? relationships;
   final Map<String, ResourceView>? _views;
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   Map<String, ResourceView>? get views {
     final value = _views;
     if (value == null) return null;
+    if (_views is EqualUnmodifiableMapView) return _views;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
@@ -1844,10 +2101,10 @@ class _$Playlist extends Playlist {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$Playlist &&
+            other is _$PlaylistImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.attributes, attributes) ||
@@ -1865,8 +2122,8 @@ class _$Playlist extends Playlist {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PlaylistCopyWith<_$Playlist> get copyWith =>
-      __$$PlaylistCopyWithImpl<_$Playlist>(this, _$identity);
+  _$$PlaylistImplCopyWith<_$PlaylistImpl> get copyWith =>
+      __$$PlaylistImplCopyWithImpl<_$PlaylistImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1877,34 +2134,42 @@ class _$Playlist extends Playlist {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         artist,
     required TResult Function(
             String id,
             String type,
             MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)
         musicVideo,
     required TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         playlist,
     required TResult Function(
             String id,
             String type,
             SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)
         song,
     required TResult Function(
             String id, String type, StationAttributes? attributes)
@@ -1913,7 +2178,8 @@ class _$Playlist extends Playlist {
             String id,
             String type,
             CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)
         curator,
     required TResult Function(
             String id, String type, GenreAttributes? attributes)
@@ -1931,33 +2197,51 @@ class _$Playlist extends Playlist {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult? Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult? Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -1974,33 +2258,51 @@ class _$Playlist extends Playlist {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -2066,7 +2368,7 @@ class _$Playlist extends Playlist {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PlaylistToJson(
+    return _$$PlaylistImplToJson(
       this,
     );
   }
@@ -2074,51 +2376,57 @@ class _$Playlist extends Playlist {
 
 abstract class Playlist extends Resource {
   const factory Playlist(
-          {required final String id,
-          required final String type,
-          required final PlaylistAttributes? attributes,
-          @JsonKey(ignore: true) final PlaylistRelationships? relationships,
-          @JsonKey(ignore: true) final Map<String, ResourceView>? views}) =
-      _$Playlist;
+      {required final String id,
+      required final String type,
+      required final PlaylistAttributes? attributes,
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      final PlaylistRelationships? relationships,
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      final Map<String, ResourceView>? views}) = _$PlaylistImpl;
   const Playlist._() : super._();
 
-  factory Playlist.fromJson(Map<String, dynamic> json) = _$Playlist.fromJson;
+  factory Playlist.fromJson(Map<String, dynamic> json) =
+      _$PlaylistImpl.fromJson;
 
   @override
   String get id;
   @override
   String get type;
+  @override
   PlaylistAttributes? get attributes;
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   PlaylistRelationships? get relationships;
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   Map<String, ResourceView>? get views;
   @override
   @JsonKey(ignore: true)
-  _$$PlaylistCopyWith<_$Playlist> get copyWith =>
+  _$$PlaylistImplCopyWith<_$PlaylistImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SongCopyWith<$Res> implements $ResourceCopyWith<$Res> {
-  factory _$$SongCopyWith(_$Song value, $Res Function(_$Song) then) =
-      __$$SongCopyWithImpl<$Res>;
+abstract class _$$SongImplCopyWith<$Res> implements $ResourceCopyWith<$Res> {
+  factory _$$SongImplCopyWith(
+          _$SongImpl value, $Res Function(_$SongImpl) then) =
+      __$$SongImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String id,
       String type,
       SongAttributes? attributes,
-      @JsonKey(ignore: true) SongRelationships? relationships});
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      SongRelationships? relationships});
 
   $SongAttributesCopyWith<$Res>? get attributes;
   $SongRelationshipsCopyWith<$Res>? get relationships;
 }
 
 /// @nodoc
-class __$$SongCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res, _$Song>
-    implements _$$SongCopyWith<$Res> {
-  __$$SongCopyWithImpl(_$Song _value, $Res Function(_$Song) _then)
+class __$$SongImplCopyWithImpl<$Res>
+    extends _$ResourceCopyWithImpl<$Res, _$SongImpl>
+    implements _$$SongImplCopyWith<$Res> {
+  __$$SongImplCopyWithImpl(_$SongImpl _value, $Res Function(_$SongImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2129,7 +2437,7 @@ class __$$SongCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res, _$Song>
     Object? attributes = freezed,
     Object? relationships = freezed,
   }) {
-    return _then(_$Song(
+    return _then(_$SongImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2176,17 +2484,18 @@ class __$$SongCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res, _$Song>
 
 /// @nodoc
 @JsonSerializable()
-class _$Song extends Song {
-  const _$Song(
+class _$SongImpl extends Song {
+  const _$SongImpl(
       {required this.id,
       required this.type,
       required this.attributes,
-      @JsonKey(ignore: true) this.relationships,
+      @JsonKey(includeFromJson: false, includeToJson: false) this.relationships,
       final String? $type})
       : $type = $type ?? 'song',
         super._();
 
-  factory _$Song.fromJson(Map<String, dynamic> json) => _$$SongFromJson(json);
+  factory _$SongImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SongImplFromJson(json);
 
   @override
   final String id;
@@ -2195,7 +2504,7 @@ class _$Song extends Song {
   @override
   final SongAttributes? attributes;
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   final SongRelationships? relationships;
 
   @JsonKey(name: 'runtimeType')
@@ -2207,10 +2516,10 @@ class _$Song extends Song {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$Song &&
+            other is _$SongImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.attributes, attributes) ||
@@ -2227,8 +2536,8 @@ class _$Song extends Song {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$SongCopyWith<_$Song> get copyWith =>
-      __$$SongCopyWithImpl<_$Song>(this, _$identity);
+  _$$SongImplCopyWith<_$SongImpl> get copyWith =>
+      __$$SongImplCopyWithImpl<_$SongImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2239,34 +2548,42 @@ class _$Song extends Song {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         artist,
     required TResult Function(
             String id,
             String type,
             MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)
         musicVideo,
     required TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         playlist,
     required TResult Function(
             String id,
             String type,
             SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)
         song,
     required TResult Function(
             String id, String type, StationAttributes? attributes)
@@ -2275,7 +2592,8 @@ class _$Song extends Song {
             String id,
             String type,
             CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)
         curator,
     required TResult Function(
             String id, String type, GenreAttributes? attributes)
@@ -2293,33 +2611,51 @@ class _$Song extends Song {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult? Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult? Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -2336,33 +2672,51 @@ class _$Song extends Song {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -2428,7 +2782,7 @@ class _$Song extends Song {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SongToJson(
+    return _$$SongImplToJson(
       this,
     );
   }
@@ -2439,27 +2793,31 @@ abstract class Song extends Resource {
       {required final String id,
       required final String type,
       required final SongAttributes? attributes,
-      @JsonKey(ignore: true) final SongRelationships? relationships}) = _$Song;
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      final SongRelationships? relationships}) = _$SongImpl;
   const Song._() : super._();
 
-  factory Song.fromJson(Map<String, dynamic> json) = _$Song.fromJson;
+  factory Song.fromJson(Map<String, dynamic> json) = _$SongImpl.fromJson;
 
   @override
   String get id;
   @override
   String get type;
+  @override
   SongAttributes? get attributes;
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   SongRelationships? get relationships;
   @override
   @JsonKey(ignore: true)
-  _$$SongCopyWith<_$Song> get copyWith => throw _privateConstructorUsedError;
+  _$$SongImplCopyWith<_$SongImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$StationCopyWith<$Res> implements $ResourceCopyWith<$Res> {
-  factory _$$StationCopyWith(_$Station value, $Res Function(_$Station) then) =
-      __$$StationCopyWithImpl<$Res>;
+abstract class _$$StationImplCopyWith<$Res> implements $ResourceCopyWith<$Res> {
+  factory _$$StationImplCopyWith(
+          _$StationImpl value, $Res Function(_$StationImpl) then) =
+      __$$StationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, String type, StationAttributes? attributes});
@@ -2468,10 +2826,11 @@ abstract class _$$StationCopyWith<$Res> implements $ResourceCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$StationCopyWithImpl<$Res>
-    extends _$ResourceCopyWithImpl<$Res, _$Station>
-    implements _$$StationCopyWith<$Res> {
-  __$$StationCopyWithImpl(_$Station _value, $Res Function(_$Station) _then)
+class __$$StationImplCopyWithImpl<$Res>
+    extends _$ResourceCopyWithImpl<$Res, _$StationImpl>
+    implements _$$StationImplCopyWith<$Res> {
+  __$$StationImplCopyWithImpl(
+      _$StationImpl _value, $Res Function(_$StationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2481,7 +2840,7 @@ class __$$StationCopyWithImpl<$Res>
     Object? type = null,
     Object? attributes = freezed,
   }) {
-    return _then(_$Station(
+    return _then(_$StationImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2512,8 +2871,8 @@ class __$$StationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$Station extends Station {
-  const _$Station(
+class _$StationImpl extends Station {
+  const _$StationImpl(
       {required this.id,
       required this.type,
       required this.attributes,
@@ -2521,8 +2880,8 @@ class _$Station extends Station {
       : $type = $type ?? 'station',
         super._();
 
-  factory _$Station.fromJson(Map<String, dynamic> json) =>
-      _$$StationFromJson(json);
+  factory _$StationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$StationImplFromJson(json);
 
   @override
   final String id;
@@ -2540,10 +2899,10 @@ class _$Station extends Station {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$Station &&
+            other is _$StationImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.attributes, attributes) ||
@@ -2557,8 +2916,8 @@ class _$Station extends Station {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$StationCopyWith<_$Station> get copyWith =>
-      __$$StationCopyWithImpl<_$Station>(this, _$identity);
+  _$$StationImplCopyWith<_$StationImpl> get copyWith =>
+      __$$StationImplCopyWithImpl<_$StationImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2569,34 +2928,42 @@ class _$Station extends Station {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         artist,
     required TResult Function(
             String id,
             String type,
             MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)
         musicVideo,
     required TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         playlist,
     required TResult Function(
             String id,
             String type,
             SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)
         song,
     required TResult Function(
             String id, String type, StationAttributes? attributes)
@@ -2605,7 +2972,8 @@ class _$Station extends Station {
             String id,
             String type,
             CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)
         curator,
     required TResult Function(
             String id, String type, GenreAttributes? attributes)
@@ -2623,33 +2991,51 @@ class _$Station extends Station {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult? Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult? Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -2666,33 +3052,51 @@ class _$Station extends Station {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -2758,7 +3162,7 @@ class _$Station extends Station {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$StationToJson(
+    return _$$StationImplToJson(
       this,
     );
   }
@@ -2768,43 +3172,47 @@ abstract class Station extends Resource {
   const factory Station(
       {required final String id,
       required final String type,
-      required final StationAttributes? attributes}) = _$Station;
+      required final StationAttributes? attributes}) = _$StationImpl;
   const Station._() : super._();
 
-  factory Station.fromJson(Map<String, dynamic> json) = _$Station.fromJson;
+  factory Station.fromJson(Map<String, dynamic> json) = _$StationImpl.fromJson;
 
   @override
   String get id;
   @override
   String get type;
+  @override
   StationAttributes? get attributes;
   @override
   @JsonKey(ignore: true)
-  _$$StationCopyWith<_$Station> get copyWith =>
+  _$$StationImplCopyWith<_$StationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$CuratorCopyWith<$Res> implements $ResourceCopyWith<$Res> {
-  factory _$$CuratorCopyWith(_$Curator value, $Res Function(_$Curator) then) =
-      __$$CuratorCopyWithImpl<$Res>;
+abstract class _$$CuratorImplCopyWith<$Res> implements $ResourceCopyWith<$Res> {
+  factory _$$CuratorImplCopyWith(
+          _$CuratorImpl value, $Res Function(_$CuratorImpl) then) =
+      __$$CuratorImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {String id,
       String type,
       CuratorAttributes? attributes,
-      @JsonKey(ignore: true) CuratorRelationships? relationships});
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      CuratorRelationships? relationships});
 
   $CuratorAttributesCopyWith<$Res>? get attributes;
   $CuratorRelationshipsCopyWith<$Res>? get relationships;
 }
 
 /// @nodoc
-class __$$CuratorCopyWithImpl<$Res>
-    extends _$ResourceCopyWithImpl<$Res, _$Curator>
-    implements _$$CuratorCopyWith<$Res> {
-  __$$CuratorCopyWithImpl(_$Curator _value, $Res Function(_$Curator) _then)
+class __$$CuratorImplCopyWithImpl<$Res>
+    extends _$ResourceCopyWithImpl<$Res, _$CuratorImpl>
+    implements _$$CuratorImplCopyWith<$Res> {
+  __$$CuratorImplCopyWithImpl(
+      _$CuratorImpl _value, $Res Function(_$CuratorImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2815,7 +3223,7 @@ class __$$CuratorCopyWithImpl<$Res>
     Object? attributes = freezed,
     Object? relationships = freezed,
   }) {
-    return _then(_$Curator(
+    return _then(_$CuratorImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -2862,18 +3270,18 @@ class __$$CuratorCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$Curator extends Curator {
-  const _$Curator(
+class _$CuratorImpl extends Curator {
+  const _$CuratorImpl(
       {required this.id,
       required this.type,
       required this.attributes,
-      @JsonKey(ignore: true) this.relationships,
+      @JsonKey(includeFromJson: false, includeToJson: false) this.relationships,
       final String? $type})
       : $type = $type ?? 'curator',
         super._();
 
-  factory _$Curator.fromJson(Map<String, dynamic> json) =>
-      _$$CuratorFromJson(json);
+  factory _$CuratorImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CuratorImplFromJson(json);
 
   @override
   final String id;
@@ -2882,7 +3290,7 @@ class _$Curator extends Curator {
   @override
   final CuratorAttributes? attributes;
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   final CuratorRelationships? relationships;
 
   @JsonKey(name: 'runtimeType')
@@ -2894,10 +3302,10 @@ class _$Curator extends Curator {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$Curator &&
+            other is _$CuratorImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.attributes, attributes) ||
@@ -2914,8 +3322,8 @@ class _$Curator extends Curator {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CuratorCopyWith<_$Curator> get copyWith =>
-      __$$CuratorCopyWithImpl<_$Curator>(this, _$identity);
+  _$$CuratorImplCopyWith<_$CuratorImpl> get copyWith =>
+      __$$CuratorImplCopyWithImpl<_$CuratorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2926,34 +3334,42 @@ class _$Curator extends Curator {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         artist,
     required TResult Function(
             String id,
             String type,
             MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)
         musicVideo,
     required TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         playlist,
     required TResult Function(
             String id,
             String type,
             SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)
         song,
     required TResult Function(
             String id, String type, StationAttributes? attributes)
@@ -2962,7 +3378,8 @@ class _$Curator extends Curator {
             String id,
             String type,
             CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)
         curator,
     required TResult Function(
             String id, String type, GenreAttributes? attributes)
@@ -2980,33 +3397,51 @@ class _$Curator extends Curator {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult? Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult? Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -3023,33 +3458,51 @@ class _$Curator extends Curator {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -3115,7 +3568,7 @@ class _$Curator extends Curator {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CuratorToJson(
+    return _$$CuratorImplToJson(
       this,
     );
   }
@@ -3123,32 +3576,34 @@ class _$Curator extends Curator {
 
 abstract class Curator extends Resource {
   const factory Curator(
-          {required final String id,
-          required final String type,
-          required final CuratorAttributes? attributes,
-          @JsonKey(ignore: true) final CuratorRelationships? relationships}) =
-      _$Curator;
+      {required final String id,
+      required final String type,
+      required final CuratorAttributes? attributes,
+      @JsonKey(includeFromJson: false, includeToJson: false)
+      final CuratorRelationships? relationships}) = _$CuratorImpl;
   const Curator._() : super._();
 
-  factory Curator.fromJson(Map<String, dynamic> json) = _$Curator.fromJson;
+  factory Curator.fromJson(Map<String, dynamic> json) = _$CuratorImpl.fromJson;
 
   @override
   String get id;
   @override
   String get type;
+  @override
   CuratorAttributes? get attributes;
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   CuratorRelationships? get relationships;
   @override
   @JsonKey(ignore: true)
-  _$$CuratorCopyWith<_$Curator> get copyWith =>
+  _$$CuratorImplCopyWith<_$CuratorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$GenreCopyWith<$Res> implements $ResourceCopyWith<$Res> {
-  factory _$$GenreCopyWith(_$Genre value, $Res Function(_$Genre) then) =
-      __$$GenreCopyWithImpl<$Res>;
+abstract class _$$GenreImplCopyWith<$Res> implements $ResourceCopyWith<$Res> {
+  factory _$$GenreImplCopyWith(
+          _$GenreImpl value, $Res Function(_$GenreImpl) then) =
+      __$$GenreImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String id, String type, GenreAttributes? attributes});
@@ -3157,9 +3612,11 @@ abstract class _$$GenreCopyWith<$Res> implements $ResourceCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$GenreCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res, _$Genre>
-    implements _$$GenreCopyWith<$Res> {
-  __$$GenreCopyWithImpl(_$Genre _value, $Res Function(_$Genre) _then)
+class __$$GenreImplCopyWithImpl<$Res>
+    extends _$ResourceCopyWithImpl<$Res, _$GenreImpl>
+    implements _$$GenreImplCopyWith<$Res> {
+  __$$GenreImplCopyWithImpl(
+      _$GenreImpl _value, $Res Function(_$GenreImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3169,7 +3626,7 @@ class __$$GenreCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res, _$Genre>
     Object? type = null,
     Object? attributes = freezed,
   }) {
-    return _then(_$Genre(
+    return _then(_$GenreImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -3200,8 +3657,8 @@ class __$$GenreCopyWithImpl<$Res> extends _$ResourceCopyWithImpl<$Res, _$Genre>
 
 /// @nodoc
 @JsonSerializable()
-class _$Genre extends Genre {
-  const _$Genre(
+class _$GenreImpl extends Genre {
+  const _$GenreImpl(
       {required this.id,
       required this.type,
       required this.attributes,
@@ -3209,7 +3666,8 @@ class _$Genre extends Genre {
       : $type = $type ?? 'genre',
         super._();
 
-  factory _$Genre.fromJson(Map<String, dynamic> json) => _$$GenreFromJson(json);
+  factory _$GenreImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GenreImplFromJson(json);
 
   @override
   final String id;
@@ -3227,10 +3685,10 @@ class _$Genre extends Genre {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$Genre &&
+            other is _$GenreImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.attributes, attributes) ||
@@ -3244,8 +3702,8 @@ class _$Genre extends Genre {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$GenreCopyWith<_$Genre> get copyWith =>
-      __$$GenreCopyWithImpl<_$Genre>(this, _$identity);
+  _$$GenreImplCopyWith<_$GenreImpl> get copyWith =>
+      __$$GenreImplCopyWithImpl<_$GenreImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -3256,34 +3714,42 @@ class _$Genre extends Genre {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         album,
     required TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         artist,
     required TResult Function(
             String id,
             String type,
             MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)
         musicVideo,
     required TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)
         playlist,
     required TResult Function(
             String id,
             String type,
             SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)
         song,
     required TResult Function(
             String id, String type, StationAttributes? attributes)
@@ -3292,7 +3758,8 @@ class _$Genre extends Genre {
             String id,
             String type,
             CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)
         curator,
     required TResult Function(
             String id, String type, GenreAttributes? attributes)
@@ -3310,33 +3777,51 @@ class _$Genre extends Genre {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult? Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult? Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult? Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult? Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult? Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult? Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult? Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult? Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -3353,33 +3838,51 @@ class _$Genre extends Genre {
             String id,
             String type,
             AlbumAttributes? attributes,
-            @JsonKey(ignore: true) AlbumRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            AlbumRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         album,
     TResult Function(
             String id,
             String type,
             ArtistAttributes? attributes,
-            @JsonKey(ignore: true) ArtistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            ArtistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         artist,
-    TResult Function(String id, String type, MusicVideoAttributes? attributes,
-            @JsonKey(ignore: true) MusicVideoRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            MusicVideoAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            MusicVideoRelationships? relationships)?
         musicVideo,
     TResult Function(
             String id,
             String type,
             PlaylistAttributes? attributes,
-            @JsonKey(ignore: true) PlaylistRelationships? relationships,
-            @JsonKey(ignore: true) Map<String, ResourceView>? views)?
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            PlaylistRelationships? relationships,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            Map<String, ResourceView>? views)?
         playlist,
-    TResult Function(String id, String type, SongAttributes? attributes,
-            @JsonKey(ignore: true) SongRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            SongAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            SongRelationships? relationships)?
         song,
     TResult Function(String id, String type, StationAttributes? attributes)?
         station,
-    TResult Function(String id, String type, CuratorAttributes? attributes,
-            @JsonKey(ignore: true) CuratorRelationships? relationships)?
+    TResult Function(
+            String id,
+            String type,
+            CuratorAttributes? attributes,
+            @JsonKey(includeFromJson: false, includeToJson: false)
+            CuratorRelationships? relationships)?
         curator,
     TResult Function(String id, String type, GenreAttributes? attributes)?
         genre,
@@ -3445,7 +3948,7 @@ class _$Genre extends Genre {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GenreToJson(
+    return _$$GenreImplToJson(
       this,
     );
   }
@@ -3455,17 +3958,19 @@ abstract class Genre extends Resource {
   const factory Genre(
       {required final String id,
       required final String type,
-      required final GenreAttributes? attributes}) = _$Genre;
+      required final GenreAttributes? attributes}) = _$GenreImpl;
   const Genre._() : super._();
 
-  factory Genre.fromJson(Map<String, dynamic> json) = _$Genre.fromJson;
+  factory Genre.fromJson(Map<String, dynamic> json) = _$GenreImpl.fromJson;
 
   @override
   String get id;
   @override
   String get type;
+  @override
   GenreAttributes? get attributes;
   @override
   @JsonKey(ignore: true)
-  _$$GenreCopyWith<_$Genre> get copyWith => throw _privateConstructorUsedError;
+  _$$GenreImplCopyWith<_$GenreImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

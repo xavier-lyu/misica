@@ -6,80 +6,81 @@ part of 'providers.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-// ignore_for_file: avoid_private_typedef_functions, non_constant_identifier_names, subtype_of_sealed_class, invalid_use_of_internal_member, unused_element, constant_identifier_names, unnecessary_raw_strings, library_private_types_in_public_api
-
-/// Copied from Dart SDK
-class _SystemHash {
-  _SystemHash._();
-
-  static int combine(int hash, int value) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + value);
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x0007ffff & hash) << 10));
-    return hash ^ (hash >> 6);
-  }
-
-  static int finish(int hash) {
-    // ignore: parameter_assignments
-    hash = 0x1fffffff & (hash + ((0x03ffffff & hash) << 3));
-    // ignore: parameter_assignments
-    hash = hash ^ (hash >> 11);
-    return 0x1fffffff & (hash + ((0x00003fff & hash) << 15));
-  }
-}
-
-String $currentEntryHash() => r'e23c20fa0deec846950b754f9b1cf22b4c93a73b';
+String _$currentEntryHash() => r'e23c20fa0deec846950b754f9b1cf22b4c93a73b';
 
 /// See also [currentEntry].
-final currentEntryProvider = AutoDisposeFutureProvider<MusicPlayerQueueEntry?>(
+@ProviderFor(currentEntry)
+final currentEntryProvider =
+    AutoDisposeFutureProvider<MusicPlayerQueueEntry?>.internal(
   currentEntry,
   name: r'currentEntryProvider',
   debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : $currentEntryHash,
+      const bool.fromEnvironment('dart.vm.product') ? null : _$currentEntryHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
 );
+
 typedef CurrentEntryRef = AutoDisposeFutureProviderRef<MusicPlayerQueueEntry?>;
-String $isPlayingHash() => r'46a5422e61a27bae625d583e3f72c9481408850e';
+String _$isPlayingHash() => r'46a5422e61a27bae625d583e3f72c9481408850e';
 
 /// See also [isPlaying].
-final isPlayingProvider = AutoDisposeFutureProvider<bool>(
+@ProviderFor(isPlaying)
+final isPlayingProvider = AutoDisposeFutureProvider<bool>.internal(
   isPlaying,
   name: r'isPlayingProvider',
   debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : $isPlayingHash,
+      const bool.fromEnvironment('dart.vm.product') ? null : _$isPlayingHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
 );
+
 typedef IsPlayingRef = AutoDisposeFutureProviderRef<bool>;
-String $playerStateHash() => r'9d6876d719d8601fe7b6b111bb6bf543b9d433db';
+String _$playerStateHash() => r'9d6876d719d8601fe7b6b111bb6bf543b9d433db';
 
 /// See also [playerState].
-final playerStateProvider = AutoDisposeFutureProvider<MusicPlayerState>(
+@ProviderFor(playerState)
+final playerStateProvider =
+    AutoDisposeFutureProvider<MusicPlayerState>.internal(
   playerState,
   name: r'playerStateProvider',
   debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : $playerStateHash,
+      const bool.fromEnvironment('dart.vm.product') ? null : _$playerStateHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
 );
+
 typedef PlayerStateRef = AutoDisposeFutureProviderRef<MusicPlayerState>;
-String $playerPlaybackStatusHash() =>
+String _$playerPlaybackStatusHash() =>
     r'2960ad70e67b82d4cf0fdb6102ab21a2e30dab31';
 
 /// See also [playerPlaybackStatus].
+@ProviderFor(playerPlaybackStatus)
 final playerPlaybackStatusProvider =
-    AutoDisposeFutureProvider<MusicPlayerPlaybackStatus>(
+    AutoDisposeFutureProvider<MusicPlayerPlaybackStatus>.internal(
   playerPlaybackStatus,
   name: r'playerPlaybackStatusProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : $playerPlaybackStatusHash,
+      : _$playerPlaybackStatusHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
 );
+
 typedef PlayerPlaybackStatusRef
     = AutoDisposeFutureProviderRef<MusicPlayerPlaybackStatus>;
-String $musicPlayerHash() => r'a012ba0c56a77eacf1e4eddb38511cbdc612bf58';
+String _$musicPlayerHash() => r'a012ba0c56a77eacf1e4eddb38511cbdc612bf58';
 
 /// See also [musicPlayer].
-final musicPlayerProvider = AutoDisposeProvider<MusicPlayer>(
+@ProviderFor(musicPlayer)
+final musicPlayerProvider = AutoDisposeProvider<MusicPlayer>.internal(
   musicPlayer,
   name: r'musicPlayerProvider',
   debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : $musicPlayerHash,
+      const bool.fromEnvironment('dart.vm.product') ? null : _$musicPlayerHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
 );
+
 typedef MusicPlayerRef = AutoDisposeProviderRef<MusicPlayer>;
+// ignore_for_file: type=lint
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

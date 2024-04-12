@@ -5,7 +5,7 @@ import 'package:misica/src/settings/core/infrastructure/settings.dart';
 import 'package:misica/src/settings/core/shared/providers.dart';
 
 class AppearanceTile extends ConsumerWidget {
-  const AppearanceTile({Key? key}) : super(key: key);
+  const AppearanceTile({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
