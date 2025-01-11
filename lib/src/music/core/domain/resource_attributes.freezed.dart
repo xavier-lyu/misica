@@ -29,8 +29,12 @@ mixin _$ResourceAttributes {
   PlayParams? get playParams => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
 
+  /// Serializes this ResourceAttributes to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ResourceAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ResourceAttributesCopyWith<ResourceAttributes> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -65,6 +69,8 @@ class _$ResourceAttributesCopyWithImpl<$Res, $Val extends ResourceAttributes>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ResourceAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -113,6 +119,8 @@ class _$ResourceAttributesCopyWithImpl<$Res, $Val extends ResourceAttributes>
     ) as $Val);
   }
 
+  /// Create a copy of ResourceAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ArtworkCopyWith<$Res>? get artwork {
@@ -125,6 +133,8 @@ class _$ResourceAttributesCopyWithImpl<$Res, $Val extends ResourceAttributes>
     });
   }
 
+  /// Create a copy of ResourceAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PlayParamsCopyWith<$Res>? get playParams {
@@ -170,6 +180,8 @@ class __$$ResourceAttributesImplCopyWithImpl<$Res>
       $Res Function(_$ResourceAttributesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResourceAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -278,12 +290,14 @@ class _$ResourceAttributesImpl extends _ResourceAttributes {
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, albumName, artistName, artistUrl,
       curatorName, artwork, name, playParams, url);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResourceAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ResourceAttributesImplCopyWith<_$ResourceAttributesImpl> get copyWith =>
@@ -329,8 +343,11 @@ abstract class _ResourceAttributes extends ResourceAttributes {
   PlayParams? get playParams;
   @override
   String? get url;
+
+  /// Create a copy of ResourceAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ResourceAttributesImplCopyWith<_$ResourceAttributesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -353,8 +370,12 @@ mixin _$AlbumAttributes {
   String? get copyright => throw _privateConstructorUsedError;
   EditorialNotes? get editorialNotes => throw _privateConstructorUsedError;
 
+  /// Serializes this AlbumAttributes to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AlbumAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AlbumAttributesCopyWith<AlbumAttributes> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -393,6 +414,8 @@ class _$AlbumAttributesCopyWithImpl<$Res, $Val extends AlbumAttributes>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AlbumAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -456,6 +479,8 @@ class _$AlbumAttributesCopyWithImpl<$Res, $Val extends AlbumAttributes>
     ) as $Val);
   }
 
+  /// Create a copy of AlbumAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ArtworkCopyWith<$Res>? get artwork {
@@ -468,6 +493,8 @@ class _$AlbumAttributesCopyWithImpl<$Res, $Val extends AlbumAttributes>
     });
   }
 
+  /// Create a copy of AlbumAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PlayParamsCopyWith<$Res>? get playParams {
@@ -480,6 +507,8 @@ class _$AlbumAttributesCopyWithImpl<$Res, $Val extends AlbumAttributes>
     });
   }
 
+  /// Create a copy of AlbumAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $EditorialNotesCopyWith<$Res>? get editorialNotes {
@@ -530,6 +559,8 @@ class __$$AlbumAttributesImplCopyWithImpl<$Res>
       _$AlbumAttributesImpl _value, $Res Function(_$AlbumAttributesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AlbumAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -668,7 +699,7 @@ class _$AlbumAttributesImpl extends _AlbumAttributes {
                 other.editorialNotes == editorialNotes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -684,7 +715,9 @@ class _$AlbumAttributesImpl extends _AlbumAttributes {
       copyright,
       editorialNotes);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AlbumAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AlbumAttributesImplCopyWith<_$AlbumAttributesImpl> get copyWith =>
@@ -739,8 +772,11 @@ abstract class _AlbumAttributes extends AlbumAttributes {
   String? get copyright;
   @override
   EditorialNotes? get editorialNotes;
+
+  /// Create a copy of AlbumAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AlbumAttributesImplCopyWith<_$AlbumAttributesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -756,8 +792,12 @@ mixin _$ArtistAttributes {
   Artwork? get artwork => throw _privateConstructorUsedError;
   EditorialNotes? get editorialNotes => throw _privateConstructorUsedError;
 
+  /// Serializes this ArtistAttributes to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ArtistAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ArtistAttributesCopyWith<ArtistAttributes> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -788,6 +828,8 @@ class _$ArtistAttributesCopyWithImpl<$Res, $Val extends ArtistAttributes>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ArtistAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -816,6 +858,8 @@ class _$ArtistAttributesCopyWithImpl<$Res, $Val extends ArtistAttributes>
     ) as $Val);
   }
 
+  /// Create a copy of ArtistAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ArtworkCopyWith<$Res>? get artwork {
@@ -828,6 +872,8 @@ class _$ArtistAttributesCopyWithImpl<$Res, $Val extends ArtistAttributes>
     });
   }
 
+  /// Create a copy of ArtistAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $EditorialNotesCopyWith<$Res>? get editorialNotes {
@@ -869,6 +915,8 @@ class __$$ArtistAttributesImplCopyWithImpl<$Res>
       $Res Function(_$ArtistAttributesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ArtistAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -937,12 +985,14 @@ class _$ArtistAttributesImpl extends _ArtistAttributes {
                 other.editorialNotes == editorialNotes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, name, url, artwork, editorialNotes);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ArtistAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ArtistAttributesImplCopyWith<_$ArtistAttributesImpl> get copyWith =>
@@ -976,8 +1026,11 @@ abstract class _ArtistAttributes extends ArtistAttributes {
   Artwork? get artwork;
   @override
   EditorialNotes? get editorialNotes;
+
+  /// Create a copy of ArtistAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ArtistAttributesImplCopyWith<_$ArtistAttributesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1000,8 +1053,12 @@ mixin _$MusicVideoAttributes {
   int? get trackNumber => throw _privateConstructorUsedError;
   String? get contentRating => throw _privateConstructorUsedError;
 
+  /// Serializes this MusicVideoAttributes to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MusicVideoAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MusicVideoAttributesCopyWith<MusicVideoAttributes> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1039,6 +1096,8 @@ class _$MusicVideoAttributesCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MusicVideoAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1097,6 +1156,8 @@ class _$MusicVideoAttributesCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of MusicVideoAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ArtworkCopyWith<$Res>? get artwork {
@@ -1109,6 +1170,8 @@ class _$MusicVideoAttributesCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of MusicVideoAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PlayParamsCopyWith<$Res>? get playParams {
@@ -1156,6 +1219,8 @@ class __$$MusicVideoAttributesImplCopyWithImpl<$Res>
       $Res Function(_$MusicVideoAttributesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MusicVideoAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1292,7 +1357,7 @@ class _$MusicVideoAttributesImpl extends _MusicVideoAttributes {
                 other.contentRating == contentRating));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1307,7 +1372,9 @@ class _$MusicVideoAttributesImpl extends _MusicVideoAttributes {
       trackNumber,
       contentRating);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MusicVideoAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MusicVideoAttributesImplCopyWith<_$MusicVideoAttributesImpl>
@@ -1360,8 +1427,11 @@ abstract class _MusicVideoAttributes extends MusicVideoAttributes {
   int? get trackNumber;
   @override
   String? get contentRating;
+
+  /// Create a copy of MusicVideoAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MusicVideoAttributesImplCopyWith<_$MusicVideoAttributesImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1379,8 +1449,12 @@ mixin _$PlaylistAttributes {
   String? get url => throw _privateConstructorUsedError;
   EditorialNotes? get editorialNotes => throw _privateConstructorUsedError;
 
+  /// Serializes this PlaylistAttributes to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PlaylistAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PlaylistAttributesCopyWith<PlaylistAttributes> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1414,6 +1488,8 @@ class _$PlaylistAttributesCopyWithImpl<$Res, $Val extends PlaylistAttributes>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PlaylistAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1452,6 +1528,8 @@ class _$PlaylistAttributesCopyWithImpl<$Res, $Val extends PlaylistAttributes>
     ) as $Val);
   }
 
+  /// Create a copy of PlaylistAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ArtworkCopyWith<$Res>? get artwork {
@@ -1464,6 +1542,8 @@ class _$PlaylistAttributesCopyWithImpl<$Res, $Val extends PlaylistAttributes>
     });
   }
 
+  /// Create a copy of PlaylistAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PlayParamsCopyWith<$Res>? get playParams {
@@ -1476,6 +1556,8 @@ class _$PlaylistAttributesCopyWithImpl<$Res, $Val extends PlaylistAttributes>
     });
   }
 
+  /// Create a copy of PlaylistAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $EditorialNotesCopyWith<$Res>? get editorialNotes {
@@ -1521,6 +1603,8 @@ class __$$PlaylistAttributesImplCopyWithImpl<$Res>
       $Res Function(_$PlaylistAttributesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PlaylistAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1609,12 +1693,14 @@ class _$PlaylistAttributesImpl extends _PlaylistAttributes {
                 other.editorialNotes == editorialNotes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, artwork, curatorName, name, playParams, url, editorialNotes);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PlaylistAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PlaylistAttributesImplCopyWith<_$PlaylistAttributesImpl> get copyWith =>
@@ -1655,8 +1741,11 @@ abstract class _PlaylistAttributes extends PlaylistAttributes {
   String? get url;
   @override
   EditorialNotes? get editorialNotes;
+
+  /// Create a copy of PlaylistAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PlaylistAttributesImplCopyWith<_$PlaylistAttributesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1680,8 +1769,12 @@ mixin _$SongAttributes {
   int? get trackNumber => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
 
+  /// Serializes this SongAttributes to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SongAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SongAttributesCopyWith<SongAttributes> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1719,6 +1812,8 @@ class _$SongAttributesCopyWithImpl<$Res, $Val extends SongAttributes>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SongAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1782,6 +1877,8 @@ class _$SongAttributesCopyWithImpl<$Res, $Val extends SongAttributes>
     ) as $Val);
   }
 
+  /// Create a copy of SongAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ArtworkCopyWith<$Res>? get artwork {
@@ -1794,6 +1891,8 @@ class _$SongAttributesCopyWithImpl<$Res, $Val extends SongAttributes>
     });
   }
 
+  /// Create a copy of SongAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PlayParamsCopyWith<$Res>? get playParams {
@@ -1842,6 +1941,8 @@ class __$$SongAttributesImplCopyWithImpl<$Res>
       _$SongAttributesImpl _value, $Res Function(_$SongAttributesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SongAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1988,7 +2089,7 @@ class _$SongAttributesImpl extends _SongAttributes {
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2004,7 +2105,9 @@ class _$SongAttributesImpl extends _SongAttributes {
       trackNumber,
       url);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SongAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SongAttributesImplCopyWith<_$SongAttributesImpl> get copyWith =>
@@ -2059,8 +2162,11 @@ abstract class _SongAttributes extends SongAttributes {
   int? get trackNumber;
   @override
   String? get url;
+
+  /// Create a copy of SongAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SongAttributesImplCopyWith<_$SongAttributesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2078,8 +2184,12 @@ mixin _$StationAttributes {
   String? get url => throw _privateConstructorUsedError;
   EditorialNotes? get editorialNotes => throw _privateConstructorUsedError;
 
+  /// Serializes this StationAttributes to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StationAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StationAttributesCopyWith<StationAttributes> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2113,6 +2223,8 @@ class _$StationAttributesCopyWithImpl<$Res, $Val extends StationAttributes>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of StationAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2151,6 +2263,8 @@ class _$StationAttributesCopyWithImpl<$Res, $Val extends StationAttributes>
     ) as $Val);
   }
 
+  /// Create a copy of StationAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ArtworkCopyWith<$Res>? get artwork {
@@ -2163,6 +2277,8 @@ class _$StationAttributesCopyWithImpl<$Res, $Val extends StationAttributes>
     });
   }
 
+  /// Create a copy of StationAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PlayParamsCopyWith<$Res>? get playParams {
@@ -2175,6 +2291,8 @@ class _$StationAttributesCopyWithImpl<$Res, $Val extends StationAttributes>
     });
   }
 
+  /// Create a copy of StationAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $EditorialNotesCopyWith<$Res>? get editorialNotes {
@@ -2220,6 +2338,8 @@ class __$$StationAttributesImplCopyWithImpl<$Res>
       $Res Function(_$StationAttributesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StationAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2308,12 +2428,14 @@ class _$StationAttributesImpl extends _StationAttributes {
                 other.editorialNotes == editorialNotes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, artwork, playParams,
       durationInMillis, name, url, editorialNotes);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StationAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StationAttributesImplCopyWith<_$StationAttributesImpl> get copyWith =>
@@ -2353,8 +2475,11 @@ abstract class _StationAttributes extends StationAttributes {
   String? get url;
   @override
   EditorialNotes? get editorialNotes;
+
+  /// Create a copy of StationAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StationAttributesImplCopyWith<_$StationAttributesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2369,8 +2494,12 @@ mixin _$CuratorAttributes {
   String get name => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
 
+  /// Serializes this CuratorAttributes to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CuratorAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CuratorAttributesCopyWith<CuratorAttributes> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2396,6 +2525,8 @@ class _$CuratorAttributesCopyWithImpl<$Res, $Val extends CuratorAttributes>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CuratorAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2419,6 +2550,8 @@ class _$CuratorAttributesCopyWithImpl<$Res, $Val extends CuratorAttributes>
     ) as $Val);
   }
 
+  /// Create a copy of CuratorAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ArtworkCopyWith<$Res>? get artwork {
@@ -2454,6 +2587,8 @@ class __$$CuratorAttributesImplCopyWithImpl<$Res>
       $Res Function(_$CuratorAttributesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CuratorAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2510,11 +2645,13 @@ class _$CuratorAttributesImpl extends _CuratorAttributes {
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, artwork, name, url);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CuratorAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CuratorAttributesImplCopyWith<_$CuratorAttributesImpl> get copyWith =>
@@ -2545,8 +2682,11 @@ abstract class _CuratorAttributes extends CuratorAttributes {
   String get name;
   @override
   String? get url;
+
+  /// Create a copy of CuratorAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CuratorAttributesImplCopyWith<_$CuratorAttributesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2559,8 +2699,12 @@ GenreAttributes _$GenreAttributesFromJson(Map<String, dynamic> json) {
 mixin _$GenreAttributes {
   String get name => throw _privateConstructorUsedError;
 
+  /// Serializes this GenreAttributes to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GenreAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GenreAttributesCopyWith<GenreAttributes> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2584,6 +2728,8 @@ class _$GenreAttributesCopyWithImpl<$Res, $Val extends GenreAttributes>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GenreAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2617,6 +2763,8 @@ class __$$GenreAttributesImplCopyWithImpl<$Res>
       _$GenreAttributesImpl _value, $Res Function(_$GenreAttributesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GenreAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2655,11 +2803,13 @@ class _$GenreAttributesImpl extends _GenreAttributes {
             (identical(other.name, name) || other.name == name));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GenreAttributes
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GenreAttributesImplCopyWith<_$GenreAttributesImpl> get copyWith =>
@@ -2684,8 +2834,11 @@ abstract class _GenreAttributes extends GenreAttributes {
 
   @override
   String get name;
+
+  /// Create a copy of GenreAttributes
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GenreAttributesImplCopyWith<_$GenreAttributesImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

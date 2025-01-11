@@ -14,6 +14,6 @@ extension DurationFormatter on Duration {
   String readable(String localeName) {
     final locale = DurationLocale.fromLanguageCode(localeName);
     if (locale == null) return '';
-    return printDuration(this, locale: locale);
+    return pretty(locale: locale);
   }
 }

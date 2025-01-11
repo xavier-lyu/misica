@@ -19,7 +19,9 @@ mixin _$ResourceView {
   List<Resource> get data => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResourceView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ResourceViewCopyWith<ResourceView> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -43,6 +45,8 @@ class _$ResourceViewCopyWithImpl<$Res, $Val extends ResourceView>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ResourceView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,6 +85,8 @@ class __$$ResourceViewImplCopyWithImpl<$Res>
       _$ResourceViewImpl _value, $Res Function(_$ResourceViewImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResourceView
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -137,7 +143,9 @@ class _$ResourceViewImpl extends _ResourceView {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_data), title);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResourceView
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ResourceViewImplCopyWith<_$ResourceViewImpl> get copyWith =>
@@ -154,8 +162,11 @@ abstract class _ResourceView extends ResourceView {
   List<Resource> get data;
   @override
   String get title;
+
+  /// Create a copy of ResourceView
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ResourceViewImplCopyWith<_$ResourceViewImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -11,12 +11,12 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'providers.g.dart';
 
 @riverpod
-StationsService stationsService(StationsServiceRef ref) {
+StationsService stationsService(Ref ref) {
   return StationsService(ref.watch(musicDioProvider));
 }
 
 @riverpod
-StationsRepository stationsRepository(StationsRepositoryRef ref) {
+StationsRepository stationsRepository(Ref ref) {
   return StationsRepository(ref.watch(stationsServiceProvider));
 }
 

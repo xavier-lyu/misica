@@ -60,7 +60,9 @@ mixin _$SearchSuggestion {
   }) =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchSuggestion
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchSuggestionCopyWith<SearchSuggestion> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -84,6 +86,8 @@ class _$SearchSuggestionCopyWithImpl<$Res, $Val extends SearchSuggestion>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SearchSuggestion
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -118,6 +122,8 @@ class __$$SearchSuggestionTermsImplCopyWithImpl<$Res>
       $Res Function(_$SearchSuggestionTermsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchSuggestion
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -177,7 +183,9 @@ class _$SearchSuggestionTermsImpl implements SearchSuggestionTerms {
   @override
   int get hashCode => Object.hash(runtimeType, kind, searchTerm, displayTerm);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchSuggestion
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchSuggestionTermsImplCopyWith<_$SearchSuggestionTermsImpl>
@@ -261,8 +269,11 @@ abstract class SearchSuggestionTerms implements SearchSuggestion {
   String get kind;
   String get searchTerm;
   String? get displayTerm;
+
+  /// Create a copy of SearchSuggestion
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchSuggestionTermsImplCopyWith<_$SearchSuggestionTermsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -291,6 +302,8 @@ class __$$SearchSuggestionTopResultsImplCopyWithImpl<$Res>
       $Res Function(_$SearchSuggestionTopResultsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchSuggestion
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -309,6 +322,8 @@ class __$$SearchSuggestionTopResultsImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of SearchSuggestion
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceCopyWith<$Res> get content {
@@ -346,7 +361,9 @@ class _$SearchSuggestionTopResultsImpl implements SearchSuggestionTopResults {
   @override
   int get hashCode => Object.hash(runtimeType, kind, content);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchSuggestion
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchSuggestionTopResultsImplCopyWith<_$SearchSuggestionTopResultsImpl>
@@ -428,8 +445,11 @@ abstract class SearchSuggestionTopResults implements SearchSuggestion {
   @override
   String get kind;
   Resource get content;
+
+  /// Create a copy of SearchSuggestion
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchSuggestionTopResultsImplCopyWith<_$SearchSuggestionTopResultsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

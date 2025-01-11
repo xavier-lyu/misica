@@ -6,13 +6,10 @@ part of 'artists_service.dart';
 // RetrofitGenerator
 // **************************************************************************
 
-// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers
+// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations
 
 class _ArtistsService implements ArtistsService {
-  _ArtistsService(
-    this._dio, {
-    this.baseUrl,
-  }) {
+  _ArtistsService(this._dio, {this.baseUrl, this.errorLogger}) {
     baseUrl ??= 'https://api.music.apple.com/v1/';
   }
 
@@ -20,34 +17,33 @@ class _ArtistsService implements ArtistsService {
 
   String? baseUrl;
 
+  final ParseErrorLogger? errorLogger;
+
   @override
-  Future<MusicResponse> fetchArtist(
-    String storefront,
-    String id,
-  ) async {
+  Future<MusicResponse> fetchArtist(String storefront, String id) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<MusicResponse>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/catalog/${storefront}/artists/${id}?omit[resource]=autos&views=featured-release,full-albums,appears-on-albums,featured-albums,featured-on-albums,singles,compilation-albums,live-albums,latest-release,music-videos,similar-artists,top-songs,playlists,more-to-hear,more-to-see&extend=artistBio,bornOrFormed,editorialVideo,isGroup,origin&extend[playlists]=trackCount&omit[resource:songs]=relationships&fields[albums]=artistName,artistUrl,artwork,contentRating,editorialArtwork,name,playParams,releaseDate,url,trackCount&limit[artists:top-songs]=20&art[url]=f',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = MusicResponse.fromJson(_result.data!);
-    return value;
+    final _options = _setStreamType<MusicResponse>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/catalog/${storefront}/artists/${id}?omit[resource]=autos&views=featured-release,full-albums,appears-on-albums,featured-albums,featured-on-albums,singles,compilation-albums,live-albums,latest-release,music-videos,similar-artists,top-songs,playlists,more-to-hear,more-to-see&extend=artistBio,bornOrFormed,editorialVideo,isGroup,origin&extend[playlists]=trackCount&omit[resource:songs]=relationships&fields[albums]=artistName,artistUrl,artwork,contentRating,editorialArtwork,name,playParams,releaseDate,url,trackCount&limit[artists:top-songs]=20&art[url]=f',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late MusicResponse _value;
+    try {
+      _value = MusicResponse.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
@@ -59,25 +55,25 @@ class _ArtistsService implements ArtistsService {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
-    final _result = await _dio
-        .fetch<Map<String, dynamic>>(_setStreamType<MusicResponse>(Options(
-      method: 'GET',
-      headers: _headers,
-      extra: _extra,
-    )
-            .compose(
-              _dio.options,
-              '/catalog/${storefront}/artists/${id}?art[url]=f&fields[artists]=inFavorites&fields[stations]=playParams,name&include=default-playable-content&omit[resource]=autos',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    final value = MusicResponse.fromJson(_result.data!);
-    return value;
+    final _options = _setStreamType<MusicResponse>(
+      Options(method: 'GET', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            '/catalog/${storefront}/artists/${id}?art[url]=f&fields[artists]=inFavorites&fields[stations]=playParams,name&include=default-playable-content&omit[resource]=autos',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late MusicResponse _value;
+    try {
+      _value = MusicResponse.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
@@ -93,10 +89,7 @@ class _ArtistsService implements ArtistsService {
     return requestOptions;
   }
 
-  String _combineBaseUrls(
-    String dioBaseUrl,
-    String? baseUrl,
-  ) {
+  String _combineBaseUrls(String dioBaseUrl, String? baseUrl) {
     if (baseUrl == null || baseUrl.trim().isEmpty) {
       return dioBaseUrl;
     }

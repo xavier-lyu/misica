@@ -7,7 +7,7 @@ part of 'providers.dart';
 // **************************************************************************
 
 String _$flutterSecureStorageHash() =>
-    r'04c4b9c1628578344b18cad756230eee7b28cb00';
+    r'c18a14fdf4fcaadc7f294f69c7c77eb241e41a92';
 
 /// See also [flutterSecureStorage].
 @ProviderFor(flutterSecureStorage)
@@ -22,9 +22,11 @@ final flutterSecureStorageProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef FlutterSecureStorageRef = AutoDisposeProviderRef<FlutterSecureStorage>;
 String _$credentialsStorageHash() =>
-    r'dca8576df44d417e120867d976b0a826aa9f5f19';
+    r'f6c25785320b7647efcdb7322a8f89e384d5c588';
 
 /// See also [credentialsStorage].
 @ProviderFor(credentialsStorage)
@@ -39,10 +41,12 @@ final credentialsStorageProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef CredentialsStorageRef
     = AutoDisposeProviderRef<SecureCredentialsStorage>;
 String _$musicAuthenticatorHash() =>
-    r'9a57dd196241bc9002ba105acdf028add67d8594';
+    r'e802a467309884e9bd72a8a82ecaf5dd0db1c631';
 
 /// See also [musicAuthenticator].
 @ProviderFor(musicAuthenticator)
@@ -57,9 +61,11 @@ final musicAuthenticatorProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef MusicAuthenticatorRef = AutoDisposeProviderRef<MusicAuthenticator>;
 String _$musicAuthIntercepterHash() =>
-    r'bed75808c87b23f066b7cce3abd8225a6be0a063';
+    r'1422877d05d3ab8c95f6b992a85b9f066ed31541';
 
 /// See also [musicAuthIntercepter].
 @ProviderFor(musicAuthIntercepter)
@@ -74,6 +80,8 @@ final musicAuthIntercepterProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef MusicAuthIntercepterRef = AutoDisposeProviderRef<MusicAuthIntercepter>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

@@ -6,7 +6,7 @@ part of 'providers.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$musicKitHash() => r'f4c1c4ba8ca59bad6514bd4da5f82bfd079ba4d6';
+String _$musicKitHash() => r'71ee48eaf35b3f7dc8415d75c967f33988a3f098';
 
 /// See also [musicKit].
 @ProviderFor(musicKit)
@@ -19,8 +19,10 @@ final musicKitProvider = Provider<MusicKit>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef MusicKitRef = ProviderRef<MusicKit>;
-String _$musicDioHash() => r'06a0d2ea23ef1b1a6d276b2a4ef6bd6922e6a8d3';
+String _$musicDioHash() => r'b1c70b440104ad135876bfc7551903912c73e645';
 
 /// See also [musicDio].
 @ProviderFor(musicDio)
@@ -33,8 +35,10 @@ final musicDioProvider = AutoDisposeProvider<Dio>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef MusicDioRef = AutoDisposeProviderRef<Dio>;
-String _$sembastHash() => r'5e2dcf14b0b701a2fc036a9e65e6f4c1ce7be523';
+String _$sembastHash() => r'82c7f706cfe9ae89cf066cb6fee5f6f6c9cb16bf';
 
 /// See also [sembast].
 @ProviderFor(sembast)
@@ -47,8 +51,10 @@ final sembastProvider = Provider<SembastDatabase>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef SembastRef = ProviderRef<SembastDatabase>;
-String _$initializationHash() => r'0985069c91a326b028808619e5bf099c9183e3c3';
+String _$initializationHash() => r'4577f1a13033006131415c4d41c68f0e41d13e89';
 
 /// See also [initialization].
 @ProviderFor(initialization)
@@ -62,6 +68,8 @@ final initializationProvider = AutoDisposeFutureProvider<Unit>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef InitializationRef = AutoDisposeFutureProviderRef<Unit>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

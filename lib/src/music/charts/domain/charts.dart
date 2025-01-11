@@ -64,10 +64,10 @@ class Chart with _$Chart {
   }) = MusicVideosChart;
 
   List<Resource> get value => map(
-        albums: (_) => _.albums,
-        playlists: (_) => _.playlists,
-        songs: (_) => _.songs,
-        musicVideo: (_) => _.mvs,
+        albums: (chart) => chart.albums,
+        playlists: (chart) => chart.playlists,
+        songs: (chart) => chart.songs,
+        musicVideo: (chart) => chart.mvs,
       );
 
   bool get isEmpty => value.isEmpty;

@@ -24,8 +24,12 @@ mixin _$RecommendationsResponse {
   String? get next => throw _privateConstructorUsedError;
   List<RecommendationDTO> get data => throw _privateConstructorUsedError;
 
+  /// Serializes this RecommendationsResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RecommendationsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RecommendationsResponseCopyWith<RecommendationsResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$RecommendationsResponseCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RecommendationsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class __$$RecommendationsResponseImplCopyWithImpl<$Res>
       $Res Function(_$RecommendationsResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RecommendationsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -145,12 +153,14 @@ class _$RecommendationsResponseImpl extends _RecommendationsResponse {
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, next, const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RecommendationsResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RecommendationsResponseImplCopyWith<_$RecommendationsResponseImpl>
@@ -178,8 +188,11 @@ abstract class _RecommendationsResponse extends RecommendationsResponse {
   String? get next;
   @override
   List<RecommendationDTO> get data;
+
+  /// Create a copy of RecommendationsResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RecommendationsResponseImplCopyWith<_$RecommendationsResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -196,8 +209,12 @@ mixin _$RecommendationDTO {
       throw _privateConstructorUsedError;
   RelationshipsDTO get relationships => throw _privateConstructorUsedError;
 
+  /// Serializes this RecommendationDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RecommendationDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RecommendationDTOCopyWith<RecommendationDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -228,6 +245,8 @@ class _$RecommendationDTOCopyWithImpl<$Res, $Val extends RecommendationDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RecommendationDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -256,6 +275,8 @@ class _$RecommendationDTOCopyWithImpl<$Res, $Val extends RecommendationDTO>
     ) as $Val);
   }
 
+  /// Create a copy of RecommendationDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RecommendationAttributesDTOCopyWith<$Res> get attributes {
@@ -265,6 +286,8 @@ class _$RecommendationDTOCopyWithImpl<$Res, $Val extends RecommendationDTO>
     });
   }
 
+  /// Create a copy of RecommendationDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RelationshipsDTOCopyWith<$Res> get relationships {
@@ -302,6 +325,8 @@ class __$$RecommendationDTOImplCopyWithImpl<$Res>
       $Res Function(_$RecommendationDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RecommendationDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -371,12 +396,14 @@ class _$RecommendationDTOImpl extends _RecommendationDTO {
                 other.relationships == relationships));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, type, attributes, relationships);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RecommendationDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RecommendationDTOImplCopyWith<_$RecommendationDTOImpl> get copyWith =>
@@ -410,8 +437,11 @@ abstract class _RecommendationDTO extends RecommendationDTO {
   RecommendationAttributesDTO get attributes;
   @override
   RelationshipsDTO get relationships;
+
+  /// Create a copy of RecommendationDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RecommendationDTOImplCopyWith<_$RecommendationDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -426,8 +456,12 @@ mixin _$RelationshipsDTO {
   RelationshipRecommendationsDTO? get recommendations =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this RelationshipsDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RelationshipsDTOCopyWith<RelationshipsDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -456,6 +490,8 @@ class _$RelationshipsDTOCopyWithImpl<$Res, $Val extends RelationshipsDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -474,6 +510,8 @@ class _$RelationshipsDTOCopyWithImpl<$Res, $Val extends RelationshipsDTO>
     ) as $Val);
   }
 
+  /// Create a copy of RelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RelationshipContentsDTOCopyWith<$Res>? get contents {
@@ -486,6 +524,8 @@ class _$RelationshipsDTOCopyWithImpl<$Res, $Val extends RelationshipsDTO>
     });
   }
 
+  /// Create a copy of RelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RelationshipRecommendationsDTOCopyWith<$Res>? get recommendations {
@@ -526,6 +566,8 @@ class __$$RelationshipsDTOImplCopyWithImpl<$Res>
       $Res Function(_$RelationshipsDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -575,11 +617,13 @@ class _$RelationshipsDTOImpl extends _RelationshipsDTO {
                 other.recommendations == recommendations));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, contents, recommendations);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RelationshipsDTOImplCopyWith<_$RelationshipsDTOImpl> get copyWith =>
@@ -608,8 +652,11 @@ abstract class _RelationshipsDTO extends RelationshipsDTO {
   RelationshipContentsDTO? get contents;
   @override
   RelationshipRecommendationsDTO? get recommendations;
+
+  /// Create a copy of RelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RelationshipsDTOImplCopyWith<_$RelationshipsDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -624,8 +671,12 @@ mixin _$RelationshipRecommendationsDTO {
   String? get href => throw _privateConstructorUsedError;
   List<RecommendationDTO> get data => throw _privateConstructorUsedError;
 
+  /// Serializes this RelationshipRecommendationsDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RelationshipRecommendationsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RelationshipRecommendationsDTOCopyWith<RelationshipRecommendationsDTO>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -652,6 +703,8 @@ class _$RelationshipRecommendationsDTOCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RelationshipRecommendationsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -693,6 +746,8 @@ class __$$RelationshipRecommendationsDTOImplCopyWithImpl<$Res>
       $Res Function(_$RelationshipRecommendationsDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RelationshipRecommendationsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -749,12 +804,14 @@ class _$RelationshipRecommendationsDTOImpl
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, href, const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RelationshipRecommendationsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RelationshipRecommendationsDTOImplCopyWith<
@@ -784,8 +841,11 @@ abstract class _RelationshipRecommendationsDTO
   String? get href;
   @override
   List<RecommendationDTO> get data;
+
+  /// Create a copy of RelationshipRecommendationsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RelationshipRecommendationsDTOImplCopyWith<
           _$RelationshipRecommendationsDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -802,8 +862,12 @@ mixin _$RelationshipContentsDTO {
   @ResourceDTOConverter()
   List<ResourceDTO> get data => throw _privateConstructorUsedError;
 
+  /// Serializes this RelationshipContentsDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RelationshipContentsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RelationshipContentsDTOCopyWith<RelationshipContentsDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -828,6 +892,8 @@ class _$RelationshipContentsDTOCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RelationshipContentsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -869,6 +935,8 @@ class __$$RelationshipContentsDTOImplCopyWithImpl<$Res>
       $Res Function(_$RelationshipContentsDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RelationshipContentsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -925,12 +993,14 @@ class _$RelationshipContentsDTOImpl extends _RelationshipContentsDTO {
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, href, const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RelationshipContentsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RelationshipContentsDTOImplCopyWith<_$RelationshipContentsDTOImpl>
@@ -960,8 +1030,11 @@ abstract class _RelationshipContentsDTO extends RelationshipContentsDTO {
   @override
   @ResourceDTOConverter()
   List<ResourceDTO> get data;
+
+  /// Create a copy of RelationshipContentsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RelationshipContentsDTOImplCopyWith<_$RelationshipContentsDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -979,8 +1052,12 @@ mixin _$RecommendationAttributesDTO {
   ResourceTitleDTO get title => throw _privateConstructorUsedError;
   String? get kind => throw _privateConstructorUsedError;
 
+  /// Serializes this RecommendationAttributesDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RecommendationAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RecommendationAttributesDTOCopyWith<RecommendationAttributesDTO>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1014,6 +1091,8 @@ class _$RecommendationAttributesDTOCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RecommendationAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1047,6 +1126,8 @@ class _$RecommendationAttributesDTOCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of RecommendationAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceTitleDTOCopyWith<$Res> get title {
@@ -1086,6 +1167,8 @@ class __$$RecommendationAttributesDTOImplCopyWithImpl<$Res>
       $Res Function(_$RecommendationAttributesDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RecommendationAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1175,7 +1258,7 @@ class _$RecommendationAttributesDTOImpl extends _RecommendationAttributesDTO {
             (identical(other.kind, kind) || other.kind == kind));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1185,7 +1268,9 @@ class _$RecommendationAttributesDTOImpl extends _RecommendationAttributesDTO {
       title,
       kind);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RecommendationAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RecommendationAttributesDTOImplCopyWith<_$RecommendationAttributesDTOImpl>
@@ -1223,8 +1308,11 @@ abstract class _RecommendationAttributesDTO
   ResourceTitleDTO get title;
   @override
   String? get kind;
+
+  /// Create a copy of RecommendationAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RecommendationAttributesDTOImplCopyWith<_$RecommendationAttributesDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1237,8 +1325,12 @@ ResourceTitleDTO _$ResourceTitleDTOFromJson(Map<String, dynamic> json) {
 mixin _$ResourceTitleDTO {
   String get stringForDisplay => throw _privateConstructorUsedError;
 
+  /// Serializes this ResourceTitleDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ResourceTitleDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ResourceTitleDTOCopyWith<ResourceTitleDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1262,6 +1354,8 @@ class _$ResourceTitleDTOCopyWithImpl<$Res, $Val extends ResourceTitleDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ResourceTitleDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1295,6 +1389,8 @@ class __$$ResourceTitleDTOImplCopyWithImpl<$Res>
       $Res Function(_$ResourceTitleDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResourceTitleDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1334,11 +1430,13 @@ class _$ResourceTitleDTOImpl extends _ResourceTitleDTO {
                 other.stringForDisplay == stringForDisplay));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, stringForDisplay);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResourceTitleDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ResourceTitleDTOImplCopyWith<_$ResourceTitleDTOImpl> get copyWith =>
@@ -1363,8 +1461,11 @@ abstract class _ResourceTitleDTO extends ResourceTitleDTO {
 
   @override
   String get stringForDisplay;
+
+  /// Create a copy of ResourceTitleDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ResourceTitleDTOImplCopyWith<_$ResourceTitleDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

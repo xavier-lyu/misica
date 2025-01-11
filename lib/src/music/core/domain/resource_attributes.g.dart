@@ -106,7 +106,7 @@ _$MusicVideoAttributesImpl _$$MusicVideoAttributesImplFromJson(Map json) =>
       artwork: json['artwork'] == null
           ? null
           : Artwork.fromJson(Map<String, dynamic>.from(json['artwork'] as Map)),
-      durationInMillis: json['durationInMillis'] as int,
+      durationInMillis: (json['durationInMillis'] as num).toInt(),
       name: json['name'] as String,
       playParams: json['playParams'] == null
           ? null
@@ -116,7 +116,7 @@ _$MusicVideoAttributesImpl _$$MusicVideoAttributesImplFromJson(Map json) =>
           ?.map((e) => Map<String, dynamic>.from(e as Map))
           .toList(),
       url: json['url'] as String?,
-      trackNumber: json['trackNumber'] as int?,
+      trackNumber: (json['trackNumber'] as num?)?.toInt(),
       contentRating: json['contentRating'] as String?,
     );
 
@@ -173,7 +173,7 @@ _$SongAttributesImpl _$$SongAttributesImplFromJson(Map json) =>
           ? null
           : Artwork.fromJson(Map<String, dynamic>.from(json['artwork'] as Map)),
       contentRating: json['contentRating'] as String?,
-      durationInMillis: json['durationInMillis'] as int,
+      durationInMillis: (json['durationInMillis'] as num).toInt(),
       name: json['name'] as String,
       playParams: json['playParams'] == null
           ? null
@@ -182,7 +182,7 @@ _$SongAttributesImpl _$$SongAttributesImplFromJson(Map json) =>
       previews: (json['previews'] as List<dynamic>?)
           ?.map((e) => Map<String, dynamic>.from(e as Map))
           .toList(),
-      trackNumber: json['trackNumber'] as int?,
+      trackNumber: (json['trackNumber'] as num?)?.toInt(),
       url: json['url'] as String?,
     );
 
@@ -211,7 +211,7 @@ _$StationAttributesImpl _$$StationAttributesImplFromJson(Map json) =>
           ? null
           : PlayParams.fromJson(
               Map<String, dynamic>.from(json['playParams'] as Map)),
-      durationInMillis: json['durationInMillis'] as int?,
+      durationInMillis: (json['durationInMillis'] as num?)?.toInt(),
       name: json['name'] as String,
       url: json['url'] as String?,
       editorialNotes: json['editorialNotes'] == null

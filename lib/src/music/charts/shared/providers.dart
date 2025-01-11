@@ -9,12 +9,12 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'providers.g.dart';
 
 @riverpod
-ChartsService chartsService(ChartsServiceRef ref) {
+ChartsService chartsService(Ref ref) {
   return ChartsService(ref.watch(musicDioProvider));
 }
 
 @riverpod
-ChartsRepository chartsRepository(ChartsRepositoryRef ref) {
+ChartsRepository chartsRepository(Ref ref) {
   return ChartsRepository(ref.watch(chartsServiceProvider));
 }
 

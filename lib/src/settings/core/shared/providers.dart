@@ -9,12 +9,12 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'providers.g.dart';
 
 @riverpod
-SembastSettings settingsStorage(SettingsStorageRef ref) {
+SembastSettings settingsStorage(Ref ref) {
   return SembastSettings(ref.watch(sembastProvider));
 }
 
 @riverpod
-SettingsRepository settingsRepository(SettingsRepositoryRef ref) {
+SettingsRepository settingsRepository(Ref ref) {
   return SettingsRepository(ref.watch(settingsStorageProvider));
 }
 

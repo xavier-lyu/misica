@@ -6,7 +6,7 @@ part of 'providers.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$likedLocalServiceHash() => r'05b16266e35c6c0b82a5de311635c86c2e160559';
+String _$likedLocalServiceHash() => r'34d60a13cb189546fd481b0540e2dd768961efb2';
 
 /// See also [likedLocalService].
 @ProviderFor(likedLocalService)
@@ -21,10 +21,12 @@ final likedLocalServiceProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef LikedLocalServiceRef
     = AutoDisposeProviderRef<LikedResourcesLocalService>;
 String _$likedResourcesRepositoryHash() =>
-    r'46d8dc47e4625f29f99dbec7a286809f3b8a0e42';
+    r'3f15ae15fc0dc1a9aedc53852ae83ae522d2c516';
 
 /// See also [likedResourcesRepository].
 @ProviderFor(likedResourcesRepository)
@@ -39,9 +41,11 @@ final likedResourcesRepositoryProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef LikedResourcesRepositoryRef
     = AutoDisposeProviderRef<LikedResourcesRepository>;
-String _$isResourceLikedHash() => r'4587cce43d6a1c9b9ce51173008718fcb53f820b';
+String _$isResourceLikedHash() => r'2236f259df245b6a594794f0969c25660b05dd97';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -177,6 +181,8 @@ class IsResourceLikedProvider extends AutoDisposeFutureProvider<bool> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin IsResourceLikedRef on AutoDisposeFutureProviderRef<bool> {
   /// The parameter `resourceId` of this provider.
   String get resourceId;
@@ -190,4 +196,4 @@ class _IsResourceLikedProviderElement
   String get resourceId => (origin as IsResourceLikedProvider).resourceId;
 }
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

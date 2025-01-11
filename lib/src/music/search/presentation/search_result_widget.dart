@@ -18,6 +18,7 @@ class SearchResultWidget extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return ListView.builder(
+      key: ValueKey(result.groupId),
       itemExtent: 70,
       padding: const EdgeInsets.only(top: PADDING_S),
       itemCount: result.data.length,

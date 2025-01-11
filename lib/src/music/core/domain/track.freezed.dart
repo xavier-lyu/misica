@@ -71,6 +71,9 @@ class _$TrackCopyWithImpl<$Res, $Val extends Track>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of Track
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -90,6 +93,8 @@ class __$$TrackSongImplCopyWithImpl<$Res>
       _$TrackSongImpl _value, $Res Function(_$TrackSongImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Track
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -129,7 +134,9 @@ class _$TrackSongImpl extends _TrackSong {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(song));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Track
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TrackSongImplCopyWith<_$TrackSongImpl> get copyWith =>
@@ -203,7 +210,10 @@ abstract class _TrackSong extends Track {
   const _TrackSong._() : super._();
 
   Song get song;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Track
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TrackSongImplCopyWith<_$TrackSongImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -225,6 +235,8 @@ class __$$TrackMusicVideoImplCopyWithImpl<$Res>
       _$TrackMusicVideoImpl _value, $Res Function(_$TrackMusicVideoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Track
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -264,7 +276,9 @@ class _$TrackMusicVideoImpl extends _TrackMusicVideo {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(mv));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Track
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TrackMusicVideoImplCopyWith<_$TrackMusicVideoImpl> get copyWith =>
@@ -339,7 +353,10 @@ abstract class _TrackMusicVideo extends Track {
   const _TrackMusicVideo._() : super._();
 
   MusicVideo get mv;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Track
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TrackMusicVideoImplCopyWith<_$TrackMusicVideoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

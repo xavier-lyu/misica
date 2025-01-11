@@ -50,7 +50,9 @@ mixin _$MusicFailure {
   }) =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MusicFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MusicFailureCopyWith<MusicFailure> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -74,6 +76,8 @@ class _$MusicFailureCopyWithImpl<$Res, $Val extends MusicFailure>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MusicFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -104,6 +108,8 @@ class __$$APIImplCopyWithImpl<$Res>
   __$$APIImplCopyWithImpl(_$APIImpl _value, $Res Function(_$APIImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MusicFailure
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -142,7 +148,9 @@ class _$APIImpl extends _API {
   @override
   int get hashCode => Object.hash(runtimeType, errCode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MusicFailure
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$APIImplCopyWith<_$APIImpl> get copyWith =>
@@ -211,8 +219,11 @@ abstract class _API extends MusicFailure {
 
   @override
   int? get errCode;
+
+  /// Create a copy of MusicFailure
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$APIImplCopyWith<_$APIImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

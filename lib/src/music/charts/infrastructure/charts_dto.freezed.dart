@@ -23,8 +23,12 @@ mixin _$ChartsResultsDTO {
   ChartsDTO get results => throw _privateConstructorUsedError;
   Map<String, dynamic>? get meta => throw _privateConstructorUsedError;
 
+  /// Serializes this ChartsResultsDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ChartsResultsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ChartsResultsDTOCopyWith<ChartsResultsDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +54,8 @@ class _$ChartsResultsDTOCopyWithImpl<$Res, $Val extends ChartsResultsDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ChartsResultsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -68,6 +74,8 @@ class _$ChartsResultsDTOCopyWithImpl<$Res, $Val extends ChartsResultsDTO>
     ) as $Val);
   }
 
+  /// Create a copy of ChartsResultsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ChartsDTOCopyWith<$Res> get results {
@@ -99,6 +107,8 @@ class __$$ChartsResultsDTOImplCopyWithImpl<$Res>
       $Res Function(_$ChartsResultsDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ChartsResultsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -155,12 +165,14 @@ class _$ChartsResultsDTOImpl extends _ChartsResultsDTO {
             const DeepCollectionEquality().equals(other._meta, _meta));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, results, const DeepCollectionEquality().hash(_meta));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ChartsResultsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChartsResultsDTOImplCopyWith<_$ChartsResultsDTOImpl> get copyWith =>
@@ -188,8 +200,11 @@ abstract class _ChartsResultsDTO extends ChartsResultsDTO {
   ChartsDTO get results;
   @override
   Map<String, dynamic>? get meta;
+
+  /// Create a copy of ChartsResultsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChartsResultsDTOImplCopyWith<_$ChartsResultsDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -210,8 +225,12 @@ mixin _$ChartsDTO {
   List<MusicVideosChartDTO>? get musicVideos =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this ChartsDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ChartsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ChartsDTOCopyWith<ChartsDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -240,6 +259,8 @@ class _$ChartsDTOCopyWithImpl<$Res, $Val extends ChartsDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ChartsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -304,6 +325,8 @@ class __$$ChartsDTOImplCopyWithImpl<$Res>
       _$ChartsDTOImpl _value, $Res Function(_$ChartsDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ChartsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -449,7 +472,7 @@ class _$ChartsDTOImpl extends _ChartsDTO {
                 .equals(other._musicVideos, _musicVideos));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -460,7 +483,9 @@ class _$ChartsDTOImpl extends _ChartsDTO {
       const DeepCollectionEquality().hash(_albums),
       const DeepCollectionEquality().hash(_musicVideos));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ChartsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChartsDTOImplCopyWith<_$ChartsDTOImpl> get copyWith =>
@@ -501,8 +526,11 @@ abstract class _ChartsDTO extends ChartsDTO {
   @override
   @JsonKey(name: 'music-videos')
   List<MusicVideosChartDTO>? get musicVideos;
+
+  /// Create a copy of ChartsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChartsDTOImplCopyWith<_$ChartsDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -520,8 +548,12 @@ mixin _$AlbumsChartDTO {
   String? get next => throw _privateConstructorUsedError;
   List<AlbumDTO> get data => throw _privateConstructorUsedError;
 
+  /// Serializes this AlbumsChartDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AlbumsChartDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AlbumsChartDTOCopyWith<AlbumsChartDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -551,6 +583,8 @@ class _$AlbumsChartDTOCopyWithImpl<$Res, $Val extends AlbumsChartDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AlbumsChartDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -615,6 +649,8 @@ class __$$AlbumsChartDTOImplCopyWithImpl<$Res>
       _$AlbumsChartDTOImpl _value, $Res Function(_$AlbumsChartDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AlbumsChartDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -706,12 +742,14 @@ class _$AlbumsChartDTOImpl extends _AlbumsChartDTO {
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, chart, orderId, href, next,
       const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AlbumsChartDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AlbumsChartDTOImplCopyWith<_$AlbumsChartDTOImpl> get copyWith =>
@@ -751,8 +789,11 @@ abstract class _AlbumsChartDTO extends AlbumsChartDTO {
   String? get next;
   @override
   List<AlbumDTO> get data;
+
+  /// Create a copy of AlbumsChartDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AlbumsChartDTOImplCopyWith<_$AlbumsChartDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -770,8 +811,12 @@ mixin _$PlaylistsChartDTO {
   String? get next => throw _privateConstructorUsedError;
   List<PlaylistDTO> get data => throw _privateConstructorUsedError;
 
+  /// Serializes this PlaylistsChartDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PlaylistsChartDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PlaylistsChartDTOCopyWith<PlaylistsChartDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -801,6 +846,8 @@ class _$PlaylistsChartDTOCopyWithImpl<$Res, $Val extends PlaylistsChartDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PlaylistsChartDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -865,6 +912,8 @@ class __$$PlaylistsChartDTOImplCopyWithImpl<$Res>
       $Res Function(_$PlaylistsChartDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PlaylistsChartDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -956,12 +1005,14 @@ class _$PlaylistsChartDTOImpl extends _PlaylistsChartDTO {
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, chart, orderId, href, next,
       const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PlaylistsChartDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PlaylistsChartDTOImplCopyWith<_$PlaylistsChartDTOImpl> get copyWith =>
@@ -1001,8 +1052,11 @@ abstract class _PlaylistsChartDTO extends PlaylistsChartDTO {
   String? get next;
   @override
   List<PlaylistDTO> get data;
+
+  /// Create a copy of PlaylistsChartDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PlaylistsChartDTOImplCopyWith<_$PlaylistsChartDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1020,8 +1074,12 @@ mixin _$SongsChartDTO {
   String? get next => throw _privateConstructorUsedError;
   List<SongDTO> get data => throw _privateConstructorUsedError;
 
+  /// Serializes this SongsChartDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SongsChartDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SongsChartDTOCopyWith<SongsChartDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1051,6 +1109,8 @@ class _$SongsChartDTOCopyWithImpl<$Res, $Val extends SongsChartDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SongsChartDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1115,6 +1175,8 @@ class __$$SongsChartDTOImplCopyWithImpl<$Res>
       _$SongsChartDTOImpl _value, $Res Function(_$SongsChartDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SongsChartDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1206,12 +1268,14 @@ class _$SongsChartDTOImpl extends _SongsChartDTO {
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, chart, orderId, href, next,
       const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SongsChartDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SongsChartDTOImplCopyWith<_$SongsChartDTOImpl> get copyWith =>
@@ -1250,8 +1314,11 @@ abstract class _SongsChartDTO extends SongsChartDTO {
   String? get next;
   @override
   List<SongDTO> get data;
+
+  /// Create a copy of SongsChartDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SongsChartDTOImplCopyWith<_$SongsChartDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1269,8 +1336,12 @@ mixin _$MusicVideosChartDTO {
   String? get next => throw _privateConstructorUsedError;
   List<MusicVideoDTO> get data => throw _privateConstructorUsedError;
 
+  /// Serializes this MusicVideosChartDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MusicVideosChartDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MusicVideosChartDTOCopyWith<MusicVideosChartDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1300,6 +1371,8 @@ class _$MusicVideosChartDTOCopyWithImpl<$Res, $Val extends MusicVideosChartDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MusicVideosChartDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1364,6 +1437,8 @@ class __$$MusicVideosChartDTOImplCopyWithImpl<$Res>
       $Res Function(_$MusicVideosChartDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MusicVideosChartDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1455,12 +1530,14 @@ class _$MusicVideosChartDTOImpl extends _MusicVideosChartDTO {
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, chart, orderId, href, next,
       const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MusicVideosChartDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MusicVideosChartDTOImplCopyWith<_$MusicVideosChartDTOImpl> get copyWith =>
@@ -1500,8 +1577,11 @@ abstract class _MusicVideosChartDTO extends MusicVideosChartDTO {
   String? get next;
   @override
   List<MusicVideoDTO> get data;
+
+  /// Create a copy of MusicVideosChartDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MusicVideosChartDTOImplCopyWith<_$MusicVideosChartDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

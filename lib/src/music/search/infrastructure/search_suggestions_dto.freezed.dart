@@ -23,8 +23,12 @@ SearchSuggestionsResultsDTO _$SearchSuggestionsResultsDTOFromJson(
 mixin _$SearchSuggestionsResultsDTO {
   SearchSuggestionsDTO get results => throw _privateConstructorUsedError;
 
+  /// Serializes this SearchSuggestionsResultsDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SearchSuggestionsResultsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchSuggestionsResultsDTOCopyWith<SearchSuggestionsResultsDTO>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -53,6 +57,8 @@ class _$SearchSuggestionsResultsDTOCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SearchSuggestionsResultsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -66,6 +72,8 @@ class _$SearchSuggestionsResultsDTOCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of SearchSuggestionsResultsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SearchSuggestionsDTOCopyWith<$Res> get results {
@@ -100,6 +108,8 @@ class __$$SearchSuggestionsResultsDTOImplCopyWithImpl<$Res>
       $Res Function(_$SearchSuggestionsResultsDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchSuggestionsResultsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -139,11 +149,13 @@ class _$SearchSuggestionsResultsDTOImpl extends _SearchSuggestionsResultsDTO {
             (identical(other.results, results) || other.results == results));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, results);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchSuggestionsResultsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchSuggestionsResultsDTOImplCopyWith<_$SearchSuggestionsResultsDTOImpl>
@@ -170,8 +182,11 @@ abstract class _SearchSuggestionsResultsDTO
 
   @override
   SearchSuggestionsDTO get results;
+
+  /// Create a copy of SearchSuggestionsResultsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchSuggestionsResultsDTOImplCopyWith<_$SearchSuggestionsResultsDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -185,8 +200,12 @@ mixin _$SearchSuggestionsDTO {
   List<SearchSuggestionDTO>? get suggestions =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this SearchSuggestionsDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SearchSuggestionsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchSuggestionsDTOCopyWith<SearchSuggestionsDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -211,6 +230,8 @@ class _$SearchSuggestionsDTOCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SearchSuggestionsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -244,6 +265,8 @@ class __$$SearchSuggestionsDTOImplCopyWithImpl<$Res>
       $Res Function(_$SearchSuggestionsDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchSuggestionsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -293,12 +316,14 @@ class _$SearchSuggestionsDTOImpl extends _SearchSuggestionsDTO {
                 .equals(other._suggestions, _suggestions));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_suggestions));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchSuggestionsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchSuggestionsDTOImplCopyWith<_$SearchSuggestionsDTOImpl>
@@ -325,8 +350,11 @@ abstract class _SearchSuggestionsDTO extends SearchSuggestionsDTO {
 
   @override
   List<SearchSuggestionDTO>? get suggestions;
+
+  /// Create a copy of SearchSuggestionsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchSuggestionsDTOImplCopyWith<_$SearchSuggestionsDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -393,8 +421,13 @@ mixin _$SearchSuggestionDTO {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this SearchSuggestionDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SearchSuggestionDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchSuggestionDTOCopyWith<SearchSuggestionDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -418,6 +451,8 @@ class _$SearchSuggestionDTOCopyWithImpl<$Res, $Val extends SearchSuggestionDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SearchSuggestionDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -454,6 +489,8 @@ class __$$SearchSuggestionTermsDTOImplCopyWithImpl<$Res>
       $Res Function(_$SearchSuggestionTermsDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchSuggestionDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -512,11 +549,13 @@ class _$SearchSuggestionTermsDTOImpl extends SearchSuggestionTermsDTO {
                 other.displayTerm == displayTerm));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, kind, searchTerm, displayTerm);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchSuggestionDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchSuggestionTermsDTOImplCopyWith<_$SearchSuggestionTermsDTOImpl>
@@ -615,8 +654,11 @@ abstract class SearchSuggestionTermsDTO extends SearchSuggestionDTO {
   String get kind;
   String get searchTerm;
   String? get displayTerm;
+
+  /// Create a copy of SearchSuggestionDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchSuggestionTermsDTOImplCopyWith<_$SearchSuggestionTermsDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -645,6 +687,8 @@ class __$$SearchSuggestionTopResultsDTOImplCopyWithImpl<$Res>
       $Res Function(_$SearchSuggestionTopResultsDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchSuggestionDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -663,6 +707,8 @@ class __$$SearchSuggestionTopResultsDTOImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of SearchSuggestionDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceDTOCopyWith<$Res> get content {
@@ -704,11 +750,13 @@ class _$SearchSuggestionTopResultsDTOImpl
             (identical(other.content, content) || other.content == content));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, kind, content);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchSuggestionDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchSuggestionTopResultsDTOImplCopyWith<
@@ -807,8 +855,11 @@ abstract class SearchSuggestionTopResultsDTO extends SearchSuggestionDTO {
   String get kind;
   @ResourceDTOConverter()
   ResourceDTO get content;
+
+  /// Create a copy of SearchSuggestionDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchSuggestionTopResultsDTOImplCopyWith<
           _$SearchSuggestionTopResultsDTOImpl>
       get copyWith => throw _privateConstructorUsedError;

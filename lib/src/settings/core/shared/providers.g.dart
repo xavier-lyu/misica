@@ -6,7 +6,7 @@ part of 'providers.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$settingsStorageHash() => r'e18f97720db75800f57f1c670dbe4db108e25af6';
+String _$settingsStorageHash() => r'e4b9458f5d93ab12fc181b27a84715d0e4c220e8';
 
 /// See also [settingsStorage].
 @ProviderFor(settingsStorage)
@@ -20,9 +20,11 @@ final settingsStorageProvider = AutoDisposeProvider<SembastSettings>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef SettingsStorageRef = AutoDisposeProviderRef<SembastSettings>;
 String _$settingsRepositoryHash() =>
-    r'bdc8f523659f29aa3fc1ec4a0026064eb380bf68';
+    r'5154b380f1383146e44bad5f25bddfb64de33066';
 
 /// See also [settingsRepository].
 @ProviderFor(settingsRepository)
@@ -37,6 +39,8 @@ final settingsRepositoryProvider =
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef SettingsRepositoryRef = AutoDisposeProviderRef<SettingsRepository>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

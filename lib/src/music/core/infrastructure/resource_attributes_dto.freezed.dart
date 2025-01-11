@@ -40,8 +40,12 @@ mixin _$AlbumAttributesDTO {
   int? get trackCount => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
 
+  /// Serializes this AlbumAttributesDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AlbumAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AlbumAttributesDTOCopyWith<AlbumAttributesDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -87,6 +91,8 @@ class _$AlbumAttributesDTOCopyWithImpl<$Res, $Val extends AlbumAttributesDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AlbumAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -185,6 +191,8 @@ class _$AlbumAttributesDTOCopyWithImpl<$Res, $Val extends AlbumAttributesDTO>
     ) as $Val);
   }
 
+  /// Create a copy of AlbumAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ArtworkDTOCopyWith<$Res>? get artwork {
@@ -197,6 +205,8 @@ class _$AlbumAttributesDTOCopyWithImpl<$Res, $Val extends AlbumAttributesDTO>
     });
   }
 
+  /// Create a copy of AlbumAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $EditorialNotesDTOCopyWith<$Res>? get editorialNotes {
@@ -209,6 +219,8 @@ class _$AlbumAttributesDTOCopyWithImpl<$Res, $Val extends AlbumAttributesDTO>
     });
   }
 
+  /// Create a copy of AlbumAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PlayParamsDTOCopyWith<$Res>? get playParams {
@@ -266,6 +278,8 @@ class __$$AlbumAttributesDTOImplCopyWithImpl<$Res>
       $Res Function(_$AlbumAttributesDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AlbumAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -484,7 +498,7 @@ class _$AlbumAttributesDTOImpl extends _AlbumAttributesDTO {
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -507,7 +521,9 @@ class _$AlbumAttributesDTOImpl extends _AlbumAttributesDTO {
       trackCount,
       url);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AlbumAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AlbumAttributesDTOImplCopyWith<_$AlbumAttributesDTOImpl> get copyWith =>
@@ -584,8 +600,11 @@ abstract class _AlbumAttributesDTO extends AlbumAttributesDTO {
   int? get trackCount;
   @override
   String? get url;
+
+  /// Create a copy of AlbumAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AlbumAttributesDTOImplCopyWith<_$AlbumAttributesDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -602,8 +621,12 @@ mixin _$ArtistAttributesDTO {
   List<String>? get genreNames => throw _privateConstructorUsedError;
   ArtworkDTO? get artwork => throw _privateConstructorUsedError;
 
+  /// Serializes this ArtistAttributesDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ArtistAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ArtistAttributesDTOCopyWith<ArtistAttributesDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -635,6 +658,8 @@ class _$ArtistAttributesDTOCopyWithImpl<$Res, $Val extends ArtistAttributesDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ArtistAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -668,6 +693,8 @@ class _$ArtistAttributesDTOCopyWithImpl<$Res, $Val extends ArtistAttributesDTO>
     ) as $Val);
   }
 
+  /// Create a copy of ArtistAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $EditorialNotesDTOCopyWith<$Res>? get editorialNotes {
@@ -680,6 +707,8 @@ class _$ArtistAttributesDTOCopyWithImpl<$Res, $Val extends ArtistAttributesDTO>
     });
   }
 
+  /// Create a copy of ArtistAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ArtworkDTOCopyWith<$Res>? get artwork {
@@ -722,6 +751,8 @@ class __$$ArtistAttributesDTOImplCopyWithImpl<$Res>
       $Res Function(_$ArtistAttributesDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ArtistAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -809,12 +840,14 @@ class _$ArtistAttributesDTOImpl extends _ArtistAttributesDTO {
             (identical(other.artwork, artwork) || other.artwork == artwork));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, name, url, editorialNotes,
       const DeepCollectionEquality().hash(_genreNames), artwork);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ArtistAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ArtistAttributesDTOImplCopyWith<_$ArtistAttributesDTOImpl> get copyWith =>
@@ -851,8 +884,11 @@ abstract class _ArtistAttributesDTO extends ArtistAttributesDTO {
   List<String>? get genreNames;
   @override
   ArtworkDTO? get artwork;
+
+  /// Create a copy of ArtistAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ArtistAttributesDTOImplCopyWith<_$ArtistAttributesDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -883,8 +919,12 @@ mixin _$MusicVideoAttributesDTO {
   int? get trackNumber => throw _privateConstructorUsedError;
   String? get contentRating => throw _privateConstructorUsedError;
 
+  /// Serializes this MusicVideoAttributesDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MusicVideoAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MusicVideoAttributesDTOCopyWith<MusicVideoAttributesDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -929,6 +969,8 @@ class _$MusicVideoAttributesDTOCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MusicVideoAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1017,6 +1059,8 @@ class _$MusicVideoAttributesDTOCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of MusicVideoAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ArtworkDTOCopyWith<$Res>? get artwork {
@@ -1029,6 +1073,8 @@ class _$MusicVideoAttributesDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of MusicVideoAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $EditorialNotesDTOCopyWith<$Res>? get editorialNotes {
@@ -1041,6 +1087,8 @@ class _$MusicVideoAttributesDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of MusicVideoAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PlayParamsDTOCopyWith<$Res>? get playParams {
@@ -1099,6 +1147,8 @@ class __$$MusicVideoAttributesDTOImplCopyWithImpl<$Res>
       $Res Function(_$MusicVideoAttributesDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MusicVideoAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1302,7 +1352,7 @@ class _$MusicVideoAttributesDTOImpl extends _MusicVideoAttributesDTO {
                 other.contentRating == contentRating));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1323,7 +1373,9 @@ class _$MusicVideoAttributesDTOImpl extends _MusicVideoAttributesDTO {
       trackNumber,
       contentRating);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MusicVideoAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MusicVideoAttributesDTOImplCopyWith<_$MusicVideoAttributesDTOImpl>
@@ -1394,8 +1446,11 @@ abstract class _MusicVideoAttributesDTO extends MusicVideoAttributesDTO {
   int? get trackNumber;
   @override
   String? get contentRating;
+
+  /// Create a copy of MusicVideoAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MusicVideoAttributesDTOImplCopyWith<_$MusicVideoAttributesDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1421,8 +1476,12 @@ mixin _$PlaylistAttributesDTO {
   String? get url => throw _privateConstructorUsedError;
   String? get curatorSocialHandle => throw _privateConstructorUsedError;
 
+  /// Serializes this PlaylistAttributesDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PlaylistAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PlaylistAttributesDTOCopyWith<PlaylistAttributesDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1464,6 +1523,8 @@ class _$PlaylistAttributesDTOCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PlaylistAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1537,6 +1598,8 @@ class _$PlaylistAttributesDTOCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of PlaylistAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ArtworkDTOCopyWith<$Res>? get artwork {
@@ -1549,6 +1612,8 @@ class _$PlaylistAttributesDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PlaylistAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $EditorialNotesDTOCopyWith<$Res>? get description {
@@ -1561,6 +1626,8 @@ class _$PlaylistAttributesDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PlaylistAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PlayParamsDTOCopyWith<$Res>? get playParams {
@@ -1615,6 +1682,8 @@ class __$$PlaylistAttributesDTOImplCopyWithImpl<$Res>
       $Res Function(_$PlaylistAttributesDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PlaylistAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1771,7 +1840,7 @@ class _$PlaylistAttributesDTOImpl extends _PlaylistAttributesDTO {
                 other.curatorSocialHandle == curatorSocialHandle));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -1789,7 +1858,9 @@ class _$PlaylistAttributesDTOImpl extends _PlaylistAttributesDTO {
       url,
       curatorSocialHandle);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PlaylistAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PlaylistAttributesDTOImplCopyWith<_$PlaylistAttributesDTOImpl>
@@ -1850,8 +1921,11 @@ abstract class _PlaylistAttributesDTO extends PlaylistAttributesDTO {
   String? get url;
   @override
   String? get curatorSocialHandle;
+
+  /// Create a copy of PlaylistAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PlaylistAttributesDTOImplCopyWith<_$PlaylistAttributesDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1888,8 +1962,12 @@ mixin _$SongAttributesDTO {
   String? get url => throw _privateConstructorUsedError;
   String? get workName => throw _privateConstructorUsedError;
 
+  /// Serializes this SongAttributesDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SongAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SongAttributesDTOCopyWith<SongAttributesDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1939,6 +2017,8 @@ class _$SongAttributesDTOCopyWithImpl<$Res, $Val extends SongAttributesDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SongAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2062,6 +2142,8 @@ class _$SongAttributesDTOCopyWithImpl<$Res, $Val extends SongAttributesDTO>
     ) as $Val);
   }
 
+  /// Create a copy of SongAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ArtworkDTOCopyWith<$Res>? get artwork {
@@ -2074,6 +2156,8 @@ class _$SongAttributesDTOCopyWithImpl<$Res, $Val extends SongAttributesDTO>
     });
   }
 
+  /// Create a copy of SongAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PlayParamsDTOCopyWith<$Res>? get playParams {
@@ -2134,6 +2218,8 @@ class __$$SongAttributesDTOImplCopyWithImpl<$Res>
       $Res Function(_$SongAttributesDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SongAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2418,7 +2504,7 @@ class _$SongAttributesDTOImpl extends _SongAttributesDTO {
                 other.workName == workName));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
@@ -2447,7 +2533,9 @@ class _$SongAttributesDTOImpl extends _SongAttributesDTO {
         workName
       ]);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SongAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SongAttributesDTOImplCopyWith<_$SongAttributesDTOImpl> get copyWith =>
@@ -2539,8 +2627,11 @@ abstract class _SongAttributesDTO extends SongAttributesDTO {
   String? get url;
   @override
   String? get workName;
+
+  /// Create a copy of SongAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SongAttributesDTOImplCopyWith<_$SongAttributesDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2561,8 +2652,12 @@ mixin _$StationAttributesDTO {
   String? get streamingRadioSubType => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
 
+  /// Serializes this StationAttributesDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StationAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $StationAttributesDTOCopyWith<StationAttributesDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2600,6 +2695,8 @@ class _$StationAttributesDTOCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of StationAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2653,6 +2750,8 @@ class _$StationAttributesDTOCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of StationAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ArtworkDTOCopyWith<$Res>? get artwork {
@@ -2665,6 +2764,8 @@ class _$StationAttributesDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of StationAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PlayParamsDTOCopyWith<$Res>? get playParams {
@@ -2677,6 +2778,8 @@ class _$StationAttributesDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of StationAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $EditorialNotesDTOCopyWith<$Res>? get editorialNotes {
@@ -2725,6 +2828,8 @@ class __$$StationAttributesDTOImplCopyWithImpl<$Res>
       $Res Function(_$StationAttributesDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StationAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2842,7 +2947,7 @@ class _$StationAttributesDTOImpl extends _StationAttributesDTO {
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -2856,7 +2961,9 @@ class _$StationAttributesDTOImpl extends _StationAttributesDTO {
       streamingRadioSubType,
       url);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StationAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StationAttributesDTOImplCopyWith<_$StationAttributesDTOImpl>
@@ -2906,8 +3013,11 @@ abstract class _StationAttributesDTO extends StationAttributesDTO {
   String? get streamingRadioSubType;
   @override
   String? get url;
+
+  /// Create a copy of StationAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StationAttributesDTOImplCopyWith<_$StationAttributesDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2923,8 +3033,12 @@ mixin _$CuratorAttributesDTO {
   String get name => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
 
+  /// Serializes this CuratorAttributesDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CuratorAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CuratorAttributesDTOCopyWith<CuratorAttributesDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2956,6 +3070,8 @@ class _$CuratorAttributesDTOCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CuratorAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2984,6 +3100,8 @@ class _$CuratorAttributesDTOCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of CuratorAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ArtworkDTOCopyWith<$Res>? get artwork {
@@ -2996,6 +3114,8 @@ class _$CuratorAttributesDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of CuratorAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $EditorialNotesDTOCopyWith<$Res>? get editorialNotes {
@@ -3037,6 +3157,8 @@ class __$$CuratorAttributesDTOImplCopyWithImpl<$Res>
       $Res Function(_$CuratorAttributesDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CuratorAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3102,12 +3224,14 @@ class _$CuratorAttributesDTOImpl extends _CuratorAttributesDTO {
             (identical(other.url, url) || other.url == url));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, artwork, editorialNotes, name, url);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CuratorAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CuratorAttributesDTOImplCopyWith<_$CuratorAttributesDTOImpl>
@@ -3142,8 +3266,11 @@ abstract class _CuratorAttributesDTO extends CuratorAttributesDTO {
   String get name;
   @override
   String? get url;
+
+  /// Create a copy of CuratorAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CuratorAttributesDTOImplCopyWith<_$CuratorAttributesDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3158,8 +3285,12 @@ mixin _$GenreAttributesDTO {
   String? get parentName => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
 
+  /// Serializes this GenreAttributesDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of GenreAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $GenreAttributesDTOCopyWith<GenreAttributesDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3183,6 +3314,8 @@ class _$GenreAttributesDTOCopyWithImpl<$Res, $Val extends GenreAttributesDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of GenreAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3226,6 +3359,8 @@ class __$$GenreAttributesDTOImplCopyWithImpl<$Res>
       $Res Function(_$GenreAttributesDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of GenreAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3284,11 +3419,13 @@ class _$GenreAttributesDTOImpl extends _GenreAttributesDTO {
             (identical(other.name, name) || other.name == name));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, parentId, parentName, name);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of GenreAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GenreAttributesDTOImplCopyWith<_$GenreAttributesDTOImpl> get copyWith =>
@@ -3319,8 +3456,11 @@ abstract class _GenreAttributesDTO extends GenreAttributesDTO {
   String? get parentName;
   @override
   String get name;
+
+  /// Create a copy of GenreAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GenreAttributesDTOImplCopyWith<_$GenreAttributesDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

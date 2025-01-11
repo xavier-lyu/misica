@@ -18,7 +18,9 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$SearchResults {
   Map<String, SearchResult>? get results => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchResults
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchResultsCopyWith<SearchResults> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -42,6 +44,8 @@ class _$SearchResultsCopyWithImpl<$Res, $Val extends SearchResults>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SearchResults
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -75,6 +79,8 @@ class __$$SearchResultsImplCopyWithImpl<$Res>
       _$SearchResultsImpl _value, $Res Function(_$SearchResultsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchResults
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -122,7 +128,9 @@ class _$SearchResultsImpl implements _SearchResults {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_results));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchResults
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchResultsImplCopyWith<_$SearchResultsImpl> get copyWith =>
@@ -136,8 +144,11 @@ abstract class _SearchResults implements SearchResults {
 
   @override
   Map<String, SearchResult>? get results;
+
+  /// Create a copy of SearchResults
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchResultsImplCopyWith<_$SearchResultsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -148,7 +159,9 @@ mixin _$SearchResult {
   String get groupId => throw _privateConstructorUsedError;
   List<Resource> get data => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SearchResultCopyWith<SearchResult> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -172,6 +185,8 @@ class _$SearchResultCopyWithImpl<$Res, $Val extends SearchResult>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SearchResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -215,6 +230,8 @@ class __$$SearchResultImplCopyWithImpl<$Res>
       _$SearchResultImpl _value, $Res Function(_$SearchResultImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SearchResult
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -279,7 +296,9 @@ class _$SearchResultImpl implements _SearchResult {
   int get hashCode => Object.hash(
       runtimeType, name, groupId, const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SearchResult
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SearchResultImplCopyWith<_$SearchResultImpl> get copyWith =>
@@ -298,8 +317,11 @@ abstract class _SearchResult implements SearchResult {
   String get groupId;
   @override
   List<Resource> get data;
+
+  /// Create a copy of SearchResult
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SearchResultImplCopyWith<_$SearchResultImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

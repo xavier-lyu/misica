@@ -24,7 +24,7 @@ class ArtworkWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final bgColor = artwork?.bgColor != null
         ? colorFromHexString(artwork!.bgColor!)
-        : context.toc.colorScheme.surfaceVariant;
+        : context.toc.colorScheme.surfaceContainerHighest;
 
     return Container(
       decoration: artworkShadow(bgColor, context.toc.brightness, radius),

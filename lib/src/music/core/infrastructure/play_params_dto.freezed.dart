@@ -32,8 +32,12 @@ mixin _$PlayParamsDTO {
   int? get streamingKind => throw _privateConstructorUsedError;
   bool? get hasDrm => throw _privateConstructorUsedError;
 
+  /// Serializes this PlayParamsDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PlayParamsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PlayParamsDTOCopyWith<PlayParamsDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -68,6 +72,8 @@ class _$PlayParamsDTOCopyWithImpl<$Res, $Val extends PlayParamsDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PlayParamsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -162,6 +168,8 @@ class __$$PlayParamsDTOImplCopyWithImpl<$Res>
       _$PlayParamsDTOImpl _value, $Res Function(_$PlayParamsDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PlayParamsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -299,7 +307,7 @@ class _$PlayParamsDTOImpl extends _PlayParamsDTO {
             (identical(other.hasDrm, hasDrm) || other.hasDrm == hasDrm));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -315,7 +323,9 @@ class _$PlayParamsDTOImpl extends _PlayParamsDTO {
       streamingKind,
       hasDrm);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PlayParamsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PlayParamsDTOImplCopyWith<_$PlayParamsDTOImpl> get copyWith =>
@@ -369,8 +379,11 @@ abstract class _PlayParamsDTO extends PlayParamsDTO {
   int? get streamingKind;
   @override
   bool? get hasDrm;
+
+  /// Create a copy of PlayParamsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PlayParamsDTOImplCopyWith<_$PlayParamsDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

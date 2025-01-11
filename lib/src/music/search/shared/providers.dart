@@ -10,12 +10,12 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'providers.g.dart';
 
 @riverpod
-SearchService searchService(SearchServiceRef ref) {
+SearchService searchService(Ref ref) {
   return SearchService(ref.watch(musicDioProvider));
 }
 
 @riverpod
-SearchRepository searchRepository(SearchRepositoryRef ref) {
+SearchRepository searchRepository(Ref ref) {
   return SearchRepository(ref.watch(searchServiceProvider));
 }
 

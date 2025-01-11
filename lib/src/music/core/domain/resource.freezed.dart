@@ -263,8 +263,13 @@ mixin _$Resource {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this Resource to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ResourceCopyWith<Resource> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -287,6 +292,8 @@ class _$ResourceCopyWithImpl<$Res, $Val extends Resource>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -327,6 +334,8 @@ class __$$ResourceRawImplCopyWithImpl<$Res>
       _$ResourceRawImpl _value, $Res Function(_$ResourceRawImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -350,6 +359,8 @@ class __$$ResourceRawImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceAttributesCopyWith<$Res>? get attributes {
@@ -403,11 +414,13 @@ class _$ResourceRawImpl extends ResourceRaw {
                 other.attributes == attributes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, type, attributes);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ResourceRawImplCopyWith<_$ResourceRawImpl> get copyWith =>
@@ -678,8 +691,11 @@ abstract class ResourceRaw extends Resource {
   String get type;
   @override
   ResourceAttributes? get attributes;
+
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ResourceRawImplCopyWith<_$ResourceRawImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -712,6 +728,8 @@ class __$$AlbumImplCopyWithImpl<$Res>
       _$AlbumImpl _value, $Res Function(_$AlbumImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -745,6 +763,8 @@ class __$$AlbumImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AlbumAttributesCopyWith<$Res>? get attributes {
@@ -757,6 +777,8 @@ class __$$AlbumImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AlbumRelationshipsCopyWith<$Res>? get relationships {
@@ -830,12 +852,14 @@ class _$AlbumImpl extends Album {
             const DeepCollectionEquality().equals(other._views, _views));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, type, attributes,
       relationships, const DeepCollectionEquality().hash(_views));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AlbumImplCopyWith<_$AlbumImpl> get copyWith =>
@@ -1113,8 +1137,11 @@ abstract class Album extends Resource {
   AlbumRelationships? get relationships;
   @JsonKey(includeFromJson: false, includeToJson: false)
   Map<String, ResourceView>? get views;
+
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AlbumImplCopyWith<_$AlbumImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1147,6 +1174,8 @@ class __$$ArtistImplCopyWithImpl<$Res>
       _$ArtistImpl _value, $Res Function(_$ArtistImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1180,6 +1209,8 @@ class __$$ArtistImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ArtistAttributesCopyWith<$Res>? get attributes {
@@ -1192,6 +1223,8 @@ class __$$ArtistImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ArtistRelationshipsCopyWith<$Res>? get relationships {
@@ -1265,12 +1298,14 @@ class _$ArtistImpl extends Artist {
             const DeepCollectionEquality().equals(other._views, _views));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, type, attributes,
       relationships, const DeepCollectionEquality().hash(_views));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ArtistImplCopyWith<_$ArtistImpl> get copyWith =>
@@ -1548,8 +1583,11 @@ abstract class Artist extends Resource {
   ArtistRelationships? get relationships;
   @JsonKey(includeFromJson: false, includeToJson: false)
   Map<String, ResourceView>? get views;
+
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ArtistImplCopyWith<_$ArtistImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1581,6 +1619,8 @@ class __$$MusicVideoImplCopyWithImpl<$Res>
       _$MusicVideoImpl _value, $Res Function(_$MusicVideoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1609,6 +1649,8 @@ class __$$MusicVideoImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MusicVideoAttributesCopyWith<$Res>? get attributes {
@@ -1621,6 +1663,8 @@ class __$$MusicVideoImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MusicVideoRelationshipsCopyWith<$Res>? get relationships {
@@ -1681,12 +1725,14 @@ class _$MusicVideoImpl extends MusicVideo {
                 other.relationships == relationships));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, type, attributes, relationships);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MusicVideoImplCopyWith<_$MusicVideoImpl> get copyWith =>
@@ -1961,8 +2007,11 @@ abstract class MusicVideo extends Resource {
   MusicVideoAttributes? get attributes;
   @JsonKey(includeFromJson: false, includeToJson: false)
   MusicVideoRelationships? get relationships;
+
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MusicVideoImplCopyWith<_$MusicVideoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1996,6 +2045,8 @@ class __$$PlaylistImplCopyWithImpl<$Res>
       _$PlaylistImpl _value, $Res Function(_$PlaylistImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2029,6 +2080,8 @@ class __$$PlaylistImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PlaylistAttributesCopyWith<$Res>? get attributes {
@@ -2041,6 +2094,8 @@ class __$$PlaylistImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PlaylistRelationshipsCopyWith<$Res>? get relationships {
@@ -2114,12 +2169,14 @@ class _$PlaylistImpl extends Playlist {
             const DeepCollectionEquality().equals(other._views, _views));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, type, attributes,
       relationships, const DeepCollectionEquality().hash(_views));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PlaylistImplCopyWith<_$PlaylistImpl> get copyWith =>
@@ -2398,8 +2455,11 @@ abstract class Playlist extends Resource {
   PlaylistRelationships? get relationships;
   @JsonKey(includeFromJson: false, includeToJson: false)
   Map<String, ResourceView>? get views;
+
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PlaylistImplCopyWith<_$PlaylistImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2429,6 +2489,8 @@ class __$$SongImplCopyWithImpl<$Res>
   __$$SongImplCopyWithImpl(_$SongImpl _value, $Res Function(_$SongImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2457,6 +2519,8 @@ class __$$SongImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SongAttributesCopyWith<$Res>? get attributes {
@@ -2469,6 +2533,8 @@ class __$$SongImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SongRelationshipsCopyWith<$Res>? get relationships {
@@ -2528,12 +2594,14 @@ class _$SongImpl extends Song {
                 other.relationships == relationships));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, type, attributes, relationships);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SongImplCopyWith<_$SongImpl> get copyWith =>
@@ -2807,8 +2875,11 @@ abstract class Song extends Resource {
   SongAttributes? get attributes;
   @JsonKey(includeFromJson: false, includeToJson: false)
   SongRelationships? get relationships;
+
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SongImplCopyWith<_$SongImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2833,6 +2904,8 @@ class __$$StationImplCopyWithImpl<$Res>
       _$StationImpl _value, $Res Function(_$StationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2856,6 +2929,8 @@ class __$$StationImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StationAttributesCopyWith<$Res>? get attributes {
@@ -2909,11 +2984,13 @@ class _$StationImpl extends Station {
                 other.attributes == attributes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, type, attributes);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StationImplCopyWith<_$StationImpl> get copyWith =>
@@ -3183,8 +3260,11 @@ abstract class Station extends Resource {
   String get type;
   @override
   StationAttributes? get attributes;
+
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StationImplCopyWith<_$StationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3215,6 +3295,8 @@ class __$$CuratorImplCopyWithImpl<$Res>
       _$CuratorImpl _value, $Res Function(_$CuratorImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3243,6 +3325,8 @@ class __$$CuratorImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CuratorAttributesCopyWith<$Res>? get attributes {
@@ -3255,6 +3339,8 @@ class __$$CuratorImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CuratorRelationshipsCopyWith<$Res>? get relationships {
@@ -3314,12 +3400,14 @@ class _$CuratorImpl extends Curator {
                 other.relationships == relationships));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, type, attributes, relationships);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CuratorImplCopyWith<_$CuratorImpl> get copyWith =>
@@ -3593,8 +3681,11 @@ abstract class Curator extends Resource {
   CuratorAttributes? get attributes;
   @JsonKey(includeFromJson: false, includeToJson: false)
   CuratorRelationships? get relationships;
+
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CuratorImplCopyWith<_$CuratorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3619,6 +3710,8 @@ class __$$GenreImplCopyWithImpl<$Res>
       _$GenreImpl _value, $Res Function(_$GenreImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3642,6 +3735,8 @@ class __$$GenreImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $GenreAttributesCopyWith<$Res>? get attributes {
@@ -3695,11 +3790,13 @@ class _$GenreImpl extends Genre {
                 other.attributes == attributes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, type, attributes);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GenreImplCopyWith<_$GenreImpl> get copyWith =>
@@ -3969,8 +4066,11 @@ abstract class Genre extends Resource {
   String get type;
   @override
   GenreAttributes? get attributes;
+
+  /// Create a copy of Resource
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GenreImplCopyWith<_$GenreImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

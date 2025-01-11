@@ -16,8 +16,8 @@ _$PlayParamsDTOImpl _$$PlayParamsDTOImplFromJson(Map json) =>
       reporting: json['reporting'] as bool?,
       format: json['format'] as String?,
       stationHash: json['stationHash'] as String?,
-      mediaType: json['mediaType'] as int?,
-      streamingKind: json['streamingKind'] as int?,
+      mediaType: (json['mediaType'] as num?)?.toInt(),
+      streamingKind: (json['streamingKind'] as num?)?.toInt(),
       hasDrm: json['hasDrm'] as bool?,
     );
 

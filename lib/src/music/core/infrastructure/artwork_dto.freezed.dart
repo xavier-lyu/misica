@@ -29,8 +29,12 @@ mixin _$ArtworkDTO {
   String get url => throw _privateConstructorUsedError;
   int get width => throw _privateConstructorUsedError;
 
+  /// Serializes this ArtworkDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ArtworkDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ArtworkDTOCopyWith<ArtworkDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -62,6 +66,8 @@ class _$ArtworkDTOCopyWithImpl<$Res, $Val extends ArtworkDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ArtworkDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -138,6 +144,8 @@ class __$$ArtworkDTOImplCopyWithImpl<$Res>
       _$ArtworkDTOImpl _value, $Res Function(_$ArtworkDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ArtworkDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -245,12 +253,14 @@ class _$ArtworkDTOImpl extends _ArtworkDTO {
             (identical(other.width, width) || other.width == width));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, bgColor, height, textColor1,
       textColor2, textColor3, textColor4, url, width);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ArtworkDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ArtworkDTOImplCopyWith<_$ArtworkDTOImpl> get copyWith =>
@@ -295,8 +305,11 @@ abstract class _ArtworkDTO extends ArtworkDTO {
   String get url;
   @override
   int get width;
+
+  /// Create a copy of ArtworkDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ArtworkDTOImplCopyWith<_$ArtworkDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

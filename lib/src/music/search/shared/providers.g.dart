@@ -6,7 +6,7 @@ part of 'providers.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$searchServiceHash() => r'6524a21b7b216ab5fe420855e20ea8d00bcb04bf';
+String _$searchServiceHash() => r'5c149de6161c5219d71ad560c84a3ad983dd4bd3';
 
 /// See also [searchService].
 @ProviderFor(searchService)
@@ -20,8 +20,10 @@ final searchServiceProvider = AutoDisposeProvider<SearchService>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef SearchServiceRef = AutoDisposeProviderRef<SearchService>;
-String _$searchRepositoryHash() => r'5e958d1b1b380d9d06f46910b89f2dcde75ea388';
+String _$searchRepositoryHash() => r'30a12a46badabb7714d325cd91b560b6bcdbc550';
 
 /// See also [searchRepository].
 @ProviderFor(searchRepository)
@@ -35,6 +37,8 @@ final searchRepositoryProvider = AutoDisposeProvider<SearchRepository>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef SearchRepositoryRef = AutoDisposeProviderRef<SearchRepository>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

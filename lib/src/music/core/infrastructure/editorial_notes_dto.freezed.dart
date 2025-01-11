@@ -24,8 +24,12 @@ mixin _$EditorialNotesDTO {
   String? get standard => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
 
+  /// Serializes this EditorialNotesDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of EditorialNotesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $EditorialNotesDTOCopyWith<EditorialNotesDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$EditorialNotesDTOCopyWithImpl<$Res, $Val extends EditorialNotesDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of EditorialNotesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$EditorialNotesDTOImplCopyWithImpl<$Res>
       $Res Function(_$EditorialNotesDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of EditorialNotesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -148,11 +156,13 @@ class _$EditorialNotesDTOImpl extends _EditorialNotesDTO {
             (identical(other.name, name) || other.name == name));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, short, standard, name);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of EditorialNotesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$EditorialNotesDTOImplCopyWith<_$EditorialNotesDTOImpl> get copyWith =>
@@ -183,8 +193,11 @@ abstract class _EditorialNotesDTO extends EditorialNotesDTO {
   String? get standard;
   @override
   String? get name;
+
+  /// Create a copy of EditorialNotesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$EditorialNotesDTOImplCopyWith<_$EditorialNotesDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

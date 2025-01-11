@@ -36,7 +36,7 @@ _$AlbumAttributesDTOImpl _$$AlbumAttributesDTOImplFromJson(Map json) =>
       recordLabel: json['recordLabel'] as String?,
       releaseDate:
           const DateTimeConverter().fromJson(json['releaseDate'] as String?),
-      trackCount: json['trackCount'] as int?,
+      trackCount: (json['trackCount'] as num?)?.toInt(),
       url: json['url'] as String?,
     );
 
@@ -99,7 +99,7 @@ _$MusicVideoAttributesDTOImpl _$$MusicVideoAttributesDTOImplFromJson(
           ? null
           : ArtworkDTO.fromJson(
               Map<String, dynamic>.from(json['artwork'] as Map)),
-      durationInMillis: json['durationInMillis'] as int,
+      durationInMillis: (json['durationInMillis'] as num).toInt(),
       editorialNotes: json['editorialNotes'] == null
           ? null
           : EditorialNotesDTO.fromJson(
@@ -121,7 +121,7 @@ _$MusicVideoAttributesDTOImpl _$$MusicVideoAttributesDTOImplFromJson(
       releaseDate:
           const DateTimeConverter().fromJson(json['releaseDate'] as String?),
       url: json['url'] as String?,
-      trackNumber: json['trackNumber'] as int?,
+      trackNumber: (json['trackNumber'] as num?)?.toInt(),
       contentRating: json['contentRating'] as String?,
     );
 
@@ -206,8 +206,8 @@ _$SongAttributesDTOImpl _$$SongAttributesDTOImplFromJson(Map json) =>
           .toList(),
       composerName: json['composerName'] as String?,
       contentRating: json['contentRating'] as String?,
-      discNumber: json['discNumber'] as int?,
-      durationInMillis: json['durationInMillis'] as int,
+      discNumber: (json['discNumber'] as num?)?.toInt(),
+      durationInMillis: (json['durationInMillis'] as num).toInt(),
       genreNames: (json['genreNames'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
@@ -225,7 +225,7 @@ _$SongAttributesDTOImpl _$$SongAttributesDTOImplFromJson(Map json) =>
           .toList(),
       releaseDate:
           const DateTimeConverter().fromJson(json['releaseDate'] as String?),
-      trackNumber: json['trackNumber'] as int?,
+      trackNumber: (json['trackNumber'] as num?)?.toInt(),
       url: json['url'] as String?,
       workName: json['workName'] as String?,
     );
@@ -273,7 +273,7 @@ _$StationAttributesDTOImpl _$$StationAttributesDTOImplFromJson(Map json) =>
           ? null
           : EditorialNotesDTO.fromJson(
               Map<String, dynamic>.from(json['editorialNotes'] as Map)),
-      durationInMillis: json['durationInMillis'] as int?,
+      durationInMillis: (json['durationInMillis'] as num?)?.toInt(),
       mediaKind: json['mediaKind'] as String?,
       name: json['name'] as String,
       streamingRadioSubType: json['streamingRadioSubType'] as String?,

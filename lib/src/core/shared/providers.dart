@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:fpdart/fpdart.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/authorization/application/auth_notifier.dart';
 import 'package:misica/src/authorization/shared/providers.dart';
 import 'package:misica/src/core/infrastructure/dio_json_transformer.dart';
@@ -17,18 +18,18 @@ import 'dio_sembast_cache_interceptor.dart';
 part 'providers.g.dart';
 
 @Riverpod(keepAlive: true)
-MusicKit musicKit(MusicKitRef ref) => MusicKit();
+MusicKit musicKit(Ref ref) => MusicKit();
 
 @riverpod
-Dio musicDio(MusicDioRef ref) {
+Dio musicDio(Ref ref) {
   return Dio()..transformer = DioJsonTransformer();
 }
 
 @Riverpod(keepAlive: true)
-SembastDatabase sembast(SembastRef ref) => SembastDatabase();
+SembastDatabase sembast(Ref ref) => SembastDatabase();
 
 @riverpod
-Future<Unit> initialization(InitializationRef ref) async {
+Future<Unit> initialization(Ref ref) async {
   await ref.read(sembastProvider).init();
   await ref.read(settingsNotifierProvider.notifier).checkAndUpdateSettings();
 

@@ -9,13 +9,12 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'providers.g.dart';
 
 @riverpod
-LikedResourcesLocalService likedLocalService(LikedLocalServiceRef ref) {
+LikedResourcesLocalService likedLocalService(Ref ref) {
   return LikedResourcesLocalService(ref.watch(sembastProvider));
 }
 
 @riverpod
-LikedResourcesRepository likedResourcesRepository(
-    LikedResourcesRepositoryRef ref) {
+LikedResourcesRepository likedResourcesRepository(Ref ref) {
   return LikedResourcesRepository(ref.watch(likedLocalServiceProvider));
 }
 
@@ -25,7 +24,6 @@ final likedResourcesNotifierProvider = StateNotifierProvider<
 );
 
 @riverpod
-Future<bool> isResourceLiked(IsResourceLikedRef ref,
-    {required String resourceId}) async {
+Future<bool> isResourceLiked(Ref ref, {required String resourceId}) async {
   return ref.watch(likedResourcesNotifierProvider.notifier).isLiked(resourceId);
 }

@@ -26,8 +26,12 @@ mixin _$Artwork {
   int get width => throw _privateConstructorUsedError;
   String? get textColor => throw _privateConstructorUsedError;
 
+  /// Serializes this Artwork to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Artwork
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ArtworkCopyWith<Artwork> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -50,6 +54,8 @@ class _$ArtworkCopyWithImpl<$Res, $Val extends Artwork>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Artwork
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -103,6 +109,8 @@ class __$$ArtworkImplCopyWithImpl<$Res>
       _$ArtworkImpl _value, $Res Function(_$ArtworkImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Artwork
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -180,12 +188,14 @@ class _$ArtworkImpl extends _Artwork {
                 other.textColor == textColor));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, bgColor, height, url, width, textColor);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Artwork
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ArtworkImplCopyWith<_$ArtworkImpl> get copyWith =>
@@ -220,8 +230,11 @@ abstract class _Artwork extends Artwork {
   int get width;
   @override
   String? get textColor;
+
+  /// Create a copy of Artwork
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ArtworkImplCopyWith<_$ArtworkImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

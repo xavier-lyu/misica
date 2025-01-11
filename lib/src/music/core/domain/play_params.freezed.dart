@@ -23,8 +23,12 @@ mixin _$PlayParams {
   String get id => throw _privateConstructorUsedError;
   String get kind => throw _privateConstructorUsedError;
 
+  /// Serializes this PlayParams to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PlayParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PlayParamsCopyWith<PlayParams> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$PlayParamsCopyWithImpl<$Res, $Val extends PlayParams>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PlayParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +92,8 @@ class __$$PlayParamsImplCopyWithImpl<$Res>
       _$PlayParamsImpl _value, $Res Function(_$PlayParamsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PlayParams
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -132,11 +140,13 @@ class _$PlayParamsImpl extends _PlayParams {
             (identical(other.kind, kind) || other.kind == kind));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, kind);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PlayParams
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PlayParamsImplCopyWith<_$PlayParamsImpl> get copyWith =>
@@ -163,8 +173,11 @@ abstract class _PlayParams extends PlayParams {
   String get id;
   @override
   String get kind;
+
+  /// Create a copy of PlayParams
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PlayParamsImplCopyWith<_$PlayParamsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

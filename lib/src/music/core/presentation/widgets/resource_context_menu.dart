@@ -83,16 +83,16 @@ class ResourceMenuModal extends StatelessWidget {
               ...resource.maybeMap(
                 (value) => [],
                 orElse: () => [],
-                song: (_) {
+                song: (song) {
                   final isInAlbum = container == ResourceContainer.album;
                   if (isInAlbum) return [];
 
                   return [
-                    _.albumId == null
+                    song.albumId == null
                         ? const SizedBox()
-                        : GoToAlbumTile(albumId: _.albumId!),
-                    _.artistIds?.isNotEmpty == true
-                        ? GoToArtistTile(artistId: _.artistIds![0])
+                        : GoToAlbumTile(albumId: song.albumId!),
+                    song.artistIds?.isNotEmpty == true
+                        ? GoToArtistTile(artistId: song.artistIds![0])
                         : const SizedBox(),
                   ];
                 },

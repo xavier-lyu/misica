@@ -9,11 +9,11 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'providers.g.dart';
 
 @riverpod
-ArtistsService artistService(ArtistServiceRef ref) =>
+ArtistsService artistService(Ref ref) =>
     ArtistsService(ref.watch(musicDioProvider));
 
 @riverpod
-ArtistsRepository artistRepository(ArtistRepositoryRef ref) =>
+ArtistsRepository artistRepository(Ref ref) =>
     ArtistsRepository(ref.watch(artistServiceProvider));
 
 final artistNotifierProvider =

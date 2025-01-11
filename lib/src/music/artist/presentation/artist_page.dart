@@ -142,9 +142,9 @@ class ArtistExpandedTitle extends StatelessWidget {
               begin: Alignment.bottomCenter,
               end: Alignment.topCenter,
               colors: [
-                Colors.black.withOpacity(0.5),
-                Colors.black.withOpacity(0.25),
-                Colors.black.withOpacity(0),
+                Colors.black.withValues(alpha: 0.5),
+                Colors.black.withValues(alpha: 0.25),
+                Colors.black.withValues(alpha: 0),
               ]),
         ),
         padding: const EdgeInsetsDirectional.only(
@@ -161,7 +161,7 @@ class ArtistExpandedTitle extends StatelessWidget {
                 title,
                 style: context.ttoc.headlineLarge?.copyWith(
                     fontWeight: FontWeight.bold,
-                    color: Colors.white.withOpacity(opacity)),
+                    color: Colors.white.withValues(alpha: opacity)),
                 overflow: TextOverflow.ellipsis,
                 minFontSize: context.ttoc.headlineSmall?.fontSize ?? 20,
                 maxLines: 1,
@@ -169,7 +169,7 @@ class ArtistExpandedTitle extends StatelessWidget {
             ),
             IconButton(
               iconSize: 44,
-              color: Colors.white.withOpacity(opacity),
+              color: Colors.white.withValues(alpha: opacity),
               icon: const Icon(
                 Icons.play_circle_fill_rounded,
                 // size: 44,

@@ -24,7 +24,9 @@ mixin _$Charts {
   List<AlbumsChart>? get albums => throw _privateConstructorUsedError;
   List<MusicVideosChart>? get musicVideos => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Charts
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ChartsCopyWith<Charts> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -52,6 +54,8 @@ class _$ChartsCopyWithImpl<$Res, $Val extends Charts>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Charts
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -115,6 +119,8 @@ class __$$ChartsImplCopyWithImpl<$Res>
       _$ChartsImpl _value, $Res Function(_$ChartsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Charts
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -265,7 +271,9 @@ class _$ChartsImpl extends _Charts {
       const DeepCollectionEquality().hash(_albums),
       const DeepCollectionEquality().hash(_musicVideos));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Charts
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ChartsImplCopyWith<_$ChartsImpl> get copyWith =>
@@ -294,8 +302,11 @@ abstract class _Charts extends Charts {
   List<AlbumsChart>? get albums;
   @override
   List<MusicVideosChart>? get musicVideos;
+
+  /// Create a copy of Charts
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ChartsImplCopyWith<_$ChartsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -364,7 +375,9 @@ mixin _$Chart {
   }) =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Chart
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ChartCopyWith<Chart> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -386,6 +399,8 @@ class _$ChartCopyWithImpl<$Res, $Val extends Chart>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Chart
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -424,6 +439,8 @@ class __$$AlbumsChartImplCopyWithImpl<$Res>
       _$AlbumsChartImpl _value, $Res Function(_$AlbumsChartImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Chart
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -489,7 +506,9 @@ class _$AlbumsChartImpl extends AlbumsChart {
   int get hashCode => Object.hash(
       runtimeType, name, chart, const DeepCollectionEquality().hash(_albums));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Chart
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AlbumsChartImplCopyWith<_$AlbumsChartImpl> get copyWith =>
@@ -591,8 +610,11 @@ abstract class AlbumsChart extends Chart {
   @override
   String get chart;
   List<Album> get albums;
+
+  /// Create a copy of Chart
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AlbumsChartImplCopyWith<_$AlbumsChartImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -616,6 +638,8 @@ class __$$PlaylistsChartImplCopyWithImpl<$Res>
       _$PlaylistsChartImpl _value, $Res Function(_$PlaylistsChartImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Chart
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -682,7 +706,9 @@ class _$PlaylistsChartImpl extends PlaylistsChart {
   int get hashCode => Object.hash(runtimeType, name, chart,
       const DeepCollectionEquality().hash(_playlists));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Chart
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PlaylistsChartImplCopyWith<_$PlaylistsChartImpl> get copyWith =>
@@ -785,8 +811,11 @@ abstract class PlaylistsChart extends Chart {
   @override
   String get chart;
   List<Playlist> get playlists;
+
+  /// Create a copy of Chart
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PlaylistsChartImplCopyWith<_$PlaylistsChartImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -809,6 +838,8 @@ class __$$SongsChartImplCopyWithImpl<$Res>
       _$SongsChartImpl _value, $Res Function(_$SongsChartImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Chart
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -874,7 +905,9 @@ class _$SongsChartImpl extends SongsChart {
   int get hashCode => Object.hash(
       runtimeType, name, chart, const DeepCollectionEquality().hash(_songs));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Chart
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SongsChartImplCopyWith<_$SongsChartImpl> get copyWith =>
@@ -976,8 +1009,11 @@ abstract class SongsChart extends Chart {
   @override
   String get chart;
   List<Song> get songs;
+
+  /// Create a copy of Chart
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SongsChartImplCopyWith<_$SongsChartImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1001,6 +1037,8 @@ class __$$MusicVideosChartImplCopyWithImpl<$Res>
       $Res Function(_$MusicVideosChartImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Chart
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1066,7 +1104,9 @@ class _$MusicVideosChartImpl extends MusicVideosChart {
   int get hashCode => Object.hash(
       runtimeType, name, chart, const DeepCollectionEquality().hash(_mvs));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Chart
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MusicVideosChartImplCopyWith<_$MusicVideosChartImpl> get copyWith =>
@@ -1169,8 +1209,11 @@ abstract class MusicVideosChart extends Chart {
   @override
   String get chart;
   List<MusicVideo> get mvs;
+
+  /// Create a copy of Chart
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MusicVideosChartImplCopyWith<_$MusicVideosChartImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

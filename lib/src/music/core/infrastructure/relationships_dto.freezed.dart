@@ -25,8 +25,12 @@ mixin _$ResourceRelationshipDTO {
   @ResourceDTOConverter()
   List<ResourceDTO> get data => throw _privateConstructorUsedError;
 
+  /// Serializes this ResourceRelationshipDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ResourceRelationshipDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ResourceRelationshipDTOCopyWith<ResourceRelationshipDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51,6 +55,8 @@ class _$ResourceRelationshipDTOCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ResourceRelationshipDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$ResourceRelationshipDTOImplCopyWithImpl<$Res>
       $Res Function(_$ResourceRelationshipDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResourceRelationshipDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -148,12 +156,14 @@ class _$ResourceRelationshipDTOImpl extends _ResourceRelationshipDTO {
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, href, const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResourceRelationshipDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ResourceRelationshipDTOImplCopyWith<_$ResourceRelationshipDTOImpl>
@@ -183,8 +193,11 @@ abstract class _ResourceRelationshipDTO extends ResourceRelationshipDTO {
   @override
   @ResourceDTOConverter()
   List<ResourceDTO> get data;
+
+  /// Create a copy of ResourceRelationshipDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ResourceRelationshipDTOImplCopyWith<_$ResourceRelationshipDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -203,8 +216,12 @@ mixin _$AlbumRelationshipsDTO {
   ResourceRelationshipDTO? get library => throw _privateConstructorUsedError;
   ResourceRelationshipDTO? get catalog => throw _privateConstructorUsedError;
 
+  /// Serializes this AlbumRelationshipsDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AlbumRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AlbumRelationshipsDTOCopyWith<AlbumRelationshipsDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -240,6 +257,8 @@ class _$AlbumRelationshipsDTOCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AlbumRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -273,6 +292,8 @@ class _$AlbumRelationshipsDTOCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of AlbumRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get artists {
@@ -285,6 +306,8 @@ class _$AlbumRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of AlbumRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get tracks {
@@ -297,6 +320,8 @@ class _$AlbumRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of AlbumRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get recordLabels {
@@ -310,6 +335,8 @@ class _$AlbumRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of AlbumRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get library {
@@ -322,6 +349,8 @@ class _$AlbumRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of AlbumRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get catalog {
@@ -372,6 +401,8 @@ class __$$AlbumRelationshipsDTOImplCopyWithImpl<$Res>
       $Res Function(_$AlbumRelationshipsDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AlbumRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -449,12 +480,14 @@ class _$AlbumRelationshipsDTOImpl extends _AlbumRelationshipsDTO {
             (identical(other.catalog, catalog) || other.catalog == catalog));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, artists, tracks, recordLabels, library, catalog);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AlbumRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AlbumRelationshipsDTOImplCopyWith<_$AlbumRelationshipsDTOImpl>
@@ -491,8 +524,11 @@ abstract class _AlbumRelationshipsDTO extends AlbumRelationshipsDTO {
   ResourceRelationshipDTO? get library;
   @override
   ResourceRelationshipDTO? get catalog;
+
+  /// Create a copy of AlbumRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AlbumRelationshipsDTOImplCopyWith<_$AlbumRelationshipsDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -514,8 +550,12 @@ mixin _$ArtistRelationshipsDTO {
   ResourceRelationshipDTO? get defaultPlayableContent =>
       throw _privateConstructorUsedError;
 
+  /// Serializes this ArtistRelationshipsDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ArtistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ArtistRelationshipsDTOCopyWith<ArtistRelationshipsDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -554,6 +594,8 @@ class _$ArtistRelationshipsDTOCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ArtistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -592,6 +634,8 @@ class _$ArtistRelationshipsDTOCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of ArtistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get albums {
@@ -604,6 +648,8 @@ class _$ArtistRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ArtistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get playlists {
@@ -616,6 +662,8 @@ class _$ArtistRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ArtistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get musicVideos {
@@ -628,6 +676,8 @@ class _$ArtistRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ArtistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get station {
@@ -640,6 +690,8 @@ class _$ArtistRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ArtistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get catalog {
@@ -652,6 +704,8 @@ class _$ArtistRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of ArtistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get defaultPlayableContent {
@@ -708,6 +762,8 @@ class __$$ArtistRelationshipsDTOImplCopyWithImpl<$Res>
       $Res Function(_$ArtistRelationshipsDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ArtistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -797,12 +853,14 @@ class _$ArtistRelationshipsDTOImpl extends _ArtistRelationshipsDTO {
                 other.defaultPlayableContent == defaultPlayableContent));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, albums, playlists, musicVideos,
       station, catalog, defaultPlayableContent);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ArtistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ArtistRelationshipsDTOImplCopyWith<_$ArtistRelationshipsDTOImpl>
@@ -845,8 +903,11 @@ abstract class _ArtistRelationshipsDTO extends ArtistRelationshipsDTO {
   @override
   @JsonKey(name: 'default-playable-content')
   ResourceRelationshipDTO? get defaultPlayableContent;
+
+  /// Create a copy of ArtistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ArtistRelationshipsDTOImplCopyWith<_$ArtistRelationshipsDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -863,8 +924,12 @@ mixin _$PlaylistRelationshipsDTO {
   ResourceRelationshipDTO? get library => throw _privateConstructorUsedError;
   ResourceRelationshipDTO? get catalog => throw _privateConstructorUsedError;
 
+  /// Serializes this PlaylistRelationshipsDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PlaylistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PlaylistRelationshipsDTOCopyWith<PlaylistRelationshipsDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -898,6 +963,8 @@ class _$PlaylistRelationshipsDTOCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PlaylistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -926,6 +993,8 @@ class _$PlaylistRelationshipsDTOCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of PlaylistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get tracks {
@@ -938,6 +1007,8 @@ class _$PlaylistRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PlaylistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get curator {
@@ -950,6 +1021,8 @@ class _$PlaylistRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PlaylistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get library {
@@ -962,6 +1035,8 @@ class _$PlaylistRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of PlaylistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get catalog {
@@ -1010,6 +1085,8 @@ class __$$PlaylistRelationshipsDTOImplCopyWithImpl<$Res>
       $Res Function(_$PlaylistRelationshipsDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PlaylistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1074,12 +1151,14 @@ class _$PlaylistRelationshipsDTOImpl extends _PlaylistRelationshipsDTO {
             (identical(other.catalog, catalog) || other.catalog == catalog));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, tracks, curator, library, catalog);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PlaylistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PlaylistRelationshipsDTOImplCopyWith<_$PlaylistRelationshipsDTOImpl>
@@ -1113,8 +1192,11 @@ abstract class _PlaylistRelationshipsDTO extends PlaylistRelationshipsDTO {
   ResourceRelationshipDTO? get library;
   @override
   ResourceRelationshipDTO? get catalog;
+
+  /// Create a copy of PlaylistRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PlaylistRelationshipsDTOImplCopyWith<_$PlaylistRelationshipsDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1134,8 +1216,12 @@ mixin _$SongRelationshipsDTO {
   ResourceRelationshipDTO? get library => throw _privateConstructorUsedError;
   ResourceRelationshipDTO? get catalog => throw _privateConstructorUsedError;
 
+  /// Serializes this SongRelationshipsDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of SongRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SongRelationshipsDTOCopyWith<SongRelationshipsDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1175,6 +1261,8 @@ class _$SongRelationshipsDTOCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SongRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1218,6 +1306,8 @@ class _$SongRelationshipsDTOCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of SongRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get albums {
@@ -1230,6 +1320,8 @@ class _$SongRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of SongRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get artists {
@@ -1242,6 +1334,8 @@ class _$SongRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of SongRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get station {
@@ -1254,6 +1348,8 @@ class _$SongRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of SongRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get composers {
@@ -1266,6 +1362,8 @@ class _$SongRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of SongRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get musicVideos {
@@ -1278,6 +1376,8 @@ class _$SongRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of SongRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get library {
@@ -1290,6 +1390,8 @@ class _$SongRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of SongRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get catalog {
@@ -1344,6 +1446,8 @@ class __$$SongRelationshipsDTOImplCopyWithImpl<$Res>
       $Res Function(_$SongRelationshipsDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SongRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1440,12 +1544,14 @@ class _$SongRelationshipsDTOImpl extends _SongRelationshipsDTO {
             (identical(other.catalog, catalog) || other.catalog == catalog));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, albums, artists, station,
       composers, musicVideos, library, catalog);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SongRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SongRelationshipsDTOImplCopyWith<_$SongRelationshipsDTOImpl>
@@ -1489,8 +1595,11 @@ abstract class _SongRelationshipsDTO extends SongRelationshipsDTO {
   ResourceRelationshipDTO? get library;
   @override
   ResourceRelationshipDTO? get catalog;
+
+  /// Create a copy of SongRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SongRelationshipsDTOImplCopyWith<_$SongRelationshipsDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1508,8 +1617,12 @@ mixin _$MusicVideoRelationshipsDTO {
   ResourceRelationshipDTO? get library => throw _privateConstructorUsedError;
   ResourceRelationshipDTO? get catalog => throw _privateConstructorUsedError;
 
+  /// Serializes this MusicVideoRelationshipsDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MusicVideoRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MusicVideoRelationshipsDTOCopyWith<MusicVideoRelationshipsDTO>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1546,6 +1659,8 @@ class _$MusicVideoRelationshipsDTOCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MusicVideoRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1579,6 +1694,8 @@ class _$MusicVideoRelationshipsDTOCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of MusicVideoRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get albums {
@@ -1591,6 +1708,8 @@ class _$MusicVideoRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of MusicVideoRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get artists {
@@ -1603,6 +1722,8 @@ class _$MusicVideoRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of MusicVideoRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get songs {
@@ -1615,6 +1736,8 @@ class _$MusicVideoRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of MusicVideoRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get library {
@@ -1627,6 +1750,8 @@ class _$MusicVideoRelationshipsDTOCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of MusicVideoRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get catalog {
@@ -1678,6 +1803,8 @@ class __$$MusicVideoRelationshipsDTOImplCopyWithImpl<$Res>
       $Res Function(_$MusicVideoRelationshipsDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MusicVideoRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1751,12 +1878,14 @@ class _$MusicVideoRelationshipsDTOImpl extends _MusicVideoRelationshipsDTO {
             (identical(other.catalog, catalog) || other.catalog == catalog));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, albums, artists, songs, library, catalog);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MusicVideoRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MusicVideoRelationshipsDTOImplCopyWith<_$MusicVideoRelationshipsDTOImpl>
@@ -1794,8 +1923,11 @@ abstract class _MusicVideoRelationshipsDTO extends MusicVideoRelationshipsDTO {
   ResourceRelationshipDTO? get library;
   @override
   ResourceRelationshipDTO? get catalog;
+
+  /// Create a copy of MusicVideoRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MusicVideoRelationshipsDTOImplCopyWith<_$MusicVideoRelationshipsDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1809,8 +1941,12 @@ CuratorRelationshipsDTO _$CuratorRelationshipsDTOFromJson(
 mixin _$CuratorRelationshipsDTO {
   ResourceRelationshipDTO? get playlists => throw _privateConstructorUsedError;
 
+  /// Serializes this CuratorRelationshipsDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CuratorRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CuratorRelationshipsDTOCopyWith<CuratorRelationshipsDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1837,6 +1973,8 @@ class _$CuratorRelationshipsDTOCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CuratorRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1850,6 +1988,8 @@ class _$CuratorRelationshipsDTOCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of CuratorRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceRelationshipDTOCopyWith<$Res>? get playlists {
@@ -1888,6 +2028,8 @@ class __$$CuratorRelationshipsDTOImplCopyWithImpl<$Res>
       $Res Function(_$CuratorRelationshipsDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CuratorRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1927,11 +2069,13 @@ class _$CuratorRelationshipsDTOImpl extends _CuratorRelationshipsDTO {
                 other.playlists == playlists));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, playlists);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CuratorRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CuratorRelationshipsDTOImplCopyWith<_$CuratorRelationshipsDTOImpl>
@@ -1957,8 +2101,11 @@ abstract class _CuratorRelationshipsDTO extends CuratorRelationshipsDTO {
 
   @override
   ResourceRelationshipDTO? get playlists;
+
+  /// Create a copy of CuratorRelationshipsDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CuratorRelationshipsDTOImplCopyWith<_$CuratorRelationshipsDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

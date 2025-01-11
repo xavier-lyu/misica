@@ -6,7 +6,7 @@ part of 'providers.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$songServiceHash() => r'bc14d0ae22851db5788d58ecce94024d772b267e';
+String _$songServiceHash() => r'8437fa5f15ade7a3053e37bb3bdfc05a5c492e7b';
 
 /// See also [songService].
 @ProviderFor(songService)
@@ -19,8 +19,10 @@ final songServiceProvider = AutoDisposeProvider<SongService>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef SongServiceRef = AutoDisposeProviderRef<SongService>;
-String _$songRepositoryHash() => r'67d8e584ed5b02e817b20790f90516594c7db6b1';
+String _$songRepositoryHash() => r'490c877ca2ea69ce5ee74619a707d53a2933ffce';
 
 /// See also [songRepository].
 @ProviderFor(songRepository)
@@ -34,8 +36,10 @@ final songRepositoryProvider = AutoDisposeProvider<SongRepository>.internal(
   allTransitiveDependencies: null,
 );
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 typedef SongRepositoryRef = AutoDisposeProviderRef<SongRepository>;
-String _$catalogTrackHash() => r'00b6440bbb86d41d4d18fac16ae909bc014e70a8';
+String _$catalogTrackHash() => r'9b41172b063fbdff20d88e4e97292c55bb5be29a';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -183,6 +187,8 @@ class CatalogTrackProvider extends AutoDisposeFutureProvider<Track?> {
   }
 }
 
+@Deprecated('Will be removed in 3.0. Use Ref instead')
+// ignore: unused_element
 mixin CatalogTrackRef on AutoDisposeFutureProviderRef<Track?> {
   /// The parameter `id` of this provider.
   String get id;
@@ -201,4 +207,4 @@ class _CatalogTrackProviderElement
   String get kind => (origin as CatalogTrackProvider).kind;
 }
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

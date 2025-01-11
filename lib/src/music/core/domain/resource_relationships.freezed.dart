@@ -22,7 +22,9 @@ mixin _$AlbumRelationships {
   List<Album>? get library => throw _privateConstructorUsedError;
   List<Album>? get catalog => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AlbumRelationships
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AlbumRelationshipsCopyWith<AlbumRelationships> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -50,6 +52,8 @@ class _$AlbumRelationshipsCopyWithImpl<$Res, $Val extends AlbumRelationships>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AlbumRelationships
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -102,6 +106,8 @@ class __$$AlbumRelationshipsImplCopyWithImpl<$Res>
       $Res Function(_$AlbumRelationshipsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AlbumRelationships
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -211,7 +217,9 @@ class _$AlbumRelationshipsImpl extends _AlbumRelationships {
       const DeepCollectionEquality().hash(_library),
       const DeepCollectionEquality().hash(_catalog));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AlbumRelationships
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AlbumRelationshipsImplCopyWith<_$AlbumRelationshipsImpl> get copyWith =>
@@ -230,13 +238,16 @@ abstract class _AlbumRelationships extends AlbumRelationships {
   @override
   List<Artist>? get artists;
   @override
-  List<Track>? get tracks;
-  @override // required List<RecordLabel>? recordLabels,
+  List<Track>? get tracks; // required List<RecordLabel>? recordLabels,
+  @override
   List<Album>? get library;
   @override
   List<Album>? get catalog;
+
+  /// Create a copy of AlbumRelationships
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AlbumRelationshipsImplCopyWith<_$AlbumRelationshipsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -252,7 +263,9 @@ mixin _$ArtistRelationships {
   List<Resource>? get defaultPlayableContent =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ArtistRelationships
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ArtistRelationshipsCopyWith<ArtistRelationships> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -282,6 +295,8 @@ class _$ArtistRelationshipsCopyWithImpl<$Res, $Val extends ArtistRelationships>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ArtistRelationships
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -346,6 +361,8 @@ class __$$ArtistRelationshipsImplCopyWithImpl<$Res>
       $Res Function(_$ArtistRelationshipsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ArtistRelationships
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -497,7 +514,9 @@ class _$ArtistRelationshipsImpl extends _ArtistRelationships {
       const DeepCollectionEquality().hash(_catalog),
       const DeepCollectionEquality().hash(_defaultPlayableContent));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ArtistRelationships
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ArtistRelationshipsImplCopyWith<_$ArtistRelationshipsImpl> get copyWith =>
@@ -530,8 +549,11 @@ abstract class _ArtistRelationships extends ArtistRelationships {
   @override
   @ResourceDTOConverter()
   List<Resource>? get defaultPlayableContent;
+
+  /// Create a copy of ArtistRelationships
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ArtistRelationshipsImplCopyWith<_$ArtistRelationshipsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -543,7 +565,9 @@ mixin _$PlaylistRelationships {
   List<Playlist>? get library => throw _privateConstructorUsedError;
   List<Playlist>? get catalog => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PlaylistRelationships
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PlaylistRelationshipsCopyWith<PlaylistRelationships> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -572,6 +596,8 @@ class _$PlaylistRelationshipsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PlaylistRelationships
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -626,6 +652,8 @@ class __$$PlaylistRelationshipsImplCopyWithImpl<$Res>
       $Res Function(_$PlaylistRelationshipsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PlaylistRelationships
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -733,7 +761,9 @@ class _$PlaylistRelationshipsImpl extends _PlaylistRelationships {
       const DeepCollectionEquality().hash(_library),
       const DeepCollectionEquality().hash(_catalog));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PlaylistRelationships
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PlaylistRelationshipsImplCopyWith<_$PlaylistRelationshipsImpl>
@@ -757,8 +787,11 @@ abstract class _PlaylistRelationships extends PlaylistRelationships {
   List<Playlist>? get library;
   @override
   List<Playlist>? get catalog;
+
+  /// Create a copy of PlaylistRelationships
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PlaylistRelationshipsImplCopyWith<_$PlaylistRelationshipsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -773,7 +806,9 @@ mixin _$SongRelationships {
   List<Song>? get library => throw _privateConstructorUsedError;
   List<Song>? get catalog => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SongRelationships
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SongRelationshipsCopyWith<SongRelationships> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -804,6 +839,8 @@ class _$SongRelationshipsCopyWithImpl<$Res, $Val extends SongRelationships>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of SongRelationships
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -874,6 +911,8 @@ class __$$SongRelationshipsImplCopyWithImpl<$Res>
       $Res Function(_$SongRelationshipsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of SongRelationships
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1040,7 +1079,9 @@ class _$SongRelationshipsImpl extends _SongRelationships {
       const DeepCollectionEquality().hash(_library),
       const DeepCollectionEquality().hash(_catalog));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of SongRelationships
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SongRelationshipsImplCopyWith<_$SongRelationshipsImpl> get copyWith =>
@@ -1073,8 +1114,11 @@ abstract class _SongRelationships extends SongRelationships {
   List<Song>? get library;
   @override
   List<Song>? get catalog;
+
+  /// Create a copy of SongRelationships
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SongRelationshipsImplCopyWith<_$SongRelationshipsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1087,7 +1131,9 @@ mixin _$MusicVideoRelationships {
   List<MusicVideo>? get library => throw _privateConstructorUsedError;
   List<MusicVideo>? get catalog => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MusicVideoRelationships
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MusicVideoRelationshipsCopyWith<MusicVideoRelationships> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1117,6 +1163,8 @@ class _$MusicVideoRelationshipsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MusicVideoRelationships
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1178,6 +1226,8 @@ class __$$MusicVideoRelationshipsImplCopyWithImpl<$Res>
       $Res Function(_$MusicVideoRelationshipsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MusicVideoRelationships
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1304,7 +1354,9 @@ class _$MusicVideoRelationshipsImpl extends _MusicVideoRelationships {
       const DeepCollectionEquality().hash(_library),
       const DeepCollectionEquality().hash(_catalog));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MusicVideoRelationships
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MusicVideoRelationshipsImplCopyWith<_$MusicVideoRelationshipsImpl>
@@ -1332,8 +1384,11 @@ abstract class _MusicVideoRelationships extends MusicVideoRelationships {
   List<MusicVideo>? get library;
   @override
   List<MusicVideo>? get catalog;
+
+  /// Create a copy of MusicVideoRelationships
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MusicVideoRelationshipsImplCopyWith<_$MusicVideoRelationshipsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1342,7 +1397,9 @@ abstract class _MusicVideoRelationships extends MusicVideoRelationships {
 mixin _$CuratorRelationships {
   List<Playlist>? get playlists => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CuratorRelationships
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CuratorRelationshipsCopyWith<CuratorRelationships> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1367,6 +1424,8 @@ class _$CuratorRelationshipsCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CuratorRelationships
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1400,6 +1459,8 @@ class __$$CuratorRelationshipsImplCopyWithImpl<$Res>
       $Res Function(_$CuratorRelationshipsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CuratorRelationships
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1449,7 +1510,9 @@ class _$CuratorRelationshipsImpl extends _CuratorRelationships {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_playlists));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CuratorRelationships
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CuratorRelationshipsImplCopyWith<_$CuratorRelationshipsImpl>
@@ -1465,8 +1528,11 @@ abstract class _CuratorRelationships extends CuratorRelationships {
 
   @override
   List<Playlist>? get playlists;
+
+  /// Create a copy of CuratorRelationships
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CuratorRelationshipsImplCopyWith<_$CuratorRelationshipsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

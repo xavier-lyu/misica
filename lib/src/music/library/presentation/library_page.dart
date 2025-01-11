@@ -38,8 +38,8 @@ class _LibraryPageState extends ConsumerState<LibraryPage> {
 
           return LikedResourcesView(resources: resources.value);
         },
-        error: (_) => Center(
-          child: Text('${_.error}'),
+        error: (err) => Center(
+          child: Text('${err.error}'),
         ),
         loading: (_) => const Loader(),
       ),

@@ -254,8 +254,13 @@ mixin _$ResourceDTO {
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
+
+  /// Serializes this ResourceDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ResourceDTOCopyWith<ResourceDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -279,6 +284,8 @@ class _$ResourceDTOCopyWithImpl<$Res, $Val extends ResourceDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -325,6 +332,8 @@ class __$$ResourceRawDTOImplCopyWithImpl<$Res>
       _$ResourceRawDTOImpl _value, $Res Function(_$ResourceRawDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -363,6 +372,8 @@ class __$$ResourceRawDTOImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceMetaDTOCopyWith<$Res>? get meta {
@@ -456,7 +467,7 @@ class _$ResourceRawDTOImpl extends ResourceRawDTO {
             (identical(other.meta, meta) || other.meta == meta));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -467,7 +478,9 @@ class _$ResourceRawDTOImpl extends ResourceRawDTO {
       const DeepCollectionEquality().hash(_views),
       meta);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ResourceRawDTOImplCopyWith<_$ResourceRawDTOImpl> get copyWith =>
@@ -736,8 +749,11 @@ abstract class ResourceRawDTO extends ResourceDTO {
   Map<String, ResourceRelationshipDTO>? get relationships;
   Map<String, ResourceViewDTO>? get views;
   ResourceMetaDTO? get meta;
+
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ResourceRawDTOImplCopyWith<_$ResourceRawDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -771,6 +787,8 @@ class __$$AlbumDTOImplCopyWithImpl<$Res>
       _$AlbumDTOImpl _value, $Res Function(_$AlbumDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -809,6 +827,8 @@ class __$$AlbumDTOImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AlbumAttributesDTOCopyWith<$Res>? get attributes {
@@ -821,6 +841,8 @@ class __$$AlbumDTOImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AlbumRelationshipsDTOCopyWith<$Res>? get relationships {
@@ -833,6 +855,8 @@ class __$$AlbumDTOImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceMetaDTOCopyWith<$Res>? get meta {
@@ -903,12 +927,14 @@ class _$AlbumDTOImpl extends AlbumDTO {
             (identical(other.meta, meta) || other.meta == meta));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, type, attributes,
       relationships, const DeepCollectionEquality().hash(_views), meta);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AlbumDTOImplCopyWith<_$AlbumDTOImpl> get copyWith =>
@@ -1176,8 +1202,11 @@ abstract class AlbumDTO extends ResourceDTO {
   AlbumRelationshipsDTO? get relationships;
   Map<String, ResourceViewDTO>? get views;
   ResourceMetaDTO? get meta;
+
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AlbumDTOImplCopyWith<_$AlbumDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1211,6 +1240,8 @@ class __$$ArtistDTOImplCopyWithImpl<$Res>
       _$ArtistDTOImpl _value, $Res Function(_$ArtistDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1249,6 +1280,8 @@ class __$$ArtistDTOImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ArtistAttributesDTOCopyWith<$Res>? get attributes {
@@ -1261,6 +1294,8 @@ class __$$ArtistDTOImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ArtistRelationshipsDTOCopyWith<$Res>? get relationships {
@@ -1274,6 +1309,8 @@ class __$$ArtistDTOImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceMetaDTOCopyWith<$Res>? get meta {
@@ -1344,12 +1381,14 @@ class _$ArtistDTOImpl extends ArtistDTO {
             (identical(other.meta, meta) || other.meta == meta));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, type, attributes,
       relationships, const DeepCollectionEquality().hash(_views), meta);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ArtistDTOImplCopyWith<_$ArtistDTOImpl> get copyWith =>
@@ -1617,8 +1656,11 @@ abstract class ArtistDTO extends ResourceDTO {
   ArtistRelationshipsDTO? get relationships;
   Map<String, ResourceViewDTO>? get views;
   ResourceMetaDTO? get meta;
+
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ArtistDTOImplCopyWith<_$ArtistDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1652,6 +1694,8 @@ class __$$PlaylistDTOImplCopyWithImpl<$Res>
       _$PlaylistDTOImpl _value, $Res Function(_$PlaylistDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1690,6 +1734,8 @@ class __$$PlaylistDTOImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PlaylistAttributesDTOCopyWith<$Res>? get attributes {
@@ -1702,6 +1748,8 @@ class __$$PlaylistDTOImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PlaylistRelationshipsDTOCopyWith<$Res>? get relationships {
@@ -1715,6 +1763,8 @@ class __$$PlaylistDTOImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceMetaDTOCopyWith<$Res>? get meta {
@@ -1785,12 +1835,14 @@ class _$PlaylistDTOImpl extends PlaylistDTO {
             (identical(other.meta, meta) || other.meta == meta));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, type, attributes,
       relationships, const DeepCollectionEquality().hash(_views), meta);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PlaylistDTOImplCopyWith<_$PlaylistDTOImpl> get copyWith =>
@@ -2058,8 +2110,11 @@ abstract class PlaylistDTO extends ResourceDTO {
   PlaylistRelationshipsDTO? get relationships;
   Map<String, ResourceViewDTO>? get views;
   ResourceMetaDTO? get meta;
+
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PlaylistDTOImplCopyWith<_$PlaylistDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2090,6 +2145,8 @@ class __$$SongDTOImplCopyWithImpl<$Res>
       _$SongDTOImpl _value, $Res Function(_$SongDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2118,6 +2175,8 @@ class __$$SongDTOImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SongAttributesDTOCopyWith<$Res>? get attributes {
@@ -2130,6 +2189,8 @@ class __$$SongDTOImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SongRelationshipsDTOCopyWith<$Res>? get relationships {
@@ -2184,12 +2245,14 @@ class _$SongDTOImpl extends SongDTO {
                 other.relationships == relationships));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, type, attributes, relationships);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SongDTOImplCopyWith<_$SongDTOImpl> get copyWith =>
@@ -2452,8 +2515,11 @@ abstract class SongDTO extends ResourceDTO {
   @override
   SongAttributesDTO? get attributes;
   SongRelationshipsDTO? get relationships;
+
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SongDTOImplCopyWith<_$SongDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2479,6 +2545,8 @@ class __$$StationDTOImplCopyWithImpl<$Res>
       _$StationDTOImpl _value, $Res Function(_$StationDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2502,6 +2570,8 @@ class __$$StationDTOImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StationAttributesDTOCopyWith<$Res>? get attributes {
@@ -2552,11 +2622,13 @@ class _$StationDTOImpl extends StationDTO {
                 other.attributes == attributes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, type, attributes);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$StationDTOImplCopyWith<_$StationDTOImpl> get copyWith =>
@@ -2816,8 +2888,11 @@ abstract class StationDTO extends ResourceDTO {
   String get type;
   @override
   StationAttributesDTO? get attributes;
+
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$StationDTOImplCopyWith<_$StationDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2851,6 +2926,8 @@ class __$$MusicVideoDTOImplCopyWithImpl<$Res>
       _$MusicVideoDTOImpl _value, $Res Function(_$MusicVideoDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2889,6 +2966,8 @@ class __$$MusicVideoDTOImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MusicVideoAttributesDTOCopyWith<$Res>? get attributes {
@@ -2901,6 +2980,8 @@ class __$$MusicVideoDTOImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $MusicVideoRelationshipsDTOCopyWith<$Res>? get relationships {
@@ -2914,6 +2995,8 @@ class __$$MusicVideoDTOImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceMetaDTOCopyWith<$Res>? get meta {
@@ -2984,12 +3067,14 @@ class _$MusicVideoDTOImpl extends MusicVideoDTO {
             (identical(other.meta, meta) || other.meta == meta));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, type, attributes,
       relationships, const DeepCollectionEquality().hash(_views), meta);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MusicVideoDTOImplCopyWith<_$MusicVideoDTOImpl> get copyWith =>
@@ -3257,8 +3342,11 @@ abstract class MusicVideoDTO extends ResourceDTO {
   MusicVideoRelationshipsDTO? get relationships;
   Map<String, ResourceViewDTO>? get views;
   ResourceMetaDTO? get meta;
+
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MusicVideoDTOImplCopyWith<_$MusicVideoDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3289,6 +3377,8 @@ class __$$CuratorDTOImplCopyWithImpl<$Res>
       _$CuratorDTOImpl _value, $Res Function(_$CuratorDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3317,6 +3407,8 @@ class __$$CuratorDTOImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CuratorAttributesDTOCopyWith<$Res>? get attributes {
@@ -3329,6 +3421,8 @@ class __$$CuratorDTOImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CuratorRelationshipsDTOCopyWith<$Res>? get relationships {
@@ -3385,12 +3479,14 @@ class _$CuratorDTOImpl extends CuratorDTO {
                 other.relationships == relationships));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, id, type, attributes, relationships);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CuratorDTOImplCopyWith<_$CuratorDTOImpl> get copyWith =>
@@ -3654,8 +3750,11 @@ abstract class CuratorDTO extends ResourceDTO {
   @override
   CuratorAttributesDTO? get attributes;
   CuratorRelationshipsDTO? get relationships;
+
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CuratorDTOImplCopyWith<_$CuratorDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3681,6 +3780,8 @@ class __$$GenreDTOImplCopyWithImpl<$Res>
       _$GenreDTOImpl _value, $Res Function(_$GenreDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3704,6 +3805,8 @@ class __$$GenreDTOImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $GenreAttributesDTOCopyWith<$Res>? get attributes {
@@ -3754,11 +3857,13 @@ class _$GenreDTOImpl extends GenreDTO {
                 other.attributes == attributes));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, type, attributes);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$GenreDTOImplCopyWith<_$GenreDTOImpl> get copyWith =>
@@ -4018,8 +4123,11 @@ abstract class GenreDTO extends ResourceDTO {
   String get type;
   @override
   GenreAttributesDTO? get attributes;
+
+  /// Create a copy of ResourceDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$GenreDTOImplCopyWith<_$GenreDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4033,8 +4141,12 @@ mixin _$ResourceMetaDTO {
   ResourceMetaOrderDTO? get views => throw _privateConstructorUsedError;
   ResourceMetaOrderDTO? get results => throw _privateConstructorUsedError;
 
+  /// Serializes this ResourceMetaDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ResourceMetaDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ResourceMetaDTOCopyWith<ResourceMetaDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4061,6 +4173,8 @@ class _$ResourceMetaDTOCopyWithImpl<$Res, $Val extends ResourceMetaDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ResourceMetaDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4079,6 +4193,8 @@ class _$ResourceMetaDTOCopyWithImpl<$Res, $Val extends ResourceMetaDTO>
     ) as $Val);
   }
 
+  /// Create a copy of ResourceMetaDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceMetaOrderDTOCopyWith<$Res>? get views {
@@ -4091,6 +4207,8 @@ class _$ResourceMetaDTOCopyWithImpl<$Res, $Val extends ResourceMetaDTO>
     });
   }
 
+  /// Create a copy of ResourceMetaDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceMetaOrderDTOCopyWith<$Res>? get results {
@@ -4128,6 +4246,8 @@ class __$$ResourceMetaImplCopyWithImpl<$Res>
       _$ResourceMetaImpl _value, $Res Function(_$ResourceMetaImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResourceMetaDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4174,11 +4294,13 @@ class _$ResourceMetaImpl extends _ResourceMeta {
             (identical(other.results, results) || other.results == results));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, views, results);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResourceMetaDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ResourceMetaImplCopyWith<_$ResourceMetaImpl> get copyWith =>
@@ -4205,8 +4327,11 @@ abstract class _ResourceMeta extends ResourceMetaDTO {
   ResourceMetaOrderDTO? get views;
   @override
   ResourceMetaOrderDTO? get results;
+
+  /// Create a copy of ResourceMetaDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ResourceMetaImplCopyWith<_$ResourceMetaImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4219,8 +4344,12 @@ ResourceMetaOrderDTO _$ResourceMetaOrderDTOFromJson(Map<String, dynamic> json) {
 mixin _$ResourceMetaOrderDTO {
   List<String>? get order => throw _privateConstructorUsedError;
 
+  /// Serializes this ResourceMetaOrderDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ResourceMetaOrderDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ResourceMetaOrderDTOCopyWith<ResourceMetaOrderDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -4245,6 +4374,8 @@ class _$ResourceMetaOrderDTOCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ResourceMetaOrderDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4278,6 +4409,8 @@ class __$$ResourceMetaOrderDTOImplCopyWithImpl<$Res>
       $Res Function(_$ResourceMetaOrderDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResourceMetaOrderDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4325,12 +4458,14 @@ class _$ResourceMetaOrderDTOImpl extends _ResourceMetaOrderDTO {
             const DeepCollectionEquality().equals(other._order, _order));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_order));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResourceMetaOrderDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ResourceMetaOrderDTOImplCopyWith<_$ResourceMetaOrderDTOImpl>
@@ -4356,8 +4491,11 @@ abstract class _ResourceMetaOrderDTO extends ResourceMetaOrderDTO {
 
   @override
   List<String>? get order;
+
+  /// Create a copy of ResourceMetaOrderDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ResourceMetaOrderDTOImplCopyWith<_$ResourceMetaOrderDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

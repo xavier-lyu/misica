@@ -8,9 +8,9 @@ part of 'artwork.dart';
 
 _$ArtworkImpl _$$ArtworkImplFromJson(Map json) => _$ArtworkImpl(
       bgColor: json['bgColor'] as String?,
-      height: json['height'] as int,
+      height: (json['height'] as num).toInt(),
       url: json['url'] as String,
-      width: json['width'] as int,
+      width: (json['width'] as num).toInt(),
       textColor: json['textColor'] as String?,
     );
 

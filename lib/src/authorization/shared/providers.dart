@@ -17,17 +17,17 @@ final authNotifierProvider = StateNotifierProvider<AuthNotifier, AuthState>(
 );
 
 @riverpod
-FlutterSecureStorage flutterSecureStorage(FlutterSecureStorageRef ref) {
+FlutterSecureStorage flutterSecureStorage(Ref ref) {
   return const FlutterSecureStorage();
 }
 
 @riverpod
-SecureCredentialsStorage credentialsStorage(CredentialsStorageRef ref) {
+SecureCredentialsStorage credentialsStorage(Ref ref) {
   return SecureCredentialsStorage(ref.watch(flutterSecureStorageProvider));
 }
 
 @riverpod
-MusicAuthenticator musicAuthenticator(MusicAuthenticatorRef ref) {
+MusicAuthenticator musicAuthenticator(Ref ref) {
   return MusicAuthenticator(
     ref.watch(credentialsStorageProvider),
     ref.watch(musicKitProvider),
@@ -35,7 +35,7 @@ MusicAuthenticator musicAuthenticator(MusicAuthenticatorRef ref) {
 }
 
 @riverpod
-MusicAuthIntercepter musicAuthIntercepter(MusicAuthIntercepterRef ref) {
+MusicAuthIntercepter musicAuthIntercepter(Ref ref) {
   return MusicAuthIntercepter(
     ref.watch(musicDioProvider),
     ref.watch(musicAuthenticatorProvider),

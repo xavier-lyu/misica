@@ -16,7 +16,7 @@ class CustomTheme {
     return light.copyWith(
       colorScheme: colorScheme,
       primaryColor: colorScheme.primary,
-      scaffoldBackgroundColor: colorScheme.background.lighten(),
+      scaffoldBackgroundColor: colorScheme.surface.lighten(),
       tabBarTheme: light.tabBarTheme.copyWith(
         indicator: UnderlineTabIndicator(
           borderSide: BorderSide(width: 2.0, color: colorScheme.primary),
@@ -37,7 +37,7 @@ class CustomTheme {
     return dark.copyWith(
       colorScheme: colorScheme,
       primaryColor: colorScheme.primary,
-      scaffoldBackgroundColor: colorScheme.background.darken(),
+      scaffoldBackgroundColor: colorScheme.surface.darken(),
       tabBarTheme: dark.tabBarTheme.copyWith(
         indicator: UnderlineTabIndicator(
           borderSide: BorderSide(width: 2.0, color: colorScheme.primary),

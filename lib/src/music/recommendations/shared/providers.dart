@@ -10,12 +10,12 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'providers.g.dart';
 
 @riverpod
-RecommendationsService recosService(RecosServiceRef ref) {
+RecommendationsService recosService(Ref ref) {
   return RecommendationsService(ref.watch(musicDioProvider));
 }
 
 @riverpod
-RecommendationsRepository recosRepository(RecosRepositoryRef ref) {
+RecommendationsRepository recosRepository(Ref ref) {
   return RecommendationsRepository(ref.watch(recosServiceProvider));
 }
 

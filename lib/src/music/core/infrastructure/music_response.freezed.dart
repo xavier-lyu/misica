@@ -24,8 +24,12 @@ mixin _$MusicResponse {
   @ResourceDTOConverter()
   List<ResourceDTO> get data => throw _privateConstructorUsedError;
 
+  /// Serializes this MusicResponse to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of MusicResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MusicResponseCopyWith<MusicResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -49,6 +53,8 @@ class _$MusicResponseCopyWithImpl<$Res, $Val extends MusicResponse>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MusicResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +93,8 @@ class __$$MusicResponseImplCopyWithImpl<$Res>
       _$MusicResponseImpl _value, $Res Function(_$MusicResponseImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MusicResponse
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -143,12 +151,14 @@ class _$MusicResponseImpl extends _MusicResponse {
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, next, const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MusicResponse
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MusicResponseImplCopyWith<_$MusicResponseImpl> get copyWith =>
@@ -177,8 +187,11 @@ abstract class _MusicResponse extends MusicResponse {
   @override
   @ResourceDTOConverter()
   List<ResourceDTO> get data;
+
+  /// Create a copy of MusicResponse
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MusicResponseImplCopyWith<_$MusicResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

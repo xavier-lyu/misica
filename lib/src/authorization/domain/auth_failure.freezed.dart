@@ -72,6 +72,9 @@ class _$AuthFailureCopyWithImpl<$Res, $Val extends AuthFailure>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of AuthFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -88,6 +91,9 @@ class __$$StorageImplCopyWithImpl<$Res>
   __$$StorageImplCopyWithImpl(
       _$StorageImpl _value, $Res Function(_$StorageImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AuthFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -190,6 +196,9 @@ class __$$PlatformImplCopyWithImpl<$Res>
   __$$PlatformImplCopyWithImpl(
       _$PlatformImpl _value, $Res Function(_$PlatformImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AuthFailure
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc

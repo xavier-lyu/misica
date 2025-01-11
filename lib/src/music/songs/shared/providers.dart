@@ -1,3 +1,4 @@
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/core/shared/providers.dart';
 import 'package:misica/src/music/core/domain/track.dart';
 import 'package:misica/src/music/core/shared/providers.dart';
@@ -8,18 +9,18 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'providers.g.dart';
 
 @riverpod
-SongService songService(SongServiceRef ref) {
+SongService songService(Ref ref) {
   return SongService(ref.watch(musicDioProvider));
 }
 
 @riverpod
-SongRepository songRepository(SongRepositoryRef ref) {
+SongRepository songRepository(Ref ref) {
   return SongRepository(ref.watch(songServiceProvider));
 }
 
 @riverpod
 Future<Track?> catalogTrack(
-  CatalogTrackRef ref, {
+  Ref ref, {
   required String id,
   required String kind,
 }) async {

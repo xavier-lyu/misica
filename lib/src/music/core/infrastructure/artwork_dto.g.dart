@@ -8,13 +8,13 @@ part of 'artwork_dto.dart';
 
 _$ArtworkDTOImpl _$$ArtworkDTOImplFromJson(Map json) => _$ArtworkDTOImpl(
       bgColor: json['bgColor'] as String?,
-      height: json['height'] as int,
+      height: (json['height'] as num).toInt(),
       textColor1: json['textColor1'] as String?,
       textColor2: json['textColor2'] as String?,
       textColor3: json['textColor3'] as String?,
       textColor4: json['textColor4'] as String?,
       url: json['url'] as String,
-      width: json['width'] as int,
+      width: (json['width'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$ArtworkDTOImplToJson(_$ArtworkDTOImpl instance) =>

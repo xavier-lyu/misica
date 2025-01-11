@@ -26,8 +26,12 @@ mixin _$ResourceViewDTO {
   @ResourceDTOConverter()
   List<ResourceDTO> get data => throw _privateConstructorUsedError;
 
+  /// Serializes this ResourceViewDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ResourceViewDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ResourceViewDTOCopyWith<ResourceViewDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$ResourceViewDTOCopyWithImpl<$Res, $Val extends ResourceViewDTO>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ResourceViewDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -79,6 +85,8 @@ class _$ResourceViewDTOCopyWithImpl<$Res, $Val extends ResourceViewDTO>
     ) as $Val);
   }
 
+  /// Create a copy of ResourceViewDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ResourceViewAttributesDTOCopyWith<$Res> get attributes {
@@ -113,6 +121,8 @@ class __$$ResourceViewDTOImplCopyWithImpl<$Res>
       _$ResourceViewDTOImpl _value, $Res Function(_$ResourceViewDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResourceViewDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -179,12 +189,14 @@ class _$ResourceViewDTOImpl extends _ResourceViewDTO {
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, href, attributes,
       const DeepCollectionEquality().hash(_data));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResourceViewDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ResourceViewDTOImplCopyWith<_$ResourceViewDTOImpl> get copyWith =>
@@ -217,8 +229,11 @@ abstract class _ResourceViewDTO extends ResourceViewDTO {
   @override
   @ResourceDTOConverter()
   List<ResourceDTO> get data;
+
+  /// Create a copy of ResourceViewDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ResourceViewDTOImplCopyWith<_$ResourceViewDTOImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -232,8 +247,12 @@ ResourceViewAttributesDTO _$ResourceViewAttributesDTOFromJson(
 mixin _$ResourceViewAttributesDTO {
   String get title => throw _privateConstructorUsedError;
 
+  /// Serializes this ResourceViewAttributesDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ResourceViewAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ResourceViewAttributesDTOCopyWith<ResourceViewAttributesDTO> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -258,6 +277,8 @@ class _$ResourceViewAttributesDTOCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ResourceViewAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -294,6 +315,8 @@ class __$$ResourceViewAttributesDTOImplCopyWithImpl<$Res>
       $Res Function(_$ResourceViewAttributesDTOImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ResourceViewAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -332,11 +355,13 @@ class _$ResourceViewAttributesDTOImpl extends _ResourceViewAttributesDTO {
             (identical(other.title, title) || other.title == title));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, title);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ResourceViewAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ResourceViewAttributesDTOImplCopyWith<_$ResourceViewAttributesDTOImpl>
@@ -361,8 +386,11 @@ abstract class _ResourceViewAttributesDTO extends ResourceViewAttributesDTO {
 
   @override
   String get title;
+
+  /// Create a copy of ResourceViewAttributesDTO
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ResourceViewAttributesDTOImplCopyWith<_$ResourceViewAttributesDTOImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
