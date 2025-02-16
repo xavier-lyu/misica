@@ -5,7 +5,7 @@ PODS:
   - flutter_secure_storage_darwin (10.0.0):
     - Flutter
     - FlutterMacOS
-  - music_kit (0.0.1):
+  - music_kit (1.2.0):
     - Flutter
   - path_provider_foundation (0.0.1):
     - Flutter
@@ -37,12 +37,12 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/sqflite_darwin/darwin"
 
 SPEC CHECKSUMS:
-  app_settings: 017320c6a680cdc94c799949d95b84cb69389ebc
+  app_settings: 5127ae0678de1dcc19f2293271c51d37c89428b2
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  flutter_secure_storage_darwin: 12d2375c690785d97a4e586f15f11be5ae35d5b0
-  music_kit: defb969f1be323eb85c9707d7446e563408830d4
-  path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
-  sqflite_darwin: 5a7236e3b501866c1c9befc6771dfd73ffb8702d
+  flutter_secure_storage_darwin: ce237a8775b39723566dc72571190a3769d70468
+  music_kit: abcc4722582f8c0ae8f3e82a967125da39624b61
+  path_provider_foundation: 080d55be775b7414fd5a5ef3ac137b97b097e564
+  sqflite_darwin: 20b2a3a3b70e43edae938624ce550a3cbf66a3d0
 
 PODFILE CHECKSUM: 57c8aed26fba39d3ec9424816221f294a07c58eb
 

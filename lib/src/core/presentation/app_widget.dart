@@ -7,8 +7,8 @@ import 'package:misica/src/core/presentation/app_router.gr.dart';
 import 'package:misica/src/core/shared/providers.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/settings/core/shared/providers.dart';
-
 import 'package:misica/src/theme/theme.dart';
+import 'package:music_kit/music_kit.dart';
 
 class AppWidget extends ConsumerWidget {
   final _appRouter = AppRouter();
@@ -19,18 +19,16 @@ class AppWidget extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     ref.listen(initializationProvider, (previous, next) {});
     ref.listen<AuthState>(authNotifierProvider, (previous, next) {
-      next.maybeWhen(
-        orElse: () {
-          _appRouter.replace(
-            const AuthorizationRoute(),
-          );
-        },
-        authorized: (_) {
+      switch (next) {
+        case MusicAuthorizationStatusAuthorized():
           _appRouter.replace(
             const IndexRoute(),
           );
-        },
-      );
+        default:
+          _appRouter.replace(
+            const AuthorizationRoute(),
+          );
+      }
     });
 
     final settings = ref.watch(settingsNotifierProvider);

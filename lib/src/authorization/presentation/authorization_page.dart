@@ -5,6 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/authorization/shared/providers.dart';
 import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
+import 'package:music_kit/music_kit.dart';
 
 @RoutePage()
 class AuthorizationPage extends ConsumerWidget {
@@ -13,17 +14,21 @@ class AuthorizationPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final authState = ref.watch(authNotifierProvider);
-    final explanatory = authState.maybeWhen(
-      orElse: () => context.loc.defaultExplanatory,
-      restricted: () => context.loc.restrictedExplanatory,
-    );
-    final secondaryExplanatory = authState.whenOrNull(
-      denied: () => context.loc.secondaryExplanatory,
-    );
-    final continueButtonText = authState.whenOrNull(
-      notDetermined: () => context.loc.continueText,
-      denied: () => context.loc.openSettings,
-    );
+    final explanatory = switch (authState) {
+      MusicAuthorizationStatusRestricted() => context.loc.restrictedExplanatory,
+      _ => context.loc.defaultExplanatory,
+    };
+
+    final secondaryExplanatory = switch (authState) {
+      MusicAuthorizationStatusDenied() => context.loc.secondaryExplanatory,
+      _ => null,
+    };
+
+    final continueButtonText = switch (authState) {
+      MusicAuthorizationStatusNotDetermined() => context.loc.continueText,
+      MusicAuthorizationStatusDenied() => context.loc.openSettings,
+      _ => null,
+    };
 
     return Scaffold(
       body: Center(
@@ -55,16 +60,16 @@ class AuthorizationPage extends ConsumerWidget {
             if (continueButtonText != null)
               ElevatedButton(
                 onPressed: () {
-                  authState.whenOrNull(
-                    notDetermined: () {
+                  switch (authState) {
+                    case MusicAuthorizationStatusNotDetermined():
                       ref
                           .read(authNotifierProvider.notifier)
                           .requestAuthorization();
-                    },
-                    denied: () {
+                    case MusicAuthorizationStatusDenied():
                       AppSettings.openAppSettings();
-                    },
-                  );
+                    default:
+                      {}
+                  }
                 },
                 child: Text(continueButtonText),
               )

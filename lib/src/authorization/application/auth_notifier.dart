@@ -9,7 +9,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
   final MusicAuthenticator _authenticator;
 
   AuthNotifier(this._musicKit, this._authenticator)
-      : super(const AuthState.initial());
+      : super(MusicAuthorizationStatusInitial());
 
   Future<void> checkAndUpdateAuthState() async {
     final result = await _musicKit.authorizationStatus;
@@ -22,15 +22,18 @@ class AuthNotifier extends StateNotifier<AuthState> {
   }
 
   void _updateState(MusicAuthorizationStatus result) {
-    result.maybeWhen(orElse: () {
-      state = result;
-    }, authorized: (musicUserToken) {
-      if (musicUserToken?.isNotEmpty == true) {
-        // iOS will always not include musicUserToken, so this only calls in Android
-        _authenticator.update(musicUserToken!).then((_) => state = result);
-      } else {
+    switch (result) {
+      case MusicAuthorizationStatusAuthorized(
+          musicUserToken: var musicUserToken
+        ):
+        if (musicUserToken?.isNotEmpty == true) {
+          // iOS will always not include musicUserToken, so this only calls in Android
+          _authenticator.update(musicUserToken!).then((_) => state = result);
+        } else {
+          state = result;
+        }
+      default:
         state = result;
-      }
-    });
+    }
   }
 }
