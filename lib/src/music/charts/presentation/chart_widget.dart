@@ -18,40 +18,29 @@ class ChartWidget extends ConsumerWidget {
       children: [
         Padding(
           padding: const EdgeInsetsDirectional.only(start: PADDING_M),
-          child: Text(
-            chart.name,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 24,
-            ),
-          ),
+          child: Text(chart.name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 24)),
         ),
         const SizedBox(height: 8),
         chart.maybeMap(
-          orElse: () => ResourceCardsList(
-            resources: chart.value,
-            itemHeightOffset: 50.0,
-            mainAxisCount: 2,
-          ),
+          orElse: () => ResourceCardsList(resources: chart.value, itemHeightOffset: 50.0, mainAxisCount: 2),
           songs: (value) {
             return ResourcesList(
               resources: value.value,
-              itemBuilder: (context, item) => ResourceTile(
-                resource: item,
-                onTap: () => ref.read(musicPlayerProvider).playMany(
-                      items: value.value,
-                      startingAt: value.value.indexWhere(
-                        (element) => element.id == item.id,
-                      ),
-                    ),
-              ),
+              itemBuilder:
+                  (context, item) => ResourceTile(
+                    resource: item,
+                    onTap:
+                        () => ref
+                            .read(musicPlayerProvider)
+                            .playMany(
+                              items: value.value,
+                              startingAt: value.value.indexWhere((element) => element.id == item.id),
+                            ),
+                  ),
             );
           },
-          musicVideo: (_) => ResourceCardsList(
-            resources: chart.value,
-            itemHeightOffset: 50.0,
-            artworkAspectRatio: 16 / 9,
-          ),
+          musicVideo:
+              (_) => ResourceCardsList(resources: chart.value, itemHeightOffset: 50.0, artworkAspectRatio: 16 / 9),
         ),
       ],
     );

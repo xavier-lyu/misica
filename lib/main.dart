@@ -5,9 +5,5 @@ import 'package:misica/src/core/presentation/app_widget.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(
-    ProviderScope(
-      child: AppWidget(),
-    ),
-  );
+  runApp(ProviderScope(child: AppWidget()));
 }

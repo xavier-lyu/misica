@@ -15,14 +15,9 @@ class MusicAuthenticator {
   Future<Credentials?> fetchCredentials({bool forceInvalidate = false}) async {
     try {
       final storedCredentials = await _credentialStorage.read();
-      if (forceInvalidate ||
-          storedCredentials == null ||
-          storedCredentials.isExpired) {
+      if (forceInvalidate || storedCredentials == null || storedCredentials.isExpired) {
         final failureOrCredentials = await refresh();
-        return failureOrCredentials.fold(
-          (_) => null,
-          (credentials) => credentials,
-        );
+        return failureOrCredentials.fold((_) => null, (credentials) => credentials);
       }
       return storedCredentials;
     } on PlatformException {
@@ -34,10 +29,7 @@ class MusicAuthenticator {
     try {
       final developerToken = await _musicKit.requestDeveloperToken();
       final userToken = await _musicKit.requestUserToken(developerToken);
-      final credentials = Credentials(
-        developerToken: developerToken,
-        userToken: userToken,
-      );
+      final credentials = Credentials(developerToken: developerToken, userToken: userToken);
 
       await _credentialStorage.save(credentials);
       return right(credentials);
@@ -53,11 +45,9 @@ class MusicAuthenticator {
   Future<void> update(String musicUserToken) async {
     final storedCredentials = await _credentialStorage.read();
     if (storedCredentials == null) {
-      await _credentialStorage.save(Credentials(
-          developerToken: Constants.developerToken, userToken: musicUserToken));
+      await _credentialStorage.save(Credentials(developerToken: Constants.developerToken, userToken: musicUserToken));
     } else {
-      await _credentialStorage
-          .save(storedCredentials.copyWith(userToken: musicUserToken));
+      await _credentialStorage.save(storedCredentials.copyWith(userToken: musicUserToken));
     }
   }
 }

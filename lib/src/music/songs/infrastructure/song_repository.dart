@@ -11,8 +11,7 @@ class SongRepository {
 
   final SongService _remoteService;
 
-  Future<Either<MusicFailure, Song>> getCatalogSong(
-      String storefront, String id) async {
+  Future<Either<MusicFailure, Song>> getCatalogSong(String storefront, String id) async {
     try {
       final song = await _remoteService.getCatalogSong(storefront, id);
       return right(song.data.first.toDomain() as Song);
@@ -23,8 +22,7 @@ class SongRepository {
     }
   }
 
-  Future<Either<MusicFailure, MusicVideo>> getCatalogMusicVideo(
-      String storefront, String id) async {
+  Future<Either<MusicFailure, MusicVideo>> getCatalogMusicVideo(String storefront, String id) async {
     try {
       final song = await _remoteService.getCatalogMusicVideo(storefront, id);
       return right(song.data.first.toDomain() as MusicVideo);

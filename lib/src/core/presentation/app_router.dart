@@ -9,52 +9,62 @@ class AppRouter extends RootStackRouter {
 
   @override
   List<AutoRoute> get routes => [
-        AutoRoute(path: '/splash', page: SplashRoute.page, initial: true),
-        AutoRoute(path: '/auth', page: AuthorizationRoute.page),
+    AutoRoute(path: '/splash', page: SplashRoute.page, initial: true),
+    AutoRoute(path: '/auth', page: AuthorizationRoute.page),
+    AutoRoute(
+      path: '/dashboard',
+      page: IndexRoute.page,
+      children: [
         AutoRoute(
-          path: '/dashboard',
-          page: IndexRoute.page,
+          path: 'home',
+          page: HomeTab.page,
+          initial: true,
           children: [
-            AutoRoute(
-              path: 'home',
-              page: HomeTab.page,
-              initial: true,
-              children: [
-                AutoRoute(path: '', page: HomeRoute.page),
-                AutoRoute(path: 'album', page: AlbumRoute.page),
-                AutoRoute(path: 'playlist', page: PlaylistRoute.page),
-                AutoRoute(path: 'artist', page: ArtistRoute.page),
-              ],
-            ),
-            AutoRoute(path: 'radio', page: RadioTab.page, children: [
-              AutoRoute(path: '', page: RadioRoute.page),
-              AutoRoute(
-                  path: 'genre/:id/:name/stations',
-                  page: GenreStationsRoute.page),
-            ]),
-            AutoRoute(path: 'library', page: LibraryTab.page, children: [
-              AutoRoute(path: '', page: LibraryRoute.page),
-              AutoRoute(path: 'album', page: AlbumRoute.page),
-              AutoRoute(path: 'playlist', page: PlaylistRoute.page),
-              AutoRoute(path: 'artist', page: ArtistRoute.page),
-            ]),
-            AutoRoute(path: 'search', page: SearchTab.page, children: [
-              AutoRoute(path: '', page: SearchRoute.page),
-              AutoRoute(path: 'album', page: AlbumRoute.page),
-              AutoRoute(path: 'playlist', page: PlaylistRoute.page),
-              AutoRoute(path: 'artist', page: ArtistRoute.page),
-            ]),
+            AutoRoute(path: '', page: HomeRoute.page),
+            AutoRoute(path: 'album', page: AlbumRoute.page),
+            AutoRoute(path: 'playlist', page: PlaylistRoute.page),
+            AutoRoute(path: 'artist', page: ArtistRoute.page),
           ],
         ),
-        AutoRoute(path: '/settings', page: SettingsRoute.page),
-        CustomRoute(
-          path: '/player',
-          page: PlayerRoute.page,
-          transitionsBuilder: TransitionsBuilders.slideBottom,
-          durationInMilliseconds: 300,
+        AutoRoute(
+          path: 'radio',
+          page: RadioTab.page,
+          children: [
+            AutoRoute(path: '', page: RadioRoute.page),
+            AutoRoute(path: 'genre/:id/:name/stations', page: GenreStationsRoute.page),
+          ],
         ),
-        RedirectRoute(path: '*', redirectTo: '/'),
-      ];
+        AutoRoute(
+          path: 'library',
+          page: LibraryTab.page,
+          children: [
+            AutoRoute(path: '', page: LibraryRoute.page),
+            AutoRoute(path: 'album', page: AlbumRoute.page),
+            AutoRoute(path: 'playlist', page: PlaylistRoute.page),
+            AutoRoute(path: 'artist', page: ArtistRoute.page),
+          ],
+        ),
+        AutoRoute(
+          path: 'search',
+          page: SearchTab.page,
+          children: [
+            AutoRoute(path: '', page: SearchRoute.page),
+            AutoRoute(path: 'album', page: AlbumRoute.page),
+            AutoRoute(path: 'playlist', page: PlaylistRoute.page),
+            AutoRoute(path: 'artist', page: ArtistRoute.page),
+          ],
+        ),
+      ],
+    ),
+    AutoRoute(path: '/settings', page: SettingsRoute.page),
+    CustomRoute(
+      path: '/player',
+      page: PlayerRoute.page,
+      transitionsBuilder: TransitionsBuilders.slideBottom,
+      durationInMilliseconds: 300,
+    ),
+    RedirectRoute(path: '*', redirectTo: '/'),
+  ];
 }
 
 const HomeTab = EmptyShellRoute("HomeRoute");

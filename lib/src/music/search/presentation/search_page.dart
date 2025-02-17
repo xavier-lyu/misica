@@ -31,16 +31,12 @@ class SearchPage extends HookConsumerWidget {
                   initial: () => Container(),
                   data: (data) {
                     if (data.results?.isNotEmpty == false) {
-                      return Center(
-                        child: Text(
-                            '${context.loc.noResultsFor} "${termState.value}"'),
-                      );
+                      return Center(child: Text('${context.loc.noResultsFor} "${termState.value}"'));
                     }
 
                     return SearchResultsView(results: data.results!);
                   },
-                  error: (error) =>
-                      Center(child: Text('undexpected error $error')),
+                  error: (error) => Center(child: Text('undexpected error $error')),
                   loading: () => const Center(child: Loader()),
                 );
               },
@@ -56,18 +52,12 @@ class SearchPage extends HookConsumerWidget {
                 resource.maybeMap(
                   (value) => null,
                   orElse: () => null,
-                  artist: (artist) =>
-                      AutoRouter.of(context).push(ArtistRoute(id: artist.id)),
-                  album: (album) =>
-                      AutoRouter.of(context).push(AlbumRoute(id: album.id)),
-                  playlist: (playlist) => AutoRouter.of(context)
-                      .push(PlaylistRoute(id: playlist.id)),
-                  song: (song) =>
-                      ref.read(musicPlayerProvider).playSingle(song),
-                  station: (station) =>
-                      ref.read(musicPlayerProvider).playSingle(station),
-                  musicVideo: (musicVideo) =>
-                      ref.read(musicPlayerProvider).playSingle(musicVideo),
+                  artist: (artist) => AutoRouter.of(context).push(ArtistRoute(id: artist.id)),
+                  album: (album) => AutoRouter.of(context).push(AlbumRoute(id: album.id)),
+                  playlist: (playlist) => AutoRouter.of(context).push(PlaylistRoute(id: playlist.id)),
+                  song: (song) => ref.read(musicPlayerProvider).playSingle(song),
+                  station: (station) => ref.read(musicPlayerProvider).playSingle(station),
+                  musicVideo: (musicVideo) => ref.read(musicPlayerProvider).playSingle(musicVideo),
                 );
               },
             ),

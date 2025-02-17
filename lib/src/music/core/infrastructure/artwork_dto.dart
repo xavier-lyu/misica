@@ -18,15 +18,9 @@ class ArtworkDTO with _$ArtworkDTO {
     required int width,
   }) = _ArtworkDTO;
 
-  factory ArtworkDTO.fromJson(Map<String, dynamic> json) =>
-      _$ArtworkDTOFromJson(json);
+  factory ArtworkDTO.fromJson(Map<String, dynamic> json) => _$ArtworkDTOFromJson(json);
 
   Artwork toDomain() {
-    return Artwork(
-        bgColor: bgColor,
-        height: height,
-        url: url,
-        width: width,
-        textColor: textColor1);
+    return Artwork(bgColor: bgColor, height: height, url: url, width: width, textColor: textColor1);
   }
 }

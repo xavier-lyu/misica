@@ -60,18 +60,14 @@ class _ArtistPageState extends ConsumerState<ArtistPage> {
         child: Padding(
           padding: const EdgeInsets.only(bottom: NOW_PLAYING_BAR_HEIGHT),
           child: state.when(
-            error: (_, __) => SliverRetryView(
-              onRetry: () => ref
-                  .watch(artistNotifierProvider.notifier)
-                  .fetchArtist(widget.id),
-            ),
+            error:
+                (_, __) =>
+                    SliverRetryView(onRetry: () => ref.watch(artistNotifierProvider.notifier).fetchArtist(widget.id)),
             loading: () => const SliverLoader(),
             data: (artist) {
               final expandedHeight = screenWidth - context.mqoc.viewPadding.top;
-              final isAppBarCollapsed =
-                  scrollOffset.value >= expandedHeight - kToolbarHeight - 44.0;
-              final offsetRatio =
-                  min(1.0, max(0, scrollOffset.value) / expandedHeight);
+              final isAppBarCollapsed = scrollOffset.value >= expandedHeight - kToolbarHeight - 44.0;
+              final offsetRatio = min(1.0, max(0, scrollOffset.value) / expandedHeight);
               final opacity = 1.0 - offsetRatio;
 
               return HookScrollView(
@@ -87,26 +83,19 @@ class _ArtistPageState extends ConsumerState<ArtistPage> {
                       radius: 0,
                     ),
                     expandedHeight: expandedHeight,
-                    expandedTitle: isAppBarCollapsed
-                        ? null
-                        : ArtistExpandedTitle(
-                            title: artist.name,
-                            opacity: opacity,
-                            onPlayed: () =>
-                                _handlePlaying(artist.defaultPlayableContent),
-                          ),
-                    actions: [
-                      ResourceContextMenuButton(resource: artist),
-                    ],
+                    expandedTitle:
+                        isAppBarCollapsed
+                            ? null
+                            : ArtistExpandedTitle(
+                              title: artist.name,
+                              opacity: opacity,
+                              onPlayed: () => _handlePlaying(artist.defaultPlayableContent),
+                            ),
+                    actions: [ResourceContextMenuButton(resource: artist)],
                   ),
-                  if (artist.views?.isNotEmpty == true)
-                    ResourceViewsList(views: artist.views!),
+                  if (artist.views?.isNotEmpty == true) ResourceViewsList(views: artist.views!),
                   if (artist.description != null)
-                    SliverToBoxAdapter(
-                      child: ArtistFooterView(
-                        description: artist.description!,
-                      ),
-                    )
+                    SliverToBoxAdapter(child: ArtistFooterView(description: artist.description!)),
                 ],
               );
             },
@@ -118,13 +107,7 @@ class _ArtistPageState extends ConsumerState<ArtistPage> {
 }
 
 class ArtistExpandedTitle extends StatelessWidget {
-  const ArtistExpandedTitle({
-    super.key,
-    this.child,
-    required this.opacity,
-    required this.title,
-    this.onPlayed,
-  });
+  const ArtistExpandedTitle({super.key, this.child, required this.opacity, required this.title, this.onPlayed});
 
   final Widget? child;
   final String title;
@@ -139,19 +122,16 @@ class ArtistExpandedTitle extends StatelessWidget {
         alignment: Alignment.bottomCenter,
         decoration: BoxDecoration(
           gradient: LinearGradient(
-              begin: Alignment.bottomCenter,
-              end: Alignment.topCenter,
-              colors: [
-                Colors.black.withValues(alpha: 0.5),
-                Colors.black.withValues(alpha: 0.25),
-                Colors.black.withValues(alpha: 0),
-              ]),
+            begin: Alignment.bottomCenter,
+            end: Alignment.topCenter,
+            colors: [
+              Colors.black.withValues(alpha: 0.5),
+              Colors.black.withValues(alpha: 0.25),
+              Colors.black.withValues(alpha: 0),
+            ],
+          ),
         ),
-        padding: const EdgeInsetsDirectional.only(
-          start: PADDING_M,
-          end: PADDING_M,
-          bottom: 2,
-        ),
+        padding: const EdgeInsetsDirectional.only(start: PADDING_M, end: PADDING_M, bottom: 2),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -160,8 +140,9 @@ class ArtistExpandedTitle extends StatelessWidget {
               child: AutoSizeText(
                 title,
                 style: context.ttoc.headlineLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white.withValues(alpha: opacity)),
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white.withValues(alpha: opacity),
+                ),
                 overflow: TextOverflow.ellipsis,
                 minFontSize: context.ttoc.headlineSmall?.fontSize ?? 20,
                 maxLines: 1,

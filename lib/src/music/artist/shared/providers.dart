@@ -9,17 +9,11 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'providers.g.dart';
 
 @riverpod
-ArtistsService artistService(Ref ref) =>
-    ArtistsService(ref.watch(musicDioProvider));
+ArtistsService artistService(Ref ref) => ArtistsService(ref.watch(musicDioProvider));
 
 @riverpod
-ArtistsRepository artistRepository(Ref ref) =>
-    ArtistsRepository(ref.watch(artistServiceProvider));
+ArtistsRepository artistRepository(Ref ref) => ArtistsRepository(ref.watch(artistServiceProvider));
 
-final artistNotifierProvider =
-    StateNotifierProvider.autoDispose<ArtistNotifier, AsyncValue<Artist>>(
-  (ref) => ArtistNotifier(
-    ref.watch(artistRepositoryProvider),
-    ref,
-  ),
+final artistNotifierProvider = StateNotifierProvider.autoDispose<ArtistNotifier, AsyncValue<Artist>>(
+  (ref) => ArtistNotifier(ref.watch(artistRepositoryProvider), ref),
 );

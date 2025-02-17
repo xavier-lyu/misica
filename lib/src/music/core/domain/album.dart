@@ -13,16 +13,12 @@ extension AlbumExt on Album {
 
   Duration get duration => durationOfSongs(tracks);
 
-  DateTime? get releaseDate => maybeMap(
-        (value) => null,
-        orElse: () => null,
-        album: (album) => album.attributes?.releaseDate,
-      );
+  DateTime? get releaseDate =>
+      maybeMap((value) => null, orElse: () => null, album: (album) => album.attributes?.releaseDate);
 
   String get copyright => attributes?.copyright ?? '';
 
-  String? get description =>
-      attributes?.editorialNotes?.standard ?? attributes?.editorialNotes?.short;
+  String? get description => attributes?.editorialNotes?.standard ?? attributes?.editorialNotes?.short;
 
   bool get isExplicit => attributes?.contentRating == 'explicit';
 

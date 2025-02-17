@@ -6,16 +6,12 @@ import 'package:misica/src/music/library/infrastructure/liked_resources_reposito
 import 'package:misica/src/music/library/shared/providers.dart';
 
 class FavoriteActionWidget extends ConsumerStatefulWidget {
-  const FavoriteActionWidget({
-    super.key,
-    required this.resource,
-  });
+  const FavoriteActionWidget({super.key, required this.resource});
 
   final Resource resource;
 
   @override
-  ConsumerState<FavoriteActionWidget> createState() =>
-      _FavoriteActionWidgetState();
+  ConsumerState<FavoriteActionWidget> createState() => _FavoriteActionWidgetState();
 }
 
 class _FavoriteActionWidgetState extends ConsumerState<FavoriteActionWidget> {
@@ -39,16 +35,17 @@ class _FavoriteActionWidgetState extends ConsumerState<FavoriteActionWidget> {
     final likedState = ref.watch(fav);
 
     return likedState.maybeWhen(
-      data: (value) => IconButton(
-          onPressed: () {
-            if (value) {
-              ref.read(fav.notifier).unlike(widget.resource);
-            } else {
-              ref.read(fav.notifier).like(widget.resource);
-            }
-          },
-          icon: Icon(
-              value ? Icons.favorite_rounded : Icons.favorite_border_rounded)),
+      data:
+          (value) => IconButton(
+            onPressed: () {
+              if (value) {
+                ref.read(fav.notifier).unlike(widget.resource);
+              } else {
+                ref.read(fav.notifier).like(widget.resource);
+              }
+            },
+            icon: Icon(value ? Icons.favorite_rounded : Icons.favorite_border_rounded),
+          ),
       orElse: () => const CircularProgressIndicator(),
     );
   }

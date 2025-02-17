@@ -19,16 +19,10 @@ class SongNotifier extends _$SongNotifier {
 
     if (kind.contains('song')) {
       final failureOrSong = await repository.getCatalogSong(storefront, id);
-      state = failureOrSong.fold(
-        (l) => AsyncError(l, StackTrace.current),
-        (r) => AsyncData(Track.song(r)),
-      );
+      state = failureOrSong.fold((l) => AsyncError(l, StackTrace.current), (r) => AsyncData(Track.song(r)));
     } else {
       final failureOrMV = await repository.getCatalogMusicVideo(storefront, id);
-      state = failureOrMV.fold(
-        (l) => AsyncError(l, StackTrace.current),
-        (r) => AsyncData(Track.musicVideo(r)),
-      );
+      state = failureOrMV.fold((l) => AsyncError(l, StackTrace.current), (r) => AsyncData(Track.musicVideo(r)));
     }
 
     return unit;

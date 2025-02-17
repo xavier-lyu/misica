@@ -12,7 +12,8 @@ part of 'music_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 MusicResponse _$MusicResponseFromJson(Map<String, dynamic> json) {
   return _MusicResponse.fromJson(json);
@@ -30,22 +31,19 @@ mixin _$MusicResponse {
   /// Create a copy of MusicResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $MusicResponseCopyWith<MusicResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $MusicResponseCopyWith<MusicResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $MusicResponseCopyWith<$Res> {
-  factory $MusicResponseCopyWith(
-          MusicResponse value, $Res Function(MusicResponse) then) =
+  factory $MusicResponseCopyWith(MusicResponse value, $Res Function(MusicResponse) then) =
       _$MusicResponseCopyWithImpl<$Res, MusicResponse>;
   @useResult
   $Res call({String? next, @ResourceDTOConverter() List<ResourceDTO> data});
 }
 
 /// @nodoc
-class _$MusicResponseCopyWithImpl<$Res, $Val extends MusicResponse>
-    implements $MusicResponseCopyWith<$Res> {
+class _$MusicResponseCopyWithImpl<$Res, $Val extends MusicResponse> implements $MusicResponseCopyWith<$Res> {
   _$MusicResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -57,28 +55,28 @@ class _$MusicResponseCopyWithImpl<$Res, $Val extends MusicResponse>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? next = freezed,
-    Object? data = null,
-  }) {
-    return _then(_value.copyWith(
-      next: freezed == next
-          ? _value.next
-          : next // ignore: cast_nullable_to_non_nullable
-              as String?,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<ResourceDTO>,
-    ) as $Val);
+  $Res call({Object? next = freezed, Object? data = null}) {
+    return _then(
+      _value.copyWith(
+            next:
+                freezed == next
+                    ? _value.next
+                    : next // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            data:
+                null == data
+                    ? _value.data
+                    : data // ignore: cast_nullable_to_non_nullable
+                        as List<ResourceDTO>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$MusicResponseImplCopyWith<$Res>
-    implements $MusicResponseCopyWith<$Res> {
-  factory _$$MusicResponseImplCopyWith(
-          _$MusicResponseImpl value, $Res Function(_$MusicResponseImpl) then) =
+abstract class _$$MusicResponseImplCopyWith<$Res> implements $MusicResponseCopyWith<$Res> {
+  factory _$$MusicResponseImplCopyWith(_$MusicResponseImpl value, $Res Function(_$MusicResponseImpl) then) =
       __$$MusicResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -86,45 +84,41 @@ abstract class _$$MusicResponseImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$MusicResponseImplCopyWithImpl<$Res>
-    extends _$MusicResponseCopyWithImpl<$Res, _$MusicResponseImpl>
+class __$$MusicResponseImplCopyWithImpl<$Res> extends _$MusicResponseCopyWithImpl<$Res, _$MusicResponseImpl>
     implements _$$MusicResponseImplCopyWith<$Res> {
-  __$$MusicResponseImplCopyWithImpl(
-      _$MusicResponseImpl _value, $Res Function(_$MusicResponseImpl) _then)
-      : super(_value, _then);
+  __$$MusicResponseImplCopyWithImpl(_$MusicResponseImpl _value, $Res Function(_$MusicResponseImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of MusicResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? next = freezed,
-    Object? data = null,
-  }) {
-    return _then(_$MusicResponseImpl(
-      next: freezed == next
-          ? _value.next
-          : next // ignore: cast_nullable_to_non_nullable
-              as String?,
-      data: null == data
-          ? _value._data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<ResourceDTO>,
-    ));
+  $Res call({Object? next = freezed, Object? data = null}) {
+    return _then(
+      _$MusicResponseImpl(
+        next:
+            freezed == next
+                ? _value.next
+                : next // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        data:
+            null == data
+                ? _value._data
+                : data // ignore: cast_nullable_to_non_nullable
+                    as List<ResourceDTO>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$MusicResponseImpl extends _MusicResponse {
-  const _$MusicResponseImpl(
-      {this.next,
-      @ResourceDTOConverter() required final List<ResourceDTO> data})
-      : _data = data,
-        super._();
+  const _$MusicResponseImpl({this.next, @ResourceDTOConverter() required final List<ResourceDTO> data})
+    : _data = data,
+      super._();
 
-  factory _$MusicResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MusicResponseImplFromJson(json);
+  factory _$MusicResponseImpl.fromJson(Map<String, dynamic> json) => _$$MusicResponseImplFromJson(json);
 
   @override
   final String? next;
@@ -153,8 +147,7 @@ class _$MusicResponseImpl extends _MusicResponse {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, next, const DeepCollectionEquality().hash(_data));
+  int get hashCode => Object.hash(runtimeType, next, const DeepCollectionEquality().hash(_data));
 
   /// Create a copy of MusicResponse
   /// with the given fields replaced by the non-null parameter values.
@@ -166,21 +159,16 @@ class _$MusicResponseImpl extends _MusicResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MusicResponseImplToJson(
-      this,
-    );
+    return _$$MusicResponseImplToJson(this);
   }
 }
 
 abstract class _MusicResponse extends MusicResponse {
-  const factory _MusicResponse(
-          {final String? next,
-          @ResourceDTOConverter() required final List<ResourceDTO> data}) =
+  const factory _MusicResponse({final String? next, @ResourceDTOConverter() required final List<ResourceDTO> data}) =
       _$MusicResponseImpl;
   const _MusicResponse._() : super._();
 
-  factory _MusicResponse.fromJson(Map<String, dynamic> json) =
-      _$MusicResponseImpl.fromJson;
+  factory _MusicResponse.fromJson(Map<String, dynamic> json) = _$MusicResponseImpl.fromJson;
 
   @override
   String? get next;
@@ -192,6 +180,5 @@ abstract class _MusicResponse extends MusicResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MusicResponseImplCopyWith<_$MusicResponseImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$MusicResponseImplCopyWith<_$MusicResponseImpl> get copyWith => throw _privateConstructorUsedError;
 }

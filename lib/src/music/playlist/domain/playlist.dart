@@ -9,6 +9,5 @@ extension PlaylistExt on Playlist {
 
   Duration get duration => durationOfSongs(tracks);
 
-  String? get description =>
-      attributes?.editorialNotes?.standard ?? attributes?.editorialNotes?.short;
+  String? get description => attributes?.editorialNotes?.standard ?? attributes?.editorialNotes?.short;
 }

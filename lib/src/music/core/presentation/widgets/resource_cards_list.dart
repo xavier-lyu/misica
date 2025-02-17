@@ -37,19 +37,14 @@ class ResourceCardsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = context.mqoc.size.width;
-    final itemWidth =
-        (screenWidth - containerPadding * 2 - _mainAxisCount * itemSpacing) /
-            _mainAxisCount;
+    final itemWidth = (screenWidth - containerPadding * 2 - _mainAxisCount * itemSpacing) / _mainAxisCount;
     final itemHeight = itemWidth / artworkAspectRatio + itemHeightOffset;
-    final containerHeight =
-        itemHeight * _crossAxisCount + itemSpacing * (_crossAxisCount - 1);
+    final containerHeight = itemHeight * _crossAxisCount + itemSpacing * (_crossAxisCount - 1);
 
     return SizedBox(
       height: containerHeight,
       child: PageView.builder(
-        controller: PageController(
-          viewportFraction: 1 - (containerPadding * 2 / screenWidth),
-        ),
+        controller: PageController(viewportFraction: 1 - (containerPadding * 2 / screenWidth)),
         itemCount: pageCount,
         itemBuilder: (context, position) {
           int start = position * mainAxisCount * crossAxisCount;
@@ -64,17 +59,18 @@ class ResourceCardsList extends StatelessWidget {
               direction: Axis.vertical,
               runSpacing: itemSpacing,
               spacing: itemSpacing,
-              children: resources
-                  .sublist(start, end)
-                  .map(
-                    (e) => ResourceCard(
-                      resource: e,
-                      aspectRatio: itemWidth / itemHeight,
-                      artworkAspectRatio: artworkAspectRatio,
-                      artworkWidth: itemWidth,
-                    ),
-                  )
-                  .toList(),
+              children:
+                  resources
+                      .sublist(start, end)
+                      .map(
+                        (e) => ResourceCard(
+                          resource: e,
+                          aspectRatio: itemWidth / itemHeight,
+                          artworkAspectRatio: artworkAspectRatio,
+                          artworkWidth: itemWidth,
+                        ),
+                      )
+                      .toList(),
             ),
           );
         },

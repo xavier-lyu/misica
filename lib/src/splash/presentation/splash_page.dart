@@ -8,8 +8,6 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Loader(),
-    );
+    return const Scaffold(body: Loader());
   }
 }

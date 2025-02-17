@@ -15,21 +15,13 @@ class RecommendationWidget extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsetsDirectional.only(start: PADDING_M),
-          child: Text(
-            recommendation.title,
-            style: context.ttoc.headlineSmall,
-          ),
+          child: Text(recommendation.title, style: context.ttoc.headlineSmall),
         ),
         const SizedBox(height: 8),
         if (recommendation.recommendations?.isNotEmpty == true)
-          ...recommendation.recommendations!
-              .map((e) => RecommendationWidget(recommendation: e)),
+          ...recommendation.recommendations!.map((e) => RecommendationWidget(recommendation: e)),
         if (recommendation.contents?.isNotEmpty == true)
-          ResourceCardsList(
-            resources: recommendation.contents!,
-            mainAxisCount: 2,
-            itemHeightOffset: 50.0,
-          ),
+          ResourceCardsList(resources: recommendation.contents!, mainAxisCount: 2, itemHeightOffset: 50.0),
       ],
     );
   }

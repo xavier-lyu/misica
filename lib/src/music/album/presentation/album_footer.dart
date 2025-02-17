@@ -12,21 +12,14 @@ class AlbumFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        border: BorderDirectional(
-          start: Divider.createBorderSide(context, width: 4),
-        ),
-      ),
+      decoration: BoxDecoration(border: BorderDirectional(start: Divider.createBorderSide(context, width: 4))),
       padding: const EdgeInsetsDirectional.only(start: 9),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          if (album.releaseDate != null)
-            Text(DateFormat.yMMMd(context.loc.localeName)
-                .format(album.releaseDate!)),
-          Text(
-              '${album.tracks.length} ${context.loc.song}, ${album.duration.readable(context.loc.localeName)}'),
+          if (album.releaseDate != null) Text(DateFormat.yMMMd(context.loc.localeName).format(album.releaseDate!)),
+          Text('${album.tracks.length} ${context.loc.song}, ${album.duration.readable(context.loc.localeName)}'),
           if (album.copyright.isNotEmpty) Text(album.copyright),
         ],
       ),

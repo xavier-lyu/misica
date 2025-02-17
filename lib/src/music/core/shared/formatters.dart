@@ -3,10 +3,7 @@ import 'package:duration/locale.dart';
 import 'package:misica/src/music/core/domain/track.dart';
 
 Duration durationOfSongs(List<Track> songs) {
-  final durationInMillis = songs.fold<int>(
-    0,
-    (prev, elm) => prev + elm.durationInMillis,
-  );
+  final durationInMillis = songs.fold<int>(0, (prev, elm) => prev + elm.durationInMillis);
   return Duration(milliseconds: durationInMillis);
 }
 

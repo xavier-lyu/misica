@@ -11,107 +11,87 @@ part 'resource.g.dart';
 @freezed
 class Resource with _$Resource {
   const Resource._();
-  const factory Resource({
-    required String id,
-    required String type,
-    required ResourceAttributes? attributes,
-  }) = ResourceRaw;
+  const factory Resource({required String id, required String type, required ResourceAttributes? attributes}) =
+      ResourceRaw;
 
   const factory Resource.album({
     required String id,
     required String type,
     required AlbumAttributes? attributes,
-    @JsonKey(includeFromJson: false, includeToJson: false)
-    AlbumRelationships? relationships,
-    @JsonKey(includeFromJson: false, includeToJson: false)
-    Map<String, ResourceView>? views,
+    @JsonKey(includeFromJson: false, includeToJson: false) AlbumRelationships? relationships,
+    @JsonKey(includeFromJson: false, includeToJson: false) Map<String, ResourceView>? views,
   }) = Album;
 
   const factory Resource.artist({
     required String id,
     required String type,
     required ArtistAttributes? attributes,
-    @JsonKey(includeFromJson: false, includeToJson: false)
-    ArtistRelationships? relationships,
-    @JsonKey(includeFromJson: false, includeToJson: false)
-    Map<String, ResourceView>? views,
+    @JsonKey(includeFromJson: false, includeToJson: false) ArtistRelationships? relationships,
+    @JsonKey(includeFromJson: false, includeToJson: false) Map<String, ResourceView>? views,
   }) = Artist;
 
   const factory Resource.musicVideo({
     required String id,
     required String type,
     required MusicVideoAttributes? attributes,
-    @JsonKey(includeFromJson: false, includeToJson: false)
-    MusicVideoRelationships? relationships,
+    @JsonKey(includeFromJson: false, includeToJson: false) MusicVideoRelationships? relationships,
   }) = MusicVideo;
 
   const factory Resource.playlist({
     required String id,
     required String type,
     required PlaylistAttributes? attributes,
-    @JsonKey(includeFromJson: false, includeToJson: false)
-    PlaylistRelationships? relationships,
-    @JsonKey(includeFromJson: false, includeToJson: false)
-    Map<String, ResourceView>? views,
+    @JsonKey(includeFromJson: false, includeToJson: false) PlaylistRelationships? relationships,
+    @JsonKey(includeFromJson: false, includeToJson: false) Map<String, ResourceView>? views,
   }) = Playlist;
 
   const factory Resource.song({
     required String id,
     required String type,
     required SongAttributes? attributes,
-    @JsonKey(includeFromJson: false, includeToJson: false)
-    SongRelationships? relationships,
+    @JsonKey(includeFromJson: false, includeToJson: false) SongRelationships? relationships,
   }) = Song;
 
-  const factory Resource.station({
-    required String id,
-    required String type,
-    required StationAttributes? attributes,
-  }) = Station;
+  const factory Resource.station({required String id, required String type, required StationAttributes? attributes}) =
+      Station;
 
   const factory Resource.curator({
     required String id,
     required String type,
     required CuratorAttributes? attributes,
-    @JsonKey(includeFromJson: false, includeToJson: false)
-    CuratorRelationships? relationships,
+    @JsonKey(includeFromJson: false, includeToJson: false) CuratorRelationships? relationships,
   }) = Curator;
 
-  const factory Resource.genre({
-    required String id,
-    required String type,
-    required GenreAttributes? attributes,
-  }) = Genre;
+  const factory Resource.genre({required String id, required String type, required GenreAttributes? attributes}) =
+      Genre;
 
-  factory Resource.fromJson(Map<String, dynamic> json) =>
-      _$ResourceFromJson(json);
+  factory Resource.fromJson(Map<String, dynamic> json) => _$ResourceFromJson(json);
 
   Artwork? get artwork => map(
-        (value) => value.attributes?.artwork,
-        album: (album) => album.attributes?.artwork,
-        artist: (artist) => artist.attributes?.artwork,
-        musicVideo: (musicVideo) => musicVideo.attributes?.artwork,
-        playlist: (playlist) => playlist.attributes?.artwork,
-        song: (song) {
-          return song.attributes?.artwork;
-        },
-        station: (station) => station.attributes?.artwork,
-        curator: (curator) => curator.attributes?.artwork,
-        genre: (_) => null,
-      );
+    (value) => value.attributes?.artwork,
+    album: (album) => album.attributes?.artwork,
+    artist: (artist) => artist.attributes?.artwork,
+    musicVideo: (musicVideo) => musicVideo.attributes?.artwork,
+    playlist: (playlist) => playlist.attributes?.artwork,
+    song: (song) {
+      return song.attributes?.artwork;
+    },
+    station: (station) => station.attributes?.artwork,
+    curator: (curator) => curator.attributes?.artwork,
+    genre: (_) => null,
+  );
 
   String? get creatorName => map(
-        (value) =>
-            value.attributes?.artistName ?? value.attributes?.curatorName,
-        album: (album) => album.attributes?.artistName,
-        artist: (artist) => null,
-        musicVideo: (musicVideo) => musicVideo.attributes?.artistName,
-        playlist: (playlist) => playlist.attributes?.curatorName,
-        song: (song) => song.attributes?.artistName,
-        station: (station) => station.attributes?.editorialNotes?.short,
-        curator: (curator) => null,
-        genre: (_) => null,
-      );
+    (value) => value.attributes?.artistName ?? value.attributes?.curatorName,
+    album: (album) => album.attributes?.artistName,
+    artist: (artist) => null,
+    musicVideo: (musicVideo) => musicVideo.attributes?.artistName,
+    playlist: (playlist) => playlist.attributes?.curatorName,
+    song: (song) => song.attributes?.artistName,
+    station: (station) => station.attributes?.editorialNotes?.short,
+    curator: (curator) => null,
+    genre: (_) => null,
+  );
 
   String get name =>
       map(
@@ -127,10 +107,5 @@ class Resource with _$Resource {
       ) ??
       '';
 
-  bool get isTrack => maybeMap(
-        (value) => false,
-        orElse: () => false,
-        song: (_) => true,
-        musicVideo: (_) => true,
-      );
+  bool get isTrack => maybeMap((value) => false, orElse: () => false, song: (_) => true, musicVideo: (_) => true);
 }

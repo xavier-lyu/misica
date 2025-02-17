@@ -13,9 +13,7 @@ String _$artistServiceHash() => r'f5a1948a0483d57ce7e5440403df7aac037fa47f';
 final artistServiceProvider = AutoDisposeProvider<ArtistsService>.internal(
   artistService,
   name: r'artistServiceProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$artistServiceHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$artistServiceHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
@@ -27,13 +25,10 @@ String _$artistRepositoryHash() => r'6aafad001068b0efdfb3a0ae3a6b8e39c1d0f351';
 
 /// See also [artistRepository].
 @ProviderFor(artistRepository)
-final artistRepositoryProvider =
-    AutoDisposeProvider<ArtistsRepository>.internal(
+final artistRepositoryProvider = AutoDisposeProvider<ArtistsRepository>.internal(
   artistRepository,
   name: r'artistRepositoryProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$artistRepositoryHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$artistRepositoryHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

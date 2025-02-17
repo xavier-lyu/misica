@@ -1,8 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:misica/src/music/core/infrastructure/resource_dto.dart';
 
-class ResourceDTOConverter
-    implements JsonConverter<ResourceDTO, Map<String, dynamic>> {
+class ResourceDTOConverter implements JsonConverter<ResourceDTO, Map<String, dynamic>> {
   const ResourceDTOConverter();
 
   @override
@@ -20,8 +19,7 @@ class ResourceDTOConverter
       return StationDTO.fromJson(json);
     } else if (dtoType.startsWith('music-video')) {
       return MusicVideoDTO.fromJson(json);
-    } else if (dtoType.endsWith('curators') ||
-        dtoType.endsWith('social-profiles')) {
+    } else if (dtoType.endsWith('curators') || dtoType.endsWith('social-profiles')) {
       return CuratorDTO.fromJson(json);
     } else if (dtoType.endsWith('genres')) {
       return GenreDTO.fromJson(json);
@@ -43,8 +41,7 @@ class DateTimeConverter implements JsonConverter<DateTime?, String?> {
   DateTime? fromJson(String? json) {
     if (json == null) return null;
 
-    final units = json.split('-').map<int>((e) => int.parse(e)).toList()
-      ..addAll([1, 1]);
+    final units = json.split('-').map<int>((e) => int.parse(e)).toList()..addAll([1, 1]);
     if (units.length < 3) return null;
 
     return DateTime.utc(units[0], units[1], units[2]);

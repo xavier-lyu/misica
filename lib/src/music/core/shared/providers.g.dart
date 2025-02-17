@@ -13,8 +13,7 @@ String _$storefrontHash() => r'a374a6519b5a0a77517c651ddce0f30bf0ce7f61';
 final storefrontProvider = AutoDisposeFutureProvider<String>.internal(
   storefront,
   name: r'storefrontProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$storefrontHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$storefrontHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

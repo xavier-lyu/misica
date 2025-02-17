@@ -12,10 +12,7 @@ class AlbumsRepository {
 
   final AlbumsService _remoteService;
 
-  Future<Either<MusicFailure, Album>> fetchCatalogAlbum(
-    String storefront,
-    String id,
-  ) async {
+  Future<Either<MusicFailure, Album>> fetchCatalogAlbum(String storefront, String id) async {
     try {
       final album = await _remoteService.fetchCatalogAlbum(storefront, id);
       return right(album.data.first.toDomain() as Album);

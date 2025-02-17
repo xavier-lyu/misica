@@ -15,7 +15,8 @@ class AppLocalizationsEs extends AppLocalizations {
   String get defaultExplanatory => 'Ponle banda sonora a tu vida con Apple Music.';
 
   @override
-  String get restrictedExplanatory => 'Misica no se puede utilizar en este dispositivo porque el uso de Apple Music está restringido.';
+  String get restrictedExplanatory =>
+      'Misica no se puede utilizar en este dispositivo porque el uso de Apple Music está restringido.';
 
   @override
   String get secondaryExplanatory => 'Concede a Misica\n el acceso a Apple Music en Ajustes.';
@@ -96,7 +97,8 @@ class AppLocalizationsEs extends AppLocalizations {
   String get changeLanguageTitle => 'Cambia la configuración del idioma';
 
   @override
-  String get changeLanguageHint => 'Continúa a la siguiente pantalla y selecciona Idioma. Luego, elige el idioma que desees.';
+  String get changeLanguageHint =>
+      'Continúa a la siguiente pantalla y selecciona Idioma. Luego, elige el idioma que desees.';
 
   @override
   String get dismiss => 'Ignorar';

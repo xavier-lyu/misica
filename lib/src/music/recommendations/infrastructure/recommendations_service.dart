@@ -7,8 +7,7 @@ part 'recommendations_service.g.dart';
 
 @RestApi(baseUrl: Constants.musicApiBaseUrl)
 abstract class RecommendationsService {
-  factory RecommendationsService(Dio dio, {String baseUrl}) =
-      _RecommendationsService;
+  factory RecommendationsService(Dio dio, {String baseUrl}) = _RecommendationsService;
 
   @GET("/me/recommendations")
   Future<RecommendationsResponse> getRecommendations(

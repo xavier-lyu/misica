@@ -19,9 +19,6 @@ RecommendationsRepository recosRepository(Ref ref) {
   return RecommendationsRepository(ref.watch(recosServiceProvider));
 }
 
-final recosNotifierProvider = StateNotifierProvider<RecommendationsNotifier,
-    AsyncValue<List<Recommendation>>>(
-  (ref) => RecommendationsNotifier(
-    ref.read(recosRepositoryProvider),
-  ),
+final recosNotifierProvider = StateNotifierProvider<RecommendationsNotifier, AsyncValue<List<Recommendation>>>(
+  (ref) => RecommendationsNotifier(ref.read(recosRepositoryProvider)),
 );

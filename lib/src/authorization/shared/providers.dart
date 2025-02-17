@@ -10,10 +10,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'providers.g.dart';
 
 final authNotifierProvider = StateNotifierProvider<AuthNotifier, AuthState>(
-  (ref) => AuthNotifier(
-    ref.read(musicKitProvider),
-    ref.read(musicAuthenticatorProvider),
-  ),
+  (ref) => AuthNotifier(ref.read(musicKitProvider), ref.read(musicAuthenticatorProvider)),
 );
 
 @riverpod
@@ -28,16 +25,10 @@ SecureCredentialsStorage credentialsStorage(Ref ref) {
 
 @riverpod
 MusicAuthenticator musicAuthenticator(Ref ref) {
-  return MusicAuthenticator(
-    ref.watch(credentialsStorageProvider),
-    ref.watch(musicKitProvider),
-  );
+  return MusicAuthenticator(ref.watch(credentialsStorageProvider), ref.watch(musicKitProvider));
 }
 
 @riverpod
 MusicAuthIntercepter musicAuthIntercepter(Ref ref) {
-  return MusicAuthIntercepter(
-    ref.watch(musicDioProvider),
-    ref.watch(musicAuthenticatorProvider),
-  );
+  return MusicAuthIntercepter(ref.watch(musicDioProvider), ref.watch(musicAuthenticatorProvider));
 }

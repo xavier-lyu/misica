@@ -14,25 +14,17 @@ class SembastSettings extends SettingsStorage {
 
   @override
   Future<void> clear() {
-    return _store
-        .record(_preferencesStorageKey)
-        .delete(_sembastDatabase.instance);
+    return _store.record(_preferencesStorageKey).delete(_sembastDatabase.instance);
   }
 
   @override
   Future<Settings> read() async {
-    final recordMap = await _store
-        .record(_preferencesStorageKey)
-        .get(_sembastDatabase.instance);
-    return recordMap != null
-        ? Settings.fromJson(recordMap)
-        : Settings.defaults();
+    final recordMap = await _store.record(_preferencesStorageKey).get(_sembastDatabase.instance);
+    return recordMap != null ? Settings.fromJson(recordMap) : Settings.defaults();
   }
 
   @override
   Future<void> save(Settings settings) async {
-    await _store
-        .record(_preferencesStorageKey)
-        .put(_sembastDatabase.instance, settings.toJson());
+    await _store.record(_preferencesStorageKey).put(_sembastDatabase.instance, settings.toJson());
   }
 }

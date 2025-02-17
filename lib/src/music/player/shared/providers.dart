@@ -6,14 +6,11 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'providers.g.dart';
 
-final playerQueueStreamProvider =
-    StreamProvider((ref) => ref.read(musicKitProvider).onPlayerQueueChanged);
+final playerQueueStreamProvider = StreamProvider((ref) => ref.read(musicKitProvider).onPlayerQueueChanged);
 
 @riverpod
 Future<MusicPlayerQueueEntry?> currentEntry(Ref ref) {
-  return ref.watch(
-    playerQueueStreamProvider.selectAsync((data) => data.currentEntry),
-  );
+  return ref.watch(playerQueueStreamProvider.selectAsync((data) => data.currentEntry));
 }
 
 @riverpod
@@ -26,14 +23,11 @@ Future<MusicPlayerState> playerState(Ref ref) {
   return ref.watch(musicKitProvider).musicPlayerState;
 }
 
-final playerStateStreamProvider = StreamProvider(
-    (ref) => ref.read(musicKitProvider).onMusicPlayerStateChanged);
+final playerStateStreamProvider = StreamProvider((ref) => ref.read(musicKitProvider).onMusicPlayerStateChanged);
 
 @riverpod
 Future<MusicPlayerPlaybackStatus> playerPlaybackStatus(Ref ref) {
-  return ref.watch(
-    playerStateStreamProvider.selectAsync((value) => value.playbackStatus),
-  );
+  return ref.watch(playerStateStreamProvider.selectAsync((value) => value.playbackStatus));
 }
 
 @riverpod

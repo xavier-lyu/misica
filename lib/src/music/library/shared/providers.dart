@@ -18,10 +18,10 @@ LikedResourcesRepository likedResourcesRepository(Ref ref) {
   return LikedResourcesRepository(ref.watch(likedLocalServiceProvider));
 }
 
-final likedResourcesNotifierProvider = StateNotifierProvider<
-    LikedResourcesNotifier, AsyncValue<Map<String, List<Resource>>>>(
-  (ref) => LikedResourcesNotifier(ref.read(likedResourcesRepositoryProvider)),
-);
+final likedResourcesNotifierProvider =
+    StateNotifierProvider<LikedResourcesNotifier, AsyncValue<Map<String, List<Resource>>>>(
+      (ref) => LikedResourcesNotifier(ref.read(likedResourcesRepositoryProvider)),
+    );
 
 @riverpod
 Future<bool> isResourceLiked(Ref ref, {required String resourceId}) async {

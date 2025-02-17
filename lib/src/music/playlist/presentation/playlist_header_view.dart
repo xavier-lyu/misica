@@ -9,10 +9,7 @@ import 'package:misica/src/music/core/presentation/widgets/shuffle_play_button.d
 import 'package:misica/src/music/playlist/domain/playlist.dart';
 
 class PlaylistHeaderView extends StatelessWidget {
-  const PlaylistHeaderView({
-    super.key,
-    required this.playlist,
-  });
+  const PlaylistHeaderView({super.key, required this.playlist});
 
   final Playlist playlist;
 
@@ -20,46 +17,29 @@ class PlaylistHeaderView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ArtworkWidget(
-          artwork: playlist.artwork,
-          width: ARTWORK_COVER_SIZE,
-          height: ARTWORK_COVER_SIZE,
-        ),
-        const SizedBox(
-          height: 15,
-        ),
+        ArtworkWidget(artwork: playlist.artwork, width: ARTWORK_COVER_SIZE, height: ARTWORK_COVER_SIZE),
+        const SizedBox(height: 15),
         if (playlist.name.isNotEmpty)
           Text(
             playlist.name,
-            style: context.ttoc.titleLarge?.copyWith(
-              fontWeight: FontWeight.bold,
-            ),
+            style: context.ttoc.titleLarge?.copyWith(fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
         if (playlist.creatorName?.isNotEmpty == true)
           Text(
             playlist.creatorName!,
-            style: context.ttoc.titleLarge?.copyWith(
-              color: context.toc.primaryColor,
-            ),
+            style: context.ttoc.titleLarge?.copyWith(color: context.toc.primaryColor),
             textAlign: TextAlign.center,
           ),
         if (playlist.description != null)
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10),
-            child: ExpandableText(playlist.description!),
-          ),
+          Padding(padding: const EdgeInsets.symmetric(vertical: 10), child: ExpandableText(playlist.description!)),
         Row(
           children: [
-            Flexible(
-                child: PlayButton(
-              kind: playlist.type,
-              item: playlist,
-            )),
+            Flexible(child: PlayButton(kind: playlist.type, item: playlist)),
             const SizedBox(width: 15),
-            Flexible(child: ShufflePlayButton(item: playlist))
+            Flexible(child: ShufflePlayButton(item: playlist)),
           ],
-        )
+        ),
       ],
     );
   }

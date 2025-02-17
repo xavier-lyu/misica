@@ -10,10 +10,7 @@ class CacheService {
     final cacheDir = await getTemporaryDirectory();
     final documentsDir = await getApplicationDocumentsDirectory();
     final tmpDir = Directory('${documentsDir.parent.path}/tmp');
-    return [
-      cacheDir,
-      tmpDir,
-    ];
+    return [cacheDir, tmpDir];
   }
 
   Future<String> getCacheSize() async {

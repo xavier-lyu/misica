@@ -22,8 +22,7 @@ class GenreStationsPage extends StatefulHookConsumerWidget {
   final String genreName;
 
   @override
-  ConsumerState<ConsumerStatefulWidget> createState() =>
-      _GenreStationsPageState();
+  ConsumerState<ConsumerStatefulWidget> createState() => _GenreStationsPageState();
 }
 
 class _GenreStationsPageState extends ConsumerState<GenreStationsPage> {
@@ -31,9 +30,7 @@ class _GenreStationsPageState extends ConsumerState<GenreStationsPage> {
   void initState() {
     super.initState();
 
-    Future.microtask(() => ref
-        .read(genreStationsNotifierProvider.notifier)
-        .fetchStationGenres(widget.genreId));
+    Future.microtask(() => ref.read(genreStationsNotifierProvider.notifier).fetchStationGenres(widget.genreId));
   }
 
   @override
@@ -41,31 +38,26 @@ class _GenreStationsPageState extends ConsumerState<GenreStationsPage> {
     final state = ref.watch(genreStationsNotifierProvider);
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.genreName),
-      ),
+      appBar: AppBar(title: Text(widget.genreName)),
       body: state.when(
-          data: (stations) => ListView.builder(
-                padding: const EdgeInsets.all(PADDING_M),
-                itemBuilder: (context, index) {
-                  if (index.isOdd) {
-                    return const DividerWidget(
-                      endIndent: 0,
-                      indent: 120,
-                      height: 15,
-                    );
-                  }
+        data:
+            (stations) => ListView.builder(
+              padding: const EdgeInsets.all(PADDING_M),
+              itemBuilder: (context, index) {
+                if (index.isOdd) {
+                  return const DividerWidget(endIndent: 0, indent: 120, height: 15);
+                }
 
-                  return StationTile(station: stations[index ~/ 2]);
-                },
-                itemCount: max(0, stations.length * 2),
-              ),
-          error: (_, __) => RetryWidget(
-                onRetry: () => ref
-                    .read(genreStationsNotifierProvider.notifier)
-                    .fetchStationGenres(widget.genreId),
-              ),
-          loading: () => const Loader()),
+                return StationTile(station: stations[index ~/ 2]);
+              },
+              itemCount: max(0, stations.length * 2),
+            ),
+        error:
+            (_, __) => RetryWidget(
+              onRetry: () => ref.read(genreStationsNotifierProvider.notifier).fetchStationGenres(widget.genreId),
+            ),
+        loading: () => const Loader(),
+      ),
     );
   }
 }

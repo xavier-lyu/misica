@@ -20,10 +20,7 @@ class _PlaylistsService implements PlaylistsService {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<MusicResponse> fetchCatalogPlaylist(
-    String storefront,
-    String id,
-  ) async {
+  Future<MusicResponse> fetchCatalogPlaylist(String storefront, String id) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -50,10 +47,7 @@ class _PlaylistsService implements PlaylistsService {
   }
 
   @override
-  Future<MusicResponse> fetchCatalogPlaylistTracks(
-    String storefront,
-    String id,
-  ) async {
+  Future<MusicResponse> fetchCatalogPlaylistTracks(String storefront, String id) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -81,8 +75,7 @@ class _PlaylistsService implements PlaylistsService {
 
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
     if (T != dynamic &&
-        !(requestOptions.responseType == ResponseType.bytes ||
-            requestOptions.responseType == ResponseType.stream)) {
+        !(requestOptions.responseType == ResponseType.bytes || requestOptions.responseType == ResponseType.stream)) {
       if (T == String) {
         requestOptions.responseType = ResponseType.plain;
       } else {

@@ -12,7 +12,8 @@ part of 'search_results.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 /// @nodoc
 mixin _$SearchResults {
@@ -21,22 +22,19 @@ mixin _$SearchResults {
   /// Create a copy of SearchResults
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SearchResultsCopyWith<SearchResults> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SearchResultsCopyWith<SearchResults> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SearchResultsCopyWith<$Res> {
-  factory $SearchResultsCopyWith(
-          SearchResults value, $Res Function(SearchResults) then) =
+  factory $SearchResultsCopyWith(SearchResults value, $Res Function(SearchResults) then) =
       _$SearchResultsCopyWithImpl<$Res, SearchResults>;
   @useResult
   $Res call({Map<String, SearchResult>? results});
 }
 
 /// @nodoc
-class _$SearchResultsCopyWithImpl<$Res, $Val extends SearchResults>
-    implements $SearchResultsCopyWith<$Res> {
+class _$SearchResultsCopyWithImpl<$Res, $Val extends SearchResults> implements $SearchResultsCopyWith<$Res> {
   _$SearchResultsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -48,23 +46,23 @@ class _$SearchResultsCopyWithImpl<$Res, $Val extends SearchResults>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? results = freezed,
-  }) {
-    return _then(_value.copyWith(
-      results: freezed == results
-          ? _value.results
-          : results // ignore: cast_nullable_to_non_nullable
-              as Map<String, SearchResult>?,
-    ) as $Val);
+  $Res call({Object? results = freezed}) {
+    return _then(
+      _value.copyWith(
+            results:
+                freezed == results
+                    ? _value.results
+                    : results // ignore: cast_nullable_to_non_nullable
+                        as Map<String, SearchResult>?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$SearchResultsImplCopyWith<$Res>
-    implements $SearchResultsCopyWith<$Res> {
-  factory _$$SearchResultsImplCopyWith(
-          _$SearchResultsImpl value, $Res Function(_$SearchResultsImpl) then) =
+abstract class _$$SearchResultsImplCopyWith<$Res> implements $SearchResultsCopyWith<$Res> {
+  factory _$$SearchResultsImplCopyWith(_$SearchResultsImpl value, $Res Function(_$SearchResultsImpl) then) =
       __$$SearchResultsImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -72,34 +70,32 @@ abstract class _$$SearchResultsImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$SearchResultsImplCopyWithImpl<$Res>
-    extends _$SearchResultsCopyWithImpl<$Res, _$SearchResultsImpl>
+class __$$SearchResultsImplCopyWithImpl<$Res> extends _$SearchResultsCopyWithImpl<$Res, _$SearchResultsImpl>
     implements _$$SearchResultsImplCopyWith<$Res> {
-  __$$SearchResultsImplCopyWithImpl(
-      _$SearchResultsImpl _value, $Res Function(_$SearchResultsImpl) _then)
-      : super(_value, _then);
+  __$$SearchResultsImplCopyWithImpl(_$SearchResultsImpl _value, $Res Function(_$SearchResultsImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of SearchResults
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? results = freezed,
-  }) {
-    return _then(_$SearchResultsImpl(
-      results: freezed == results
-          ? _value._results
-          : results // ignore: cast_nullable_to_non_nullable
-              as Map<String, SearchResult>?,
-    ));
+  $Res call({Object? results = freezed}) {
+    return _then(
+      _$SearchResultsImpl(
+        results:
+            freezed == results
+                ? _value._results
+                : results // ignore: cast_nullable_to_non_nullable
+                    as Map<String, SearchResult>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$SearchResultsImpl implements _SearchResults {
-  const _$SearchResultsImpl({required final Map<String, SearchResult>? results})
-      : _results = results;
+  const _$SearchResultsImpl({required final Map<String, SearchResult>? results}) : _results = results;
 
   final Map<String, SearchResult>? _results;
   @override
@@ -125,8 +121,7 @@ class _$SearchResultsImpl implements _SearchResults {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_results));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_results));
 
   /// Create a copy of SearchResults
   /// with the given fields replaced by the non-null parameter values.
@@ -138,9 +133,7 @@ class _$SearchResultsImpl implements _SearchResults {
 }
 
 abstract class _SearchResults implements SearchResults {
-  const factory _SearchResults(
-          {required final Map<String, SearchResult>? results}) =
-      _$SearchResultsImpl;
+  const factory _SearchResults({required final Map<String, SearchResult>? results}) = _$SearchResultsImpl;
 
   @override
   Map<String, SearchResult>? get results;
@@ -149,8 +142,7 @@ abstract class _SearchResults implements SearchResults {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SearchResultsImplCopyWith<_$SearchResultsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SearchResultsImplCopyWith<_$SearchResultsImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -162,22 +154,19 @@ mixin _$SearchResult {
   /// Create a copy of SearchResult
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SearchResultCopyWith<SearchResult> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SearchResultCopyWith<SearchResult> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SearchResultCopyWith<$Res> {
-  factory $SearchResultCopyWith(
-          SearchResult value, $Res Function(SearchResult) then) =
+  factory $SearchResultCopyWith(SearchResult value, $Res Function(SearchResult) then) =
       _$SearchResultCopyWithImpl<$Res, SearchResult>;
   @useResult
   $Res call({String name, String groupId, List<Resource> data});
 }
 
 /// @nodoc
-class _$SearchResultCopyWithImpl<$Res, $Val extends SearchResult>
-    implements $SearchResultCopyWith<$Res> {
+class _$SearchResultCopyWithImpl<$Res, $Val extends SearchResult> implements $SearchResultCopyWith<$Res> {
   _$SearchResultCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -189,33 +178,33 @@ class _$SearchResultCopyWithImpl<$Res, $Val extends SearchResult>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-    Object? groupId = null,
-    Object? data = null,
-  }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      groupId: null == groupId
-          ? _value.groupId
-          : groupId // ignore: cast_nullable_to_non_nullable
-              as String,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<Resource>,
-    ) as $Val);
+  $Res call({Object? name = null, Object? groupId = null, Object? data = null}) {
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            groupId:
+                null == groupId
+                    ? _value.groupId
+                    : groupId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            data:
+                null == data
+                    ? _value.data
+                    : data // ignore: cast_nullable_to_non_nullable
+                        as List<Resource>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$SearchResultImplCopyWith<$Res>
-    implements $SearchResultCopyWith<$Res> {
-  factory _$$SearchResultImplCopyWith(
-          _$SearchResultImpl value, $Res Function(_$SearchResultImpl) then) =
+abstract class _$$SearchResultImplCopyWith<$Res> implements $SearchResultCopyWith<$Res> {
+  factory _$$SearchResultImplCopyWith(_$SearchResultImpl value, $Res Function(_$SearchResultImpl) then) =
       __$$SearchResultImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -223,47 +212,43 @@ abstract class _$$SearchResultImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$SearchResultImplCopyWithImpl<$Res>
-    extends _$SearchResultCopyWithImpl<$Res, _$SearchResultImpl>
+class __$$SearchResultImplCopyWithImpl<$Res> extends _$SearchResultCopyWithImpl<$Res, _$SearchResultImpl>
     implements _$$SearchResultImplCopyWith<$Res> {
-  __$$SearchResultImplCopyWithImpl(
-      _$SearchResultImpl _value, $Res Function(_$SearchResultImpl) _then)
-      : super(_value, _then);
+  __$$SearchResultImplCopyWithImpl(_$SearchResultImpl _value, $Res Function(_$SearchResultImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of SearchResult
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-    Object? groupId = null,
-    Object? data = null,
-  }) {
-    return _then(_$SearchResultImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      groupId: null == groupId
-          ? _value.groupId
-          : groupId // ignore: cast_nullable_to_non_nullable
-              as String,
-      data: null == data
-          ? _value._data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<Resource>,
-    ));
+  $Res call({Object? name = null, Object? groupId = null, Object? data = null}) {
+    return _then(
+      _$SearchResultImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        groupId:
+            null == groupId
+                ? _value.groupId
+                : groupId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        data:
+            null == data
+                ? _value._data
+                : data // ignore: cast_nullable_to_non_nullable
+                    as List<Resource>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$SearchResultImpl implements _SearchResult {
-  const _$SearchResultImpl(
-      {required this.name,
-      required this.groupId,
-      required final List<Resource> data})
-      : _data = data;
+  const _$SearchResultImpl({required this.name, required this.groupId, required final List<Resource> data})
+    : _data = data;
 
   @override
   final String name;
@@ -293,8 +278,7 @@ class _$SearchResultImpl implements _SearchResult {
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, name, groupId, const DeepCollectionEquality().hash(_data));
+  int get hashCode => Object.hash(runtimeType, name, groupId, const DeepCollectionEquality().hash(_data));
 
   /// Create a copy of SearchResult
   /// with the given fields replaced by the non-null parameter values.
@@ -306,10 +290,11 @@ class _$SearchResultImpl implements _SearchResult {
 }
 
 abstract class _SearchResult implements SearchResult {
-  const factory _SearchResult(
-      {required final String name,
-      required final String groupId,
-      required final List<Resource> data}) = _$SearchResultImpl;
+  const factory _SearchResult({
+    required final String name,
+    required final String groupId,
+    required final List<Resource> data,
+  }) = _$SearchResultImpl;
 
   @override
   String get name;
@@ -322,6 +307,5 @@ abstract class _SearchResult implements SearchResult {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SearchResultImplCopyWith<_$SearchResultImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SearchResultImplCopyWith<_$SearchResultImpl> get copyWith => throw _privateConstructorUsedError;
 }

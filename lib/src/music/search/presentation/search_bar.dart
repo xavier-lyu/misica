@@ -57,64 +57,48 @@ class _SearchBarState extends ConsumerState<SearchBar> {
     }
 
     return FloatingSearchBar(
-        controller: _controller,
-        body: widget.body != null
-            ? FloatingSearchBarScrollNotifier(child: widget.body!)
-            : null,
-        title: Text(
-          widget.title,
-          style: context.ttoc.titleMedium,
-        ),
-        hint: widget.hint,
-        scrollPadding: const EdgeInsets.only(top: PADDING_M, bottom: 75),
-        automaticallyImplyBackButton: false,
-        debounceDelay: const Duration(milliseconds: 500),
-        backdropColor: context.toc.colorScheme.surface.darken(),
-        actions: [
-          FloatingSearchBarAction.searchToClear(
-            showIfClosed: false,
-          ),
-        ],
-        onQueryChanged: (query) {
-          if (query.isEmpty) return;
+      controller: _controller,
+      body: widget.body != null ? FloatingSearchBarScrollNotifier(child: widget.body!) : null,
+      title: Text(widget.title, style: context.ttoc.titleMedium),
+      hint: widget.hint,
+      scrollPadding: const EdgeInsets.only(top: PADDING_M, bottom: 75),
+      automaticallyImplyBackButton: false,
+      debounceDelay: const Duration(milliseconds: 500),
+      backdropColor: context.toc.colorScheme.surface.darken(),
+      actions: [FloatingSearchBarAction.searchToClear(showIfClosed: false)],
+      onQueryChanged: (query) {
+        if (query.isEmpty) return;
 
-          ref
-              .read(searchSuggestionsNotifierProvider.notifier)
-              .fetchSuggestions(query);
-        },
-        onSubmitted: (query) {
-          if (query.isEmpty) return;
+        ref.read(searchSuggestionsNotifierProvider.notifier).fetchSuggestions(query);
+      },
+      onSubmitted: (query) {
+        if (query.isEmpty) return;
 
-          handleSearching(query);
-        },
-        builder: (context, transition) {
-          return Material(
-            color: context.toc.cardColor,
-            elevation: 4,
-            borderRadius: BorderRadius.circular(8),
-            clipBehavior: Clip.hardEdge,
-            child: Consumer(builder: (context, ref, child) {
-              final suggestionsState =
-                  ref.watch(searchSuggestionsNotifierProvider);
+        handleSearching(query);
+      },
+      builder: (context, transition) {
+        return Material(
+          color: context.toc.cardColor,
+          elevation: 4,
+          borderRadius: BorderRadius.circular(8),
+          clipBehavior: Clip.hardEdge,
+          child: Consumer(
+            builder: (context, ref, child) {
+              final suggestionsState = ref.watch(searchSuggestionsNotifierProvider);
               return suggestionsState.map(
                 data: (suggestions) {
                   if (_controller.query.isEmpty && suggestions.value.isEmpty) {
                     return Container(
                       height: 56,
                       alignment: Alignment.center,
-                      child: Text(
-                        'Start searching',
-                        style: context.ttoc.bodySmall,
-                      ),
+                      child: Text('Start searching', style: context.ttoc.bodySmall),
                     );
                   }
 
                   if (suggestions.value.isEmpty) {
                     return ListTile(
                       title: Text(_controller.query),
-                      leading: const Icon(
-                        Icons.search,
-                      ),
+                      leading: const Icon(Icons.search),
                       onTap: () {
                         handleSearching(_controller.query);
                       },
@@ -122,55 +106,49 @@ class _SearchBarState extends ConsumerState<SearchBar> {
                   }
 
                   return Column(
-                    children: suggestions.value
-                        .map(
-                          (suggestion) => suggestion.map(
-                            terms: (terms) => ListTile(
-                              horizontalTitleGap: 10,
-                              minLeadingWidth: 30,
-                              title: Text(
-                                terms.searchTerm,
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
+                    children:
+                        suggestions.value
+                            .map(
+                              (suggestion) => suggestion.map(
+                                terms:
+                                    (terms) => ListTile(
+                                      horizontalTitleGap: 10,
+                                      minLeadingWidth: 30,
+                                      title: Text(terms.searchTerm, maxLines: 1, overflow: TextOverflow.ellipsis),
+                                      leading: const Icon(Icons.search, size: 30),
+                                      onTap: () {
+                                        handleSearching(terms.searchTerm);
+                                      },
+                                    ),
+                                topResults:
+                                    (topResults) => ListTile(
+                                      horizontalTitleGap: 10,
+                                      title: Text(
+                                        topResults.content.name,
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                      leading: ArtworkWidget(
+                                        artwork: topResults.content.artwork,
+                                        width: 44,
+                                        height: 44,
+                                      ),
+                                      onTap: () {
+                                        handleNavigating(topResults.content);
+                                      },
+                                    ),
                               ),
-                              leading: const Icon(
-                                Icons.search,
-                                size: 30,
-                              ),
-                              onTap: () {
-                                handleSearching(terms.searchTerm);
-                              },
-                            ),
-                            topResults: (topResults) => ListTile(
-                              horizontalTitleGap: 10,
-                              title: Text(
-                                topResults.content.name,
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                              leading: ArtworkWidget(
-                                artwork: topResults.content.artwork,
-                                width: 44,
-                                height: 44,
-                              ),
-                              onTap: () {
-                                handleNavigating(topResults.content);
-                              },
-                            ),
-                          ),
-                        )
-                        .toList(),
+                            )
+                            .toList(),
                   );
                 },
-                loading: (_) => const ListTile(
-                  title: LinearProgressIndicator(),
-                ),
-                error: (_) => const ListTile(
-                  title: Text('Undexpected error :)'),
-                ),
+                loading: (_) => const ListTile(title: LinearProgressIndicator()),
+                error: (_) => const ListTile(title: Text('Undexpected error :)')),
               );
-            }),
-          );
-        });
+            },
+          ),
+        );
+      },
+    );
   }
 }

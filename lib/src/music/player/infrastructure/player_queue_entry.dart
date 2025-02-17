@@ -12,7 +12,6 @@ extension MusicPlayerQueueEntryX on MusicPlayerQueueEntry {
       return Track.song(SongDTO.fromJson(item!).toDomain() as Song);
     }
 
-    return Track.musicVideo(
-        MusicVideoDTO.fromJson(item!).toDomain() as MusicVideo);
+    return Track.musicVideo(MusicVideoDTO.fromJson(item!).toDomain() as MusicVideo);
   }
 }

@@ -31,10 +31,7 @@ class ExpandableAppBar extends StatelessWidget {
       stretch: true,
       centerTitle: centerTitle,
       flexibleSpace: FlexibleSpaceBar(
-        stretchModes: const [
-          StretchMode.zoomBackground,
-          StretchMode.fadeTitle,
-        ],
+        stretchModes: const [StretchMode.zoomBackground, StretchMode.fadeTitle],
         background: background,
         titlePadding: EdgeInsets.zero,
         expandedTitleScale: 1.0,

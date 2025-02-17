@@ -4,12 +4,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 typedef DoubleCallback = void Function(double);
 
 class HookScrollView extends HookWidget {
-  const HookScrollView({
-    super.key,
-    required this.slivers,
-    this.onOffsetChanged,
-    this.physics,
-  });
+  const HookScrollView({super.key, required this.slivers, this.onOffsetChanged, this.physics});
 
   final List<Widget> slivers;
   final DoubleCallback? onOffsetChanged;
@@ -24,10 +19,6 @@ class HookScrollView extends HookWidget {
       }
     });
 
-    return CustomScrollView(
-      controller: scrollController,
-      slivers: slivers,
-      physics: physics,
-    );
+    return CustomScrollView(controller: scrollController, slivers: slivers, physics: physics);
   }
 }

@@ -1,14 +1,17 @@
 include: package:flutter_lints/flutter.yaml
 
+formatter:
+  page_width: 120
+
 linter:
   rules:
     avoid_void_async: true
 
 analyzer:
   exclude:
-    - "**/*.g.dart"
-    - "**/*.freezed.dart"
-    - "**/gen_l10n/app_localizations_*.dart"
+    - '**/*.g.dart'
+    - '**/*.freezed.dart'
+    - '**/gen_l10n/app_localizations_*.dart'
   errors:
     missing_return: error
     must_be_immutable: error

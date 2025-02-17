@@ -5,11 +5,7 @@ import 'package:misica/src/music/core/presentation/widgets/music_video_icon.dart
 import 'package:misica/src/music/core/presentation/widgets/resource_context_menu.dart';
 
 class AlbumTrackTile extends StatelessWidget {
-  const AlbumTrackTile({
-    super.key,
-    required this.track,
-    this.onTap,
-  });
+  const AlbumTrackTile({super.key, required this.track, this.onTap});
 
   final Track track;
   final VoidCallback? onTap;
@@ -21,39 +17,24 @@ class AlbumTrackTile extends StatelessWidget {
       child: Row(
         children: [
           if (track.trackNumber != null)
-            SizedBox(
-                width: 20,
-                child: Text(
-                  '${track.trackNumber}',
-                  textAlign: TextAlign.center,
-                )),
+            SizedBox(width: 20, child: Text('${track.trackNumber}', textAlign: TextAlign.center)),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 10.0),
               child: Row(
                 children: [
                   if (track.isMV)
-                    Container(
-                      margin: const EdgeInsetsDirectional.only(end: 5),
-                      child: const MusicVideoIcon(),
-                    ),
-                  Expanded(
-                      child: Text(
-                    track.name ?? '',
-                    overflow: TextOverflow.ellipsis,
-                  )),
+                    Container(margin: const EdgeInsetsDirectional.only(end: 5), child: const MusicVideoIcon()),
+                  Expanded(child: Text(track.name ?? '', overflow: TextOverflow.ellipsis)),
                   if (track.isExplicit) const ExplicitIcon(),
                 ],
               ),
             ),
           ),
           ResourceContextMenuButton(
-            resource: track.when(
-              song: (song) => song,
-              musicVideo: (musicVideo) => musicVideo,
-            ),
+            resource: track.when(song: (song) => song, musicVideo: (musicVideo) => musicVideo),
             container: ResourceContainer.album,
-          )
+          ),
         ],
       ),
     );

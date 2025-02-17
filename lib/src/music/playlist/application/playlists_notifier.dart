@@ -12,12 +12,8 @@ class PlaylistsNotifier extends StateNotifier<AsyncValue<Playlist>> {
 
   Future<Unit> fetchCatalogPlaylist(String id) async {
     final storefront = await _ref.read(storefrontProvider.future);
-    final failureOrPlaylist =
-        await _repository.fetchCatalogPlaylist(storefront, id);
-    state = failureOrPlaylist.fold(
-      (error) => AsyncError(error, StackTrace.current),
-      (value) => AsyncData(value),
-    );
+    final failureOrPlaylist = await _repository.fetchCatalogPlaylist(storefront, id);
+    state = failureOrPlaylist.fold((error) => AsyncError(error, StackTrace.current), (value) => AsyncData(value));
     return unit;
   }
 }

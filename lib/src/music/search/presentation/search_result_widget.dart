@@ -8,10 +8,7 @@ import 'package:misica/src/music/player/shared/providers.dart';
 import 'package:misica/src/music/search/domain/search_results.dart';
 
 class SearchResultWidget extends ConsumerWidget {
-  const SearchResultWidget({
-    super.key,
-    required this.result,
-  });
+  const SearchResultWidget({super.key, required this.result});
 
   final SearchResult result;
 
@@ -32,20 +29,19 @@ class SearchResultWidget extends ConsumerWidget {
             end: PADDING_M,
           ),
           resource: resource,
-          subtitle: result.groupId == 'top'
-              ? resource.type.toUpperCase() //todo:localized
-              : null,
+          subtitle:
+              result.groupId == 'top'
+                  ? resource.type
+                      .toUpperCase() //todo:localized
+                  : null,
           onTap: () {
             resource.mapOrNull(
               (value) => null,
               album: (album) => context.router.push(AlbumRoute(id: album.id)),
-              playlist: (playlist) =>
-                  context.router.push(PlaylistRoute(id: playlist.id)),
-              station: (station) =>
-                  ref.read(musicPlayerProvider).playSingle(station),
+              playlist: (playlist) => context.router.push(PlaylistRoute(id: playlist.id)),
+              station: (station) => ref.read(musicPlayerProvider).playSingle(station),
               song: (song) => ref.read(musicPlayerProvider).playSingle(song),
-              artist: (artist) =>
-                  context.router.push(ArtistRoute(id: artist.id)),
+              artist: (artist) => context.router.push(ArtistRoute(id: artist.id)),
             );
           },
         );

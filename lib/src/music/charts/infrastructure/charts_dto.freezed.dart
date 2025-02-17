@@ -12,7 +12,8 @@ part of 'charts_dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ChartsResultsDTO _$ChartsResultsDTOFromJson(Map<String, dynamic> json) {
   return _ChartsResultsDTO.fromJson(json);
@@ -29,14 +30,12 @@ mixin _$ChartsResultsDTO {
   /// Create a copy of ChartsResultsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ChartsResultsDTOCopyWith<ChartsResultsDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ChartsResultsDTOCopyWith<ChartsResultsDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ChartsResultsDTOCopyWith<$Res> {
-  factory $ChartsResultsDTOCopyWith(
-          ChartsResultsDTO value, $Res Function(ChartsResultsDTO) then) =
+  factory $ChartsResultsDTOCopyWith(ChartsResultsDTO value, $Res Function(ChartsResultsDTO) then) =
       _$ChartsResultsDTOCopyWithImpl<$Res, ChartsResultsDTO>;
   @useResult
   $Res call({ChartsDTO results, Map<String, dynamic>? meta});
@@ -45,8 +44,7 @@ abstract class $ChartsResultsDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ChartsResultsDTOCopyWithImpl<$Res, $Val extends ChartsResultsDTO>
-    implements $ChartsResultsDTOCopyWith<$Res> {
+class _$ChartsResultsDTOCopyWithImpl<$Res, $Val extends ChartsResultsDTO> implements $ChartsResultsDTOCopyWith<$Res> {
   _$ChartsResultsDTOCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -58,20 +56,22 @@ class _$ChartsResultsDTOCopyWithImpl<$Res, $Val extends ChartsResultsDTO>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? results = null,
-    Object? meta = freezed,
-  }) {
-    return _then(_value.copyWith(
-      results: null == results
-          ? _value.results
-          : results // ignore: cast_nullable_to_non_nullable
-              as ChartsDTO,
-      meta: freezed == meta
-          ? _value.meta
-          : meta // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-    ) as $Val);
+  $Res call({Object? results = null, Object? meta = freezed}) {
+    return _then(
+      _value.copyWith(
+            results:
+                null == results
+                    ? _value.results
+                    : results // ignore: cast_nullable_to_non_nullable
+                        as ChartsDTO,
+            meta:
+                freezed == meta
+                    ? _value.meta
+                    : meta // ignore: cast_nullable_to_non_nullable
+                        as Map<String, dynamic>?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of ChartsResultsDTO
@@ -86,10 +86,8 @@ class _$ChartsResultsDTOCopyWithImpl<$Res, $Val extends ChartsResultsDTO>
 }
 
 /// @nodoc
-abstract class _$$ChartsResultsDTOImplCopyWith<$Res>
-    implements $ChartsResultsDTOCopyWith<$Res> {
-  factory _$$ChartsResultsDTOImplCopyWith(_$ChartsResultsDTOImpl value,
-          $Res Function(_$ChartsResultsDTOImpl) then) =
+abstract class _$$ChartsResultsDTOImplCopyWith<$Res> implements $ChartsResultsDTOCopyWith<$Res> {
+  factory _$$ChartsResultsDTOImplCopyWith(_$ChartsResultsDTOImpl value, $Res Function(_$ChartsResultsDTOImpl) then) =
       __$$ChartsResultsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -100,44 +98,39 @@ abstract class _$$ChartsResultsDTOImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ChartsResultsDTOImplCopyWithImpl<$Res>
-    extends _$ChartsResultsDTOCopyWithImpl<$Res, _$ChartsResultsDTOImpl>
+class __$$ChartsResultsDTOImplCopyWithImpl<$Res> extends _$ChartsResultsDTOCopyWithImpl<$Res, _$ChartsResultsDTOImpl>
     implements _$$ChartsResultsDTOImplCopyWith<$Res> {
-  __$$ChartsResultsDTOImplCopyWithImpl(_$ChartsResultsDTOImpl _value,
-      $Res Function(_$ChartsResultsDTOImpl) _then)
-      : super(_value, _then);
+  __$$ChartsResultsDTOImplCopyWithImpl(_$ChartsResultsDTOImpl _value, $Res Function(_$ChartsResultsDTOImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of ChartsResultsDTO
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? results = null,
-    Object? meta = freezed,
-  }) {
-    return _then(_$ChartsResultsDTOImpl(
-      results: null == results
-          ? _value.results
-          : results // ignore: cast_nullable_to_non_nullable
-              as ChartsDTO,
-      meta: freezed == meta
-          ? _value._meta
-          : meta // ignore: cast_nullable_to_non_nullable
-              as Map<String, dynamic>?,
-    ));
+  $Res call({Object? results = null, Object? meta = freezed}) {
+    return _then(
+      _$ChartsResultsDTOImpl(
+        results:
+            null == results
+                ? _value.results
+                : results // ignore: cast_nullable_to_non_nullable
+                    as ChartsDTO,
+        meta:
+            freezed == meta
+                ? _value._meta
+                : meta // ignore: cast_nullable_to_non_nullable
+                    as Map<String, dynamic>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ChartsResultsDTOImpl extends _ChartsResultsDTO {
-  const _$ChartsResultsDTOImpl(
-      {required this.results, final Map<String, dynamic>? meta})
-      : _meta = meta,
-        super._();
+  const _$ChartsResultsDTOImpl({required this.results, final Map<String, dynamic>? meta}) : _meta = meta, super._();
 
-  factory _$ChartsResultsDTOImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ChartsResultsDTOImplFromJson(json);
+  factory _$ChartsResultsDTOImpl.fromJson(Map<String, dynamic> json) => _$$ChartsResultsDTOImplFromJson(json);
 
   @override
   final ChartsDTO results;
@@ -167,8 +160,7 @@ class _$ChartsResultsDTOImpl extends _ChartsResultsDTO {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, results, const DeepCollectionEquality().hash(_meta));
+  int get hashCode => Object.hash(runtimeType, results, const DeepCollectionEquality().hash(_meta));
 
   /// Create a copy of ChartsResultsDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -176,25 +168,20 @@ class _$ChartsResultsDTOImpl extends _ChartsResultsDTO {
   @override
   @pragma('vm:prefer-inline')
   _$$ChartsResultsDTOImplCopyWith<_$ChartsResultsDTOImpl> get copyWith =>
-      __$$ChartsResultsDTOImplCopyWithImpl<_$ChartsResultsDTOImpl>(
-          this, _$identity);
+      __$$ChartsResultsDTOImplCopyWithImpl<_$ChartsResultsDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChartsResultsDTOImplToJson(
-      this,
-    );
+    return _$$ChartsResultsDTOImplToJson(this);
   }
 }
 
 abstract class _ChartsResultsDTO extends ChartsResultsDTO {
-  const factory _ChartsResultsDTO(
-      {required final ChartsDTO results,
-      final Map<String, dynamic>? meta}) = _$ChartsResultsDTOImpl;
+  const factory _ChartsResultsDTO({required final ChartsDTO results, final Map<String, dynamic>? meta}) =
+      _$ChartsResultsDTOImpl;
   const _ChartsResultsDTO._() : super._();
 
-  factory _ChartsResultsDTO.fromJson(Map<String, dynamic> json) =
-      _$ChartsResultsDTOImpl.fromJson;
+  factory _ChartsResultsDTO.fromJson(Map<String, dynamic> json) = _$ChartsResultsDTOImpl.fromJson;
 
   @override
   ChartsDTO get results;
@@ -205,8 +192,7 @@ abstract class _ChartsResultsDTO extends ChartsResultsDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ChartsResultsDTOImplCopyWith<_$ChartsResultsDTOImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ChartsResultsDTOImplCopyWith<_$ChartsResultsDTOImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 ChartsDTO _$ChartsDTOFromJson(Map<String, dynamic> json) {
@@ -217,13 +203,11 @@ ChartsDTO _$ChartsDTOFromJson(Map<String, dynamic> json) {
 mixin _$ChartsDTO {
   List<SongsChartDTO>? get songs => throw _privateConstructorUsedError;
   List<PlaylistsChartDTO>? get cityCharts => throw _privateConstructorUsedError;
-  List<PlaylistsChartDTO>? get dailyGlobalTopCharts =>
-      throw _privateConstructorUsedError;
+  List<PlaylistsChartDTO>? get dailyGlobalTopCharts => throw _privateConstructorUsedError;
   List<PlaylistsChartDTO>? get playlists => throw _privateConstructorUsedError;
   List<AlbumsChartDTO>? get albums => throw _privateConstructorUsedError;
   @JsonKey(name: 'music-videos')
-  List<MusicVideosChartDTO>? get musicVideos =>
-      throw _privateConstructorUsedError;
+  List<MusicVideosChartDTO>? get musicVideos => throw _privateConstructorUsedError;
 
   /// Serializes this ChartsDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -231,27 +215,25 @@ mixin _$ChartsDTO {
   /// Create a copy of ChartsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ChartsDTOCopyWith<ChartsDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ChartsDTOCopyWith<ChartsDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ChartsDTOCopyWith<$Res> {
-  factory $ChartsDTOCopyWith(ChartsDTO value, $Res Function(ChartsDTO) then) =
-      _$ChartsDTOCopyWithImpl<$Res, ChartsDTO>;
+  factory $ChartsDTOCopyWith(ChartsDTO value, $Res Function(ChartsDTO) then) = _$ChartsDTOCopyWithImpl<$Res, ChartsDTO>;
   @useResult
-  $Res call(
-      {List<SongsChartDTO>? songs,
-      List<PlaylistsChartDTO>? cityCharts,
-      List<PlaylistsChartDTO>? dailyGlobalTopCharts,
-      List<PlaylistsChartDTO>? playlists,
-      List<AlbumsChartDTO>? albums,
-      @JsonKey(name: 'music-videos') List<MusicVideosChartDTO>? musicVideos});
+  $Res call({
+    List<SongsChartDTO>? songs,
+    List<PlaylistsChartDTO>? cityCharts,
+    List<PlaylistsChartDTO>? dailyGlobalTopCharts,
+    List<PlaylistsChartDTO>? playlists,
+    List<AlbumsChartDTO>? albums,
+    @JsonKey(name: 'music-videos') List<MusicVideosChartDTO>? musicVideos,
+  });
 }
 
 /// @nodoc
-class _$ChartsDTOCopyWithImpl<$Res, $Val extends ChartsDTO>
-    implements $ChartsDTOCopyWith<$Res> {
+class _$ChartsDTOCopyWithImpl<$Res, $Val extends ChartsDTO> implements $ChartsDTOCopyWith<$Res> {
   _$ChartsDTOCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -271,59 +253,64 @@ class _$ChartsDTOCopyWithImpl<$Res, $Val extends ChartsDTO>
     Object? albums = freezed,
     Object? musicVideos = freezed,
   }) {
-    return _then(_value.copyWith(
-      songs: freezed == songs
-          ? _value.songs
-          : songs // ignore: cast_nullable_to_non_nullable
-              as List<SongsChartDTO>?,
-      cityCharts: freezed == cityCharts
-          ? _value.cityCharts
-          : cityCharts // ignore: cast_nullable_to_non_nullable
-              as List<PlaylistsChartDTO>?,
-      dailyGlobalTopCharts: freezed == dailyGlobalTopCharts
-          ? _value.dailyGlobalTopCharts
-          : dailyGlobalTopCharts // ignore: cast_nullable_to_non_nullable
-              as List<PlaylistsChartDTO>?,
-      playlists: freezed == playlists
-          ? _value.playlists
-          : playlists // ignore: cast_nullable_to_non_nullable
-              as List<PlaylistsChartDTO>?,
-      albums: freezed == albums
-          ? _value.albums
-          : albums // ignore: cast_nullable_to_non_nullable
-              as List<AlbumsChartDTO>?,
-      musicVideos: freezed == musicVideos
-          ? _value.musicVideos
-          : musicVideos // ignore: cast_nullable_to_non_nullable
-              as List<MusicVideosChartDTO>?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            songs:
+                freezed == songs
+                    ? _value.songs
+                    : songs // ignore: cast_nullable_to_non_nullable
+                        as List<SongsChartDTO>?,
+            cityCharts:
+                freezed == cityCharts
+                    ? _value.cityCharts
+                    : cityCharts // ignore: cast_nullable_to_non_nullable
+                        as List<PlaylistsChartDTO>?,
+            dailyGlobalTopCharts:
+                freezed == dailyGlobalTopCharts
+                    ? _value.dailyGlobalTopCharts
+                    : dailyGlobalTopCharts // ignore: cast_nullable_to_non_nullable
+                        as List<PlaylistsChartDTO>?,
+            playlists:
+                freezed == playlists
+                    ? _value.playlists
+                    : playlists // ignore: cast_nullable_to_non_nullable
+                        as List<PlaylistsChartDTO>?,
+            albums:
+                freezed == albums
+                    ? _value.albums
+                    : albums // ignore: cast_nullable_to_non_nullable
+                        as List<AlbumsChartDTO>?,
+            musicVideos:
+                freezed == musicVideos
+                    ? _value.musicVideos
+                    : musicVideos // ignore: cast_nullable_to_non_nullable
+                        as List<MusicVideosChartDTO>?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$ChartsDTOImplCopyWith<$Res>
-    implements $ChartsDTOCopyWith<$Res> {
-  factory _$$ChartsDTOImplCopyWith(
-          _$ChartsDTOImpl value, $Res Function(_$ChartsDTOImpl) then) =
+abstract class _$$ChartsDTOImplCopyWith<$Res> implements $ChartsDTOCopyWith<$Res> {
+  factory _$$ChartsDTOImplCopyWith(_$ChartsDTOImpl value, $Res Function(_$ChartsDTOImpl) then) =
       __$$ChartsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {List<SongsChartDTO>? songs,
-      List<PlaylistsChartDTO>? cityCharts,
-      List<PlaylistsChartDTO>? dailyGlobalTopCharts,
-      List<PlaylistsChartDTO>? playlists,
-      List<AlbumsChartDTO>? albums,
-      @JsonKey(name: 'music-videos') List<MusicVideosChartDTO>? musicVideos});
+  $Res call({
+    List<SongsChartDTO>? songs,
+    List<PlaylistsChartDTO>? cityCharts,
+    List<PlaylistsChartDTO>? dailyGlobalTopCharts,
+    List<PlaylistsChartDTO>? playlists,
+    List<AlbumsChartDTO>? albums,
+    @JsonKey(name: 'music-videos') List<MusicVideosChartDTO>? musicVideos,
+  });
 }
 
 /// @nodoc
-class __$$ChartsDTOImplCopyWithImpl<$Res>
-    extends _$ChartsDTOCopyWithImpl<$Res, _$ChartsDTOImpl>
+class __$$ChartsDTOImplCopyWithImpl<$Res> extends _$ChartsDTOCopyWithImpl<$Res, _$ChartsDTOImpl>
     implements _$$ChartsDTOImplCopyWith<$Res> {
-  __$$ChartsDTOImplCopyWithImpl(
-      _$ChartsDTOImpl _value, $Res Function(_$ChartsDTOImpl) _then)
-      : super(_value, _then);
+  __$$ChartsDTOImplCopyWithImpl(_$ChartsDTOImpl _value, $Res Function(_$ChartsDTOImpl) _then) : super(_value, _then);
 
   /// Create a copy of ChartsDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -337,56 +324,62 @@ class __$$ChartsDTOImplCopyWithImpl<$Res>
     Object? albums = freezed,
     Object? musicVideos = freezed,
   }) {
-    return _then(_$ChartsDTOImpl(
-      songs: freezed == songs
-          ? _value._songs
-          : songs // ignore: cast_nullable_to_non_nullable
-              as List<SongsChartDTO>?,
-      cityCharts: freezed == cityCharts
-          ? _value._cityCharts
-          : cityCharts // ignore: cast_nullable_to_non_nullable
-              as List<PlaylistsChartDTO>?,
-      dailyGlobalTopCharts: freezed == dailyGlobalTopCharts
-          ? _value._dailyGlobalTopCharts
-          : dailyGlobalTopCharts // ignore: cast_nullable_to_non_nullable
-              as List<PlaylistsChartDTO>?,
-      playlists: freezed == playlists
-          ? _value._playlists
-          : playlists // ignore: cast_nullable_to_non_nullable
-              as List<PlaylistsChartDTO>?,
-      albums: freezed == albums
-          ? _value._albums
-          : albums // ignore: cast_nullable_to_non_nullable
-              as List<AlbumsChartDTO>?,
-      musicVideos: freezed == musicVideos
-          ? _value._musicVideos
-          : musicVideos // ignore: cast_nullable_to_non_nullable
-              as List<MusicVideosChartDTO>?,
-    ));
+    return _then(
+      _$ChartsDTOImpl(
+        songs:
+            freezed == songs
+                ? _value._songs
+                : songs // ignore: cast_nullable_to_non_nullable
+                    as List<SongsChartDTO>?,
+        cityCharts:
+            freezed == cityCharts
+                ? _value._cityCharts
+                : cityCharts // ignore: cast_nullable_to_non_nullable
+                    as List<PlaylistsChartDTO>?,
+        dailyGlobalTopCharts:
+            freezed == dailyGlobalTopCharts
+                ? _value._dailyGlobalTopCharts
+                : dailyGlobalTopCharts // ignore: cast_nullable_to_non_nullable
+                    as List<PlaylistsChartDTO>?,
+        playlists:
+            freezed == playlists
+                ? _value._playlists
+                : playlists // ignore: cast_nullable_to_non_nullable
+                    as List<PlaylistsChartDTO>?,
+        albums:
+            freezed == albums
+                ? _value._albums
+                : albums // ignore: cast_nullable_to_non_nullable
+                    as List<AlbumsChartDTO>?,
+        musicVideos:
+            freezed == musicVideos
+                ? _value._musicVideos
+                : musicVideos // ignore: cast_nullable_to_non_nullable
+                    as List<MusicVideosChartDTO>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ChartsDTOImpl extends _ChartsDTO {
-  const _$ChartsDTOImpl(
-      {final List<SongsChartDTO>? songs,
-      final List<PlaylistsChartDTO>? cityCharts,
-      final List<PlaylistsChartDTO>? dailyGlobalTopCharts,
-      final List<PlaylistsChartDTO>? playlists,
-      final List<AlbumsChartDTO>? albums,
-      @JsonKey(name: 'music-videos')
-      final List<MusicVideosChartDTO>? musicVideos})
-      : _songs = songs,
-        _cityCharts = cityCharts,
-        _dailyGlobalTopCharts = dailyGlobalTopCharts,
-        _playlists = playlists,
-        _albums = albums,
-        _musicVideos = musicVideos,
-        super._();
+  const _$ChartsDTOImpl({
+    final List<SongsChartDTO>? songs,
+    final List<PlaylistsChartDTO>? cityCharts,
+    final List<PlaylistsChartDTO>? dailyGlobalTopCharts,
+    final List<PlaylistsChartDTO>? playlists,
+    final List<AlbumsChartDTO>? albums,
+    @JsonKey(name: 'music-videos') final List<MusicVideosChartDTO>? musicVideos,
+  }) : _songs = songs,
+       _cityCharts = cityCharts,
+       _dailyGlobalTopCharts = dailyGlobalTopCharts,
+       _playlists = playlists,
+       _albums = albums,
+       _musicVideos = musicVideos,
+       super._();
 
-  factory _$ChartsDTOImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ChartsDTOImplFromJson(json);
+  factory _$ChartsDTOImpl.fromJson(Map<String, dynamic> json) => _$$ChartsDTOImplFromJson(json);
 
   final List<SongsChartDTO>? _songs;
   @override
@@ -413,8 +406,7 @@ class _$ChartsDTOImpl extends _ChartsDTO {
   List<PlaylistsChartDTO>? get dailyGlobalTopCharts {
     final value = _dailyGlobalTopCharts;
     if (value == null) return null;
-    if (_dailyGlobalTopCharts is EqualUnmodifiableListView)
-      return _dailyGlobalTopCharts;
+    if (_dailyGlobalTopCharts is EqualUnmodifiableListView) return _dailyGlobalTopCharts;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -461,27 +453,24 @@ class _$ChartsDTOImpl extends _ChartsDTO {
         (other.runtimeType == runtimeType &&
             other is _$ChartsDTOImpl &&
             const DeepCollectionEquality().equals(other._songs, _songs) &&
-            const DeepCollectionEquality()
-                .equals(other._cityCharts, _cityCharts) &&
-            const DeepCollectionEquality()
-                .equals(other._dailyGlobalTopCharts, _dailyGlobalTopCharts) &&
-            const DeepCollectionEquality()
-                .equals(other._playlists, _playlists) &&
+            const DeepCollectionEquality().equals(other._cityCharts, _cityCharts) &&
+            const DeepCollectionEquality().equals(other._dailyGlobalTopCharts, _dailyGlobalTopCharts) &&
+            const DeepCollectionEquality().equals(other._playlists, _playlists) &&
             const DeepCollectionEquality().equals(other._albums, _albums) &&
-            const DeepCollectionEquality()
-                .equals(other._musicVideos, _musicVideos));
+            const DeepCollectionEquality().equals(other._musicVideos, _musicVideos));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_songs),
-      const DeepCollectionEquality().hash(_cityCharts),
-      const DeepCollectionEquality().hash(_dailyGlobalTopCharts),
-      const DeepCollectionEquality().hash(_playlists),
-      const DeepCollectionEquality().hash(_albums),
-      const DeepCollectionEquality().hash(_musicVideos));
+    runtimeType,
+    const DeepCollectionEquality().hash(_songs),
+    const DeepCollectionEquality().hash(_cityCharts),
+    const DeepCollectionEquality().hash(_dailyGlobalTopCharts),
+    const DeepCollectionEquality().hash(_playlists),
+    const DeepCollectionEquality().hash(_albums),
+    const DeepCollectionEquality().hash(_musicVideos),
+  );
 
   /// Create a copy of ChartsDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -493,25 +482,22 @@ class _$ChartsDTOImpl extends _ChartsDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChartsDTOImplToJson(
-      this,
-    );
+    return _$$ChartsDTOImplToJson(this);
   }
 }
 
 abstract class _ChartsDTO extends ChartsDTO {
-  const factory _ChartsDTO(
-      {final List<SongsChartDTO>? songs,
-      final List<PlaylistsChartDTO>? cityCharts,
-      final List<PlaylistsChartDTO>? dailyGlobalTopCharts,
-      final List<PlaylistsChartDTO>? playlists,
-      final List<AlbumsChartDTO>? albums,
-      @JsonKey(name: 'music-videos')
-      final List<MusicVideosChartDTO>? musicVideos}) = _$ChartsDTOImpl;
+  const factory _ChartsDTO({
+    final List<SongsChartDTO>? songs,
+    final List<PlaylistsChartDTO>? cityCharts,
+    final List<PlaylistsChartDTO>? dailyGlobalTopCharts,
+    final List<PlaylistsChartDTO>? playlists,
+    final List<AlbumsChartDTO>? albums,
+    @JsonKey(name: 'music-videos') final List<MusicVideosChartDTO>? musicVideos,
+  }) = _$ChartsDTOImpl;
   const _ChartsDTO._() : super._();
 
-  factory _ChartsDTO.fromJson(Map<String, dynamic> json) =
-      _$ChartsDTOImpl.fromJson;
+  factory _ChartsDTO.fromJson(Map<String, dynamic> json) = _$ChartsDTOImpl.fromJson;
 
   @override
   List<SongsChartDTO>? get songs;
@@ -531,8 +517,7 @@ abstract class _ChartsDTO extends ChartsDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ChartsDTOImplCopyWith<_$ChartsDTOImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ChartsDTOImplCopyWith<_$ChartsDTOImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 AlbumsChartDTO _$AlbumsChartDTOFromJson(Map<String, dynamic> json) {
@@ -554,28 +539,19 @@ mixin _$AlbumsChartDTO {
   /// Create a copy of AlbumsChartDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $AlbumsChartDTOCopyWith<AlbumsChartDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AlbumsChartDTOCopyWith<AlbumsChartDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AlbumsChartDTOCopyWith<$Res> {
-  factory $AlbumsChartDTOCopyWith(
-          AlbumsChartDTO value, $Res Function(AlbumsChartDTO) then) =
+  factory $AlbumsChartDTOCopyWith(AlbumsChartDTO value, $Res Function(AlbumsChartDTO) then) =
       _$AlbumsChartDTOCopyWithImpl<$Res, AlbumsChartDTO>;
   @useResult
-  $Res call(
-      {String name,
-      String chart,
-      String orderId,
-      String href,
-      String? next,
-      List<AlbumDTO> data});
+  $Res call({String name, String chart, String orderId, String href, String? next, List<AlbumDTO> data});
 }
 
 /// @nodoc
-class _$AlbumsChartDTOCopyWithImpl<$Res, $Val extends AlbumsChartDTO>
-    implements $AlbumsChartDTOCopyWith<$Res> {
+class _$AlbumsChartDTOCopyWithImpl<$Res, $Val extends AlbumsChartDTO> implements $AlbumsChartDTOCopyWith<$Res> {
   _$AlbumsChartDTOCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -595,59 +571,58 @@ class _$AlbumsChartDTOCopyWithImpl<$Res, $Val extends AlbumsChartDTO>
     Object? next = freezed,
     Object? data = null,
   }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      chart: null == chart
-          ? _value.chart
-          : chart // ignore: cast_nullable_to_non_nullable
-              as String,
-      orderId: null == orderId
-          ? _value.orderId
-          : orderId // ignore: cast_nullable_to_non_nullable
-              as String,
-      href: null == href
-          ? _value.href
-          : href // ignore: cast_nullable_to_non_nullable
-              as String,
-      next: freezed == next
-          ? _value.next
-          : next // ignore: cast_nullable_to_non_nullable
-              as String?,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<AlbumDTO>,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            chart:
+                null == chart
+                    ? _value.chart
+                    : chart // ignore: cast_nullable_to_non_nullable
+                        as String,
+            orderId:
+                null == orderId
+                    ? _value.orderId
+                    : orderId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            href:
+                null == href
+                    ? _value.href
+                    : href // ignore: cast_nullable_to_non_nullable
+                        as String,
+            next:
+                freezed == next
+                    ? _value.next
+                    : next // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            data:
+                null == data
+                    ? _value.data
+                    : data // ignore: cast_nullable_to_non_nullable
+                        as List<AlbumDTO>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$AlbumsChartDTOImplCopyWith<$Res>
-    implements $AlbumsChartDTOCopyWith<$Res> {
-  factory _$$AlbumsChartDTOImplCopyWith(_$AlbumsChartDTOImpl value,
-          $Res Function(_$AlbumsChartDTOImpl) then) =
+abstract class _$$AlbumsChartDTOImplCopyWith<$Res> implements $AlbumsChartDTOCopyWith<$Res> {
+  factory _$$AlbumsChartDTOImplCopyWith(_$AlbumsChartDTOImpl value, $Res Function(_$AlbumsChartDTOImpl) then) =
       __$$AlbumsChartDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String name,
-      String chart,
-      String orderId,
-      String href,
-      String? next,
-      List<AlbumDTO> data});
+  $Res call({String name, String chart, String orderId, String href, String? next, List<AlbumDTO> data});
 }
 
 /// @nodoc
-class __$$AlbumsChartDTOImplCopyWithImpl<$Res>
-    extends _$AlbumsChartDTOCopyWithImpl<$Res, _$AlbumsChartDTOImpl>
+class __$$AlbumsChartDTOImplCopyWithImpl<$Res> extends _$AlbumsChartDTOCopyWithImpl<$Res, _$AlbumsChartDTOImpl>
     implements _$$AlbumsChartDTOImplCopyWith<$Res> {
-  __$$AlbumsChartDTOImplCopyWithImpl(
-      _$AlbumsChartDTOImpl _value, $Res Function(_$AlbumsChartDTOImpl) _then)
-      : super(_value, _then);
+  __$$AlbumsChartDTOImplCopyWithImpl(_$AlbumsChartDTOImpl _value, $Res Function(_$AlbumsChartDTOImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of AlbumsChartDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -661,50 +636,57 @@ class __$$AlbumsChartDTOImplCopyWithImpl<$Res>
     Object? next = freezed,
     Object? data = null,
   }) {
-    return _then(_$AlbumsChartDTOImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      chart: null == chart
-          ? _value.chart
-          : chart // ignore: cast_nullable_to_non_nullable
-              as String,
-      orderId: null == orderId
-          ? _value.orderId
-          : orderId // ignore: cast_nullable_to_non_nullable
-              as String,
-      href: null == href
-          ? _value.href
-          : href // ignore: cast_nullable_to_non_nullable
-              as String,
-      next: freezed == next
-          ? _value.next
-          : next // ignore: cast_nullable_to_non_nullable
-              as String?,
-      data: null == data
-          ? _value._data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<AlbumDTO>,
-    ));
+    return _then(
+      _$AlbumsChartDTOImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        chart:
+            null == chart
+                ? _value.chart
+                : chart // ignore: cast_nullable_to_non_nullable
+                    as String,
+        orderId:
+            null == orderId
+                ? _value.orderId
+                : orderId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        href:
+            null == href
+                ? _value.href
+                : href // ignore: cast_nullable_to_non_nullable
+                    as String,
+        next:
+            freezed == next
+                ? _value.next
+                : next // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        data:
+            null == data
+                ? _value._data
+                : data // ignore: cast_nullable_to_non_nullable
+                    as List<AlbumDTO>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AlbumsChartDTOImpl extends _AlbumsChartDTO {
-  const _$AlbumsChartDTOImpl(
-      {required this.name,
-      required this.chart,
-      required this.orderId,
-      required this.href,
-      this.next,
-      required final List<AlbumDTO> data})
-      : _data = data,
-        super._();
+  const _$AlbumsChartDTOImpl({
+    required this.name,
+    required this.chart,
+    required this.orderId,
+    required this.href,
+    this.next,
+    required final List<AlbumDTO> data,
+  }) : _data = data,
+       super._();
 
-  factory _$AlbumsChartDTOImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AlbumsChartDTOImplFromJson(json);
+  factory _$AlbumsChartDTOImpl.fromJson(Map<String, dynamic> json) => _$$AlbumsChartDTOImplFromJson(json);
 
   @override
   final String name;
@@ -744,8 +726,8 @@ class _$AlbumsChartDTOImpl extends _AlbumsChartDTO {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, name, chart, orderId, href, next,
-      const DeepCollectionEquality().hash(_data));
+  int get hashCode =>
+      Object.hash(runtimeType, name, chart, orderId, href, next, const DeepCollectionEquality().hash(_data));
 
   /// Create a copy of AlbumsChartDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -753,29 +735,26 @@ class _$AlbumsChartDTOImpl extends _AlbumsChartDTO {
   @override
   @pragma('vm:prefer-inline')
   _$$AlbumsChartDTOImplCopyWith<_$AlbumsChartDTOImpl> get copyWith =>
-      __$$AlbumsChartDTOImplCopyWithImpl<_$AlbumsChartDTOImpl>(
-          this, _$identity);
+      __$$AlbumsChartDTOImplCopyWithImpl<_$AlbumsChartDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AlbumsChartDTOImplToJson(
-      this,
-    );
+    return _$$AlbumsChartDTOImplToJson(this);
   }
 }
 
 abstract class _AlbumsChartDTO extends AlbumsChartDTO {
-  const factory _AlbumsChartDTO(
-      {required final String name,
-      required final String chart,
-      required final String orderId,
-      required final String href,
-      final String? next,
-      required final List<AlbumDTO> data}) = _$AlbumsChartDTOImpl;
+  const factory _AlbumsChartDTO({
+    required final String name,
+    required final String chart,
+    required final String orderId,
+    required final String href,
+    final String? next,
+    required final List<AlbumDTO> data,
+  }) = _$AlbumsChartDTOImpl;
   const _AlbumsChartDTO._() : super._();
 
-  factory _AlbumsChartDTO.fromJson(Map<String, dynamic> json) =
-      _$AlbumsChartDTOImpl.fromJson;
+  factory _AlbumsChartDTO.fromJson(Map<String, dynamic> json) = _$AlbumsChartDTOImpl.fromJson;
 
   @override
   String get name;
@@ -794,8 +773,7 @@ abstract class _AlbumsChartDTO extends AlbumsChartDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AlbumsChartDTOImplCopyWith<_$AlbumsChartDTOImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AlbumsChartDTOImplCopyWith<_$AlbumsChartDTOImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 PlaylistsChartDTO _$PlaylistsChartDTOFromJson(Map<String, dynamic> json) {
@@ -817,23 +795,15 @@ mixin _$PlaylistsChartDTO {
   /// Create a copy of PlaylistsChartDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PlaylistsChartDTOCopyWith<PlaylistsChartDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PlaylistsChartDTOCopyWith<PlaylistsChartDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PlaylistsChartDTOCopyWith<$Res> {
-  factory $PlaylistsChartDTOCopyWith(
-          PlaylistsChartDTO value, $Res Function(PlaylistsChartDTO) then) =
+  factory $PlaylistsChartDTOCopyWith(PlaylistsChartDTO value, $Res Function(PlaylistsChartDTO) then) =
       _$PlaylistsChartDTOCopyWithImpl<$Res, PlaylistsChartDTO>;
   @useResult
-  $Res call(
-      {String name,
-      String chart,
-      String orderId,
-      String href,
-      String? next,
-      List<PlaylistDTO> data});
+  $Res call({String name, String chart, String orderId, String href, String? next, List<PlaylistDTO> data});
 }
 
 /// @nodoc
@@ -858,59 +828,58 @@ class _$PlaylistsChartDTOCopyWithImpl<$Res, $Val extends PlaylistsChartDTO>
     Object? next = freezed,
     Object? data = null,
   }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      chart: null == chart
-          ? _value.chart
-          : chart // ignore: cast_nullable_to_non_nullable
-              as String,
-      orderId: null == orderId
-          ? _value.orderId
-          : orderId // ignore: cast_nullable_to_non_nullable
-              as String,
-      href: null == href
-          ? _value.href
-          : href // ignore: cast_nullable_to_non_nullable
-              as String,
-      next: freezed == next
-          ? _value.next
-          : next // ignore: cast_nullable_to_non_nullable
-              as String?,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<PlaylistDTO>,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            chart:
+                null == chart
+                    ? _value.chart
+                    : chart // ignore: cast_nullable_to_non_nullable
+                        as String,
+            orderId:
+                null == orderId
+                    ? _value.orderId
+                    : orderId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            href:
+                null == href
+                    ? _value.href
+                    : href // ignore: cast_nullable_to_non_nullable
+                        as String,
+            next:
+                freezed == next
+                    ? _value.next
+                    : next // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            data:
+                null == data
+                    ? _value.data
+                    : data // ignore: cast_nullable_to_non_nullable
+                        as List<PlaylistDTO>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$PlaylistsChartDTOImplCopyWith<$Res>
-    implements $PlaylistsChartDTOCopyWith<$Res> {
-  factory _$$PlaylistsChartDTOImplCopyWith(_$PlaylistsChartDTOImpl value,
-          $Res Function(_$PlaylistsChartDTOImpl) then) =
+abstract class _$$PlaylistsChartDTOImplCopyWith<$Res> implements $PlaylistsChartDTOCopyWith<$Res> {
+  factory _$$PlaylistsChartDTOImplCopyWith(_$PlaylistsChartDTOImpl value, $Res Function(_$PlaylistsChartDTOImpl) then) =
       __$$PlaylistsChartDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String name,
-      String chart,
-      String orderId,
-      String href,
-      String? next,
-      List<PlaylistDTO> data});
+  $Res call({String name, String chart, String orderId, String href, String? next, List<PlaylistDTO> data});
 }
 
 /// @nodoc
-class __$$PlaylistsChartDTOImplCopyWithImpl<$Res>
-    extends _$PlaylistsChartDTOCopyWithImpl<$Res, _$PlaylistsChartDTOImpl>
+class __$$PlaylistsChartDTOImplCopyWithImpl<$Res> extends _$PlaylistsChartDTOCopyWithImpl<$Res, _$PlaylistsChartDTOImpl>
     implements _$$PlaylistsChartDTOImplCopyWith<$Res> {
-  __$$PlaylistsChartDTOImplCopyWithImpl(_$PlaylistsChartDTOImpl _value,
-      $Res Function(_$PlaylistsChartDTOImpl) _then)
-      : super(_value, _then);
+  __$$PlaylistsChartDTOImplCopyWithImpl(_$PlaylistsChartDTOImpl _value, $Res Function(_$PlaylistsChartDTOImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of PlaylistsChartDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -924,50 +893,57 @@ class __$$PlaylistsChartDTOImplCopyWithImpl<$Res>
     Object? next = freezed,
     Object? data = null,
   }) {
-    return _then(_$PlaylistsChartDTOImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      chart: null == chart
-          ? _value.chart
-          : chart // ignore: cast_nullable_to_non_nullable
-              as String,
-      orderId: null == orderId
-          ? _value.orderId
-          : orderId // ignore: cast_nullable_to_non_nullable
-              as String,
-      href: null == href
-          ? _value.href
-          : href // ignore: cast_nullable_to_non_nullable
-              as String,
-      next: freezed == next
-          ? _value.next
-          : next // ignore: cast_nullable_to_non_nullable
-              as String?,
-      data: null == data
-          ? _value._data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<PlaylistDTO>,
-    ));
+    return _then(
+      _$PlaylistsChartDTOImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        chart:
+            null == chart
+                ? _value.chart
+                : chart // ignore: cast_nullable_to_non_nullable
+                    as String,
+        orderId:
+            null == orderId
+                ? _value.orderId
+                : orderId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        href:
+            null == href
+                ? _value.href
+                : href // ignore: cast_nullable_to_non_nullable
+                    as String,
+        next:
+            freezed == next
+                ? _value.next
+                : next // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        data:
+            null == data
+                ? _value._data
+                : data // ignore: cast_nullable_to_non_nullable
+                    as List<PlaylistDTO>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$PlaylistsChartDTOImpl extends _PlaylistsChartDTO {
-  const _$PlaylistsChartDTOImpl(
-      {required this.name,
-      required this.chart,
-      required this.orderId,
-      required this.href,
-      this.next,
-      required final List<PlaylistDTO> data})
-      : _data = data,
-        super._();
+  const _$PlaylistsChartDTOImpl({
+    required this.name,
+    required this.chart,
+    required this.orderId,
+    required this.href,
+    this.next,
+    required final List<PlaylistDTO> data,
+  }) : _data = data,
+       super._();
 
-  factory _$PlaylistsChartDTOImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PlaylistsChartDTOImplFromJson(json);
+  factory _$PlaylistsChartDTOImpl.fromJson(Map<String, dynamic> json) => _$$PlaylistsChartDTOImplFromJson(json);
 
   @override
   final String name;
@@ -1007,8 +983,8 @@ class _$PlaylistsChartDTOImpl extends _PlaylistsChartDTO {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, name, chart, orderId, href, next,
-      const DeepCollectionEquality().hash(_data));
+  int get hashCode =>
+      Object.hash(runtimeType, name, chart, orderId, href, next, const DeepCollectionEquality().hash(_data));
 
   /// Create a copy of PlaylistsChartDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -1016,29 +992,26 @@ class _$PlaylistsChartDTOImpl extends _PlaylistsChartDTO {
   @override
   @pragma('vm:prefer-inline')
   _$$PlaylistsChartDTOImplCopyWith<_$PlaylistsChartDTOImpl> get copyWith =>
-      __$$PlaylistsChartDTOImplCopyWithImpl<_$PlaylistsChartDTOImpl>(
-          this, _$identity);
+      __$$PlaylistsChartDTOImplCopyWithImpl<_$PlaylistsChartDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PlaylistsChartDTOImplToJson(
-      this,
-    );
+    return _$$PlaylistsChartDTOImplToJson(this);
   }
 }
 
 abstract class _PlaylistsChartDTO extends PlaylistsChartDTO {
-  const factory _PlaylistsChartDTO(
-      {required final String name,
-      required final String chart,
-      required final String orderId,
-      required final String href,
-      final String? next,
-      required final List<PlaylistDTO> data}) = _$PlaylistsChartDTOImpl;
+  const factory _PlaylistsChartDTO({
+    required final String name,
+    required final String chart,
+    required final String orderId,
+    required final String href,
+    final String? next,
+    required final List<PlaylistDTO> data,
+  }) = _$PlaylistsChartDTOImpl;
   const _PlaylistsChartDTO._() : super._();
 
-  factory _PlaylistsChartDTO.fromJson(Map<String, dynamic> json) =
-      _$PlaylistsChartDTOImpl.fromJson;
+  factory _PlaylistsChartDTO.fromJson(Map<String, dynamic> json) = _$PlaylistsChartDTOImpl.fromJson;
 
   @override
   String get name;
@@ -1057,8 +1030,7 @@ abstract class _PlaylistsChartDTO extends PlaylistsChartDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PlaylistsChartDTOImplCopyWith<_$PlaylistsChartDTOImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PlaylistsChartDTOImplCopyWith<_$PlaylistsChartDTOImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 SongsChartDTO _$SongsChartDTOFromJson(Map<String, dynamic> json) {
@@ -1080,28 +1052,19 @@ mixin _$SongsChartDTO {
   /// Create a copy of SongsChartDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SongsChartDTOCopyWith<SongsChartDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SongsChartDTOCopyWith<SongsChartDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SongsChartDTOCopyWith<$Res> {
-  factory $SongsChartDTOCopyWith(
-          SongsChartDTO value, $Res Function(SongsChartDTO) then) =
+  factory $SongsChartDTOCopyWith(SongsChartDTO value, $Res Function(SongsChartDTO) then) =
       _$SongsChartDTOCopyWithImpl<$Res, SongsChartDTO>;
   @useResult
-  $Res call(
-      {String name,
-      String chart,
-      String orderId,
-      String href,
-      String? next,
-      List<SongDTO> data});
+  $Res call({String name, String chart, String orderId, String href, String? next, List<SongDTO> data});
 }
 
 /// @nodoc
-class _$SongsChartDTOCopyWithImpl<$Res, $Val extends SongsChartDTO>
-    implements $SongsChartDTOCopyWith<$Res> {
+class _$SongsChartDTOCopyWithImpl<$Res, $Val extends SongsChartDTO> implements $SongsChartDTOCopyWith<$Res> {
   _$SongsChartDTOCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1121,59 +1084,58 @@ class _$SongsChartDTOCopyWithImpl<$Res, $Val extends SongsChartDTO>
     Object? next = freezed,
     Object? data = null,
   }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      chart: null == chart
-          ? _value.chart
-          : chart // ignore: cast_nullable_to_non_nullable
-              as String,
-      orderId: null == orderId
-          ? _value.orderId
-          : orderId // ignore: cast_nullable_to_non_nullable
-              as String,
-      href: null == href
-          ? _value.href
-          : href // ignore: cast_nullable_to_non_nullable
-              as String,
-      next: freezed == next
-          ? _value.next
-          : next // ignore: cast_nullable_to_non_nullable
-              as String?,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<SongDTO>,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            chart:
+                null == chart
+                    ? _value.chart
+                    : chart // ignore: cast_nullable_to_non_nullable
+                        as String,
+            orderId:
+                null == orderId
+                    ? _value.orderId
+                    : orderId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            href:
+                null == href
+                    ? _value.href
+                    : href // ignore: cast_nullable_to_non_nullable
+                        as String,
+            next:
+                freezed == next
+                    ? _value.next
+                    : next // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            data:
+                null == data
+                    ? _value.data
+                    : data // ignore: cast_nullable_to_non_nullable
+                        as List<SongDTO>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$SongsChartDTOImplCopyWith<$Res>
-    implements $SongsChartDTOCopyWith<$Res> {
-  factory _$$SongsChartDTOImplCopyWith(
-          _$SongsChartDTOImpl value, $Res Function(_$SongsChartDTOImpl) then) =
+abstract class _$$SongsChartDTOImplCopyWith<$Res> implements $SongsChartDTOCopyWith<$Res> {
+  factory _$$SongsChartDTOImplCopyWith(_$SongsChartDTOImpl value, $Res Function(_$SongsChartDTOImpl) then) =
       __$$SongsChartDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String name,
-      String chart,
-      String orderId,
-      String href,
-      String? next,
-      List<SongDTO> data});
+  $Res call({String name, String chart, String orderId, String href, String? next, List<SongDTO> data});
 }
 
 /// @nodoc
-class __$$SongsChartDTOImplCopyWithImpl<$Res>
-    extends _$SongsChartDTOCopyWithImpl<$Res, _$SongsChartDTOImpl>
+class __$$SongsChartDTOImplCopyWithImpl<$Res> extends _$SongsChartDTOCopyWithImpl<$Res, _$SongsChartDTOImpl>
     implements _$$SongsChartDTOImplCopyWith<$Res> {
-  __$$SongsChartDTOImplCopyWithImpl(
-      _$SongsChartDTOImpl _value, $Res Function(_$SongsChartDTOImpl) _then)
-      : super(_value, _then);
+  __$$SongsChartDTOImplCopyWithImpl(_$SongsChartDTOImpl _value, $Res Function(_$SongsChartDTOImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of SongsChartDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -1187,50 +1149,57 @@ class __$$SongsChartDTOImplCopyWithImpl<$Res>
     Object? next = freezed,
     Object? data = null,
   }) {
-    return _then(_$SongsChartDTOImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      chart: null == chart
-          ? _value.chart
-          : chart // ignore: cast_nullable_to_non_nullable
-              as String,
-      orderId: null == orderId
-          ? _value.orderId
-          : orderId // ignore: cast_nullable_to_non_nullable
-              as String,
-      href: null == href
-          ? _value.href
-          : href // ignore: cast_nullable_to_non_nullable
-              as String,
-      next: freezed == next
-          ? _value.next
-          : next // ignore: cast_nullable_to_non_nullable
-              as String?,
-      data: null == data
-          ? _value._data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<SongDTO>,
-    ));
+    return _then(
+      _$SongsChartDTOImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        chart:
+            null == chart
+                ? _value.chart
+                : chart // ignore: cast_nullable_to_non_nullable
+                    as String,
+        orderId:
+            null == orderId
+                ? _value.orderId
+                : orderId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        href:
+            null == href
+                ? _value.href
+                : href // ignore: cast_nullable_to_non_nullable
+                    as String,
+        next:
+            freezed == next
+                ? _value.next
+                : next // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        data:
+            null == data
+                ? _value._data
+                : data // ignore: cast_nullable_to_non_nullable
+                    as List<SongDTO>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$SongsChartDTOImpl extends _SongsChartDTO {
-  const _$SongsChartDTOImpl(
-      {required this.name,
-      required this.chart,
-      required this.orderId,
-      required this.href,
-      this.next,
-      required final List<SongDTO> data})
-      : _data = data,
-        super._();
+  const _$SongsChartDTOImpl({
+    required this.name,
+    required this.chart,
+    required this.orderId,
+    required this.href,
+    this.next,
+    required final List<SongDTO> data,
+  }) : _data = data,
+       super._();
 
-  factory _$SongsChartDTOImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SongsChartDTOImplFromJson(json);
+  factory _$SongsChartDTOImpl.fromJson(Map<String, dynamic> json) => _$$SongsChartDTOImplFromJson(json);
 
   @override
   final String name;
@@ -1270,8 +1239,8 @@ class _$SongsChartDTOImpl extends _SongsChartDTO {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, name, chart, orderId, href, next,
-      const DeepCollectionEquality().hash(_data));
+  int get hashCode =>
+      Object.hash(runtimeType, name, chart, orderId, href, next, const DeepCollectionEquality().hash(_data));
 
   /// Create a copy of SongsChartDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -1283,24 +1252,22 @@ class _$SongsChartDTOImpl extends _SongsChartDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SongsChartDTOImplToJson(
-      this,
-    );
+    return _$$SongsChartDTOImplToJson(this);
   }
 }
 
 abstract class _SongsChartDTO extends SongsChartDTO {
-  const factory _SongsChartDTO(
-      {required final String name,
-      required final String chart,
-      required final String orderId,
-      required final String href,
-      final String? next,
-      required final List<SongDTO> data}) = _$SongsChartDTOImpl;
+  const factory _SongsChartDTO({
+    required final String name,
+    required final String chart,
+    required final String orderId,
+    required final String href,
+    final String? next,
+    required final List<SongDTO> data,
+  }) = _$SongsChartDTOImpl;
   const _SongsChartDTO._() : super._();
 
-  factory _SongsChartDTO.fromJson(Map<String, dynamic> json) =
-      _$SongsChartDTOImpl.fromJson;
+  factory _SongsChartDTO.fromJson(Map<String, dynamic> json) = _$SongsChartDTOImpl.fromJson;
 
   @override
   String get name;
@@ -1319,8 +1286,7 @@ abstract class _SongsChartDTO extends SongsChartDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SongsChartDTOImplCopyWith<_$SongsChartDTOImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SongsChartDTOImplCopyWith<_$SongsChartDTOImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 MusicVideosChartDTO _$MusicVideosChartDTOFromJson(Map<String, dynamic> json) {
@@ -1342,23 +1308,15 @@ mixin _$MusicVideosChartDTO {
   /// Create a copy of MusicVideosChartDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $MusicVideosChartDTOCopyWith<MusicVideosChartDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $MusicVideosChartDTOCopyWith<MusicVideosChartDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $MusicVideosChartDTOCopyWith<$Res> {
-  factory $MusicVideosChartDTOCopyWith(
-          MusicVideosChartDTO value, $Res Function(MusicVideosChartDTO) then) =
+  factory $MusicVideosChartDTOCopyWith(MusicVideosChartDTO value, $Res Function(MusicVideosChartDTO) then) =
       _$MusicVideosChartDTOCopyWithImpl<$Res, MusicVideosChartDTO>;
   @useResult
-  $Res call(
-      {String name,
-      String chart,
-      String orderId,
-      String href,
-      String? next,
-      List<MusicVideoDTO> data});
+  $Res call({String name, String chart, String orderId, String href, String? next, List<MusicVideoDTO> data});
 }
 
 /// @nodoc
@@ -1383,59 +1341,63 @@ class _$MusicVideosChartDTOCopyWithImpl<$Res, $Val extends MusicVideosChartDTO>
     Object? next = freezed,
     Object? data = null,
   }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      chart: null == chart
-          ? _value.chart
-          : chart // ignore: cast_nullable_to_non_nullable
-              as String,
-      orderId: null == orderId
-          ? _value.orderId
-          : orderId // ignore: cast_nullable_to_non_nullable
-              as String,
-      href: null == href
-          ? _value.href
-          : href // ignore: cast_nullable_to_non_nullable
-              as String,
-      next: freezed == next
-          ? _value.next
-          : next // ignore: cast_nullable_to_non_nullable
-              as String?,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<MusicVideoDTO>,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            chart:
+                null == chart
+                    ? _value.chart
+                    : chart // ignore: cast_nullable_to_non_nullable
+                        as String,
+            orderId:
+                null == orderId
+                    ? _value.orderId
+                    : orderId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            href:
+                null == href
+                    ? _value.href
+                    : href // ignore: cast_nullable_to_non_nullable
+                        as String,
+            next:
+                freezed == next
+                    ? _value.next
+                    : next // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            data:
+                null == data
+                    ? _value.data
+                    : data // ignore: cast_nullable_to_non_nullable
+                        as List<MusicVideoDTO>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$MusicVideosChartDTOImplCopyWith<$Res>
-    implements $MusicVideosChartDTOCopyWith<$Res> {
-  factory _$$MusicVideosChartDTOImplCopyWith(_$MusicVideosChartDTOImpl value,
-          $Res Function(_$MusicVideosChartDTOImpl) then) =
-      __$$MusicVideosChartDTOImplCopyWithImpl<$Res>;
+abstract class _$$MusicVideosChartDTOImplCopyWith<$Res> implements $MusicVideosChartDTOCopyWith<$Res> {
+  factory _$$MusicVideosChartDTOImplCopyWith(
+    _$MusicVideosChartDTOImpl value,
+    $Res Function(_$MusicVideosChartDTOImpl) then,
+  ) = __$$MusicVideosChartDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String name,
-      String chart,
-      String orderId,
-      String href,
-      String? next,
-      List<MusicVideoDTO> data});
+  $Res call({String name, String chart, String orderId, String href, String? next, List<MusicVideoDTO> data});
 }
 
 /// @nodoc
 class __$$MusicVideosChartDTOImplCopyWithImpl<$Res>
     extends _$MusicVideosChartDTOCopyWithImpl<$Res, _$MusicVideosChartDTOImpl>
     implements _$$MusicVideosChartDTOImplCopyWith<$Res> {
-  __$$MusicVideosChartDTOImplCopyWithImpl(_$MusicVideosChartDTOImpl _value,
-      $Res Function(_$MusicVideosChartDTOImpl) _then)
-      : super(_value, _then);
+  __$$MusicVideosChartDTOImplCopyWithImpl(
+    _$MusicVideosChartDTOImpl _value,
+    $Res Function(_$MusicVideosChartDTOImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of MusicVideosChartDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -1449,50 +1411,57 @@ class __$$MusicVideosChartDTOImplCopyWithImpl<$Res>
     Object? next = freezed,
     Object? data = null,
   }) {
-    return _then(_$MusicVideosChartDTOImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      chart: null == chart
-          ? _value.chart
-          : chart // ignore: cast_nullable_to_non_nullable
-              as String,
-      orderId: null == orderId
-          ? _value.orderId
-          : orderId // ignore: cast_nullable_to_non_nullable
-              as String,
-      href: null == href
-          ? _value.href
-          : href // ignore: cast_nullable_to_non_nullable
-              as String,
-      next: freezed == next
-          ? _value.next
-          : next // ignore: cast_nullable_to_non_nullable
-              as String?,
-      data: null == data
-          ? _value._data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<MusicVideoDTO>,
-    ));
+    return _then(
+      _$MusicVideosChartDTOImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        chart:
+            null == chart
+                ? _value.chart
+                : chart // ignore: cast_nullable_to_non_nullable
+                    as String,
+        orderId:
+            null == orderId
+                ? _value.orderId
+                : orderId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        href:
+            null == href
+                ? _value.href
+                : href // ignore: cast_nullable_to_non_nullable
+                    as String,
+        next:
+            freezed == next
+                ? _value.next
+                : next // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        data:
+            null == data
+                ? _value._data
+                : data // ignore: cast_nullable_to_non_nullable
+                    as List<MusicVideoDTO>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$MusicVideosChartDTOImpl extends _MusicVideosChartDTO {
-  const _$MusicVideosChartDTOImpl(
-      {required this.name,
-      required this.chart,
-      required this.orderId,
-      required this.href,
-      this.next,
-      required final List<MusicVideoDTO> data})
-      : _data = data,
-        super._();
+  const _$MusicVideosChartDTOImpl({
+    required this.name,
+    required this.chart,
+    required this.orderId,
+    required this.href,
+    this.next,
+    required final List<MusicVideoDTO> data,
+  }) : _data = data,
+       super._();
 
-  factory _$MusicVideosChartDTOImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MusicVideosChartDTOImplFromJson(json);
+  factory _$MusicVideosChartDTOImpl.fromJson(Map<String, dynamic> json) => _$$MusicVideosChartDTOImplFromJson(json);
 
   @override
   final String name;
@@ -1532,8 +1501,8 @@ class _$MusicVideosChartDTOImpl extends _MusicVideosChartDTO {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, name, chart, orderId, href, next,
-      const DeepCollectionEquality().hash(_data));
+  int get hashCode =>
+      Object.hash(runtimeType, name, chart, orderId, href, next, const DeepCollectionEquality().hash(_data));
 
   /// Create a copy of MusicVideosChartDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -1541,29 +1510,26 @@ class _$MusicVideosChartDTOImpl extends _MusicVideosChartDTO {
   @override
   @pragma('vm:prefer-inline')
   _$$MusicVideosChartDTOImplCopyWith<_$MusicVideosChartDTOImpl> get copyWith =>
-      __$$MusicVideosChartDTOImplCopyWithImpl<_$MusicVideosChartDTOImpl>(
-          this, _$identity);
+      __$$MusicVideosChartDTOImplCopyWithImpl<_$MusicVideosChartDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MusicVideosChartDTOImplToJson(
-      this,
-    );
+    return _$$MusicVideosChartDTOImplToJson(this);
   }
 }
 
 abstract class _MusicVideosChartDTO extends MusicVideosChartDTO {
-  const factory _MusicVideosChartDTO(
-      {required final String name,
-      required final String chart,
-      required final String orderId,
-      required final String href,
-      final String? next,
-      required final List<MusicVideoDTO> data}) = _$MusicVideosChartDTOImpl;
+  const factory _MusicVideosChartDTO({
+    required final String name,
+    required final String chart,
+    required final String orderId,
+    required final String href,
+    final String? next,
+    required final List<MusicVideoDTO> data,
+  }) = _$MusicVideosChartDTOImpl;
   const _MusicVideosChartDTO._() : super._();
 
-  factory _MusicVideosChartDTO.fromJson(Map<String, dynamic> json) =
-      _$MusicVideosChartDTOImpl.fromJson;
+  factory _MusicVideosChartDTO.fromJson(Map<String, dynamic> json) = _$MusicVideosChartDTOImpl.fromJson;
 
   @override
   String get name;
@@ -1582,6 +1548,5 @@ abstract class _MusicVideosChartDTO extends MusicVideosChartDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MusicVideosChartDTOImplCopyWith<_$MusicVideosChartDTOImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$MusicVideosChartDTOImplCopyWith<_$MusicVideosChartDTOImpl> get copyWith => throw _privateConstructorUsedError;
 }

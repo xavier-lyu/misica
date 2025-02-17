@@ -12,7 +12,8 @@ part of 'play_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 PlayParams _$PlayParamsFromJson(Map<String, dynamic> json) {
   return _PlayParams.fromJson(json);
@@ -29,22 +30,19 @@ mixin _$PlayParams {
   /// Create a copy of PlayParams
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PlayParamsCopyWith<PlayParams> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PlayParamsCopyWith<PlayParams> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PlayParamsCopyWith<$Res> {
-  factory $PlayParamsCopyWith(
-          PlayParams value, $Res Function(PlayParams) then) =
+  factory $PlayParamsCopyWith(PlayParams value, $Res Function(PlayParams) then) =
       _$PlayParamsCopyWithImpl<$Res, PlayParams>;
   @useResult
   $Res call({String id, String kind});
 }
 
 /// @nodoc
-class _$PlayParamsCopyWithImpl<$Res, $Val extends PlayParams>
-    implements $PlayParamsCopyWith<$Res> {
+class _$PlayParamsCopyWithImpl<$Res, $Val extends PlayParams> implements $PlayParamsCopyWith<$Res> {
   _$PlayParamsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -56,28 +54,28 @@ class _$PlayParamsCopyWithImpl<$Res, $Val extends PlayParams>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? kind = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      kind: null == kind
-          ? _value.kind
-          : kind // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? id = null, Object? kind = null}) {
+    return _then(
+      _value.copyWith(
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            kind:
+                null == kind
+                    ? _value.kind
+                    : kind // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$PlayParamsImplCopyWith<$Res>
-    implements $PlayParamsCopyWith<$Res> {
-  factory _$$PlayParamsImplCopyWith(
-          _$PlayParamsImpl value, $Res Function(_$PlayParamsImpl) then) =
+abstract class _$$PlayParamsImplCopyWith<$Res> implements $PlayParamsCopyWith<$Res> {
+  factory _$$PlayParamsImplCopyWith(_$PlayParamsImpl value, $Res Function(_$PlayParamsImpl) then) =
       __$$PlayParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -85,31 +83,29 @@ abstract class _$$PlayParamsImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PlayParamsImplCopyWithImpl<$Res>
-    extends _$PlayParamsCopyWithImpl<$Res, _$PlayParamsImpl>
+class __$$PlayParamsImplCopyWithImpl<$Res> extends _$PlayParamsCopyWithImpl<$Res, _$PlayParamsImpl>
     implements _$$PlayParamsImplCopyWith<$Res> {
-  __$$PlayParamsImplCopyWithImpl(
-      _$PlayParamsImpl _value, $Res Function(_$PlayParamsImpl) _then)
-      : super(_value, _then);
+  __$$PlayParamsImplCopyWithImpl(_$PlayParamsImpl _value, $Res Function(_$PlayParamsImpl) _then) : super(_value, _then);
 
   /// Create a copy of PlayParams
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = null,
-    Object? kind = null,
-  }) {
-    return _then(_$PlayParamsImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      kind: null == kind
-          ? _value.kind
-          : kind // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? id = null, Object? kind = null}) {
+    return _then(
+      _$PlayParamsImpl(
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        kind:
+            null == kind
+                ? _value.kind
+                : kind // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -118,8 +114,7 @@ class __$$PlayParamsImplCopyWithImpl<$Res>
 class _$PlayParamsImpl extends _PlayParams {
   const _$PlayParamsImpl({required this.id, required this.kind}) : super._();
 
-  factory _$PlayParamsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PlayParamsImplFromJson(json);
+  factory _$PlayParamsImpl.fromJson(Map<String, dynamic> json) => _$$PlayParamsImplFromJson(json);
 
   @override
   final String id;
@@ -154,20 +149,15 @@ class _$PlayParamsImpl extends _PlayParams {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PlayParamsImplToJson(
-      this,
-    );
+    return _$$PlayParamsImplToJson(this);
   }
 }
 
 abstract class _PlayParams extends PlayParams {
-  const factory _PlayParams(
-      {required final String id,
-      required final String kind}) = _$PlayParamsImpl;
+  const factory _PlayParams({required final String id, required final String kind}) = _$PlayParamsImpl;
   const _PlayParams._() : super._();
 
-  factory _PlayParams.fromJson(Map<String, dynamic> json) =
-      _$PlayParamsImpl.fromJson;
+  factory _PlayParams.fromJson(Map<String, dynamic> json) = _$PlayParamsImpl.fromJson;
 
   @override
   String get id;
@@ -178,6 +168,5 @@ abstract class _PlayParams extends PlayParams {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PlayParamsImplCopyWith<_$PlayParamsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PlayParamsImplCopyWith<_$PlayParamsImpl> get copyWith => throw _privateConstructorUsedError;
 }

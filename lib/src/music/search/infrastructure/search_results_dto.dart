@@ -10,18 +10,12 @@ part 'search_results_dto.g.dart';
 @freezed
 class SearchResultsDTO with _$SearchResultsDTO {
   const SearchResultsDTO._();
-  const factory SearchResultsDTO({
-    Map<String, SearchResultDTO>? results,
-    ResourceMetaDTO? meta,
-  }) = _SearchResultsDTO;
+  const factory SearchResultsDTO({Map<String, SearchResultDTO>? results, ResourceMetaDTO? meta}) = _SearchResultsDTO;
 
-  factory SearchResultsDTO.fromJson(Map<String, dynamic> json) =>
-      _$SearchResultsDTOFromJson(json);
+  factory SearchResultsDTO.fromJson(Map<String, dynamic> json) => _$SearchResultsDTOFromJson(json);
 
   SearchResults toDomain() {
-    return SearchResults(
-      results: results?.toDomain(order: meta?.results?.order),
-    );
+    return SearchResults(results: results?.toDomain(order: meta?.results?.order));
   }
 }
 
@@ -36,15 +30,10 @@ class SearchResultDTO with _$SearchResultDTO {
     String? next,
   }) = _SearchResultDTO;
 
-  factory SearchResultDTO.fromJson(Map<String, dynamic> json) =>
-      _$SearchResultDTOFromJson(json);
+  factory SearchResultDTO.fromJson(Map<String, dynamic> json) => _$SearchResultDTOFromJson(json);
 
   SearchResult toDomain() {
-    return SearchResult(
-      name: name,
-      groupId: groupId,
-      data: data.toDomain(),
-    );
+    return SearchResult(name: name, groupId: groupId, data: data.toDomain());
   }
 }
 

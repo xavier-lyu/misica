@@ -12,7 +12,8 @@ part of 'editorial_notes_dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 EditorialNotesDTO _$EditorialNotesDTOFromJson(Map<String, dynamic> json) {
   return _EditorialNotesDTO.fromJson(json);
@@ -30,14 +31,12 @@ mixin _$EditorialNotesDTO {
   /// Create a copy of EditorialNotesDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $EditorialNotesDTOCopyWith<EditorialNotesDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $EditorialNotesDTOCopyWith<EditorialNotesDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $EditorialNotesDTOCopyWith<$Res> {
-  factory $EditorialNotesDTOCopyWith(
-          EditorialNotesDTO value, $Res Function(EditorialNotesDTO) then) =
+  factory $EditorialNotesDTOCopyWith(EditorialNotesDTO value, $Res Function(EditorialNotesDTO) then) =
       _$EditorialNotesDTOCopyWithImpl<$Res, EditorialNotesDTO>;
   @useResult
   $Res call({String? short, String? standard, String? name});
@@ -57,33 +56,33 @@ class _$EditorialNotesDTOCopyWithImpl<$Res, $Val extends EditorialNotesDTO>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? short = freezed,
-    Object? standard = freezed,
-    Object? name = freezed,
-  }) {
-    return _then(_value.copyWith(
-      short: freezed == short
-          ? _value.short
-          : short // ignore: cast_nullable_to_non_nullable
-              as String?,
-      standard: freezed == standard
-          ? _value.standard
-          : standard // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? short = freezed, Object? standard = freezed, Object? name = freezed}) {
+    return _then(
+      _value.copyWith(
+            short:
+                freezed == short
+                    ? _value.short
+                    : short // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            standard:
+                freezed == standard
+                    ? _value.standard
+                    : standard // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            name:
+                freezed == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$EditorialNotesDTOImplCopyWith<$Res>
-    implements $EditorialNotesDTOCopyWith<$Res> {
-  factory _$$EditorialNotesDTOImplCopyWith(_$EditorialNotesDTOImpl value,
-          $Res Function(_$EditorialNotesDTOImpl) then) =
+abstract class _$$EditorialNotesDTOImplCopyWith<$Res> implements $EditorialNotesDTOCopyWith<$Res> {
+  factory _$$EditorialNotesDTOImplCopyWith(_$EditorialNotesDTOImpl value, $Res Function(_$EditorialNotesDTOImpl) then) =
       __$$EditorialNotesDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -91,47 +90,44 @@ abstract class _$$EditorialNotesDTOImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$EditorialNotesDTOImplCopyWithImpl<$Res>
-    extends _$EditorialNotesDTOCopyWithImpl<$Res, _$EditorialNotesDTOImpl>
+class __$$EditorialNotesDTOImplCopyWithImpl<$Res> extends _$EditorialNotesDTOCopyWithImpl<$Res, _$EditorialNotesDTOImpl>
     implements _$$EditorialNotesDTOImplCopyWith<$Res> {
-  __$$EditorialNotesDTOImplCopyWithImpl(_$EditorialNotesDTOImpl _value,
-      $Res Function(_$EditorialNotesDTOImpl) _then)
-      : super(_value, _then);
+  __$$EditorialNotesDTOImplCopyWithImpl(_$EditorialNotesDTOImpl _value, $Res Function(_$EditorialNotesDTOImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of EditorialNotesDTO
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? short = freezed,
-    Object? standard = freezed,
-    Object? name = freezed,
-  }) {
-    return _then(_$EditorialNotesDTOImpl(
-      short: freezed == short
-          ? _value.short
-          : short // ignore: cast_nullable_to_non_nullable
-              as String?,
-      standard: freezed == standard
-          ? _value.standard
-          : standard // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? short = freezed, Object? standard = freezed, Object? name = freezed}) {
+    return _then(
+      _$EditorialNotesDTOImpl(
+        short:
+            freezed == short
+                ? _value.short
+                : short // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        standard:
+            freezed == standard
+                ? _value.standard
+                : standard // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        name:
+            freezed == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$EditorialNotesDTOImpl extends _EditorialNotesDTO {
-  const _$EditorialNotesDTOImpl({this.short, this.standard, this.name})
-      : super._();
+  const _$EditorialNotesDTOImpl({this.short, this.standard, this.name}) : super._();
 
-  factory _$EditorialNotesDTOImpl.fromJson(Map<String, dynamic> json) =>
-      _$$EditorialNotesDTOImplFromJson(json);
+  factory _$EditorialNotesDTOImpl.fromJson(Map<String, dynamic> json) => _$$EditorialNotesDTOImplFromJson(json);
 
   @override
   final String? short;
@@ -151,8 +147,7 @@ class _$EditorialNotesDTOImpl extends _EditorialNotesDTO {
         (other.runtimeType == runtimeType &&
             other is _$EditorialNotesDTOImpl &&
             (identical(other.short, short) || other.short == short) &&
-            (identical(other.standard, standard) ||
-                other.standard == standard) &&
+            (identical(other.standard, standard) || other.standard == standard) &&
             (identical(other.name, name) || other.name == name));
   }
 
@@ -166,26 +161,20 @@ class _$EditorialNotesDTOImpl extends _EditorialNotesDTO {
   @override
   @pragma('vm:prefer-inline')
   _$$EditorialNotesDTOImplCopyWith<_$EditorialNotesDTOImpl> get copyWith =>
-      __$$EditorialNotesDTOImplCopyWithImpl<_$EditorialNotesDTOImpl>(
-          this, _$identity);
+      __$$EditorialNotesDTOImplCopyWithImpl<_$EditorialNotesDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$EditorialNotesDTOImplToJson(
-      this,
-    );
+    return _$$EditorialNotesDTOImplToJson(this);
   }
 }
 
 abstract class _EditorialNotesDTO extends EditorialNotesDTO {
-  const factory _EditorialNotesDTO(
-      {final String? short,
-      final String? standard,
-      final String? name}) = _$EditorialNotesDTOImpl;
+  const factory _EditorialNotesDTO({final String? short, final String? standard, final String? name}) =
+      _$EditorialNotesDTOImpl;
   const _EditorialNotesDTO._() : super._();
 
-  factory _EditorialNotesDTO.fromJson(Map<String, dynamic> json) =
-      _$EditorialNotesDTOImpl.fromJson;
+  factory _EditorialNotesDTO.fromJson(Map<String, dynamic> json) = _$EditorialNotesDTOImpl.fromJson;
 
   @override
   String? get short;
@@ -198,6 +187,5 @@ abstract class _EditorialNotesDTO extends EditorialNotesDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$EditorialNotesDTOImplCopyWith<_$EditorialNotesDTOImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$EditorialNotesDTOImplCopyWith<_$EditorialNotesDTOImpl> get copyWith => throw _privateConstructorUsedError;
 }

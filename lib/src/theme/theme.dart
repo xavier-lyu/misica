@@ -10,42 +10,32 @@ class CustomTheme {
   static ThemeData light() {
     final light = ThemeData.light();
 
-    final colorScheme = ColorScheme.fromSeed(
-        seedColor: _primaryKeyColor, brightness: Brightness.light);
+    final colorScheme = ColorScheme.fromSeed(seedColor: _primaryKeyColor, brightness: Brightness.light);
 
     return light.copyWith(
       colorScheme: colorScheme,
       primaryColor: colorScheme.primary,
       scaffoldBackgroundColor: colorScheme.surface.lighten(),
       tabBarTheme: light.tabBarTheme.copyWith(
-        indicator: UnderlineTabIndicator(
-          borderSide: BorderSide(width: 2.0, color: colorScheme.primary),
-        ),
+        indicator: UnderlineTabIndicator(borderSide: BorderSide(width: 2.0, color: colorScheme.primary)),
       ),
-      bottomSheetTheme: const BottomSheetThemeData(
-        shape: BeveledRectangleBorder(),
-      ),
+      bottomSheetTheme: const BottomSheetThemeData(shape: BeveledRectangleBorder()),
     );
   }
 
   static ThemeData dark() {
     final dark = ThemeData.dark();
 
-    final colorScheme = ColorScheme.fromSeed(
-        seedColor: _primaryKeyColor, brightness: Brightness.dark);
+    final colorScheme = ColorScheme.fromSeed(seedColor: _primaryKeyColor, brightness: Brightness.dark);
 
     return dark.copyWith(
       colorScheme: colorScheme,
       primaryColor: colorScheme.primary,
       scaffoldBackgroundColor: colorScheme.surface.darken(),
       tabBarTheme: dark.tabBarTheme.copyWith(
-        indicator: UnderlineTabIndicator(
-          borderSide: BorderSide(width: 2.0, color: colorScheme.primary),
-        ),
+        indicator: UnderlineTabIndicator(borderSide: BorderSide(width: 2.0, color: colorScheme.primary)),
       ),
-      bottomSheetTheme: const BottomSheetThemeData(
-        shape: BeveledRectangleBorder(),
-      ),
+      bottomSheetTheme: const BottomSheetThemeData(shape: BeveledRectangleBorder()),
     );
   }
 }

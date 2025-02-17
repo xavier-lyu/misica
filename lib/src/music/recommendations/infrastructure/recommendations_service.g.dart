@@ -20,11 +20,7 @@ class _RecommendationsService implements RecommendationsService {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<RecommendationsResponse> getRecommendations(
-    String extendAlbums,
-    String extendSongs,
-    String artUrl,
-  ) async {
+  Future<RecommendationsResponse> getRecommendations(String extendAlbums, String extendSongs, String artUrl) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'extend[albums]': extendAlbums,
@@ -35,12 +31,7 @@ class _RecommendationsService implements RecommendationsService {
     const Map<String, dynamic>? _data = null;
     final _options = _setStreamType<RecommendationsResponse>(
       Options(method: 'GET', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/me/recommendations',
-            queryParameters: queryParameters,
-            data: _data,
-          )
+          .compose(_dio.options, '/me/recommendations', queryParameters: queryParameters, data: _data)
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
@@ -56,8 +47,7 @@ class _RecommendationsService implements RecommendationsService {
 
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
     if (T != dynamic &&
-        !(requestOptions.responseType == ResponseType.bytes ||
-            requestOptions.responseType == ResponseType.stream)) {
+        !(requestOptions.responseType == ResponseType.bytes || requestOptions.responseType == ResponseType.stream)) {
       if (T == String) {
         requestOptions.responseType = ResponseType.plain;
       } else {

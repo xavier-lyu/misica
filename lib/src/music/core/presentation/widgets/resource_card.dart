@@ -25,15 +25,21 @@ class ResourceCard extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return InkWell(
       onTap: () {
-        resource.mapOrNull((value) => null, album: (album) {
-          context.router.push(AlbumRoute(id: album.id));
-        }, playlist: (playlist) {
-          context.router.push(PlaylistRoute(id: playlist.id));
-        }, station: (station) {
-          ref.read(musicPlayerProvider).playSingle(station);
-        }, musicVideo: (mv) {
-          ref.read(musicPlayerProvider).playSingle(mv);
-        });
+        resource.mapOrNull(
+          (value) => null,
+          album: (album) {
+            context.router.push(AlbumRoute(id: album.id));
+          },
+          playlist: (playlist) {
+            context.router.push(PlaylistRoute(id: playlist.id));
+          },
+          station: (station) {
+            ref.read(musicPlayerProvider).playSingle(station);
+          },
+          musicVideo: (mv) {
+            ref.read(musicPlayerProvider).playSingle(mv);
+          },
+        );
       },
       child: AspectRatio(
         aspectRatio: aspectRatio,
@@ -53,17 +59,9 @@ class ResourceCard extends ConsumerWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  if (resource.name.isNotEmpty)
-                    Text(
-                      resource.name,
-                      overflow: TextOverflow.ellipsis,
-                    ),
+                  if (resource.name.isNotEmpty) Text(resource.name, overflow: TextOverflow.ellipsis),
                   if (resource.creatorName?.isNotEmpty == true)
-                    Text(
-                      resource.creatorName!,
-                      style: const TextStyle(),
-                      overflow: TextOverflow.ellipsis,
-                    ),
+                    Text(resource.creatorName!, style: const TextStyle(), overflow: TextOverflow.ellipsis),
                 ],
               ),
             ),

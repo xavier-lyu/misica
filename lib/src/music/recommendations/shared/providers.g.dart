@@ -10,12 +10,10 @@ String _$recosServiceHash() => r'e71ff0d1525a90802549996424214d2833c1e106';
 
 /// See also [recosService].
 @ProviderFor(recosService)
-final recosServiceProvider =
-    AutoDisposeProvider<RecommendationsService>.internal(
+final recosServiceProvider = AutoDisposeProvider<RecommendationsService>.internal(
   recosService,
   name: r'recosServiceProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$recosServiceHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$recosServiceHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
@@ -27,13 +25,10 @@ String _$recosRepositoryHash() => r'a6cf9d6101a4d1b05bfd97bec2509c03b470debb';
 
 /// See also [recosRepository].
 @ProviderFor(recosRepository)
-final recosRepositoryProvider =
-    AutoDisposeProvider<RecommendationsRepository>.internal(
+final recosRepositoryProvider = AutoDisposeProvider<RecommendationsRepository>.internal(
   recosRepository,
   name: r'recosRepositoryProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$recosRepositoryHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$recosRepositoryHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

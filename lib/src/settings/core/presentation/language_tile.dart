@@ -26,13 +26,7 @@ class LanguageTile extends ConsumerWidget {
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text(context.loc.changeLanguageTitle),
-          content: SingleChildScrollView(
-            child: ListBody(
-              children: <Widget>[
-                Text(context.loc.changeLanguageHint),
-              ],
-            ),
-          ),
+          content: SingleChildScrollView(child: ListBody(children: <Widget>[Text(context.loc.changeLanguageHint)])),
           actions: <Widget>[
             TextButton(
               child: Text(context.loc.continueText),
@@ -46,7 +40,7 @@ class LanguageTile extends ConsumerWidget {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-            )
+            ),
           ],
         );
       },

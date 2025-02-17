@@ -46,12 +46,7 @@ class _ChartsService implements ChartsService {
     const Map<String, dynamic>? _data = null;
     final _options = _setStreamType<ChartsResultsDTO>(
       Options(method: 'GET', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/catalog/${storefront}/charts',
-            queryParameters: queryParameters,
-            data: _data,
-          )
+          .compose(_dio.options, '/catalog/${storefront}/charts', queryParameters: queryParameters, data: _data)
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
@@ -67,8 +62,7 @@ class _ChartsService implements ChartsService {
 
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
     if (T != dynamic &&
-        !(requestOptions.responseType == ResponseType.bytes ||
-            requestOptions.responseType == ResponseType.stream)) {
+        !(requestOptions.responseType == ResponseType.bytes || requestOptions.responseType == ResponseType.stream)) {
       if (T == String) {
         requestOptions.responseType = ResponseType.plain;
       } else {

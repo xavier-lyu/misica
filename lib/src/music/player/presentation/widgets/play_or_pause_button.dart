@@ -10,15 +10,12 @@ class PlayOrPauseButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final status = ref.watch(playerPlaybackStatusProvider).valueOrNull ??
-        MusicPlayerPlaybackStatus.stopped;
+    final status = ref.watch(playerPlaybackStatusProvider).valueOrNull ?? MusicPlayerPlaybackStatus.stopped;
     final isPlaying = ref.watch(isPlayingProvider).valueOrNull;
 
     return IconButton(
       iconSize: iconSize,
-      onPressed: isPlaying == true
-          ? () => ref.read(musicPlayerProvider).playOrPause()
-          : null,
+      onPressed: isPlaying == true ? () => ref.read(musicPlayerProvider).playOrPause() : null,
       icon: PlaybackStatusIcon(status: status),
     );
   }

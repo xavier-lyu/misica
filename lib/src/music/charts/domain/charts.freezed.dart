@@ -12,14 +12,14 @@ part of 'charts.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 /// @nodoc
 mixin _$Charts {
   List<SongsChart>? get songs => throw _privateConstructorUsedError;
   List<PlaylistsChart>? get cityCharts => throw _privateConstructorUsedError;
-  List<PlaylistsChart>? get dailyGlobalTopCharts =>
-      throw _privateConstructorUsedError;
+  List<PlaylistsChart>? get dailyGlobalTopCharts => throw _privateConstructorUsedError;
   List<PlaylistsChart>? get playlists => throw _privateConstructorUsedError;
   List<AlbumsChart>? get albums => throw _privateConstructorUsedError;
   List<MusicVideosChart>? get musicVideos => throw _privateConstructorUsedError;
@@ -32,21 +32,20 @@ mixin _$Charts {
 
 /// @nodoc
 abstract class $ChartsCopyWith<$Res> {
-  factory $ChartsCopyWith(Charts value, $Res Function(Charts) then) =
-      _$ChartsCopyWithImpl<$Res, Charts>;
+  factory $ChartsCopyWith(Charts value, $Res Function(Charts) then) = _$ChartsCopyWithImpl<$Res, Charts>;
   @useResult
-  $Res call(
-      {List<SongsChart>? songs,
-      List<PlaylistsChart>? cityCharts,
-      List<PlaylistsChart>? dailyGlobalTopCharts,
-      List<PlaylistsChart>? playlists,
-      List<AlbumsChart>? albums,
-      List<MusicVideosChart>? musicVideos});
+  $Res call({
+    List<SongsChart>? songs,
+    List<PlaylistsChart>? cityCharts,
+    List<PlaylistsChart>? dailyGlobalTopCharts,
+    List<PlaylistsChart>? playlists,
+    List<AlbumsChart>? albums,
+    List<MusicVideosChart>? musicVideos,
+  });
 }
 
 /// @nodoc
-class _$ChartsCopyWithImpl<$Res, $Val extends Charts>
-    implements $ChartsCopyWith<$Res> {
+class _$ChartsCopyWithImpl<$Res, $Val extends Charts> implements $ChartsCopyWith<$Res> {
   _$ChartsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -66,58 +65,64 @@ class _$ChartsCopyWithImpl<$Res, $Val extends Charts>
     Object? albums = freezed,
     Object? musicVideos = freezed,
   }) {
-    return _then(_value.copyWith(
-      songs: freezed == songs
-          ? _value.songs
-          : songs // ignore: cast_nullable_to_non_nullable
-              as List<SongsChart>?,
-      cityCharts: freezed == cityCharts
-          ? _value.cityCharts
-          : cityCharts // ignore: cast_nullable_to_non_nullable
-              as List<PlaylistsChart>?,
-      dailyGlobalTopCharts: freezed == dailyGlobalTopCharts
-          ? _value.dailyGlobalTopCharts
-          : dailyGlobalTopCharts // ignore: cast_nullable_to_non_nullable
-              as List<PlaylistsChart>?,
-      playlists: freezed == playlists
-          ? _value.playlists
-          : playlists // ignore: cast_nullable_to_non_nullable
-              as List<PlaylistsChart>?,
-      albums: freezed == albums
-          ? _value.albums
-          : albums // ignore: cast_nullable_to_non_nullable
-              as List<AlbumsChart>?,
-      musicVideos: freezed == musicVideos
-          ? _value.musicVideos
-          : musicVideos // ignore: cast_nullable_to_non_nullable
-              as List<MusicVideosChart>?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            songs:
+                freezed == songs
+                    ? _value.songs
+                    : songs // ignore: cast_nullable_to_non_nullable
+                        as List<SongsChart>?,
+            cityCharts:
+                freezed == cityCharts
+                    ? _value.cityCharts
+                    : cityCharts // ignore: cast_nullable_to_non_nullable
+                        as List<PlaylistsChart>?,
+            dailyGlobalTopCharts:
+                freezed == dailyGlobalTopCharts
+                    ? _value.dailyGlobalTopCharts
+                    : dailyGlobalTopCharts // ignore: cast_nullable_to_non_nullable
+                        as List<PlaylistsChart>?,
+            playlists:
+                freezed == playlists
+                    ? _value.playlists
+                    : playlists // ignore: cast_nullable_to_non_nullable
+                        as List<PlaylistsChart>?,
+            albums:
+                freezed == albums
+                    ? _value.albums
+                    : albums // ignore: cast_nullable_to_non_nullable
+                        as List<AlbumsChart>?,
+            musicVideos:
+                freezed == musicVideos
+                    ? _value.musicVideos
+                    : musicVideos // ignore: cast_nullable_to_non_nullable
+                        as List<MusicVideosChart>?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$ChartsImplCopyWith<$Res> implements $ChartsCopyWith<$Res> {
-  factory _$$ChartsImplCopyWith(
-          _$ChartsImpl value, $Res Function(_$ChartsImpl) then) =
+  factory _$$ChartsImplCopyWith(_$ChartsImpl value, $Res Function(_$ChartsImpl) then) =
       __$$ChartsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {List<SongsChart>? songs,
-      List<PlaylistsChart>? cityCharts,
-      List<PlaylistsChart>? dailyGlobalTopCharts,
-      List<PlaylistsChart>? playlists,
-      List<AlbumsChart>? albums,
-      List<MusicVideosChart>? musicVideos});
+  $Res call({
+    List<SongsChart>? songs,
+    List<PlaylistsChart>? cityCharts,
+    List<PlaylistsChart>? dailyGlobalTopCharts,
+    List<PlaylistsChart>? playlists,
+    List<AlbumsChart>? albums,
+    List<MusicVideosChart>? musicVideos,
+  });
 }
 
 /// @nodoc
-class __$$ChartsImplCopyWithImpl<$Res>
-    extends _$ChartsCopyWithImpl<$Res, _$ChartsImpl>
+class __$$ChartsImplCopyWithImpl<$Res> extends _$ChartsCopyWithImpl<$Res, _$ChartsImpl>
     implements _$$ChartsImplCopyWith<$Res> {
-  __$$ChartsImplCopyWithImpl(
-      _$ChartsImpl _value, $Res Function(_$ChartsImpl) _then)
-      : super(_value, _then);
+  __$$ChartsImplCopyWithImpl(_$ChartsImpl _value, $Res Function(_$ChartsImpl) _then) : super(_value, _then);
 
   /// Create a copy of Charts
   /// with the given fields replaced by the non-null parameter values.
@@ -131,52 +136,60 @@ class __$$ChartsImplCopyWithImpl<$Res>
     Object? albums = freezed,
     Object? musicVideos = freezed,
   }) {
-    return _then(_$ChartsImpl(
-      songs: freezed == songs
-          ? _value._songs
-          : songs // ignore: cast_nullable_to_non_nullable
-              as List<SongsChart>?,
-      cityCharts: freezed == cityCharts
-          ? _value._cityCharts
-          : cityCharts // ignore: cast_nullable_to_non_nullable
-              as List<PlaylistsChart>?,
-      dailyGlobalTopCharts: freezed == dailyGlobalTopCharts
-          ? _value._dailyGlobalTopCharts
-          : dailyGlobalTopCharts // ignore: cast_nullable_to_non_nullable
-              as List<PlaylistsChart>?,
-      playlists: freezed == playlists
-          ? _value._playlists
-          : playlists // ignore: cast_nullable_to_non_nullable
-              as List<PlaylistsChart>?,
-      albums: freezed == albums
-          ? _value._albums
-          : albums // ignore: cast_nullable_to_non_nullable
-              as List<AlbumsChart>?,
-      musicVideos: freezed == musicVideos
-          ? _value._musicVideos
-          : musicVideos // ignore: cast_nullable_to_non_nullable
-              as List<MusicVideosChart>?,
-    ));
+    return _then(
+      _$ChartsImpl(
+        songs:
+            freezed == songs
+                ? _value._songs
+                : songs // ignore: cast_nullable_to_non_nullable
+                    as List<SongsChart>?,
+        cityCharts:
+            freezed == cityCharts
+                ? _value._cityCharts
+                : cityCharts // ignore: cast_nullable_to_non_nullable
+                    as List<PlaylistsChart>?,
+        dailyGlobalTopCharts:
+            freezed == dailyGlobalTopCharts
+                ? _value._dailyGlobalTopCharts
+                : dailyGlobalTopCharts // ignore: cast_nullable_to_non_nullable
+                    as List<PlaylistsChart>?,
+        playlists:
+            freezed == playlists
+                ? _value._playlists
+                : playlists // ignore: cast_nullable_to_non_nullable
+                    as List<PlaylistsChart>?,
+        albums:
+            freezed == albums
+                ? _value._albums
+                : albums // ignore: cast_nullable_to_non_nullable
+                    as List<AlbumsChart>?,
+        musicVideos:
+            freezed == musicVideos
+                ? _value._musicVideos
+                : musicVideos // ignore: cast_nullable_to_non_nullable
+                    as List<MusicVideosChart>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$ChartsImpl extends _Charts {
-  const _$ChartsImpl(
-      {required final List<SongsChart>? songs,
-      required final List<PlaylistsChart>? cityCharts,
-      required final List<PlaylistsChart>? dailyGlobalTopCharts,
-      required final List<PlaylistsChart>? playlists,
-      required final List<AlbumsChart>? albums,
-      required final List<MusicVideosChart>? musicVideos})
-      : _songs = songs,
-        _cityCharts = cityCharts,
-        _dailyGlobalTopCharts = dailyGlobalTopCharts,
-        _playlists = playlists,
-        _albums = albums,
-        _musicVideos = musicVideos,
-        super._();
+  const _$ChartsImpl({
+    required final List<SongsChart>? songs,
+    required final List<PlaylistsChart>? cityCharts,
+    required final List<PlaylistsChart>? dailyGlobalTopCharts,
+    required final List<PlaylistsChart>? playlists,
+    required final List<AlbumsChart>? albums,
+    required final List<MusicVideosChart>? musicVideos,
+  }) : _songs = songs,
+       _cityCharts = cityCharts,
+       _dailyGlobalTopCharts = dailyGlobalTopCharts,
+       _playlists = playlists,
+       _albums = albums,
+       _musicVideos = musicVideos,
+       super._();
 
   final List<SongsChart>? _songs;
   @override
@@ -203,8 +216,7 @@ class _$ChartsImpl extends _Charts {
   List<PlaylistsChart>? get dailyGlobalTopCharts {
     final value = _dailyGlobalTopCharts;
     if (value == null) return null;
-    if (_dailyGlobalTopCharts is EqualUnmodifiableListView)
-      return _dailyGlobalTopCharts;
+    if (_dailyGlobalTopCharts is EqualUnmodifiableListView) return _dailyGlobalTopCharts;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -250,44 +262,41 @@ class _$ChartsImpl extends _Charts {
         (other.runtimeType == runtimeType &&
             other is _$ChartsImpl &&
             const DeepCollectionEquality().equals(other._songs, _songs) &&
-            const DeepCollectionEquality()
-                .equals(other._cityCharts, _cityCharts) &&
-            const DeepCollectionEquality()
-                .equals(other._dailyGlobalTopCharts, _dailyGlobalTopCharts) &&
-            const DeepCollectionEquality()
-                .equals(other._playlists, _playlists) &&
+            const DeepCollectionEquality().equals(other._cityCharts, _cityCharts) &&
+            const DeepCollectionEquality().equals(other._dailyGlobalTopCharts, _dailyGlobalTopCharts) &&
+            const DeepCollectionEquality().equals(other._playlists, _playlists) &&
             const DeepCollectionEquality().equals(other._albums, _albums) &&
-            const DeepCollectionEquality()
-                .equals(other._musicVideos, _musicVideos));
+            const DeepCollectionEquality().equals(other._musicVideos, _musicVideos));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_songs),
-      const DeepCollectionEquality().hash(_cityCharts),
-      const DeepCollectionEquality().hash(_dailyGlobalTopCharts),
-      const DeepCollectionEquality().hash(_playlists),
-      const DeepCollectionEquality().hash(_albums),
-      const DeepCollectionEquality().hash(_musicVideos));
+    runtimeType,
+    const DeepCollectionEquality().hash(_songs),
+    const DeepCollectionEquality().hash(_cityCharts),
+    const DeepCollectionEquality().hash(_dailyGlobalTopCharts),
+    const DeepCollectionEquality().hash(_playlists),
+    const DeepCollectionEquality().hash(_albums),
+    const DeepCollectionEquality().hash(_musicVideos),
+  );
 
   /// Create a copy of Charts
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ChartsImplCopyWith<_$ChartsImpl> get copyWith =>
-      __$$ChartsImplCopyWithImpl<_$ChartsImpl>(this, _$identity);
+  _$$ChartsImplCopyWith<_$ChartsImpl> get copyWith => __$$ChartsImplCopyWithImpl<_$ChartsImpl>(this, _$identity);
 }
 
 abstract class _Charts extends Charts {
-  const factory _Charts(
-      {required final List<SongsChart>? songs,
-      required final List<PlaylistsChart>? cityCharts,
-      required final List<PlaylistsChart>? dailyGlobalTopCharts,
-      required final List<PlaylistsChart>? playlists,
-      required final List<AlbumsChart>? albums,
-      required final List<MusicVideosChart>? musicVideos}) = _$ChartsImpl;
+  const factory _Charts({
+    required final List<SongsChart>? songs,
+    required final List<PlaylistsChart>? cityCharts,
+    required final List<PlaylistsChart>? dailyGlobalTopCharts,
+    required final List<PlaylistsChart>? playlists,
+    required final List<AlbumsChart>? albums,
+    required final List<MusicVideosChart>? musicVideos,
+  }) = _$ChartsImpl;
   const _Charts._() : super._();
 
   @override
@@ -307,8 +316,7 @@ abstract class _Charts extends Charts {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ChartsImplCopyWith<_$ChartsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ChartsImplCopyWith<_$ChartsImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -317,54 +325,40 @@ mixin _$Chart {
   String get chart => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String name, String chart, List<Album> albums)
-        albums,
-    required TResult Function(
-            String name, String chart, List<Playlist> playlists)
-        playlists,
-    required TResult Function(String name, String chart, List<Song> songs)
-        songs,
-    required TResult Function(String name, String chart, List<MusicVideo> mvs)
-        musicVideo,
-  }) =>
-      throw _privateConstructorUsedError;
+    required TResult Function(String name, String chart, List<Album> albums) albums,
+    required TResult Function(String name, String chart, List<Playlist> playlists) playlists,
+    required TResult Function(String name, String chart, List<Song> songs) songs,
+    required TResult Function(String name, String chart, List<MusicVideo> mvs) musicVideo,
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String name, String chart, List<Album> albums)? albums,
-    TResult? Function(String name, String chart, List<Playlist> playlists)?
-        playlists,
+    TResult? Function(String name, String chart, List<Playlist> playlists)? playlists,
     TResult? Function(String name, String chart, List<Song> songs)? songs,
-    TResult? Function(String name, String chart, List<MusicVideo> mvs)?
-        musicVideo,
-  }) =>
-      throw _privateConstructorUsedError;
+    TResult? Function(String name, String chart, List<MusicVideo> mvs)? musicVideo,
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, String chart, List<Album> albums)? albums,
-    TResult Function(String name, String chart, List<Playlist> playlists)?
-        playlists,
+    TResult Function(String name, String chart, List<Playlist> playlists)? playlists,
     TResult Function(String name, String chart, List<Song> songs)? songs,
-    TResult Function(String name, String chart, List<MusicVideo> mvs)?
-        musicVideo,
+    TResult Function(String name, String chart, List<MusicVideo> mvs)? musicVideo,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(AlbumsChart value) albums,
     required TResult Function(PlaylistsChart value) playlists,
     required TResult Function(SongsChart value) songs,
     required TResult Function(MusicVideosChart value) musicVideo,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(AlbumsChart value)? albums,
     TResult? Function(PlaylistsChart value)? playlists,
     TResult? Function(SongsChart value)? songs,
     TResult? Function(MusicVideosChart value)? musicVideo,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(AlbumsChart value)? albums,
@@ -372,8 +366,7 @@ mixin _$Chart {
     TResult Function(SongsChart value)? songs,
     TResult Function(MusicVideosChart value)? musicVideo,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
 
   /// Create a copy of Chart
   /// with the given fields replaced by the non-null parameter values.
@@ -383,15 +376,13 @@ mixin _$Chart {
 
 /// @nodoc
 abstract class $ChartCopyWith<$Res> {
-  factory $ChartCopyWith(Chart value, $Res Function(Chart) then) =
-      _$ChartCopyWithImpl<$Res, Chart>;
+  factory $ChartCopyWith(Chart value, $Res Function(Chart) then) = _$ChartCopyWithImpl<$Res, Chart>;
   @useResult
   $Res call({String name, String chart});
 }
 
 /// @nodoc
-class _$ChartCopyWithImpl<$Res, $Val extends Chart>
-    implements $ChartCopyWith<$Res> {
+class _$ChartCopyWithImpl<$Res, $Val extends Chart> implements $ChartCopyWith<$Res> {
   _$ChartCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -403,28 +394,28 @@ class _$ChartCopyWithImpl<$Res, $Val extends Chart>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-    Object? chart = null,
-  }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      chart: null == chart
-          ? _value.chart
-          : chart // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? name = null, Object? chart = null}) {
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            chart:
+                null == chart
+                    ? _value.chart
+                    : chart // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$AlbumsChartImplCopyWith<$Res>
-    implements $ChartCopyWith<$Res> {
-  factory _$$AlbumsChartImplCopyWith(
-          _$AlbumsChartImpl value, $Res Function(_$AlbumsChartImpl) then) =
+abstract class _$$AlbumsChartImplCopyWith<$Res> implements $ChartCopyWith<$Res> {
+  factory _$$AlbumsChartImplCopyWith(_$AlbumsChartImpl value, $Res Function(_$AlbumsChartImpl) then) =
       __$$AlbumsChartImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -432,48 +423,44 @@ abstract class _$$AlbumsChartImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$AlbumsChartImplCopyWithImpl<$Res>
-    extends _$ChartCopyWithImpl<$Res, _$AlbumsChartImpl>
+class __$$AlbumsChartImplCopyWithImpl<$Res> extends _$ChartCopyWithImpl<$Res, _$AlbumsChartImpl>
     implements _$$AlbumsChartImplCopyWith<$Res> {
-  __$$AlbumsChartImplCopyWithImpl(
-      _$AlbumsChartImpl _value, $Res Function(_$AlbumsChartImpl) _then)
-      : super(_value, _then);
+  __$$AlbumsChartImplCopyWithImpl(_$AlbumsChartImpl _value, $Res Function(_$AlbumsChartImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of Chart
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-    Object? chart = null,
-    Object? albums = null,
-  }) {
-    return _then(_$AlbumsChartImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      chart: null == chart
-          ? _value.chart
-          : chart // ignore: cast_nullable_to_non_nullable
-              as String,
-      albums: null == albums
-          ? _value._albums
-          : albums // ignore: cast_nullable_to_non_nullable
-              as List<Album>,
-    ));
+  $Res call({Object? name = null, Object? chart = null, Object? albums = null}) {
+    return _then(
+      _$AlbumsChartImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        chart:
+            null == chart
+                ? _value.chart
+                : chart // ignore: cast_nullable_to_non_nullable
+                    as String,
+        albums:
+            null == albums
+                ? _value._albums
+                : albums // ignore: cast_nullable_to_non_nullable
+                    as List<Album>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$AlbumsChartImpl extends AlbumsChart {
-  const _$AlbumsChartImpl(
-      {required this.name,
-      required this.chart,
-      required final List<Album> albums})
-      : _albums = albums,
-        super._();
+  const _$AlbumsChartImpl({required this.name, required this.chart, required final List<Album> albums})
+    : _albums = albums,
+      super._();
 
   @override
   final String name;
@@ -503,8 +490,7 @@ class _$AlbumsChartImpl extends AlbumsChart {
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, name, chart, const DeepCollectionEquality().hash(_albums));
+  int get hashCode => Object.hash(runtimeType, name, chart, const DeepCollectionEquality().hash(_albums));
 
   /// Create a copy of Chart
   /// with the given fields replaced by the non-null parameter values.
@@ -517,15 +503,10 @@ class _$AlbumsChartImpl extends AlbumsChart {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String name, String chart, List<Album> albums)
-        albums,
-    required TResult Function(
-            String name, String chart, List<Playlist> playlists)
-        playlists,
-    required TResult Function(String name, String chart, List<Song> songs)
-        songs,
-    required TResult Function(String name, String chart, List<MusicVideo> mvs)
-        musicVideo,
+    required TResult Function(String name, String chart, List<Album> albums) albums,
+    required TResult Function(String name, String chart, List<Playlist> playlists) playlists,
+    required TResult Function(String name, String chart, List<Song> songs) songs,
+    required TResult Function(String name, String chart, List<MusicVideo> mvs) musicVideo,
   }) {
     return albums(name, chart, this.albums);
   }
@@ -534,11 +515,9 @@ class _$AlbumsChartImpl extends AlbumsChart {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String name, String chart, List<Album> albums)? albums,
-    TResult? Function(String name, String chart, List<Playlist> playlists)?
-        playlists,
+    TResult? Function(String name, String chart, List<Playlist> playlists)? playlists,
     TResult? Function(String name, String chart, List<Song> songs)? songs,
-    TResult? Function(String name, String chart, List<MusicVideo> mvs)?
-        musicVideo,
+    TResult? Function(String name, String chart, List<MusicVideo> mvs)? musicVideo,
   }) {
     return albums?.call(name, chart, this.albums);
   }
@@ -547,11 +526,9 @@ class _$AlbumsChartImpl extends AlbumsChart {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, String chart, List<Album> albums)? albums,
-    TResult Function(String name, String chart, List<Playlist> playlists)?
-        playlists,
+    TResult Function(String name, String chart, List<Playlist> playlists)? playlists,
     TResult Function(String name, String chart, List<Song> songs)? songs,
-    TResult Function(String name, String chart, List<MusicVideo> mvs)?
-        musicVideo,
+    TResult Function(String name, String chart, List<MusicVideo> mvs)? musicVideo,
     required TResult orElse(),
   }) {
     if (albums != null) {
@@ -599,10 +576,11 @@ class _$AlbumsChartImpl extends AlbumsChart {
 }
 
 abstract class AlbumsChart extends Chart {
-  const factory AlbumsChart(
-      {required final String name,
-      required final String chart,
-      required final List<Album> albums}) = _$AlbumsChartImpl;
+  const factory AlbumsChart({
+    required final String name,
+    required final String chart,
+    required final List<Album> albums,
+  }) = _$AlbumsChartImpl;
   const AlbumsChart._() : super._();
 
   @override
@@ -615,15 +593,12 @@ abstract class AlbumsChart extends Chart {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AlbumsChartImplCopyWith<_$AlbumsChartImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AlbumsChartImplCopyWith<_$AlbumsChartImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$PlaylistsChartImplCopyWith<$Res>
-    implements $ChartCopyWith<$Res> {
-  factory _$$PlaylistsChartImplCopyWith(_$PlaylistsChartImpl value,
-          $Res Function(_$PlaylistsChartImpl) then) =
+abstract class _$$PlaylistsChartImplCopyWith<$Res> implements $ChartCopyWith<$Res> {
+  factory _$$PlaylistsChartImplCopyWith(_$PlaylistsChartImpl value, $Res Function(_$PlaylistsChartImpl) then) =
       __$$PlaylistsChartImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -631,48 +606,44 @@ abstract class _$$PlaylistsChartImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PlaylistsChartImplCopyWithImpl<$Res>
-    extends _$ChartCopyWithImpl<$Res, _$PlaylistsChartImpl>
+class __$$PlaylistsChartImplCopyWithImpl<$Res> extends _$ChartCopyWithImpl<$Res, _$PlaylistsChartImpl>
     implements _$$PlaylistsChartImplCopyWith<$Res> {
-  __$$PlaylistsChartImplCopyWithImpl(
-      _$PlaylistsChartImpl _value, $Res Function(_$PlaylistsChartImpl) _then)
-      : super(_value, _then);
+  __$$PlaylistsChartImplCopyWithImpl(_$PlaylistsChartImpl _value, $Res Function(_$PlaylistsChartImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of Chart
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-    Object? chart = null,
-    Object? playlists = null,
-  }) {
-    return _then(_$PlaylistsChartImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      chart: null == chart
-          ? _value.chart
-          : chart // ignore: cast_nullable_to_non_nullable
-              as String,
-      playlists: null == playlists
-          ? _value._playlists
-          : playlists // ignore: cast_nullable_to_non_nullable
-              as List<Playlist>,
-    ));
+  $Res call({Object? name = null, Object? chart = null, Object? playlists = null}) {
+    return _then(
+      _$PlaylistsChartImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        chart:
+            null == chart
+                ? _value.chart
+                : chart // ignore: cast_nullable_to_non_nullable
+                    as String,
+        playlists:
+            null == playlists
+                ? _value._playlists
+                : playlists // ignore: cast_nullable_to_non_nullable
+                    as List<Playlist>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$PlaylistsChartImpl extends PlaylistsChart {
-  const _$PlaylistsChartImpl(
-      {required this.name,
-      required this.chart,
-      required final List<Playlist> playlists})
-      : _playlists = playlists,
-        super._();
+  const _$PlaylistsChartImpl({required this.name, required this.chart, required final List<Playlist> playlists})
+    : _playlists = playlists,
+      super._();
 
   @override
   final String name;
@@ -698,13 +669,11 @@ class _$PlaylistsChartImpl extends PlaylistsChart {
             other is _$PlaylistsChartImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.chart, chart) || other.chart == chart) &&
-            const DeepCollectionEquality()
-                .equals(other._playlists, _playlists));
+            const DeepCollectionEquality().equals(other._playlists, _playlists));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, name, chart,
-      const DeepCollectionEquality().hash(_playlists));
+  int get hashCode => Object.hash(runtimeType, name, chart, const DeepCollectionEquality().hash(_playlists));
 
   /// Create a copy of Chart
   /// with the given fields replaced by the non-null parameter values.
@@ -712,21 +681,15 @@ class _$PlaylistsChartImpl extends PlaylistsChart {
   @override
   @pragma('vm:prefer-inline')
   _$$PlaylistsChartImplCopyWith<_$PlaylistsChartImpl> get copyWith =>
-      __$$PlaylistsChartImplCopyWithImpl<_$PlaylistsChartImpl>(
-          this, _$identity);
+      __$$PlaylistsChartImplCopyWithImpl<_$PlaylistsChartImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String name, String chart, List<Album> albums)
-        albums,
-    required TResult Function(
-            String name, String chart, List<Playlist> playlists)
-        playlists,
-    required TResult Function(String name, String chart, List<Song> songs)
-        songs,
-    required TResult Function(String name, String chart, List<MusicVideo> mvs)
-        musicVideo,
+    required TResult Function(String name, String chart, List<Album> albums) albums,
+    required TResult Function(String name, String chart, List<Playlist> playlists) playlists,
+    required TResult Function(String name, String chart, List<Song> songs) songs,
+    required TResult Function(String name, String chart, List<MusicVideo> mvs) musicVideo,
   }) {
     return playlists(name, chart, this.playlists);
   }
@@ -735,11 +698,9 @@ class _$PlaylistsChartImpl extends PlaylistsChart {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String name, String chart, List<Album> albums)? albums,
-    TResult? Function(String name, String chart, List<Playlist> playlists)?
-        playlists,
+    TResult? Function(String name, String chart, List<Playlist> playlists)? playlists,
     TResult? Function(String name, String chart, List<Song> songs)? songs,
-    TResult? Function(String name, String chart, List<MusicVideo> mvs)?
-        musicVideo,
+    TResult? Function(String name, String chart, List<MusicVideo> mvs)? musicVideo,
   }) {
     return playlists?.call(name, chart, this.playlists);
   }
@@ -748,11 +709,9 @@ class _$PlaylistsChartImpl extends PlaylistsChart {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, String chart, List<Album> albums)? albums,
-    TResult Function(String name, String chart, List<Playlist> playlists)?
-        playlists,
+    TResult Function(String name, String chart, List<Playlist> playlists)? playlists,
     TResult Function(String name, String chart, List<Song> songs)? songs,
-    TResult Function(String name, String chart, List<MusicVideo> mvs)?
-        musicVideo,
+    TResult Function(String name, String chart, List<MusicVideo> mvs)? musicVideo,
     required TResult orElse(),
   }) {
     if (playlists != null) {
@@ -800,10 +759,11 @@ class _$PlaylistsChartImpl extends PlaylistsChart {
 }
 
 abstract class PlaylistsChart extends Chart {
-  const factory PlaylistsChart(
-      {required final String name,
-      required final String chart,
-      required final List<Playlist> playlists}) = _$PlaylistsChartImpl;
+  const factory PlaylistsChart({
+    required final String name,
+    required final String chart,
+    required final List<Playlist> playlists,
+  }) = _$PlaylistsChartImpl;
   const PlaylistsChart._() : super._();
 
   @override
@@ -816,14 +776,12 @@ abstract class PlaylistsChart extends Chart {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PlaylistsChartImplCopyWith<_$PlaylistsChartImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PlaylistsChartImplCopyWith<_$PlaylistsChartImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$SongsChartImplCopyWith<$Res> implements $ChartCopyWith<$Res> {
-  factory _$$SongsChartImplCopyWith(
-          _$SongsChartImpl value, $Res Function(_$SongsChartImpl) then) =
+  factory _$$SongsChartImplCopyWith(_$SongsChartImpl value, $Res Function(_$SongsChartImpl) then) =
       __$$SongsChartImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -831,48 +789,43 @@ abstract class _$$SongsChartImplCopyWith<$Res> implements $ChartCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$SongsChartImplCopyWithImpl<$Res>
-    extends _$ChartCopyWithImpl<$Res, _$SongsChartImpl>
+class __$$SongsChartImplCopyWithImpl<$Res> extends _$ChartCopyWithImpl<$Res, _$SongsChartImpl>
     implements _$$SongsChartImplCopyWith<$Res> {
-  __$$SongsChartImplCopyWithImpl(
-      _$SongsChartImpl _value, $Res Function(_$SongsChartImpl) _then)
-      : super(_value, _then);
+  __$$SongsChartImplCopyWithImpl(_$SongsChartImpl _value, $Res Function(_$SongsChartImpl) _then) : super(_value, _then);
 
   /// Create a copy of Chart
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-    Object? chart = null,
-    Object? songs = null,
-  }) {
-    return _then(_$SongsChartImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      chart: null == chart
-          ? _value.chart
-          : chart // ignore: cast_nullable_to_non_nullable
-              as String,
-      songs: null == songs
-          ? _value._songs
-          : songs // ignore: cast_nullable_to_non_nullable
-              as List<Song>,
-    ));
+  $Res call({Object? name = null, Object? chart = null, Object? songs = null}) {
+    return _then(
+      _$SongsChartImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        chart:
+            null == chart
+                ? _value.chart
+                : chart // ignore: cast_nullable_to_non_nullable
+                    as String,
+        songs:
+            null == songs
+                ? _value._songs
+                : songs // ignore: cast_nullable_to_non_nullable
+                    as List<Song>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$SongsChartImpl extends SongsChart {
-  const _$SongsChartImpl(
-      {required this.name,
-      required this.chart,
-      required final List<Song> songs})
-      : _songs = songs,
-        super._();
+  const _$SongsChartImpl({required this.name, required this.chart, required final List<Song> songs})
+    : _songs = songs,
+      super._();
 
   @override
   final String name;
@@ -902,8 +855,7 @@ class _$SongsChartImpl extends SongsChart {
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, name, chart, const DeepCollectionEquality().hash(_songs));
+  int get hashCode => Object.hash(runtimeType, name, chart, const DeepCollectionEquality().hash(_songs));
 
   /// Create a copy of Chart
   /// with the given fields replaced by the non-null parameter values.
@@ -916,15 +868,10 @@ class _$SongsChartImpl extends SongsChart {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String name, String chart, List<Album> albums)
-        albums,
-    required TResult Function(
-            String name, String chart, List<Playlist> playlists)
-        playlists,
-    required TResult Function(String name, String chart, List<Song> songs)
-        songs,
-    required TResult Function(String name, String chart, List<MusicVideo> mvs)
-        musicVideo,
+    required TResult Function(String name, String chart, List<Album> albums) albums,
+    required TResult Function(String name, String chart, List<Playlist> playlists) playlists,
+    required TResult Function(String name, String chart, List<Song> songs) songs,
+    required TResult Function(String name, String chart, List<MusicVideo> mvs) musicVideo,
   }) {
     return songs(name, chart, this.songs);
   }
@@ -933,11 +880,9 @@ class _$SongsChartImpl extends SongsChart {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String name, String chart, List<Album> albums)? albums,
-    TResult? Function(String name, String chart, List<Playlist> playlists)?
-        playlists,
+    TResult? Function(String name, String chart, List<Playlist> playlists)? playlists,
     TResult? Function(String name, String chart, List<Song> songs)? songs,
-    TResult? Function(String name, String chart, List<MusicVideo> mvs)?
-        musicVideo,
+    TResult? Function(String name, String chart, List<MusicVideo> mvs)? musicVideo,
   }) {
     return songs?.call(name, chart, this.songs);
   }
@@ -946,11 +891,9 @@ class _$SongsChartImpl extends SongsChart {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, String chart, List<Album> albums)? albums,
-    TResult Function(String name, String chart, List<Playlist> playlists)?
-        playlists,
+    TResult Function(String name, String chart, List<Playlist> playlists)? playlists,
     TResult Function(String name, String chart, List<Song> songs)? songs,
-    TResult Function(String name, String chart, List<MusicVideo> mvs)?
-        musicVideo,
+    TResult Function(String name, String chart, List<MusicVideo> mvs)? musicVideo,
     required TResult orElse(),
   }) {
     if (songs != null) {
@@ -998,10 +941,8 @@ class _$SongsChartImpl extends SongsChart {
 }
 
 abstract class SongsChart extends Chart {
-  const factory SongsChart(
-      {required final String name,
-      required final String chart,
-      required final List<Song> songs}) = _$SongsChartImpl;
+  const factory SongsChart({required final String name, required final String chart, required final List<Song> songs}) =
+      _$SongsChartImpl;
   const SongsChart._() : super._();
 
   @override
@@ -1014,15 +955,12 @@ abstract class SongsChart extends Chart {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SongsChartImplCopyWith<_$SongsChartImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SongsChartImplCopyWith<_$SongsChartImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$MusicVideosChartImplCopyWith<$Res>
-    implements $ChartCopyWith<$Res> {
-  factory _$$MusicVideosChartImplCopyWith(_$MusicVideosChartImpl value,
-          $Res Function(_$MusicVideosChartImpl) then) =
+abstract class _$$MusicVideosChartImplCopyWith<$Res> implements $ChartCopyWith<$Res> {
+  factory _$$MusicVideosChartImplCopyWith(_$MusicVideosChartImpl value, $Res Function(_$MusicVideosChartImpl) then) =
       __$$MusicVideosChartImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -1030,48 +968,44 @@ abstract class _$$MusicVideosChartImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$MusicVideosChartImplCopyWithImpl<$Res>
-    extends _$ChartCopyWithImpl<$Res, _$MusicVideosChartImpl>
+class __$$MusicVideosChartImplCopyWithImpl<$Res> extends _$ChartCopyWithImpl<$Res, _$MusicVideosChartImpl>
     implements _$$MusicVideosChartImplCopyWith<$Res> {
-  __$$MusicVideosChartImplCopyWithImpl(_$MusicVideosChartImpl _value,
-      $Res Function(_$MusicVideosChartImpl) _then)
-      : super(_value, _then);
+  __$$MusicVideosChartImplCopyWithImpl(_$MusicVideosChartImpl _value, $Res Function(_$MusicVideosChartImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of Chart
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-    Object? chart = null,
-    Object? mvs = null,
-  }) {
-    return _then(_$MusicVideosChartImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      chart: null == chart
-          ? _value.chart
-          : chart // ignore: cast_nullable_to_non_nullable
-              as String,
-      mvs: null == mvs
-          ? _value._mvs
-          : mvs // ignore: cast_nullable_to_non_nullable
-              as List<MusicVideo>,
-    ));
+  $Res call({Object? name = null, Object? chart = null, Object? mvs = null}) {
+    return _then(
+      _$MusicVideosChartImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        chart:
+            null == chart
+                ? _value.chart
+                : chart // ignore: cast_nullable_to_non_nullable
+                    as String,
+        mvs:
+            null == mvs
+                ? _value._mvs
+                : mvs // ignore: cast_nullable_to_non_nullable
+                    as List<MusicVideo>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$MusicVideosChartImpl extends MusicVideosChart {
-  const _$MusicVideosChartImpl(
-      {required this.name,
-      required this.chart,
-      required final List<MusicVideo> mvs})
-      : _mvs = mvs,
-        super._();
+  const _$MusicVideosChartImpl({required this.name, required this.chart, required final List<MusicVideo> mvs})
+    : _mvs = mvs,
+      super._();
 
   @override
   final String name;
@@ -1101,8 +1035,7 @@ class _$MusicVideosChartImpl extends MusicVideosChart {
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, name, chart, const DeepCollectionEquality().hash(_mvs));
+  int get hashCode => Object.hash(runtimeType, name, chart, const DeepCollectionEquality().hash(_mvs));
 
   /// Create a copy of Chart
   /// with the given fields replaced by the non-null parameter values.
@@ -1110,21 +1043,15 @@ class _$MusicVideosChartImpl extends MusicVideosChart {
   @override
   @pragma('vm:prefer-inline')
   _$$MusicVideosChartImplCopyWith<_$MusicVideosChartImpl> get copyWith =>
-      __$$MusicVideosChartImplCopyWithImpl<_$MusicVideosChartImpl>(
-          this, _$identity);
+      __$$MusicVideosChartImplCopyWithImpl<_$MusicVideosChartImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String name, String chart, List<Album> albums)
-        albums,
-    required TResult Function(
-            String name, String chart, List<Playlist> playlists)
-        playlists,
-    required TResult Function(String name, String chart, List<Song> songs)
-        songs,
-    required TResult Function(String name, String chart, List<MusicVideo> mvs)
-        musicVideo,
+    required TResult Function(String name, String chart, List<Album> albums) albums,
+    required TResult Function(String name, String chart, List<Playlist> playlists) playlists,
+    required TResult Function(String name, String chart, List<Song> songs) songs,
+    required TResult Function(String name, String chart, List<MusicVideo> mvs) musicVideo,
   }) {
     return musicVideo(name, chart, mvs);
   }
@@ -1133,11 +1060,9 @@ class _$MusicVideosChartImpl extends MusicVideosChart {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String name, String chart, List<Album> albums)? albums,
-    TResult? Function(String name, String chart, List<Playlist> playlists)?
-        playlists,
+    TResult? Function(String name, String chart, List<Playlist> playlists)? playlists,
     TResult? Function(String name, String chart, List<Song> songs)? songs,
-    TResult? Function(String name, String chart, List<MusicVideo> mvs)?
-        musicVideo,
+    TResult? Function(String name, String chart, List<MusicVideo> mvs)? musicVideo,
   }) {
     return musicVideo?.call(name, chart, mvs);
   }
@@ -1146,11 +1071,9 @@ class _$MusicVideosChartImpl extends MusicVideosChart {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String name, String chart, List<Album> albums)? albums,
-    TResult Function(String name, String chart, List<Playlist> playlists)?
-        playlists,
+    TResult Function(String name, String chart, List<Playlist> playlists)? playlists,
     TResult Function(String name, String chart, List<Song> songs)? songs,
-    TResult Function(String name, String chart, List<MusicVideo> mvs)?
-        musicVideo,
+    TResult Function(String name, String chart, List<MusicVideo> mvs)? musicVideo,
     required TResult orElse(),
   }) {
     if (musicVideo != null) {
@@ -1198,10 +1121,11 @@ class _$MusicVideosChartImpl extends MusicVideosChart {
 }
 
 abstract class MusicVideosChart extends Chart {
-  const factory MusicVideosChart(
-      {required final String name,
-      required final String chart,
-      required final List<MusicVideo> mvs}) = _$MusicVideosChartImpl;
+  const factory MusicVideosChart({
+    required final String name,
+    required final String chart,
+    required final List<MusicVideo> mvs,
+  }) = _$MusicVideosChartImpl;
   const MusicVideosChart._() : super._();
 
   @override
@@ -1214,6 +1138,5 @@ abstract class MusicVideosChart extends Chart {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MusicVideosChartImplCopyWith<_$MusicVideosChartImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$MusicVideosChartImplCopyWith<_$MusicVideosChartImpl> get copyWith => throw _privateConstructorUsedError;
 }

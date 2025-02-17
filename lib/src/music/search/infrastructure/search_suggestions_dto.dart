@@ -9,9 +9,7 @@ part 'search_suggestions_dto.g.dart';
 @freezed
 class SearchSuggestionsResultsDTO with _$SearchSuggestionsResultsDTO {
   const SearchSuggestionsResultsDTO._();
-  const factory SearchSuggestionsResultsDTO({
-    required SearchSuggestionsDTO results,
-  }) = _SearchSuggestionsResultsDTO;
+  const factory SearchSuggestionsResultsDTO({required SearchSuggestionsDTO results}) = _SearchSuggestionsResultsDTO;
 
   factory SearchSuggestionsResultsDTO.fromJson(Map<String, dynamic> json) =>
       _$SearchSuggestionsResultsDTOFromJson(json);
@@ -20,43 +18,29 @@ class SearchSuggestionsResultsDTO with _$SearchSuggestionsResultsDTO {
 @freezed
 class SearchSuggestionsDTO with _$SearchSuggestionsDTO {
   const SearchSuggestionsDTO._();
-  const factory SearchSuggestionsDTO({
-    List<SearchSuggestionDTO>? suggestions,
-  }) = _SearchSuggestionsDTO;
+  const factory SearchSuggestionsDTO({List<SearchSuggestionDTO>? suggestions}) = _SearchSuggestionsDTO;
 
-  factory SearchSuggestionsDTO.fromJson(Map<String, dynamic> json) =>
-      _$SearchSuggestionsDTOFromJson(json);
+  factory SearchSuggestionsDTO.fromJson(Map<String, dynamic> json) => _$SearchSuggestionsDTOFromJson(json);
 }
 
 @Freezed(unionKey: 'kind')
 class SearchSuggestionDTO with _$SearchSuggestionDTO {
   const SearchSuggestionDTO._();
 
-  const factory SearchSuggestionDTO.terms(
-    String kind,
-    String searchTerm,
-    String? displayTerm,
-  ) = SearchSuggestionTermsDTO;
+  const factory SearchSuggestionDTO.terms(String kind, String searchTerm, String? displayTerm) =
+      SearchSuggestionTermsDTO;
 
-  const factory SearchSuggestionDTO.topResults(
-    String kind,
-    @ResourceDTOConverter() ResourceDTO content,
-  ) = SearchSuggestionTopResultsDTO;
+  const factory SearchSuggestionDTO.topResults(String kind, @ResourceDTOConverter() ResourceDTO content) =
+      SearchSuggestionTopResultsDTO;
 
-  factory SearchSuggestionDTO.fromJson(Map<String, dynamic> json) =>
-      _$SearchSuggestionDTOFromJson(json);
+  factory SearchSuggestionDTO.fromJson(Map<String, dynamic> json) => _$SearchSuggestionDTOFromJson(json);
 
   SearchSuggestion toDomain() {
     return when(
-      terms: (kind, searchTerm, displayTerm) => SearchSuggestionTerms(
-        kind: kind,
-        searchTerm: searchTerm,
-        displayTerm: displayTerm,
-      ),
-      topResults: (kind, content) => SearchSuggestionTopResults(
-        kind: kind,
-        content: content.toDomain(),
-      ),
+      terms:
+          (kind, searchTerm, displayTerm) =>
+              SearchSuggestionTerms(kind: kind, searchTerm: searchTerm, displayTerm: displayTerm),
+      topResults: (kind, content) => SearchSuggestionTopResults(kind: kind, content: content.toDomain()),
     );
   }
 }

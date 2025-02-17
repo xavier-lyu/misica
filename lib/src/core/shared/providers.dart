@@ -35,10 +35,8 @@ Future<Unit> initialization(Ref ref) async {
 
   final credentials = await ref.read(credentialsStorageProvider).read();
   if (!Platform.isIOS) {
-    debugPrint(
-        "initialize() musicUserToken: ${credentials?.userToken.length ?? 0}");
-    await ref.read(musicKitProvider).initialize(Constants.developerToken,
-        musicUserToken: credentials?.userToken);
+    debugPrint("initialize() musicUserToken: ${credentials?.userToken.length ?? 0}");
+    await ref.read(musicKitProvider).initialize(Constants.developerToken, musicUserToken: credentials?.userToken);
   }
 
   ref.read(musicDioProvider).interceptors.addAll([

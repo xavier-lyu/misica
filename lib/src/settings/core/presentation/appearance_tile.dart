@@ -21,8 +21,7 @@ class AppearanceTile extends ConsumerWidget {
   void _updateTheme(Settings settings, WidgetRef ref) {
     final count = ThemeMode.values.length;
     settings.themeMode.index;
-    final next =
-        ThemeMode.values[(settings.themeMode.index + count - 1) % count];
+    final next = ThemeMode.values[(settings.themeMode.index + count - 1) % count];
     ref.read(settingsNotifierProvider.notifier).updateTheme(next);
   }
 }

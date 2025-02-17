@@ -42,33 +42,19 @@ class Charts with _$Charts {
 @freezed
 class Chart with _$Chart {
   const Chart._();
-  const factory Chart.albums({
-    required String name,
-    required String chart,
-    required List<Album> albums,
-  }) = AlbumsChart;
-  const factory Chart.playlists({
-    required String name,
-    required String chart,
-    required List<Playlist> playlists,
-  }) = PlaylistsChart;
-  const factory Chart.songs({
-    required String name,
-    required String chart,
-    required List<Song> songs,
-  }) = SongsChart;
-  const factory Chart.musicVideo({
-    required String name,
-    required String chart,
-    required List<MusicVideo> mvs,
-  }) = MusicVideosChart;
+  const factory Chart.albums({required String name, required String chart, required List<Album> albums}) = AlbumsChart;
+  const factory Chart.playlists({required String name, required String chart, required List<Playlist> playlists}) =
+      PlaylistsChart;
+  const factory Chart.songs({required String name, required String chart, required List<Song> songs}) = SongsChart;
+  const factory Chart.musicVideo({required String name, required String chart, required List<MusicVideo> mvs}) =
+      MusicVideosChart;
 
   List<Resource> get value => map(
-        albums: (chart) => chart.albums,
-        playlists: (chart) => chart.playlists,
-        songs: (chart) => chart.songs,
-        musicVideo: (chart) => chart.mvs,
-      );
+    albums: (chart) => chart.albums,
+    playlists: (chart) => chart.playlists,
+    songs: (chart) => chart.songs,
+    musicVideo: (chart) => chart.mvs,
+  );
 
   bool get isEmpty => value.isEmpty;
 }

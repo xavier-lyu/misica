@@ -12,7 +12,8 @@ part of 'credentials.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 Credentials _$CredentialsFromJson(Map<String, dynamic> json) {
   return _Credentials.fromJson(json);
@@ -29,22 +30,19 @@ mixin _$Credentials {
   /// Create a copy of Credentials
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CredentialsCopyWith<Credentials> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CredentialsCopyWith<Credentials> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CredentialsCopyWith<$Res> {
-  factory $CredentialsCopyWith(
-          Credentials value, $Res Function(Credentials) then) =
+  factory $CredentialsCopyWith(Credentials value, $Res Function(Credentials) then) =
       _$CredentialsCopyWithImpl<$Res, Credentials>;
   @useResult
   $Res call({String developerToken, String userToken});
 }
 
 /// @nodoc
-class _$CredentialsCopyWithImpl<$Res, $Val extends Credentials>
-    implements $CredentialsCopyWith<$Res> {
+class _$CredentialsCopyWithImpl<$Res, $Val extends Credentials> implements $CredentialsCopyWith<$Res> {
   _$CredentialsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -56,28 +54,28 @@ class _$CredentialsCopyWithImpl<$Res, $Val extends Credentials>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? developerToken = null,
-    Object? userToken = null,
-  }) {
-    return _then(_value.copyWith(
-      developerToken: null == developerToken
-          ? _value.developerToken
-          : developerToken // ignore: cast_nullable_to_non_nullable
-              as String,
-      userToken: null == userToken
-          ? _value.userToken
-          : userToken // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? developerToken = null, Object? userToken = null}) {
+    return _then(
+      _value.copyWith(
+            developerToken:
+                null == developerToken
+                    ? _value.developerToken
+                    : developerToken // ignore: cast_nullable_to_non_nullable
+                        as String,
+            userToken:
+                null == userToken
+                    ? _value.userToken
+                    : userToken // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$CredentialsImplCopyWith<$Res>
-    implements $CredentialsCopyWith<$Res> {
-  factory _$$CredentialsImplCopyWith(
-          _$CredentialsImpl value, $Res Function(_$CredentialsImpl) then) =
+abstract class _$$CredentialsImplCopyWith<$Res> implements $CredentialsCopyWith<$Res> {
+  factory _$$CredentialsImplCopyWith(_$CredentialsImpl value, $Res Function(_$CredentialsImpl) then) =
       __$$CredentialsImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -85,43 +83,39 @@ abstract class _$$CredentialsImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CredentialsImplCopyWithImpl<$Res>
-    extends _$CredentialsCopyWithImpl<$Res, _$CredentialsImpl>
+class __$$CredentialsImplCopyWithImpl<$Res> extends _$CredentialsCopyWithImpl<$Res, _$CredentialsImpl>
     implements _$$CredentialsImplCopyWith<$Res> {
-  __$$CredentialsImplCopyWithImpl(
-      _$CredentialsImpl _value, $Res Function(_$CredentialsImpl) _then)
-      : super(_value, _then);
+  __$$CredentialsImplCopyWithImpl(_$CredentialsImpl _value, $Res Function(_$CredentialsImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of Credentials
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? developerToken = null,
-    Object? userToken = null,
-  }) {
-    return _then(_$CredentialsImpl(
-      developerToken: null == developerToken
-          ? _value.developerToken
-          : developerToken // ignore: cast_nullable_to_non_nullable
-              as String,
-      userToken: null == userToken
-          ? _value.userToken
-          : userToken // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? developerToken = null, Object? userToken = null}) {
+    return _then(
+      _$CredentialsImpl(
+        developerToken:
+            null == developerToken
+                ? _value.developerToken
+                : developerToken // ignore: cast_nullable_to_non_nullable
+                    as String,
+        userToken:
+            null == userToken
+                ? _value.userToken
+                : userToken // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$CredentialsImpl extends _Credentials {
-  const _$CredentialsImpl(
-      {required this.developerToken, required this.userToken})
-      : super._();
+  const _$CredentialsImpl({required this.developerToken, required this.userToken}) : super._();
 
-  factory _$CredentialsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CredentialsImplFromJson(json);
+  factory _$CredentialsImpl.fromJson(Map<String, dynamic> json) => _$$CredentialsImplFromJson(json);
 
   @override
   final String developerToken;
@@ -138,10 +132,8 @@ class _$CredentialsImpl extends _Credentials {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CredentialsImpl &&
-            (identical(other.developerToken, developerToken) ||
-                other.developerToken == developerToken) &&
-            (identical(other.userToken, userToken) ||
-                other.userToken == userToken));
+            (identical(other.developerToken, developerToken) || other.developerToken == developerToken) &&
+            (identical(other.userToken, userToken) || other.userToken == userToken));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -158,20 +150,16 @@ class _$CredentialsImpl extends _Credentials {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CredentialsImplToJson(
-      this,
-    );
+    return _$$CredentialsImplToJson(this);
   }
 }
 
 abstract class _Credentials extends Credentials {
-  const factory _Credentials(
-      {required final String developerToken,
-      required final String userToken}) = _$CredentialsImpl;
+  const factory _Credentials({required final String developerToken, required final String userToken}) =
+      _$CredentialsImpl;
   const _Credentials._() : super._();
 
-  factory _Credentials.fromJson(Map<String, dynamic> json) =
-      _$CredentialsImpl.fromJson;
+  factory _Credentials.fromJson(Map<String, dynamic> json) = _$CredentialsImpl.fromJson;
 
   @override
   String get developerToken;
@@ -182,6 +170,5 @@ abstract class _Credentials extends Credentials {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CredentialsImplCopyWith<_$CredentialsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CredentialsImplCopyWith<_$CredentialsImpl> get copyWith => throw _privateConstructorUsedError;
 }

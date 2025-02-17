@@ -47,10 +47,7 @@ class _SearchService implements SearchService {
   }
 
   @override
-  Future<SearchSuggestionsResultsDTO> searchSuggestions(
-    dynamic storefront,
-    dynamic term,
-  ) async {
+  Future<SearchSuggestionsResultsDTO> searchSuggestions(dynamic storefront, dynamic term) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -78,8 +75,7 @@ class _SearchService implements SearchService {
 
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
     if (T != dynamic &&
-        !(requestOptions.responseType == ResponseType.bytes ||
-            requestOptions.responseType == ResponseType.stream)) {
+        !(requestOptions.responseType == ResponseType.bytes || requestOptions.responseType == ResponseType.stream)) {
       if (T == String) {
         requestOptions.responseType = ResponseType.plain;
       } else {

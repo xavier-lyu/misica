@@ -13,9 +13,7 @@ String _$searchServiceHash() => r'5c149de6161c5219d71ad560c84a3ad983dd4bd3';
 final searchServiceProvider = AutoDisposeProvider<SearchService>.internal(
   searchService,
   name: r'searchServiceProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$searchServiceHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$searchServiceHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
@@ -30,9 +28,7 @@ String _$searchRepositoryHash() => r'30a12a46badabb7714d325cd91b560b6bcdbc550';
 final searchRepositoryProvider = AutoDisposeProvider<SearchRepository>.internal(
   searchRepository,
   name: r'searchRepositoryProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$searchRepositoryHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$searchRepositoryHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

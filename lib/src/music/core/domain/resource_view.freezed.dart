@@ -12,7 +12,8 @@ part of 'resource_view.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 /// @nodoc
 mixin _$ResourceView {
@@ -22,22 +23,19 @@ mixin _$ResourceView {
   /// Create a copy of ResourceView
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ResourceViewCopyWith<ResourceView> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ResourceViewCopyWith<ResourceView> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ResourceViewCopyWith<$Res> {
-  factory $ResourceViewCopyWith(
-          ResourceView value, $Res Function(ResourceView) then) =
+  factory $ResourceViewCopyWith(ResourceView value, $Res Function(ResourceView) then) =
       _$ResourceViewCopyWithImpl<$Res, ResourceView>;
   @useResult
   $Res call({List<Resource> data, String title});
 }
 
 /// @nodoc
-class _$ResourceViewCopyWithImpl<$Res, $Val extends ResourceView>
-    implements $ResourceViewCopyWith<$Res> {
+class _$ResourceViewCopyWithImpl<$Res, $Val extends ResourceView> implements $ResourceViewCopyWith<$Res> {
   _$ResourceViewCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -49,28 +47,28 @@ class _$ResourceViewCopyWithImpl<$Res, $Val extends ResourceView>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? data = null,
-    Object? title = null,
-  }) {
-    return _then(_value.copyWith(
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<Resource>,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? data = null, Object? title = null}) {
+    return _then(
+      _value.copyWith(
+            data:
+                null == data
+                    ? _value.data
+                    : data // ignore: cast_nullable_to_non_nullable
+                        as List<Resource>,
+            title:
+                null == title
+                    ? _value.title
+                    : title // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$ResourceViewImplCopyWith<$Res>
-    implements $ResourceViewCopyWith<$Res> {
-  factory _$$ResourceViewImplCopyWith(
-          _$ResourceViewImpl value, $Res Function(_$ResourceViewImpl) then) =
+abstract class _$$ResourceViewImplCopyWith<$Res> implements $ResourceViewCopyWith<$Res> {
+  factory _$$ResourceViewImplCopyWith(_$ResourceViewImpl value, $Res Function(_$ResourceViewImpl) then) =
       __$$ResourceViewImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -78,41 +76,37 @@ abstract class _$$ResourceViewImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ResourceViewImplCopyWithImpl<$Res>
-    extends _$ResourceViewCopyWithImpl<$Res, _$ResourceViewImpl>
+class __$$ResourceViewImplCopyWithImpl<$Res> extends _$ResourceViewCopyWithImpl<$Res, _$ResourceViewImpl>
     implements _$$ResourceViewImplCopyWith<$Res> {
-  __$$ResourceViewImplCopyWithImpl(
-      _$ResourceViewImpl _value, $Res Function(_$ResourceViewImpl) _then)
-      : super(_value, _then);
+  __$$ResourceViewImplCopyWithImpl(_$ResourceViewImpl _value, $Res Function(_$ResourceViewImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of ResourceView
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? data = null,
-    Object? title = null,
-  }) {
-    return _then(_$ResourceViewImpl(
-      data: null == data
-          ? _value._data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<Resource>,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? data = null, Object? title = null}) {
+    return _then(
+      _$ResourceViewImpl(
+        data:
+            null == data
+                ? _value._data
+                : data // ignore: cast_nullable_to_non_nullable
+                    as List<Resource>,
+        title:
+            null == title
+                ? _value.title
+                : title // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$ResourceViewImpl extends _ResourceView {
-  const _$ResourceViewImpl(
-      {required final List<Resource> data, required this.title})
-      : _data = data,
-        super._();
+  const _$ResourceViewImpl({required final List<Resource> data, required this.title}) : _data = data, super._();
 
   final List<Resource> _data;
   @override
@@ -140,8 +134,7 @@ class _$ResourceViewImpl extends _ResourceView {
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_data), title);
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_data), title);
 
   /// Create a copy of ResourceView
   /// with the given fields replaced by the non-null parameter values.
@@ -153,9 +146,7 @@ class _$ResourceViewImpl extends _ResourceView {
 }
 
 abstract class _ResourceView extends ResourceView {
-  const factory _ResourceView(
-      {required final List<Resource> data,
-      required final String title}) = _$ResourceViewImpl;
+  const factory _ResourceView({required final List<Resource> data, required final String title}) = _$ResourceViewImpl;
   const _ResourceView._() : super._();
 
   @override
@@ -167,6 +158,5 @@ abstract class _ResourceView extends ResourceView {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ResourceViewImplCopyWith<_$ResourceViewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ResourceViewImplCopyWith<_$ResourceViewImpl> get copyWith => throw _privateConstructorUsedError;
 }

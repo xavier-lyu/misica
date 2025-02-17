@@ -6,13 +6,7 @@ class RetryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: IconButton(
-        iconSize: 66.0,
-        onPressed: onRetry,
-        icon: const Icon(Icons.refresh_rounded),
-      ),
-    );
+    return Center(child: IconButton(iconSize: 66.0, onPressed: onRetry, icon: const Icon(Icons.refresh_rounded)));
   }
 }
 
@@ -24,16 +18,7 @@ class SliverRetryView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
-      slivers: [
-        const SliverAppBar(
-          pinned: true,
-        ),
-        SliverFillRemaining(
-          child: RetryWidget(
-            onRetry: onRetry,
-          ),
-        ),
-      ],
+      slivers: [const SliverAppBar(pinned: true), SliverFillRemaining(child: RetryWidget(onRetry: onRetry))],
     );
   }
 }

@@ -12,10 +12,10 @@ part of 'relationships_dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
-ResourceRelationshipDTO _$ResourceRelationshipDTOFromJson(
-    Map<String, dynamic> json) {
+ResourceRelationshipDTO _$ResourceRelationshipDTOFromJson(Map<String, dynamic> json) {
   return _ResourceRelationshipDTO.fromJson(json);
 }
 
@@ -31,22 +31,19 @@ mixin _$ResourceRelationshipDTO {
   /// Create a copy of ResourceRelationshipDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ResourceRelationshipDTOCopyWith<ResourceRelationshipDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ResourceRelationshipDTOCopyWith<ResourceRelationshipDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ResourceRelationshipDTOCopyWith<$Res> {
-  factory $ResourceRelationshipDTOCopyWith(ResourceRelationshipDTO value,
-          $Res Function(ResourceRelationshipDTO) then) =
+  factory $ResourceRelationshipDTOCopyWith(ResourceRelationshipDTO value, $Res Function(ResourceRelationshipDTO) then) =
       _$ResourceRelationshipDTOCopyWithImpl<$Res, ResourceRelationshipDTO>;
   @useResult
   $Res call({String href, @ResourceDTOConverter() List<ResourceDTO> data});
 }
 
 /// @nodoc
-class _$ResourceRelationshipDTOCopyWithImpl<$Res,
-        $Val extends ResourceRelationshipDTO>
+class _$ResourceRelationshipDTOCopyWithImpl<$Res, $Val extends ResourceRelationshipDTO>
     implements $ResourceRelationshipDTOCopyWith<$Res> {
   _$ResourceRelationshipDTOCopyWithImpl(this._value, this._then);
 
@@ -59,30 +56,31 @@ class _$ResourceRelationshipDTOCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? href = null,
-    Object? data = null,
-  }) {
-    return _then(_value.copyWith(
-      href: null == href
-          ? _value.href
-          : href // ignore: cast_nullable_to_non_nullable
-              as String,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<ResourceDTO>,
-    ) as $Val);
+  $Res call({Object? href = null, Object? data = null}) {
+    return _then(
+      _value.copyWith(
+            href:
+                null == href
+                    ? _value.href
+                    : href // ignore: cast_nullable_to_non_nullable
+                        as String,
+            data:
+                null == data
+                    ? _value.data
+                    : data // ignore: cast_nullable_to_non_nullable
+                        as List<ResourceDTO>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$ResourceRelationshipDTOImplCopyWith<$Res>
-    implements $ResourceRelationshipDTOCopyWith<$Res> {
+abstract class _$$ResourceRelationshipDTOImplCopyWith<$Res> implements $ResourceRelationshipDTOCopyWith<$Res> {
   factory _$$ResourceRelationshipDTOImplCopyWith(
-          _$ResourceRelationshipDTOImpl value,
-          $Res Function(_$ResourceRelationshipDTOImpl) then) =
-      __$$ResourceRelationshipDTOImplCopyWithImpl<$Res>;
+    _$ResourceRelationshipDTOImpl value,
+    $Res Function(_$ResourceRelationshipDTOImpl) then,
+  ) = __$$ResourceRelationshipDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String href, @ResourceDTOConverter() List<ResourceDTO> data});
@@ -90,43 +88,43 @@ abstract class _$$ResourceRelationshipDTOImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ResourceRelationshipDTOImplCopyWithImpl<$Res>
-    extends _$ResourceRelationshipDTOCopyWithImpl<$Res,
-        _$ResourceRelationshipDTOImpl>
+    extends _$ResourceRelationshipDTOCopyWithImpl<$Res, _$ResourceRelationshipDTOImpl>
     implements _$$ResourceRelationshipDTOImplCopyWith<$Res> {
   __$$ResourceRelationshipDTOImplCopyWithImpl(
-      _$ResourceRelationshipDTOImpl _value,
-      $Res Function(_$ResourceRelationshipDTOImpl) _then)
-      : super(_value, _then);
+    _$ResourceRelationshipDTOImpl _value,
+    $Res Function(_$ResourceRelationshipDTOImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ResourceRelationshipDTO
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? href = null,
-    Object? data = null,
-  }) {
-    return _then(_$ResourceRelationshipDTOImpl(
-      href: null == href
-          ? _value.href
-          : href // ignore: cast_nullable_to_non_nullable
-              as String,
-      data: null == data
-          ? _value._data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<ResourceDTO>,
-    ));
+  $Res call({Object? href = null, Object? data = null}) {
+    return _then(
+      _$ResourceRelationshipDTOImpl(
+        href:
+            null == href
+                ? _value.href
+                : href // ignore: cast_nullable_to_non_nullable
+                    as String,
+        data:
+            null == data
+                ? _value._data
+                : data // ignore: cast_nullable_to_non_nullable
+                    as List<ResourceDTO>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ResourceRelationshipDTOImpl extends _ResourceRelationshipDTO {
-  const _$ResourceRelationshipDTOImpl(
-      {required this.href,
-      @ResourceDTOConverter() required final List<ResourceDTO> data})
-      : _data = data,
-        super._();
+  const _$ResourceRelationshipDTOImpl({
+    required this.href,
+    @ResourceDTOConverter() required final List<ResourceDTO> data,
+  }) : _data = data,
+       super._();
 
   factory _$ResourceRelationshipDTOImpl.fromJson(Map<String, dynamic> json) =>
       _$$ResourceRelationshipDTOImplFromJson(json);
@@ -158,35 +156,30 @@ class _$ResourceRelationshipDTOImpl extends _ResourceRelationshipDTO {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, href, const DeepCollectionEquality().hash(_data));
+  int get hashCode => Object.hash(runtimeType, href, const DeepCollectionEquality().hash(_data));
 
   /// Create a copy of ResourceRelationshipDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ResourceRelationshipDTOImplCopyWith<_$ResourceRelationshipDTOImpl>
-      get copyWith => __$$ResourceRelationshipDTOImplCopyWithImpl<
-          _$ResourceRelationshipDTOImpl>(this, _$identity);
+  _$$ResourceRelationshipDTOImplCopyWith<_$ResourceRelationshipDTOImpl> get copyWith =>
+      __$$ResourceRelationshipDTOImplCopyWithImpl<_$ResourceRelationshipDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ResourceRelationshipDTOImplToJson(
-      this,
-    );
+    return _$$ResourceRelationshipDTOImplToJson(this);
   }
 }
 
 abstract class _ResourceRelationshipDTO extends ResourceRelationshipDTO {
-  const factory _ResourceRelationshipDTO(
-          {required final String href,
-          @ResourceDTOConverter() required final List<ResourceDTO> data}) =
-      _$ResourceRelationshipDTOImpl;
+  const factory _ResourceRelationshipDTO({
+    required final String href,
+    @ResourceDTOConverter() required final List<ResourceDTO> data,
+  }) = _$ResourceRelationshipDTOImpl;
   const _ResourceRelationshipDTO._() : super._();
 
-  factory _ResourceRelationshipDTO.fromJson(Map<String, dynamic> json) =
-      _$ResourceRelationshipDTOImpl.fromJson;
+  factory _ResourceRelationshipDTO.fromJson(Map<String, dynamic> json) = _$ResourceRelationshipDTOImpl.fromJson;
 
   @override
   String get href;
@@ -198,12 +191,11 @@ abstract class _ResourceRelationshipDTO extends ResourceRelationshipDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ResourceRelationshipDTOImplCopyWith<_$ResourceRelationshipDTOImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$ResourceRelationshipDTOImplCopyWith<_$ResourceRelationshipDTOImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-AlbumRelationshipsDTO _$AlbumRelationshipsDTOFromJson(
-    Map<String, dynamic> json) {
+AlbumRelationshipsDTO _$AlbumRelationshipsDTOFromJson(Map<String, dynamic> json) {
   return _AlbumRelationshipsDTO.fromJson(json);
 }
 
@@ -211,8 +203,7 @@ AlbumRelationshipsDTO _$AlbumRelationshipsDTOFromJson(
 mixin _$AlbumRelationshipsDTO {
   ResourceRelationshipDTO? get artists => throw _privateConstructorUsedError;
   ResourceRelationshipDTO? get tracks => throw _privateConstructorUsedError;
-  ResourceRelationshipDTO? get recordLabels =>
-      throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get recordLabels => throw _privateConstructorUsedError;
   ResourceRelationshipDTO? get library => throw _privateConstructorUsedError;
   ResourceRelationshipDTO? get catalog => throw _privateConstructorUsedError;
 
@@ -222,22 +213,21 @@ mixin _$AlbumRelationshipsDTO {
   /// Create a copy of AlbumRelationshipsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $AlbumRelationshipsDTOCopyWith<AlbumRelationshipsDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AlbumRelationshipsDTOCopyWith<AlbumRelationshipsDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AlbumRelationshipsDTOCopyWith<$Res> {
-  factory $AlbumRelationshipsDTOCopyWith(AlbumRelationshipsDTO value,
-          $Res Function(AlbumRelationshipsDTO) then) =
+  factory $AlbumRelationshipsDTOCopyWith(AlbumRelationshipsDTO value, $Res Function(AlbumRelationshipsDTO) then) =
       _$AlbumRelationshipsDTOCopyWithImpl<$Res, AlbumRelationshipsDTO>;
   @useResult
-  $Res call(
-      {ResourceRelationshipDTO? artists,
-      ResourceRelationshipDTO? tracks,
-      ResourceRelationshipDTO? recordLabels,
-      ResourceRelationshipDTO? library,
-      ResourceRelationshipDTO? catalog});
+  $Res call({
+    ResourceRelationshipDTO? artists,
+    ResourceRelationshipDTO? tracks,
+    ResourceRelationshipDTO? recordLabels,
+    ResourceRelationshipDTO? library,
+    ResourceRelationshipDTO? catalog,
+  });
 
   $ResourceRelationshipDTOCopyWith<$Res>? get artists;
   $ResourceRelationshipDTOCopyWith<$Res>? get tracks;
@@ -247,8 +237,7 @@ abstract class $AlbumRelationshipsDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AlbumRelationshipsDTOCopyWithImpl<$Res,
-        $Val extends AlbumRelationshipsDTO>
+class _$AlbumRelationshipsDTOCopyWithImpl<$Res, $Val extends AlbumRelationshipsDTO>
     implements $AlbumRelationshipsDTOCopyWith<$Res> {
   _$AlbumRelationshipsDTOCopyWithImpl(this._value, this._then);
 
@@ -268,28 +257,36 @@ class _$AlbumRelationshipsDTOCopyWithImpl<$Res,
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_value.copyWith(
-      artists: freezed == artists
-          ? _value.artists
-          : artists // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      tracks: freezed == tracks
-          ? _value.tracks
-          : tracks // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      recordLabels: freezed == recordLabels
-          ? _value.recordLabels
-          : recordLabels // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      library: freezed == library
-          ? _value.library
-          : library // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      catalog: freezed == catalog
-          ? _value.catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            artists:
+                freezed == artists
+                    ? _value.artists
+                    : artists // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            tracks:
+                freezed == tracks
+                    ? _value.tracks
+                    : tracks // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            recordLabels:
+                freezed == recordLabels
+                    ? _value.recordLabels
+                    : recordLabels // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            library:
+                freezed == library
+                    ? _value.library
+                    : library // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            catalog:
+                freezed == catalog
+                    ? _value.catalog
+                    : catalog // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of AlbumRelationshipsDTO
@@ -329,8 +326,7 @@ class _$AlbumRelationshipsDTOCopyWithImpl<$Res,
       return null;
     }
 
-    return $ResourceRelationshipDTOCopyWith<$Res>(_value.recordLabels!,
-        (value) {
+    return $ResourceRelationshipDTOCopyWith<$Res>(_value.recordLabels!, (value) {
       return _then(_value.copyWith(recordLabels: value) as $Val);
     });
   }
@@ -365,20 +361,20 @@ class _$AlbumRelationshipsDTOCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$AlbumRelationshipsDTOImplCopyWith<$Res>
-    implements $AlbumRelationshipsDTOCopyWith<$Res> {
+abstract class _$$AlbumRelationshipsDTOImplCopyWith<$Res> implements $AlbumRelationshipsDTOCopyWith<$Res> {
   factory _$$AlbumRelationshipsDTOImplCopyWith(
-          _$AlbumRelationshipsDTOImpl value,
-          $Res Function(_$AlbumRelationshipsDTOImpl) then) =
-      __$$AlbumRelationshipsDTOImplCopyWithImpl<$Res>;
+    _$AlbumRelationshipsDTOImpl value,
+    $Res Function(_$AlbumRelationshipsDTOImpl) then,
+  ) = __$$AlbumRelationshipsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {ResourceRelationshipDTO? artists,
-      ResourceRelationshipDTO? tracks,
-      ResourceRelationshipDTO? recordLabels,
-      ResourceRelationshipDTO? library,
-      ResourceRelationshipDTO? catalog});
+  $Res call({
+    ResourceRelationshipDTO? artists,
+    ResourceRelationshipDTO? tracks,
+    ResourceRelationshipDTO? recordLabels,
+    ResourceRelationshipDTO? library,
+    ResourceRelationshipDTO? catalog,
+  });
 
   @override
   $ResourceRelationshipDTOCopyWith<$Res>? get artists;
@@ -394,12 +390,12 @@ abstract class _$$AlbumRelationshipsDTOImplCopyWith<$Res>
 
 /// @nodoc
 class __$$AlbumRelationshipsDTOImplCopyWithImpl<$Res>
-    extends _$AlbumRelationshipsDTOCopyWithImpl<$Res,
-        _$AlbumRelationshipsDTOImpl>
+    extends _$AlbumRelationshipsDTOCopyWithImpl<$Res, _$AlbumRelationshipsDTOImpl>
     implements _$$AlbumRelationshipsDTOImplCopyWith<$Res> {
-  __$$AlbumRelationshipsDTOImplCopyWithImpl(_$AlbumRelationshipsDTOImpl _value,
-      $Res Function(_$AlbumRelationshipsDTOImpl) _then)
-      : super(_value, _then);
+  __$$AlbumRelationshipsDTOImplCopyWithImpl(
+    _$AlbumRelationshipsDTOImpl _value,
+    $Res Function(_$AlbumRelationshipsDTOImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of AlbumRelationshipsDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -412,44 +408,45 @@ class __$$AlbumRelationshipsDTOImplCopyWithImpl<$Res>
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_$AlbumRelationshipsDTOImpl(
-      artists: freezed == artists
-          ? _value.artists
-          : artists // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      tracks: freezed == tracks
-          ? _value.tracks
-          : tracks // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      recordLabels: freezed == recordLabels
-          ? _value.recordLabels
-          : recordLabels // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      library: freezed == library
-          ? _value.library
-          : library // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      catalog: freezed == catalog
-          ? _value.catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-    ));
+    return _then(
+      _$AlbumRelationshipsDTOImpl(
+        artists:
+            freezed == artists
+                ? _value.artists
+                : artists // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        tracks:
+            freezed == tracks
+                ? _value.tracks
+                : tracks // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        recordLabels:
+            freezed == recordLabels
+                ? _value.recordLabels
+                : recordLabels // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        library:
+            freezed == library
+                ? _value.library
+                : library // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        catalog:
+            freezed == catalog
+                ? _value.catalog
+                : catalog // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AlbumRelationshipsDTOImpl extends _AlbumRelationshipsDTO {
-  const _$AlbumRelationshipsDTOImpl(
-      {this.artists,
-      this.tracks,
-      this.recordLabels,
-      this.library,
-      this.catalog})
-      : super._();
+  const _$AlbumRelationshipsDTOImpl({this.artists, this.tracks, this.recordLabels, this.library, this.catalog})
+    : super._();
 
-  factory _$AlbumRelationshipsDTOImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AlbumRelationshipsDTOImplFromJson(json);
+  factory _$AlbumRelationshipsDTOImpl.fromJson(Map<String, dynamic> json) => _$$AlbumRelationshipsDTOImplFromJson(json);
 
   @override
   final ResourceRelationshipDTO? artists;
@@ -474,45 +471,40 @@ class _$AlbumRelationshipsDTOImpl extends _AlbumRelationshipsDTO {
             other is _$AlbumRelationshipsDTOImpl &&
             (identical(other.artists, artists) || other.artists == artists) &&
             (identical(other.tracks, tracks) || other.tracks == tracks) &&
-            (identical(other.recordLabels, recordLabels) ||
-                other.recordLabels == recordLabels) &&
+            (identical(other.recordLabels, recordLabels) || other.recordLabels == recordLabels) &&
             (identical(other.library, library) || other.library == library) &&
             (identical(other.catalog, catalog) || other.catalog == catalog));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, artists, tracks, recordLabels, library, catalog);
+  int get hashCode => Object.hash(runtimeType, artists, tracks, recordLabels, library, catalog);
 
   /// Create a copy of AlbumRelationshipsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$AlbumRelationshipsDTOImplCopyWith<_$AlbumRelationshipsDTOImpl>
-      get copyWith => __$$AlbumRelationshipsDTOImplCopyWithImpl<
-          _$AlbumRelationshipsDTOImpl>(this, _$identity);
+  _$$AlbumRelationshipsDTOImplCopyWith<_$AlbumRelationshipsDTOImpl> get copyWith =>
+      __$$AlbumRelationshipsDTOImplCopyWithImpl<_$AlbumRelationshipsDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AlbumRelationshipsDTOImplToJson(
-      this,
-    );
+    return _$$AlbumRelationshipsDTOImplToJson(this);
   }
 }
 
 abstract class _AlbumRelationshipsDTO extends AlbumRelationshipsDTO {
-  const factory _AlbumRelationshipsDTO(
-      {final ResourceRelationshipDTO? artists,
-      final ResourceRelationshipDTO? tracks,
-      final ResourceRelationshipDTO? recordLabels,
-      final ResourceRelationshipDTO? library,
-      final ResourceRelationshipDTO? catalog}) = _$AlbumRelationshipsDTOImpl;
+  const factory _AlbumRelationshipsDTO({
+    final ResourceRelationshipDTO? artists,
+    final ResourceRelationshipDTO? tracks,
+    final ResourceRelationshipDTO? recordLabels,
+    final ResourceRelationshipDTO? library,
+    final ResourceRelationshipDTO? catalog,
+  }) = _$AlbumRelationshipsDTOImpl;
   const _AlbumRelationshipsDTO._() : super._();
 
-  factory _AlbumRelationshipsDTO.fromJson(Map<String, dynamic> json) =
-      _$AlbumRelationshipsDTOImpl.fromJson;
+  factory _AlbumRelationshipsDTO.fromJson(Map<String, dynamic> json) = _$AlbumRelationshipsDTOImpl.fromJson;
 
   @override
   ResourceRelationshipDTO? get artists;
@@ -529,12 +521,10 @@ abstract class _AlbumRelationshipsDTO extends AlbumRelationshipsDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AlbumRelationshipsDTOImplCopyWith<_$AlbumRelationshipsDTOImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$AlbumRelationshipsDTOImplCopyWith<_$AlbumRelationshipsDTOImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
-ArtistRelationshipsDTO _$ArtistRelationshipsDTOFromJson(
-    Map<String, dynamic> json) {
+ArtistRelationshipsDTO _$ArtistRelationshipsDTOFromJson(Map<String, dynamic> json) {
   return _ArtistRelationshipsDTO.fromJson(json);
 }
 
@@ -542,13 +532,11 @@ ArtistRelationshipsDTO _$ArtistRelationshipsDTOFromJson(
 mixin _$ArtistRelationshipsDTO {
   ResourceRelationshipDTO? get albums => throw _privateConstructorUsedError;
   ResourceRelationshipDTO? get playlists => throw _privateConstructorUsedError;
-  ResourceRelationshipDTO? get musicVideos =>
-      throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get musicVideos => throw _privateConstructorUsedError;
   ResourceRelationshipDTO? get station => throw _privateConstructorUsedError;
   ResourceRelationshipDTO? get catalog => throw _privateConstructorUsedError;
   @JsonKey(name: 'default-playable-content')
-  ResourceRelationshipDTO? get defaultPlayableContent =>
-      throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get defaultPlayableContent => throw _privateConstructorUsedError;
 
   /// Serializes this ArtistRelationshipsDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -556,24 +544,22 @@ mixin _$ArtistRelationshipsDTO {
   /// Create a copy of ArtistRelationshipsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ArtistRelationshipsDTOCopyWith<ArtistRelationshipsDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ArtistRelationshipsDTOCopyWith<ArtistRelationshipsDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ArtistRelationshipsDTOCopyWith<$Res> {
-  factory $ArtistRelationshipsDTOCopyWith(ArtistRelationshipsDTO value,
-          $Res Function(ArtistRelationshipsDTO) then) =
+  factory $ArtistRelationshipsDTOCopyWith(ArtistRelationshipsDTO value, $Res Function(ArtistRelationshipsDTO) then) =
       _$ArtistRelationshipsDTOCopyWithImpl<$Res, ArtistRelationshipsDTO>;
   @useResult
-  $Res call(
-      {ResourceRelationshipDTO? albums,
-      ResourceRelationshipDTO? playlists,
-      ResourceRelationshipDTO? musicVideos,
-      ResourceRelationshipDTO? station,
-      ResourceRelationshipDTO? catalog,
-      @JsonKey(name: 'default-playable-content')
-      ResourceRelationshipDTO? defaultPlayableContent});
+  $Res call({
+    ResourceRelationshipDTO? albums,
+    ResourceRelationshipDTO? playlists,
+    ResourceRelationshipDTO? musicVideos,
+    ResourceRelationshipDTO? station,
+    ResourceRelationshipDTO? catalog,
+    @JsonKey(name: 'default-playable-content') ResourceRelationshipDTO? defaultPlayableContent,
+  });
 
   $ResourceRelationshipDTOCopyWith<$Res>? get albums;
   $ResourceRelationshipDTOCopyWith<$Res>? get playlists;
@@ -584,8 +570,7 @@ abstract class $ArtistRelationshipsDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ArtistRelationshipsDTOCopyWithImpl<$Res,
-        $Val extends ArtistRelationshipsDTO>
+class _$ArtistRelationshipsDTOCopyWithImpl<$Res, $Val extends ArtistRelationshipsDTO>
     implements $ArtistRelationshipsDTOCopyWith<$Res> {
   _$ArtistRelationshipsDTOCopyWithImpl(this._value, this._then);
 
@@ -606,32 +591,41 @@ class _$ArtistRelationshipsDTOCopyWithImpl<$Res,
     Object? catalog = freezed,
     Object? defaultPlayableContent = freezed,
   }) {
-    return _then(_value.copyWith(
-      albums: freezed == albums
-          ? _value.albums
-          : albums // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      playlists: freezed == playlists
-          ? _value.playlists
-          : playlists // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      musicVideos: freezed == musicVideos
-          ? _value.musicVideos
-          : musicVideos // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      station: freezed == station
-          ? _value.station
-          : station // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      catalog: freezed == catalog
-          ? _value.catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      defaultPlayableContent: freezed == defaultPlayableContent
-          ? _value.defaultPlayableContent
-          : defaultPlayableContent // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            albums:
+                freezed == albums
+                    ? _value.albums
+                    : albums // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            playlists:
+                freezed == playlists
+                    ? _value.playlists
+                    : playlists // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            musicVideos:
+                freezed == musicVideos
+                    ? _value.musicVideos
+                    : musicVideos // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            station:
+                freezed == station
+                    ? _value.station
+                    : station // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            catalog:
+                freezed == catalog
+                    ? _value.catalog
+                    : catalog // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            defaultPlayableContent:
+                freezed == defaultPlayableContent
+                    ? _value.defaultPlayableContent
+                    : defaultPlayableContent // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of ArtistRelationshipsDTO
@@ -713,30 +707,28 @@ class _$ArtistRelationshipsDTOCopyWithImpl<$Res,
       return null;
     }
 
-    return $ResourceRelationshipDTOCopyWith<$Res>(
-        _value.defaultPlayableContent!, (value) {
+    return $ResourceRelationshipDTOCopyWith<$Res>(_value.defaultPlayableContent!, (value) {
       return _then(_value.copyWith(defaultPlayableContent: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$ArtistRelationshipsDTOImplCopyWith<$Res>
-    implements $ArtistRelationshipsDTOCopyWith<$Res> {
+abstract class _$$ArtistRelationshipsDTOImplCopyWith<$Res> implements $ArtistRelationshipsDTOCopyWith<$Res> {
   factory _$$ArtistRelationshipsDTOImplCopyWith(
-          _$ArtistRelationshipsDTOImpl value,
-          $Res Function(_$ArtistRelationshipsDTOImpl) then) =
-      __$$ArtistRelationshipsDTOImplCopyWithImpl<$Res>;
+    _$ArtistRelationshipsDTOImpl value,
+    $Res Function(_$ArtistRelationshipsDTOImpl) then,
+  ) = __$$ArtistRelationshipsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {ResourceRelationshipDTO? albums,
-      ResourceRelationshipDTO? playlists,
-      ResourceRelationshipDTO? musicVideos,
-      ResourceRelationshipDTO? station,
-      ResourceRelationshipDTO? catalog,
-      @JsonKey(name: 'default-playable-content')
-      ResourceRelationshipDTO? defaultPlayableContent});
+  $Res call({
+    ResourceRelationshipDTO? albums,
+    ResourceRelationshipDTO? playlists,
+    ResourceRelationshipDTO? musicVideos,
+    ResourceRelationshipDTO? station,
+    ResourceRelationshipDTO? catalog,
+    @JsonKey(name: 'default-playable-content') ResourceRelationshipDTO? defaultPlayableContent,
+  });
 
   @override
   $ResourceRelationshipDTOCopyWith<$Res>? get albums;
@@ -754,13 +746,12 @@ abstract class _$$ArtistRelationshipsDTOImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ArtistRelationshipsDTOImplCopyWithImpl<$Res>
-    extends _$ArtistRelationshipsDTOCopyWithImpl<$Res,
-        _$ArtistRelationshipsDTOImpl>
+    extends _$ArtistRelationshipsDTOCopyWithImpl<$Res, _$ArtistRelationshipsDTOImpl>
     implements _$$ArtistRelationshipsDTOImplCopyWith<$Res> {
   __$$ArtistRelationshipsDTOImplCopyWithImpl(
-      _$ArtistRelationshipsDTOImpl _value,
-      $Res Function(_$ArtistRelationshipsDTOImpl) _then)
-      : super(_value, _then);
+    _$ArtistRelationshipsDTOImpl _value,
+    $Res Function(_$ArtistRelationshipsDTOImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ArtistRelationshipsDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -774,46 +765,54 @@ class __$$ArtistRelationshipsDTOImplCopyWithImpl<$Res>
     Object? catalog = freezed,
     Object? defaultPlayableContent = freezed,
   }) {
-    return _then(_$ArtistRelationshipsDTOImpl(
-      albums: freezed == albums
-          ? _value.albums
-          : albums // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      playlists: freezed == playlists
-          ? _value.playlists
-          : playlists // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      musicVideos: freezed == musicVideos
-          ? _value.musicVideos
-          : musicVideos // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      station: freezed == station
-          ? _value.station
-          : station // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      catalog: freezed == catalog
-          ? _value.catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      defaultPlayableContent: freezed == defaultPlayableContent
-          ? _value.defaultPlayableContent
-          : defaultPlayableContent // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-    ));
+    return _then(
+      _$ArtistRelationshipsDTOImpl(
+        albums:
+            freezed == albums
+                ? _value.albums
+                : albums // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        playlists:
+            freezed == playlists
+                ? _value.playlists
+                : playlists // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        musicVideos:
+            freezed == musicVideos
+                ? _value.musicVideos
+                : musicVideos // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        station:
+            freezed == station
+                ? _value.station
+                : station // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        catalog:
+            freezed == catalog
+                ? _value.catalog
+                : catalog // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        defaultPlayableContent:
+            freezed == defaultPlayableContent
+                ? _value.defaultPlayableContent
+                : defaultPlayableContent // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ArtistRelationshipsDTOImpl extends _ArtistRelationshipsDTO {
-  const _$ArtistRelationshipsDTOImpl(
-      {this.albums,
-      this.playlists,
-      this.musicVideos,
-      this.station,
-      this.catalog,
-      @JsonKey(name: 'default-playable-content') this.defaultPlayableContent})
-      : super._();
+  const _$ArtistRelationshipsDTOImpl({
+    this.albums,
+    this.playlists,
+    this.musicVideos,
+    this.station,
+    this.catalog,
+    @JsonKey(name: 'default-playable-content') this.defaultPlayableContent,
+  }) : super._();
 
   factory _$ArtistRelationshipsDTOImpl.fromJson(Map<String, dynamic> json) =>
       _$$ArtistRelationshipsDTOImplFromJson(json);
@@ -843,10 +842,8 @@ class _$ArtistRelationshipsDTOImpl extends _ArtistRelationshipsDTO {
         (other.runtimeType == runtimeType &&
             other is _$ArtistRelationshipsDTOImpl &&
             (identical(other.albums, albums) || other.albums == albums) &&
-            (identical(other.playlists, playlists) ||
-                other.playlists == playlists) &&
-            (identical(other.musicVideos, musicVideos) ||
-                other.musicVideos == musicVideos) &&
+            (identical(other.playlists, playlists) || other.playlists == playlists) &&
+            (identical(other.musicVideos, musicVideos) || other.musicVideos == musicVideos) &&
             (identical(other.station, station) || other.station == station) &&
             (identical(other.catalog, catalog) || other.catalog == catalog) &&
             (identical(other.defaultPlayableContent, defaultPlayableContent) ||
@@ -855,40 +852,35 @@ class _$ArtistRelationshipsDTOImpl extends _ArtistRelationshipsDTO {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, albums, playlists, musicVideos,
-      station, catalog, defaultPlayableContent);
+  int get hashCode =>
+      Object.hash(runtimeType, albums, playlists, musicVideos, station, catalog, defaultPlayableContent);
 
   /// Create a copy of ArtistRelationshipsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ArtistRelationshipsDTOImplCopyWith<_$ArtistRelationshipsDTOImpl>
-      get copyWith => __$$ArtistRelationshipsDTOImplCopyWithImpl<
-          _$ArtistRelationshipsDTOImpl>(this, _$identity);
+  _$$ArtistRelationshipsDTOImplCopyWith<_$ArtistRelationshipsDTOImpl> get copyWith =>
+      __$$ArtistRelationshipsDTOImplCopyWithImpl<_$ArtistRelationshipsDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ArtistRelationshipsDTOImplToJson(
-      this,
-    );
+    return _$$ArtistRelationshipsDTOImplToJson(this);
   }
 }
 
 abstract class _ArtistRelationshipsDTO extends ArtistRelationshipsDTO {
-  const factory _ArtistRelationshipsDTO(
-          {final ResourceRelationshipDTO? albums,
-          final ResourceRelationshipDTO? playlists,
-          final ResourceRelationshipDTO? musicVideos,
-          final ResourceRelationshipDTO? station,
-          final ResourceRelationshipDTO? catalog,
-          @JsonKey(name: 'default-playable-content')
-          final ResourceRelationshipDTO? defaultPlayableContent}) =
-      _$ArtistRelationshipsDTOImpl;
+  const factory _ArtistRelationshipsDTO({
+    final ResourceRelationshipDTO? albums,
+    final ResourceRelationshipDTO? playlists,
+    final ResourceRelationshipDTO? musicVideos,
+    final ResourceRelationshipDTO? station,
+    final ResourceRelationshipDTO? catalog,
+    @JsonKey(name: 'default-playable-content') final ResourceRelationshipDTO? defaultPlayableContent,
+  }) = _$ArtistRelationshipsDTOImpl;
   const _ArtistRelationshipsDTO._() : super._();
 
-  factory _ArtistRelationshipsDTO.fromJson(Map<String, dynamic> json) =
-      _$ArtistRelationshipsDTOImpl.fromJson;
+  factory _ArtistRelationshipsDTO.fromJson(Map<String, dynamic> json) = _$ArtistRelationshipsDTOImpl.fromJson;
 
   @override
   ResourceRelationshipDTO? get albums;
@@ -908,12 +900,11 @@ abstract class _ArtistRelationshipsDTO extends ArtistRelationshipsDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ArtistRelationshipsDTOImplCopyWith<_$ArtistRelationshipsDTOImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$ArtistRelationshipsDTOImplCopyWith<_$ArtistRelationshipsDTOImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-PlaylistRelationshipsDTO _$PlaylistRelationshipsDTOFromJson(
-    Map<String, dynamic> json) {
+PlaylistRelationshipsDTO _$PlaylistRelationshipsDTOFromJson(Map<String, dynamic> json) {
   return _PlaylistRelationshipsDTO.fromJson(json);
 }
 
@@ -930,21 +921,22 @@ mixin _$PlaylistRelationshipsDTO {
   /// Create a copy of PlaylistRelationshipsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PlaylistRelationshipsDTOCopyWith<PlaylistRelationshipsDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PlaylistRelationshipsDTOCopyWith<PlaylistRelationshipsDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PlaylistRelationshipsDTOCopyWith<$Res> {
-  factory $PlaylistRelationshipsDTOCopyWith(PlaylistRelationshipsDTO value,
-          $Res Function(PlaylistRelationshipsDTO) then) =
-      _$PlaylistRelationshipsDTOCopyWithImpl<$Res, PlaylistRelationshipsDTO>;
+  factory $PlaylistRelationshipsDTOCopyWith(
+    PlaylistRelationshipsDTO value,
+    $Res Function(PlaylistRelationshipsDTO) then,
+  ) = _$PlaylistRelationshipsDTOCopyWithImpl<$Res, PlaylistRelationshipsDTO>;
   @useResult
-  $Res call(
-      {ResourceRelationshipDTO? tracks,
-      ResourceRelationshipDTO? curator,
-      ResourceRelationshipDTO? library,
-      ResourceRelationshipDTO? catalog});
+  $Res call({
+    ResourceRelationshipDTO? tracks,
+    ResourceRelationshipDTO? curator,
+    ResourceRelationshipDTO? library,
+    ResourceRelationshipDTO? catalog,
+  });
 
   $ResourceRelationshipDTOCopyWith<$Res>? get tracks;
   $ResourceRelationshipDTOCopyWith<$Res>? get curator;
@@ -953,8 +945,7 @@ abstract class $PlaylistRelationshipsDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PlaylistRelationshipsDTOCopyWithImpl<$Res,
-        $Val extends PlaylistRelationshipsDTO>
+class _$PlaylistRelationshipsDTOCopyWithImpl<$Res, $Val extends PlaylistRelationshipsDTO>
     implements $PlaylistRelationshipsDTOCopyWith<$Res> {
   _$PlaylistRelationshipsDTOCopyWithImpl(this._value, this._then);
 
@@ -973,24 +964,31 @@ class _$PlaylistRelationshipsDTOCopyWithImpl<$Res,
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_value.copyWith(
-      tracks: freezed == tracks
-          ? _value.tracks
-          : tracks // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      curator: freezed == curator
-          ? _value.curator
-          : curator // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      library: freezed == library
-          ? _value.library
-          : library // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      catalog: freezed == catalog
-          ? _value.catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            tracks:
+                freezed == tracks
+                    ? _value.tracks
+                    : tracks // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            curator:
+                freezed == curator
+                    ? _value.curator
+                    : curator // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            library:
+                freezed == library
+                    ? _value.library
+                    : library // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            catalog:
+                freezed == catalog
+                    ? _value.catalog
+                    : catalog // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of PlaylistRelationshipsDTO
@@ -1051,19 +1049,19 @@ class _$PlaylistRelationshipsDTOCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$PlaylistRelationshipsDTOImplCopyWith<$Res>
-    implements $PlaylistRelationshipsDTOCopyWith<$Res> {
+abstract class _$$PlaylistRelationshipsDTOImplCopyWith<$Res> implements $PlaylistRelationshipsDTOCopyWith<$Res> {
   factory _$$PlaylistRelationshipsDTOImplCopyWith(
-          _$PlaylistRelationshipsDTOImpl value,
-          $Res Function(_$PlaylistRelationshipsDTOImpl) then) =
-      __$$PlaylistRelationshipsDTOImplCopyWithImpl<$Res>;
+    _$PlaylistRelationshipsDTOImpl value,
+    $Res Function(_$PlaylistRelationshipsDTOImpl) then,
+  ) = __$$PlaylistRelationshipsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {ResourceRelationshipDTO? tracks,
-      ResourceRelationshipDTO? curator,
-      ResourceRelationshipDTO? library,
-      ResourceRelationshipDTO? catalog});
+  $Res call({
+    ResourceRelationshipDTO? tracks,
+    ResourceRelationshipDTO? curator,
+    ResourceRelationshipDTO? library,
+    ResourceRelationshipDTO? catalog,
+  });
 
   @override
   $ResourceRelationshipDTOCopyWith<$Res>? get tracks;
@@ -1077,13 +1075,12 @@ abstract class _$$PlaylistRelationshipsDTOImplCopyWith<$Res>
 
 /// @nodoc
 class __$$PlaylistRelationshipsDTOImplCopyWithImpl<$Res>
-    extends _$PlaylistRelationshipsDTOCopyWithImpl<$Res,
-        _$PlaylistRelationshipsDTOImpl>
+    extends _$PlaylistRelationshipsDTOCopyWithImpl<$Res, _$PlaylistRelationshipsDTOImpl>
     implements _$$PlaylistRelationshipsDTOImplCopyWith<$Res> {
   __$$PlaylistRelationshipsDTOImplCopyWithImpl(
-      _$PlaylistRelationshipsDTOImpl _value,
-      $Res Function(_$PlaylistRelationshipsDTOImpl) _then)
-      : super(_value, _then);
+    _$PlaylistRelationshipsDTOImpl _value,
+    $Res Function(_$PlaylistRelationshipsDTOImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of PlaylistRelationshipsDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -1095,33 +1092,37 @@ class __$$PlaylistRelationshipsDTOImplCopyWithImpl<$Res>
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_$PlaylistRelationshipsDTOImpl(
-      tracks: freezed == tracks
-          ? _value.tracks
-          : tracks // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      curator: freezed == curator
-          ? _value.curator
-          : curator // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      library: freezed == library
-          ? _value.library
-          : library // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      catalog: freezed == catalog
-          ? _value.catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-    ));
+    return _then(
+      _$PlaylistRelationshipsDTOImpl(
+        tracks:
+            freezed == tracks
+                ? _value.tracks
+                : tracks // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        curator:
+            freezed == curator
+                ? _value.curator
+                : curator // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        library:
+            freezed == library
+                ? _value.library
+                : library // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        catalog:
+            freezed == catalog
+                ? _value.catalog
+                : catalog // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$PlaylistRelationshipsDTOImpl extends _PlaylistRelationshipsDTO {
-  const _$PlaylistRelationshipsDTOImpl(
-      {this.tracks, this.curator, this.library, this.catalog})
-      : super._();
+  const _$PlaylistRelationshipsDTOImpl({this.tracks, this.curator, this.library, this.catalog}) : super._();
 
   factory _$PlaylistRelationshipsDTOImpl.fromJson(Map<String, dynamic> json) =>
       _$$PlaylistRelationshipsDTOImplFromJson(json);
@@ -1153,36 +1154,32 @@ class _$PlaylistRelationshipsDTOImpl extends _PlaylistRelationshipsDTO {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, tracks, curator, library, catalog);
+  int get hashCode => Object.hash(runtimeType, tracks, curator, library, catalog);
 
   /// Create a copy of PlaylistRelationshipsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PlaylistRelationshipsDTOImplCopyWith<_$PlaylistRelationshipsDTOImpl>
-      get copyWith => __$$PlaylistRelationshipsDTOImplCopyWithImpl<
-          _$PlaylistRelationshipsDTOImpl>(this, _$identity);
+  _$$PlaylistRelationshipsDTOImplCopyWith<_$PlaylistRelationshipsDTOImpl> get copyWith =>
+      __$$PlaylistRelationshipsDTOImplCopyWithImpl<_$PlaylistRelationshipsDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PlaylistRelationshipsDTOImplToJson(
-      this,
-    );
+    return _$$PlaylistRelationshipsDTOImplToJson(this);
   }
 }
 
 abstract class _PlaylistRelationshipsDTO extends PlaylistRelationshipsDTO {
-  const factory _PlaylistRelationshipsDTO(
-      {final ResourceRelationshipDTO? tracks,
-      final ResourceRelationshipDTO? curator,
-      final ResourceRelationshipDTO? library,
-      final ResourceRelationshipDTO? catalog}) = _$PlaylistRelationshipsDTOImpl;
+  const factory _PlaylistRelationshipsDTO({
+    final ResourceRelationshipDTO? tracks,
+    final ResourceRelationshipDTO? curator,
+    final ResourceRelationshipDTO? library,
+    final ResourceRelationshipDTO? catalog,
+  }) = _$PlaylistRelationshipsDTOImpl;
   const _PlaylistRelationshipsDTO._() : super._();
 
-  factory _PlaylistRelationshipsDTO.fromJson(Map<String, dynamic> json) =
-      _$PlaylistRelationshipsDTOImpl.fromJson;
+  factory _PlaylistRelationshipsDTO.fromJson(Map<String, dynamic> json) = _$PlaylistRelationshipsDTOImpl.fromJson;
 
   @override
   ResourceRelationshipDTO? get tracks;
@@ -1197,8 +1194,8 @@ abstract class _PlaylistRelationshipsDTO extends PlaylistRelationshipsDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PlaylistRelationshipsDTOImplCopyWith<_$PlaylistRelationshipsDTOImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$PlaylistRelationshipsDTOImplCopyWith<_$PlaylistRelationshipsDTOImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 SongRelationshipsDTO _$SongRelationshipsDTOFromJson(Map<String, dynamic> json) {
@@ -1211,8 +1208,7 @@ mixin _$SongRelationshipsDTO {
   ResourceRelationshipDTO? get artists => throw _privateConstructorUsedError;
   ResourceRelationshipDTO? get station => throw _privateConstructorUsedError;
   ResourceRelationshipDTO? get composers => throw _privateConstructorUsedError;
-  ResourceRelationshipDTO? get musicVideos =>
-      throw _privateConstructorUsedError;
+  ResourceRelationshipDTO? get musicVideos => throw _privateConstructorUsedError;
   ResourceRelationshipDTO? get library => throw _privateConstructorUsedError;
   ResourceRelationshipDTO? get catalog => throw _privateConstructorUsedError;
 
@@ -1222,24 +1218,23 @@ mixin _$SongRelationshipsDTO {
   /// Create a copy of SongRelationshipsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SongRelationshipsDTOCopyWith<SongRelationshipsDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SongRelationshipsDTOCopyWith<SongRelationshipsDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SongRelationshipsDTOCopyWith<$Res> {
-  factory $SongRelationshipsDTOCopyWith(SongRelationshipsDTO value,
-          $Res Function(SongRelationshipsDTO) then) =
+  factory $SongRelationshipsDTOCopyWith(SongRelationshipsDTO value, $Res Function(SongRelationshipsDTO) then) =
       _$SongRelationshipsDTOCopyWithImpl<$Res, SongRelationshipsDTO>;
   @useResult
-  $Res call(
-      {ResourceRelationshipDTO? albums,
-      ResourceRelationshipDTO? artists,
-      ResourceRelationshipDTO? station,
-      ResourceRelationshipDTO? composers,
-      ResourceRelationshipDTO? musicVideos,
-      ResourceRelationshipDTO? library,
-      ResourceRelationshipDTO? catalog});
+  $Res call({
+    ResourceRelationshipDTO? albums,
+    ResourceRelationshipDTO? artists,
+    ResourceRelationshipDTO? station,
+    ResourceRelationshipDTO? composers,
+    ResourceRelationshipDTO? musicVideos,
+    ResourceRelationshipDTO? library,
+    ResourceRelationshipDTO? catalog,
+  });
 
   $ResourceRelationshipDTOCopyWith<$Res>? get albums;
   $ResourceRelationshipDTOCopyWith<$Res>? get artists;
@@ -1251,8 +1246,7 @@ abstract class $SongRelationshipsDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SongRelationshipsDTOCopyWithImpl<$Res,
-        $Val extends SongRelationshipsDTO>
+class _$SongRelationshipsDTOCopyWithImpl<$Res, $Val extends SongRelationshipsDTO>
     implements $SongRelationshipsDTOCopyWith<$Res> {
   _$SongRelationshipsDTOCopyWithImpl(this._value, this._then);
 
@@ -1274,36 +1268,46 @@ class _$SongRelationshipsDTOCopyWithImpl<$Res,
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_value.copyWith(
-      albums: freezed == albums
-          ? _value.albums
-          : albums // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      artists: freezed == artists
-          ? _value.artists
-          : artists // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      station: freezed == station
-          ? _value.station
-          : station // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      composers: freezed == composers
-          ? _value.composers
-          : composers // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      musicVideos: freezed == musicVideos
-          ? _value.musicVideos
-          : musicVideos // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      library: freezed == library
-          ? _value.library
-          : library // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      catalog: freezed == catalog
-          ? _value.catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            albums:
+                freezed == albums
+                    ? _value.albums
+                    : albums // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            artists:
+                freezed == artists
+                    ? _value.artists
+                    : artists // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            station:
+                freezed == station
+                    ? _value.station
+                    : station // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            composers:
+                freezed == composers
+                    ? _value.composers
+                    : composers // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            musicVideos:
+                freezed == musicVideos
+                    ? _value.musicVideos
+                    : musicVideos // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            library:
+                freezed == library
+                    ? _value.library
+                    : library // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            catalog:
+                freezed == catalog
+                    ? _value.catalog
+                    : catalog // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of SongRelationshipsDTO
@@ -1406,21 +1410,22 @@ class _$SongRelationshipsDTOCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$SongRelationshipsDTOImplCopyWith<$Res>
-    implements $SongRelationshipsDTOCopyWith<$Res> {
-  factory _$$SongRelationshipsDTOImplCopyWith(_$SongRelationshipsDTOImpl value,
-          $Res Function(_$SongRelationshipsDTOImpl) then) =
-      __$$SongRelationshipsDTOImplCopyWithImpl<$Res>;
+abstract class _$$SongRelationshipsDTOImplCopyWith<$Res> implements $SongRelationshipsDTOCopyWith<$Res> {
+  factory _$$SongRelationshipsDTOImplCopyWith(
+    _$SongRelationshipsDTOImpl value,
+    $Res Function(_$SongRelationshipsDTOImpl) then,
+  ) = __$$SongRelationshipsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {ResourceRelationshipDTO? albums,
-      ResourceRelationshipDTO? artists,
-      ResourceRelationshipDTO? station,
-      ResourceRelationshipDTO? composers,
-      ResourceRelationshipDTO? musicVideos,
-      ResourceRelationshipDTO? library,
-      ResourceRelationshipDTO? catalog});
+  $Res call({
+    ResourceRelationshipDTO? albums,
+    ResourceRelationshipDTO? artists,
+    ResourceRelationshipDTO? station,
+    ResourceRelationshipDTO? composers,
+    ResourceRelationshipDTO? musicVideos,
+    ResourceRelationshipDTO? library,
+    ResourceRelationshipDTO? catalog,
+  });
 
   @override
   $ResourceRelationshipDTOCopyWith<$Res>? get albums;
@@ -1442,9 +1447,10 @@ abstract class _$$SongRelationshipsDTOImplCopyWith<$Res>
 class __$$SongRelationshipsDTOImplCopyWithImpl<$Res>
     extends _$SongRelationshipsDTOCopyWithImpl<$Res, _$SongRelationshipsDTOImpl>
     implements _$$SongRelationshipsDTOImplCopyWith<$Res> {
-  __$$SongRelationshipsDTOImplCopyWithImpl(_$SongRelationshipsDTOImpl _value,
-      $Res Function(_$SongRelationshipsDTOImpl) _then)
-      : super(_value, _then);
+  __$$SongRelationshipsDTOImplCopyWithImpl(
+    _$SongRelationshipsDTOImpl _value,
+    $Res Function(_$SongRelationshipsDTOImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SongRelationshipsDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -1459,54 +1465,62 @@ class __$$SongRelationshipsDTOImplCopyWithImpl<$Res>
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_$SongRelationshipsDTOImpl(
-      albums: freezed == albums
-          ? _value.albums
-          : albums // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      artists: freezed == artists
-          ? _value.artists
-          : artists // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      station: freezed == station
-          ? _value.station
-          : station // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      composers: freezed == composers
-          ? _value.composers
-          : composers // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      musicVideos: freezed == musicVideos
-          ? _value.musicVideos
-          : musicVideos // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      library: freezed == library
-          ? _value.library
-          : library // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      catalog: freezed == catalog
-          ? _value.catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-    ));
+    return _then(
+      _$SongRelationshipsDTOImpl(
+        albums:
+            freezed == albums
+                ? _value.albums
+                : albums // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        artists:
+            freezed == artists
+                ? _value.artists
+                : artists // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        station:
+            freezed == station
+                ? _value.station
+                : station // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        composers:
+            freezed == composers
+                ? _value.composers
+                : composers // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        musicVideos:
+            freezed == musicVideos
+                ? _value.musicVideos
+                : musicVideos // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        library:
+            freezed == library
+                ? _value.library
+                : library // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        catalog:
+            freezed == catalog
+                ? _value.catalog
+                : catalog // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$SongRelationshipsDTOImpl extends _SongRelationshipsDTO {
-  const _$SongRelationshipsDTOImpl(
-      {this.albums,
-      this.artists,
-      this.station,
-      this.composers,
-      this.musicVideos,
-      this.library,
-      this.catalog})
-      : super._();
+  const _$SongRelationshipsDTOImpl({
+    this.albums,
+    this.artists,
+    this.station,
+    this.composers,
+    this.musicVideos,
+    this.library,
+    this.catalog,
+  }) : super._();
 
-  factory _$SongRelationshipsDTOImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SongRelationshipsDTOImplFromJson(json);
+  factory _$SongRelationshipsDTOImpl.fromJson(Map<String, dynamic> json) => _$$SongRelationshipsDTOImplFromJson(json);
 
   @override
   final ResourceRelationshipDTO? albums;
@@ -1536,50 +1550,43 @@ class _$SongRelationshipsDTOImpl extends _SongRelationshipsDTO {
             (identical(other.albums, albums) || other.albums == albums) &&
             (identical(other.artists, artists) || other.artists == artists) &&
             (identical(other.station, station) || other.station == station) &&
-            (identical(other.composers, composers) ||
-                other.composers == composers) &&
-            (identical(other.musicVideos, musicVideos) ||
-                other.musicVideos == musicVideos) &&
+            (identical(other.composers, composers) || other.composers == composers) &&
+            (identical(other.musicVideos, musicVideos) || other.musicVideos == musicVideos) &&
             (identical(other.library, library) || other.library == library) &&
             (identical(other.catalog, catalog) || other.catalog == catalog));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, albums, artists, station,
-      composers, musicVideos, library, catalog);
+  int get hashCode => Object.hash(runtimeType, albums, artists, station, composers, musicVideos, library, catalog);
 
   /// Create a copy of SongRelationshipsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SongRelationshipsDTOImplCopyWith<_$SongRelationshipsDTOImpl>
-      get copyWith =>
-          __$$SongRelationshipsDTOImplCopyWithImpl<_$SongRelationshipsDTOImpl>(
-              this, _$identity);
+  _$$SongRelationshipsDTOImplCopyWith<_$SongRelationshipsDTOImpl> get copyWith =>
+      __$$SongRelationshipsDTOImplCopyWithImpl<_$SongRelationshipsDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SongRelationshipsDTOImplToJson(
-      this,
-    );
+    return _$$SongRelationshipsDTOImplToJson(this);
   }
 }
 
 abstract class _SongRelationshipsDTO extends SongRelationshipsDTO {
-  const factory _SongRelationshipsDTO(
-      {final ResourceRelationshipDTO? albums,
-      final ResourceRelationshipDTO? artists,
-      final ResourceRelationshipDTO? station,
-      final ResourceRelationshipDTO? composers,
-      final ResourceRelationshipDTO? musicVideos,
-      final ResourceRelationshipDTO? library,
-      final ResourceRelationshipDTO? catalog}) = _$SongRelationshipsDTOImpl;
+  const factory _SongRelationshipsDTO({
+    final ResourceRelationshipDTO? albums,
+    final ResourceRelationshipDTO? artists,
+    final ResourceRelationshipDTO? station,
+    final ResourceRelationshipDTO? composers,
+    final ResourceRelationshipDTO? musicVideos,
+    final ResourceRelationshipDTO? library,
+    final ResourceRelationshipDTO? catalog,
+  }) = _$SongRelationshipsDTOImpl;
   const _SongRelationshipsDTO._() : super._();
 
-  factory _SongRelationshipsDTO.fromJson(Map<String, dynamic> json) =
-      _$SongRelationshipsDTOImpl.fromJson;
+  factory _SongRelationshipsDTO.fromJson(Map<String, dynamic> json) = _$SongRelationshipsDTOImpl.fromJson;
 
   @override
   ResourceRelationshipDTO? get albums;
@@ -1600,12 +1607,10 @@ abstract class _SongRelationshipsDTO extends SongRelationshipsDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SongRelationshipsDTOImplCopyWith<_$SongRelationshipsDTOImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$SongRelationshipsDTOImplCopyWith<_$SongRelationshipsDTOImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
-MusicVideoRelationshipsDTO _$MusicVideoRelationshipsDTOFromJson(
-    Map<String, dynamic> json) {
+MusicVideoRelationshipsDTO _$MusicVideoRelationshipsDTOFromJson(Map<String, dynamic> json) {
   return _MusicVideoRelationshipsDTO.fromJson(json);
 }
 
@@ -1623,23 +1628,23 @@ mixin _$MusicVideoRelationshipsDTO {
   /// Create a copy of MusicVideoRelationshipsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $MusicVideoRelationshipsDTOCopyWith<MusicVideoRelationshipsDTO>
-      get copyWith => throw _privateConstructorUsedError;
+  $MusicVideoRelationshipsDTOCopyWith<MusicVideoRelationshipsDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $MusicVideoRelationshipsDTOCopyWith<$Res> {
-  factory $MusicVideoRelationshipsDTOCopyWith(MusicVideoRelationshipsDTO value,
-          $Res Function(MusicVideoRelationshipsDTO) then) =
-      _$MusicVideoRelationshipsDTOCopyWithImpl<$Res,
-          MusicVideoRelationshipsDTO>;
+  factory $MusicVideoRelationshipsDTOCopyWith(
+    MusicVideoRelationshipsDTO value,
+    $Res Function(MusicVideoRelationshipsDTO) then,
+  ) = _$MusicVideoRelationshipsDTOCopyWithImpl<$Res, MusicVideoRelationshipsDTO>;
   @useResult
-  $Res call(
-      {ResourceRelationshipDTO? albums,
-      ResourceRelationshipDTO? artists,
-      ResourceRelationshipDTO? songs,
-      ResourceRelationshipDTO? library,
-      ResourceRelationshipDTO? catalog});
+  $Res call({
+    ResourceRelationshipDTO? albums,
+    ResourceRelationshipDTO? artists,
+    ResourceRelationshipDTO? songs,
+    ResourceRelationshipDTO? library,
+    ResourceRelationshipDTO? catalog,
+  });
 
   $ResourceRelationshipDTOCopyWith<$Res>? get albums;
   $ResourceRelationshipDTOCopyWith<$Res>? get artists;
@@ -1649,8 +1654,7 @@ abstract class $MusicVideoRelationshipsDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$MusicVideoRelationshipsDTOCopyWithImpl<$Res,
-        $Val extends MusicVideoRelationshipsDTO>
+class _$MusicVideoRelationshipsDTOCopyWithImpl<$Res, $Val extends MusicVideoRelationshipsDTO>
     implements $MusicVideoRelationshipsDTOCopyWith<$Res> {
   _$MusicVideoRelationshipsDTOCopyWithImpl(this._value, this._then);
 
@@ -1670,28 +1674,36 @@ class _$MusicVideoRelationshipsDTOCopyWithImpl<$Res,
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_value.copyWith(
-      albums: freezed == albums
-          ? _value.albums
-          : albums // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      artists: freezed == artists
-          ? _value.artists
-          : artists // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      songs: freezed == songs
-          ? _value.songs
-          : songs // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      library: freezed == library
-          ? _value.library
-          : library // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      catalog: freezed == catalog
-          ? _value.catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            albums:
+                freezed == albums
+                    ? _value.albums
+                    : albums // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            artists:
+                freezed == artists
+                    ? _value.artists
+                    : artists // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            songs:
+                freezed == songs
+                    ? _value.songs
+                    : songs // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            library:
+                freezed == library
+                    ? _value.library
+                    : library // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+            catalog:
+                freezed == catalog
+                    ? _value.catalog
+                    : catalog // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of MusicVideoRelationshipsDTO
@@ -1766,20 +1778,20 @@ class _$MusicVideoRelationshipsDTOCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$MusicVideoRelationshipsDTOImplCopyWith<$Res>
-    implements $MusicVideoRelationshipsDTOCopyWith<$Res> {
+abstract class _$$MusicVideoRelationshipsDTOImplCopyWith<$Res> implements $MusicVideoRelationshipsDTOCopyWith<$Res> {
   factory _$$MusicVideoRelationshipsDTOImplCopyWith(
-          _$MusicVideoRelationshipsDTOImpl value,
-          $Res Function(_$MusicVideoRelationshipsDTOImpl) then) =
-      __$$MusicVideoRelationshipsDTOImplCopyWithImpl<$Res>;
+    _$MusicVideoRelationshipsDTOImpl value,
+    $Res Function(_$MusicVideoRelationshipsDTOImpl) then,
+  ) = __$$MusicVideoRelationshipsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {ResourceRelationshipDTO? albums,
-      ResourceRelationshipDTO? artists,
-      ResourceRelationshipDTO? songs,
-      ResourceRelationshipDTO? library,
-      ResourceRelationshipDTO? catalog});
+  $Res call({
+    ResourceRelationshipDTO? albums,
+    ResourceRelationshipDTO? artists,
+    ResourceRelationshipDTO? songs,
+    ResourceRelationshipDTO? library,
+    ResourceRelationshipDTO? catalog,
+  });
 
   @override
   $ResourceRelationshipDTOCopyWith<$Res>? get albums;
@@ -1795,13 +1807,12 @@ abstract class _$$MusicVideoRelationshipsDTOImplCopyWith<$Res>
 
 /// @nodoc
 class __$$MusicVideoRelationshipsDTOImplCopyWithImpl<$Res>
-    extends _$MusicVideoRelationshipsDTOCopyWithImpl<$Res,
-        _$MusicVideoRelationshipsDTOImpl>
+    extends _$MusicVideoRelationshipsDTOCopyWithImpl<$Res, _$MusicVideoRelationshipsDTOImpl>
     implements _$$MusicVideoRelationshipsDTOImplCopyWith<$Res> {
   __$$MusicVideoRelationshipsDTOImplCopyWithImpl(
-      _$MusicVideoRelationshipsDTOImpl _value,
-      $Res Function(_$MusicVideoRelationshipsDTOImpl) _then)
-      : super(_value, _then);
+    _$MusicVideoRelationshipsDTOImpl _value,
+    $Res Function(_$MusicVideoRelationshipsDTOImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of MusicVideoRelationshipsDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -1814,40 +1825,45 @@ class __$$MusicVideoRelationshipsDTOImplCopyWithImpl<$Res>
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_$MusicVideoRelationshipsDTOImpl(
-      albums: freezed == albums
-          ? _value.albums
-          : albums // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      artists: freezed == artists
-          ? _value.artists
-          : artists // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      songs: freezed == songs
-          ? _value.songs
-          : songs // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      library: freezed == library
-          ? _value.library
-          : library // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-      catalog: freezed == catalog
-          ? _value.catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-    ));
+    return _then(
+      _$MusicVideoRelationshipsDTOImpl(
+        albums:
+            freezed == albums
+                ? _value.albums
+                : albums // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        artists:
+            freezed == artists
+                ? _value.artists
+                : artists // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        songs:
+            freezed == songs
+                ? _value.songs
+                : songs // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        library:
+            freezed == library
+                ? _value.library
+                : library // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+        catalog:
+            freezed == catalog
+                ? _value.catalog
+                : catalog // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$MusicVideoRelationshipsDTOImpl extends _MusicVideoRelationshipsDTO {
-  const _$MusicVideoRelationshipsDTOImpl(
-      {this.albums, this.artists, this.songs, this.library, this.catalog})
-      : super._();
+  const _$MusicVideoRelationshipsDTOImpl({this.albums, this.artists, this.songs, this.library, this.catalog})
+    : super._();
 
-  factory _$MusicVideoRelationshipsDTOImpl.fromJson(
-          Map<String, dynamic> json) =>
+  factory _$MusicVideoRelationshipsDTOImpl.fromJson(Map<String, dynamic> json) =>
       _$$MusicVideoRelationshipsDTOImplFromJson(json);
 
   @override
@@ -1880,38 +1896,33 @@ class _$MusicVideoRelationshipsDTOImpl extends _MusicVideoRelationshipsDTO {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, albums, artists, songs, library, catalog);
+  int get hashCode => Object.hash(runtimeType, albums, artists, songs, library, catalog);
 
   /// Create a copy of MusicVideoRelationshipsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$MusicVideoRelationshipsDTOImplCopyWith<_$MusicVideoRelationshipsDTOImpl>
-      get copyWith => __$$MusicVideoRelationshipsDTOImplCopyWithImpl<
-          _$MusicVideoRelationshipsDTOImpl>(this, _$identity);
+  _$$MusicVideoRelationshipsDTOImplCopyWith<_$MusicVideoRelationshipsDTOImpl> get copyWith =>
+      __$$MusicVideoRelationshipsDTOImplCopyWithImpl<_$MusicVideoRelationshipsDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MusicVideoRelationshipsDTOImplToJson(
-      this,
-    );
+    return _$$MusicVideoRelationshipsDTOImplToJson(this);
   }
 }
 
 abstract class _MusicVideoRelationshipsDTO extends MusicVideoRelationshipsDTO {
-  const factory _MusicVideoRelationshipsDTO(
-          {final ResourceRelationshipDTO? albums,
-          final ResourceRelationshipDTO? artists,
-          final ResourceRelationshipDTO? songs,
-          final ResourceRelationshipDTO? library,
-          final ResourceRelationshipDTO? catalog}) =
-      _$MusicVideoRelationshipsDTOImpl;
+  const factory _MusicVideoRelationshipsDTO({
+    final ResourceRelationshipDTO? albums,
+    final ResourceRelationshipDTO? artists,
+    final ResourceRelationshipDTO? songs,
+    final ResourceRelationshipDTO? library,
+    final ResourceRelationshipDTO? catalog,
+  }) = _$MusicVideoRelationshipsDTOImpl;
   const _MusicVideoRelationshipsDTO._() : super._();
 
-  factory _MusicVideoRelationshipsDTO.fromJson(Map<String, dynamic> json) =
-      _$MusicVideoRelationshipsDTOImpl.fromJson;
+  factory _MusicVideoRelationshipsDTO.fromJson(Map<String, dynamic> json) = _$MusicVideoRelationshipsDTOImpl.fromJson;
 
   @override
   ResourceRelationshipDTO? get albums;
@@ -1928,12 +1939,11 @@ abstract class _MusicVideoRelationshipsDTO extends MusicVideoRelationshipsDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MusicVideoRelationshipsDTOImplCopyWith<_$MusicVideoRelationshipsDTOImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$MusicVideoRelationshipsDTOImplCopyWith<_$MusicVideoRelationshipsDTOImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-CuratorRelationshipsDTO _$CuratorRelationshipsDTOFromJson(
-    Map<String, dynamic> json) {
+CuratorRelationshipsDTO _$CuratorRelationshipsDTOFromJson(Map<String, dynamic> json) {
   return _CuratorRelationshipsDTO.fromJson(json);
 }
 
@@ -1947,14 +1957,12 @@ mixin _$CuratorRelationshipsDTO {
   /// Create a copy of CuratorRelationshipsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CuratorRelationshipsDTOCopyWith<CuratorRelationshipsDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CuratorRelationshipsDTOCopyWith<CuratorRelationshipsDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CuratorRelationshipsDTOCopyWith<$Res> {
-  factory $CuratorRelationshipsDTOCopyWith(CuratorRelationshipsDTO value,
-          $Res Function(CuratorRelationshipsDTO) then) =
+  factory $CuratorRelationshipsDTOCopyWith(CuratorRelationshipsDTO value, $Res Function(CuratorRelationshipsDTO) then) =
       _$CuratorRelationshipsDTOCopyWithImpl<$Res, CuratorRelationshipsDTO>;
   @useResult
   $Res call({ResourceRelationshipDTO? playlists});
@@ -1963,8 +1971,7 @@ abstract class $CuratorRelationshipsDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$CuratorRelationshipsDTOCopyWithImpl<$Res,
-        $Val extends CuratorRelationshipsDTO>
+class _$CuratorRelationshipsDTOCopyWithImpl<$Res, $Val extends CuratorRelationshipsDTO>
     implements $CuratorRelationshipsDTOCopyWith<$Res> {
   _$CuratorRelationshipsDTOCopyWithImpl(this._value, this._then);
 
@@ -1977,15 +1984,17 @@ class _$CuratorRelationshipsDTOCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? playlists = freezed,
-  }) {
-    return _then(_value.copyWith(
-      playlists: freezed == playlists
-          ? _value.playlists
-          : playlists // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-    ) as $Val);
+  $Res call({Object? playlists = freezed}) {
+    return _then(
+      _value.copyWith(
+            playlists:
+                freezed == playlists
+                    ? _value.playlists
+                    : playlists // ignore: cast_nullable_to_non_nullable
+                        as ResourceRelationshipDTO?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of CuratorRelationshipsDTO
@@ -2004,12 +2013,11 @@ class _$CuratorRelationshipsDTOCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$CuratorRelationshipsDTOImplCopyWith<$Res>
-    implements $CuratorRelationshipsDTOCopyWith<$Res> {
+abstract class _$$CuratorRelationshipsDTOImplCopyWith<$Res> implements $CuratorRelationshipsDTOCopyWith<$Res> {
   factory _$$CuratorRelationshipsDTOImplCopyWith(
-          _$CuratorRelationshipsDTOImpl value,
-          $Res Function(_$CuratorRelationshipsDTOImpl) then) =
-      __$$CuratorRelationshipsDTOImplCopyWithImpl<$Res>;
+    _$CuratorRelationshipsDTOImpl value,
+    $Res Function(_$CuratorRelationshipsDTOImpl) then,
+  ) = __$$CuratorRelationshipsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({ResourceRelationshipDTO? playlists});
@@ -2020,27 +2028,27 @@ abstract class _$$CuratorRelationshipsDTOImplCopyWith<$Res>
 
 /// @nodoc
 class __$$CuratorRelationshipsDTOImplCopyWithImpl<$Res>
-    extends _$CuratorRelationshipsDTOCopyWithImpl<$Res,
-        _$CuratorRelationshipsDTOImpl>
+    extends _$CuratorRelationshipsDTOCopyWithImpl<$Res, _$CuratorRelationshipsDTOImpl>
     implements _$$CuratorRelationshipsDTOImplCopyWith<$Res> {
   __$$CuratorRelationshipsDTOImplCopyWithImpl(
-      _$CuratorRelationshipsDTOImpl _value,
-      $Res Function(_$CuratorRelationshipsDTOImpl) _then)
-      : super(_value, _then);
+    _$CuratorRelationshipsDTOImpl _value,
+    $Res Function(_$CuratorRelationshipsDTOImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of CuratorRelationshipsDTO
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? playlists = freezed,
-  }) {
-    return _then(_$CuratorRelationshipsDTOImpl(
-      playlists: freezed == playlists
-          ? _value.playlists
-          : playlists // ignore: cast_nullable_to_non_nullable
-              as ResourceRelationshipDTO?,
-    ));
+  $Res call({Object? playlists = freezed}) {
+    return _then(
+      _$CuratorRelationshipsDTOImpl(
+        playlists:
+            freezed == playlists
+                ? _value.playlists
+                : playlists // ignore: cast_nullable_to_non_nullable
+                    as ResourceRelationshipDTO?,
+      ),
+    );
   }
 }
 
@@ -2065,8 +2073,7 @@ class _$CuratorRelationshipsDTOImpl extends _CuratorRelationshipsDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CuratorRelationshipsDTOImpl &&
-            (identical(other.playlists, playlists) ||
-                other.playlists == playlists));
+            (identical(other.playlists, playlists) || other.playlists == playlists));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -2078,26 +2085,20 @@ class _$CuratorRelationshipsDTOImpl extends _CuratorRelationshipsDTO {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CuratorRelationshipsDTOImplCopyWith<_$CuratorRelationshipsDTOImpl>
-      get copyWith => __$$CuratorRelationshipsDTOImplCopyWithImpl<
-          _$CuratorRelationshipsDTOImpl>(this, _$identity);
+  _$$CuratorRelationshipsDTOImplCopyWith<_$CuratorRelationshipsDTOImpl> get copyWith =>
+      __$$CuratorRelationshipsDTOImplCopyWithImpl<_$CuratorRelationshipsDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CuratorRelationshipsDTOImplToJson(
-      this,
-    );
+    return _$$CuratorRelationshipsDTOImplToJson(this);
   }
 }
 
 abstract class _CuratorRelationshipsDTO extends CuratorRelationshipsDTO {
-  const factory _CuratorRelationshipsDTO(
-          {final ResourceRelationshipDTO? playlists}) =
-      _$CuratorRelationshipsDTOImpl;
+  const factory _CuratorRelationshipsDTO({final ResourceRelationshipDTO? playlists}) = _$CuratorRelationshipsDTOImpl;
   const _CuratorRelationshipsDTO._() : super._();
 
-  factory _CuratorRelationshipsDTO.fromJson(Map<String, dynamic> json) =
-      _$CuratorRelationshipsDTOImpl.fromJson;
+  factory _CuratorRelationshipsDTO.fromJson(Map<String, dynamic> json) = _$CuratorRelationshipsDTOImpl.fromJson;
 
   @override
   ResourceRelationshipDTO? get playlists;
@@ -2106,6 +2107,6 @@ abstract class _CuratorRelationshipsDTO extends CuratorRelationshipsDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CuratorRelationshipsDTOImplCopyWith<_$CuratorRelationshipsDTOImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$CuratorRelationshipsDTOImplCopyWith<_$CuratorRelationshipsDTOImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

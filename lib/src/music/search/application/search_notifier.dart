@@ -20,17 +20,13 @@ class SearchNotifier extends StateNotifier<SearchResultsState> {
   final SearchRepository _repository;
   final Ref _ref;
 
-  SearchNotifier(this._repository, this._ref)
-      : super(const SearchResultsState.initial());
+  SearchNotifier(this._repository, this._ref) : super(const SearchResultsState.initial());
 
   Future<Unit> search(String term) async {
     state = const SearchResultsState.loading();
     final storefront = await _ref.read(storefrontProvider.future);
     final failureOrResults = await _repository.search(storefront, term);
-    state = failureOrResults.fold(
-      (l) => SearchResultsState.error(l),
-      (r) => SearchResultsState.data(r),
-    );
+    state = failureOrResults.fold((l) => SearchResultsState.error(l), (r) => SearchResultsState.data(r));
     return unit;
   }
 }

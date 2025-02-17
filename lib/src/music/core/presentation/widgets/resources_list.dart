@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:misica/src/core/shared/theme_context.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 
-typedef ResourcesListItemBuilder = Widget Function(
-    BuildContext context, Resource item);
+typedef ResourcesListItemBuilder = Widget Function(BuildContext context, Resource item);
 
 class ResourcesList extends StatelessWidget {
   final List<Resource> resources;
@@ -31,9 +30,7 @@ class ResourcesList extends StatelessWidget {
     return SizedBox(
       height: (itemHeight * itemsPerPage + itemSpacing * (itemsPerPage - 1)),
       child: PageView.builder(
-        controller: PageController(
-          viewportFraction: 1 - (pagePadding * 2 / screenWidth),
-        ),
+        controller: PageController(viewportFraction: 1 - (pagePadding * 2 / screenWidth)),
         itemCount: itemCount,
         itemBuilder: (context, position) {
           int start = position * itemsPerPage;
@@ -44,11 +41,7 @@ class ResourcesList extends StatelessWidget {
 
           return Wrap(
             runSpacing: itemSpacing,
-            children: [
-              ...resources.sublist(start, end).map(
-                    (e) => itemBuilder(context, e),
-                  )
-            ],
+            children: [...resources.sublist(start, end).map((e) => itemBuilder(context, e))],
           );
         },
       ),

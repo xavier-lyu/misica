@@ -12,34 +12,28 @@ part of 'resource_relationships.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 /// @nodoc
 mixin _$AlbumRelationships {
   List<Artist>? get artists => throw _privateConstructorUsedError;
-  List<Track>? get tracks =>
-      throw _privateConstructorUsedError; // required List<RecordLabel>? recordLabels,
+  List<Track>? get tracks => throw _privateConstructorUsedError; // required List<RecordLabel>? recordLabels,
   List<Album>? get library => throw _privateConstructorUsedError;
   List<Album>? get catalog => throw _privateConstructorUsedError;
 
   /// Create a copy of AlbumRelationships
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $AlbumRelationshipsCopyWith<AlbumRelationships> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AlbumRelationshipsCopyWith<AlbumRelationships> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AlbumRelationshipsCopyWith<$Res> {
-  factory $AlbumRelationshipsCopyWith(
-          AlbumRelationships value, $Res Function(AlbumRelationships) then) =
+  factory $AlbumRelationshipsCopyWith(AlbumRelationships value, $Res Function(AlbumRelationships) then) =
       _$AlbumRelationshipsCopyWithImpl<$Res, AlbumRelationships>;
   @useResult
-  $Res call(
-      {List<Artist>? artists,
-      List<Track>? tracks,
-      List<Album>? library,
-      List<Album>? catalog});
+  $Res call({List<Artist>? artists, List<Track>? tracks, List<Album>? library, List<Album>? catalog});
 }
 
 /// @nodoc
@@ -62,49 +56,51 @@ class _$AlbumRelationshipsCopyWithImpl<$Res, $Val extends AlbumRelationships>
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_value.copyWith(
-      artists: freezed == artists
-          ? _value.artists
-          : artists // ignore: cast_nullable_to_non_nullable
-              as List<Artist>?,
-      tracks: freezed == tracks
-          ? _value.tracks
-          : tracks // ignore: cast_nullable_to_non_nullable
-              as List<Track>?,
-      library: freezed == library
-          ? _value.library
-          : library // ignore: cast_nullable_to_non_nullable
-              as List<Album>?,
-      catalog: freezed == catalog
-          ? _value.catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as List<Album>?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            artists:
+                freezed == artists
+                    ? _value.artists
+                    : artists // ignore: cast_nullable_to_non_nullable
+                        as List<Artist>?,
+            tracks:
+                freezed == tracks
+                    ? _value.tracks
+                    : tracks // ignore: cast_nullable_to_non_nullable
+                        as List<Track>?,
+            library:
+                freezed == library
+                    ? _value.library
+                    : library // ignore: cast_nullable_to_non_nullable
+                        as List<Album>?,
+            catalog:
+                freezed == catalog
+                    ? _value.catalog
+                    : catalog // ignore: cast_nullable_to_non_nullable
+                        as List<Album>?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$AlbumRelationshipsImplCopyWith<$Res>
-    implements $AlbumRelationshipsCopyWith<$Res> {
-  factory _$$AlbumRelationshipsImplCopyWith(_$AlbumRelationshipsImpl value,
-          $Res Function(_$AlbumRelationshipsImpl) then) =
-      __$$AlbumRelationshipsImplCopyWithImpl<$Res>;
+abstract class _$$AlbumRelationshipsImplCopyWith<$Res> implements $AlbumRelationshipsCopyWith<$Res> {
+  factory _$$AlbumRelationshipsImplCopyWith(
+    _$AlbumRelationshipsImpl value,
+    $Res Function(_$AlbumRelationshipsImpl) then,
+  ) = __$$AlbumRelationshipsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {List<Artist>? artists,
-      List<Track>? tracks,
-      List<Album>? library,
-      List<Album>? catalog});
+  $Res call({List<Artist>? artists, List<Track>? tracks, List<Album>? library, List<Album>? catalog});
 }
 
 /// @nodoc
 class __$$AlbumRelationshipsImplCopyWithImpl<$Res>
     extends _$AlbumRelationshipsCopyWithImpl<$Res, _$AlbumRelationshipsImpl>
     implements _$$AlbumRelationshipsImplCopyWith<$Res> {
-  __$$AlbumRelationshipsImplCopyWithImpl(_$AlbumRelationshipsImpl _value,
-      $Res Function(_$AlbumRelationshipsImpl) _then)
-      : super(_value, _then);
+  __$$AlbumRelationshipsImplCopyWithImpl(_$AlbumRelationshipsImpl _value, $Res Function(_$AlbumRelationshipsImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of AlbumRelationships
   /// with the given fields replaced by the non-null parameter values.
@@ -116,40 +112,46 @@ class __$$AlbumRelationshipsImplCopyWithImpl<$Res>
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_$AlbumRelationshipsImpl(
-      artists: freezed == artists
-          ? _value._artists
-          : artists // ignore: cast_nullable_to_non_nullable
-              as List<Artist>?,
-      tracks: freezed == tracks
-          ? _value._tracks
-          : tracks // ignore: cast_nullable_to_non_nullable
-              as List<Track>?,
-      library: freezed == library
-          ? _value._library
-          : library // ignore: cast_nullable_to_non_nullable
-              as List<Album>?,
-      catalog: freezed == catalog
-          ? _value._catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as List<Album>?,
-    ));
+    return _then(
+      _$AlbumRelationshipsImpl(
+        artists:
+            freezed == artists
+                ? _value._artists
+                : artists // ignore: cast_nullable_to_non_nullable
+                    as List<Artist>?,
+        tracks:
+            freezed == tracks
+                ? _value._tracks
+                : tracks // ignore: cast_nullable_to_non_nullable
+                    as List<Track>?,
+        library:
+            freezed == library
+                ? _value._library
+                : library // ignore: cast_nullable_to_non_nullable
+                    as List<Album>?,
+        catalog:
+            freezed == catalog
+                ? _value._catalog
+                : catalog // ignore: cast_nullable_to_non_nullable
+                    as List<Album>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$AlbumRelationshipsImpl extends _AlbumRelationships {
-  const _$AlbumRelationshipsImpl(
-      {required final List<Artist>? artists,
-      required final List<Track>? tracks,
-      required final List<Album>? library,
-      required final List<Album>? catalog})
-      : _artists = artists,
-        _tracks = tracks,
-        _library = library,
-        _catalog = catalog,
-        super._();
+  const _$AlbumRelationshipsImpl({
+    required final List<Artist>? artists,
+    required final List<Track>? tracks,
+    required final List<Album>? library,
+    required final List<Album>? catalog,
+  }) : _artists = artists,
+       _tracks = tracks,
+       _library = library,
+       _catalog = catalog,
+       super._();
 
   final List<Artist>? _artists;
   @override
@@ -171,9 +173,9 @@ class _$AlbumRelationshipsImpl extends _AlbumRelationships {
     return EqualUnmodifiableListView(value);
   }
 
-// required List<RecordLabel>? recordLabels,
+  // required List<RecordLabel>? recordLabels,
   final List<Album>? _library;
-// required List<RecordLabel>? recordLabels,
+  // required List<RecordLabel>? recordLabels,
   @override
   List<Album>? get library {
     final value = _library;
@@ -211,11 +213,12 @@ class _$AlbumRelationshipsImpl extends _AlbumRelationships {
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_artists),
-      const DeepCollectionEquality().hash(_tracks),
-      const DeepCollectionEquality().hash(_library),
-      const DeepCollectionEquality().hash(_catalog));
+    runtimeType,
+    const DeepCollectionEquality().hash(_artists),
+    const DeepCollectionEquality().hash(_tracks),
+    const DeepCollectionEquality().hash(_library),
+    const DeepCollectionEquality().hash(_catalog),
+  );
 
   /// Create a copy of AlbumRelationships
   /// with the given fields replaced by the non-null parameter values.
@@ -223,16 +226,16 @@ class _$AlbumRelationshipsImpl extends _AlbumRelationships {
   @override
   @pragma('vm:prefer-inline')
   _$$AlbumRelationshipsImplCopyWith<_$AlbumRelationshipsImpl> get copyWith =>
-      __$$AlbumRelationshipsImplCopyWithImpl<_$AlbumRelationshipsImpl>(
-          this, _$identity);
+      __$$AlbumRelationshipsImplCopyWithImpl<_$AlbumRelationshipsImpl>(this, _$identity);
 }
 
 abstract class _AlbumRelationships extends AlbumRelationships {
-  const factory _AlbumRelationships(
-      {required final List<Artist>? artists,
-      required final List<Track>? tracks,
-      required final List<Album>? library,
-      required final List<Album>? catalog}) = _$AlbumRelationshipsImpl;
+  const factory _AlbumRelationships({
+    required final List<Artist>? artists,
+    required final List<Track>? tracks,
+    required final List<Album>? library,
+    required final List<Album>? catalog,
+  }) = _$AlbumRelationshipsImpl;
   const _AlbumRelationships._() : super._();
 
   @override
@@ -248,8 +251,7 @@ abstract class _AlbumRelationships extends AlbumRelationships {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AlbumRelationshipsImplCopyWith<_$AlbumRelationshipsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AlbumRelationshipsImplCopyWith<_$AlbumRelationshipsImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -260,29 +262,27 @@ mixin _$ArtistRelationships {
   List<Station>? get station => throw _privateConstructorUsedError;
   List<Artist>? get catalog => throw _privateConstructorUsedError;
   @ResourceDTOConverter()
-  List<Resource>? get defaultPlayableContent =>
-      throw _privateConstructorUsedError;
+  List<Resource>? get defaultPlayableContent => throw _privateConstructorUsedError;
 
   /// Create a copy of ArtistRelationships
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ArtistRelationshipsCopyWith<ArtistRelationships> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ArtistRelationshipsCopyWith<ArtistRelationships> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ArtistRelationshipsCopyWith<$Res> {
-  factory $ArtistRelationshipsCopyWith(
-          ArtistRelationships value, $Res Function(ArtistRelationships) then) =
+  factory $ArtistRelationshipsCopyWith(ArtistRelationships value, $Res Function(ArtistRelationships) then) =
       _$ArtistRelationshipsCopyWithImpl<$Res, ArtistRelationships>;
   @useResult
-  $Res call(
-      {List<Album>? albums,
-      List<Playlist>? playlists,
-      List<MusicVideo>? musicVideos,
-      List<Station>? station,
-      List<Artist>? catalog,
-      @ResourceDTOConverter() List<Resource>? defaultPlayableContent});
+  $Res call({
+    List<Album>? albums,
+    List<Playlist>? playlists,
+    List<MusicVideo>? musicVideos,
+    List<Station>? station,
+    List<Artist>? catalog,
+    @ResourceDTOConverter() List<Resource>? defaultPlayableContent,
+  });
 }
 
 /// @nodoc
@@ -307,59 +307,70 @@ class _$ArtistRelationshipsCopyWithImpl<$Res, $Val extends ArtistRelationships>
     Object? catalog = freezed,
     Object? defaultPlayableContent = freezed,
   }) {
-    return _then(_value.copyWith(
-      albums: freezed == albums
-          ? _value.albums
-          : albums // ignore: cast_nullable_to_non_nullable
-              as List<Album>?,
-      playlists: freezed == playlists
-          ? _value.playlists
-          : playlists // ignore: cast_nullable_to_non_nullable
-              as List<Playlist>?,
-      musicVideos: freezed == musicVideos
-          ? _value.musicVideos
-          : musicVideos // ignore: cast_nullable_to_non_nullable
-              as List<MusicVideo>?,
-      station: freezed == station
-          ? _value.station
-          : station // ignore: cast_nullable_to_non_nullable
-              as List<Station>?,
-      catalog: freezed == catalog
-          ? _value.catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as List<Artist>?,
-      defaultPlayableContent: freezed == defaultPlayableContent
-          ? _value.defaultPlayableContent
-          : defaultPlayableContent // ignore: cast_nullable_to_non_nullable
-              as List<Resource>?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            albums:
+                freezed == albums
+                    ? _value.albums
+                    : albums // ignore: cast_nullable_to_non_nullable
+                        as List<Album>?,
+            playlists:
+                freezed == playlists
+                    ? _value.playlists
+                    : playlists // ignore: cast_nullable_to_non_nullable
+                        as List<Playlist>?,
+            musicVideos:
+                freezed == musicVideos
+                    ? _value.musicVideos
+                    : musicVideos // ignore: cast_nullable_to_non_nullable
+                        as List<MusicVideo>?,
+            station:
+                freezed == station
+                    ? _value.station
+                    : station // ignore: cast_nullable_to_non_nullable
+                        as List<Station>?,
+            catalog:
+                freezed == catalog
+                    ? _value.catalog
+                    : catalog // ignore: cast_nullable_to_non_nullable
+                        as List<Artist>?,
+            defaultPlayableContent:
+                freezed == defaultPlayableContent
+                    ? _value.defaultPlayableContent
+                    : defaultPlayableContent // ignore: cast_nullable_to_non_nullable
+                        as List<Resource>?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$ArtistRelationshipsImplCopyWith<$Res>
-    implements $ArtistRelationshipsCopyWith<$Res> {
-  factory _$$ArtistRelationshipsImplCopyWith(_$ArtistRelationshipsImpl value,
-          $Res Function(_$ArtistRelationshipsImpl) then) =
-      __$$ArtistRelationshipsImplCopyWithImpl<$Res>;
+abstract class _$$ArtistRelationshipsImplCopyWith<$Res> implements $ArtistRelationshipsCopyWith<$Res> {
+  factory _$$ArtistRelationshipsImplCopyWith(
+    _$ArtistRelationshipsImpl value,
+    $Res Function(_$ArtistRelationshipsImpl) then,
+  ) = __$$ArtistRelationshipsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {List<Album>? albums,
-      List<Playlist>? playlists,
-      List<MusicVideo>? musicVideos,
-      List<Station>? station,
-      List<Artist>? catalog,
-      @ResourceDTOConverter() List<Resource>? defaultPlayableContent});
+  $Res call({
+    List<Album>? albums,
+    List<Playlist>? playlists,
+    List<MusicVideo>? musicVideos,
+    List<Station>? station,
+    List<Artist>? catalog,
+    @ResourceDTOConverter() List<Resource>? defaultPlayableContent,
+  });
 }
 
 /// @nodoc
 class __$$ArtistRelationshipsImplCopyWithImpl<$Res>
     extends _$ArtistRelationshipsCopyWithImpl<$Res, _$ArtistRelationshipsImpl>
     implements _$$ArtistRelationshipsImplCopyWith<$Res> {
-  __$$ArtistRelationshipsImplCopyWithImpl(_$ArtistRelationshipsImpl _value,
-      $Res Function(_$ArtistRelationshipsImpl) _then)
-      : super(_value, _then);
+  __$$ArtistRelationshipsImplCopyWithImpl(
+    _$ArtistRelationshipsImpl _value,
+    $Res Function(_$ArtistRelationshipsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ArtistRelationships
   /// with the given fields replaced by the non-null parameter values.
@@ -373,53 +384,60 @@ class __$$ArtistRelationshipsImplCopyWithImpl<$Res>
     Object? catalog = freezed,
     Object? defaultPlayableContent = freezed,
   }) {
-    return _then(_$ArtistRelationshipsImpl(
-      albums: freezed == albums
-          ? _value._albums
-          : albums // ignore: cast_nullable_to_non_nullable
-              as List<Album>?,
-      playlists: freezed == playlists
-          ? _value._playlists
-          : playlists // ignore: cast_nullable_to_non_nullable
-              as List<Playlist>?,
-      musicVideos: freezed == musicVideos
-          ? _value._musicVideos
-          : musicVideos // ignore: cast_nullable_to_non_nullable
-              as List<MusicVideo>?,
-      station: freezed == station
-          ? _value._station
-          : station // ignore: cast_nullable_to_non_nullable
-              as List<Station>?,
-      catalog: freezed == catalog
-          ? _value._catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as List<Artist>?,
-      defaultPlayableContent: freezed == defaultPlayableContent
-          ? _value._defaultPlayableContent
-          : defaultPlayableContent // ignore: cast_nullable_to_non_nullable
-              as List<Resource>?,
-    ));
+    return _then(
+      _$ArtistRelationshipsImpl(
+        albums:
+            freezed == albums
+                ? _value._albums
+                : albums // ignore: cast_nullable_to_non_nullable
+                    as List<Album>?,
+        playlists:
+            freezed == playlists
+                ? _value._playlists
+                : playlists // ignore: cast_nullable_to_non_nullable
+                    as List<Playlist>?,
+        musicVideos:
+            freezed == musicVideos
+                ? _value._musicVideos
+                : musicVideos // ignore: cast_nullable_to_non_nullable
+                    as List<MusicVideo>?,
+        station:
+            freezed == station
+                ? _value._station
+                : station // ignore: cast_nullable_to_non_nullable
+                    as List<Station>?,
+        catalog:
+            freezed == catalog
+                ? _value._catalog
+                : catalog // ignore: cast_nullable_to_non_nullable
+                    as List<Artist>?,
+        defaultPlayableContent:
+            freezed == defaultPlayableContent
+                ? _value._defaultPlayableContent
+                : defaultPlayableContent // ignore: cast_nullable_to_non_nullable
+                    as List<Resource>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$ArtistRelationshipsImpl extends _ArtistRelationships {
-  const _$ArtistRelationshipsImpl(
-      {required final List<Album>? albums,
-      required final List<Playlist>? playlists,
-      required final List<MusicVideo>? musicVideos,
-      required final List<Station>? station,
-      required final List<Artist>? catalog,
-      @ResourceDTOConverter()
-      required final List<Resource>? defaultPlayableContent})
-      : _albums = albums,
-        _playlists = playlists,
-        _musicVideos = musicVideos,
-        _station = station,
-        _catalog = catalog,
-        _defaultPlayableContent = defaultPlayableContent,
-        super._();
+  const _$ArtistRelationshipsImpl({
+    required final List<Album>? albums,
+    required final List<Playlist>? playlists,
+    required final List<MusicVideo>? musicVideos,
+    required final List<Station>? station,
+    required final List<Artist>? catalog,
+    @ResourceDTOConverter() required final List<Resource>? defaultPlayableContent,
+  }) : _albums = albums,
+       _playlists = playlists,
+       _musicVideos = musicVideos,
+       _station = station,
+       _catalog = catalog,
+       _defaultPlayableContent = defaultPlayableContent,
+       super._();
 
   final List<Album>? _albums;
   @override
@@ -477,8 +495,7 @@ class _$ArtistRelationshipsImpl extends _ArtistRelationships {
   List<Resource>? get defaultPlayableContent {
     final value = _defaultPlayableContent;
     if (value == null) return null;
-    if (_defaultPlayableContent is EqualUnmodifiableListView)
-      return _defaultPlayableContent;
+    if (_defaultPlayableContent is EqualUnmodifiableListView) return _defaultPlayableContent;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -494,25 +511,23 @@ class _$ArtistRelationshipsImpl extends _ArtistRelationships {
         (other.runtimeType == runtimeType &&
             other is _$ArtistRelationshipsImpl &&
             const DeepCollectionEquality().equals(other._albums, _albums) &&
-            const DeepCollectionEquality()
-                .equals(other._playlists, _playlists) &&
-            const DeepCollectionEquality()
-                .equals(other._musicVideos, _musicVideos) &&
+            const DeepCollectionEquality().equals(other._playlists, _playlists) &&
+            const DeepCollectionEquality().equals(other._musicVideos, _musicVideos) &&
             const DeepCollectionEquality().equals(other._station, _station) &&
             const DeepCollectionEquality().equals(other._catalog, _catalog) &&
-            const DeepCollectionEquality().equals(
-                other._defaultPlayableContent, _defaultPlayableContent));
+            const DeepCollectionEquality().equals(other._defaultPlayableContent, _defaultPlayableContent));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_albums),
-      const DeepCollectionEquality().hash(_playlists),
-      const DeepCollectionEquality().hash(_musicVideos),
-      const DeepCollectionEquality().hash(_station),
-      const DeepCollectionEquality().hash(_catalog),
-      const DeepCollectionEquality().hash(_defaultPlayableContent));
+    runtimeType,
+    const DeepCollectionEquality().hash(_albums),
+    const DeepCollectionEquality().hash(_playlists),
+    const DeepCollectionEquality().hash(_musicVideos),
+    const DeepCollectionEquality().hash(_station),
+    const DeepCollectionEquality().hash(_catalog),
+    const DeepCollectionEquality().hash(_defaultPlayableContent),
+  );
 
   /// Create a copy of ArtistRelationships
   /// with the given fields replaced by the non-null parameter values.
@@ -520,20 +535,18 @@ class _$ArtistRelationshipsImpl extends _ArtistRelationships {
   @override
   @pragma('vm:prefer-inline')
   _$$ArtistRelationshipsImplCopyWith<_$ArtistRelationshipsImpl> get copyWith =>
-      __$$ArtistRelationshipsImplCopyWithImpl<_$ArtistRelationshipsImpl>(
-          this, _$identity);
+      __$$ArtistRelationshipsImplCopyWithImpl<_$ArtistRelationshipsImpl>(this, _$identity);
 }
 
 abstract class _ArtistRelationships extends ArtistRelationships {
-  const factory _ArtistRelationships(
-          {required final List<Album>? albums,
-          required final List<Playlist>? playlists,
-          required final List<MusicVideo>? musicVideos,
-          required final List<Station>? station,
-          required final List<Artist>? catalog,
-          @ResourceDTOConverter()
-          required final List<Resource>? defaultPlayableContent}) =
-      _$ArtistRelationshipsImpl;
+  const factory _ArtistRelationships({
+    required final List<Album>? albums,
+    required final List<Playlist>? playlists,
+    required final List<MusicVideo>? musicVideos,
+    required final List<Station>? station,
+    required final List<Artist>? catalog,
+    @ResourceDTOConverter() required final List<Resource>? defaultPlayableContent,
+  }) = _$ArtistRelationshipsImpl;
   const _ArtistRelationships._() : super._();
 
   @override
@@ -554,8 +567,7 @@ abstract class _ArtistRelationships extends ArtistRelationships {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ArtistRelationshipsImplCopyWith<_$ArtistRelationshipsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ArtistRelationshipsImplCopyWith<_$ArtistRelationshipsImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -568,26 +580,19 @@ mixin _$PlaylistRelationships {
   /// Create a copy of PlaylistRelationships
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PlaylistRelationshipsCopyWith<PlaylistRelationships> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PlaylistRelationshipsCopyWith<PlaylistRelationships> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PlaylistRelationshipsCopyWith<$Res> {
-  factory $PlaylistRelationshipsCopyWith(PlaylistRelationships value,
-          $Res Function(PlaylistRelationships) then) =
+  factory $PlaylistRelationshipsCopyWith(PlaylistRelationships value, $Res Function(PlaylistRelationships) then) =
       _$PlaylistRelationshipsCopyWithImpl<$Res, PlaylistRelationships>;
   @useResult
-  $Res call(
-      {List<Track>? tracks,
-      List<Curator>? curator,
-      List<Playlist>? library,
-      List<Playlist>? catalog});
+  $Res call({List<Track>? tracks, List<Curator>? curator, List<Playlist>? library, List<Playlist>? catalog});
 }
 
 /// @nodoc
-class _$PlaylistRelationshipsCopyWithImpl<$Res,
-        $Val extends PlaylistRelationships>
+class _$PlaylistRelationshipsCopyWithImpl<$Res, $Val extends PlaylistRelationships>
     implements $PlaylistRelationshipsCopyWith<$Res> {
   _$PlaylistRelationshipsCopyWithImpl(this._value, this._then);
 
@@ -606,51 +611,53 @@ class _$PlaylistRelationshipsCopyWithImpl<$Res,
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_value.copyWith(
-      tracks: freezed == tracks
-          ? _value.tracks
-          : tracks // ignore: cast_nullable_to_non_nullable
-              as List<Track>?,
-      curator: freezed == curator
-          ? _value.curator
-          : curator // ignore: cast_nullable_to_non_nullable
-              as List<Curator>?,
-      library: freezed == library
-          ? _value.library
-          : library // ignore: cast_nullable_to_non_nullable
-              as List<Playlist>?,
-      catalog: freezed == catalog
-          ? _value.catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as List<Playlist>?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            tracks:
+                freezed == tracks
+                    ? _value.tracks
+                    : tracks // ignore: cast_nullable_to_non_nullable
+                        as List<Track>?,
+            curator:
+                freezed == curator
+                    ? _value.curator
+                    : curator // ignore: cast_nullable_to_non_nullable
+                        as List<Curator>?,
+            library:
+                freezed == library
+                    ? _value.library
+                    : library // ignore: cast_nullable_to_non_nullable
+                        as List<Playlist>?,
+            catalog:
+                freezed == catalog
+                    ? _value.catalog
+                    : catalog // ignore: cast_nullable_to_non_nullable
+                        as List<Playlist>?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$PlaylistRelationshipsImplCopyWith<$Res>
-    implements $PlaylistRelationshipsCopyWith<$Res> {
+abstract class _$$PlaylistRelationshipsImplCopyWith<$Res> implements $PlaylistRelationshipsCopyWith<$Res> {
   factory _$$PlaylistRelationshipsImplCopyWith(
-          _$PlaylistRelationshipsImpl value,
-          $Res Function(_$PlaylistRelationshipsImpl) then) =
-      __$$PlaylistRelationshipsImplCopyWithImpl<$Res>;
+    _$PlaylistRelationshipsImpl value,
+    $Res Function(_$PlaylistRelationshipsImpl) then,
+  ) = __$$PlaylistRelationshipsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {List<Track>? tracks,
-      List<Curator>? curator,
-      List<Playlist>? library,
-      List<Playlist>? catalog});
+  $Res call({List<Track>? tracks, List<Curator>? curator, List<Playlist>? library, List<Playlist>? catalog});
 }
 
 /// @nodoc
 class __$$PlaylistRelationshipsImplCopyWithImpl<$Res>
-    extends _$PlaylistRelationshipsCopyWithImpl<$Res,
-        _$PlaylistRelationshipsImpl>
+    extends _$PlaylistRelationshipsCopyWithImpl<$Res, _$PlaylistRelationshipsImpl>
     implements _$$PlaylistRelationshipsImplCopyWith<$Res> {
-  __$$PlaylistRelationshipsImplCopyWithImpl(_$PlaylistRelationshipsImpl _value,
-      $Res Function(_$PlaylistRelationshipsImpl) _then)
-      : super(_value, _then);
+  __$$PlaylistRelationshipsImplCopyWithImpl(
+    _$PlaylistRelationshipsImpl _value,
+    $Res Function(_$PlaylistRelationshipsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of PlaylistRelationships
   /// with the given fields replaced by the non-null parameter values.
@@ -662,40 +669,46 @@ class __$$PlaylistRelationshipsImplCopyWithImpl<$Res>
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_$PlaylistRelationshipsImpl(
-      tracks: freezed == tracks
-          ? _value._tracks
-          : tracks // ignore: cast_nullable_to_non_nullable
-              as List<Track>?,
-      curator: freezed == curator
-          ? _value._curator
-          : curator // ignore: cast_nullable_to_non_nullable
-              as List<Curator>?,
-      library: freezed == library
-          ? _value._library
-          : library // ignore: cast_nullable_to_non_nullable
-              as List<Playlist>?,
-      catalog: freezed == catalog
-          ? _value._catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as List<Playlist>?,
-    ));
+    return _then(
+      _$PlaylistRelationshipsImpl(
+        tracks:
+            freezed == tracks
+                ? _value._tracks
+                : tracks // ignore: cast_nullable_to_non_nullable
+                    as List<Track>?,
+        curator:
+            freezed == curator
+                ? _value._curator
+                : curator // ignore: cast_nullable_to_non_nullable
+                    as List<Curator>?,
+        library:
+            freezed == library
+                ? _value._library
+                : library // ignore: cast_nullable_to_non_nullable
+                    as List<Playlist>?,
+        catalog:
+            freezed == catalog
+                ? _value._catalog
+                : catalog // ignore: cast_nullable_to_non_nullable
+                    as List<Playlist>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$PlaylistRelationshipsImpl extends _PlaylistRelationships {
-  const _$PlaylistRelationshipsImpl(
-      {required final List<Track>? tracks,
-      required final List<Curator>? curator,
-      required final List<Playlist>? library,
-      required final List<Playlist>? catalog})
-      : _tracks = tracks,
-        _curator = curator,
-        _library = library,
-        _catalog = catalog,
-        super._();
+  const _$PlaylistRelationshipsImpl({
+    required final List<Track>? tracks,
+    required final List<Curator>? curator,
+    required final List<Playlist>? library,
+    required final List<Playlist>? catalog,
+  }) : _tracks = tracks,
+       _curator = curator,
+       _library = library,
+       _catalog = catalog,
+       super._();
 
   final List<Track>? _tracks;
   @override
@@ -755,28 +768,29 @@ class _$PlaylistRelationshipsImpl extends _PlaylistRelationships {
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_tracks),
-      const DeepCollectionEquality().hash(_curator),
-      const DeepCollectionEquality().hash(_library),
-      const DeepCollectionEquality().hash(_catalog));
+    runtimeType,
+    const DeepCollectionEquality().hash(_tracks),
+    const DeepCollectionEquality().hash(_curator),
+    const DeepCollectionEquality().hash(_library),
+    const DeepCollectionEquality().hash(_catalog),
+  );
 
   /// Create a copy of PlaylistRelationships
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$PlaylistRelationshipsImplCopyWith<_$PlaylistRelationshipsImpl>
-      get copyWith => __$$PlaylistRelationshipsImplCopyWithImpl<
-          _$PlaylistRelationshipsImpl>(this, _$identity);
+  _$$PlaylistRelationshipsImplCopyWith<_$PlaylistRelationshipsImpl> get copyWith =>
+      __$$PlaylistRelationshipsImplCopyWithImpl<_$PlaylistRelationshipsImpl>(this, _$identity);
 }
 
 abstract class _PlaylistRelationships extends PlaylistRelationships {
-  const factory _PlaylistRelationships(
-      {required final List<Track>? tracks,
-      required final List<Curator>? curator,
-      required final List<Playlist>? library,
-      required final List<Playlist>? catalog}) = _$PlaylistRelationshipsImpl;
+  const factory _PlaylistRelationships({
+    required final List<Track>? tracks,
+    required final List<Curator>? curator,
+    required final List<Playlist>? library,
+    required final List<Playlist>? catalog,
+  }) = _$PlaylistRelationshipsImpl;
   const _PlaylistRelationships._() : super._();
 
   @override
@@ -792,8 +806,7 @@ abstract class _PlaylistRelationships extends PlaylistRelationships {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PlaylistRelationshipsImplCopyWith<_$PlaylistRelationshipsImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$PlaylistRelationshipsImplCopyWith<_$PlaylistRelationshipsImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -809,24 +822,23 @@ mixin _$SongRelationships {
   /// Create a copy of SongRelationships
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SongRelationshipsCopyWith<SongRelationships> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SongRelationshipsCopyWith<SongRelationships> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SongRelationshipsCopyWith<$Res> {
-  factory $SongRelationshipsCopyWith(
-          SongRelationships value, $Res Function(SongRelationships) then) =
+  factory $SongRelationshipsCopyWith(SongRelationships value, $Res Function(SongRelationships) then) =
       _$SongRelationshipsCopyWithImpl<$Res, SongRelationships>;
   @useResult
-  $Res call(
-      {List<Album>? albums,
-      List<Artist>? artists,
-      List<Station>? station,
-      List<Artist>? composers,
-      List<MusicVideo>? musicVideos,
-      List<Song>? library,
-      List<Song>? catalog});
+  $Res call({
+    List<Album>? albums,
+    List<Artist>? artists,
+    List<Station>? station,
+    List<Artist>? composers,
+    List<MusicVideo>? musicVideos,
+    List<Song>? library,
+    List<Song>? catalog,
+  });
 }
 
 /// @nodoc
@@ -852,64 +864,71 @@ class _$SongRelationshipsCopyWithImpl<$Res, $Val extends SongRelationships>
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_value.copyWith(
-      albums: freezed == albums
-          ? _value.albums
-          : albums // ignore: cast_nullable_to_non_nullable
-              as List<Album>?,
-      artists: freezed == artists
-          ? _value.artists
-          : artists // ignore: cast_nullable_to_non_nullable
-              as List<Artist>?,
-      station: freezed == station
-          ? _value.station
-          : station // ignore: cast_nullable_to_non_nullable
-              as List<Station>?,
-      composers: freezed == composers
-          ? _value.composers
-          : composers // ignore: cast_nullable_to_non_nullable
-              as List<Artist>?,
-      musicVideos: freezed == musicVideos
-          ? _value.musicVideos
-          : musicVideos // ignore: cast_nullable_to_non_nullable
-              as List<MusicVideo>?,
-      library: freezed == library
-          ? _value.library
-          : library // ignore: cast_nullable_to_non_nullable
-              as List<Song>?,
-      catalog: freezed == catalog
-          ? _value.catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as List<Song>?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            albums:
+                freezed == albums
+                    ? _value.albums
+                    : albums // ignore: cast_nullable_to_non_nullable
+                        as List<Album>?,
+            artists:
+                freezed == artists
+                    ? _value.artists
+                    : artists // ignore: cast_nullable_to_non_nullable
+                        as List<Artist>?,
+            station:
+                freezed == station
+                    ? _value.station
+                    : station // ignore: cast_nullable_to_non_nullable
+                        as List<Station>?,
+            composers:
+                freezed == composers
+                    ? _value.composers
+                    : composers // ignore: cast_nullable_to_non_nullable
+                        as List<Artist>?,
+            musicVideos:
+                freezed == musicVideos
+                    ? _value.musicVideos
+                    : musicVideos // ignore: cast_nullable_to_non_nullable
+                        as List<MusicVideo>?,
+            library:
+                freezed == library
+                    ? _value.library
+                    : library // ignore: cast_nullable_to_non_nullable
+                        as List<Song>?,
+            catalog:
+                freezed == catalog
+                    ? _value.catalog
+                    : catalog // ignore: cast_nullable_to_non_nullable
+                        as List<Song>?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$SongRelationshipsImplCopyWith<$Res>
-    implements $SongRelationshipsCopyWith<$Res> {
-  factory _$$SongRelationshipsImplCopyWith(_$SongRelationshipsImpl value,
-          $Res Function(_$SongRelationshipsImpl) then) =
+abstract class _$$SongRelationshipsImplCopyWith<$Res> implements $SongRelationshipsCopyWith<$Res> {
+  factory _$$SongRelationshipsImplCopyWith(_$SongRelationshipsImpl value, $Res Function(_$SongRelationshipsImpl) then) =
       __$$SongRelationshipsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {List<Album>? albums,
-      List<Artist>? artists,
-      List<Station>? station,
-      List<Artist>? composers,
-      List<MusicVideo>? musicVideos,
-      List<Song>? library,
-      List<Song>? catalog});
+  $Res call({
+    List<Album>? albums,
+    List<Artist>? artists,
+    List<Station>? station,
+    List<Artist>? composers,
+    List<MusicVideo>? musicVideos,
+    List<Song>? library,
+    List<Song>? catalog,
+  });
 }
 
 /// @nodoc
-class __$$SongRelationshipsImplCopyWithImpl<$Res>
-    extends _$SongRelationshipsCopyWithImpl<$Res, _$SongRelationshipsImpl>
+class __$$SongRelationshipsImplCopyWithImpl<$Res> extends _$SongRelationshipsCopyWithImpl<$Res, _$SongRelationshipsImpl>
     implements _$$SongRelationshipsImplCopyWith<$Res> {
-  __$$SongRelationshipsImplCopyWithImpl(_$SongRelationshipsImpl _value,
-      $Res Function(_$SongRelationshipsImpl) _then)
-      : super(_value, _then);
+  __$$SongRelationshipsImplCopyWithImpl(_$SongRelationshipsImpl _value, $Res Function(_$SongRelationshipsImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of SongRelationships
   /// with the given fields replaced by the non-null parameter values.
@@ -924,58 +943,67 @@ class __$$SongRelationshipsImplCopyWithImpl<$Res>
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_$SongRelationshipsImpl(
-      albums: freezed == albums
-          ? _value._albums
-          : albums // ignore: cast_nullable_to_non_nullable
-              as List<Album>?,
-      artists: freezed == artists
-          ? _value._artists
-          : artists // ignore: cast_nullable_to_non_nullable
-              as List<Artist>?,
-      station: freezed == station
-          ? _value._station
-          : station // ignore: cast_nullable_to_non_nullable
-              as List<Station>?,
-      composers: freezed == composers
-          ? _value._composers
-          : composers // ignore: cast_nullable_to_non_nullable
-              as List<Artist>?,
-      musicVideos: freezed == musicVideos
-          ? _value._musicVideos
-          : musicVideos // ignore: cast_nullable_to_non_nullable
-              as List<MusicVideo>?,
-      library: freezed == library
-          ? _value._library
-          : library // ignore: cast_nullable_to_non_nullable
-              as List<Song>?,
-      catalog: freezed == catalog
-          ? _value._catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as List<Song>?,
-    ));
+    return _then(
+      _$SongRelationshipsImpl(
+        albums:
+            freezed == albums
+                ? _value._albums
+                : albums // ignore: cast_nullable_to_non_nullable
+                    as List<Album>?,
+        artists:
+            freezed == artists
+                ? _value._artists
+                : artists // ignore: cast_nullable_to_non_nullable
+                    as List<Artist>?,
+        station:
+            freezed == station
+                ? _value._station
+                : station // ignore: cast_nullable_to_non_nullable
+                    as List<Station>?,
+        composers:
+            freezed == composers
+                ? _value._composers
+                : composers // ignore: cast_nullable_to_non_nullable
+                    as List<Artist>?,
+        musicVideos:
+            freezed == musicVideos
+                ? _value._musicVideos
+                : musicVideos // ignore: cast_nullable_to_non_nullable
+                    as List<MusicVideo>?,
+        library:
+            freezed == library
+                ? _value._library
+                : library // ignore: cast_nullable_to_non_nullable
+                    as List<Song>?,
+        catalog:
+            freezed == catalog
+                ? _value._catalog
+                : catalog // ignore: cast_nullable_to_non_nullable
+                    as List<Song>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$SongRelationshipsImpl extends _SongRelationships {
-  const _$SongRelationshipsImpl(
-      {required final List<Album>? albums,
-      required final List<Artist>? artists,
-      required final List<Station>? station,
-      required final List<Artist>? composers,
-      required final List<MusicVideo>? musicVideos,
-      required final List<Song>? library,
-      required final List<Song>? catalog})
-      : _albums = albums,
-        _artists = artists,
-        _station = station,
-        _composers = composers,
-        _musicVideos = musicVideos,
-        _library = library,
-        _catalog = catalog,
-        super._();
+  const _$SongRelationshipsImpl({
+    required final List<Album>? albums,
+    required final List<Artist>? artists,
+    required final List<Station>? station,
+    required final List<Artist>? composers,
+    required final List<MusicVideo>? musicVideos,
+    required final List<Song>? library,
+    required final List<Song>? catalog,
+  }) : _albums = albums,
+       _artists = artists,
+       _station = station,
+       _composers = composers,
+       _musicVideos = musicVideos,
+       _library = library,
+       _catalog = catalog,
+       super._();
 
   final List<Album>? _albums;
   @override
@@ -1060,24 +1088,23 @@ class _$SongRelationshipsImpl extends _SongRelationships {
             const DeepCollectionEquality().equals(other._albums, _albums) &&
             const DeepCollectionEquality().equals(other._artists, _artists) &&
             const DeepCollectionEquality().equals(other._station, _station) &&
-            const DeepCollectionEquality()
-                .equals(other._composers, _composers) &&
-            const DeepCollectionEquality()
-                .equals(other._musicVideos, _musicVideos) &&
+            const DeepCollectionEquality().equals(other._composers, _composers) &&
+            const DeepCollectionEquality().equals(other._musicVideos, _musicVideos) &&
             const DeepCollectionEquality().equals(other._library, _library) &&
             const DeepCollectionEquality().equals(other._catalog, _catalog));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_albums),
-      const DeepCollectionEquality().hash(_artists),
-      const DeepCollectionEquality().hash(_station),
-      const DeepCollectionEquality().hash(_composers),
-      const DeepCollectionEquality().hash(_musicVideos),
-      const DeepCollectionEquality().hash(_library),
-      const DeepCollectionEquality().hash(_catalog));
+    runtimeType,
+    const DeepCollectionEquality().hash(_albums),
+    const DeepCollectionEquality().hash(_artists),
+    const DeepCollectionEquality().hash(_station),
+    const DeepCollectionEquality().hash(_composers),
+    const DeepCollectionEquality().hash(_musicVideos),
+    const DeepCollectionEquality().hash(_library),
+    const DeepCollectionEquality().hash(_catalog),
+  );
 
   /// Create a copy of SongRelationships
   /// with the given fields replaced by the non-null parameter values.
@@ -1085,19 +1112,19 @@ class _$SongRelationshipsImpl extends _SongRelationships {
   @override
   @pragma('vm:prefer-inline')
   _$$SongRelationshipsImplCopyWith<_$SongRelationshipsImpl> get copyWith =>
-      __$$SongRelationshipsImplCopyWithImpl<_$SongRelationshipsImpl>(
-          this, _$identity);
+      __$$SongRelationshipsImplCopyWithImpl<_$SongRelationshipsImpl>(this, _$identity);
 }
 
 abstract class _SongRelationships extends SongRelationships {
-  const factory _SongRelationships(
-      {required final List<Album>? albums,
-      required final List<Artist>? artists,
-      required final List<Station>? station,
-      required final List<Artist>? composers,
-      required final List<MusicVideo>? musicVideos,
-      required final List<Song>? library,
-      required final List<Song>? catalog}) = _$SongRelationshipsImpl;
+  const factory _SongRelationships({
+    required final List<Album>? albums,
+    required final List<Artist>? artists,
+    required final List<Station>? station,
+    required final List<Artist>? composers,
+    required final List<MusicVideo>? musicVideos,
+    required final List<Song>? library,
+    required final List<Song>? catalog,
+  }) = _$SongRelationshipsImpl;
   const _SongRelationships._() : super._();
 
   @override
@@ -1119,8 +1146,7 @@ abstract class _SongRelationships extends SongRelationships {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SongRelationshipsImplCopyWith<_$SongRelationshipsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SongRelationshipsImplCopyWith<_$SongRelationshipsImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1134,27 +1160,25 @@ mixin _$MusicVideoRelationships {
   /// Create a copy of MusicVideoRelationships
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $MusicVideoRelationshipsCopyWith<MusicVideoRelationships> get copyWith =>
-      throw _privateConstructorUsedError;
+  $MusicVideoRelationshipsCopyWith<MusicVideoRelationships> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $MusicVideoRelationshipsCopyWith<$Res> {
-  factory $MusicVideoRelationshipsCopyWith(MusicVideoRelationships value,
-          $Res Function(MusicVideoRelationships) then) =
+  factory $MusicVideoRelationshipsCopyWith(MusicVideoRelationships value, $Res Function(MusicVideoRelationships) then) =
       _$MusicVideoRelationshipsCopyWithImpl<$Res, MusicVideoRelationships>;
   @useResult
-  $Res call(
-      {List<Album>? albums,
-      List<Artist>? artists,
-      List<Song>? songs,
-      List<MusicVideo>? library,
-      List<MusicVideo>? catalog});
+  $Res call({
+    List<Album>? albums,
+    List<Artist>? artists,
+    List<Song>? songs,
+    List<MusicVideo>? library,
+    List<MusicVideo>? catalog,
+  });
 }
 
 /// @nodoc
-class _$MusicVideoRelationshipsCopyWithImpl<$Res,
-        $Val extends MusicVideoRelationships>
+class _$MusicVideoRelationshipsCopyWithImpl<$Res, $Val extends MusicVideoRelationships>
     implements $MusicVideoRelationshipsCopyWith<$Res> {
   _$MusicVideoRelationshipsCopyWithImpl(this._value, this._then);
 
@@ -1174,57 +1198,64 @@ class _$MusicVideoRelationshipsCopyWithImpl<$Res,
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_value.copyWith(
-      albums: freezed == albums
-          ? _value.albums
-          : albums // ignore: cast_nullable_to_non_nullable
-              as List<Album>?,
-      artists: freezed == artists
-          ? _value.artists
-          : artists // ignore: cast_nullable_to_non_nullable
-              as List<Artist>?,
-      songs: freezed == songs
-          ? _value.songs
-          : songs // ignore: cast_nullable_to_non_nullable
-              as List<Song>?,
-      library: freezed == library
-          ? _value.library
-          : library // ignore: cast_nullable_to_non_nullable
-              as List<MusicVideo>?,
-      catalog: freezed == catalog
-          ? _value.catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as List<MusicVideo>?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            albums:
+                freezed == albums
+                    ? _value.albums
+                    : albums // ignore: cast_nullable_to_non_nullable
+                        as List<Album>?,
+            artists:
+                freezed == artists
+                    ? _value.artists
+                    : artists // ignore: cast_nullable_to_non_nullable
+                        as List<Artist>?,
+            songs:
+                freezed == songs
+                    ? _value.songs
+                    : songs // ignore: cast_nullable_to_non_nullable
+                        as List<Song>?,
+            library:
+                freezed == library
+                    ? _value.library
+                    : library // ignore: cast_nullable_to_non_nullable
+                        as List<MusicVideo>?,
+            catalog:
+                freezed == catalog
+                    ? _value.catalog
+                    : catalog // ignore: cast_nullable_to_non_nullable
+                        as List<MusicVideo>?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$MusicVideoRelationshipsImplCopyWith<$Res>
-    implements $MusicVideoRelationshipsCopyWith<$Res> {
+abstract class _$$MusicVideoRelationshipsImplCopyWith<$Res> implements $MusicVideoRelationshipsCopyWith<$Res> {
   factory _$$MusicVideoRelationshipsImplCopyWith(
-          _$MusicVideoRelationshipsImpl value,
-          $Res Function(_$MusicVideoRelationshipsImpl) then) =
-      __$$MusicVideoRelationshipsImplCopyWithImpl<$Res>;
+    _$MusicVideoRelationshipsImpl value,
+    $Res Function(_$MusicVideoRelationshipsImpl) then,
+  ) = __$$MusicVideoRelationshipsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {List<Album>? albums,
-      List<Artist>? artists,
-      List<Song>? songs,
-      List<MusicVideo>? library,
-      List<MusicVideo>? catalog});
+  $Res call({
+    List<Album>? albums,
+    List<Artist>? artists,
+    List<Song>? songs,
+    List<MusicVideo>? library,
+    List<MusicVideo>? catalog,
+  });
 }
 
 /// @nodoc
 class __$$MusicVideoRelationshipsImplCopyWithImpl<$Res>
-    extends _$MusicVideoRelationshipsCopyWithImpl<$Res,
-        _$MusicVideoRelationshipsImpl>
+    extends _$MusicVideoRelationshipsCopyWithImpl<$Res, _$MusicVideoRelationshipsImpl>
     implements _$$MusicVideoRelationshipsImplCopyWith<$Res> {
   __$$MusicVideoRelationshipsImplCopyWithImpl(
-      _$MusicVideoRelationshipsImpl _value,
-      $Res Function(_$MusicVideoRelationshipsImpl) _then)
-      : super(_value, _then);
+    _$MusicVideoRelationshipsImpl _value,
+    $Res Function(_$MusicVideoRelationshipsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of MusicVideoRelationships
   /// with the given fields replaced by the non-null parameter values.
@@ -1237,46 +1268,53 @@ class __$$MusicVideoRelationshipsImplCopyWithImpl<$Res>
     Object? library = freezed,
     Object? catalog = freezed,
   }) {
-    return _then(_$MusicVideoRelationshipsImpl(
-      albums: freezed == albums
-          ? _value._albums
-          : albums // ignore: cast_nullable_to_non_nullable
-              as List<Album>?,
-      artists: freezed == artists
-          ? _value._artists
-          : artists // ignore: cast_nullable_to_non_nullable
-              as List<Artist>?,
-      songs: freezed == songs
-          ? _value._songs
-          : songs // ignore: cast_nullable_to_non_nullable
-              as List<Song>?,
-      library: freezed == library
-          ? _value._library
-          : library // ignore: cast_nullable_to_non_nullable
-              as List<MusicVideo>?,
-      catalog: freezed == catalog
-          ? _value._catalog
-          : catalog // ignore: cast_nullable_to_non_nullable
-              as List<MusicVideo>?,
-    ));
+    return _then(
+      _$MusicVideoRelationshipsImpl(
+        albums:
+            freezed == albums
+                ? _value._albums
+                : albums // ignore: cast_nullable_to_non_nullable
+                    as List<Album>?,
+        artists:
+            freezed == artists
+                ? _value._artists
+                : artists // ignore: cast_nullable_to_non_nullable
+                    as List<Artist>?,
+        songs:
+            freezed == songs
+                ? _value._songs
+                : songs // ignore: cast_nullable_to_non_nullable
+                    as List<Song>?,
+        library:
+            freezed == library
+                ? _value._library
+                : library // ignore: cast_nullable_to_non_nullable
+                    as List<MusicVideo>?,
+        catalog:
+            freezed == catalog
+                ? _value._catalog
+                : catalog // ignore: cast_nullable_to_non_nullable
+                    as List<MusicVideo>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$MusicVideoRelationshipsImpl extends _MusicVideoRelationships {
-  const _$MusicVideoRelationshipsImpl(
-      {required final List<Album>? albums,
-      required final List<Artist>? artists,
-      required final List<Song>? songs,
-      required final List<MusicVideo>? library,
-      required final List<MusicVideo>? catalog})
-      : _albums = albums,
-        _artists = artists,
-        _songs = songs,
-        _library = library,
-        _catalog = catalog,
-        super._();
+  const _$MusicVideoRelationshipsImpl({
+    required final List<Album>? albums,
+    required final List<Artist>? artists,
+    required final List<Song>? songs,
+    required final List<MusicVideo>? library,
+    required final List<MusicVideo>? catalog,
+  }) : _albums = albums,
+       _artists = artists,
+       _songs = songs,
+       _library = library,
+       _catalog = catalog,
+       super._();
 
   final List<Album>? _albums;
   @override
@@ -1347,31 +1385,31 @@ class _$MusicVideoRelationshipsImpl extends _MusicVideoRelationships {
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_albums),
-      const DeepCollectionEquality().hash(_artists),
-      const DeepCollectionEquality().hash(_songs),
-      const DeepCollectionEquality().hash(_library),
-      const DeepCollectionEquality().hash(_catalog));
+    runtimeType,
+    const DeepCollectionEquality().hash(_albums),
+    const DeepCollectionEquality().hash(_artists),
+    const DeepCollectionEquality().hash(_songs),
+    const DeepCollectionEquality().hash(_library),
+    const DeepCollectionEquality().hash(_catalog),
+  );
 
   /// Create a copy of MusicVideoRelationships
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$MusicVideoRelationshipsImplCopyWith<_$MusicVideoRelationshipsImpl>
-      get copyWith => __$$MusicVideoRelationshipsImplCopyWithImpl<
-          _$MusicVideoRelationshipsImpl>(this, _$identity);
+  _$$MusicVideoRelationshipsImplCopyWith<_$MusicVideoRelationshipsImpl> get copyWith =>
+      __$$MusicVideoRelationshipsImplCopyWithImpl<_$MusicVideoRelationshipsImpl>(this, _$identity);
 }
 
 abstract class _MusicVideoRelationships extends MusicVideoRelationships {
-  const factory _MusicVideoRelationships(
-          {required final List<Album>? albums,
-          required final List<Artist>? artists,
-          required final List<Song>? songs,
-          required final List<MusicVideo>? library,
-          required final List<MusicVideo>? catalog}) =
-      _$MusicVideoRelationshipsImpl;
+  const factory _MusicVideoRelationships({
+    required final List<Album>? albums,
+    required final List<Artist>? artists,
+    required final List<Song>? songs,
+    required final List<MusicVideo>? library,
+    required final List<MusicVideo>? catalog,
+  }) = _$MusicVideoRelationshipsImpl;
   const _MusicVideoRelationships._() : super._();
 
   @override
@@ -1389,8 +1427,8 @@ abstract class _MusicVideoRelationships extends MusicVideoRelationships {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MusicVideoRelationshipsImplCopyWith<_$MusicVideoRelationshipsImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$MusicVideoRelationshipsImplCopyWith<_$MusicVideoRelationshipsImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1400,22 +1438,19 @@ mixin _$CuratorRelationships {
   /// Create a copy of CuratorRelationships
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CuratorRelationshipsCopyWith<CuratorRelationships> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CuratorRelationshipsCopyWith<CuratorRelationships> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CuratorRelationshipsCopyWith<$Res> {
-  factory $CuratorRelationshipsCopyWith(CuratorRelationships value,
-          $Res Function(CuratorRelationships) then) =
+  factory $CuratorRelationshipsCopyWith(CuratorRelationships value, $Res Function(CuratorRelationships) then) =
       _$CuratorRelationshipsCopyWithImpl<$Res, CuratorRelationships>;
   @useResult
   $Res call({List<Playlist>? playlists});
 }
 
 /// @nodoc
-class _$CuratorRelationshipsCopyWithImpl<$Res,
-        $Val extends CuratorRelationships>
+class _$CuratorRelationshipsCopyWithImpl<$Res, $Val extends CuratorRelationships>
     implements $CuratorRelationshipsCopyWith<$Res> {
   _$CuratorRelationshipsCopyWithImpl(this._value, this._then);
 
@@ -1428,24 +1463,26 @@ class _$CuratorRelationshipsCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? playlists = freezed,
-  }) {
-    return _then(_value.copyWith(
-      playlists: freezed == playlists
-          ? _value.playlists
-          : playlists // ignore: cast_nullable_to_non_nullable
-              as List<Playlist>?,
-    ) as $Val);
+  $Res call({Object? playlists = freezed}) {
+    return _then(
+      _value.copyWith(
+            playlists:
+                freezed == playlists
+                    ? _value.playlists
+                    : playlists // ignore: cast_nullable_to_non_nullable
+                        as List<Playlist>?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$CuratorRelationshipsImplCopyWith<$Res>
-    implements $CuratorRelationshipsCopyWith<$Res> {
-  factory _$$CuratorRelationshipsImplCopyWith(_$CuratorRelationshipsImpl value,
-          $Res Function(_$CuratorRelationshipsImpl) then) =
-      __$$CuratorRelationshipsImplCopyWithImpl<$Res>;
+abstract class _$$CuratorRelationshipsImplCopyWith<$Res> implements $CuratorRelationshipsCopyWith<$Res> {
+  factory _$$CuratorRelationshipsImplCopyWith(
+    _$CuratorRelationshipsImpl value,
+    $Res Function(_$CuratorRelationshipsImpl) then,
+  ) = __$$CuratorRelationshipsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<Playlist>? playlists});
@@ -1455,32 +1492,32 @@ abstract class _$$CuratorRelationshipsImplCopyWith<$Res>
 class __$$CuratorRelationshipsImplCopyWithImpl<$Res>
     extends _$CuratorRelationshipsCopyWithImpl<$Res, _$CuratorRelationshipsImpl>
     implements _$$CuratorRelationshipsImplCopyWith<$Res> {
-  __$$CuratorRelationshipsImplCopyWithImpl(_$CuratorRelationshipsImpl _value,
-      $Res Function(_$CuratorRelationshipsImpl) _then)
-      : super(_value, _then);
+  __$$CuratorRelationshipsImplCopyWithImpl(
+    _$CuratorRelationshipsImpl _value,
+    $Res Function(_$CuratorRelationshipsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of CuratorRelationships
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? playlists = freezed,
-  }) {
-    return _then(_$CuratorRelationshipsImpl(
-      playlists: freezed == playlists
-          ? _value._playlists
-          : playlists // ignore: cast_nullable_to_non_nullable
-              as List<Playlist>?,
-    ));
+  $Res call({Object? playlists = freezed}) {
+    return _then(
+      _$CuratorRelationshipsImpl(
+        playlists:
+            freezed == playlists
+                ? _value._playlists
+                : playlists // ignore: cast_nullable_to_non_nullable
+                    as List<Playlist>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$CuratorRelationshipsImpl extends _CuratorRelationships {
-  const _$CuratorRelationshipsImpl({required final List<Playlist>? playlists})
-      : _playlists = playlists,
-        super._();
+  const _$CuratorRelationshipsImpl({required final List<Playlist>? playlists}) : _playlists = playlists, super._();
 
   final List<Playlist>? _playlists;
   @override
@@ -1502,28 +1539,23 @@ class _$CuratorRelationshipsImpl extends _CuratorRelationships {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CuratorRelationshipsImpl &&
-            const DeepCollectionEquality()
-                .equals(other._playlists, _playlists));
+            const DeepCollectionEquality().equals(other._playlists, _playlists));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_playlists));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_playlists));
 
   /// Create a copy of CuratorRelationships
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$CuratorRelationshipsImplCopyWith<_$CuratorRelationshipsImpl>
-      get copyWith =>
-          __$$CuratorRelationshipsImplCopyWithImpl<_$CuratorRelationshipsImpl>(
-              this, _$identity);
+  _$$CuratorRelationshipsImplCopyWith<_$CuratorRelationshipsImpl> get copyWith =>
+      __$$CuratorRelationshipsImplCopyWithImpl<_$CuratorRelationshipsImpl>(this, _$identity);
 }
 
 abstract class _CuratorRelationships extends CuratorRelationships {
-  const factory _CuratorRelationships(
-      {required final List<Playlist>? playlists}) = _$CuratorRelationshipsImpl;
+  const factory _CuratorRelationships({required final List<Playlist>? playlists}) = _$CuratorRelationshipsImpl;
   const _CuratorRelationships._() : super._();
 
   @override
@@ -1533,6 +1565,5 @@ abstract class _CuratorRelationships extends CuratorRelationships {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CuratorRelationshipsImplCopyWith<_$CuratorRelationshipsImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$CuratorRelationshipsImplCopyWith<_$CuratorRelationshipsImpl> get copyWith => throw _privateConstructorUsedError;
 }

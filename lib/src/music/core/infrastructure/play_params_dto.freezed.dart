@@ -12,7 +12,8 @@ part of 'play_params_dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 PlayParamsDTO _$PlayParamsDTOFromJson(Map<String, dynamic> json) {
   return _PlayParamsDTO.fromJson(json);
@@ -38,33 +39,31 @@ mixin _$PlayParamsDTO {
   /// Create a copy of PlayParamsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PlayParamsDTOCopyWith<PlayParamsDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PlayParamsDTOCopyWith<PlayParamsDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PlayParamsDTOCopyWith<$Res> {
-  factory $PlayParamsDTOCopyWith(
-          PlayParamsDTO value, $Res Function(PlayParamsDTO) then) =
+  factory $PlayParamsDTOCopyWith(PlayParamsDTO value, $Res Function(PlayParamsDTO) then) =
       _$PlayParamsDTOCopyWithImpl<$Res, PlayParamsDTO>;
   @useResult
-  $Res call(
-      {String? catalogId,
-      String? globalId,
-      String id,
-      bool? isLibrary,
-      String kind,
-      bool? reporting,
-      String? format,
-      String? stationHash,
-      int? mediaType,
-      int? streamingKind,
-      bool? hasDrm});
+  $Res call({
+    String? catalogId,
+    String? globalId,
+    String id,
+    bool? isLibrary,
+    String kind,
+    bool? reporting,
+    String? format,
+    String? stationHash,
+    int? mediaType,
+    int? streamingKind,
+    bool? hasDrm,
+  });
 }
 
 /// @nodoc
-class _$PlayParamsDTOCopyWithImpl<$Res, $Val extends PlayParamsDTO>
-    implements $PlayParamsDTOCopyWith<$Res> {
+class _$PlayParamsDTOCopyWithImpl<$Res, $Val extends PlayParamsDTO> implements $PlayParamsDTOCopyWith<$Res> {
   _$PlayParamsDTOCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -89,84 +88,95 @@ class _$PlayParamsDTOCopyWithImpl<$Res, $Val extends PlayParamsDTO>
     Object? streamingKind = freezed,
     Object? hasDrm = freezed,
   }) {
-    return _then(_value.copyWith(
-      catalogId: freezed == catalogId
-          ? _value.catalogId
-          : catalogId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      globalId: freezed == globalId
-          ? _value.globalId
-          : globalId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      isLibrary: freezed == isLibrary
-          ? _value.isLibrary
-          : isLibrary // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      kind: null == kind
-          ? _value.kind
-          : kind // ignore: cast_nullable_to_non_nullable
-              as String,
-      reporting: freezed == reporting
-          ? _value.reporting
-          : reporting // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      format: freezed == format
-          ? _value.format
-          : format // ignore: cast_nullable_to_non_nullable
-              as String?,
-      stationHash: freezed == stationHash
-          ? _value.stationHash
-          : stationHash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mediaType: freezed == mediaType
-          ? _value.mediaType
-          : mediaType // ignore: cast_nullable_to_non_nullable
-              as int?,
-      streamingKind: freezed == streamingKind
-          ? _value.streamingKind
-          : streamingKind // ignore: cast_nullable_to_non_nullable
-              as int?,
-      hasDrm: freezed == hasDrm
-          ? _value.hasDrm
-          : hasDrm // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            catalogId:
+                freezed == catalogId
+                    ? _value.catalogId
+                    : catalogId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            globalId:
+                freezed == globalId
+                    ? _value.globalId
+                    : globalId // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            id:
+                null == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String,
+            isLibrary:
+                freezed == isLibrary
+                    ? _value.isLibrary
+                    : isLibrary // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            kind:
+                null == kind
+                    ? _value.kind
+                    : kind // ignore: cast_nullable_to_non_nullable
+                        as String,
+            reporting:
+                freezed == reporting
+                    ? _value.reporting
+                    : reporting // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            format:
+                freezed == format
+                    ? _value.format
+                    : format // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            stationHash:
+                freezed == stationHash
+                    ? _value.stationHash
+                    : stationHash // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            mediaType:
+                freezed == mediaType
+                    ? _value.mediaType
+                    : mediaType // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            streamingKind:
+                freezed == streamingKind
+                    ? _value.streamingKind
+                    : streamingKind // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            hasDrm:
+                freezed == hasDrm
+                    ? _value.hasDrm
+                    : hasDrm // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$PlayParamsDTOImplCopyWith<$Res>
-    implements $PlayParamsDTOCopyWith<$Res> {
-  factory _$$PlayParamsDTOImplCopyWith(
-          _$PlayParamsDTOImpl value, $Res Function(_$PlayParamsDTOImpl) then) =
+abstract class _$$PlayParamsDTOImplCopyWith<$Res> implements $PlayParamsDTOCopyWith<$Res> {
+  factory _$$PlayParamsDTOImplCopyWith(_$PlayParamsDTOImpl value, $Res Function(_$PlayParamsDTOImpl) then) =
       __$$PlayParamsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String? catalogId,
-      String? globalId,
-      String id,
-      bool? isLibrary,
-      String kind,
-      bool? reporting,
-      String? format,
-      String? stationHash,
-      int? mediaType,
-      int? streamingKind,
-      bool? hasDrm});
+  $Res call({
+    String? catalogId,
+    String? globalId,
+    String id,
+    bool? isLibrary,
+    String kind,
+    bool? reporting,
+    String? format,
+    String? stationHash,
+    int? mediaType,
+    int? streamingKind,
+    bool? hasDrm,
+  });
 }
 
 /// @nodoc
-class __$$PlayParamsDTOImplCopyWithImpl<$Res>
-    extends _$PlayParamsDTOCopyWithImpl<$Res, _$PlayParamsDTOImpl>
+class __$$PlayParamsDTOImplCopyWithImpl<$Res> extends _$PlayParamsDTOCopyWithImpl<$Res, _$PlayParamsDTOImpl>
     implements _$$PlayParamsDTOImplCopyWith<$Res> {
-  __$$PlayParamsDTOImplCopyWithImpl(
-      _$PlayParamsDTOImpl _value, $Res Function(_$PlayParamsDTOImpl) _then)
-      : super(_value, _then);
+  __$$PlayParamsDTOImplCopyWithImpl(_$PlayParamsDTOImpl _value, $Res Function(_$PlayParamsDTOImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of PlayParamsDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -185,74 +195,86 @@ class __$$PlayParamsDTOImplCopyWithImpl<$Res>
     Object? streamingKind = freezed,
     Object? hasDrm = freezed,
   }) {
-    return _then(_$PlayParamsDTOImpl(
-      catalogId: freezed == catalogId
-          ? _value.catalogId
-          : catalogId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      globalId: freezed == globalId
-          ? _value.globalId
-          : globalId // ignore: cast_nullable_to_non_nullable
-              as String?,
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      isLibrary: freezed == isLibrary
-          ? _value.isLibrary
-          : isLibrary // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      kind: null == kind
-          ? _value.kind
-          : kind // ignore: cast_nullable_to_non_nullable
-              as String,
-      reporting: freezed == reporting
-          ? _value.reporting
-          : reporting // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      format: freezed == format
-          ? _value.format
-          : format // ignore: cast_nullable_to_non_nullable
-              as String?,
-      stationHash: freezed == stationHash
-          ? _value.stationHash
-          : stationHash // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mediaType: freezed == mediaType
-          ? _value.mediaType
-          : mediaType // ignore: cast_nullable_to_non_nullable
-              as int?,
-      streamingKind: freezed == streamingKind
-          ? _value.streamingKind
-          : streamingKind // ignore: cast_nullable_to_non_nullable
-              as int?,
-      hasDrm: freezed == hasDrm
-          ? _value.hasDrm
-          : hasDrm // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ));
+    return _then(
+      _$PlayParamsDTOImpl(
+        catalogId:
+            freezed == catalogId
+                ? _value.catalogId
+                : catalogId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        globalId:
+            freezed == globalId
+                ? _value.globalId
+                : globalId // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        id:
+            null == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String,
+        isLibrary:
+            freezed == isLibrary
+                ? _value.isLibrary
+                : isLibrary // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        kind:
+            null == kind
+                ? _value.kind
+                : kind // ignore: cast_nullable_to_non_nullable
+                    as String,
+        reporting:
+            freezed == reporting
+                ? _value.reporting
+                : reporting // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        format:
+            freezed == format
+                ? _value.format
+                : format // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        stationHash:
+            freezed == stationHash
+                ? _value.stationHash
+                : stationHash // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        mediaType:
+            freezed == mediaType
+                ? _value.mediaType
+                : mediaType // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        streamingKind:
+            freezed == streamingKind
+                ? _value.streamingKind
+                : streamingKind // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        hasDrm:
+            freezed == hasDrm
+                ? _value.hasDrm
+                : hasDrm // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$PlayParamsDTOImpl extends _PlayParamsDTO {
-  const _$PlayParamsDTOImpl(
-      {this.catalogId,
-      this.globalId,
-      required this.id,
-      this.isLibrary,
-      required this.kind,
-      this.reporting,
-      this.format,
-      this.stationHash,
-      this.mediaType,
-      this.streamingKind,
-      this.hasDrm})
-      : super._();
+  const _$PlayParamsDTOImpl({
+    this.catalogId,
+    this.globalId,
+    required this.id,
+    this.isLibrary,
+    required this.kind,
+    this.reporting,
+    this.format,
+    this.stationHash,
+    this.mediaType,
+    this.streamingKind,
+    this.hasDrm,
+  }) : super._();
 
-  factory _$PlayParamsDTOImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PlayParamsDTOImplFromJson(json);
+  factory _$PlayParamsDTOImpl.fromJson(Map<String, dynamic> json) => _$$PlayParamsDTOImplFromJson(json);
 
   @override
   final String? catalogId;
@@ -287,41 +309,35 @@ class _$PlayParamsDTOImpl extends _PlayParamsDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PlayParamsDTOImpl &&
-            (identical(other.catalogId, catalogId) ||
-                other.catalogId == catalogId) &&
-            (identical(other.globalId, globalId) ||
-                other.globalId == globalId) &&
+            (identical(other.catalogId, catalogId) || other.catalogId == catalogId) &&
+            (identical(other.globalId, globalId) || other.globalId == globalId) &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.isLibrary, isLibrary) ||
-                other.isLibrary == isLibrary) &&
+            (identical(other.isLibrary, isLibrary) || other.isLibrary == isLibrary) &&
             (identical(other.kind, kind) || other.kind == kind) &&
-            (identical(other.reporting, reporting) ||
-                other.reporting == reporting) &&
+            (identical(other.reporting, reporting) || other.reporting == reporting) &&
             (identical(other.format, format) || other.format == format) &&
-            (identical(other.stationHash, stationHash) ||
-                other.stationHash == stationHash) &&
-            (identical(other.mediaType, mediaType) ||
-                other.mediaType == mediaType) &&
-            (identical(other.streamingKind, streamingKind) ||
-                other.streamingKind == streamingKind) &&
+            (identical(other.stationHash, stationHash) || other.stationHash == stationHash) &&
+            (identical(other.mediaType, mediaType) || other.mediaType == mediaType) &&
+            (identical(other.streamingKind, streamingKind) || other.streamingKind == streamingKind) &&
             (identical(other.hasDrm, hasDrm) || other.hasDrm == hasDrm));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      catalogId,
-      globalId,
-      id,
-      isLibrary,
-      kind,
-      reporting,
-      format,
-      stationHash,
-      mediaType,
-      streamingKind,
-      hasDrm);
+    runtimeType,
+    catalogId,
+    globalId,
+    id,
+    isLibrary,
+    kind,
+    reporting,
+    format,
+    stationHash,
+    mediaType,
+    streamingKind,
+    hasDrm,
+  );
 
   /// Create a copy of PlayParamsDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -333,29 +349,27 @@ class _$PlayParamsDTOImpl extends _PlayParamsDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PlayParamsDTOImplToJson(
-      this,
-    );
+    return _$$PlayParamsDTOImplToJson(this);
   }
 }
 
 abstract class _PlayParamsDTO extends PlayParamsDTO {
-  const factory _PlayParamsDTO(
-      {final String? catalogId,
-      final String? globalId,
-      required final String id,
-      final bool? isLibrary,
-      required final String kind,
-      final bool? reporting,
-      final String? format,
-      final String? stationHash,
-      final int? mediaType,
-      final int? streamingKind,
-      final bool? hasDrm}) = _$PlayParamsDTOImpl;
+  const factory _PlayParamsDTO({
+    final String? catalogId,
+    final String? globalId,
+    required final String id,
+    final bool? isLibrary,
+    required final String kind,
+    final bool? reporting,
+    final String? format,
+    final String? stationHash,
+    final int? mediaType,
+    final int? streamingKind,
+    final bool? hasDrm,
+  }) = _$PlayParamsDTOImpl;
   const _PlayParamsDTO._() : super._();
 
-  factory _PlayParamsDTO.fromJson(Map<String, dynamic> json) =
-      _$PlayParamsDTOImpl.fromJson;
+  factory _PlayParamsDTO.fromJson(Map<String, dynamic> json) = _$PlayParamsDTOImpl.fromJson;
 
   @override
   String? get catalogId;
@@ -384,6 +398,5 @@ abstract class _PlayParamsDTO extends PlayParamsDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PlayParamsDTOImplCopyWith<_$PlayParamsDTOImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PlayParamsDTOImplCopyWith<_$PlayParamsDTOImpl> get copyWith => throw _privateConstructorUsedError;
 }

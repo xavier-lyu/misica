@@ -20,18 +20,11 @@ PlaylistsRepository playlistsRepository(Ref ref) {
   return PlaylistsRepository(ref.watch(playlistsServiceProvider));
 }
 
-final playlistsNotifierProvider =
-    StateNotifierProvider.autoDispose<PlaylistsNotifier, AsyncValue<Playlist>>(
-  (ref) => PlaylistsNotifier(
-    ref.watch(playlistsRepositoryProvider),
-    ref,
-  ),
+final playlistsNotifierProvider = StateNotifierProvider.autoDispose<PlaylistsNotifier, AsyncValue<Playlist>>(
+  (ref) => PlaylistsNotifier(ref.watch(playlistsRepositoryProvider), ref),
 );
 
-final playlistTracksNotifierProvider = StateNotifierProvider.autoDispose<
-    PlaylistTracksNotifier, AsyncValue<List<Track>>>(
-  (ref) => PlaylistTracksNotifier(
-    ref.watch(playlistsRepositoryProvider),
-    ref,
-  ),
-);
+final playlistTracksNotifierProvider =
+    StateNotifierProvider.autoDispose<PlaylistTracksNotifier, AsyncValue<List<Track>>>(
+      (ref) => PlaylistTracksNotifier(ref.watch(playlistsRepositoryProvider), ref),
+    );

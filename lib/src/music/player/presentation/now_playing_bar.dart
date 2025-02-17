@@ -38,9 +38,7 @@ class NowPlayingItemWidget extends HookConsumerWidget {
     final playbackStatus = useState(MusicPlayerPlaybackStatus.stopped);
 
     final playbackStateStream = ref.watch(playerStateStreamProvider);
-    playbackStateStream.whenData(
-      (value) => playbackStatus.value = value.playbackStatus,
-    );
+    playbackStateStream.whenData((value) => playbackStatus.value = value.playbackStatus);
 
     return GestureDetector(
       onTap: () {
@@ -49,65 +47,60 @@ class NowPlayingItemWidget extends HookConsumerWidget {
       },
       child: Container(
         height: NOW_PLAYING_BAR_HEIGHT,
-        padding: const EdgeInsetsDirectional.fromSTEB(
-            PADDING_M, PADDING_XS, PADDING_M, PADDING_XS),
-        decoration: BoxDecoration(
-          border: Border.symmetric(
-            horizontal: Divider.createBorderSide(context),
-          ),
-        ),
-        child: Row(children: [
-          nowPlayingItem == null
-              ? const QueueEntryItemArtworkPlaceholder(
-                  size: ARTWORK_THUMBNAIL_SIZE)
-              : QueueEntryItemArtwork(
+        padding: const EdgeInsetsDirectional.fromSTEB(PADDING_M, PADDING_XS, PADDING_M, PADDING_XS),
+        decoration: BoxDecoration(border: Border.symmetric(horizontal: Divider.createBorderSide(context))),
+        child: Row(
+          children: [
+            nowPlayingItem == null
+                ? const QueueEntryItemArtworkPlaceholder(size: ARTWORK_THUMBNAIL_SIZE)
+                : QueueEntryItemArtwork(
                   id: nowPlayingItem!.id,
                   kind: nowPlayingItem!.type,
                   size: ARTWORK_THUMBNAIL_SIZE,
                 ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    currentEntry?.title ?? context.loc.notPlaying,
-                    style: context.ttoc.titleMedium,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  if (currentEntry?.subtitle != null)
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
                     Text(
-                      currentEntry!.subtitle!,
-                      style: context.ttoc.titleSmall,
+                      currentEntry?.title ?? context.loc.notPlaying,
+                      style: context.ttoc.titleMedium,
                       overflow: TextOverflow.ellipsis,
                     ),
-                ],
+                    if (currentEntry?.subtitle != null)
+                      Text(currentEntry!.subtitle!, style: context.ttoc.titleSmall, overflow: TextOverflow.ellipsis),
+                  ],
+                ),
               ),
             ),
-          ),
-          IconButton(
-            onPressed: isNotPlaying
-                ? null
-                : () {
-                    ref.read(musicPlayerProvider).playOrPause();
-                    HapticFeedback.mediumImpact();
-                  },
-            icon: playbackStatus.value != MusicPlayerPlaybackStatus.playing
-                ? const Icon(Icons.play_arrow_rounded)
-                : const Icon(Icons.pause_rounded),
-          ),
-          IconButton(
-            onPressed: isNotPlaying
-                ? null
-                : () {
-                    ref.read(musicPlayerProvider).skipToNext();
-                    HapticFeedback.mediumImpact();
-                  },
-            icon: const Icon(Icons.fast_forward_rounded),
-          ),
-        ]),
+            IconButton(
+              onPressed:
+                  isNotPlaying
+                      ? null
+                      : () {
+                        ref.read(musicPlayerProvider).playOrPause();
+                        HapticFeedback.mediumImpact();
+                      },
+              icon:
+                  playbackStatus.value != MusicPlayerPlaybackStatus.playing
+                      ? const Icon(Icons.play_arrow_rounded)
+                      : const Icon(Icons.pause_rounded),
+            ),
+            IconButton(
+              onPressed:
+                  isNotPlaying
+                      ? null
+                      : () {
+                        ref.read(musicPlayerProvider).skipToNext();
+                        HapticFeedback.mediumImpact();
+                      },
+              icon: const Icon(Icons.fast_forward_rounded),
+            ),
+          ],
+        ),
       ),
     );
   }

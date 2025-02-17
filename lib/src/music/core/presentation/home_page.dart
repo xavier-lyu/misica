@@ -47,26 +47,17 @@ class _HomePageState extends ConsumerState<HomePage> {
   Widget build(BuildContext context) {
     final scrollOffset = useState<double>(0);
 
-    ref.listen<AsyncValue<Charts>>(
-      chartsNotifierProvider,
-      (prev, next) {
-        if (_completer?.isCompleted == false) {
-          next.whenOrNull(data: (_) => _completer?.complete());
-        }
-      },
-    );
+    ref.listen<AsyncValue<Charts>>(chartsNotifierProvider, (prev, next) {
+      if (_completer?.isCompleted == false) {
+        next.whenOrNull(data: (_) => _completer?.complete());
+      }
+    });
 
-    ref.listen<AsyncValue<List<Recommendation>>>(
-      recosNotifierProvider,
-      (previous, next) {
-        if (_completer?.isCompleted == false) {
-          next.whenOrNull(
-            data: (_) => _completer?.complete(),
-            error: (error, _) => _completer?.completeError(error),
-          );
-        }
-      },
-    );
+    ref.listen<AsyncValue<List<Recommendation>>>(recosNotifierProvider, (previous, next) {
+      if (_completer?.isCompleted == false) {
+        next.whenOrNull(data: (_) => _completer?.complete(), error: (error, _) => _completer?.completeError(error));
+      }
+    });
 
     return Scaffold(
       body: Padding(
@@ -80,35 +71,20 @@ class _HomePageState extends ConsumerState<HomePage> {
             slivers: [
               AppNavbar(
                 title: Row(
-                  mainAxisAlignment: scrollOffset.value < _compactAppBarHeight
-                      ? MainAxisAlignment.spaceBetween
-                      : MainAxisAlignment.center,
+                  mainAxisAlignment:
+                      scrollOffset.value < _compactAppBarHeight
+                          ? MainAxisAlignment.spaceBetween
+                          : MainAxisAlignment.center,
                   children: [
-                    Text(
-                      context.loc.home,
-                      style: context.ttoc.titleLarge,
-                      textAlign: TextAlign.start,
-                    ),
-                    if (scrollOffset.value < _compactAppBarHeight)
-                      const SettingsActionWidget()
+                    Text(context.loc.home, style: context.ttoc.titleLarge, textAlign: TextAlign.start),
+                    if (scrollOffset.value < _compactAppBarHeight) const SettingsActionWidget(),
                   ],
                 ),
                 centerTitle: scrollOffset.value >= _compactAppBarHeight,
-                actions: [
-                  if (scrollOffset.value >= _compactAppBarHeight)
-                    const SettingsActionWidget(),
-                ],
+                actions: [if (scrollOffset.value >= _compactAppBarHeight) const SettingsActionWidget()],
               ),
-              const SliverPadding(
-                padding: EdgeInsetsDirectional.only(
-                  top: PADDING_M,
-                ),
-                sliver: RecommendationsList(),
-              ),
-              const SliverPadding(
-                padding: EdgeInsetsDirectional.only(top: PADDING_M),
-                sliver: ChartsList(),
-              ),
+              const SliverPadding(padding: EdgeInsetsDirectional.only(top: PADDING_M), sliver: RecommendationsList()),
+              const SliverPadding(padding: EdgeInsetsDirectional.only(top: PADDING_M), sliver: ChartsList()),
             ],
           ),
         ),
@@ -125,17 +101,13 @@ class _HomePageState extends ConsumerState<HomePage> {
 }
 
 class SettingsActionWidget extends StatelessWidget {
-  const SettingsActionWidget({
-    super.key,
-  });
+  const SettingsActionWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () => context.router.push(const SettingsRoute()),
-      icon: const Icon(
-        Icons.settings_rounded,
-      ),
+      icon: const Icon(Icons.settings_rounded),
       iconSize: 20,
       padding: EdgeInsets.zero,
     );

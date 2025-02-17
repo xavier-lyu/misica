@@ -11,8 +11,6 @@ class ReleaseDateWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     if (date == null) return Container();
 
-    return Text(
-      DateFormat.yMMMd(context.loc.localeName).format(date!),
-    );
+    return Text(DateFormat.yMMMd(context.loc.localeName).format(date!));
   }
 }

@@ -9,10 +9,7 @@ import 'resources_grid_view.dart';
 import 'resources_list_view.dart';
 
 class LikedResourcesView extends StatefulWidget {
-  const LikedResourcesView({
-    super.key,
-    required this.resources,
-  });
+  const LikedResourcesView({super.key, required this.resources});
 
   final Map<String, List<Resource>> resources;
 
@@ -20,8 +17,7 @@ class LikedResourcesView extends StatefulWidget {
   State<LikedResourcesView> createState() => _LikedResourcesViewState();
 }
 
-class _LikedResourcesViewState extends State<LikedResourcesView>
-    with TickerProviderStateMixin {
+class _LikedResourcesViewState extends State<LikedResourcesView> with TickerProviderStateMixin {
   late TabController _tabController;
 
   List<String> get _types => widget.resources.keys.toList()..sort();
@@ -29,8 +25,7 @@ class _LikedResourcesViewState extends State<LikedResourcesView>
   @override
   void initState() {
     super.initState();
-    _tabController =
-        TabController(length: widget.resources.length, vsync: this);
+    _tabController = TabController(length: widget.resources.length, vsync: this);
   }
 
   @override
@@ -58,23 +53,13 @@ class _LikedResourcesViewState extends State<LikedResourcesView>
     return CustomScrollView(
       slivers: [
         SliverAppBar(
-          title: Text(
-            context.loc.yourLibrary,
-            style: context.ttoc.titleLarge,
-          ),
+          title: Text(context.loc.yourLibrary, style: context.ttoc.titleLarge),
           centerTitle: false,
           pinned: true,
           bottom: TabBar(
             isScrollable: true,
             controller: _tabController,
-            tabs: _types
-                .map((key) => Tab(
-                      child: Text(
-                        key.toUpperCase(),
-                        style: context.ttoc.titleSmall,
-                      ),
-                    ))
-                .toList(),
+            tabs: _types.map((key) => Tab(child: Text(key.toUpperCase(), style: context.ttoc.titleSmall))).toList(),
           ),
         ),
         SliverFillRemaining(
@@ -82,19 +67,16 @@ class _LikedResourcesViewState extends State<LikedResourcesView>
             padding: const EdgeInsets.only(bottom: 66),
             child: TabBarView(
               controller: _tabController,
-              children: _types.map((result) {
-                if (result == 'songs' || result == 'artists') {
-                  return ResourcesListView(
-                    resources: widget.resources[result]!,
-                  );
-                }
-                return ResourcesGridView(
-                  resources: widget.resources[result]!,
-                );
-              }).toList(),
+              children:
+                  _types.map((result) {
+                    if (result == 'songs' || result == 'artists') {
+                      return ResourcesListView(resources: widget.resources[result]!);
+                    }
+                    return ResourcesGridView(resources: widget.resources[result]!);
+                  }).toList(),
             ),
           ),
-        )
+        ),
       ],
     );
   }

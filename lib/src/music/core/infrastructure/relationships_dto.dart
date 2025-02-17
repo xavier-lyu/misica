@@ -16,8 +16,7 @@ class ResourceRelationshipDTO with _$ResourceRelationshipDTO {
     @ResourceDTOConverter() required List<ResourceDTO> data,
   }) = _ResourceRelationshipDTO;
 
-  factory ResourceRelationshipDTO.fromJson(Map<String, dynamic> json) =>
-      _$ResourceRelationshipDTOFromJson(json);
+  factory ResourceRelationshipDTO.fromJson(Map<String, dynamic> json) => _$ResourceRelationshipDTOFromJson(json);
 }
 
 @freezed
@@ -31,8 +30,7 @@ class AlbumRelationshipsDTO with _$AlbumRelationshipsDTO {
     ResourceRelationshipDTO? catalog,
   }) = _AlbumRelationshipsDTO;
 
-  factory AlbumRelationshipsDTO.fromJson(Map<String, dynamic> json) =>
-      _$AlbumRelationshipsDTOFromJson(json);
+  factory AlbumRelationshipsDTO.fromJson(Map<String, dynamic> json) => _$AlbumRelationshipsDTOFromJson(json);
 
   AlbumRelationships toDomain() {
     return AlbumRelationships(
@@ -53,12 +51,10 @@ class ArtistRelationshipsDTO with _$ArtistRelationshipsDTO {
     ResourceRelationshipDTO? musicVideos,
     ResourceRelationshipDTO? station,
     ResourceRelationshipDTO? catalog,
-    @JsonKey(name: 'default-playable-content')
-        ResourceRelationshipDTO? defaultPlayableContent,
+    @JsonKey(name: 'default-playable-content') ResourceRelationshipDTO? defaultPlayableContent,
   }) = _ArtistRelationshipsDTO;
 
-  factory ArtistRelationshipsDTO.fromJson(Map<String, dynamic> json) =>
-      _$ArtistRelationshipsDTOFromJson(json);
+  factory ArtistRelationshipsDTO.fromJson(Map<String, dynamic> json) => _$ArtistRelationshipsDTOFromJson(json);
 
   ArtistRelationships toDomain() {
     return ArtistRelationships(
@@ -82,8 +78,7 @@ class PlaylistRelationshipsDTO with _$PlaylistRelationshipsDTO {
     ResourceRelationshipDTO? catalog,
   }) = _PlaylistRelationshipsDTO;
 
-  factory PlaylistRelationshipsDTO.fromJson(Map<String, dynamic> json) =>
-      _$PlaylistRelationshipsDTOFromJson(json);
+  factory PlaylistRelationshipsDTO.fromJson(Map<String, dynamic> json) => _$PlaylistRelationshipsDTOFromJson(json);
 
   PlaylistRelationships toDomain() {
     return PlaylistRelationships(
@@ -108,8 +103,7 @@ class SongRelationshipsDTO with _$SongRelationshipsDTO {
     ResourceRelationshipDTO? catalog,
   }) = _SongRelationshipsDTO;
 
-  factory SongRelationshipsDTO.fromJson(Map<String, dynamic> json) =>
-      _$SongRelationshipsDTOFromJson(json);
+  factory SongRelationshipsDTO.fromJson(Map<String, dynamic> json) => _$SongRelationshipsDTOFromJson(json);
 
   SongRelationships toDomain() {
     return SongRelationships(
@@ -135,8 +129,7 @@ class MusicVideoRelationshipsDTO with _$MusicVideoRelationshipsDTO {
     ResourceRelationshipDTO? catalog,
   }) = _MusicVideoRelationshipsDTO;
 
-  factory MusicVideoRelationshipsDTO.fromJson(Map<String, dynamic> json) =>
-      _$MusicVideoRelationshipsDTOFromJson(json);
+  factory MusicVideoRelationshipsDTO.fromJson(Map<String, dynamic> json) => _$MusicVideoRelationshipsDTOFromJson(json);
 
   MusicVideoRelationships toDomain() {
     return MusicVideoRelationships(
@@ -152,16 +145,11 @@ class MusicVideoRelationshipsDTO with _$MusicVideoRelationshipsDTO {
 @freezed
 class CuratorRelationshipsDTO with _$CuratorRelationshipsDTO {
   const CuratorRelationshipsDTO._();
-  const factory CuratorRelationshipsDTO({
-    ResourceRelationshipDTO? playlists,
-  }) = _CuratorRelationshipsDTO;
+  const factory CuratorRelationshipsDTO({ResourceRelationshipDTO? playlists}) = _CuratorRelationshipsDTO;
 
-  factory CuratorRelationshipsDTO.fromJson(Map<String, dynamic> json) =>
-      _$CuratorRelationshipsDTOFromJson(json);
+  factory CuratorRelationshipsDTO.fromJson(Map<String, dynamic> json) => _$CuratorRelationshipsDTOFromJson(json);
 
   CuratorRelationships toDomain() {
-    return CuratorRelationships(
-      playlists: playlists?.data.toDomain(),
-    );
+    return CuratorRelationships(playlists: playlists?.data.toDomain());
   }
 }

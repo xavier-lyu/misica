@@ -13,8 +13,7 @@ String _$musicKitHash() => r'71ee48eaf35b3f7dc8415d75c967f33988a3f098';
 final musicKitProvider = Provider<MusicKit>.internal(
   musicKit,
   name: r'musicKitProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$musicKitHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$musicKitHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
@@ -29,8 +28,7 @@ String _$musicDioHash() => r'b1c70b440104ad135876bfc7551903912c73e645';
 final musicDioProvider = AutoDisposeProvider<Dio>.internal(
   musicDio,
   name: r'musicDioProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$musicDioHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$musicDioHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
@@ -45,8 +43,7 @@ String _$sembastHash() => r'82c7f706cfe9ae89cf066cb6fee5f6f6c9cb16bf';
 final sembastProvider = Provider<SembastDatabase>.internal(
   sembast,
   name: r'sembastProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$sembastHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$sembastHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
@@ -61,9 +58,7 @@ String _$initializationHash() => r'4577f1a13033006131415c4d41c68f0e41d13e89';
 final initializationProvider = AutoDisposeFutureProvider<Unit>.internal(
   initialization,
   name: r'initializationProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$initializationHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$initializationHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

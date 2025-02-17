@@ -33,8 +33,7 @@ class AlbumAttributesDTO with _$AlbumAttributesDTO {
     String? url,
   }) = _AlbumAttributesDTO;
 
-  factory AlbumAttributesDTO.fromJson(Map<String, dynamic> json) =>
-      _$AlbumAttributesDTOFromJson(json);
+  factory AlbumAttributesDTO.fromJson(Map<String, dynamic> json) => _$AlbumAttributesDTOFromJson(json);
 
   AlbumAttributes toDomain() {
     return AlbumAttributes(
@@ -64,8 +63,7 @@ class ArtistAttributesDTO with _$ArtistAttributesDTO {
     ArtworkDTO? artwork,
   }) = _ArtistAttributesDTO;
 
-  factory ArtistAttributesDTO.fromJson(Map<String, dynamic> json) =>
-      _$ArtistAttributesDTOFromJson(json);
+  factory ArtistAttributesDTO.fromJson(Map<String, dynamic> json) => _$ArtistAttributesDTOFromJson(json);
 
   ArtistAttributes toDomain() {
     return ArtistAttributes(
@@ -99,8 +97,7 @@ class MusicVideoAttributesDTO with _$MusicVideoAttributesDTO {
     String? contentRating,
   }) = _MusicVideoAttributesDTO;
 
-  factory MusicVideoAttributesDTO.fromJson(Map<String, dynamic> json) =>
-      _$MusicVideoAttributesDTOFromJson(json);
+  factory MusicVideoAttributesDTO.fromJson(Map<String, dynamic> json) => _$MusicVideoAttributesDTOFromJson(json);
 
   MusicVideoAttributes toDomain() {
     return MusicVideoAttributes(
@@ -137,8 +134,7 @@ class PlaylistAttributesDTO with _$PlaylistAttributesDTO {
     String? curatorSocialHandle,
   }) = _PlaylistAttributesDTO;
 
-  factory PlaylistAttributesDTO.fromJson(Map<String, dynamic> json) =>
-      _$PlaylistAttributesDTOFromJson(json);
+  factory PlaylistAttributesDTO.fromJson(Map<String, dynamic> json) => _$PlaylistAttributesDTOFromJson(json);
 
   PlaylistAttributes toDomain() {
     return PlaylistAttributes(
@@ -181,8 +177,7 @@ class SongAttributesDTO with _$SongAttributesDTO {
     String? workName,
   }) = _SongAttributesDTO;
 
-  factory SongAttributesDTO.fromJson(Map<String, dynamic> json) =>
-      _$SongAttributesDTOFromJson(json);
+  factory SongAttributesDTO.fromJson(Map<String, dynamic> json) => _$SongAttributesDTOFromJson(json);
 
   SongAttributes toDomain() {
     return SongAttributes(
@@ -216,8 +211,7 @@ class StationAttributesDTO with _$StationAttributesDTO {
     String? url,
   }) = _StationAttributesDTO;
 
-  factory StationAttributesDTO.fromJson(Map<String, dynamic> json) =>
-      _$StationAttributesDTOFromJson(json);
+  factory StationAttributesDTO.fromJson(Map<String, dynamic> json) => _$StationAttributesDTOFromJson(json);
 
   StationAttributes toDomain() {
     return StationAttributes(
@@ -241,29 +235,19 @@ class CuratorAttributesDTO with _$CuratorAttributesDTO {
     String? url,
   }) = _CuratorAttributesDTO;
 
-  factory CuratorAttributesDTO.fromJson(Map<String, dynamic> json) =>
-      _$CuratorAttributesDTOFromJson(json);
+  factory CuratorAttributesDTO.fromJson(Map<String, dynamic> json) => _$CuratorAttributesDTOFromJson(json);
 
   CuratorAttributes toDomain() {
-    return CuratorAttributes(
-      artwork: artwork?.toDomain(),
-      name: name,
-      url: url,
-    );
+    return CuratorAttributes(artwork: artwork?.toDomain(), name: name, url: url);
   }
 }
 
 @freezed
 class GenreAttributesDTO with _$GenreAttributesDTO {
   const GenreAttributesDTO._();
-  const factory GenreAttributesDTO({
-    String? parentId,
-    String? parentName,
-    required String name,
-  }) = _GenreAttributesDTO;
+  const factory GenreAttributesDTO({String? parentId, String? parentName, required String name}) = _GenreAttributesDTO;
 
-  factory GenreAttributesDTO.fromJson(Map<String, dynamic> json) =>
-      _$GenreAttributesDTOFromJson(json);
+  factory GenreAttributesDTO.fromJson(Map<String, dynamic> json) => _$GenreAttributesDTOFromJson(json);
 
   GenreAttributes toDomain() {
     return GenreAttributes(name: name);

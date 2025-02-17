@@ -2,8 +2,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/library/infrastructure/liked_resources_repository.dart';
 
-class LikedResourcesNotifier
-    extends StateNotifier<AsyncValue<Map<String, List<Resource>>>> {
+class LikedResourcesNotifier extends StateNotifier<AsyncValue<Map<String, List<Resource>>>> {
   LikedResourcesNotifier(this._repository) : super(const AsyncLoading());
 
   final LikedResourcesRepository _repository;
@@ -12,15 +11,12 @@ class LikedResourcesNotifier
     _repository
         .watchLikedResources()
         .listen((data) => state = AsyncValue.data(data))
-        .onError(
-            (Object error) => state = AsyncError(error, StackTrace.current));
+        .onError((Object error) => state = AsyncError(error, StackTrace.current));
   }
 
-  Future<void> addLikedResource(Resource resource) =>
-      _repository.addLikedResource(resource);
+  Future<void> addLikedResource(Resource resource) => _repository.addLikedResource(resource);
 
-  Future<void> deleteLikedResource(String id) =>
-      _repository.deleteLikedResource(id);
+  Future<void> deleteLikedResource(String id) => _repository.deleteLikedResource(id);
 
   Future<bool> isLiked(String id) => _repository.isLiked(id);
 

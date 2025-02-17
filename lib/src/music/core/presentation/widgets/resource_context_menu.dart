@@ -16,11 +16,7 @@ import 'artwork_widget.dart';
 enum ResourceContainer { isolate, album }
 
 class ResourceContextMenuButton extends StatelessWidget {
-  const ResourceContextMenuButton({
-    super.key,
-    required this.resource,
-    this.container = ResourceContainer.isolate,
-  });
+  const ResourceContextMenuButton({super.key, required this.resource, this.container = ResourceContainer.isolate});
 
   final Resource resource;
   final ResourceContainer container;
@@ -32,10 +28,7 @@ class ResourceContextMenuButton extends StatelessWidget {
       onPressed: () {
         showCupertinoModalBottomSheet(
           context: context,
-          builder: (_) => ResourceMenuModal(
-            resource: resource,
-            container: container,
-          ),
+          builder: (_) => ResourceMenuModal(resource: resource, container: container),
         );
       },
     );
@@ -43,8 +36,7 @@ class ResourceContextMenuButton extends StatelessWidget {
 }
 
 class ResourceMenuModal extends StatelessWidget {
-  const ResourceMenuModal(
-      {super.key, required this.resource, required this.container});
+  const ResourceMenuModal({super.key, required this.resource, required this.container});
 
   final Resource resource;
   final ResourceContainer container;
@@ -59,26 +51,19 @@ class ResourceMenuModal extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               ListTile(
-                leading: ArtworkWidget(
-                  artwork: resource.artwork,
-                  width: 48,
-                  height: 48,
-                ),
+                leading: ArtworkWidget(artwork: resource.artwork, width: 48, height: 48),
                 title: Text(resource.name),
-                subtitle: resource.creatorName?.isNotEmpty == true
-                    ? Text(resource.creatorName!)
-                    : null,
+                subtitle: resource.creatorName?.isNotEmpty == true ? Text(resource.creatorName!) : null,
                 trailing: const CloseButton(),
               ),
               const Divider(),
               LikeOrUnlikeWidget(
                 resource: resource,
-                builder: (context, value) => ListTile(
-                  leading: Icon(value
-                      ? Icons.favorite_rounded
-                      : Icons.favorite_border_rounded),
-                  title: Text(value ? context.loc.liked : context.loc.like),
-                ),
+                builder:
+                    (context, value) => ListTile(
+                      leading: Icon(value ? Icons.favorite_rounded : Icons.favorite_border_rounded),
+                      title: Text(value ? context.loc.liked : context.loc.like),
+                    ),
               ),
               ...resource.maybeMap(
                 (value) => [],
@@ -88,9 +73,7 @@ class ResourceMenuModal extends StatelessWidget {
                   if (isInAlbum) return [];
 
                   return [
-                    song.albumId == null
-                        ? const SizedBox()
-                        : GoToAlbumTile(albumId: song.albumId!),
+                    song.albumId == null ? const SizedBox() : GoToAlbumTile(albumId: song.albumId!),
                     song.artistIds?.isNotEmpty == true
                         ? GoToArtistTile(artistId: song.artistIds![0])
                         : const SizedBox(),
@@ -106,10 +89,7 @@ class ResourceMenuModal extends StatelessWidget {
 }
 
 class GoToArtistTile extends StatelessWidget {
-  const GoToArtistTile({
-    super.key,
-    required this.artistId,
-  });
+  const GoToArtistTile({super.key, required this.artistId});
 
   final String artistId;
 
@@ -126,10 +106,7 @@ class GoToArtistTile extends StatelessWidget {
 }
 
 class GoToAlbumTile extends StatelessWidget {
-  const GoToAlbumTile({
-    super.key,
-    required this.albumId,
-  });
+  const GoToAlbumTile({super.key, required this.albumId});
 
   final String albumId;
 
@@ -146,19 +123,14 @@ class GoToAlbumTile extends StatelessWidget {
 }
 
 class LikeOrUnlikeWidget extends HookConsumerWidget {
-  const LikeOrUnlikeWidget({
-    super.key,
-    required this.resource,
-    required this.builder,
-  });
+  const LikeOrUnlikeWidget({super.key, required this.resource, required this.builder});
 
   final Resource resource;
   final Widget Function(BuildContext context, bool liked) builder;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final likedState =
-        ref.watch(isResourceLikedProvider(resourceId: resource.id));
+    final likedState = ref.watch(isResourceLikedProvider(resourceId: resource.id));
     final liked = useState(likedState.value ?? false);
 
     return InkWell(

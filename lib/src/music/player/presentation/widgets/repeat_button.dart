@@ -10,8 +10,7 @@ class RepeatButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final repeatMode = ref.watch(repeatModeNotifierProvider).valueOrNull ??
-        MusicPlayerRepeatMode.none;
+    final repeatMode = ref.watch(repeatModeNotifierProvider).valueOrNull ?? MusicPlayerRepeatMode.none;
     return IconButton(
       iconSize: iconSize,
       onPressed: () {

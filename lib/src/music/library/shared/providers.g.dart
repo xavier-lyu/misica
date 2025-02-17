@@ -10,41 +10,32 @@ String _$likedLocalServiceHash() => r'34d60a13cb189546fd481b0540e2dd768961efb2';
 
 /// See also [likedLocalService].
 @ProviderFor(likedLocalService)
-final likedLocalServiceProvider =
-    AutoDisposeProvider<LikedResourcesLocalService>.internal(
+final likedLocalServiceProvider = AutoDisposeProvider<LikedResourcesLocalService>.internal(
   likedLocalService,
   name: r'likedLocalServiceProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$likedLocalServiceHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$likedLocalServiceHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
-typedef LikedLocalServiceRef
-    = AutoDisposeProviderRef<LikedResourcesLocalService>;
-String _$likedResourcesRepositoryHash() =>
-    r'3f15ae15fc0dc1a9aedc53852ae83ae522d2c516';
+typedef LikedLocalServiceRef = AutoDisposeProviderRef<LikedResourcesLocalService>;
+String _$likedResourcesRepositoryHash() => r'3f15ae15fc0dc1a9aedc53852ae83ae522d2c516';
 
 /// See also [likedResourcesRepository].
 @ProviderFor(likedResourcesRepository)
-final likedResourcesRepositoryProvider =
-    AutoDisposeProvider<LikedResourcesRepository>.internal(
+final likedResourcesRepositoryProvider = AutoDisposeProvider<LikedResourcesRepository>.internal(
   likedResourcesRepository,
   name: r'likedResourcesRepositoryProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$likedResourcesRepositoryHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$likedResourcesRepositoryHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
-typedef LikedResourcesRepositoryRef
-    = AutoDisposeProviderRef<LikedResourcesRepository>;
+typedef LikedResourcesRepositoryRef = AutoDisposeProviderRef<LikedResourcesRepository>;
 String _$isResourceLikedHash() => r'2236f259df245b6a594794f0969c25660b05dd97';
 
 /// Copied from Dart SDK
@@ -78,21 +69,13 @@ class IsResourceLikedFamily extends Family<AsyncValue<bool>> {
   const IsResourceLikedFamily();
 
   /// See also [isResourceLiked].
-  IsResourceLikedProvider call({
-    required String resourceId,
-  }) {
-    return IsResourceLikedProvider(
-      resourceId: resourceId,
-    );
+  IsResourceLikedProvider call({required String resourceId}) {
+    return IsResourceLikedProvider(resourceId: resourceId);
   }
 
   @override
-  IsResourceLikedProvider getProviderOverride(
-    covariant IsResourceLikedProvider provider,
-  ) {
-    return call(
-      resourceId: provider.resourceId,
-    );
+  IsResourceLikedProvider getProviderOverride(covariant IsResourceLikedProvider provider) {
+    return call(resourceId: provider.resourceId);
   }
 
   static const Iterable<ProviderOrFamily>? _dependencies = null;
@@ -103,8 +86,7 @@ class IsResourceLikedFamily extends Family<AsyncValue<bool>> {
   static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
 
   @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies => _allTransitiveDependencies;
 
   @override
   String? get name => r'isResourceLikedProvider';
@@ -113,24 +95,16 @@ class IsResourceLikedFamily extends Family<AsyncValue<bool>> {
 /// See also [isResourceLiked].
 class IsResourceLikedProvider extends AutoDisposeFutureProvider<bool> {
   /// See also [isResourceLiked].
-  IsResourceLikedProvider({
-    required String resourceId,
-  }) : this._internal(
-          (ref) => isResourceLiked(
-            ref as IsResourceLikedRef,
-            resourceId: resourceId,
-          ),
-          from: isResourceLikedProvider,
-          name: r'isResourceLikedProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$isResourceLikedHash,
-          dependencies: IsResourceLikedFamily._dependencies,
-          allTransitiveDependencies:
-              IsResourceLikedFamily._allTransitiveDependencies,
-          resourceId: resourceId,
-        );
+  IsResourceLikedProvider({required String resourceId})
+    : this._internal(
+        (ref) => isResourceLiked(ref as IsResourceLikedRef, resourceId: resourceId),
+        from: isResourceLikedProvider,
+        name: r'isResourceLikedProvider',
+        debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$isResourceLikedHash,
+        dependencies: IsResourceLikedFamily._dependencies,
+        allTransitiveDependencies: IsResourceLikedFamily._allTransitiveDependencies,
+        resourceId: resourceId,
+      );
 
   IsResourceLikedProvider._internal(
     super._createNotifier, {
@@ -145,9 +119,7 @@ class IsResourceLikedProvider extends AutoDisposeFutureProvider<bool> {
   final String resourceId;
 
   @override
-  Override overrideWith(
-    FutureOr<bool> Function(IsResourceLikedRef provider) create,
-  ) {
+  Override overrideWith(FutureOr<bool> Function(IsResourceLikedRef provider) create) {
     return ProviderOverride(
       origin: this,
       override: IsResourceLikedProvider._internal(
@@ -188,12 +160,12 @@ mixin IsResourceLikedRef on AutoDisposeFutureProviderRef<bool> {
   String get resourceId;
 }
 
-class _IsResourceLikedProviderElement
-    extends AutoDisposeFutureProviderElement<bool> with IsResourceLikedRef {
+class _IsResourceLikedProviderElement extends AutoDisposeFutureProviderElement<bool> with IsResourceLikedRef {
   _IsResourceLikedProviderElement(super.provider);
 
   @override
   String get resourceId => (origin as IsResourceLikedProvider).resourceId;
 }
+
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

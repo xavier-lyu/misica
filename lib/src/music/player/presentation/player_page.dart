@@ -35,30 +35,26 @@ class PlayerPage extends HookConsumerWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(
-              horizontal: PADDING_L, vertical: PADDING_XL),
+          padding: const EdgeInsets.symmetric(horizontal: PADDING_L, vertical: PADDING_XL),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Builder(builder: (context) {
-                final artworkSize = context.mqoc.size.width - PADDING_XL * 2;
-                return currentEntry?.currentTrack == null
-                    ? QueueEntryItemArtworkPlaceholder(
-                        size: artworkSize,
-                      )
-                    : QueueEntryItemArtwork(
+              Builder(
+                builder: (context) {
+                  final artworkSize = context.mqoc.size.width - PADDING_XL * 2;
+                  return currentEntry?.currentTrack == null
+                      ? QueueEntryItemArtworkPlaceholder(size: artworkSize)
+                      : QueueEntryItemArtwork(
                         id: currentEntry!.currentTrack!.id,
                         kind: currentEntry.currentTrack!.type,
                         size: artworkSize,
                       );
-              }),
+                },
+              ),
               const SizedBox(height: PADDING_XL),
               Text(
                 currentEntry?.title ?? context.loc.notPlaying,
-                style: context.ttoc.titleLarge?.copyWith(
-                  fontWeight: FontWeight.w700,
-                  fontSize: 26.0,
-                ),
+                style: context.ttoc.titleLarge?.copyWith(fontWeight: FontWeight.w700, fontSize: 26.0),
                 overflow: TextOverflow.ellipsis,
               ),
               if (currentEntry?.subtitle != null)
@@ -70,25 +66,25 @@ class PlayerPage extends HookConsumerWidget {
                     overflow: TextOverflow.ellipsis,
                   ),
                 ),
-              const SizedBox(
-                height: PADDING_XL - 8.0,
-              ),
+              const SizedBox(height: PADDING_XL - 8.0),
               // progress bar
               // controls
-              Builder(builder: (context) {
-                const iconSize = 44.0;
+              Builder(
+                builder: (context) {
+                  const iconSize = 44.0;
 
-                return const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    ShuffleButton(iconSize: iconSize),
-                    SkipPreviousButton(iconSize: iconSize),
-                    PlayOrPauseButton(iconSize: iconSize * 2),
-                    SkipNextButton(iconSize: iconSize),
-                    RepeatButton(iconSize: iconSize),
-                  ],
-                );
-              }),
+                  return const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ShuffleButton(iconSize: iconSize),
+                      SkipPreviousButton(iconSize: iconSize),
+                      PlayOrPauseButton(iconSize: iconSize * 2),
+                      SkipNextButton(iconSize: iconSize),
+                      RepeatButton(iconSize: iconSize),
+                    ],
+                  );
+                },
+              ),
             ],
           ),
         ),

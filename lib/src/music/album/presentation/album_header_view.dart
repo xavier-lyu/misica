@@ -10,10 +10,7 @@ import 'package:misica/src/music/core/presentation/widgets/play_button.dart';
 import 'package:misica/src/music/core/presentation/widgets/shuffle_play_button.dart';
 
 class AlbumHeaderView extends StatelessWidget {
-  const AlbumHeaderView({
-    super.key,
-    required this.album,
-  });
+  const AlbumHeaderView({super.key, required this.album});
 
   final Album album;
 
@@ -21,29 +18,19 @@ class AlbumHeaderView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ArtworkWidget(
-          artwork: album.artwork,
-          width: ARTWORK_COVER_SIZE,
-          height: ARTWORK_COVER_SIZE,
-        ),
-        const SizedBox(
-          height: 15,
-        ),
+        ArtworkWidget(artwork: album.artwork, width: ARTWORK_COVER_SIZE, height: ARTWORK_COVER_SIZE),
+        const SizedBox(height: 15),
         if (album.name.isNotEmpty)
           Text(
             album.name,
-            style: context.ttoc.titleLarge?.copyWith(
-              fontWeight: FontWeight.bold,
-            ),
+            style: context.ttoc.titleLarge?.copyWith(fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
         if (album.creatorName?.isNotEmpty == true)
           TextButton(
             child: Text(
               album.creatorName!,
-              style: context.ttoc.titleLarge?.copyWith(
-                color: context.toc.primaryColor,
-              ),
+              style: context.ttoc.titleLarge?.copyWith(color: context.toc.primaryColor),
               textAlign: TextAlign.center,
             ),
             onPressed: () {
@@ -53,21 +40,14 @@ class AlbumHeaderView extends StatelessWidget {
             },
           ),
         if (album.description != null)
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: PADDING_S),
-            child: ExpandableText(album.description!),
-          ),
+          Padding(padding: const EdgeInsets.symmetric(vertical: PADDING_S), child: ExpandableText(album.description!)),
         Row(
           children: [
-            Flexible(
-                child: PlayButton(
-              kind: album.type,
-              item: album,
-            )),
+            Flexible(child: PlayButton(kind: album.type, item: album)),
             const SizedBox(width: 15),
-            Flexible(child: ShufflePlayButton(item: album))
+            Flexible(child: ShufflePlayButton(item: album)),
           ],
-        )
+        ),
       ],
     );
   }

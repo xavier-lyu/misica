@@ -22,14 +22,12 @@ class MusicPlayer {
   }
 
   Future<void> playSingle(Resource item, {bool shuffle = false}) async {
-    await _musicKit.setShuffleMode(
-        shuffle ? MusicPlayerShuffleMode.songs : MusicPlayerShuffleMode.off);
+    await _musicKit.setShuffleMode(shuffle ? MusicPlayerShuffleMode.songs : MusicPlayerShuffleMode.off);
     await _musicKit.setQueue(item.type, item: item.toJson());
     await _musicKit.play();
   }
 
-  Future<void> playMany(
-      {String? type, required List<Resource> items, int? startingAt}) async {
+  Future<void> playMany({String? type, required List<Resource> items, int? startingAt}) async {
     await _musicKit.setQueueWithItems(
       type ?? items.first.type,
       items: items.map((e) => e.toJson()).toList(),
@@ -39,16 +37,8 @@ class MusicPlayer {
     await _musicKit.play();
   }
 
-  Future<void> playTracks(
-      {required List<Track> tracks, int? startingAt}) async {
-    final items = tracks
-        .map(
-          (e) => e.when(
-            song: (song) => song,
-            musicVideo: (musicVideo) => musicVideo,
-          ),
-        )
-        .toList();
+  Future<void> playTracks({required List<Track> tracks, int? startingAt}) async {
+    final items = tracks.map((e) => e.when(song: (song) => song, musicVideo: (musicVideo) => musicVideo)).toList();
     await playMany(type: 'tracks', items: items, startingAt: startingAt);
   }
 

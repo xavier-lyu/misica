@@ -12,73 +12,61 @@ part of 'search_suggestions.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 /// @nodoc
 mixin _$SearchSuggestion {
   String get kind => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String kind, String searchTerm, String? displayTerm)
-        terms,
+    required TResult Function(String kind, String searchTerm, String? displayTerm) terms,
     required TResult Function(String kind, Resource content) topResults,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String kind, String searchTerm, String? displayTerm)?
-        terms,
+    TResult? Function(String kind, String searchTerm, String? displayTerm)? terms,
     TResult? Function(String kind, Resource content)? topResults,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String kind, String searchTerm, String? displayTerm)?
-        terms,
+    TResult Function(String kind, String searchTerm, String? displayTerm)? terms,
     TResult Function(String kind, Resource content)? topResults,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SearchSuggestionTerms value) terms,
     required TResult Function(SearchSuggestionTopResults value) topResults,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(SearchSuggestionTerms value)? terms,
     TResult? Function(SearchSuggestionTopResults value)? topResults,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SearchSuggestionTerms value)? terms,
     TResult Function(SearchSuggestionTopResults value)? topResults,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
 
   /// Create a copy of SearchSuggestion
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SearchSuggestionCopyWith<SearchSuggestion> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SearchSuggestionCopyWith<SearchSuggestion> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SearchSuggestionCopyWith<$Res> {
-  factory $SearchSuggestionCopyWith(
-          SearchSuggestion value, $Res Function(SearchSuggestion) then) =
+  factory $SearchSuggestionCopyWith(SearchSuggestion value, $Res Function(SearchSuggestion) then) =
       _$SearchSuggestionCopyWithImpl<$Res, SearchSuggestion>;
   @useResult
   $Res call({String kind});
 }
 
 /// @nodoc
-class _$SearchSuggestionCopyWithImpl<$Res, $Val extends SearchSuggestion>
-    implements $SearchSuggestionCopyWith<$Res> {
+class _$SearchSuggestionCopyWithImpl<$Res, $Val extends SearchSuggestion> implements $SearchSuggestionCopyWith<$Res> {
   _$SearchSuggestionCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -90,25 +78,26 @@ class _$SearchSuggestionCopyWithImpl<$Res, $Val extends SearchSuggestion>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? kind = null,
-  }) {
-    return _then(_value.copyWith(
-      kind: null == kind
-          ? _value.kind
-          : kind // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? kind = null}) {
+    return _then(
+      _value.copyWith(
+            kind:
+                null == kind
+                    ? _value.kind
+                    : kind // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$SearchSuggestionTermsImplCopyWith<$Res>
-    implements $SearchSuggestionCopyWith<$Res> {
+abstract class _$$SearchSuggestionTermsImplCopyWith<$Res> implements $SearchSuggestionCopyWith<$Res> {
   factory _$$SearchSuggestionTermsImplCopyWith(
-          _$SearchSuggestionTermsImpl value,
-          $Res Function(_$SearchSuggestionTermsImpl) then) =
-      __$$SearchSuggestionTermsImplCopyWithImpl<$Res>;
+    _$SearchSuggestionTermsImpl value,
+    $Res Function(_$SearchSuggestionTermsImpl) then,
+  ) = __$$SearchSuggestionTermsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String kind, String searchTerm, String? displayTerm});
@@ -118,43 +107,42 @@ abstract class _$$SearchSuggestionTermsImplCopyWith<$Res>
 class __$$SearchSuggestionTermsImplCopyWithImpl<$Res>
     extends _$SearchSuggestionCopyWithImpl<$Res, _$SearchSuggestionTermsImpl>
     implements _$$SearchSuggestionTermsImplCopyWith<$Res> {
-  __$$SearchSuggestionTermsImplCopyWithImpl(_$SearchSuggestionTermsImpl _value,
-      $Res Function(_$SearchSuggestionTermsImpl) _then)
-      : super(_value, _then);
+  __$$SearchSuggestionTermsImplCopyWithImpl(
+    _$SearchSuggestionTermsImpl _value,
+    $Res Function(_$SearchSuggestionTermsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SearchSuggestion
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? kind = null,
-    Object? searchTerm = null,
-    Object? displayTerm = freezed,
-  }) {
-    return _then(_$SearchSuggestionTermsImpl(
-      kind: null == kind
-          ? _value.kind
-          : kind // ignore: cast_nullable_to_non_nullable
-              as String,
-      searchTerm: null == searchTerm
-          ? _value.searchTerm
-          : searchTerm // ignore: cast_nullable_to_non_nullable
-              as String,
-      displayTerm: freezed == displayTerm
-          ? _value.displayTerm
-          : displayTerm // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? kind = null, Object? searchTerm = null, Object? displayTerm = freezed}) {
+    return _then(
+      _$SearchSuggestionTermsImpl(
+        kind:
+            null == kind
+                ? _value.kind
+                : kind // ignore: cast_nullable_to_non_nullable
+                    as String,
+        searchTerm:
+            null == searchTerm
+                ? _value.searchTerm
+                : searchTerm // ignore: cast_nullable_to_non_nullable
+                    as String,
+        displayTerm:
+            freezed == displayTerm
+                ? _value.displayTerm
+                : displayTerm // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$SearchSuggestionTermsImpl implements SearchSuggestionTerms {
-  const _$SearchSuggestionTermsImpl(
-      {required this.kind,
-      required this.searchTerm,
-      required this.displayTerm});
+  const _$SearchSuggestionTermsImpl({required this.kind, required this.searchTerm, required this.displayTerm});
 
   @override
   final String kind;
@@ -174,10 +162,8 @@ class _$SearchSuggestionTermsImpl implements SearchSuggestionTerms {
         (other.runtimeType == runtimeType &&
             other is _$SearchSuggestionTermsImpl &&
             (identical(other.kind, kind) || other.kind == kind) &&
-            (identical(other.searchTerm, searchTerm) ||
-                other.searchTerm == searchTerm) &&
-            (identical(other.displayTerm, displayTerm) ||
-                other.displayTerm == displayTerm));
+            (identical(other.searchTerm, searchTerm) || other.searchTerm == searchTerm) &&
+            (identical(other.displayTerm, displayTerm) || other.displayTerm == displayTerm));
   }
 
   @override
@@ -188,16 +174,13 @@ class _$SearchSuggestionTermsImpl implements SearchSuggestionTerms {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SearchSuggestionTermsImplCopyWith<_$SearchSuggestionTermsImpl>
-      get copyWith => __$$SearchSuggestionTermsImplCopyWithImpl<
-          _$SearchSuggestionTermsImpl>(this, _$identity);
+  _$$SearchSuggestionTermsImplCopyWith<_$SearchSuggestionTermsImpl> get copyWith =>
+      __$$SearchSuggestionTermsImplCopyWithImpl<_$SearchSuggestionTermsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String kind, String searchTerm, String? displayTerm)
-        terms,
+    required TResult Function(String kind, String searchTerm, String? displayTerm) terms,
     required TResult Function(String kind, Resource content) topResults,
   }) {
     return terms(kind, searchTerm, displayTerm);
@@ -206,8 +189,7 @@ class _$SearchSuggestionTermsImpl implements SearchSuggestionTerms {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String kind, String searchTerm, String? displayTerm)?
-        terms,
+    TResult? Function(String kind, String searchTerm, String? displayTerm)? terms,
     TResult? Function(String kind, Resource content)? topResults,
   }) {
     return terms?.call(kind, searchTerm, displayTerm);
@@ -216,8 +198,7 @@ class _$SearchSuggestionTermsImpl implements SearchSuggestionTerms {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String kind, String searchTerm, String? displayTerm)?
-        terms,
+    TResult Function(String kind, String searchTerm, String? displayTerm)? terms,
     TResult Function(String kind, Resource content)? topResults,
     required TResult orElse(),
   }) {
@@ -260,10 +241,11 @@ class _$SearchSuggestionTermsImpl implements SearchSuggestionTerms {
 }
 
 abstract class SearchSuggestionTerms implements SearchSuggestion {
-  const factory SearchSuggestionTerms(
-      {required final String kind,
-      required final String searchTerm,
-      required final String? displayTerm}) = _$SearchSuggestionTermsImpl;
+  const factory SearchSuggestionTerms({
+    required final String kind,
+    required final String searchTerm,
+    required final String? displayTerm,
+  }) = _$SearchSuggestionTermsImpl;
 
   @override
   String get kind;
@@ -274,17 +256,15 @@ abstract class SearchSuggestionTerms implements SearchSuggestion {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SearchSuggestionTermsImplCopyWith<_$SearchSuggestionTermsImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$SearchSuggestionTermsImplCopyWith<_$SearchSuggestionTermsImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SearchSuggestionTopResultsImplCopyWith<$Res>
-    implements $SearchSuggestionCopyWith<$Res> {
+abstract class _$$SearchSuggestionTopResultsImplCopyWith<$Res> implements $SearchSuggestionCopyWith<$Res> {
   factory _$$SearchSuggestionTopResultsImplCopyWith(
-          _$SearchSuggestionTopResultsImpl value,
-          $Res Function(_$SearchSuggestionTopResultsImpl) then) =
-      __$$SearchSuggestionTopResultsImplCopyWithImpl<$Res>;
+    _$SearchSuggestionTopResultsImpl value,
+    $Res Function(_$SearchSuggestionTopResultsImpl) then,
+  ) = __$$SearchSuggestionTopResultsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String kind, Resource content});
@@ -294,32 +274,32 @@ abstract class _$$SearchSuggestionTopResultsImplCopyWith<$Res>
 
 /// @nodoc
 class __$$SearchSuggestionTopResultsImplCopyWithImpl<$Res>
-    extends _$SearchSuggestionCopyWithImpl<$Res,
-        _$SearchSuggestionTopResultsImpl>
+    extends _$SearchSuggestionCopyWithImpl<$Res, _$SearchSuggestionTopResultsImpl>
     implements _$$SearchSuggestionTopResultsImplCopyWith<$Res> {
   __$$SearchSuggestionTopResultsImplCopyWithImpl(
-      _$SearchSuggestionTopResultsImpl _value,
-      $Res Function(_$SearchSuggestionTopResultsImpl) _then)
-      : super(_value, _then);
+    _$SearchSuggestionTopResultsImpl _value,
+    $Res Function(_$SearchSuggestionTopResultsImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SearchSuggestion
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? kind = null,
-    Object? content = null,
-  }) {
-    return _then(_$SearchSuggestionTopResultsImpl(
-      kind: null == kind
-          ? _value.kind
-          : kind // ignore: cast_nullable_to_non_nullable
-              as String,
-      content: null == content
-          ? _value.content
-          : content // ignore: cast_nullable_to_non_nullable
-              as Resource,
-    ));
+  $Res call({Object? kind = null, Object? content = null}) {
+    return _then(
+      _$SearchSuggestionTopResultsImpl(
+        kind:
+            null == kind
+                ? _value.kind
+                : kind // ignore: cast_nullable_to_non_nullable
+                    as String,
+        content:
+            null == content
+                ? _value.content
+                : content // ignore: cast_nullable_to_non_nullable
+                    as Resource,
+      ),
+    );
   }
 
   /// Create a copy of SearchSuggestion
@@ -336,8 +316,7 @@ class __$$SearchSuggestionTopResultsImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$SearchSuggestionTopResultsImpl implements SearchSuggestionTopResults {
-  const _$SearchSuggestionTopResultsImpl(
-      {required this.kind, required this.content});
+  const _$SearchSuggestionTopResultsImpl({required this.kind, required this.content});
 
   @override
   final String kind;
@@ -366,16 +345,13 @@ class _$SearchSuggestionTopResultsImpl implements SearchSuggestionTopResults {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SearchSuggestionTopResultsImplCopyWith<_$SearchSuggestionTopResultsImpl>
-      get copyWith => __$$SearchSuggestionTopResultsImplCopyWithImpl<
-          _$SearchSuggestionTopResultsImpl>(this, _$identity);
+  _$$SearchSuggestionTopResultsImplCopyWith<_$SearchSuggestionTopResultsImpl> get copyWith =>
+      __$$SearchSuggestionTopResultsImplCopyWithImpl<_$SearchSuggestionTopResultsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String kind, String searchTerm, String? displayTerm)
-        terms,
+    required TResult Function(String kind, String searchTerm, String? displayTerm) terms,
     required TResult Function(String kind, Resource content) topResults,
   }) {
     return topResults(kind, content);
@@ -384,8 +360,7 @@ class _$SearchSuggestionTopResultsImpl implements SearchSuggestionTopResults {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String kind, String searchTerm, String? displayTerm)?
-        terms,
+    TResult? Function(String kind, String searchTerm, String? displayTerm)? terms,
     TResult? Function(String kind, Resource content)? topResults,
   }) {
     return topResults?.call(kind, content);
@@ -394,8 +369,7 @@ class _$SearchSuggestionTopResultsImpl implements SearchSuggestionTopResults {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String kind, String searchTerm, String? displayTerm)?
-        terms,
+    TResult Function(String kind, String searchTerm, String? displayTerm)? terms,
     TResult Function(String kind, Resource content)? topResults,
     required TResult orElse(),
   }) {
@@ -438,9 +412,8 @@ class _$SearchSuggestionTopResultsImpl implements SearchSuggestionTopResults {
 }
 
 abstract class SearchSuggestionTopResults implements SearchSuggestion {
-  const factory SearchSuggestionTopResults(
-      {required final String kind,
-      required final Resource content}) = _$SearchSuggestionTopResultsImpl;
+  const factory SearchSuggestionTopResults({required final String kind, required final Resource content}) =
+      _$SearchSuggestionTopResultsImpl;
 
   @override
   String get kind;
@@ -450,6 +423,6 @@ abstract class SearchSuggestionTopResults implements SearchSuggestion {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SearchSuggestionTopResultsImplCopyWith<_$SearchSuggestionTopResultsImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$SearchSuggestionTopResultsImplCopyWith<_$SearchSuggestionTopResultsImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

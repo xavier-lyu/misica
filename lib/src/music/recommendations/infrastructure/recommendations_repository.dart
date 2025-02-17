@@ -10,16 +10,10 @@ class RecommendationsRepository {
 
   RecommendationsRepository(this._remoteService);
 
-  Future<Either<MusicFailure, List<Recommendation>>>
-      fetchRecommendations() async {
+  Future<Either<MusicFailure, List<Recommendation>>> fetchRecommendations() async {
     try {
-      final remoteRecommendations = await _remoteService.getRecommendations(
-        'artistUrl',
-        'artistUrl',
-        'f',
-      );
-      return right(
-          remoteRecommendations.data.map((e) => e.toDomain()).toList());
+      final remoteRecommendations = await _remoteService.getRecommendations('artistUrl', 'artistUrl', 'f');
+      return right(remoteRecommendations.data.map((e) => e.toDomain()).toList());
     } on DioException catch (e) {
       return left(MusicFailure.api(e.response?.statusCode));
     }

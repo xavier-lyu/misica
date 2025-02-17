@@ -13,9 +13,7 @@ String _$playlistsServiceHash() => r'4e4a80bee30227ab9e37c8a6a681dd0fb5c79dc7';
 final playlistsServiceProvider = AutoDisposeProvider<PlaylistsService>.internal(
   playlistsService,
   name: r'playlistsServiceProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$playlistsServiceHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$playlistsServiceHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
@@ -23,18 +21,14 @@ final playlistsServiceProvider = AutoDisposeProvider<PlaylistsService>.internal(
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef PlaylistsServiceRef = AutoDisposeProviderRef<PlaylistsService>;
-String _$playlistsRepositoryHash() =>
-    r'ac3922016294beadee5d64d228f0aebd0a8f23f7';
+String _$playlistsRepositoryHash() => r'ac3922016294beadee5d64d228f0aebd0a8f23f7';
 
 /// See also [playlistsRepository].
 @ProviderFor(playlistsRepository)
-final playlistsRepositoryProvider =
-    AutoDisposeProvider<PlaylistsRepository>.internal(
+final playlistsRepositoryProvider = AutoDisposeProvider<PlaylistsRepository>.internal(
   playlistsRepository,
   name: r'playlistsRepositoryProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$playlistsRepositoryHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$playlistsRepositoryHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

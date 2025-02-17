@@ -12,33 +12,16 @@ class IndexPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
-      routes: [
-        HomeTab(),
-        RadioTab(),
-        LibraryTab(),
-        SearchTab(),
-      ],
+      routes: [HomeTab(), RadioTab(), LibraryTab(), SearchTab()],
       bottomNavigationBuilder: (_, tabsRouter) {
         return SalomonBottomBar(
           currentIndex: tabsRouter.activeIndex,
           onTap: tabsRouter.setActiveIndex,
           items: [
-            SalomonBottomBarItem(
-              icon: const Icon(Icons.home_rounded),
-              title: Text(context.loc.home),
-            ),
-            SalomonBottomBarItem(
-              icon: const Icon(Icons.radio_rounded),
-              title: Text(context.loc.radio),
-            ),
-            SalomonBottomBarItem(
-              icon: const Icon(Icons.library_music_rounded),
-              title: Text(context.loc.library),
-            ),
-            SalomonBottomBarItem(
-              icon: const Icon(Icons.search_rounded),
-              title: Text(context.loc.search),
-            ),
+            SalomonBottomBarItem(icon: const Icon(Icons.home_rounded), title: Text(context.loc.home)),
+            SalomonBottomBarItem(icon: const Icon(Icons.radio_rounded), title: Text(context.loc.radio)),
+            SalomonBottomBarItem(icon: const Icon(Icons.library_music_rounded), title: Text(context.loc.library)),
+            SalomonBottomBarItem(icon: const Icon(Icons.search_rounded), title: Text(context.loc.search)),
           ],
         );
       },

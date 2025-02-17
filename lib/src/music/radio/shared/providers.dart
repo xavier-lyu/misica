@@ -20,17 +20,16 @@ StationsRepository stationsRepository(Ref ref) {
   return StationsRepository(ref.watch(stationsServiceProvider));
 }
 
-final recentStationsNotifierProvider = StateNotifierProvider.autoDispose<
-    RecentStationsNotifier, AsyncValue<List<Station>>>(
-  (ref) => RecentStationsNotifier(ref.watch(stationsRepositoryProvider)),
-);
+final recentStationsNotifierProvider =
+    StateNotifierProvider.autoDispose<RecentStationsNotifier, AsyncValue<List<Station>>>(
+      (ref) => RecentStationsNotifier(ref.watch(stationsRepositoryProvider)),
+    );
 
-final stationGenresNotifierProvider = StateNotifierProvider.autoDispose<
-    StationGenresNotifier, AsyncValue<List<Genre>>>(
+final stationGenresNotifierProvider = StateNotifierProvider.autoDispose<StationGenresNotifier, AsyncValue<List<Genre>>>(
   (ref) => StationGenresNotifier(ref.watch(stationsRepositoryProvider), ref),
 );
 
-final genreStationsNotifierProvider = StateNotifierProvider.autoDispose<
-    GenreStationsNotifier, AsyncValue<List<Station>>>(
-  (ref) => GenreStationsNotifier(ref.watch(stationsRepositoryProvider), ref),
-);
+final genreStationsNotifierProvider =
+    StateNotifierProvider.autoDispose<GenreStationsNotifier, AsyncValue<List<Station>>>(
+      (ref) => GenreStationsNotifier(ref.watch(stationsRepositoryProvider), ref),
+    );

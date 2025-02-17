@@ -22,8 +22,7 @@ class ResourceAttributes with _$ResourceAttributes {
     required String? url,
   }) = _ResourceAttributes;
 
-  factory ResourceAttributes.fromJson(Map<String, dynamic> json) =>
-      _$ResourceAttributesFromJson(json);
+  factory ResourceAttributes.fromJson(Map<String, dynamic> json) => _$ResourceAttributesFromJson(json);
 }
 
 @freezed
@@ -44,8 +43,7 @@ class AlbumAttributes with _$AlbumAttributes {
     required EditorialNotes? editorialNotes,
   }) = _AlbumAttributes;
 
-  factory AlbumAttributes.fromJson(Map<String, dynamic> json) =>
-      _$AlbumAttributesFromJson(json);
+  factory AlbumAttributes.fromJson(Map<String, dynamic> json) => _$AlbumAttributesFromJson(json);
 }
 
 @freezed
@@ -59,8 +57,7 @@ class ArtistAttributes with _$ArtistAttributes {
     required EditorialNotes? editorialNotes,
   }) = _ArtistAttributes;
 
-  factory ArtistAttributes.fromJson(Map<String, dynamic> json) =>
-      _$ArtistAttributesFromJson(json);
+  factory ArtistAttributes.fromJson(Map<String, dynamic> json) => _$ArtistAttributesFromJson(json);
 }
 
 @freezed
@@ -80,8 +77,7 @@ class MusicVideoAttributes with _$MusicVideoAttributes {
     required String? contentRating,
   }) = _MusicVideoAttributes;
 
-  factory MusicVideoAttributes.fromJson(Map<String, dynamic> json) =>
-      _$MusicVideoAttributesFromJson(json);
+  factory MusicVideoAttributes.fromJson(Map<String, dynamic> json) => _$MusicVideoAttributesFromJson(json);
 }
 
 @freezed
@@ -97,8 +93,7 @@ class PlaylistAttributes with _$PlaylistAttributes {
     required EditorialNotes? editorialNotes,
   }) = _PlaylistAttributes;
 
-  factory PlaylistAttributes.fromJson(Map<String, dynamic> json) =>
-      _$PlaylistAttributesFromJson(json);
+  factory PlaylistAttributes.fromJson(Map<String, dynamic> json) => _$PlaylistAttributesFromJson(json);
 }
 
 @freezed
@@ -119,8 +114,7 @@ class SongAttributes with _$SongAttributes {
     required String? url,
   }) = _SongAttributes;
 
-  factory SongAttributes.fromJson(Map<String, dynamic> json) =>
-      _$SongAttributesFromJson(json);
+  factory SongAttributes.fromJson(Map<String, dynamic> json) => _$SongAttributesFromJson(json);
 }
 
 @freezed
@@ -136,31 +130,23 @@ class StationAttributes with _$StationAttributes {
     required EditorialNotes? editorialNotes,
   }) = _StationAttributes;
 
-  factory StationAttributes.fromJson(Map<String, dynamic> json) =>
-      _$StationAttributesFromJson(json);
+  factory StationAttributes.fromJson(Map<String, dynamic> json) => _$StationAttributesFromJson(json);
 }
 
 @freezed
 class CuratorAttributes with _$CuratorAttributes {
   const CuratorAttributes._();
 
-  const factory CuratorAttributes({
-    required Artwork? artwork,
-    required String name,
-    required String? url,
-  }) = _CuratorAttributes;
+  const factory CuratorAttributes({required Artwork? artwork, required String name, required String? url}) =
+      _CuratorAttributes;
 
-  factory CuratorAttributes.fromJson(Map<String, dynamic> json) =>
-      _$CuratorAttributesFromJson(json);
+  factory CuratorAttributes.fromJson(Map<String, dynamic> json) => _$CuratorAttributesFromJson(json);
 }
 
 @freezed
 class GenreAttributes with _$GenreAttributes {
   const GenreAttributes._();
-  const factory GenreAttributes({
-    required String name,
-  }) = _GenreAttributes;
+  const factory GenreAttributes({required String name}) = _GenreAttributes;
 
-  factory GenreAttributes.fromJson(Map<String, dynamic> json) =>
-      _$GenreAttributesFromJson(json);
+  factory GenreAttributes.fromJson(Map<String, dynamic> json) => _$GenreAttributesFromJson(json);
 }

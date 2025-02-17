@@ -35,25 +35,15 @@ class AuthorizationPage extends ConsumerWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              context.loc.appTitle.toUpperCase(),
-              style: context.ttoc.headlineLarge,
-            ),
+            Text(context.loc.appTitle.toUpperCase(), style: context.ttoc.headlineLarge),
             const SizedBox(height: 30),
-            Text(
-              explanatory,
-              style: context.ttoc.bodyLarge,
-            ),
+            Text(explanatory, style: context.ttoc.bodyLarge),
             const SizedBox(height: 10),
             if (secondaryExplanatory != null)
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    secondaryExplanatory,
-                    textAlign: TextAlign.center,
-                    style: context.ttoc.bodyMedium,
-                  ),
+                  Text(secondaryExplanatory, textAlign: TextAlign.center, style: context.ttoc.bodyMedium),
                   const SizedBox(height: 10),
                 ],
               ),
@@ -62,9 +52,7 @@ class AuthorizationPage extends ConsumerWidget {
                 onPressed: () {
                   switch (authState) {
                     case MusicAuthorizationStatusNotDetermined():
-                      ref
-                          .read(authNotifierProvider.notifier)
-                          .requestAuthorization();
+                      ref.read(authNotifierProvider.notifier).requestAuthorization();
                     case MusicAuthorizationStatusDenied():
                       AppSettings.openAppSettings();
                     default:
@@ -72,7 +60,7 @@ class AuthorizationPage extends ConsumerWidget {
                   }
                 },
                 child: Text(continueButtonText),
-              )
+              ),
           ],
         ),
       ),

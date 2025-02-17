@@ -18,27 +18,15 @@ class StationTile extends ConsumerWidget {
       onTap: () => ref.read(musicPlayerProvider).playSingle(station),
       child: Row(
         children: [
-          ArtworkWidget(
-            artwork: station.artwork,
-            width: 110,
-            height: 110,
-          ),
-          const SizedBox(
-            width: 10,
-          ),
+          ArtworkWidget(artwork: station.artwork, width: 110, height: 110),
+          const SizedBox(width: 10),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  station.name,
-                  style: context.ttoc.titleLarge,
-                ),
-                if (shortNote != null) Text(shortNote),
-              ],
+              children: [Text(station.name, style: context.ttoc.titleLarge), if (shortNote != null) Text(shortNote)],
             ),
           ),
-          ResourceContextMenuButton(resource: station)
+          ResourceContextMenuButton(resource: station),
         ],
       ),
     );

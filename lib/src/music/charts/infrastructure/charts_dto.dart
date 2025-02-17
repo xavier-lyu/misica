@@ -9,13 +9,9 @@ part 'charts_dto.g.dart';
 @freezed
 class ChartsResultsDTO with _$ChartsResultsDTO {
   const ChartsResultsDTO._();
-  const factory ChartsResultsDTO({
-    required ChartsDTO results,
-    Map<String, dynamic>? meta,
-  }) = _ChartsResultsDTO;
+  const factory ChartsResultsDTO({required ChartsDTO results, Map<String, dynamic>? meta}) = _ChartsResultsDTO;
 
-  factory ChartsResultsDTO.fromJson(Map<String, dynamic> json) =>
-      _$ChartsResultsDTOFromJson(json);
+  factory ChartsResultsDTO.fromJson(Map<String, dynamic> json) => _$ChartsResultsDTOFromJson(json);
 }
 
 @freezed
@@ -30,15 +26,13 @@ class ChartsDTO with _$ChartsDTO {
     @JsonKey(name: 'music-videos') List<MusicVideosChartDTO>? musicVideos,
   }) = _ChartsDTO;
 
-  factory ChartsDTO.fromJson(Map<String, dynamic> json) =>
-      _$ChartsDTOFromJson(json);
+  factory ChartsDTO.fromJson(Map<String, dynamic> json) => _$ChartsDTOFromJson(json);
 
   Charts toDomain() {
     return Charts(
       songs: songs?.map((e) => e.toDomain()).toList(),
       cityCharts: cityCharts?.map((e) => e.toDomain()).toList(),
-      dailyGlobalTopCharts:
-          dailyGlobalTopCharts?.map((e) => e.toDomain()).toList(),
+      dailyGlobalTopCharts: dailyGlobalTopCharts?.map((e) => e.toDomain()).toList(),
       playlists: playlists?.map((e) => e.toDomain()).toList(),
       albums: albums?.map((e) => e.toDomain()).toList(),
       musicVideos: musicVideos?.map((e) => e.toDomain()).toList(),
@@ -58,15 +52,10 @@ class AlbumsChartDTO with _$AlbumsChartDTO {
     required List<AlbumDTO> data,
   }) = _AlbumsChartDTO;
 
-  factory AlbumsChartDTO.fromJson(Map<String, dynamic> json) =>
-      _$AlbumsChartDTOFromJson(json);
+  factory AlbumsChartDTO.fromJson(Map<String, dynamic> json) => _$AlbumsChartDTOFromJson(json);
 
   AlbumsChart toDomain() {
-    return AlbumsChart(
-      name: name,
-      chart: chart,
-      albums: data.map((e) => e.toDomain()).cast<Album>().toList(),
-    );
+    return AlbumsChart(name: name, chart: chart, albums: data.map((e) => e.toDomain()).cast<Album>().toList());
   }
 }
 
@@ -82,15 +71,10 @@ class PlaylistsChartDTO with _$PlaylistsChartDTO {
     required List<PlaylistDTO> data,
   }) = _PlaylistsChartDTO;
 
-  factory PlaylistsChartDTO.fromJson(Map<String, dynamic> json) =>
-      _$PlaylistsChartDTOFromJson(json);
+  factory PlaylistsChartDTO.fromJson(Map<String, dynamic> json) => _$PlaylistsChartDTOFromJson(json);
 
   PlaylistsChart toDomain() {
-    return PlaylistsChart(
-      name: name,
-      chart: chart,
-      playlists: data.map((e) => e.toDomain()).cast<Playlist>().toList(),
-    );
+    return PlaylistsChart(name: name, chart: chart, playlists: data.map((e) => e.toDomain()).cast<Playlist>().toList());
   }
 }
 
@@ -106,15 +90,10 @@ class SongsChartDTO with _$SongsChartDTO {
     required List<SongDTO> data,
   }) = _SongsChartDTO;
 
-  factory SongsChartDTO.fromJson(Map<String, dynamic> json) =>
-      _$SongsChartDTOFromJson(json);
+  factory SongsChartDTO.fromJson(Map<String, dynamic> json) => _$SongsChartDTOFromJson(json);
 
   SongsChart toDomain() {
-    return SongsChart(
-      name: name,
-      chart: chart,
-      songs: data.map((e) => e.toDomain()).cast<Song>().toList(),
-    );
+    return SongsChart(name: name, chart: chart, songs: data.map((e) => e.toDomain()).cast<Song>().toList());
   }
 }
 
@@ -130,14 +109,9 @@ class MusicVideosChartDTO with _$MusicVideosChartDTO {
     required List<MusicVideoDTO> data,
   }) = _MusicVideosChartDTO;
 
-  factory MusicVideosChartDTO.fromJson(Map<String, dynamic> json) =>
-      _$MusicVideosChartDTOFromJson(json);
+  factory MusicVideosChartDTO.fromJson(Map<String, dynamic> json) => _$MusicVideosChartDTOFromJson(json);
 
   MusicVideosChart toDomain() {
-    return MusicVideosChart(
-      name: name,
-      chart: chart,
-      mvs: data.map((e) => e.toDomain()).cast<MusicVideo>().toList(),
-    );
+    return MusicVideosChart(name: name, chart: chart, mvs: data.map((e) => e.toDomain()).cast<MusicVideo>().toList());
   }
 }

@@ -13,9 +13,7 @@ String _$settingsStorageHash() => r'e4b9458f5d93ab12fc181b27a84715d0e4c220e8';
 final settingsStorageProvider = AutoDisposeProvider<SembastSettings>.internal(
   settingsStorage,
   name: r'settingsStorageProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$settingsStorageHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$settingsStorageHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
@@ -23,18 +21,14 @@ final settingsStorageProvider = AutoDisposeProvider<SembastSettings>.internal(
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef SettingsStorageRef = AutoDisposeProviderRef<SembastSettings>;
-String _$settingsRepositoryHash() =>
-    r'5154b380f1383146e44bad5f25bddfb64de33066';
+String _$settingsRepositoryHash() => r'5154b380f1383146e44bad5f25bddfb64de33066';
 
 /// See also [settingsRepository].
 @ProviderFor(settingsRepository)
-final settingsRepositoryProvider =
-    AutoDisposeProvider<SettingsRepository>.internal(
+final settingsRepositoryProvider = AutoDisposeProvider<SettingsRepository>.internal(
   settingsRepository,
   name: r'settingsRepositoryProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$settingsRepositoryHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$settingsRepositoryHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

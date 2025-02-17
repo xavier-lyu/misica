@@ -9,8 +9,7 @@ class ChartsRepository {
 
   ChartsRepository(this._remoteService);
 
-  Future<Either<MusicFailure, Charts>> fetchTopCharts(String storefront,
-      {int limit = 50}) async {
+  Future<Either<MusicFailure, Charts>> fetchTopCharts(String storefront, {int limit = 50}) async {
     try {
       final remoteTopCharts = await _remoteService.getTopCharts(
         storefront,

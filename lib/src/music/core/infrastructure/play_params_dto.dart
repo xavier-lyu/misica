@@ -21,8 +21,7 @@ class PlayParamsDTO with _$PlayParamsDTO {
     bool? hasDrm,
   }) = _PlayParamsDTO;
 
-  factory PlayParamsDTO.fromJson(Map<String, dynamic> json) =>
-      _$PlayParamsDTOFromJson(json);
+  factory PlayParamsDTO.fromJson(Map<String, dynamic> json) => _$PlayParamsDTOFromJson(json);
 
   PlayParams toDomain() {
     return PlayParams(id: id, kind: kind);

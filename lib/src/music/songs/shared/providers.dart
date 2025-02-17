@@ -19,25 +19,15 @@ SongRepository songRepository(Ref ref) {
 }
 
 @riverpod
-Future<Track?> catalogTrack(
-  Ref ref, {
-  required String id,
-  required String kind,
-}) async {
+Future<Track?> catalogTrack(Ref ref, {required String id, required String kind}) async {
   final storefront = await ref.read(storefrontProvider.future);
   final repository = ref.read(songRepositoryProvider);
 
   if (kind.contains('song')) {
     final failureOrSong = await repository.getCatalogSong(storefront, id);
-    return failureOrSong.match(
-      (l) => null,
-      (r) => Track.song(r),
-    );
+    return failureOrSong.match((l) => null, (r) => Track.song(r));
   } else {
     final failureOrMV = await repository.getCatalogMusicVideo(storefront, id);
-    return failureOrMV.match(
-      (l) => null,
-      (r) => Track.musicVideo(r),
-    );
+    return failureOrMV.match((l) => null, (r) => Track.musicVideo(r));
   }
 }

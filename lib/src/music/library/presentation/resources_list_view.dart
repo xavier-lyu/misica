@@ -16,29 +16,24 @@ class ResourcesListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemExtent: 70,
-      padding: const EdgeInsetsDirectional.only(
-        top: PADDING_S,
-        start: PADDING_M,
-        end: PADDING_M,
-      ),
+      padding: const EdgeInsetsDirectional.only(top: PADDING_S, start: PADDING_M, end: PADDING_M),
       itemCount: resources.length,
-      itemBuilder: (context, index) => Consumer(builder: (context, ref, _) {
-        final item = resources[index];
-        return ResourceTile(
-          resource: item,
-          onTap: () {
-            item.mapOrNull(
-              (value) => null,
-              song: (song) => ref.read(musicPlayerProvider).playMany(
-                    items: resources,
-                    startingAt: index,
-                  ),
-              artist: (artist) =>
-                  context.router.push(ArtistRoute(id: artist.id)),
-            );
-          },
-        );
-      }),
+      itemBuilder:
+          (context, index) => Consumer(
+            builder: (context, ref, _) {
+              final item = resources[index];
+              return ResourceTile(
+                resource: item,
+                onTap: () {
+                  item.mapOrNull(
+                    (value) => null,
+                    song: (song) => ref.read(musicPlayerProvider).playMany(items: resources, startingAt: index),
+                    artist: (artist) => context.router.push(ArtistRoute(id: artist.id)),
+                  );
+                },
+              );
+            },
+          ),
     );
   }
 }

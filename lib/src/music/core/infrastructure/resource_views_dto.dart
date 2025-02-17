@@ -17,26 +17,19 @@ class ResourceViewDTO with _$ResourceViewDTO {
     @ResourceDTOConverter() required List<ResourceDTO> data,
   }) = _ResourceViewDTO;
 
-  factory ResourceViewDTO.fromJson(Map<String, dynamic> json) =>
-      _$ResourceViewDTOFromJson(json);
+  factory ResourceViewDTO.fromJson(Map<String, dynamic> json) => _$ResourceViewDTOFromJson(json);
 
   ResourceView toDomain() {
-    return ResourceView(
-      data: data.toDomain(),
-      title: attributes.title,
-    );
+    return ResourceView(data: data.toDomain(), title: attributes.title);
   }
 }
 
 @freezed
 class ResourceViewAttributesDTO with _$ResourceViewAttributesDTO {
   const ResourceViewAttributesDTO._();
-  const factory ResourceViewAttributesDTO({
-    required String title,
-  }) = _ResourceViewAttributesDTO;
+  const factory ResourceViewAttributesDTO({required String title}) = _ResourceViewAttributesDTO;
 
-  factory ResourceViewAttributesDTO.fromJson(Map<String, dynamic> json) =>
-      _$ResourceViewAttributesDTOFromJson(json);
+  factory ResourceViewAttributesDTO.fromJson(Map<String, dynamic> json) => _$ResourceViewAttributesDTOFromJson(json);
 }
 
 extension ResourceViewDTOListToDomainList on Map<String, ResourceViewDTO> {

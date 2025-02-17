@@ -11,8 +11,7 @@ class ArtistsRepository {
 
   final ArtistsService _remoteService;
 
-  Future<Either<MusicFailure, Artist>> fetchArtist(
-      String storefront, String id) async {
+  Future<Either<MusicFailure, Artist>> fetchArtist(String storefront, String id) async {
     try {
       final resp = await _remoteService.fetchArtist(storefront, id);
       return right(resp.data.first.toDomain() as Artist);
@@ -23,8 +22,7 @@ class ArtistsRepository {
     }
   }
 
-  Future<Either<MusicFailure, Artist>> defaultPlayableContent(
-      String storefront, String id) async {
+  Future<Either<MusicFailure, Artist>> defaultPlayableContent(String storefront, String id) async {
     try {
       final resp = await _remoteService.defaultPlayableContent(storefront, id);
       return right(resp.data.first.toDomain() as Artist);

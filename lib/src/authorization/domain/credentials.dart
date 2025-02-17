@@ -8,13 +8,9 @@ part 'credentials.g.dart';
 class Credentials with _$Credentials {
   const Credentials._();
 
-  const factory Credentials({
-    required String developerToken,
-    required String userToken,
-  }) = _Credentials;
+  const factory Credentials({required String developerToken, required String userToken}) = _Credentials;
 
-  factory Credentials.fromJson(Map<String, dynamic> json) =>
-      _$CredentialsFromJson(json);
+  factory Credentials.fromJson(Map<String, dynamic> json) => _$CredentialsFromJson(json);
 
   bool get isExpired => JwtDecoder.isExpired(developerToken);
 }

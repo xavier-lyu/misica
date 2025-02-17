@@ -71,7 +71,5 @@ class MusicVideoRelationships with _$MusicVideoRelationships {
 @freezed
 class CuratorRelationships with _$CuratorRelationships {
   const CuratorRelationships._();
-  const factory CuratorRelationships({
-    required List<Playlist>? playlists,
-  }) = _CuratorRelationships;
+  const factory CuratorRelationships({required List<Playlist>? playlists}) = _CuratorRelationships;
 }

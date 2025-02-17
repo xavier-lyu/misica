@@ -15,10 +15,7 @@ class ArtistNotifier extends StateNotifier<AsyncValue<Artist>> {
     final storefront = await _ref.read(storefrontProvider.future);
     final failureOrArtist = await _repository.fetchArtist(storefront, id);
 
-    state = failureOrArtist.fold(
-      (l) => AsyncError(l, StackTrace.current),
-      (r) => AsyncData(r),
-    );
+    state = failureOrArtist.fold((l) => AsyncError(l, StackTrace.current), (r) => AsyncData(r));
 
     _getDefaultPlayableContent(storefront, id);
 
@@ -26,21 +23,23 @@ class ArtistNotifier extends StateNotifier<AsyncValue<Artist>> {
   }
 
   Future<Unit> _getDefaultPlayableContent(String storefront, String id) async {
-    final failureOrArtist =
-        await _repository.defaultPlayableContent(storefront, id);
+    final failureOrArtist = await _repository.defaultPlayableContent(storefront, id);
 
     state = failureOrArtist.fold(
       (_) => state,
       (artist) => state.maybeWhen(
         orElse: () => state,
-        data: (value) => AsyncData(value.copyWith(
-          relationships: value.relationships == null
-              ? artist.relationships
-              : value.relationships?.copyWith(
-                  defaultPlayableContent:
-                      artist.relationships?.defaultPlayableContent,
-                ),
-        )),
+        data:
+            (value) => AsyncData(
+              value.copyWith(
+                relationships:
+                    value.relationships == null
+                        ? artist.relationships
+                        : value.relationships?.copyWith(
+                          defaultPlayableContent: artist.relationships?.defaultPlayableContent,
+                        ),
+              ),
+            ),
       ),
     );
 

@@ -9,7 +9,7 @@ flutter gen-l10n
 ### Run build_runner
 
 ```bash
-flutter pub run build_runner watch --delete-conflicting-outputs
+dart run build_runner watch --delete-conflicting-outputs
 ```
 
 ### Generate keystore

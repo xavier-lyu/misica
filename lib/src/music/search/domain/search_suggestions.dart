@@ -13,8 +13,6 @@ class SearchSuggestion with _$SearchSuggestion {
     required String? displayTerm,
   }) = SearchSuggestionTerms;
 
-  const factory SearchSuggestion.topResults({
-    required String kind,
-    required Resource content,
-  }) = SearchSuggestionTopResults;
+  const factory SearchSuggestion.topResults({required String kind, required Resource content}) =
+      SearchSuggestionTopResults;
 }

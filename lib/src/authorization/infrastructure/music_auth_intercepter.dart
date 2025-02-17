@@ -9,8 +9,7 @@ class MusicAuthIntercepter extends Interceptor {
   MusicAuthIntercepter(this._dio, this._authenticator, {this.retries = 3});
 
   @override
-  Future<void> onRequest(
-      RequestOptions options, RequestInterceptorHandler handler) async {
+  Future<void> onRequest(RequestOptions options, RequestInterceptorHandler handler) async {
     final credentials = await _authenticator.fetchCredentials();
 
     handler.next(
@@ -19,18 +18,15 @@ class MusicAuthIntercepter extends Interceptor {
           credentials == null
               ? {}
               : {
-                  'Authorization': 'Bearer ${credentials.developerToken}',
-                  'Music-User-Token': options.authenticationRequired
-                      ? credentials.userToken
-                      : '',
-                },
+                'Authorization': 'Bearer ${credentials.developerToken}',
+                'Music-User-Token': options.authenticationRequired ? credentials.userToken : '',
+              },
         ),
     );
   }
 
   @override
-  Future<void> onError(
-      DioException err, ErrorInterceptorHandler handler) async {
+  Future<void> onError(DioException err, ErrorInterceptorHandler handler) async {
     if (err.requestOptions.disableRetry) {
       return super.onError(err, handler);
     }
@@ -50,22 +46,16 @@ class MusicAuthIntercepter extends Interceptor {
     }
 
     try {
-      final refreshedCredentials =
-          await _authenticator.fetchCredentials(forceInvalidate: true);
+      final refreshedCredentials = await _authenticator.fetchCredentials(forceInvalidate: true);
       if (refreshedCredentials != null) {
         await _dio
             .fetch(
               errResp.requestOptions
-                ..headers.addAll(
-                  {
-                    'Authorization':
-                        'Bearer ${refreshedCredentials.developerToken}',
-                    'Music-User-Token':
-                        errResp.requestOptions.authenticationRequired
-                            ? refreshedCredentials.userToken
-                            : '',
-                  },
-                ),
+                ..headers.addAll({
+                  'Authorization': 'Bearer ${refreshedCredentials.developerToken}',
+                  'Music-User-Token':
+                      errResp.requestOptions.authenticationRequired ? refreshedCredentials.userToken : '',
+                }),
             )
             .then((value) => handler.resolve(value));
       }
@@ -87,6 +77,5 @@ extension MusicAuthOptions on RequestOptions {
 
   set disableRetry(bool value) => extra[_kDisableRetryKey] = value;
 
-  bool get authenticationRequired =>
-      path.contains('/me/') || path.contains('default-playable-content');
+  bool get authenticationRequired => path.contains('/me/') || path.contains('default-playable-content');
 }

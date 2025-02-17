@@ -19,12 +19,11 @@ SearchRepository searchRepository(Ref ref) {
   return SearchRepository(ref.watch(searchServiceProvider));
 }
 
-final searchNotifierProvider =
-    StateNotifierProvider.autoDispose<SearchNotifier, SearchResultsState>(
+final searchNotifierProvider = StateNotifierProvider.autoDispose<SearchNotifier, SearchResultsState>(
   (ref) => SearchNotifier(ref.watch(searchRepositoryProvider), ref),
 );
 
-final searchSuggestionsNotifierProvider = StateNotifierProvider.autoDispose<
-    SuggestionsNotifier, AsyncValue<List<SearchSuggestion>>>(
-  (ref) => SuggestionsNotifier(ref.watch(searchRepositoryProvider), ref),
-);
+final searchSuggestionsNotifierProvider =
+    StateNotifierProvider.autoDispose<SuggestionsNotifier, AsyncValue<List<SearchSuggestion>>>(
+      (ref) => SuggestionsNotifier(ref.watch(searchRepositoryProvider), ref),
+    );

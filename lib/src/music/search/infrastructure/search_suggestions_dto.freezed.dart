@@ -12,10 +12,10 @@ part of 'search_suggestions_dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
-SearchSuggestionsResultsDTO _$SearchSuggestionsResultsDTOFromJson(
-    Map<String, dynamic> json) {
+SearchSuggestionsResultsDTO _$SearchSuggestionsResultsDTOFromJson(Map<String, dynamic> json) {
   return _SearchSuggestionsResultsDTO.fromJson(json);
 }
 
@@ -29,17 +29,15 @@ mixin _$SearchSuggestionsResultsDTO {
   /// Create a copy of SearchSuggestionsResultsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SearchSuggestionsResultsDTOCopyWith<SearchSuggestionsResultsDTO>
-      get copyWith => throw _privateConstructorUsedError;
+  $SearchSuggestionsResultsDTOCopyWith<SearchSuggestionsResultsDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SearchSuggestionsResultsDTOCopyWith<$Res> {
   factory $SearchSuggestionsResultsDTOCopyWith(
-          SearchSuggestionsResultsDTO value,
-          $Res Function(SearchSuggestionsResultsDTO) then) =
-      _$SearchSuggestionsResultsDTOCopyWithImpl<$Res,
-          SearchSuggestionsResultsDTO>;
+    SearchSuggestionsResultsDTO value,
+    $Res Function(SearchSuggestionsResultsDTO) then,
+  ) = _$SearchSuggestionsResultsDTOCopyWithImpl<$Res, SearchSuggestionsResultsDTO>;
   @useResult
   $Res call({SearchSuggestionsDTO results});
 
@@ -47,8 +45,7 @@ abstract class $SearchSuggestionsResultsDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SearchSuggestionsResultsDTOCopyWithImpl<$Res,
-        $Val extends SearchSuggestionsResultsDTO>
+class _$SearchSuggestionsResultsDTOCopyWithImpl<$Res, $Val extends SearchSuggestionsResultsDTO>
     implements $SearchSuggestionsResultsDTOCopyWith<$Res> {
   _$SearchSuggestionsResultsDTOCopyWithImpl(this._value, this._then);
 
@@ -61,15 +58,17 @@ class _$SearchSuggestionsResultsDTOCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? results = null,
-  }) {
-    return _then(_value.copyWith(
-      results: null == results
-          ? _value.results
-          : results // ignore: cast_nullable_to_non_nullable
-              as SearchSuggestionsDTO,
-    ) as $Val);
+  $Res call({Object? results = null}) {
+    return _then(
+      _value.copyWith(
+            results:
+                null == results
+                    ? _value.results
+                    : results // ignore: cast_nullable_to_non_nullable
+                        as SearchSuggestionsDTO,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of SearchSuggestionsResultsDTO
@@ -84,12 +83,11 @@ class _$SearchSuggestionsResultsDTOCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$SearchSuggestionsResultsDTOImplCopyWith<$Res>
-    implements $SearchSuggestionsResultsDTOCopyWith<$Res> {
+abstract class _$$SearchSuggestionsResultsDTOImplCopyWith<$Res> implements $SearchSuggestionsResultsDTOCopyWith<$Res> {
   factory _$$SearchSuggestionsResultsDTOImplCopyWith(
-          _$SearchSuggestionsResultsDTOImpl value,
-          $Res Function(_$SearchSuggestionsResultsDTOImpl) then) =
-      __$$SearchSuggestionsResultsDTOImplCopyWithImpl<$Res>;
+    _$SearchSuggestionsResultsDTOImpl value,
+    $Res Function(_$SearchSuggestionsResultsDTOImpl) then,
+  ) = __$$SearchSuggestionsResultsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({SearchSuggestionsDTO results});
@@ -100,27 +98,27 @@ abstract class _$$SearchSuggestionsResultsDTOImplCopyWith<$Res>
 
 /// @nodoc
 class __$$SearchSuggestionsResultsDTOImplCopyWithImpl<$Res>
-    extends _$SearchSuggestionsResultsDTOCopyWithImpl<$Res,
-        _$SearchSuggestionsResultsDTOImpl>
+    extends _$SearchSuggestionsResultsDTOCopyWithImpl<$Res, _$SearchSuggestionsResultsDTOImpl>
     implements _$$SearchSuggestionsResultsDTOImplCopyWith<$Res> {
   __$$SearchSuggestionsResultsDTOImplCopyWithImpl(
-      _$SearchSuggestionsResultsDTOImpl _value,
-      $Res Function(_$SearchSuggestionsResultsDTOImpl) _then)
-      : super(_value, _then);
+    _$SearchSuggestionsResultsDTOImpl _value,
+    $Res Function(_$SearchSuggestionsResultsDTOImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SearchSuggestionsResultsDTO
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? results = null,
-  }) {
-    return _then(_$SearchSuggestionsResultsDTOImpl(
-      results: null == results
-          ? _value.results
-          : results // ignore: cast_nullable_to_non_nullable
-              as SearchSuggestionsDTO,
-    ));
+  $Res call({Object? results = null}) {
+    return _then(
+      _$SearchSuggestionsResultsDTOImpl(
+        results:
+            null == results
+                ? _value.results
+                : results // ignore: cast_nullable_to_non_nullable
+                    as SearchSuggestionsDTO,
+      ),
+    );
   }
 }
 
@@ -129,8 +127,7 @@ class __$$SearchSuggestionsResultsDTOImplCopyWithImpl<$Res>
 class _$SearchSuggestionsResultsDTOImpl extends _SearchSuggestionsResultsDTO {
   const _$SearchSuggestionsResultsDTOImpl({required this.results}) : super._();
 
-  factory _$SearchSuggestionsResultsDTOImpl.fromJson(
-          Map<String, dynamic> json) =>
+  factory _$SearchSuggestionsResultsDTOImpl.fromJson(Map<String, dynamic> json) =>
       _$$SearchSuggestionsResultsDTOImplFromJson(json);
 
   @override
@@ -158,27 +155,21 @@ class _$SearchSuggestionsResultsDTOImpl extends _SearchSuggestionsResultsDTO {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SearchSuggestionsResultsDTOImplCopyWith<_$SearchSuggestionsResultsDTOImpl>
-      get copyWith => __$$SearchSuggestionsResultsDTOImplCopyWithImpl<
-          _$SearchSuggestionsResultsDTOImpl>(this, _$identity);
+  _$$SearchSuggestionsResultsDTOImplCopyWith<_$SearchSuggestionsResultsDTOImpl> get copyWith =>
+      __$$SearchSuggestionsResultsDTOImplCopyWithImpl<_$SearchSuggestionsResultsDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SearchSuggestionsResultsDTOImplToJson(
-      this,
-    );
+    return _$$SearchSuggestionsResultsDTOImplToJson(this);
   }
 }
 
-abstract class _SearchSuggestionsResultsDTO
-    extends SearchSuggestionsResultsDTO {
-  const factory _SearchSuggestionsResultsDTO(
-          {required final SearchSuggestionsDTO results}) =
+abstract class _SearchSuggestionsResultsDTO extends SearchSuggestionsResultsDTO {
+  const factory _SearchSuggestionsResultsDTO({required final SearchSuggestionsDTO results}) =
       _$SearchSuggestionsResultsDTOImpl;
   const _SearchSuggestionsResultsDTO._() : super._();
 
-  factory _SearchSuggestionsResultsDTO.fromJson(Map<String, dynamic> json) =
-      _$SearchSuggestionsResultsDTOImpl.fromJson;
+  factory _SearchSuggestionsResultsDTO.fromJson(Map<String, dynamic> json) = _$SearchSuggestionsResultsDTOImpl.fromJson;
 
   @override
   SearchSuggestionsDTO get results;
@@ -187,8 +178,8 @@ abstract class _SearchSuggestionsResultsDTO
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SearchSuggestionsResultsDTOImplCopyWith<_$SearchSuggestionsResultsDTOImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$SearchSuggestionsResultsDTOImplCopyWith<_$SearchSuggestionsResultsDTOImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 SearchSuggestionsDTO _$SearchSuggestionsDTOFromJson(Map<String, dynamic> json) {
@@ -197,8 +188,7 @@ SearchSuggestionsDTO _$SearchSuggestionsDTOFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SearchSuggestionsDTO {
-  List<SearchSuggestionDTO>? get suggestions =>
-      throw _privateConstructorUsedError;
+  List<SearchSuggestionDTO>? get suggestions => throw _privateConstructorUsedError;
 
   /// Serializes this SearchSuggestionsDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -206,22 +196,19 @@ mixin _$SearchSuggestionsDTO {
   /// Create a copy of SearchSuggestionsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SearchSuggestionsDTOCopyWith<SearchSuggestionsDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SearchSuggestionsDTOCopyWith<SearchSuggestionsDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SearchSuggestionsDTOCopyWith<$Res> {
-  factory $SearchSuggestionsDTOCopyWith(SearchSuggestionsDTO value,
-          $Res Function(SearchSuggestionsDTO) then) =
+  factory $SearchSuggestionsDTOCopyWith(SearchSuggestionsDTO value, $Res Function(SearchSuggestionsDTO) then) =
       _$SearchSuggestionsDTOCopyWithImpl<$Res, SearchSuggestionsDTO>;
   @useResult
   $Res call({List<SearchSuggestionDTO>? suggestions});
 }
 
 /// @nodoc
-class _$SearchSuggestionsDTOCopyWithImpl<$Res,
-        $Val extends SearchSuggestionsDTO>
+class _$SearchSuggestionsDTOCopyWithImpl<$Res, $Val extends SearchSuggestionsDTO>
     implements $SearchSuggestionsDTOCopyWith<$Res> {
   _$SearchSuggestionsDTOCopyWithImpl(this._value, this._then);
 
@@ -234,24 +221,26 @@ class _$SearchSuggestionsDTOCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? suggestions = freezed,
-  }) {
-    return _then(_value.copyWith(
-      suggestions: freezed == suggestions
-          ? _value.suggestions
-          : suggestions // ignore: cast_nullable_to_non_nullable
-              as List<SearchSuggestionDTO>?,
-    ) as $Val);
+  $Res call({Object? suggestions = freezed}) {
+    return _then(
+      _value.copyWith(
+            suggestions:
+                freezed == suggestions
+                    ? _value.suggestions
+                    : suggestions // ignore: cast_nullable_to_non_nullable
+                        as List<SearchSuggestionDTO>?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$SearchSuggestionsDTOImplCopyWith<$Res>
-    implements $SearchSuggestionsDTOCopyWith<$Res> {
-  factory _$$SearchSuggestionsDTOImplCopyWith(_$SearchSuggestionsDTOImpl value,
-          $Res Function(_$SearchSuggestionsDTOImpl) then) =
-      __$$SearchSuggestionsDTOImplCopyWithImpl<$Res>;
+abstract class _$$SearchSuggestionsDTOImplCopyWith<$Res> implements $SearchSuggestionsDTOCopyWith<$Res> {
+  factory _$$SearchSuggestionsDTOImplCopyWith(
+    _$SearchSuggestionsDTOImpl value,
+    $Res Function(_$SearchSuggestionsDTOImpl) then,
+  ) = __$$SearchSuggestionsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<SearchSuggestionDTO>? suggestions});
@@ -261,36 +250,36 @@ abstract class _$$SearchSuggestionsDTOImplCopyWith<$Res>
 class __$$SearchSuggestionsDTOImplCopyWithImpl<$Res>
     extends _$SearchSuggestionsDTOCopyWithImpl<$Res, _$SearchSuggestionsDTOImpl>
     implements _$$SearchSuggestionsDTOImplCopyWith<$Res> {
-  __$$SearchSuggestionsDTOImplCopyWithImpl(_$SearchSuggestionsDTOImpl _value,
-      $Res Function(_$SearchSuggestionsDTOImpl) _then)
-      : super(_value, _then);
+  __$$SearchSuggestionsDTOImplCopyWithImpl(
+    _$SearchSuggestionsDTOImpl _value,
+    $Res Function(_$SearchSuggestionsDTOImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SearchSuggestionsDTO
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? suggestions = freezed,
-  }) {
-    return _then(_$SearchSuggestionsDTOImpl(
-      suggestions: freezed == suggestions
-          ? _value._suggestions
-          : suggestions // ignore: cast_nullable_to_non_nullable
-              as List<SearchSuggestionDTO>?,
-    ));
+  $Res call({Object? suggestions = freezed}) {
+    return _then(
+      _$SearchSuggestionsDTOImpl(
+        suggestions:
+            freezed == suggestions
+                ? _value._suggestions
+                : suggestions // ignore: cast_nullable_to_non_nullable
+                    as List<SearchSuggestionDTO>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$SearchSuggestionsDTOImpl extends _SearchSuggestionsDTO {
-  const _$SearchSuggestionsDTOImpl(
-      {final List<SearchSuggestionDTO>? suggestions})
-      : _suggestions = suggestions,
-        super._();
+  const _$SearchSuggestionsDTOImpl({final List<SearchSuggestionDTO>? suggestions})
+    : _suggestions = suggestions,
+      super._();
 
-  factory _$SearchSuggestionsDTOImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SearchSuggestionsDTOImplFromJson(json);
+  factory _$SearchSuggestionsDTOImpl.fromJson(Map<String, dynamic> json) => _$$SearchSuggestionsDTOImplFromJson(json);
 
   final List<SearchSuggestionDTO>? _suggestions;
   @override
@@ -312,41 +301,32 @@ class _$SearchSuggestionsDTOImpl extends _SearchSuggestionsDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SearchSuggestionsDTOImpl &&
-            const DeepCollectionEquality()
-                .equals(other._suggestions, _suggestions));
+            const DeepCollectionEquality().equals(other._suggestions, _suggestions));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_suggestions));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_suggestions));
 
   /// Create a copy of SearchSuggestionsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SearchSuggestionsDTOImplCopyWith<_$SearchSuggestionsDTOImpl>
-      get copyWith =>
-          __$$SearchSuggestionsDTOImplCopyWithImpl<_$SearchSuggestionsDTOImpl>(
-              this, _$identity);
+  _$$SearchSuggestionsDTOImplCopyWith<_$SearchSuggestionsDTOImpl> get copyWith =>
+      __$$SearchSuggestionsDTOImplCopyWithImpl<_$SearchSuggestionsDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SearchSuggestionsDTOImplToJson(
-      this,
-    );
+    return _$$SearchSuggestionsDTOImplToJson(this);
   }
 }
 
 abstract class _SearchSuggestionsDTO extends SearchSuggestionsDTO {
-  const factory _SearchSuggestionsDTO(
-          {final List<SearchSuggestionDTO>? suggestions}) =
-      _$SearchSuggestionsDTOImpl;
+  const factory _SearchSuggestionsDTO({final List<SearchSuggestionDTO>? suggestions}) = _$SearchSuggestionsDTOImpl;
   const _SearchSuggestionsDTO._() : super._();
 
-  factory _SearchSuggestionsDTO.fromJson(Map<String, dynamic> json) =
-      _$SearchSuggestionsDTOImpl.fromJson;
+  factory _SearchSuggestionsDTO.fromJson(Map<String, dynamic> json) = _$SearchSuggestionsDTOImpl.fromJson;
 
   @override
   List<SearchSuggestionDTO>? get suggestions;
@@ -355,8 +335,7 @@ abstract class _SearchSuggestionsDTO extends SearchSuggestionsDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SearchSuggestionsDTOImplCopyWith<_$SearchSuggestionsDTOImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$SearchSuggestionsDTOImplCopyWith<_$SearchSuggestionsDTOImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 SearchSuggestionDTO _$SearchSuggestionDTOFromJson(Map<String, dynamic> json) {
@@ -367,8 +346,7 @@ SearchSuggestionDTO _$SearchSuggestionDTOFromJson(Map<String, dynamic> json) {
       return SearchSuggestionTopResultsDTO.fromJson(json);
 
     default:
-      throw CheckedFromJsonException(json, 'kind', 'SearchSuggestionDTO',
-          'Invalid union type "${json['kind']}"!');
+      throw CheckedFromJsonException(json, 'kind', 'SearchSuggestionDTO', 'Invalid union type "${json['kind']}"!');
   }
 }
 
@@ -377,50 +355,36 @@ mixin _$SearchSuggestionDTO {
   String get kind => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String kind, String searchTerm, String? displayTerm)
-        terms,
-    required TResult Function(
-            String kind, @ResourceDTOConverter() ResourceDTO content)
-        topResults,
-  }) =>
-      throw _privateConstructorUsedError;
+    required TResult Function(String kind, String searchTerm, String? displayTerm) terms,
+    required TResult Function(String kind, @ResourceDTOConverter() ResourceDTO content) topResults,
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String kind, String searchTerm, String? displayTerm)?
-        terms,
-    TResult? Function(String kind, @ResourceDTOConverter() ResourceDTO content)?
-        topResults,
-  }) =>
-      throw _privateConstructorUsedError;
+    TResult? Function(String kind, String searchTerm, String? displayTerm)? terms,
+    TResult? Function(String kind, @ResourceDTOConverter() ResourceDTO content)? topResults,
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String kind, String searchTerm, String? displayTerm)?
-        terms,
-    TResult Function(String kind, @ResourceDTOConverter() ResourceDTO content)?
-        topResults,
+    TResult Function(String kind, String searchTerm, String? displayTerm)? terms,
+    TResult Function(String kind, @ResourceDTOConverter() ResourceDTO content)? topResults,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(SearchSuggestionTermsDTO value) terms,
     required TResult Function(SearchSuggestionTopResultsDTO value) topResults,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(SearchSuggestionTermsDTO value)? terms,
     TResult? Function(SearchSuggestionTopResultsDTO value)? topResults,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(SearchSuggestionTermsDTO value)? terms,
     TResult Function(SearchSuggestionTopResultsDTO value)? topResults,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
 
   /// Serializes this SearchSuggestionDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -428,14 +392,12 @@ mixin _$SearchSuggestionDTO {
   /// Create a copy of SearchSuggestionDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SearchSuggestionDTOCopyWith<SearchSuggestionDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SearchSuggestionDTOCopyWith<SearchSuggestionDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SearchSuggestionDTOCopyWith<$Res> {
-  factory $SearchSuggestionDTOCopyWith(
-          SearchSuggestionDTO value, $Res Function(SearchSuggestionDTO) then) =
+  factory $SearchSuggestionDTOCopyWith(SearchSuggestionDTO value, $Res Function(SearchSuggestionDTO) then) =
       _$SearchSuggestionDTOCopyWithImpl<$Res, SearchSuggestionDTO>;
   @useResult
   $Res call({String kind});
@@ -455,25 +417,26 @@ class _$SearchSuggestionDTOCopyWithImpl<$Res, $Val extends SearchSuggestionDTO>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? kind = null,
-  }) {
-    return _then(_value.copyWith(
-      kind: null == kind
-          ? _value.kind
-          : kind // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? kind = null}) {
+    return _then(
+      _value.copyWith(
+            kind:
+                null == kind
+                    ? _value.kind
+                    : kind // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$SearchSuggestionTermsDTOImplCopyWith<$Res>
-    implements $SearchSuggestionDTOCopyWith<$Res> {
+abstract class _$$SearchSuggestionTermsDTOImplCopyWith<$Res> implements $SearchSuggestionDTOCopyWith<$Res> {
   factory _$$SearchSuggestionTermsDTOImplCopyWith(
-          _$SearchSuggestionTermsDTOImpl value,
-          $Res Function(_$SearchSuggestionTermsDTOImpl) then) =
-      __$$SearchSuggestionTermsDTOImplCopyWithImpl<$Res>;
+    _$SearchSuggestionTermsDTOImpl value,
+    $Res Function(_$SearchSuggestionTermsDTOImpl) then,
+  ) = __$$SearchSuggestionTermsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String kind, String searchTerm, String? displayTerm});
@@ -481,46 +444,41 @@ abstract class _$$SearchSuggestionTermsDTOImplCopyWith<$Res>
 
 /// @nodoc
 class __$$SearchSuggestionTermsDTOImplCopyWithImpl<$Res>
-    extends _$SearchSuggestionDTOCopyWithImpl<$Res,
-        _$SearchSuggestionTermsDTOImpl>
+    extends _$SearchSuggestionDTOCopyWithImpl<$Res, _$SearchSuggestionTermsDTOImpl>
     implements _$$SearchSuggestionTermsDTOImplCopyWith<$Res> {
   __$$SearchSuggestionTermsDTOImplCopyWithImpl(
-      _$SearchSuggestionTermsDTOImpl _value,
-      $Res Function(_$SearchSuggestionTermsDTOImpl) _then)
-      : super(_value, _then);
+    _$SearchSuggestionTermsDTOImpl _value,
+    $Res Function(_$SearchSuggestionTermsDTOImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SearchSuggestionDTO
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? kind = null,
-    Object? searchTerm = null,
-    Object? displayTerm = freezed,
-  }) {
-    return _then(_$SearchSuggestionTermsDTOImpl(
-      null == kind
-          ? _value.kind
-          : kind // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == searchTerm
-          ? _value.searchTerm
-          : searchTerm // ignore: cast_nullable_to_non_nullable
-              as String,
-      freezed == displayTerm
-          ? _value.displayTerm
-          : displayTerm // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? kind = null, Object? searchTerm = null, Object? displayTerm = freezed}) {
+    return _then(
+      _$SearchSuggestionTermsDTOImpl(
+        null == kind
+            ? _value.kind
+            : kind // ignore: cast_nullable_to_non_nullable
+                as String,
+        null == searchTerm
+            ? _value.searchTerm
+            : searchTerm // ignore: cast_nullable_to_non_nullable
+                as String,
+        freezed == displayTerm
+            ? _value.displayTerm
+            : displayTerm // ignore: cast_nullable_to_non_nullable
+                as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$SearchSuggestionTermsDTOImpl extends SearchSuggestionTermsDTO {
-  const _$SearchSuggestionTermsDTOImpl(
-      this.kind, this.searchTerm, this.displayTerm)
-      : super._();
+  const _$SearchSuggestionTermsDTOImpl(this.kind, this.searchTerm, this.displayTerm) : super._();
 
   factory _$SearchSuggestionTermsDTOImpl.fromJson(Map<String, dynamic> json) =>
       _$$SearchSuggestionTermsDTOImplFromJson(json);
@@ -543,10 +501,8 @@ class _$SearchSuggestionTermsDTOImpl extends SearchSuggestionTermsDTO {
         (other.runtimeType == runtimeType &&
             other is _$SearchSuggestionTermsDTOImpl &&
             (identical(other.kind, kind) || other.kind == kind) &&
-            (identical(other.searchTerm, searchTerm) ||
-                other.searchTerm == searchTerm) &&
-            (identical(other.displayTerm, displayTerm) ||
-                other.displayTerm == displayTerm));
+            (identical(other.searchTerm, searchTerm) || other.searchTerm == searchTerm) &&
+            (identical(other.displayTerm, displayTerm) || other.displayTerm == displayTerm));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -558,19 +514,14 @@ class _$SearchSuggestionTermsDTOImpl extends SearchSuggestionTermsDTO {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SearchSuggestionTermsDTOImplCopyWith<_$SearchSuggestionTermsDTOImpl>
-      get copyWith => __$$SearchSuggestionTermsDTOImplCopyWithImpl<
-          _$SearchSuggestionTermsDTOImpl>(this, _$identity);
+  _$$SearchSuggestionTermsDTOImplCopyWith<_$SearchSuggestionTermsDTOImpl> get copyWith =>
+      __$$SearchSuggestionTermsDTOImplCopyWithImpl<_$SearchSuggestionTermsDTOImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String kind, String searchTerm, String? displayTerm)
-        terms,
-    required TResult Function(
-            String kind, @ResourceDTOConverter() ResourceDTO content)
-        topResults,
+    required TResult Function(String kind, String searchTerm, String? displayTerm) terms,
+    required TResult Function(String kind, @ResourceDTOConverter() ResourceDTO content) topResults,
   }) {
     return terms(kind, searchTerm, displayTerm);
   }
@@ -578,10 +529,8 @@ class _$SearchSuggestionTermsDTOImpl extends SearchSuggestionTermsDTO {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String kind, String searchTerm, String? displayTerm)?
-        terms,
-    TResult? Function(String kind, @ResourceDTOConverter() ResourceDTO content)?
-        topResults,
+    TResult? Function(String kind, String searchTerm, String? displayTerm)? terms,
+    TResult? Function(String kind, @ResourceDTOConverter() ResourceDTO content)? topResults,
   }) {
     return terms?.call(kind, searchTerm, displayTerm);
   }
@@ -589,10 +538,8 @@ class _$SearchSuggestionTermsDTOImpl extends SearchSuggestionTermsDTO {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String kind, String searchTerm, String? displayTerm)?
-        terms,
-    TResult Function(String kind, @ResourceDTOConverter() ResourceDTO content)?
-        topResults,
+    TResult Function(String kind, String searchTerm, String? displayTerm)? terms,
+    TResult Function(String kind, @ResourceDTOConverter() ResourceDTO content)? topResults,
     required TResult orElse(),
   }) {
     if (terms != null) {
@@ -634,21 +581,16 @@ class _$SearchSuggestionTermsDTOImpl extends SearchSuggestionTermsDTO {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SearchSuggestionTermsDTOImplToJson(
-      this,
-    );
+    return _$$SearchSuggestionTermsDTOImplToJson(this);
   }
 }
 
 abstract class SearchSuggestionTermsDTO extends SearchSuggestionDTO {
-  const factory SearchSuggestionTermsDTO(
-      final String kind,
-      final String searchTerm,
-      final String? displayTerm) = _$SearchSuggestionTermsDTOImpl;
+  const factory SearchSuggestionTermsDTO(final String kind, final String searchTerm, final String? displayTerm) =
+      _$SearchSuggestionTermsDTOImpl;
   const SearchSuggestionTermsDTO._() : super._();
 
-  factory SearchSuggestionTermsDTO.fromJson(Map<String, dynamic> json) =
-      _$SearchSuggestionTermsDTOImpl.fromJson;
+  factory SearchSuggestionTermsDTO.fromJson(Map<String, dynamic> json) = _$SearchSuggestionTermsDTOImpl.fromJson;
 
   @override
   String get kind;
@@ -659,17 +601,16 @@ abstract class SearchSuggestionTermsDTO extends SearchSuggestionDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SearchSuggestionTermsDTOImplCopyWith<_$SearchSuggestionTermsDTOImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$SearchSuggestionTermsDTOImplCopyWith<_$SearchSuggestionTermsDTOImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$SearchSuggestionTopResultsDTOImplCopyWith<$Res>
-    implements $SearchSuggestionDTOCopyWith<$Res> {
+abstract class _$$SearchSuggestionTopResultsDTOImplCopyWith<$Res> implements $SearchSuggestionDTOCopyWith<$Res> {
   factory _$$SearchSuggestionTopResultsDTOImplCopyWith(
-          _$SearchSuggestionTopResultsDTOImpl value,
-          $Res Function(_$SearchSuggestionTopResultsDTOImpl) then) =
-      __$$SearchSuggestionTopResultsDTOImplCopyWithImpl<$Res>;
+    _$SearchSuggestionTopResultsDTOImpl value,
+    $Res Function(_$SearchSuggestionTopResultsDTOImpl) then,
+  ) = __$$SearchSuggestionTopResultsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String kind, @ResourceDTOConverter() ResourceDTO content});
@@ -679,32 +620,30 @@ abstract class _$$SearchSuggestionTopResultsDTOImplCopyWith<$Res>
 
 /// @nodoc
 class __$$SearchSuggestionTopResultsDTOImplCopyWithImpl<$Res>
-    extends _$SearchSuggestionDTOCopyWithImpl<$Res,
-        _$SearchSuggestionTopResultsDTOImpl>
+    extends _$SearchSuggestionDTOCopyWithImpl<$Res, _$SearchSuggestionTopResultsDTOImpl>
     implements _$$SearchSuggestionTopResultsDTOImplCopyWith<$Res> {
   __$$SearchSuggestionTopResultsDTOImplCopyWithImpl(
-      _$SearchSuggestionTopResultsDTOImpl _value,
-      $Res Function(_$SearchSuggestionTopResultsDTOImpl) _then)
-      : super(_value, _then);
+    _$SearchSuggestionTopResultsDTOImpl _value,
+    $Res Function(_$SearchSuggestionTopResultsDTOImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of SearchSuggestionDTO
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? kind = null,
-    Object? content = null,
-  }) {
-    return _then(_$SearchSuggestionTopResultsDTOImpl(
-      null == kind
-          ? _value.kind
-          : kind // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == content
-          ? _value.content
-          : content // ignore: cast_nullable_to_non_nullable
-              as ResourceDTO,
-    ));
+  $Res call({Object? kind = null, Object? content = null}) {
+    return _then(
+      _$SearchSuggestionTopResultsDTOImpl(
+        null == kind
+            ? _value.kind
+            : kind // ignore: cast_nullable_to_non_nullable
+                as String,
+        null == content
+            ? _value.content
+            : content // ignore: cast_nullable_to_non_nullable
+                as ResourceDTO,
+      ),
+    );
   }
 
   /// Create a copy of SearchSuggestionDTO
@@ -720,14 +659,10 @@ class __$$SearchSuggestionTopResultsDTOImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$SearchSuggestionTopResultsDTOImpl
-    extends SearchSuggestionTopResultsDTO {
-  const _$SearchSuggestionTopResultsDTOImpl(
-      this.kind, @ResourceDTOConverter() this.content)
-      : super._();
+class _$SearchSuggestionTopResultsDTOImpl extends SearchSuggestionTopResultsDTO {
+  const _$SearchSuggestionTopResultsDTOImpl(this.kind, @ResourceDTOConverter() this.content) : super._();
 
-  factory _$SearchSuggestionTopResultsDTOImpl.fromJson(
-          Map<String, dynamic> json) =>
+  factory _$SearchSuggestionTopResultsDTOImpl.fromJson(Map<String, dynamic> json) =>
       _$$SearchSuggestionTopResultsDTOImplFromJson(json);
 
   @override
@@ -759,20 +694,14 @@ class _$SearchSuggestionTopResultsDTOImpl
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SearchSuggestionTopResultsDTOImplCopyWith<
-          _$SearchSuggestionTopResultsDTOImpl>
-      get copyWith => __$$SearchSuggestionTopResultsDTOImplCopyWithImpl<
-          _$SearchSuggestionTopResultsDTOImpl>(this, _$identity);
+  _$$SearchSuggestionTopResultsDTOImplCopyWith<_$SearchSuggestionTopResultsDTOImpl> get copyWith =>
+      __$$SearchSuggestionTopResultsDTOImplCopyWithImpl<_$SearchSuggestionTopResultsDTOImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(
-            String kind, String searchTerm, String? displayTerm)
-        terms,
-    required TResult Function(
-            String kind, @ResourceDTOConverter() ResourceDTO content)
-        topResults,
+    required TResult Function(String kind, String searchTerm, String? displayTerm) terms,
+    required TResult Function(String kind, @ResourceDTOConverter() ResourceDTO content) topResults,
   }) {
     return topResults(kind, content);
   }
@@ -780,10 +709,8 @@ class _$SearchSuggestionTopResultsDTOImpl
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String kind, String searchTerm, String? displayTerm)?
-        terms,
-    TResult? Function(String kind, @ResourceDTOConverter() ResourceDTO content)?
-        topResults,
+    TResult? Function(String kind, String searchTerm, String? displayTerm)? terms,
+    TResult? Function(String kind, @ResourceDTOConverter() ResourceDTO content)? topResults,
   }) {
     return topResults?.call(kind, content);
   }
@@ -791,10 +718,8 @@ class _$SearchSuggestionTopResultsDTOImpl
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String kind, String searchTerm, String? displayTerm)?
-        terms,
-    TResult Function(String kind, @ResourceDTOConverter() ResourceDTO content)?
-        topResults,
+    TResult Function(String kind, String searchTerm, String? displayTerm)? terms,
+    TResult Function(String kind, @ResourceDTOConverter() ResourceDTO content)? topResults,
     required TResult orElse(),
   }) {
     if (topResults != null) {
@@ -836,15 +761,12 @@ class _$SearchSuggestionTopResultsDTOImpl
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SearchSuggestionTopResultsDTOImplToJson(
-      this,
-    );
+    return _$$SearchSuggestionTopResultsDTOImplToJson(this);
   }
 }
 
 abstract class SearchSuggestionTopResultsDTO extends SearchSuggestionDTO {
-  const factory SearchSuggestionTopResultsDTO(final String kind,
-          @ResourceDTOConverter() final ResourceDTO content) =
+  const factory SearchSuggestionTopResultsDTO(final String kind, @ResourceDTOConverter() final ResourceDTO content) =
       _$SearchSuggestionTopResultsDTOImpl;
   const SearchSuggestionTopResultsDTO._() : super._();
 
@@ -860,7 +782,6 @@ abstract class SearchSuggestionTopResultsDTO extends SearchSuggestionDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SearchSuggestionTopResultsDTOImplCopyWith<
-          _$SearchSuggestionTopResultsDTOImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$SearchSuggestionTopResultsDTOImplCopyWith<_$SearchSuggestionTopResultsDTOImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

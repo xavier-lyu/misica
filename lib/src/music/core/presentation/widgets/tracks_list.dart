@@ -2,19 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:misica/src/music/core/domain/track.dart';
 import 'package:misica/src/music/core/presentation/widgets/divider_widget.dart';
 
-typedef TracksListItemBuilder = Widget Function(
-    BuildContext context, int index);
+typedef TracksListItemBuilder = Widget Function(BuildContext context, int index);
 
 typedef TracksListFooterBuilder = Widget? Function(BuildContext context);
 
 class TracksList extends StatelessWidget {
-  const TracksList({
-    super.key,
-    required this.tracks,
-    required this.itemBuilder,
-    this.footerBuilder,
-    this.indent = 0,
-  });
+  const TracksList({super.key, required this.tracks, required this.itemBuilder, this.footerBuilder, this.indent = 0});
 
   final List<Track> tracks;
   final TracksListItemBuilder itemBuilder;
@@ -40,12 +33,8 @@ class TracksList extends StatelessWidget {
             return itemBuilder(context, itemIndex);
           }
 
-          final isEdge =
-              (index == 0 || index == (childCount - (hasFooter ? 2 : 1)));
-          return DividerWidget(
-            indent: isEdge ? 0 : indent,
-            endIndent: 0,
-          );
+          final isEdge = (index == 0 || index == (childCount - (hasFooter ? 2 : 1)));
+          return DividerWidget(indent: isEdge ? 0 : indent, endIndent: 0);
         },
         childCount: childCount,
         semanticIndexCallback: (widget, index) {

@@ -7,14 +7,9 @@ part of 'editorial_notes.dart';
 // **************************************************************************
 
 _$EditorialNotesImpl _$$EditorialNotesImplFromJson(Map json) =>
-    _$EditorialNotesImpl(
-      short: json['short'] as String?,
-      standard: json['standard'] as String?,
-    );
+    _$EditorialNotesImpl(short: json['short'] as String?, standard: json['standard'] as String?);
 
-Map<String, dynamic> _$$EditorialNotesImplToJson(
-        _$EditorialNotesImpl instance) =>
-    <String, dynamic>{
-      'short': instance.short,
-      'standard': instance.standard,
-    };
+Map<String, dynamic> _$$EditorialNotesImplToJson(_$EditorialNotesImpl instance) => <String, dynamic>{
+  'short': instance.short,
+  'standard': instance.standard,
+};

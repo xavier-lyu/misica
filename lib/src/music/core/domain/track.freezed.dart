@@ -12,7 +12,8 @@ part of 'track.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 /// @nodoc
 mixin _$Track {
@@ -20,51 +21,43 @@ mixin _$Track {
   TResult when<TResult extends Object?>({
     required TResult Function(Song song) song,
     required TResult Function(MusicVideo mv) musicVideo,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Song song)? song,
     TResult? Function(MusicVideo mv)? musicVideo,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Song song)? song,
     TResult Function(MusicVideo mv)? musicVideo,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_TrackSong value) song,
     required TResult Function(_TrackMusicVideo value) musicVideo,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_TrackSong value)? song,
     TResult? Function(_TrackMusicVideo value)? musicVideo,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_TrackSong value)? song,
     TResult Function(_TrackMusicVideo value)? musicVideo,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $TrackCopyWith<$Res> {
-  factory $TrackCopyWith(Track value, $Res Function(Track) then) =
-      _$TrackCopyWithImpl<$Res, Track>;
+  factory $TrackCopyWith(Track value, $Res Function(Track) then) = _$TrackCopyWithImpl<$Res, Track>;
 }
 
 /// @nodoc
-class _$TrackCopyWithImpl<$Res, $Val extends Track>
-    implements $TrackCopyWith<$Res> {
+class _$TrackCopyWithImpl<$Res, $Val extends Track> implements $TrackCopyWith<$Res> {
   _$TrackCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -78,34 +71,30 @@ class _$TrackCopyWithImpl<$Res, $Val extends Track>
 
 /// @nodoc
 abstract class _$$TrackSongImplCopyWith<$Res> {
-  factory _$$TrackSongImplCopyWith(
-          _$TrackSongImpl value, $Res Function(_$TrackSongImpl) then) =
+  factory _$$TrackSongImplCopyWith(_$TrackSongImpl value, $Res Function(_$TrackSongImpl) then) =
       __$$TrackSongImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Song song});
 }
 
 /// @nodoc
-class __$$TrackSongImplCopyWithImpl<$Res>
-    extends _$TrackCopyWithImpl<$Res, _$TrackSongImpl>
+class __$$TrackSongImplCopyWithImpl<$Res> extends _$TrackCopyWithImpl<$Res, _$TrackSongImpl>
     implements _$$TrackSongImplCopyWith<$Res> {
-  __$$TrackSongImplCopyWithImpl(
-      _$TrackSongImpl _value, $Res Function(_$TrackSongImpl) _then)
-      : super(_value, _then);
+  __$$TrackSongImplCopyWithImpl(_$TrackSongImpl _value, $Res Function(_$TrackSongImpl) _then) : super(_value, _then);
 
   /// Create a copy of Track
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? song = freezed,
-  }) {
-    return _then(_$TrackSongImpl(
-      freezed == song
-          ? _value.song
-          : song // ignore: cast_nullable_to_non_nullable
-              as Song,
-    ));
+  $Res call({Object? song = freezed}) {
+    return _then(
+      _$TrackSongImpl(
+        freezed == song
+            ? _value.song
+            : song // ignore: cast_nullable_to_non_nullable
+                as Song,
+      ),
+    );
   }
 }
 
@@ -131,8 +120,7 @@ class _$TrackSongImpl extends _TrackSong {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(song));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(song));
 
   /// Create a copy of Track
   /// with the given fields replaced by the non-null parameter values.
@@ -214,40 +202,36 @@ abstract class _TrackSong extends Track {
   /// Create a copy of Track
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$TrackSongImplCopyWith<_$TrackSongImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$TrackSongImplCopyWith<_$TrackSongImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class _$$TrackMusicVideoImplCopyWith<$Res> {
-  factory _$$TrackMusicVideoImplCopyWith(_$TrackMusicVideoImpl value,
-          $Res Function(_$TrackMusicVideoImpl) then) =
+  factory _$$TrackMusicVideoImplCopyWith(_$TrackMusicVideoImpl value, $Res Function(_$TrackMusicVideoImpl) then) =
       __$$TrackMusicVideoImplCopyWithImpl<$Res>;
   @useResult
   $Res call({MusicVideo mv});
 }
 
 /// @nodoc
-class __$$TrackMusicVideoImplCopyWithImpl<$Res>
-    extends _$TrackCopyWithImpl<$Res, _$TrackMusicVideoImpl>
+class __$$TrackMusicVideoImplCopyWithImpl<$Res> extends _$TrackCopyWithImpl<$Res, _$TrackMusicVideoImpl>
     implements _$$TrackMusicVideoImplCopyWith<$Res> {
-  __$$TrackMusicVideoImplCopyWithImpl(
-      _$TrackMusicVideoImpl _value, $Res Function(_$TrackMusicVideoImpl) _then)
-      : super(_value, _then);
+  __$$TrackMusicVideoImplCopyWithImpl(_$TrackMusicVideoImpl _value, $Res Function(_$TrackMusicVideoImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of Track
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? mv = freezed,
-  }) {
-    return _then(_$TrackMusicVideoImpl(
-      freezed == mv
-          ? _value.mv
-          : mv // ignore: cast_nullable_to_non_nullable
-              as MusicVideo,
-    ));
+  $Res call({Object? mv = freezed}) {
+    return _then(
+      _$TrackMusicVideoImpl(
+        freezed == mv
+            ? _value.mv
+            : mv // ignore: cast_nullable_to_non_nullable
+                as MusicVideo,
+      ),
+    );
   }
 }
 
@@ -273,8 +257,7 @@ class _$TrackMusicVideoImpl extends _TrackMusicVideo {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(mv));
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(mv));
 
   /// Create a copy of Track
   /// with the given fields replaced by the non-null parameter values.
@@ -282,8 +265,7 @@ class _$TrackMusicVideoImpl extends _TrackMusicVideo {
   @override
   @pragma('vm:prefer-inline')
   _$$TrackMusicVideoImplCopyWith<_$TrackMusicVideoImpl> get copyWith =>
-      __$$TrackMusicVideoImplCopyWithImpl<_$TrackMusicVideoImpl>(
-          this, _$identity);
+      __$$TrackMusicVideoImplCopyWithImpl<_$TrackMusicVideoImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -357,6 +339,5 @@ abstract class _TrackMusicVideo extends Track {
   /// Create a copy of Track
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$TrackMusicVideoImplCopyWith<_$TrackMusicVideoImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$TrackMusicVideoImplCopyWith<_$TrackMusicVideoImpl> get copyWith => throw _privateConstructorUsedError;
 }

@@ -14,13 +14,9 @@ class PlaylistsRepository {
 
   final PlaylistsService _remoteService;
 
-  Future<Either<MusicFailure, Playlist>> fetchCatalogPlaylist(
-    String storefront,
-    String id,
-  ) async {
+  Future<Either<MusicFailure, Playlist>> fetchCatalogPlaylist(String storefront, String id) async {
     try {
-      final playlist =
-          await _remoteService.fetchCatalogPlaylist(storefront, id);
+      final playlist = await _remoteService.fetchCatalogPlaylist(storefront, id);
       return right(playlist.data.first.toDomain() as Playlist);
     } on DioException catch (e) {
       return left(MusicFailure.api(e.response?.statusCode));
@@ -29,13 +25,9 @@ class PlaylistsRepository {
     }
   }
 
-  Future<Either<MusicFailure, List<Track>>> fetchCatalogPlaylistTracks(
-    String storefront,
-    String id,
-  ) async {
+  Future<Either<MusicFailure, List<Track>>> fetchCatalogPlaylistTracks(String storefront, String id) async {
     try {
-      final tracks =
-          await _remoteService.fetchCatalogPlaylistTracks(storefront, id);
+      final tracks = await _remoteService.fetchCatalogPlaylistTracks(storefront, id);
       return right(tracks.data.toDomainTracks());
     } on DioException catch (e) {
       return left(MusicFailure.api(e.response?.statusCode));

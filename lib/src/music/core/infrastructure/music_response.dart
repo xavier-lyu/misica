@@ -9,11 +9,7 @@ part 'music_response.g.dart';
 @freezed
 class MusicResponse with _$MusicResponse {
   const MusicResponse._();
-  const factory MusicResponse({
-    String? next,
-    @ResourceDTOConverter() required List<ResourceDTO> data,
-  }) = _MusicResponse;
+  const factory MusicResponse({String? next, @ResourceDTOConverter() required List<ResourceDTO> data}) = _MusicResponse;
 
-  factory MusicResponse.fromJson(Map<String, dynamic> json) =>
-      _$MusicResponseFromJson(json);
+  factory MusicResponse.fromJson(Map<String, dynamic> json) => _$MusicResponseFromJson(json);
 }

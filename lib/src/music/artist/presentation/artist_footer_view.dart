@@ -5,10 +5,7 @@ import 'package:misica/src/localization/app_localizations_context.dart';
 import 'package:misica/src/music/core/presentation/widgets/expandable_text.dart';
 
 class ArtistFooterView extends StatelessWidget {
-  const ArtistFooterView({
-    super.key,
-    required this.description,
-  });
+  const ArtistFooterView({super.key, required this.description});
 
   final String description;
 
@@ -19,17 +16,9 @@ class ArtistFooterView extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            context.loc.about,
-            style: context.ttoc.titleLarge,
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          ExpandableText(
-            description,
-            maxLines: 8,
-          ),
+          Text(context.loc.about, style: context.ttoc.titleLarge),
+          const SizedBox(height: 10),
+          ExpandableText(description, maxLines: 8),
         ],
       ),
     );

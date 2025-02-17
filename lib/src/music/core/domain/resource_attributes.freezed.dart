@@ -12,7 +12,8 @@ part of 'resource_attributes.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ResourceAttributes _$ResourceAttributesFromJson(Map<String, dynamic> json) {
   return _ResourceAttributes.fromJson(json);
@@ -35,25 +36,24 @@ mixin _$ResourceAttributes {
   /// Create a copy of ResourceAttributes
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ResourceAttributesCopyWith<ResourceAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ResourceAttributesCopyWith<ResourceAttributes> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ResourceAttributesCopyWith<$Res> {
-  factory $ResourceAttributesCopyWith(
-          ResourceAttributes value, $Res Function(ResourceAttributes) then) =
+  factory $ResourceAttributesCopyWith(ResourceAttributes value, $Res Function(ResourceAttributes) then) =
       _$ResourceAttributesCopyWithImpl<$Res, ResourceAttributes>;
   @useResult
-  $Res call(
-      {String? albumName,
-      String? artistName,
-      String? artistUrl,
-      String? curatorName,
-      Artwork? artwork,
-      String name,
-      PlayParams? playParams,
-      String? url});
+  $Res call({
+    String? albumName,
+    String? artistName,
+    String? artistUrl,
+    String? curatorName,
+    Artwork? artwork,
+    String name,
+    PlayParams? playParams,
+    String? url,
+  });
 
   $ArtworkCopyWith<$Res>? get artwork;
   $PlayParamsCopyWith<$Res>? get playParams;
@@ -83,40 +83,51 @@ class _$ResourceAttributesCopyWithImpl<$Res, $Val extends ResourceAttributes>
     Object? playParams = freezed,
     Object? url = freezed,
   }) {
-    return _then(_value.copyWith(
-      albumName: freezed == albumName
-          ? _value.albumName
-          : albumName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artistName: freezed == artistName
-          ? _value.artistName
-          : artistName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artistUrl: freezed == artistUrl
-          ? _value.artistUrl
-          : artistUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      curatorName: freezed == curatorName
-          ? _value.curatorName
-          : curatorName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artwork: freezed == artwork
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      playParams: freezed == playParams
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            albumName:
+                freezed == albumName
+                    ? _value.albumName
+                    : albumName // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            artistName:
+                freezed == artistName
+                    ? _value.artistName
+                    : artistName // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            artistUrl:
+                freezed == artistUrl
+                    ? _value.artistUrl
+                    : artistUrl // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            curatorName:
+                freezed == curatorName
+                    ? _value.curatorName
+                    : curatorName // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            artwork:
+                freezed == artwork
+                    ? _value.artwork
+                    : artwork // ignore: cast_nullable_to_non_nullable
+                        as Artwork?,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            playParams:
+                freezed == playParams
+                    ? _value.playParams
+                    : playParams // ignore: cast_nullable_to_non_nullable
+                        as PlayParams?,
+            url:
+                freezed == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of ResourceAttributes
@@ -149,22 +160,23 @@ class _$ResourceAttributesCopyWithImpl<$Res, $Val extends ResourceAttributes>
 }
 
 /// @nodoc
-abstract class _$$ResourceAttributesImplCopyWith<$Res>
-    implements $ResourceAttributesCopyWith<$Res> {
-  factory _$$ResourceAttributesImplCopyWith(_$ResourceAttributesImpl value,
-          $Res Function(_$ResourceAttributesImpl) then) =
-      __$$ResourceAttributesImplCopyWithImpl<$Res>;
+abstract class _$$ResourceAttributesImplCopyWith<$Res> implements $ResourceAttributesCopyWith<$Res> {
+  factory _$$ResourceAttributesImplCopyWith(
+    _$ResourceAttributesImpl value,
+    $Res Function(_$ResourceAttributesImpl) then,
+  ) = __$$ResourceAttributesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String? albumName,
-      String? artistName,
-      String? artistUrl,
-      String? curatorName,
-      Artwork? artwork,
-      String name,
-      PlayParams? playParams,
-      String? url});
+  $Res call({
+    String? albumName,
+    String? artistName,
+    String? artistUrl,
+    String? curatorName,
+    Artwork? artwork,
+    String name,
+    PlayParams? playParams,
+    String? url,
+  });
 
   @override
   $ArtworkCopyWith<$Res>? get artwork;
@@ -176,9 +188,8 @@ abstract class _$$ResourceAttributesImplCopyWith<$Res>
 class __$$ResourceAttributesImplCopyWithImpl<$Res>
     extends _$ResourceAttributesCopyWithImpl<$Res, _$ResourceAttributesImpl>
     implements _$$ResourceAttributesImplCopyWith<$Res> {
-  __$$ResourceAttributesImplCopyWithImpl(_$ResourceAttributesImpl _value,
-      $Res Function(_$ResourceAttributesImpl) _then)
-      : super(_value, _then);
+  __$$ResourceAttributesImplCopyWithImpl(_$ResourceAttributesImpl _value, $Res Function(_$ResourceAttributesImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of ResourceAttributes
   /// with the given fields replaced by the non-null parameter values.
@@ -194,59 +205,68 @@ class __$$ResourceAttributesImplCopyWithImpl<$Res>
     Object? playParams = freezed,
     Object? url = freezed,
   }) {
-    return _then(_$ResourceAttributesImpl(
-      albumName: freezed == albumName
-          ? _value.albumName
-          : albumName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artistName: freezed == artistName
-          ? _value.artistName
-          : artistName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artistUrl: freezed == artistUrl
-          ? _value.artistUrl
-          : artistUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      curatorName: freezed == curatorName
-          ? _value.curatorName
-          : curatorName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artwork: freezed == artwork
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      playParams: freezed == playParams
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$ResourceAttributesImpl(
+        albumName:
+            freezed == albumName
+                ? _value.albumName
+                : albumName // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        artistName:
+            freezed == artistName
+                ? _value.artistName
+                : artistName // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        artistUrl:
+            freezed == artistUrl
+                ? _value.artistUrl
+                : artistUrl // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        curatorName:
+            freezed == curatorName
+                ? _value.curatorName
+                : curatorName // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        artwork:
+            freezed == artwork
+                ? _value.artwork
+                : artwork // ignore: cast_nullable_to_non_nullable
+                    as Artwork?,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        playParams:
+            freezed == playParams
+                ? _value.playParams
+                : playParams // ignore: cast_nullable_to_non_nullable
+                    as PlayParams?,
+        url:
+            freezed == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ResourceAttributesImpl extends _ResourceAttributes {
-  const _$ResourceAttributesImpl(
-      {required this.albumName,
-      required this.artistName,
-      required this.artistUrl,
-      required this.curatorName,
-      required this.artwork,
-      required this.name,
-      required this.playParams,
-      required this.url})
-      : super._();
+  const _$ResourceAttributesImpl({
+    required this.albumName,
+    required this.artistName,
+    required this.artistUrl,
+    required this.curatorName,
+    required this.artwork,
+    required this.name,
+    required this.playParams,
+    required this.url,
+  }) : super._();
 
-  factory _$ResourceAttributesImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ResourceAttributesImplFromJson(json);
+  factory _$ResourceAttributesImpl.fromJson(Map<String, dynamic> json) => _$$ResourceAttributesImplFromJson(json);
 
   @override
   final String? albumName;
@@ -275,25 +295,20 @@ class _$ResourceAttributesImpl extends _ResourceAttributes {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResourceAttributesImpl &&
-            (identical(other.albumName, albumName) ||
-                other.albumName == albumName) &&
-            (identical(other.artistName, artistName) ||
-                other.artistName == artistName) &&
-            (identical(other.artistUrl, artistUrl) ||
-                other.artistUrl == artistUrl) &&
-            (identical(other.curatorName, curatorName) ||
-                other.curatorName == curatorName) &&
+            (identical(other.albumName, albumName) || other.albumName == albumName) &&
+            (identical(other.artistName, artistName) || other.artistName == artistName) &&
+            (identical(other.artistUrl, artistUrl) || other.artistUrl == artistUrl) &&
+            (identical(other.curatorName, curatorName) || other.curatorName == curatorName) &&
             (identical(other.artwork, artwork) || other.artwork == artwork) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.playParams, playParams) ||
-                other.playParams == playParams) &&
+            (identical(other.playParams, playParams) || other.playParams == playParams) &&
             (identical(other.url, url) || other.url == url));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, albumName, artistName, artistUrl,
-      curatorName, artwork, name, playParams, url);
+  int get hashCode =>
+      Object.hash(runtimeType, albumName, artistName, artistUrl, curatorName, artwork, name, playParams, url);
 
   /// Create a copy of ResourceAttributes
   /// with the given fields replaced by the non-null parameter values.
@@ -301,31 +316,28 @@ class _$ResourceAttributesImpl extends _ResourceAttributes {
   @override
   @pragma('vm:prefer-inline')
   _$$ResourceAttributesImplCopyWith<_$ResourceAttributesImpl> get copyWith =>
-      __$$ResourceAttributesImplCopyWithImpl<_$ResourceAttributesImpl>(
-          this, _$identity);
+      __$$ResourceAttributesImplCopyWithImpl<_$ResourceAttributesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ResourceAttributesImplToJson(
-      this,
-    );
+    return _$$ResourceAttributesImplToJson(this);
   }
 }
 
 abstract class _ResourceAttributes extends ResourceAttributes {
-  const factory _ResourceAttributes(
-      {required final String? albumName,
-      required final String? artistName,
-      required final String? artistUrl,
-      required final String? curatorName,
-      required final Artwork? artwork,
-      required final String name,
-      required final PlayParams? playParams,
-      required final String? url}) = _$ResourceAttributesImpl;
+  const factory _ResourceAttributes({
+    required final String? albumName,
+    required final String? artistName,
+    required final String? artistUrl,
+    required final String? curatorName,
+    required final Artwork? artwork,
+    required final String name,
+    required final PlayParams? playParams,
+    required final String? url,
+  }) = _$ResourceAttributesImpl;
   const _ResourceAttributes._() : super._();
 
-  factory _ResourceAttributes.fromJson(Map<String, dynamic> json) =
-      _$ResourceAttributesImpl.fromJson;
+  factory _ResourceAttributes.fromJson(Map<String, dynamic> json) = _$ResourceAttributesImpl.fromJson;
 
   @override
   String? get albumName;
@@ -348,8 +360,7 @@ abstract class _ResourceAttributes extends ResourceAttributes {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ResourceAttributesImplCopyWith<_$ResourceAttributesImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ResourceAttributesImplCopyWith<_$ResourceAttributesImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 AlbumAttributes _$AlbumAttributesFromJson(Map<String, dynamic> json) {
@@ -376,28 +387,27 @@ mixin _$AlbumAttributes {
   /// Create a copy of AlbumAttributes
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $AlbumAttributesCopyWith<AlbumAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
+  $AlbumAttributesCopyWith<AlbumAttributes> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AlbumAttributesCopyWith<$Res> {
-  factory $AlbumAttributesCopyWith(
-          AlbumAttributes value, $Res Function(AlbumAttributes) then) =
+  factory $AlbumAttributesCopyWith(AlbumAttributes value, $Res Function(AlbumAttributes) then) =
       _$AlbumAttributesCopyWithImpl<$Res, AlbumAttributes>;
   @useResult
-  $Res call(
-      {String artistName,
-      String? artistUrl,
-      Artwork? artwork,
-      String? contentRating,
-      String name,
-      PlayParams? playParams,
-      String? url,
-      DateTime? releaseDate,
-      String? recordLabel,
-      String? copyright,
-      EditorialNotes? editorialNotes});
+  $Res call({
+    String artistName,
+    String? artistUrl,
+    Artwork? artwork,
+    String? contentRating,
+    String name,
+    PlayParams? playParams,
+    String? url,
+    DateTime? releaseDate,
+    String? recordLabel,
+    String? copyright,
+    EditorialNotes? editorialNotes,
+  });
 
   $ArtworkCopyWith<$Res>? get artwork;
   $PlayParamsCopyWith<$Res>? get playParams;
@@ -405,8 +415,7 @@ abstract class $AlbumAttributesCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$AlbumAttributesCopyWithImpl<$Res, $Val extends AlbumAttributes>
-    implements $AlbumAttributesCopyWith<$Res> {
+class _$AlbumAttributesCopyWithImpl<$Res, $Val extends AlbumAttributes> implements $AlbumAttributesCopyWith<$Res> {
   _$AlbumAttributesCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -431,52 +440,66 @@ class _$AlbumAttributesCopyWithImpl<$Res, $Val extends AlbumAttributes>
     Object? copyright = freezed,
     Object? editorialNotes = freezed,
   }) {
-    return _then(_value.copyWith(
-      artistName: null == artistName
-          ? _value.artistName
-          : artistName // ignore: cast_nullable_to_non_nullable
-              as String,
-      artistUrl: freezed == artistUrl
-          ? _value.artistUrl
-          : artistUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artwork: freezed == artwork
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      contentRating: freezed == contentRating
-          ? _value.contentRating
-          : contentRating // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      playParams: freezed == playParams
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      releaseDate: freezed == releaseDate
-          ? _value.releaseDate
-          : releaseDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      recordLabel: freezed == recordLabel
-          ? _value.recordLabel
-          : recordLabel // ignore: cast_nullable_to_non_nullable
-              as String?,
-      copyright: freezed == copyright
-          ? _value.copyright
-          : copyright // ignore: cast_nullable_to_non_nullable
-              as String?,
-      editorialNotes: freezed == editorialNotes
-          ? _value.editorialNotes
-          : editorialNotes // ignore: cast_nullable_to_non_nullable
-              as EditorialNotes?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            artistName:
+                null == artistName
+                    ? _value.artistName
+                    : artistName // ignore: cast_nullable_to_non_nullable
+                        as String,
+            artistUrl:
+                freezed == artistUrl
+                    ? _value.artistUrl
+                    : artistUrl // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            artwork:
+                freezed == artwork
+                    ? _value.artwork
+                    : artwork // ignore: cast_nullable_to_non_nullable
+                        as Artwork?,
+            contentRating:
+                freezed == contentRating
+                    ? _value.contentRating
+                    : contentRating // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            playParams:
+                freezed == playParams
+                    ? _value.playParams
+                    : playParams // ignore: cast_nullable_to_non_nullable
+                        as PlayParams?,
+            url:
+                freezed == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            releaseDate:
+                freezed == releaseDate
+                    ? _value.releaseDate
+                    : releaseDate // ignore: cast_nullable_to_non_nullable
+                        as DateTime?,
+            recordLabel:
+                freezed == recordLabel
+                    ? _value.recordLabel
+                    : recordLabel // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            copyright:
+                freezed == copyright
+                    ? _value.copyright
+                    : copyright // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            editorialNotes:
+                freezed == editorialNotes
+                    ? _value.editorialNotes
+                    : editorialNotes // ignore: cast_nullable_to_non_nullable
+                        as EditorialNotes?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of AlbumAttributes
@@ -523,25 +546,24 @@ class _$AlbumAttributesCopyWithImpl<$Res, $Val extends AlbumAttributes>
 }
 
 /// @nodoc
-abstract class _$$AlbumAttributesImplCopyWith<$Res>
-    implements $AlbumAttributesCopyWith<$Res> {
-  factory _$$AlbumAttributesImplCopyWith(_$AlbumAttributesImpl value,
-          $Res Function(_$AlbumAttributesImpl) then) =
+abstract class _$$AlbumAttributesImplCopyWith<$Res> implements $AlbumAttributesCopyWith<$Res> {
+  factory _$$AlbumAttributesImplCopyWith(_$AlbumAttributesImpl value, $Res Function(_$AlbumAttributesImpl) then) =
       __$$AlbumAttributesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String artistName,
-      String? artistUrl,
-      Artwork? artwork,
-      String? contentRating,
-      String name,
-      PlayParams? playParams,
-      String? url,
-      DateTime? releaseDate,
-      String? recordLabel,
-      String? copyright,
-      EditorialNotes? editorialNotes});
+  $Res call({
+    String artistName,
+    String? artistUrl,
+    Artwork? artwork,
+    String? contentRating,
+    String name,
+    PlayParams? playParams,
+    String? url,
+    DateTime? releaseDate,
+    String? recordLabel,
+    String? copyright,
+    EditorialNotes? editorialNotes,
+  });
 
   @override
   $ArtworkCopyWith<$Res>? get artwork;
@@ -552,12 +574,10 @@ abstract class _$$AlbumAttributesImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$AlbumAttributesImplCopyWithImpl<$Res>
-    extends _$AlbumAttributesCopyWithImpl<$Res, _$AlbumAttributesImpl>
+class __$$AlbumAttributesImplCopyWithImpl<$Res> extends _$AlbumAttributesCopyWithImpl<$Res, _$AlbumAttributesImpl>
     implements _$$AlbumAttributesImplCopyWith<$Res> {
-  __$$AlbumAttributesImplCopyWithImpl(
-      _$AlbumAttributesImpl _value, $Res Function(_$AlbumAttributesImpl) _then)
-      : super(_value, _then);
+  __$$AlbumAttributesImplCopyWithImpl(_$AlbumAttributesImpl _value, $Res Function(_$AlbumAttributesImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of AlbumAttributes
   /// with the given fields replaced by the non-null parameter values.
@@ -576,74 +596,86 @@ class __$$AlbumAttributesImplCopyWithImpl<$Res>
     Object? copyright = freezed,
     Object? editorialNotes = freezed,
   }) {
-    return _then(_$AlbumAttributesImpl(
-      artistName: null == artistName
-          ? _value.artistName
-          : artistName // ignore: cast_nullable_to_non_nullable
-              as String,
-      artistUrl: freezed == artistUrl
-          ? _value.artistUrl
-          : artistUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artwork: freezed == artwork
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      contentRating: freezed == contentRating
-          ? _value.contentRating
-          : contentRating // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      playParams: freezed == playParams
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      releaseDate: freezed == releaseDate
-          ? _value.releaseDate
-          : releaseDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      recordLabel: freezed == recordLabel
-          ? _value.recordLabel
-          : recordLabel // ignore: cast_nullable_to_non_nullable
-              as String?,
-      copyright: freezed == copyright
-          ? _value.copyright
-          : copyright // ignore: cast_nullable_to_non_nullable
-              as String?,
-      editorialNotes: freezed == editorialNotes
-          ? _value.editorialNotes
-          : editorialNotes // ignore: cast_nullable_to_non_nullable
-              as EditorialNotes?,
-    ));
+    return _then(
+      _$AlbumAttributesImpl(
+        artistName:
+            null == artistName
+                ? _value.artistName
+                : artistName // ignore: cast_nullable_to_non_nullable
+                    as String,
+        artistUrl:
+            freezed == artistUrl
+                ? _value.artistUrl
+                : artistUrl // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        artwork:
+            freezed == artwork
+                ? _value.artwork
+                : artwork // ignore: cast_nullable_to_non_nullable
+                    as Artwork?,
+        contentRating:
+            freezed == contentRating
+                ? _value.contentRating
+                : contentRating // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        playParams:
+            freezed == playParams
+                ? _value.playParams
+                : playParams // ignore: cast_nullable_to_non_nullable
+                    as PlayParams?,
+        url:
+            freezed == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        releaseDate:
+            freezed == releaseDate
+                ? _value.releaseDate
+                : releaseDate // ignore: cast_nullable_to_non_nullable
+                    as DateTime?,
+        recordLabel:
+            freezed == recordLabel
+                ? _value.recordLabel
+                : recordLabel // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        copyright:
+            freezed == copyright
+                ? _value.copyright
+                : copyright // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        editorialNotes:
+            freezed == editorialNotes
+                ? _value.editorialNotes
+                : editorialNotes // ignore: cast_nullable_to_non_nullable
+                    as EditorialNotes?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$AlbumAttributesImpl extends _AlbumAttributes {
-  const _$AlbumAttributesImpl(
-      {required this.artistName,
-      required this.artistUrl,
-      required this.artwork,
-      required this.contentRating,
-      required this.name,
-      required this.playParams,
-      required this.url,
-      required this.releaseDate,
-      required this.recordLabel,
-      required this.copyright,
-      required this.editorialNotes})
-      : super._();
+  const _$AlbumAttributesImpl({
+    required this.artistName,
+    required this.artistUrl,
+    required this.artwork,
+    required this.contentRating,
+    required this.name,
+    required this.playParams,
+    required this.url,
+    required this.releaseDate,
+    required this.recordLabel,
+    required this.copyright,
+    required this.editorialNotes,
+  }) : super._();
 
-  factory _$AlbumAttributesImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AlbumAttributesImplFromJson(json);
+  factory _$AlbumAttributesImpl.fromJson(Map<String, dynamic> json) => _$$AlbumAttributesImplFromJson(json);
 
   @override
   final String artistName;
@@ -678,42 +710,35 @@ class _$AlbumAttributesImpl extends _AlbumAttributes {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AlbumAttributesImpl &&
-            (identical(other.artistName, artistName) ||
-                other.artistName == artistName) &&
-            (identical(other.artistUrl, artistUrl) ||
-                other.artistUrl == artistUrl) &&
+            (identical(other.artistName, artistName) || other.artistName == artistName) &&
+            (identical(other.artistUrl, artistUrl) || other.artistUrl == artistUrl) &&
             (identical(other.artwork, artwork) || other.artwork == artwork) &&
-            (identical(other.contentRating, contentRating) ||
-                other.contentRating == contentRating) &&
+            (identical(other.contentRating, contentRating) || other.contentRating == contentRating) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.playParams, playParams) ||
-                other.playParams == playParams) &&
+            (identical(other.playParams, playParams) || other.playParams == playParams) &&
             (identical(other.url, url) || other.url == url) &&
-            (identical(other.releaseDate, releaseDate) ||
-                other.releaseDate == releaseDate) &&
-            (identical(other.recordLabel, recordLabel) ||
-                other.recordLabel == recordLabel) &&
-            (identical(other.copyright, copyright) ||
-                other.copyright == copyright) &&
-            (identical(other.editorialNotes, editorialNotes) ||
-                other.editorialNotes == editorialNotes));
+            (identical(other.releaseDate, releaseDate) || other.releaseDate == releaseDate) &&
+            (identical(other.recordLabel, recordLabel) || other.recordLabel == recordLabel) &&
+            (identical(other.copyright, copyright) || other.copyright == copyright) &&
+            (identical(other.editorialNotes, editorialNotes) || other.editorialNotes == editorialNotes));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      artistName,
-      artistUrl,
-      artwork,
-      contentRating,
-      name,
-      playParams,
-      url,
-      releaseDate,
-      recordLabel,
-      copyright,
-      editorialNotes);
+    runtimeType,
+    artistName,
+    artistUrl,
+    artwork,
+    contentRating,
+    name,
+    playParams,
+    url,
+    releaseDate,
+    recordLabel,
+    copyright,
+    editorialNotes,
+  );
 
   /// Create a copy of AlbumAttributes
   /// with the given fields replaced by the non-null parameter values.
@@ -721,34 +746,31 @@ class _$AlbumAttributesImpl extends _AlbumAttributes {
   @override
   @pragma('vm:prefer-inline')
   _$$AlbumAttributesImplCopyWith<_$AlbumAttributesImpl> get copyWith =>
-      __$$AlbumAttributesImplCopyWithImpl<_$AlbumAttributesImpl>(
-          this, _$identity);
+      __$$AlbumAttributesImplCopyWithImpl<_$AlbumAttributesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AlbumAttributesImplToJson(
-      this,
-    );
+    return _$$AlbumAttributesImplToJson(this);
   }
 }
 
 abstract class _AlbumAttributes extends AlbumAttributes {
-  const factory _AlbumAttributes(
-      {required final String artistName,
-      required final String? artistUrl,
-      required final Artwork? artwork,
-      required final String? contentRating,
-      required final String name,
-      required final PlayParams? playParams,
-      required final String? url,
-      required final DateTime? releaseDate,
-      required final String? recordLabel,
-      required final String? copyright,
-      required final EditorialNotes? editorialNotes}) = _$AlbumAttributesImpl;
+  const factory _AlbumAttributes({
+    required final String artistName,
+    required final String? artistUrl,
+    required final Artwork? artwork,
+    required final String? contentRating,
+    required final String name,
+    required final PlayParams? playParams,
+    required final String? url,
+    required final DateTime? releaseDate,
+    required final String? recordLabel,
+    required final String? copyright,
+    required final EditorialNotes? editorialNotes,
+  }) = _$AlbumAttributesImpl;
   const _AlbumAttributes._() : super._();
 
-  factory _AlbumAttributes.fromJson(Map<String, dynamic> json) =
-      _$AlbumAttributesImpl.fromJson;
+  factory _AlbumAttributes.fromJson(Map<String, dynamic> json) = _$AlbumAttributesImpl.fromJson;
 
   @override
   String get artistName;
@@ -777,8 +799,7 @@ abstract class _AlbumAttributes extends AlbumAttributes {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AlbumAttributesImplCopyWith<_$AlbumAttributesImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AlbumAttributesImplCopyWith<_$AlbumAttributesImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 ArtistAttributes _$ArtistAttributesFromJson(Map<String, dynamic> json) {
@@ -798,29 +819,22 @@ mixin _$ArtistAttributes {
   /// Create a copy of ArtistAttributes
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ArtistAttributesCopyWith<ArtistAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ArtistAttributesCopyWith<ArtistAttributes> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ArtistAttributesCopyWith<$Res> {
-  factory $ArtistAttributesCopyWith(
-          ArtistAttributes value, $Res Function(ArtistAttributes) then) =
+  factory $ArtistAttributesCopyWith(ArtistAttributes value, $Res Function(ArtistAttributes) then) =
       _$ArtistAttributesCopyWithImpl<$Res, ArtistAttributes>;
   @useResult
-  $Res call(
-      {String name,
-      String? url,
-      Artwork? artwork,
-      EditorialNotes? editorialNotes});
+  $Res call({String name, String? url, Artwork? artwork, EditorialNotes? editorialNotes});
 
   $ArtworkCopyWith<$Res>? get artwork;
   $EditorialNotesCopyWith<$Res>? get editorialNotes;
 }
 
 /// @nodoc
-class _$ArtistAttributesCopyWithImpl<$Res, $Val extends ArtistAttributes>
-    implements $ArtistAttributesCopyWith<$Res> {
+class _$ArtistAttributesCopyWithImpl<$Res, $Val extends ArtistAttributes> implements $ArtistAttributesCopyWith<$Res> {
   _$ArtistAttributesCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -832,30 +846,32 @@ class _$ArtistAttributesCopyWithImpl<$Res, $Val extends ArtistAttributes>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-    Object? url = freezed,
-    Object? artwork = freezed,
-    Object? editorialNotes = freezed,
-  }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artwork: freezed == artwork
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      editorialNotes: freezed == editorialNotes
-          ? _value.editorialNotes
-          : editorialNotes // ignore: cast_nullable_to_non_nullable
-              as EditorialNotes?,
-    ) as $Val);
+  $Res call({Object? name = null, Object? url = freezed, Object? artwork = freezed, Object? editorialNotes = freezed}) {
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            url:
+                freezed == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            artwork:
+                freezed == artwork
+                    ? _value.artwork
+                    : artwork // ignore: cast_nullable_to_non_nullable
+                        as Artwork?,
+            editorialNotes:
+                freezed == editorialNotes
+                    ? _value.editorialNotes
+                    : editorialNotes // ignore: cast_nullable_to_non_nullable
+                        as EditorialNotes?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of ArtistAttributes
@@ -888,18 +904,12 @@ class _$ArtistAttributesCopyWithImpl<$Res, $Val extends ArtistAttributes>
 }
 
 /// @nodoc
-abstract class _$$ArtistAttributesImplCopyWith<$Res>
-    implements $ArtistAttributesCopyWith<$Res> {
-  factory _$$ArtistAttributesImplCopyWith(_$ArtistAttributesImpl value,
-          $Res Function(_$ArtistAttributesImpl) then) =
+abstract class _$$ArtistAttributesImplCopyWith<$Res> implements $ArtistAttributesCopyWith<$Res> {
+  factory _$$ArtistAttributesImplCopyWith(_$ArtistAttributesImpl value, $Res Function(_$ArtistAttributesImpl) then) =
       __$$ArtistAttributesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String name,
-      String? url,
-      Artwork? artwork,
-      EditorialNotes? editorialNotes});
+  $Res call({String name, String? url, Artwork? artwork, EditorialNotes? editorialNotes});
 
   @override
   $ArtworkCopyWith<$Res>? get artwork;
@@ -908,56 +918,54 @@ abstract class _$$ArtistAttributesImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ArtistAttributesImplCopyWithImpl<$Res>
-    extends _$ArtistAttributesCopyWithImpl<$Res, _$ArtistAttributesImpl>
+class __$$ArtistAttributesImplCopyWithImpl<$Res> extends _$ArtistAttributesCopyWithImpl<$Res, _$ArtistAttributesImpl>
     implements _$$ArtistAttributesImplCopyWith<$Res> {
-  __$$ArtistAttributesImplCopyWithImpl(_$ArtistAttributesImpl _value,
-      $Res Function(_$ArtistAttributesImpl) _then)
-      : super(_value, _then);
+  __$$ArtistAttributesImplCopyWithImpl(_$ArtistAttributesImpl _value, $Res Function(_$ArtistAttributesImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of ArtistAttributes
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-    Object? url = freezed,
-    Object? artwork = freezed,
-    Object? editorialNotes = freezed,
-  }) {
-    return _then(_$ArtistAttributesImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artwork: freezed == artwork
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      editorialNotes: freezed == editorialNotes
-          ? _value.editorialNotes
-          : editorialNotes // ignore: cast_nullable_to_non_nullable
-              as EditorialNotes?,
-    ));
+  $Res call({Object? name = null, Object? url = freezed, Object? artwork = freezed, Object? editorialNotes = freezed}) {
+    return _then(
+      _$ArtistAttributesImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        url:
+            freezed == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        artwork:
+            freezed == artwork
+                ? _value.artwork
+                : artwork // ignore: cast_nullable_to_non_nullable
+                    as Artwork?,
+        editorialNotes:
+            freezed == editorialNotes
+                ? _value.editorialNotes
+                : editorialNotes // ignore: cast_nullable_to_non_nullable
+                    as EditorialNotes?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ArtistAttributesImpl extends _ArtistAttributes {
-  const _$ArtistAttributesImpl(
-      {required this.name,
-      required this.url,
-      required this.artwork,
-      required this.editorialNotes})
-      : super._();
+  const _$ArtistAttributesImpl({
+    required this.name,
+    required this.url,
+    required this.artwork,
+    required this.editorialNotes,
+  }) : super._();
 
-  factory _$ArtistAttributesImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ArtistAttributesImplFromJson(json);
+  factory _$ArtistAttributesImpl.fromJson(Map<String, dynamic> json) => _$$ArtistAttributesImplFromJson(json);
 
   @override
   final String name;
@@ -981,14 +989,12 @@ class _$ArtistAttributesImpl extends _ArtistAttributes {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.artwork, artwork) || other.artwork == artwork) &&
-            (identical(other.editorialNotes, editorialNotes) ||
-                other.editorialNotes == editorialNotes));
+            (identical(other.editorialNotes, editorialNotes) || other.editorialNotes == editorialNotes));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, name, url, artwork, editorialNotes);
+  int get hashCode => Object.hash(runtimeType, name, url, artwork, editorialNotes);
 
   /// Create a copy of ArtistAttributes
   /// with the given fields replaced by the non-null parameter values.
@@ -996,27 +1002,24 @@ class _$ArtistAttributesImpl extends _ArtistAttributes {
   @override
   @pragma('vm:prefer-inline')
   _$$ArtistAttributesImplCopyWith<_$ArtistAttributesImpl> get copyWith =>
-      __$$ArtistAttributesImplCopyWithImpl<_$ArtistAttributesImpl>(
-          this, _$identity);
+      __$$ArtistAttributesImplCopyWithImpl<_$ArtistAttributesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ArtistAttributesImplToJson(
-      this,
-    );
+    return _$$ArtistAttributesImplToJson(this);
   }
 }
 
 abstract class _ArtistAttributes extends ArtistAttributes {
-  const factory _ArtistAttributes(
-      {required final String name,
-      required final String? url,
-      required final Artwork? artwork,
-      required final EditorialNotes? editorialNotes}) = _$ArtistAttributesImpl;
+  const factory _ArtistAttributes({
+    required final String name,
+    required final String? url,
+    required final Artwork? artwork,
+    required final EditorialNotes? editorialNotes,
+  }) = _$ArtistAttributesImpl;
   const _ArtistAttributes._() : super._();
 
-  factory _ArtistAttributes.fromJson(Map<String, dynamic> json) =
-      _$ArtistAttributesImpl.fromJson;
+  factory _ArtistAttributes.fromJson(Map<String, dynamic> json) = _$ArtistAttributesImpl.fromJson;
 
   @override
   String get name;
@@ -1031,8 +1034,7 @@ abstract class _ArtistAttributes extends ArtistAttributes {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ArtistAttributesImplCopyWith<_$ArtistAttributesImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ArtistAttributesImplCopyWith<_$ArtistAttributesImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 MusicVideoAttributes _$MusicVideoAttributesFromJson(Map<String, dynamic> json) {
@@ -1047,8 +1049,7 @@ mixin _$MusicVideoAttributes {
   int get durationInMillis => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   PlayParams? get playParams => throw _privateConstructorUsedError;
-  List<Map<String, dynamic>>? get previews =>
-      throw _privateConstructorUsedError;
+  List<Map<String, dynamic>>? get previews => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
   int? get trackNumber => throw _privateConstructorUsedError;
   String? get contentRating => throw _privateConstructorUsedError;
@@ -1059,35 +1060,33 @@ mixin _$MusicVideoAttributes {
   /// Create a copy of MusicVideoAttributes
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $MusicVideoAttributesCopyWith<MusicVideoAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
+  $MusicVideoAttributesCopyWith<MusicVideoAttributes> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $MusicVideoAttributesCopyWith<$Res> {
-  factory $MusicVideoAttributesCopyWith(MusicVideoAttributes value,
-          $Res Function(MusicVideoAttributes) then) =
+  factory $MusicVideoAttributesCopyWith(MusicVideoAttributes value, $Res Function(MusicVideoAttributes) then) =
       _$MusicVideoAttributesCopyWithImpl<$Res, MusicVideoAttributes>;
   @useResult
-  $Res call(
-      {String artistName,
-      String? artistUrl,
-      Artwork? artwork,
-      int durationInMillis,
-      String name,
-      PlayParams? playParams,
-      List<Map<String, dynamic>>? previews,
-      String? url,
-      int? trackNumber,
-      String? contentRating});
+  $Res call({
+    String artistName,
+    String? artistUrl,
+    Artwork? artwork,
+    int durationInMillis,
+    String name,
+    PlayParams? playParams,
+    List<Map<String, dynamic>>? previews,
+    String? url,
+    int? trackNumber,
+    String? contentRating,
+  });
 
   $ArtworkCopyWith<$Res>? get artwork;
   $PlayParamsCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
-class _$MusicVideoAttributesCopyWithImpl<$Res,
-        $Val extends MusicVideoAttributes>
+class _$MusicVideoAttributesCopyWithImpl<$Res, $Val extends MusicVideoAttributes>
     implements $MusicVideoAttributesCopyWith<$Res> {
   _$MusicVideoAttributesCopyWithImpl(this._value, this._then);
 
@@ -1112,48 +1111,61 @@ class _$MusicVideoAttributesCopyWithImpl<$Res,
     Object? trackNumber = freezed,
     Object? contentRating = freezed,
   }) {
-    return _then(_value.copyWith(
-      artistName: null == artistName
-          ? _value.artistName
-          : artistName // ignore: cast_nullable_to_non_nullable
-              as String,
-      artistUrl: freezed == artistUrl
-          ? _value.artistUrl
-          : artistUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artwork: freezed == artwork
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      durationInMillis: null == durationInMillis
-          ? _value.durationInMillis
-          : durationInMillis // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      playParams: freezed == playParams
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams?,
-      previews: freezed == previews
-          ? _value.previews
-          : previews // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      trackNumber: freezed == trackNumber
-          ? _value.trackNumber
-          : trackNumber // ignore: cast_nullable_to_non_nullable
-              as int?,
-      contentRating: freezed == contentRating
-          ? _value.contentRating
-          : contentRating // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            artistName:
+                null == artistName
+                    ? _value.artistName
+                    : artistName // ignore: cast_nullable_to_non_nullable
+                        as String,
+            artistUrl:
+                freezed == artistUrl
+                    ? _value.artistUrl
+                    : artistUrl // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            artwork:
+                freezed == artwork
+                    ? _value.artwork
+                    : artwork // ignore: cast_nullable_to_non_nullable
+                        as Artwork?,
+            durationInMillis:
+                null == durationInMillis
+                    ? _value.durationInMillis
+                    : durationInMillis // ignore: cast_nullable_to_non_nullable
+                        as int,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            playParams:
+                freezed == playParams
+                    ? _value.playParams
+                    : playParams // ignore: cast_nullable_to_non_nullable
+                        as PlayParams?,
+            previews:
+                freezed == previews
+                    ? _value.previews
+                    : previews // ignore: cast_nullable_to_non_nullable
+                        as List<Map<String, dynamic>>?,
+            url:
+                freezed == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            trackNumber:
+                freezed == trackNumber
+                    ? _value.trackNumber
+                    : trackNumber // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            contentRating:
+                freezed == contentRating
+                    ? _value.contentRating
+                    : contentRating // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of MusicVideoAttributes
@@ -1186,24 +1198,25 @@ class _$MusicVideoAttributesCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$MusicVideoAttributesImplCopyWith<$Res>
-    implements $MusicVideoAttributesCopyWith<$Res> {
-  factory _$$MusicVideoAttributesImplCopyWith(_$MusicVideoAttributesImpl value,
-          $Res Function(_$MusicVideoAttributesImpl) then) =
-      __$$MusicVideoAttributesImplCopyWithImpl<$Res>;
+abstract class _$$MusicVideoAttributesImplCopyWith<$Res> implements $MusicVideoAttributesCopyWith<$Res> {
+  factory _$$MusicVideoAttributesImplCopyWith(
+    _$MusicVideoAttributesImpl value,
+    $Res Function(_$MusicVideoAttributesImpl) then,
+  ) = __$$MusicVideoAttributesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String artistName,
-      String? artistUrl,
-      Artwork? artwork,
-      int durationInMillis,
-      String name,
-      PlayParams? playParams,
-      List<Map<String, dynamic>>? previews,
-      String? url,
-      int? trackNumber,
-      String? contentRating});
+  $Res call({
+    String artistName,
+    String? artistUrl,
+    Artwork? artwork,
+    int durationInMillis,
+    String name,
+    PlayParams? playParams,
+    List<Map<String, dynamic>>? previews,
+    String? url,
+    int? trackNumber,
+    String? contentRating,
+  });
 
   @override
   $ArtworkCopyWith<$Res>? get artwork;
@@ -1215,9 +1228,10 @@ abstract class _$$MusicVideoAttributesImplCopyWith<$Res>
 class __$$MusicVideoAttributesImplCopyWithImpl<$Res>
     extends _$MusicVideoAttributesCopyWithImpl<$Res, _$MusicVideoAttributesImpl>
     implements _$$MusicVideoAttributesImplCopyWith<$Res> {
-  __$$MusicVideoAttributesImplCopyWithImpl(_$MusicVideoAttributesImpl _value,
-      $Res Function(_$MusicVideoAttributesImpl) _then)
-      : super(_value, _then);
+  __$$MusicVideoAttributesImplCopyWithImpl(
+    _$MusicVideoAttributesImpl _value,
+    $Res Function(_$MusicVideoAttributesImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of MusicVideoAttributes
   /// with the given fields replaced by the non-null parameter values.
@@ -1235,70 +1249,81 @@ class __$$MusicVideoAttributesImplCopyWithImpl<$Res>
     Object? trackNumber = freezed,
     Object? contentRating = freezed,
   }) {
-    return _then(_$MusicVideoAttributesImpl(
-      artistName: null == artistName
-          ? _value.artistName
-          : artistName // ignore: cast_nullable_to_non_nullable
-              as String,
-      artistUrl: freezed == artistUrl
-          ? _value.artistUrl
-          : artistUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artwork: freezed == artwork
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      durationInMillis: null == durationInMillis
-          ? _value.durationInMillis
-          : durationInMillis // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      playParams: freezed == playParams
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams?,
-      previews: freezed == previews
-          ? _value._previews
-          : previews // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      trackNumber: freezed == trackNumber
-          ? _value.trackNumber
-          : trackNumber // ignore: cast_nullable_to_non_nullable
-              as int?,
-      contentRating: freezed == contentRating
-          ? _value.contentRating
-          : contentRating // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$MusicVideoAttributesImpl(
+        artistName:
+            null == artistName
+                ? _value.artistName
+                : artistName // ignore: cast_nullable_to_non_nullable
+                    as String,
+        artistUrl:
+            freezed == artistUrl
+                ? _value.artistUrl
+                : artistUrl // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        artwork:
+            freezed == artwork
+                ? _value.artwork
+                : artwork // ignore: cast_nullable_to_non_nullable
+                    as Artwork?,
+        durationInMillis:
+            null == durationInMillis
+                ? _value.durationInMillis
+                : durationInMillis // ignore: cast_nullable_to_non_nullable
+                    as int,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        playParams:
+            freezed == playParams
+                ? _value.playParams
+                : playParams // ignore: cast_nullable_to_non_nullable
+                    as PlayParams?,
+        previews:
+            freezed == previews
+                ? _value._previews
+                : previews // ignore: cast_nullable_to_non_nullable
+                    as List<Map<String, dynamic>>?,
+        url:
+            freezed == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        trackNumber:
+            freezed == trackNumber
+                ? _value.trackNumber
+                : trackNumber // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        contentRating:
+            freezed == contentRating
+                ? _value.contentRating
+                : contentRating // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$MusicVideoAttributesImpl extends _MusicVideoAttributes {
-  const _$MusicVideoAttributesImpl(
-      {required this.artistName,
-      required this.artistUrl,
-      required this.artwork,
-      required this.durationInMillis,
-      required this.name,
-      required this.playParams,
-      required final List<Map<String, dynamic>>? previews,
-      required this.url,
-      required this.trackNumber,
-      required this.contentRating})
-      : _previews = previews,
-        super._();
+  const _$MusicVideoAttributesImpl({
+    required this.artistName,
+    required this.artistUrl,
+    required this.artwork,
+    required this.durationInMillis,
+    required this.name,
+    required this.playParams,
+    required final List<Map<String, dynamic>>? previews,
+    required this.url,
+    required this.trackNumber,
+    required this.contentRating,
+  }) : _previews = previews,
+       super._();
 
-  factory _$MusicVideoAttributesImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MusicVideoAttributesImplFromJson(json);
+  factory _$MusicVideoAttributesImpl.fromJson(Map<String, dynamic> json) => _$$MusicVideoAttributesImplFromJson(json);
 
   @override
   final String artistName;
@@ -1339,73 +1364,64 @@ class _$MusicVideoAttributesImpl extends _MusicVideoAttributes {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MusicVideoAttributesImpl &&
-            (identical(other.artistName, artistName) ||
-                other.artistName == artistName) &&
-            (identical(other.artistUrl, artistUrl) ||
-                other.artistUrl == artistUrl) &&
+            (identical(other.artistName, artistName) || other.artistName == artistName) &&
+            (identical(other.artistUrl, artistUrl) || other.artistUrl == artistUrl) &&
             (identical(other.artwork, artwork) || other.artwork == artwork) &&
-            (identical(other.durationInMillis, durationInMillis) ||
-                other.durationInMillis == durationInMillis) &&
+            (identical(other.durationInMillis, durationInMillis) || other.durationInMillis == durationInMillis) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.playParams, playParams) ||
-                other.playParams == playParams) &&
+            (identical(other.playParams, playParams) || other.playParams == playParams) &&
             const DeepCollectionEquality().equals(other._previews, _previews) &&
             (identical(other.url, url) || other.url == url) &&
-            (identical(other.trackNumber, trackNumber) ||
-                other.trackNumber == trackNumber) &&
-            (identical(other.contentRating, contentRating) ||
-                other.contentRating == contentRating));
+            (identical(other.trackNumber, trackNumber) || other.trackNumber == trackNumber) &&
+            (identical(other.contentRating, contentRating) || other.contentRating == contentRating));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      artistName,
-      artistUrl,
-      artwork,
-      durationInMillis,
-      name,
-      playParams,
-      const DeepCollectionEquality().hash(_previews),
-      url,
-      trackNumber,
-      contentRating);
+    runtimeType,
+    artistName,
+    artistUrl,
+    artwork,
+    durationInMillis,
+    name,
+    playParams,
+    const DeepCollectionEquality().hash(_previews),
+    url,
+    trackNumber,
+    contentRating,
+  );
 
   /// Create a copy of MusicVideoAttributes
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$MusicVideoAttributesImplCopyWith<_$MusicVideoAttributesImpl>
-      get copyWith =>
-          __$$MusicVideoAttributesImplCopyWithImpl<_$MusicVideoAttributesImpl>(
-              this, _$identity);
+  _$$MusicVideoAttributesImplCopyWith<_$MusicVideoAttributesImpl> get copyWith =>
+      __$$MusicVideoAttributesImplCopyWithImpl<_$MusicVideoAttributesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$MusicVideoAttributesImplToJson(
-      this,
-    );
+    return _$$MusicVideoAttributesImplToJson(this);
   }
 }
 
 abstract class _MusicVideoAttributes extends MusicVideoAttributes {
-  const factory _MusicVideoAttributes(
-      {required final String artistName,
-      required final String? artistUrl,
-      required final Artwork? artwork,
-      required final int durationInMillis,
-      required final String name,
-      required final PlayParams? playParams,
-      required final List<Map<String, dynamic>>? previews,
-      required final String? url,
-      required final int? trackNumber,
-      required final String? contentRating}) = _$MusicVideoAttributesImpl;
+  const factory _MusicVideoAttributes({
+    required final String artistName,
+    required final String? artistUrl,
+    required final Artwork? artwork,
+    required final int durationInMillis,
+    required final String name,
+    required final PlayParams? playParams,
+    required final List<Map<String, dynamic>>? previews,
+    required final String? url,
+    required final int? trackNumber,
+    required final String? contentRating,
+  }) = _$MusicVideoAttributesImpl;
   const _MusicVideoAttributes._() : super._();
 
-  factory _MusicVideoAttributes.fromJson(Map<String, dynamic> json) =
-      _$MusicVideoAttributesImpl.fromJson;
+  factory _MusicVideoAttributes.fromJson(Map<String, dynamic> json) = _$MusicVideoAttributesImpl.fromJson;
 
   @override
   String get artistName;
@@ -1432,8 +1448,7 @@ abstract class _MusicVideoAttributes extends MusicVideoAttributes {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MusicVideoAttributesImplCopyWith<_$MusicVideoAttributesImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$MusicVideoAttributesImplCopyWith<_$MusicVideoAttributesImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 PlaylistAttributes _$PlaylistAttributesFromJson(Map<String, dynamic> json) {
@@ -1455,23 +1470,22 @@ mixin _$PlaylistAttributes {
   /// Create a copy of PlaylistAttributes
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $PlaylistAttributesCopyWith<PlaylistAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PlaylistAttributesCopyWith<PlaylistAttributes> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PlaylistAttributesCopyWith<$Res> {
-  factory $PlaylistAttributesCopyWith(
-          PlaylistAttributes value, $Res Function(PlaylistAttributes) then) =
+  factory $PlaylistAttributesCopyWith(PlaylistAttributes value, $Res Function(PlaylistAttributes) then) =
       _$PlaylistAttributesCopyWithImpl<$Res, PlaylistAttributes>;
   @useResult
-  $Res call(
-      {Artwork? artwork,
-      String? curatorName,
-      String name,
-      PlayParams? playParams,
-      String? url,
-      EditorialNotes? editorialNotes});
+  $Res call({
+    Artwork? artwork,
+    String? curatorName,
+    String name,
+    PlayParams? playParams,
+    String? url,
+    EditorialNotes? editorialNotes,
+  });
 
   $ArtworkCopyWith<$Res>? get artwork;
   $PlayParamsCopyWith<$Res>? get playParams;
@@ -1500,32 +1514,41 @@ class _$PlaylistAttributesCopyWithImpl<$Res, $Val extends PlaylistAttributes>
     Object? url = freezed,
     Object? editorialNotes = freezed,
   }) {
-    return _then(_value.copyWith(
-      artwork: freezed == artwork
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      curatorName: freezed == curatorName
-          ? _value.curatorName
-          : curatorName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      playParams: freezed == playParams
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      editorialNotes: freezed == editorialNotes
-          ? _value.editorialNotes
-          : editorialNotes // ignore: cast_nullable_to_non_nullable
-              as EditorialNotes?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            artwork:
+                freezed == artwork
+                    ? _value.artwork
+                    : artwork // ignore: cast_nullable_to_non_nullable
+                        as Artwork?,
+            curatorName:
+                freezed == curatorName
+                    ? _value.curatorName
+                    : curatorName // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            playParams:
+                freezed == playParams
+                    ? _value.playParams
+                    : playParams // ignore: cast_nullable_to_non_nullable
+                        as PlayParams?,
+            url:
+                freezed == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            editorialNotes:
+                freezed == editorialNotes
+                    ? _value.editorialNotes
+                    : editorialNotes // ignore: cast_nullable_to_non_nullable
+                        as EditorialNotes?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of PlaylistAttributes
@@ -1572,20 +1595,21 @@ class _$PlaylistAttributesCopyWithImpl<$Res, $Val extends PlaylistAttributes>
 }
 
 /// @nodoc
-abstract class _$$PlaylistAttributesImplCopyWith<$Res>
-    implements $PlaylistAttributesCopyWith<$Res> {
-  factory _$$PlaylistAttributesImplCopyWith(_$PlaylistAttributesImpl value,
-          $Res Function(_$PlaylistAttributesImpl) then) =
-      __$$PlaylistAttributesImplCopyWithImpl<$Res>;
+abstract class _$$PlaylistAttributesImplCopyWith<$Res> implements $PlaylistAttributesCopyWith<$Res> {
+  factory _$$PlaylistAttributesImplCopyWith(
+    _$PlaylistAttributesImpl value,
+    $Res Function(_$PlaylistAttributesImpl) then,
+  ) = __$$PlaylistAttributesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {Artwork? artwork,
-      String? curatorName,
-      String name,
-      PlayParams? playParams,
-      String? url,
-      EditorialNotes? editorialNotes});
+  $Res call({
+    Artwork? artwork,
+    String? curatorName,
+    String name,
+    PlayParams? playParams,
+    String? url,
+    EditorialNotes? editorialNotes,
+  });
 
   @override
   $ArtworkCopyWith<$Res>? get artwork;
@@ -1599,9 +1623,8 @@ abstract class _$$PlaylistAttributesImplCopyWith<$Res>
 class __$$PlaylistAttributesImplCopyWithImpl<$Res>
     extends _$PlaylistAttributesCopyWithImpl<$Res, _$PlaylistAttributesImpl>
     implements _$$PlaylistAttributesImplCopyWith<$Res> {
-  __$$PlaylistAttributesImplCopyWithImpl(_$PlaylistAttributesImpl _value,
-      $Res Function(_$PlaylistAttributesImpl) _then)
-      : super(_value, _then);
+  __$$PlaylistAttributesImplCopyWithImpl(_$PlaylistAttributesImpl _value, $Res Function(_$PlaylistAttributesImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of PlaylistAttributes
   /// with the given fields replaced by the non-null parameter values.
@@ -1615,49 +1638,56 @@ class __$$PlaylistAttributesImplCopyWithImpl<$Res>
     Object? url = freezed,
     Object? editorialNotes = freezed,
   }) {
-    return _then(_$PlaylistAttributesImpl(
-      artwork: freezed == artwork
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      curatorName: freezed == curatorName
-          ? _value.curatorName
-          : curatorName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      playParams: freezed == playParams
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      editorialNotes: freezed == editorialNotes
-          ? _value.editorialNotes
-          : editorialNotes // ignore: cast_nullable_to_non_nullable
-              as EditorialNotes?,
-    ));
+    return _then(
+      _$PlaylistAttributesImpl(
+        artwork:
+            freezed == artwork
+                ? _value.artwork
+                : artwork // ignore: cast_nullable_to_non_nullable
+                    as Artwork?,
+        curatorName:
+            freezed == curatorName
+                ? _value.curatorName
+                : curatorName // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        playParams:
+            freezed == playParams
+                ? _value.playParams
+                : playParams // ignore: cast_nullable_to_non_nullable
+                    as PlayParams?,
+        url:
+            freezed == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        editorialNotes:
+            freezed == editorialNotes
+                ? _value.editorialNotes
+                : editorialNotes // ignore: cast_nullable_to_non_nullable
+                    as EditorialNotes?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$PlaylistAttributesImpl extends _PlaylistAttributes {
-  const _$PlaylistAttributesImpl(
-      {required this.artwork,
-      required this.curatorName,
-      required this.name,
-      required this.playParams,
-      required this.url,
-      required this.editorialNotes})
-      : super._();
+  const _$PlaylistAttributesImpl({
+    required this.artwork,
+    required this.curatorName,
+    required this.name,
+    required this.playParams,
+    required this.url,
+    required this.editorialNotes,
+  }) : super._();
 
-  factory _$PlaylistAttributesImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PlaylistAttributesImplFromJson(json);
+  factory _$PlaylistAttributesImpl.fromJson(Map<String, dynamic> json) => _$$PlaylistAttributesImplFromJson(json);
 
   @override
   final Artwork? artwork;
@@ -1683,20 +1713,16 @@ class _$PlaylistAttributesImpl extends _PlaylistAttributes {
         (other.runtimeType == runtimeType &&
             other is _$PlaylistAttributesImpl &&
             (identical(other.artwork, artwork) || other.artwork == artwork) &&
-            (identical(other.curatorName, curatorName) ||
-                other.curatorName == curatorName) &&
+            (identical(other.curatorName, curatorName) || other.curatorName == curatorName) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.playParams, playParams) ||
-                other.playParams == playParams) &&
+            (identical(other.playParams, playParams) || other.playParams == playParams) &&
             (identical(other.url, url) || other.url == url) &&
-            (identical(other.editorialNotes, editorialNotes) ||
-                other.editorialNotes == editorialNotes));
+            (identical(other.editorialNotes, editorialNotes) || other.editorialNotes == editorialNotes));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, artwork, curatorName, name, playParams, url, editorialNotes);
+  int get hashCode => Object.hash(runtimeType, artwork, curatorName, name, playParams, url, editorialNotes);
 
   /// Create a copy of PlaylistAttributes
   /// with the given fields replaced by the non-null parameter values.
@@ -1704,30 +1730,26 @@ class _$PlaylistAttributesImpl extends _PlaylistAttributes {
   @override
   @pragma('vm:prefer-inline')
   _$$PlaylistAttributesImplCopyWith<_$PlaylistAttributesImpl> get copyWith =>
-      __$$PlaylistAttributesImplCopyWithImpl<_$PlaylistAttributesImpl>(
-          this, _$identity);
+      __$$PlaylistAttributesImplCopyWithImpl<_$PlaylistAttributesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PlaylistAttributesImplToJson(
-      this,
-    );
+    return _$$PlaylistAttributesImplToJson(this);
   }
 }
 
 abstract class _PlaylistAttributes extends PlaylistAttributes {
-  const factory _PlaylistAttributes(
-          {required final Artwork? artwork,
-          required final String? curatorName,
-          required final String name,
-          required final PlayParams? playParams,
-          required final String? url,
-          required final EditorialNotes? editorialNotes}) =
-      _$PlaylistAttributesImpl;
+  const factory _PlaylistAttributes({
+    required final Artwork? artwork,
+    required final String? curatorName,
+    required final String name,
+    required final PlayParams? playParams,
+    required final String? url,
+    required final EditorialNotes? editorialNotes,
+  }) = _$PlaylistAttributesImpl;
   const _PlaylistAttributes._() : super._();
 
-  factory _PlaylistAttributes.fromJson(Map<String, dynamic> json) =
-      _$PlaylistAttributesImpl.fromJson;
+  factory _PlaylistAttributes.fromJson(Map<String, dynamic> json) = _$PlaylistAttributesImpl.fromJson;
 
   @override
   Artwork? get artwork;
@@ -1746,8 +1768,7 @@ abstract class _PlaylistAttributes extends PlaylistAttributes {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$PlaylistAttributesImplCopyWith<_$PlaylistAttributesImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PlaylistAttributesImplCopyWith<_$PlaylistAttributesImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 SongAttributes _$SongAttributesFromJson(Map<String, dynamic> json) {
@@ -1764,8 +1785,7 @@ mixin _$SongAttributes {
   int get durationInMillis => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   PlayParams? get playParams => throw _privateConstructorUsedError;
-  List<Map<String, dynamic>>? get previews =>
-      throw _privateConstructorUsedError;
+  List<Map<String, dynamic>>? get previews => throw _privateConstructorUsedError;
   int? get trackNumber => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
 
@@ -1775,36 +1795,34 @@ mixin _$SongAttributes {
   /// Create a copy of SongAttributes
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SongAttributesCopyWith<SongAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SongAttributesCopyWith<SongAttributes> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SongAttributesCopyWith<$Res> {
-  factory $SongAttributesCopyWith(
-          SongAttributes value, $Res Function(SongAttributes) then) =
+  factory $SongAttributesCopyWith(SongAttributes value, $Res Function(SongAttributes) then) =
       _$SongAttributesCopyWithImpl<$Res, SongAttributes>;
   @useResult
-  $Res call(
-      {String? albumName,
-      String? artistUrl,
-      String artistName,
-      Artwork? artwork,
-      String? contentRating,
-      int durationInMillis,
-      String name,
-      PlayParams? playParams,
-      List<Map<String, dynamic>>? previews,
-      int? trackNumber,
-      String? url});
+  $Res call({
+    String? albumName,
+    String? artistUrl,
+    String artistName,
+    Artwork? artwork,
+    String? contentRating,
+    int durationInMillis,
+    String name,
+    PlayParams? playParams,
+    List<Map<String, dynamic>>? previews,
+    int? trackNumber,
+    String? url,
+  });
 
   $ArtworkCopyWith<$Res>? get artwork;
   $PlayParamsCopyWith<$Res>? get playParams;
 }
 
 /// @nodoc
-class _$SongAttributesCopyWithImpl<$Res, $Val extends SongAttributes>
-    implements $SongAttributesCopyWith<$Res> {
+class _$SongAttributesCopyWithImpl<$Res, $Val extends SongAttributes> implements $SongAttributesCopyWith<$Res> {
   _$SongAttributesCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1829,52 +1847,66 @@ class _$SongAttributesCopyWithImpl<$Res, $Val extends SongAttributes>
     Object? trackNumber = freezed,
     Object? url = freezed,
   }) {
-    return _then(_value.copyWith(
-      albumName: freezed == albumName
-          ? _value.albumName
-          : albumName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artistUrl: freezed == artistUrl
-          ? _value.artistUrl
-          : artistUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artistName: null == artistName
-          ? _value.artistName
-          : artistName // ignore: cast_nullable_to_non_nullable
-              as String,
-      artwork: freezed == artwork
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      contentRating: freezed == contentRating
-          ? _value.contentRating
-          : contentRating // ignore: cast_nullable_to_non_nullable
-              as String?,
-      durationInMillis: null == durationInMillis
-          ? _value.durationInMillis
-          : durationInMillis // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      playParams: freezed == playParams
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams?,
-      previews: freezed == previews
-          ? _value.previews
-          : previews // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>?,
-      trackNumber: freezed == trackNumber
-          ? _value.trackNumber
-          : trackNumber // ignore: cast_nullable_to_non_nullable
-              as int?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            albumName:
+                freezed == albumName
+                    ? _value.albumName
+                    : albumName // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            artistUrl:
+                freezed == artistUrl
+                    ? _value.artistUrl
+                    : artistUrl // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            artistName:
+                null == artistName
+                    ? _value.artistName
+                    : artistName // ignore: cast_nullable_to_non_nullable
+                        as String,
+            artwork:
+                freezed == artwork
+                    ? _value.artwork
+                    : artwork // ignore: cast_nullable_to_non_nullable
+                        as Artwork?,
+            contentRating:
+                freezed == contentRating
+                    ? _value.contentRating
+                    : contentRating // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            durationInMillis:
+                null == durationInMillis
+                    ? _value.durationInMillis
+                    : durationInMillis // ignore: cast_nullable_to_non_nullable
+                        as int,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            playParams:
+                freezed == playParams
+                    ? _value.playParams
+                    : playParams // ignore: cast_nullable_to_non_nullable
+                        as PlayParams?,
+            previews:
+                freezed == previews
+                    ? _value.previews
+                    : previews // ignore: cast_nullable_to_non_nullable
+                        as List<Map<String, dynamic>>?,
+            trackNumber:
+                freezed == trackNumber
+                    ? _value.trackNumber
+                    : trackNumber // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            url:
+                freezed == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of SongAttributes
@@ -1907,25 +1939,24 @@ class _$SongAttributesCopyWithImpl<$Res, $Val extends SongAttributes>
 }
 
 /// @nodoc
-abstract class _$$SongAttributesImplCopyWith<$Res>
-    implements $SongAttributesCopyWith<$Res> {
-  factory _$$SongAttributesImplCopyWith(_$SongAttributesImpl value,
-          $Res Function(_$SongAttributesImpl) then) =
+abstract class _$$SongAttributesImplCopyWith<$Res> implements $SongAttributesCopyWith<$Res> {
+  factory _$$SongAttributesImplCopyWith(_$SongAttributesImpl value, $Res Function(_$SongAttributesImpl) then) =
       __$$SongAttributesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String? albumName,
-      String? artistUrl,
-      String artistName,
-      Artwork? artwork,
-      String? contentRating,
-      int durationInMillis,
-      String name,
-      PlayParams? playParams,
-      List<Map<String, dynamic>>? previews,
-      int? trackNumber,
-      String? url});
+  $Res call({
+    String? albumName,
+    String? artistUrl,
+    String artistName,
+    Artwork? artwork,
+    String? contentRating,
+    int durationInMillis,
+    String name,
+    PlayParams? playParams,
+    List<Map<String, dynamic>>? previews,
+    int? trackNumber,
+    String? url,
+  });
 
   @override
   $ArtworkCopyWith<$Res>? get artwork;
@@ -1934,12 +1965,10 @@ abstract class _$$SongAttributesImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$SongAttributesImplCopyWithImpl<$Res>
-    extends _$SongAttributesCopyWithImpl<$Res, _$SongAttributesImpl>
+class __$$SongAttributesImplCopyWithImpl<$Res> extends _$SongAttributesCopyWithImpl<$Res, _$SongAttributesImpl>
     implements _$$SongAttributesImplCopyWith<$Res> {
-  __$$SongAttributesImplCopyWithImpl(
-      _$SongAttributesImpl _value, $Res Function(_$SongAttributesImpl) _then)
-      : super(_value, _then);
+  __$$SongAttributesImplCopyWithImpl(_$SongAttributesImpl _value, $Res Function(_$SongAttributesImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of SongAttributes
   /// with the given fields replaced by the non-null parameter values.
@@ -1958,75 +1987,87 @@ class __$$SongAttributesImplCopyWithImpl<$Res>
     Object? trackNumber = freezed,
     Object? url = freezed,
   }) {
-    return _then(_$SongAttributesImpl(
-      albumName: freezed == albumName
-          ? _value.albumName
-          : albumName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artistUrl: freezed == artistUrl
-          ? _value.artistUrl
-          : artistUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      artistName: null == artistName
-          ? _value.artistName
-          : artistName // ignore: cast_nullable_to_non_nullable
-              as String,
-      artwork: freezed == artwork
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      contentRating: freezed == contentRating
-          ? _value.contentRating
-          : contentRating // ignore: cast_nullable_to_non_nullable
-              as String?,
-      durationInMillis: null == durationInMillis
-          ? _value.durationInMillis
-          : durationInMillis // ignore: cast_nullable_to_non_nullable
-              as int,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      playParams: freezed == playParams
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams?,
-      previews: freezed == previews
-          ? _value._previews
-          : previews // ignore: cast_nullable_to_non_nullable
-              as List<Map<String, dynamic>>?,
-      trackNumber: freezed == trackNumber
-          ? _value.trackNumber
-          : trackNumber // ignore: cast_nullable_to_non_nullable
-              as int?,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$SongAttributesImpl(
+        albumName:
+            freezed == albumName
+                ? _value.albumName
+                : albumName // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        artistUrl:
+            freezed == artistUrl
+                ? _value.artistUrl
+                : artistUrl // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        artistName:
+            null == artistName
+                ? _value.artistName
+                : artistName // ignore: cast_nullable_to_non_nullable
+                    as String,
+        artwork:
+            freezed == artwork
+                ? _value.artwork
+                : artwork // ignore: cast_nullable_to_non_nullable
+                    as Artwork?,
+        contentRating:
+            freezed == contentRating
+                ? _value.contentRating
+                : contentRating // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        durationInMillis:
+            null == durationInMillis
+                ? _value.durationInMillis
+                : durationInMillis // ignore: cast_nullable_to_non_nullable
+                    as int,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        playParams:
+            freezed == playParams
+                ? _value.playParams
+                : playParams // ignore: cast_nullable_to_non_nullable
+                    as PlayParams?,
+        previews:
+            freezed == previews
+                ? _value._previews
+                : previews // ignore: cast_nullable_to_non_nullable
+                    as List<Map<String, dynamic>>?,
+        trackNumber:
+            freezed == trackNumber
+                ? _value.trackNumber
+                : trackNumber // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        url:
+            freezed == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$SongAttributesImpl extends _SongAttributes {
-  const _$SongAttributesImpl(
-      {required this.albumName,
-      required this.artistUrl,
-      required this.artistName,
-      required this.artwork,
-      required this.contentRating,
-      required this.durationInMillis,
-      required this.name,
-      required this.playParams,
-      required final List<Map<String, dynamic>>? previews,
-      required this.trackNumber,
-      required this.url})
-      : _previews = previews,
-        super._();
+  const _$SongAttributesImpl({
+    required this.albumName,
+    required this.artistUrl,
+    required this.artistName,
+    required this.artwork,
+    required this.contentRating,
+    required this.durationInMillis,
+    required this.name,
+    required this.playParams,
+    required final List<Map<String, dynamic>>? previews,
+    required this.trackNumber,
+    required this.url,
+  }) : _previews = previews,
+       super._();
 
-  factory _$SongAttributesImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SongAttributesImplFromJson(json);
+  factory _$SongAttributesImpl.fromJson(Map<String, dynamic> json) => _$$SongAttributesImplFromJson(json);
 
   @override
   final String? albumName;
@@ -2069,41 +2110,35 @@ class _$SongAttributesImpl extends _SongAttributes {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SongAttributesImpl &&
-            (identical(other.albumName, albumName) ||
-                other.albumName == albumName) &&
-            (identical(other.artistUrl, artistUrl) ||
-                other.artistUrl == artistUrl) &&
-            (identical(other.artistName, artistName) ||
-                other.artistName == artistName) &&
+            (identical(other.albumName, albumName) || other.albumName == albumName) &&
+            (identical(other.artistUrl, artistUrl) || other.artistUrl == artistUrl) &&
+            (identical(other.artistName, artistName) || other.artistName == artistName) &&
             (identical(other.artwork, artwork) || other.artwork == artwork) &&
-            (identical(other.contentRating, contentRating) ||
-                other.contentRating == contentRating) &&
-            (identical(other.durationInMillis, durationInMillis) ||
-                other.durationInMillis == durationInMillis) &&
+            (identical(other.contentRating, contentRating) || other.contentRating == contentRating) &&
+            (identical(other.durationInMillis, durationInMillis) || other.durationInMillis == durationInMillis) &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.playParams, playParams) ||
-                other.playParams == playParams) &&
+            (identical(other.playParams, playParams) || other.playParams == playParams) &&
             const DeepCollectionEquality().equals(other._previews, _previews) &&
-            (identical(other.trackNumber, trackNumber) ||
-                other.trackNumber == trackNumber) &&
+            (identical(other.trackNumber, trackNumber) || other.trackNumber == trackNumber) &&
             (identical(other.url, url) || other.url == url));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      albumName,
-      artistUrl,
-      artistName,
-      artwork,
-      contentRating,
-      durationInMillis,
-      name,
-      playParams,
-      const DeepCollectionEquality().hash(_previews),
-      trackNumber,
-      url);
+    runtimeType,
+    albumName,
+    artistUrl,
+    artistName,
+    artwork,
+    contentRating,
+    durationInMillis,
+    name,
+    playParams,
+    const DeepCollectionEquality().hash(_previews),
+    trackNumber,
+    url,
+  );
 
   /// Create a copy of SongAttributes
   /// with the given fields replaced by the non-null parameter values.
@@ -2111,34 +2146,31 @@ class _$SongAttributesImpl extends _SongAttributes {
   @override
   @pragma('vm:prefer-inline')
   _$$SongAttributesImplCopyWith<_$SongAttributesImpl> get copyWith =>
-      __$$SongAttributesImplCopyWithImpl<_$SongAttributesImpl>(
-          this, _$identity);
+      __$$SongAttributesImplCopyWithImpl<_$SongAttributesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SongAttributesImplToJson(
-      this,
-    );
+    return _$$SongAttributesImplToJson(this);
   }
 }
 
 abstract class _SongAttributes extends SongAttributes {
-  const factory _SongAttributes(
-      {required final String? albumName,
-      required final String? artistUrl,
-      required final String artistName,
-      required final Artwork? artwork,
-      required final String? contentRating,
-      required final int durationInMillis,
-      required final String name,
-      required final PlayParams? playParams,
-      required final List<Map<String, dynamic>>? previews,
-      required final int? trackNumber,
-      required final String? url}) = _$SongAttributesImpl;
+  const factory _SongAttributes({
+    required final String? albumName,
+    required final String? artistUrl,
+    required final String artistName,
+    required final Artwork? artwork,
+    required final String? contentRating,
+    required final int durationInMillis,
+    required final String name,
+    required final PlayParams? playParams,
+    required final List<Map<String, dynamic>>? previews,
+    required final int? trackNumber,
+    required final String? url,
+  }) = _$SongAttributesImpl;
   const _SongAttributes._() : super._();
 
-  factory _SongAttributes.fromJson(Map<String, dynamic> json) =
-      _$SongAttributesImpl.fromJson;
+  factory _SongAttributes.fromJson(Map<String, dynamic> json) = _$SongAttributesImpl.fromJson;
 
   @override
   String? get albumName;
@@ -2167,8 +2199,7 @@ abstract class _SongAttributes extends SongAttributes {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SongAttributesImplCopyWith<_$SongAttributesImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SongAttributesImplCopyWith<_$SongAttributesImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 StationAttributes _$StationAttributesFromJson(Map<String, dynamic> json) {
@@ -2190,23 +2221,22 @@ mixin _$StationAttributes {
   /// Create a copy of StationAttributes
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $StationAttributesCopyWith<StationAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
+  $StationAttributesCopyWith<StationAttributes> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $StationAttributesCopyWith<$Res> {
-  factory $StationAttributesCopyWith(
-          StationAttributes value, $Res Function(StationAttributes) then) =
+  factory $StationAttributesCopyWith(StationAttributes value, $Res Function(StationAttributes) then) =
       _$StationAttributesCopyWithImpl<$Res, StationAttributes>;
   @useResult
-  $Res call(
-      {Artwork? artwork,
-      PlayParams? playParams,
-      int? durationInMillis,
-      String name,
-      String? url,
-      EditorialNotes? editorialNotes});
+  $Res call({
+    Artwork? artwork,
+    PlayParams? playParams,
+    int? durationInMillis,
+    String name,
+    String? url,
+    EditorialNotes? editorialNotes,
+  });
 
   $ArtworkCopyWith<$Res>? get artwork;
   $PlayParamsCopyWith<$Res>? get playParams;
@@ -2235,32 +2265,41 @@ class _$StationAttributesCopyWithImpl<$Res, $Val extends StationAttributes>
     Object? url = freezed,
     Object? editorialNotes = freezed,
   }) {
-    return _then(_value.copyWith(
-      artwork: freezed == artwork
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      playParams: freezed == playParams
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams?,
-      durationInMillis: freezed == durationInMillis
-          ? _value.durationInMillis
-          : durationInMillis // ignore: cast_nullable_to_non_nullable
-              as int?,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      editorialNotes: freezed == editorialNotes
-          ? _value.editorialNotes
-          : editorialNotes // ignore: cast_nullable_to_non_nullable
-              as EditorialNotes?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            artwork:
+                freezed == artwork
+                    ? _value.artwork
+                    : artwork // ignore: cast_nullable_to_non_nullable
+                        as Artwork?,
+            playParams:
+                freezed == playParams
+                    ? _value.playParams
+                    : playParams // ignore: cast_nullable_to_non_nullable
+                        as PlayParams?,
+            durationInMillis:
+                freezed == durationInMillis
+                    ? _value.durationInMillis
+                    : durationInMillis // ignore: cast_nullable_to_non_nullable
+                        as int?,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            url:
+                freezed == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            editorialNotes:
+                freezed == editorialNotes
+                    ? _value.editorialNotes
+                    : editorialNotes // ignore: cast_nullable_to_non_nullable
+                        as EditorialNotes?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of StationAttributes
@@ -2307,20 +2346,19 @@ class _$StationAttributesCopyWithImpl<$Res, $Val extends StationAttributes>
 }
 
 /// @nodoc
-abstract class _$$StationAttributesImplCopyWith<$Res>
-    implements $StationAttributesCopyWith<$Res> {
-  factory _$$StationAttributesImplCopyWith(_$StationAttributesImpl value,
-          $Res Function(_$StationAttributesImpl) then) =
+abstract class _$$StationAttributesImplCopyWith<$Res> implements $StationAttributesCopyWith<$Res> {
+  factory _$$StationAttributesImplCopyWith(_$StationAttributesImpl value, $Res Function(_$StationAttributesImpl) then) =
       __$$StationAttributesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {Artwork? artwork,
-      PlayParams? playParams,
-      int? durationInMillis,
-      String name,
-      String? url,
-      EditorialNotes? editorialNotes});
+  $Res call({
+    Artwork? artwork,
+    PlayParams? playParams,
+    int? durationInMillis,
+    String name,
+    String? url,
+    EditorialNotes? editorialNotes,
+  });
 
   @override
   $ArtworkCopyWith<$Res>? get artwork;
@@ -2331,12 +2369,10 @@ abstract class _$$StationAttributesImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$StationAttributesImplCopyWithImpl<$Res>
-    extends _$StationAttributesCopyWithImpl<$Res, _$StationAttributesImpl>
+class __$$StationAttributesImplCopyWithImpl<$Res> extends _$StationAttributesCopyWithImpl<$Res, _$StationAttributesImpl>
     implements _$$StationAttributesImplCopyWith<$Res> {
-  __$$StationAttributesImplCopyWithImpl(_$StationAttributesImpl _value,
-      $Res Function(_$StationAttributesImpl) _then)
-      : super(_value, _then);
+  __$$StationAttributesImplCopyWithImpl(_$StationAttributesImpl _value, $Res Function(_$StationAttributesImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of StationAttributes
   /// with the given fields replaced by the non-null parameter values.
@@ -2350,49 +2386,56 @@ class __$$StationAttributesImplCopyWithImpl<$Res>
     Object? url = freezed,
     Object? editorialNotes = freezed,
   }) {
-    return _then(_$StationAttributesImpl(
-      artwork: freezed == artwork
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      playParams: freezed == playParams
-          ? _value.playParams
-          : playParams // ignore: cast_nullable_to_non_nullable
-              as PlayParams?,
-      durationInMillis: freezed == durationInMillis
-          ? _value.durationInMillis
-          : durationInMillis // ignore: cast_nullable_to_non_nullable
-              as int?,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-      editorialNotes: freezed == editorialNotes
-          ? _value.editorialNotes
-          : editorialNotes // ignore: cast_nullable_to_non_nullable
-              as EditorialNotes?,
-    ));
+    return _then(
+      _$StationAttributesImpl(
+        artwork:
+            freezed == artwork
+                ? _value.artwork
+                : artwork // ignore: cast_nullable_to_non_nullable
+                    as Artwork?,
+        playParams:
+            freezed == playParams
+                ? _value.playParams
+                : playParams // ignore: cast_nullable_to_non_nullable
+                    as PlayParams?,
+        durationInMillis:
+            freezed == durationInMillis
+                ? _value.durationInMillis
+                : durationInMillis // ignore: cast_nullable_to_non_nullable
+                    as int?,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        url:
+            freezed == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        editorialNotes:
+            freezed == editorialNotes
+                ? _value.editorialNotes
+                : editorialNotes // ignore: cast_nullable_to_non_nullable
+                    as EditorialNotes?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$StationAttributesImpl extends _StationAttributes {
-  const _$StationAttributesImpl(
-      {required this.artwork,
-      required this.playParams,
-      required this.durationInMillis,
-      required this.name,
-      required this.url,
-      required this.editorialNotes})
-      : super._();
+  const _$StationAttributesImpl({
+    required this.artwork,
+    required this.playParams,
+    required this.durationInMillis,
+    required this.name,
+    required this.url,
+    required this.editorialNotes,
+  }) : super._();
 
-  factory _$StationAttributesImpl.fromJson(Map<String, dynamic> json) =>
-      _$$StationAttributesImplFromJson(json);
+  factory _$StationAttributesImpl.fromJson(Map<String, dynamic> json) => _$$StationAttributesImplFromJson(json);
 
   @override
   final Artwork? artwork;
@@ -2418,20 +2461,16 @@ class _$StationAttributesImpl extends _StationAttributes {
         (other.runtimeType == runtimeType &&
             other is _$StationAttributesImpl &&
             (identical(other.artwork, artwork) || other.artwork == artwork) &&
-            (identical(other.playParams, playParams) ||
-                other.playParams == playParams) &&
-            (identical(other.durationInMillis, durationInMillis) ||
-                other.durationInMillis == durationInMillis) &&
+            (identical(other.playParams, playParams) || other.playParams == playParams) &&
+            (identical(other.durationInMillis, durationInMillis) || other.durationInMillis == durationInMillis) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.url, url) || other.url == url) &&
-            (identical(other.editorialNotes, editorialNotes) ||
-                other.editorialNotes == editorialNotes));
+            (identical(other.editorialNotes, editorialNotes) || other.editorialNotes == editorialNotes));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, artwork, playParams,
-      durationInMillis, name, url, editorialNotes);
+  int get hashCode => Object.hash(runtimeType, artwork, playParams, durationInMillis, name, url, editorialNotes);
 
   /// Create a copy of StationAttributes
   /// with the given fields replaced by the non-null parameter values.
@@ -2439,29 +2478,26 @@ class _$StationAttributesImpl extends _StationAttributes {
   @override
   @pragma('vm:prefer-inline')
   _$$StationAttributesImplCopyWith<_$StationAttributesImpl> get copyWith =>
-      __$$StationAttributesImplCopyWithImpl<_$StationAttributesImpl>(
-          this, _$identity);
+      __$$StationAttributesImplCopyWithImpl<_$StationAttributesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$StationAttributesImplToJson(
-      this,
-    );
+    return _$$StationAttributesImplToJson(this);
   }
 }
 
 abstract class _StationAttributes extends StationAttributes {
-  const factory _StationAttributes(
-      {required final Artwork? artwork,
-      required final PlayParams? playParams,
-      required final int? durationInMillis,
-      required final String name,
-      required final String? url,
-      required final EditorialNotes? editorialNotes}) = _$StationAttributesImpl;
+  const factory _StationAttributes({
+    required final Artwork? artwork,
+    required final PlayParams? playParams,
+    required final int? durationInMillis,
+    required final String name,
+    required final String? url,
+    required final EditorialNotes? editorialNotes,
+  }) = _$StationAttributesImpl;
   const _StationAttributes._() : super._();
 
-  factory _StationAttributes.fromJson(Map<String, dynamic> json) =
-      _$StationAttributesImpl.fromJson;
+  factory _StationAttributes.fromJson(Map<String, dynamic> json) = _$StationAttributesImpl.fromJson;
 
   @override
   Artwork? get artwork;
@@ -2480,8 +2516,7 @@ abstract class _StationAttributes extends StationAttributes {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$StationAttributesImplCopyWith<_$StationAttributesImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$StationAttributesImplCopyWith<_$StationAttributesImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 CuratorAttributes _$CuratorAttributesFromJson(Map<String, dynamic> json) {
@@ -2500,14 +2535,12 @@ mixin _$CuratorAttributes {
   /// Create a copy of CuratorAttributes
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $CuratorAttributesCopyWith<CuratorAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
+  $CuratorAttributesCopyWith<CuratorAttributes> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CuratorAttributesCopyWith<$Res> {
-  factory $CuratorAttributesCopyWith(
-          CuratorAttributes value, $Res Function(CuratorAttributes) then) =
+  factory $CuratorAttributesCopyWith(CuratorAttributes value, $Res Function(CuratorAttributes) then) =
       _$CuratorAttributesCopyWithImpl<$Res, CuratorAttributes>;
   @useResult
   $Res call({Artwork? artwork, String name, String? url});
@@ -2529,25 +2562,27 @@ class _$CuratorAttributesCopyWithImpl<$Res, $Val extends CuratorAttributes>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? artwork = freezed,
-    Object? name = null,
-    Object? url = freezed,
-  }) {
-    return _then(_value.copyWith(
-      artwork: freezed == artwork
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+  $Res call({Object? artwork = freezed, Object? name = null, Object? url = freezed}) {
+    return _then(
+      _value.copyWith(
+            artwork:
+                freezed == artwork
+                    ? _value.artwork
+                    : artwork // ignore: cast_nullable_to_non_nullable
+                        as Artwork?,
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            url:
+                freezed == url
+                    ? _value.url
+                    : url // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of CuratorAttributes
@@ -2566,10 +2601,8 @@ class _$CuratorAttributesCopyWithImpl<$Res, $Val extends CuratorAttributes>
 }
 
 /// @nodoc
-abstract class _$$CuratorAttributesImplCopyWith<$Res>
-    implements $CuratorAttributesCopyWith<$Res> {
-  factory _$$CuratorAttributesImplCopyWith(_$CuratorAttributesImpl value,
-          $Res Function(_$CuratorAttributesImpl) then) =
+abstract class _$$CuratorAttributesImplCopyWith<$Res> implements $CuratorAttributesCopyWith<$Res> {
+  factory _$$CuratorAttributesImplCopyWith(_$CuratorAttributesImpl value, $Res Function(_$CuratorAttributesImpl) then) =
       __$$CuratorAttributesImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -2580,48 +2613,44 @@ abstract class _$$CuratorAttributesImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$CuratorAttributesImplCopyWithImpl<$Res>
-    extends _$CuratorAttributesCopyWithImpl<$Res, _$CuratorAttributesImpl>
+class __$$CuratorAttributesImplCopyWithImpl<$Res> extends _$CuratorAttributesCopyWithImpl<$Res, _$CuratorAttributesImpl>
     implements _$$CuratorAttributesImplCopyWith<$Res> {
-  __$$CuratorAttributesImplCopyWithImpl(_$CuratorAttributesImpl _value,
-      $Res Function(_$CuratorAttributesImpl) _then)
-      : super(_value, _then);
+  __$$CuratorAttributesImplCopyWithImpl(_$CuratorAttributesImpl _value, $Res Function(_$CuratorAttributesImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of CuratorAttributes
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? artwork = freezed,
-    Object? name = null,
-    Object? url = freezed,
-  }) {
-    return _then(_$CuratorAttributesImpl(
-      artwork: freezed == artwork
-          ? _value.artwork
-          : artwork // ignore: cast_nullable_to_non_nullable
-              as Artwork?,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      url: freezed == url
-          ? _value.url
-          : url // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+  $Res call({Object? artwork = freezed, Object? name = null, Object? url = freezed}) {
+    return _then(
+      _$CuratorAttributesImpl(
+        artwork:
+            freezed == artwork
+                ? _value.artwork
+                : artwork // ignore: cast_nullable_to_non_nullable
+                    as Artwork?,
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        url:
+            freezed == url
+                ? _value.url
+                : url // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$CuratorAttributesImpl extends _CuratorAttributes {
-  const _$CuratorAttributesImpl(
-      {required this.artwork, required this.name, required this.url})
-      : super._();
+  const _$CuratorAttributesImpl({required this.artwork, required this.name, required this.url}) : super._();
 
-  factory _$CuratorAttributesImpl.fromJson(Map<String, dynamic> json) =>
-      _$$CuratorAttributesImplFromJson(json);
+  factory _$CuratorAttributesImpl.fromJson(Map<String, dynamic> json) => _$$CuratorAttributesImplFromJson(json);
 
   @override
   final Artwork? artwork;
@@ -2655,26 +2684,23 @@ class _$CuratorAttributesImpl extends _CuratorAttributes {
   @override
   @pragma('vm:prefer-inline')
   _$$CuratorAttributesImplCopyWith<_$CuratorAttributesImpl> get copyWith =>
-      __$$CuratorAttributesImplCopyWithImpl<_$CuratorAttributesImpl>(
-          this, _$identity);
+      __$$CuratorAttributesImplCopyWithImpl<_$CuratorAttributesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CuratorAttributesImplToJson(
-      this,
-    );
+    return _$$CuratorAttributesImplToJson(this);
   }
 }
 
 abstract class _CuratorAttributes extends CuratorAttributes {
-  const factory _CuratorAttributes(
-      {required final Artwork? artwork,
-      required final String name,
-      required final String? url}) = _$CuratorAttributesImpl;
+  const factory _CuratorAttributes({
+    required final Artwork? artwork,
+    required final String name,
+    required final String? url,
+  }) = _$CuratorAttributesImpl;
   const _CuratorAttributes._() : super._();
 
-  factory _CuratorAttributes.fromJson(Map<String, dynamic> json) =
-      _$CuratorAttributesImpl.fromJson;
+  factory _CuratorAttributes.fromJson(Map<String, dynamic> json) = _$CuratorAttributesImpl.fromJson;
 
   @override
   Artwork? get artwork;
@@ -2687,8 +2713,7 @@ abstract class _CuratorAttributes extends CuratorAttributes {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$CuratorAttributesImplCopyWith<_$CuratorAttributesImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CuratorAttributesImplCopyWith<_$CuratorAttributesImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 GenreAttributes _$GenreAttributesFromJson(Map<String, dynamic> json) {
@@ -2705,22 +2730,19 @@ mixin _$GenreAttributes {
   /// Create a copy of GenreAttributes
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $GenreAttributesCopyWith<GenreAttributes> get copyWith =>
-      throw _privateConstructorUsedError;
+  $GenreAttributesCopyWith<GenreAttributes> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $GenreAttributesCopyWith<$Res> {
-  factory $GenreAttributesCopyWith(
-          GenreAttributes value, $Res Function(GenreAttributes) then) =
+  factory $GenreAttributesCopyWith(GenreAttributes value, $Res Function(GenreAttributes) then) =
       _$GenreAttributesCopyWithImpl<$Res, GenreAttributes>;
   @useResult
   $Res call({String name});
 }
 
 /// @nodoc
-class _$GenreAttributesCopyWithImpl<$Res, $Val extends GenreAttributes>
-    implements $GenreAttributesCopyWith<$Res> {
+class _$GenreAttributesCopyWithImpl<$Res, $Val extends GenreAttributes> implements $GenreAttributesCopyWith<$Res> {
   _$GenreAttributesCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -2732,23 +2754,23 @@ class _$GenreAttributesCopyWithImpl<$Res, $Val extends GenreAttributes>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-  }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? name = null}) {
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$GenreAttributesImplCopyWith<$Res>
-    implements $GenreAttributesCopyWith<$Res> {
-  factory _$$GenreAttributesImplCopyWith(_$GenreAttributesImpl value,
-          $Res Function(_$GenreAttributesImpl) then) =
+abstract class _$$GenreAttributesImplCopyWith<$Res> implements $GenreAttributesCopyWith<$Res> {
+  factory _$$GenreAttributesImplCopyWith(_$GenreAttributesImpl value, $Res Function(_$GenreAttributesImpl) then) =
       __$$GenreAttributesImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -2756,26 +2778,25 @@ abstract class _$$GenreAttributesImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$GenreAttributesImplCopyWithImpl<$Res>
-    extends _$GenreAttributesCopyWithImpl<$Res, _$GenreAttributesImpl>
+class __$$GenreAttributesImplCopyWithImpl<$Res> extends _$GenreAttributesCopyWithImpl<$Res, _$GenreAttributesImpl>
     implements _$$GenreAttributesImplCopyWith<$Res> {
-  __$$GenreAttributesImplCopyWithImpl(
-      _$GenreAttributesImpl _value, $Res Function(_$GenreAttributesImpl) _then)
-      : super(_value, _then);
+  __$$GenreAttributesImplCopyWithImpl(_$GenreAttributesImpl _value, $Res Function(_$GenreAttributesImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of GenreAttributes
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? name = null,
-  }) {
-    return _then(_$GenreAttributesImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? name = null}) {
+    return _then(
+      _$GenreAttributesImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -2784,8 +2805,7 @@ class __$$GenreAttributesImplCopyWithImpl<$Res>
 class _$GenreAttributesImpl extends _GenreAttributes {
   const _$GenreAttributesImpl({required this.name}) : super._();
 
-  factory _$GenreAttributesImpl.fromJson(Map<String, dynamic> json) =>
-      _$$GenreAttributesImplFromJson(json);
+  factory _$GenreAttributesImpl.fromJson(Map<String, dynamic> json) => _$$GenreAttributesImplFromJson(json);
 
   @override
   final String name;
@@ -2813,24 +2833,19 @@ class _$GenreAttributesImpl extends _GenreAttributes {
   @override
   @pragma('vm:prefer-inline')
   _$$GenreAttributesImplCopyWith<_$GenreAttributesImpl> get copyWith =>
-      __$$GenreAttributesImplCopyWithImpl<_$GenreAttributesImpl>(
-          this, _$identity);
+      __$$GenreAttributesImplCopyWithImpl<_$GenreAttributesImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$GenreAttributesImplToJson(
-      this,
-    );
+    return _$$GenreAttributesImplToJson(this);
   }
 }
 
 abstract class _GenreAttributes extends GenreAttributes {
-  const factory _GenreAttributes({required final String name}) =
-      _$GenreAttributesImpl;
+  const factory _GenreAttributes({required final String name}) = _$GenreAttributesImpl;
   const _GenreAttributes._() : super._();
 
-  factory _GenreAttributes.fromJson(Map<String, dynamic> json) =
-      _$GenreAttributesImpl.fromJson;
+  factory _GenreAttributes.fromJson(Map<String, dynamic> json) = _$GenreAttributesImpl.fromJson;
 
   @override
   String get name;
@@ -2839,6 +2854,5 @@ abstract class _GenreAttributes extends GenreAttributes {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GenreAttributesImplCopyWith<_$GenreAttributesImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$GenreAttributesImplCopyWith<_$GenreAttributesImpl> get copyWith => throw _privateConstructorUsedError;
 }

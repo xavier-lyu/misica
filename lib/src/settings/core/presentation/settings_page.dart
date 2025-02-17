@@ -14,11 +14,7 @@ class SettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          context.loc.settings,
-        ),
-      ),
+      appBar: AppBar(title: Text(context.loc.settings)),
       body: Padding(
         padding: const EdgeInsets.all(PADDING_M),
         child: ListView.separated(
@@ -30,9 +26,7 @@ class SettingsPage extends StatelessWidget {
 
             return Container();
           },
-          separatorBuilder: (context, index) => const Divider(
-            height: 5,
-          ),
+          separatorBuilder: (context, index) => const Divider(height: 5),
         ),
       ),
     );

@@ -10,16 +10,16 @@ class ShuffleButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final shuffleMode = ref.watch(shuffleModeNotifierProvider).valueOrNull ??
-        MusicPlayerShuffleMode.off;
+    final shuffleMode = ref.watch(shuffleModeNotifierProvider).valueOrNull ?? MusicPlayerShuffleMode.off;
     return IconButton(
       iconSize: iconSize,
       onPressed: () {
         ref.read(shuffleModeNotifierProvider.notifier).toggleShuffleMode();
       },
-      icon: shuffleMode == MusicPlayerShuffleMode.off
-          ? const Icon(Icons.shuffle_rounded)
-          : const Icon(Icons.shuffle_on_rounded),
+      icon:
+          shuffleMode == MusicPlayerShuffleMode.off
+              ? const Icon(Icons.shuffle_rounded)
+              : const Icon(Icons.shuffle_on_rounded),
     );
   }
 }

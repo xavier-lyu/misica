@@ -12,10 +12,10 @@ part of 'recommendation_dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
-RecommendationsResponse _$RecommendationsResponseFromJson(
-    Map<String, dynamic> json) {
+RecommendationsResponse _$RecommendationsResponseFromJson(Map<String, dynamic> json) {
   return _RecommendationsResponse.fromJson(json);
 }
 
@@ -30,22 +30,19 @@ mixin _$RecommendationsResponse {
   /// Create a copy of RecommendationsResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $RecommendationsResponseCopyWith<RecommendationsResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  $RecommendationsResponseCopyWith<RecommendationsResponse> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RecommendationsResponseCopyWith<$Res> {
-  factory $RecommendationsResponseCopyWith(RecommendationsResponse value,
-          $Res Function(RecommendationsResponse) then) =
+  factory $RecommendationsResponseCopyWith(RecommendationsResponse value, $Res Function(RecommendationsResponse) then) =
       _$RecommendationsResponseCopyWithImpl<$Res, RecommendationsResponse>;
   @useResult
   $Res call({String? next, List<RecommendationDTO> data});
 }
 
 /// @nodoc
-class _$RecommendationsResponseCopyWithImpl<$Res,
-        $Val extends RecommendationsResponse>
+class _$RecommendationsResponseCopyWithImpl<$Res, $Val extends RecommendationsResponse>
     implements $RecommendationsResponseCopyWith<$Res> {
   _$RecommendationsResponseCopyWithImpl(this._value, this._then);
 
@@ -58,30 +55,31 @@ class _$RecommendationsResponseCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? next = freezed,
-    Object? data = null,
-  }) {
-    return _then(_value.copyWith(
-      next: freezed == next
-          ? _value.next
-          : next // ignore: cast_nullable_to_non_nullable
-              as String?,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<RecommendationDTO>,
-    ) as $Val);
+  $Res call({Object? next = freezed, Object? data = null}) {
+    return _then(
+      _value.copyWith(
+            next:
+                freezed == next
+                    ? _value.next
+                    : next // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            data:
+                null == data
+                    ? _value.data
+                    : data // ignore: cast_nullable_to_non_nullable
+                        as List<RecommendationDTO>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$RecommendationsResponseImplCopyWith<$Res>
-    implements $RecommendationsResponseCopyWith<$Res> {
+abstract class _$$RecommendationsResponseImplCopyWith<$Res> implements $RecommendationsResponseCopyWith<$Res> {
   factory _$$RecommendationsResponseImplCopyWith(
-          _$RecommendationsResponseImpl value,
-          $Res Function(_$RecommendationsResponseImpl) then) =
-      __$$RecommendationsResponseImplCopyWithImpl<$Res>;
+    _$RecommendationsResponseImpl value,
+    $Res Function(_$RecommendationsResponseImpl) then,
+  ) = __$$RecommendationsResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? next, List<RecommendationDTO> data});
@@ -89,42 +87,41 @@ abstract class _$$RecommendationsResponseImplCopyWith<$Res>
 
 /// @nodoc
 class __$$RecommendationsResponseImplCopyWithImpl<$Res>
-    extends _$RecommendationsResponseCopyWithImpl<$Res,
-        _$RecommendationsResponseImpl>
+    extends _$RecommendationsResponseCopyWithImpl<$Res, _$RecommendationsResponseImpl>
     implements _$$RecommendationsResponseImplCopyWith<$Res> {
   __$$RecommendationsResponseImplCopyWithImpl(
-      _$RecommendationsResponseImpl _value,
-      $Res Function(_$RecommendationsResponseImpl) _then)
-      : super(_value, _then);
+    _$RecommendationsResponseImpl _value,
+    $Res Function(_$RecommendationsResponseImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of RecommendationsResponse
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? next = freezed,
-    Object? data = null,
-  }) {
-    return _then(_$RecommendationsResponseImpl(
-      next: freezed == next
-          ? _value.next
-          : next // ignore: cast_nullable_to_non_nullable
-              as String?,
-      data: null == data
-          ? _value._data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<RecommendationDTO>,
-    ));
+  $Res call({Object? next = freezed, Object? data = null}) {
+    return _then(
+      _$RecommendationsResponseImpl(
+        next:
+            freezed == next
+                ? _value.next
+                : next // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        data:
+            null == data
+                ? _value._data
+                : data // ignore: cast_nullable_to_non_nullable
+                    as List<RecommendationDTO>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$RecommendationsResponseImpl extends _RecommendationsResponse {
-  const _$RecommendationsResponseImpl(
-      {this.next, required final List<RecommendationDTO> data})
-      : _data = data,
-        super._();
+  const _$RecommendationsResponseImpl({this.next, required final List<RecommendationDTO> data})
+    : _data = data,
+      super._();
 
   factory _$RecommendationsResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$RecommendationsResponseImplFromJson(json);
@@ -155,34 +152,28 @@ class _$RecommendationsResponseImpl extends _RecommendationsResponse {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, next, const DeepCollectionEquality().hash(_data));
+  int get hashCode => Object.hash(runtimeType, next, const DeepCollectionEquality().hash(_data));
 
   /// Create a copy of RecommendationsResponse
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$RecommendationsResponseImplCopyWith<_$RecommendationsResponseImpl>
-      get copyWith => __$$RecommendationsResponseImplCopyWithImpl<
-          _$RecommendationsResponseImpl>(this, _$identity);
+  _$$RecommendationsResponseImplCopyWith<_$RecommendationsResponseImpl> get copyWith =>
+      __$$RecommendationsResponseImplCopyWithImpl<_$RecommendationsResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RecommendationsResponseImplToJson(
-      this,
-    );
+    return _$$RecommendationsResponseImplToJson(this);
   }
 }
 
 abstract class _RecommendationsResponse extends RecommendationsResponse {
-  const factory _RecommendationsResponse(
-          {final String? next, required final List<RecommendationDTO> data}) =
+  const factory _RecommendationsResponse({final String? next, required final List<RecommendationDTO> data}) =
       _$RecommendationsResponseImpl;
   const _RecommendationsResponse._() : super._();
 
-  factory _RecommendationsResponse.fromJson(Map<String, dynamic> json) =
-      _$RecommendationsResponseImpl.fromJson;
+  factory _RecommendationsResponse.fromJson(Map<String, dynamic> json) = _$RecommendationsResponseImpl.fromJson;
 
   @override
   String? get next;
@@ -193,8 +184,8 @@ abstract class _RecommendationsResponse extends RecommendationsResponse {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RecommendationsResponseImplCopyWith<_$RecommendationsResponseImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$RecommendationsResponseImplCopyWith<_$RecommendationsResponseImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 RecommendationDTO _$RecommendationDTOFromJson(Map<String, dynamic> json) {
@@ -205,8 +196,7 @@ RecommendationDTO _$RecommendationDTOFromJson(Map<String, dynamic> json) {
 mixin _$RecommendationDTO {
   String? get id => throw _privateConstructorUsedError;
   String get type => throw _privateConstructorUsedError;
-  RecommendationAttributesDTO get attributes =>
-      throw _privateConstructorUsedError;
+  RecommendationAttributesDTO get attributes => throw _privateConstructorUsedError;
   RelationshipsDTO get relationships => throw _privateConstructorUsedError;
 
   /// Serializes this RecommendationDTO to a JSON map.
@@ -215,21 +205,15 @@ mixin _$RecommendationDTO {
   /// Create a copy of RecommendationDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $RecommendationDTOCopyWith<RecommendationDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $RecommendationDTOCopyWith<RecommendationDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RecommendationDTOCopyWith<$Res> {
-  factory $RecommendationDTOCopyWith(
-          RecommendationDTO value, $Res Function(RecommendationDTO) then) =
+  factory $RecommendationDTOCopyWith(RecommendationDTO value, $Res Function(RecommendationDTO) then) =
       _$RecommendationDTOCopyWithImpl<$Res, RecommendationDTO>;
   @useResult
-  $Res call(
-      {String? id,
-      String type,
-      RecommendationAttributesDTO attributes,
-      RelationshipsDTO relationships});
+  $Res call({String? id, String type, RecommendationAttributesDTO attributes, RelationshipsDTO relationships});
 
   $RecommendationAttributesDTOCopyWith<$Res> get attributes;
   $RelationshipsDTOCopyWith<$Res> get relationships;
@@ -249,30 +233,32 @@ class _$RecommendationDTOCopyWithImpl<$Res, $Val extends RecommendationDTO>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = freezed,
-    Object? type = null,
-    Object? attributes = null,
-    Object? relationships = null,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      attributes: null == attributes
-          ? _value.attributes
-          : attributes // ignore: cast_nullable_to_non_nullable
-              as RecommendationAttributesDTO,
-      relationships: null == relationships
-          ? _value.relationships
-          : relationships // ignore: cast_nullable_to_non_nullable
-              as RelationshipsDTO,
-    ) as $Val);
+  $Res call({Object? id = freezed, Object? type = null, Object? attributes = null, Object? relationships = null}) {
+    return _then(
+      _value.copyWith(
+            id:
+                freezed == id
+                    ? _value.id
+                    : id // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            type:
+                null == type
+                    ? _value.type
+                    : type // ignore: cast_nullable_to_non_nullable
+                        as String,
+            attributes:
+                null == attributes
+                    ? _value.attributes
+                    : attributes // ignore: cast_nullable_to_non_nullable
+                        as RecommendationAttributesDTO,
+            relationships:
+                null == relationships
+                    ? _value.relationships
+                    : relationships // ignore: cast_nullable_to_non_nullable
+                        as RelationshipsDTO,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of RecommendationDTO
@@ -280,8 +266,7 @@ class _$RecommendationDTOCopyWithImpl<$Res, $Val extends RecommendationDTO>
   @override
   @pragma('vm:prefer-inline')
   $RecommendationAttributesDTOCopyWith<$Res> get attributes {
-    return $RecommendationAttributesDTOCopyWith<$Res>(_value.attributes,
-        (value) {
+    return $RecommendationAttributesDTOCopyWith<$Res>(_value.attributes, (value) {
       return _then(_value.copyWith(attributes: value) as $Val);
     });
   }
@@ -298,18 +283,12 @@ class _$RecommendationDTOCopyWithImpl<$Res, $Val extends RecommendationDTO>
 }
 
 /// @nodoc
-abstract class _$$RecommendationDTOImplCopyWith<$Res>
-    implements $RecommendationDTOCopyWith<$Res> {
-  factory _$$RecommendationDTOImplCopyWith(_$RecommendationDTOImpl value,
-          $Res Function(_$RecommendationDTOImpl) then) =
+abstract class _$$RecommendationDTOImplCopyWith<$Res> implements $RecommendationDTOCopyWith<$Res> {
+  factory _$$RecommendationDTOImplCopyWith(_$RecommendationDTOImpl value, $Res Function(_$RecommendationDTOImpl) then) =
       __$$RecommendationDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String? id,
-      String type,
-      RecommendationAttributesDTO attributes,
-      RelationshipsDTO relationships});
+  $Res call({String? id, String type, RecommendationAttributesDTO attributes, RelationshipsDTO relationships});
 
   @override
   $RecommendationAttributesDTOCopyWith<$Res> get attributes;
@@ -318,56 +297,50 @@ abstract class _$$RecommendationDTOImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$RecommendationDTOImplCopyWithImpl<$Res>
-    extends _$RecommendationDTOCopyWithImpl<$Res, _$RecommendationDTOImpl>
+class __$$RecommendationDTOImplCopyWithImpl<$Res> extends _$RecommendationDTOCopyWithImpl<$Res, _$RecommendationDTOImpl>
     implements _$$RecommendationDTOImplCopyWith<$Res> {
-  __$$RecommendationDTOImplCopyWithImpl(_$RecommendationDTOImpl _value,
-      $Res Function(_$RecommendationDTOImpl) _then)
-      : super(_value, _then);
+  __$$RecommendationDTOImplCopyWithImpl(_$RecommendationDTOImpl _value, $Res Function(_$RecommendationDTOImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of RecommendationDTO
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? id = freezed,
-    Object? type = null,
-    Object? attributes = null,
-    Object? relationships = null,
-  }) {
-    return _then(_$RecommendationDTOImpl(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      type: null == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String,
-      attributes: null == attributes
-          ? _value.attributes
-          : attributes // ignore: cast_nullable_to_non_nullable
-              as RecommendationAttributesDTO,
-      relationships: null == relationships
-          ? _value.relationships
-          : relationships // ignore: cast_nullable_to_non_nullable
-              as RelationshipsDTO,
-    ));
+  $Res call({Object? id = freezed, Object? type = null, Object? attributes = null, Object? relationships = null}) {
+    return _then(
+      _$RecommendationDTOImpl(
+        id:
+            freezed == id
+                ? _value.id
+                : id // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        type:
+            null == type
+                ? _value.type
+                : type // ignore: cast_nullable_to_non_nullable
+                    as String,
+        attributes:
+            null == attributes
+                ? _value.attributes
+                : attributes // ignore: cast_nullable_to_non_nullable
+                    as RecommendationAttributesDTO,
+        relationships:
+            null == relationships
+                ? _value.relationships
+                : relationships // ignore: cast_nullable_to_non_nullable
+                    as RelationshipsDTO,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$RecommendationDTOImpl extends _RecommendationDTO {
-  const _$RecommendationDTOImpl(
-      {this.id,
-      required this.type,
-      required this.attributes,
-      required this.relationships})
-      : super._();
+  const _$RecommendationDTOImpl({this.id, required this.type, required this.attributes, required this.relationships})
+    : super._();
 
-  factory _$RecommendationDTOImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RecommendationDTOImplFromJson(json);
+  factory _$RecommendationDTOImpl.fromJson(Map<String, dynamic> json) => _$$RecommendationDTOImplFromJson(json);
 
   @override
   final String? id;
@@ -390,16 +363,13 @@ class _$RecommendationDTOImpl extends _RecommendationDTO {
             other is _$RecommendationDTOImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.type, type) || other.type == type) &&
-            (identical(other.attributes, attributes) ||
-                other.attributes == attributes) &&
-            (identical(other.relationships, relationships) ||
-                other.relationships == relationships));
+            (identical(other.attributes, attributes) || other.attributes == attributes) &&
+            (identical(other.relationships, relationships) || other.relationships == relationships));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, type, attributes, relationships);
+  int get hashCode => Object.hash(runtimeType, id, type, attributes, relationships);
 
   /// Create a copy of RecommendationDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -407,27 +377,24 @@ class _$RecommendationDTOImpl extends _RecommendationDTO {
   @override
   @pragma('vm:prefer-inline')
   _$$RecommendationDTOImplCopyWith<_$RecommendationDTOImpl> get copyWith =>
-      __$$RecommendationDTOImplCopyWithImpl<_$RecommendationDTOImpl>(
-          this, _$identity);
+      __$$RecommendationDTOImplCopyWithImpl<_$RecommendationDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RecommendationDTOImplToJson(
-      this,
-    );
+    return _$$RecommendationDTOImplToJson(this);
   }
 }
 
 abstract class _RecommendationDTO extends RecommendationDTO {
-  const factory _RecommendationDTO(
-      {final String? id,
-      required final String type,
-      required final RecommendationAttributesDTO attributes,
-      required final RelationshipsDTO relationships}) = _$RecommendationDTOImpl;
+  const factory _RecommendationDTO({
+    final String? id,
+    required final String type,
+    required final RecommendationAttributesDTO attributes,
+    required final RelationshipsDTO relationships,
+  }) = _$RecommendationDTOImpl;
   const _RecommendationDTO._() : super._();
 
-  factory _RecommendationDTO.fromJson(Map<String, dynamic> json) =
-      _$RecommendationDTOImpl.fromJson;
+  factory _RecommendationDTO.fromJson(Map<String, dynamic> json) = _$RecommendationDTOImpl.fromJson;
 
   @override
   String? get id;
@@ -442,8 +409,7 @@ abstract class _RecommendationDTO extends RecommendationDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RecommendationDTOImplCopyWith<_$RecommendationDTOImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$RecommendationDTOImplCopyWith<_$RecommendationDTOImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 RelationshipsDTO _$RelationshipsDTOFromJson(Map<String, dynamic> json) {
@@ -453,8 +419,7 @@ RelationshipsDTO _$RelationshipsDTOFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$RelationshipsDTO {
   RelationshipContentsDTO? get contents => throw _privateConstructorUsedError;
-  RelationshipRecommendationsDTO? get recommendations =>
-      throw _privateConstructorUsedError;
+  RelationshipRecommendationsDTO? get recommendations => throw _privateConstructorUsedError;
 
   /// Serializes this RelationshipsDTO to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -462,27 +427,22 @@ mixin _$RelationshipsDTO {
   /// Create a copy of RelationshipsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $RelationshipsDTOCopyWith<RelationshipsDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $RelationshipsDTOCopyWith<RelationshipsDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RelationshipsDTOCopyWith<$Res> {
-  factory $RelationshipsDTOCopyWith(
-          RelationshipsDTO value, $Res Function(RelationshipsDTO) then) =
+  factory $RelationshipsDTOCopyWith(RelationshipsDTO value, $Res Function(RelationshipsDTO) then) =
       _$RelationshipsDTOCopyWithImpl<$Res, RelationshipsDTO>;
   @useResult
-  $Res call(
-      {RelationshipContentsDTO? contents,
-      RelationshipRecommendationsDTO? recommendations});
+  $Res call({RelationshipContentsDTO? contents, RelationshipRecommendationsDTO? recommendations});
 
   $RelationshipContentsDTOCopyWith<$Res>? get contents;
   $RelationshipRecommendationsDTOCopyWith<$Res>? get recommendations;
 }
 
 /// @nodoc
-class _$RelationshipsDTOCopyWithImpl<$Res, $Val extends RelationshipsDTO>
-    implements $RelationshipsDTOCopyWith<$Res> {
+class _$RelationshipsDTOCopyWithImpl<$Res, $Val extends RelationshipsDTO> implements $RelationshipsDTOCopyWith<$Res> {
   _$RelationshipsDTOCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -494,20 +454,22 @@ class _$RelationshipsDTOCopyWithImpl<$Res, $Val extends RelationshipsDTO>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? contents = freezed,
-    Object? recommendations = freezed,
-  }) {
-    return _then(_value.copyWith(
-      contents: freezed == contents
-          ? _value.contents
-          : contents // ignore: cast_nullable_to_non_nullable
-              as RelationshipContentsDTO?,
-      recommendations: freezed == recommendations
-          ? _value.recommendations
-          : recommendations // ignore: cast_nullable_to_non_nullable
-              as RelationshipRecommendationsDTO?,
-    ) as $Val);
+  $Res call({Object? contents = freezed, Object? recommendations = freezed}) {
+    return _then(
+      _value.copyWith(
+            contents:
+                freezed == contents
+                    ? _value.contents
+                    : contents // ignore: cast_nullable_to_non_nullable
+                        as RelationshipContentsDTO?,
+            recommendations:
+                freezed == recommendations
+                    ? _value.recommendations
+                    : recommendations // ignore: cast_nullable_to_non_nullable
+                        as RelationshipRecommendationsDTO?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of RelationshipsDTO
@@ -533,24 +495,19 @@ class _$RelationshipsDTOCopyWithImpl<$Res, $Val extends RelationshipsDTO>
       return null;
     }
 
-    return $RelationshipRecommendationsDTOCopyWith<$Res>(
-        _value.recommendations!, (value) {
+    return $RelationshipRecommendationsDTOCopyWith<$Res>(_value.recommendations!, (value) {
       return _then(_value.copyWith(recommendations: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$RelationshipsDTOImplCopyWith<$Res>
-    implements $RelationshipsDTOCopyWith<$Res> {
-  factory _$$RelationshipsDTOImplCopyWith(_$RelationshipsDTOImpl value,
-          $Res Function(_$RelationshipsDTOImpl) then) =
+abstract class _$$RelationshipsDTOImplCopyWith<$Res> implements $RelationshipsDTOCopyWith<$Res> {
+  factory _$$RelationshipsDTOImplCopyWith(_$RelationshipsDTOImpl value, $Res Function(_$RelationshipsDTOImpl) then) =
       __$$RelationshipsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {RelationshipContentsDTO? contents,
-      RelationshipRecommendationsDTO? recommendations});
+  $Res call({RelationshipContentsDTO? contents, RelationshipRecommendationsDTO? recommendations});
 
   @override
   $RelationshipContentsDTOCopyWith<$Res>? get contents;
@@ -559,42 +516,39 @@ abstract class _$$RelationshipsDTOImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$RelationshipsDTOImplCopyWithImpl<$Res>
-    extends _$RelationshipsDTOCopyWithImpl<$Res, _$RelationshipsDTOImpl>
+class __$$RelationshipsDTOImplCopyWithImpl<$Res> extends _$RelationshipsDTOCopyWithImpl<$Res, _$RelationshipsDTOImpl>
     implements _$$RelationshipsDTOImplCopyWith<$Res> {
-  __$$RelationshipsDTOImplCopyWithImpl(_$RelationshipsDTOImpl _value,
-      $Res Function(_$RelationshipsDTOImpl) _then)
-      : super(_value, _then);
+  __$$RelationshipsDTOImplCopyWithImpl(_$RelationshipsDTOImpl _value, $Res Function(_$RelationshipsDTOImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of RelationshipsDTO
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? contents = freezed,
-    Object? recommendations = freezed,
-  }) {
-    return _then(_$RelationshipsDTOImpl(
-      contents: freezed == contents
-          ? _value.contents
-          : contents // ignore: cast_nullable_to_non_nullable
-              as RelationshipContentsDTO?,
-      recommendations: freezed == recommendations
-          ? _value.recommendations
-          : recommendations // ignore: cast_nullable_to_non_nullable
-              as RelationshipRecommendationsDTO?,
-    ));
+  $Res call({Object? contents = freezed, Object? recommendations = freezed}) {
+    return _then(
+      _$RelationshipsDTOImpl(
+        contents:
+            freezed == contents
+                ? _value.contents
+                : contents // ignore: cast_nullable_to_non_nullable
+                    as RelationshipContentsDTO?,
+        recommendations:
+            freezed == recommendations
+                ? _value.recommendations
+                : recommendations // ignore: cast_nullable_to_non_nullable
+                    as RelationshipRecommendationsDTO?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$RelationshipsDTOImpl extends _RelationshipsDTO {
-  const _$RelationshipsDTOImpl({this.contents, this.recommendations})
-      : super._();
+  const _$RelationshipsDTOImpl({this.contents, this.recommendations}) : super._();
 
-  factory _$RelationshipsDTOImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RelationshipsDTOImplFromJson(json);
+  factory _$RelationshipsDTOImpl.fromJson(Map<String, dynamic> json) => _$$RelationshipsDTOImplFromJson(json);
 
   @override
   final RelationshipContentsDTO? contents;
@@ -611,10 +565,8 @@ class _$RelationshipsDTOImpl extends _RelationshipsDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RelationshipsDTOImpl &&
-            (identical(other.contents, contents) ||
-                other.contents == contents) &&
-            (identical(other.recommendations, recommendations) ||
-                other.recommendations == recommendations));
+            (identical(other.contents, contents) || other.contents == contents) &&
+            (identical(other.recommendations, recommendations) || other.recommendations == recommendations));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -627,26 +579,22 @@ class _$RelationshipsDTOImpl extends _RelationshipsDTO {
   @override
   @pragma('vm:prefer-inline')
   _$$RelationshipsDTOImplCopyWith<_$RelationshipsDTOImpl> get copyWith =>
-      __$$RelationshipsDTOImplCopyWithImpl<_$RelationshipsDTOImpl>(
-          this, _$identity);
+      __$$RelationshipsDTOImplCopyWithImpl<_$RelationshipsDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RelationshipsDTOImplToJson(
-      this,
-    );
+    return _$$RelationshipsDTOImplToJson(this);
   }
 }
 
 abstract class _RelationshipsDTO extends RelationshipsDTO {
-  const factory _RelationshipsDTO(
-          {final RelationshipContentsDTO? contents,
-          final RelationshipRecommendationsDTO? recommendations}) =
-      _$RelationshipsDTOImpl;
+  const factory _RelationshipsDTO({
+    final RelationshipContentsDTO? contents,
+    final RelationshipRecommendationsDTO? recommendations,
+  }) = _$RelationshipsDTOImpl;
   const _RelationshipsDTO._() : super._();
 
-  factory _RelationshipsDTO.fromJson(Map<String, dynamic> json) =
-      _$RelationshipsDTOImpl.fromJson;
+  factory _RelationshipsDTO.fromJson(Map<String, dynamic> json) = _$RelationshipsDTOImpl.fromJson;
 
   @override
   RelationshipContentsDTO? get contents;
@@ -657,12 +605,10 @@ abstract class _RelationshipsDTO extends RelationshipsDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RelationshipsDTOImplCopyWith<_$RelationshipsDTOImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$RelationshipsDTOImplCopyWith<_$RelationshipsDTOImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
-RelationshipRecommendationsDTO _$RelationshipRecommendationsDTOFromJson(
-    Map<String, dynamic> json) {
+RelationshipRecommendationsDTO _$RelationshipRecommendationsDTOFromJson(Map<String, dynamic> json) {
   return _RelationshipRecommendationsDTO.fromJson(json);
 }
 
@@ -677,24 +623,22 @@ mixin _$RelationshipRecommendationsDTO {
   /// Create a copy of RelationshipRecommendationsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $RelationshipRecommendationsDTOCopyWith<RelationshipRecommendationsDTO>
-      get copyWith => throw _privateConstructorUsedError;
+  $RelationshipRecommendationsDTOCopyWith<RelationshipRecommendationsDTO> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RelationshipRecommendationsDTOCopyWith<$Res> {
   factory $RelationshipRecommendationsDTOCopyWith(
-          RelationshipRecommendationsDTO value,
-          $Res Function(RelationshipRecommendationsDTO) then) =
-      _$RelationshipRecommendationsDTOCopyWithImpl<$Res,
-          RelationshipRecommendationsDTO>;
+    RelationshipRecommendationsDTO value,
+    $Res Function(RelationshipRecommendationsDTO) then,
+  ) = _$RelationshipRecommendationsDTOCopyWithImpl<$Res, RelationshipRecommendationsDTO>;
   @useResult
   $Res call({String? href, List<RecommendationDTO> data});
 }
 
 /// @nodoc
-class _$RelationshipRecommendationsDTOCopyWithImpl<$Res,
-        $Val extends RelationshipRecommendationsDTO>
+class _$RelationshipRecommendationsDTOCopyWithImpl<$Res, $Val extends RelationshipRecommendationsDTO>
     implements $RelationshipRecommendationsDTOCopyWith<$Res> {
   _$RelationshipRecommendationsDTOCopyWithImpl(this._value, this._then);
 
@@ -707,20 +651,22 @@ class _$RelationshipRecommendationsDTOCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? href = freezed,
-    Object? data = null,
-  }) {
-    return _then(_value.copyWith(
-      href: freezed == href
-          ? _value.href
-          : href // ignore: cast_nullable_to_non_nullable
-              as String?,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<RecommendationDTO>,
-    ) as $Val);
+  $Res call({Object? href = freezed, Object? data = null}) {
+    return _then(
+      _value.copyWith(
+            href:
+                freezed == href
+                    ? _value.href
+                    : href // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            data:
+                null == data
+                    ? _value.data
+                    : data // ignore: cast_nullable_to_non_nullable
+                        as List<RecommendationDTO>,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -728,9 +674,9 @@ class _$RelationshipRecommendationsDTOCopyWithImpl<$Res,
 abstract class _$$RelationshipRecommendationsDTOImplCopyWith<$Res>
     implements $RelationshipRecommendationsDTOCopyWith<$Res> {
   factory _$$RelationshipRecommendationsDTOImplCopyWith(
-          _$RelationshipRecommendationsDTOImpl value,
-          $Res Function(_$RelationshipRecommendationsDTOImpl) then) =
-      __$$RelationshipRecommendationsDTOImplCopyWithImpl<$Res>;
+    _$RelationshipRecommendationsDTOImpl value,
+    $Res Function(_$RelationshipRecommendationsDTOImpl) then,
+  ) = __$$RelationshipRecommendationsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? href, List<RecommendationDTO> data});
@@ -738,46 +684,43 @@ abstract class _$$RelationshipRecommendationsDTOImplCopyWith<$Res>
 
 /// @nodoc
 class __$$RelationshipRecommendationsDTOImplCopyWithImpl<$Res>
-    extends _$RelationshipRecommendationsDTOCopyWithImpl<$Res,
-        _$RelationshipRecommendationsDTOImpl>
+    extends _$RelationshipRecommendationsDTOCopyWithImpl<$Res, _$RelationshipRecommendationsDTOImpl>
     implements _$$RelationshipRecommendationsDTOImplCopyWith<$Res> {
   __$$RelationshipRecommendationsDTOImplCopyWithImpl(
-      _$RelationshipRecommendationsDTOImpl _value,
-      $Res Function(_$RelationshipRecommendationsDTOImpl) _then)
-      : super(_value, _then);
+    _$RelationshipRecommendationsDTOImpl _value,
+    $Res Function(_$RelationshipRecommendationsDTOImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of RelationshipRecommendationsDTO
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? href = freezed,
-    Object? data = null,
-  }) {
-    return _then(_$RelationshipRecommendationsDTOImpl(
-      href: freezed == href
-          ? _value.href
-          : href // ignore: cast_nullable_to_non_nullable
-              as String?,
-      data: null == data
-          ? _value._data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<RecommendationDTO>,
-    ));
+  $Res call({Object? href = freezed, Object? data = null}) {
+    return _then(
+      _$RelationshipRecommendationsDTOImpl(
+        href:
+            freezed == href
+                ? _value.href
+                : href // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        data:
+            null == data
+                ? _value._data
+                : data // ignore: cast_nullable_to_non_nullable
+                    as List<RecommendationDTO>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$RelationshipRecommendationsDTOImpl
-    extends _RelationshipRecommendationsDTO {
-  const _$RelationshipRecommendationsDTOImpl(
-      {this.href, required final List<RecommendationDTO> data})
-      : _data = data,
-        super._();
+class _$RelationshipRecommendationsDTOImpl extends _RelationshipRecommendationsDTO {
+  const _$RelationshipRecommendationsDTOImpl({this.href, required final List<RecommendationDTO> data})
+    : _data = data,
+      super._();
 
-  factory _$RelationshipRecommendationsDTOImpl.fromJson(
-          Map<String, dynamic> json) =>
+  factory _$RelationshipRecommendationsDTOImpl.fromJson(Map<String, dynamic> json) =>
       _$$RelationshipRecommendationsDTOImplFromJson(json);
 
   @override
@@ -806,31 +749,24 @@ class _$RelationshipRecommendationsDTOImpl
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, href, const DeepCollectionEquality().hash(_data));
+  int get hashCode => Object.hash(runtimeType, href, const DeepCollectionEquality().hash(_data));
 
   /// Create a copy of RelationshipRecommendationsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$RelationshipRecommendationsDTOImplCopyWith<
-          _$RelationshipRecommendationsDTOImpl>
-      get copyWith => __$$RelationshipRecommendationsDTOImplCopyWithImpl<
-          _$RelationshipRecommendationsDTOImpl>(this, _$identity);
+  _$$RelationshipRecommendationsDTOImplCopyWith<_$RelationshipRecommendationsDTOImpl> get copyWith =>
+      __$$RelationshipRecommendationsDTOImplCopyWithImpl<_$RelationshipRecommendationsDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RelationshipRecommendationsDTOImplToJson(
-      this,
-    );
+    return _$$RelationshipRecommendationsDTOImplToJson(this);
   }
 }
 
-abstract class _RelationshipRecommendationsDTO
-    extends RelationshipRecommendationsDTO {
-  const factory _RelationshipRecommendationsDTO(
-          {final String? href, required final List<RecommendationDTO> data}) =
+abstract class _RelationshipRecommendationsDTO extends RelationshipRecommendationsDTO {
+  const factory _RelationshipRecommendationsDTO({final String? href, required final List<RecommendationDTO> data}) =
       _$RelationshipRecommendationsDTOImpl;
   const _RelationshipRecommendationsDTO._() : super._();
 
@@ -846,13 +782,11 @@ abstract class _RelationshipRecommendationsDTO
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RelationshipRecommendationsDTOImplCopyWith<
-          _$RelationshipRecommendationsDTOImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$RelationshipRecommendationsDTOImplCopyWith<_$RelationshipRecommendationsDTOImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-RelationshipContentsDTO _$RelationshipContentsDTOFromJson(
-    Map<String, dynamic> json) {
+RelationshipContentsDTO _$RelationshipContentsDTOFromJson(Map<String, dynamic> json) {
   return _RelationshipContentsDTO.fromJson(json);
 }
 
@@ -868,22 +802,19 @@ mixin _$RelationshipContentsDTO {
   /// Create a copy of RelationshipContentsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $RelationshipContentsDTOCopyWith<RelationshipContentsDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $RelationshipContentsDTOCopyWith<RelationshipContentsDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RelationshipContentsDTOCopyWith<$Res> {
-  factory $RelationshipContentsDTOCopyWith(RelationshipContentsDTO value,
-          $Res Function(RelationshipContentsDTO) then) =
+  factory $RelationshipContentsDTOCopyWith(RelationshipContentsDTO value, $Res Function(RelationshipContentsDTO) then) =
       _$RelationshipContentsDTOCopyWithImpl<$Res, RelationshipContentsDTO>;
   @useResult
   $Res call({String? href, @ResourceDTOConverter() List<ResourceDTO> data});
 }
 
 /// @nodoc
-class _$RelationshipContentsDTOCopyWithImpl<$Res,
-        $Val extends RelationshipContentsDTO>
+class _$RelationshipContentsDTOCopyWithImpl<$Res, $Val extends RelationshipContentsDTO>
     implements $RelationshipContentsDTOCopyWith<$Res> {
   _$RelationshipContentsDTOCopyWithImpl(this._value, this._then);
 
@@ -896,30 +827,31 @@ class _$RelationshipContentsDTOCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? href = freezed,
-    Object? data = null,
-  }) {
-    return _then(_value.copyWith(
-      href: freezed == href
-          ? _value.href
-          : href // ignore: cast_nullable_to_non_nullable
-              as String?,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<ResourceDTO>,
-    ) as $Val);
+  $Res call({Object? href = freezed, Object? data = null}) {
+    return _then(
+      _value.copyWith(
+            href:
+                freezed == href
+                    ? _value.href
+                    : href // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            data:
+                null == data
+                    ? _value.data
+                    : data // ignore: cast_nullable_to_non_nullable
+                        as List<ResourceDTO>,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$RelationshipContentsDTOImplCopyWith<$Res>
-    implements $RelationshipContentsDTOCopyWith<$Res> {
+abstract class _$$RelationshipContentsDTOImplCopyWith<$Res> implements $RelationshipContentsDTOCopyWith<$Res> {
   factory _$$RelationshipContentsDTOImplCopyWith(
-          _$RelationshipContentsDTOImpl value,
-          $Res Function(_$RelationshipContentsDTOImpl) then) =
-      __$$RelationshipContentsDTOImplCopyWithImpl<$Res>;
+    _$RelationshipContentsDTOImpl value,
+    $Res Function(_$RelationshipContentsDTOImpl) then,
+  ) = __$$RelationshipContentsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? href, @ResourceDTOConverter() List<ResourceDTO> data});
@@ -927,43 +859,41 @@ abstract class _$$RelationshipContentsDTOImplCopyWith<$Res>
 
 /// @nodoc
 class __$$RelationshipContentsDTOImplCopyWithImpl<$Res>
-    extends _$RelationshipContentsDTOCopyWithImpl<$Res,
-        _$RelationshipContentsDTOImpl>
+    extends _$RelationshipContentsDTOCopyWithImpl<$Res, _$RelationshipContentsDTOImpl>
     implements _$$RelationshipContentsDTOImplCopyWith<$Res> {
   __$$RelationshipContentsDTOImplCopyWithImpl(
-      _$RelationshipContentsDTOImpl _value,
-      $Res Function(_$RelationshipContentsDTOImpl) _then)
-      : super(_value, _then);
+    _$RelationshipContentsDTOImpl _value,
+    $Res Function(_$RelationshipContentsDTOImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of RelationshipContentsDTO
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? href = freezed,
-    Object? data = null,
-  }) {
-    return _then(_$RelationshipContentsDTOImpl(
-      href: freezed == href
-          ? _value.href
-          : href // ignore: cast_nullable_to_non_nullable
-              as String?,
-      data: null == data
-          ? _value._data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<ResourceDTO>,
-    ));
+  $Res call({Object? href = freezed, Object? data = null}) {
+    return _then(
+      _$RelationshipContentsDTOImpl(
+        href:
+            freezed == href
+                ? _value.href
+                : href // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        data:
+            null == data
+                ? _value._data
+                : data // ignore: cast_nullable_to_non_nullable
+                    as List<ResourceDTO>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$RelationshipContentsDTOImpl extends _RelationshipContentsDTO {
-  const _$RelationshipContentsDTOImpl(
-      {this.href,
-      @ResourceDTOConverter() required final List<ResourceDTO> data})
-      : _data = data,
-        super._();
+  const _$RelationshipContentsDTOImpl({this.href, @ResourceDTOConverter() required final List<ResourceDTO> data})
+    : _data = data,
+      super._();
 
   factory _$RelationshipContentsDTOImpl.fromJson(Map<String, dynamic> json) =>
       _$$RelationshipContentsDTOImplFromJson(json);
@@ -995,35 +925,30 @@ class _$RelationshipContentsDTOImpl extends _RelationshipContentsDTO {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, href, const DeepCollectionEquality().hash(_data));
+  int get hashCode => Object.hash(runtimeType, href, const DeepCollectionEquality().hash(_data));
 
   /// Create a copy of RelationshipContentsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$RelationshipContentsDTOImplCopyWith<_$RelationshipContentsDTOImpl>
-      get copyWith => __$$RelationshipContentsDTOImplCopyWithImpl<
-          _$RelationshipContentsDTOImpl>(this, _$identity);
+  _$$RelationshipContentsDTOImplCopyWith<_$RelationshipContentsDTOImpl> get copyWith =>
+      __$$RelationshipContentsDTOImplCopyWithImpl<_$RelationshipContentsDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RelationshipContentsDTOImplToJson(
-      this,
-    );
+    return _$$RelationshipContentsDTOImplToJson(this);
   }
 }
 
 abstract class _RelationshipContentsDTO extends RelationshipContentsDTO {
-  const factory _RelationshipContentsDTO(
-          {final String? href,
-          @ResourceDTOConverter() required final List<ResourceDTO> data}) =
-      _$RelationshipContentsDTOImpl;
+  const factory _RelationshipContentsDTO({
+    final String? href,
+    @ResourceDTOConverter() required final List<ResourceDTO> data,
+  }) = _$RelationshipContentsDTOImpl;
   const _RelationshipContentsDTO._() : super._();
 
-  factory _RelationshipContentsDTO.fromJson(Map<String, dynamic> json) =
-      _$RelationshipContentsDTOImpl.fromJson;
+  factory _RelationshipContentsDTO.fromJson(Map<String, dynamic> json) = _$RelationshipContentsDTOImpl.fromJson;
 
   @override
   String? get href;
@@ -1035,12 +960,11 @@ abstract class _RelationshipContentsDTO extends RelationshipContentsDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RelationshipContentsDTOImplCopyWith<_$RelationshipContentsDTOImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$RelationshipContentsDTOImplCopyWith<_$RelationshipContentsDTOImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-RecommendationAttributesDTO _$RecommendationAttributesDTOFromJson(
-    Map<String, dynamic> json) {
+RecommendationAttributesDTO _$RecommendationAttributesDTOFromJson(Map<String, dynamic> json) {
   return _RecommendationAttributesDTO.fromJson(json);
 }
 
@@ -1058,31 +982,29 @@ mixin _$RecommendationAttributesDTO {
   /// Create a copy of RecommendationAttributesDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $RecommendationAttributesDTOCopyWith<RecommendationAttributesDTO>
-      get copyWith => throw _privateConstructorUsedError;
+  $RecommendationAttributesDTOCopyWith<RecommendationAttributesDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RecommendationAttributesDTOCopyWith<$Res> {
   factory $RecommendationAttributesDTOCopyWith(
-          RecommendationAttributesDTO value,
-          $Res Function(RecommendationAttributesDTO) then) =
-      _$RecommendationAttributesDTOCopyWithImpl<$Res,
-          RecommendationAttributesDTO>;
+    RecommendationAttributesDTO value,
+    $Res Function(RecommendationAttributesDTO) then,
+  ) = _$RecommendationAttributesDTOCopyWithImpl<$Res, RecommendationAttributesDTO>;
   @useResult
-  $Res call(
-      {bool? isGroupRecommendation,
-      String? nextUpdateDate,
-      List<String>? resourceTypes,
-      ResourceTitleDTO title,
-      String? kind});
+  $Res call({
+    bool? isGroupRecommendation,
+    String? nextUpdateDate,
+    List<String>? resourceTypes,
+    ResourceTitleDTO title,
+    String? kind,
+  });
 
   $ResourceTitleDTOCopyWith<$Res> get title;
 }
 
 /// @nodoc
-class _$RecommendationAttributesDTOCopyWithImpl<$Res,
-        $Val extends RecommendationAttributesDTO>
+class _$RecommendationAttributesDTOCopyWithImpl<$Res, $Val extends RecommendationAttributesDTO>
     implements $RecommendationAttributesDTOCopyWith<$Res> {
   _$RecommendationAttributesDTOCopyWithImpl(this._value, this._then);
 
@@ -1102,28 +1024,36 @@ class _$RecommendationAttributesDTOCopyWithImpl<$Res,
     Object? title = null,
     Object? kind = freezed,
   }) {
-    return _then(_value.copyWith(
-      isGroupRecommendation: freezed == isGroupRecommendation
-          ? _value.isGroupRecommendation
-          : isGroupRecommendation // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      nextUpdateDate: freezed == nextUpdateDate
-          ? _value.nextUpdateDate
-          : nextUpdateDate // ignore: cast_nullable_to_non_nullable
-              as String?,
-      resourceTypes: freezed == resourceTypes
-          ? _value.resourceTypes
-          : resourceTypes // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as ResourceTitleDTO,
-      kind: freezed == kind
-          ? _value.kind
-          : kind // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            isGroupRecommendation:
+                freezed == isGroupRecommendation
+                    ? _value.isGroupRecommendation
+                    : isGroupRecommendation // ignore: cast_nullable_to_non_nullable
+                        as bool?,
+            nextUpdateDate:
+                freezed == nextUpdateDate
+                    ? _value.nextUpdateDate
+                    : nextUpdateDate // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            resourceTypes:
+                freezed == resourceTypes
+                    ? _value.resourceTypes
+                    : resourceTypes // ignore: cast_nullable_to_non_nullable
+                        as List<String>?,
+            title:
+                null == title
+                    ? _value.title
+                    : title // ignore: cast_nullable_to_non_nullable
+                        as ResourceTitleDTO,
+            kind:
+                freezed == kind
+                    ? _value.kind
+                    : kind // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of RecommendationAttributesDTO
@@ -1138,20 +1068,20 @@ class _$RecommendationAttributesDTOCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$RecommendationAttributesDTOImplCopyWith<$Res>
-    implements $RecommendationAttributesDTOCopyWith<$Res> {
+abstract class _$$RecommendationAttributesDTOImplCopyWith<$Res> implements $RecommendationAttributesDTOCopyWith<$Res> {
   factory _$$RecommendationAttributesDTOImplCopyWith(
-          _$RecommendationAttributesDTOImpl value,
-          $Res Function(_$RecommendationAttributesDTOImpl) then) =
-      __$$RecommendationAttributesDTOImplCopyWithImpl<$Res>;
+    _$RecommendationAttributesDTOImpl value,
+    $Res Function(_$RecommendationAttributesDTOImpl) then,
+  ) = __$$RecommendationAttributesDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {bool? isGroupRecommendation,
-      String? nextUpdateDate,
-      List<String>? resourceTypes,
-      ResourceTitleDTO title,
-      String? kind});
+  $Res call({
+    bool? isGroupRecommendation,
+    String? nextUpdateDate,
+    List<String>? resourceTypes,
+    ResourceTitleDTO title,
+    String? kind,
+  });
 
   @override
   $ResourceTitleDTOCopyWith<$Res> get title;
@@ -1159,13 +1089,12 @@ abstract class _$$RecommendationAttributesDTOImplCopyWith<$Res>
 
 /// @nodoc
 class __$$RecommendationAttributesDTOImplCopyWithImpl<$Res>
-    extends _$RecommendationAttributesDTOCopyWithImpl<$Res,
-        _$RecommendationAttributesDTOImpl>
+    extends _$RecommendationAttributesDTOCopyWithImpl<$Res, _$RecommendationAttributesDTOImpl>
     implements _$$RecommendationAttributesDTOImplCopyWith<$Res> {
   __$$RecommendationAttributesDTOImplCopyWithImpl(
-      _$RecommendationAttributesDTOImpl _value,
-      $Res Function(_$RecommendationAttributesDTOImpl) _then)
-      : super(_value, _then);
+    _$RecommendationAttributesDTOImpl _value,
+    $Res Function(_$RecommendationAttributesDTOImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of RecommendationAttributesDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -1178,45 +1107,51 @@ class __$$RecommendationAttributesDTOImplCopyWithImpl<$Res>
     Object? title = null,
     Object? kind = freezed,
   }) {
-    return _then(_$RecommendationAttributesDTOImpl(
-      isGroupRecommendation: freezed == isGroupRecommendation
-          ? _value.isGroupRecommendation
-          : isGroupRecommendation // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      nextUpdateDate: freezed == nextUpdateDate
-          ? _value.nextUpdateDate
-          : nextUpdateDate // ignore: cast_nullable_to_non_nullable
-              as String?,
-      resourceTypes: freezed == resourceTypes
-          ? _value._resourceTypes
-          : resourceTypes // ignore: cast_nullable_to_non_nullable
-              as List<String>?,
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as ResourceTitleDTO,
-      kind: freezed == kind
-          ? _value.kind
-          : kind // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$RecommendationAttributesDTOImpl(
+        isGroupRecommendation:
+            freezed == isGroupRecommendation
+                ? _value.isGroupRecommendation
+                : isGroupRecommendation // ignore: cast_nullable_to_non_nullable
+                    as bool?,
+        nextUpdateDate:
+            freezed == nextUpdateDate
+                ? _value.nextUpdateDate
+                : nextUpdateDate // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        resourceTypes:
+            freezed == resourceTypes
+                ? _value._resourceTypes
+                : resourceTypes // ignore: cast_nullable_to_non_nullable
+                    as List<String>?,
+        title:
+            null == title
+                ? _value.title
+                : title // ignore: cast_nullable_to_non_nullable
+                    as ResourceTitleDTO,
+        kind:
+            freezed == kind
+                ? _value.kind
+                : kind // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$RecommendationAttributesDTOImpl extends _RecommendationAttributesDTO {
-  const _$RecommendationAttributesDTOImpl(
-      {this.isGroupRecommendation,
-      this.nextUpdateDate,
-      final List<String>? resourceTypes,
-      required this.title,
-      this.kind})
-      : _resourceTypes = resourceTypes,
-        super._();
+  const _$RecommendationAttributesDTOImpl({
+    this.isGroupRecommendation,
+    this.nextUpdateDate,
+    final List<String>? resourceTypes,
+    required this.title,
+    this.kind,
+  }) : _resourceTypes = resourceTypes,
+       super._();
 
-  factory _$RecommendationAttributesDTOImpl.fromJson(
-          Map<String, dynamic> json) =>
+  factory _$RecommendationAttributesDTOImpl.fromJson(Map<String, dynamic> json) =>
       _$$RecommendationAttributesDTOImplFromJson(json);
 
   @override
@@ -1250,10 +1185,8 @@ class _$RecommendationAttributesDTOImpl extends _RecommendationAttributesDTO {
             other is _$RecommendationAttributesDTOImpl &&
             (identical(other.isGroupRecommendation, isGroupRecommendation) ||
                 other.isGroupRecommendation == isGroupRecommendation) &&
-            (identical(other.nextUpdateDate, nextUpdateDate) ||
-                other.nextUpdateDate == nextUpdateDate) &&
-            const DeepCollectionEquality()
-                .equals(other._resourceTypes, _resourceTypes) &&
+            (identical(other.nextUpdateDate, nextUpdateDate) || other.nextUpdateDate == nextUpdateDate) &&
+            const DeepCollectionEquality().equals(other._resourceTypes, _resourceTypes) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.kind, kind) || other.kind == kind));
   }
@@ -1261,42 +1194,39 @@ class _$RecommendationAttributesDTOImpl extends _RecommendationAttributesDTO {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      isGroupRecommendation,
-      nextUpdateDate,
-      const DeepCollectionEquality().hash(_resourceTypes),
-      title,
-      kind);
+    runtimeType,
+    isGroupRecommendation,
+    nextUpdateDate,
+    const DeepCollectionEquality().hash(_resourceTypes),
+    title,
+    kind,
+  );
 
   /// Create a copy of RecommendationAttributesDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$RecommendationAttributesDTOImplCopyWith<_$RecommendationAttributesDTOImpl>
-      get copyWith => __$$RecommendationAttributesDTOImplCopyWithImpl<
-          _$RecommendationAttributesDTOImpl>(this, _$identity);
+  _$$RecommendationAttributesDTOImplCopyWith<_$RecommendationAttributesDTOImpl> get copyWith =>
+      __$$RecommendationAttributesDTOImplCopyWithImpl<_$RecommendationAttributesDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RecommendationAttributesDTOImplToJson(
-      this,
-    );
+    return _$$RecommendationAttributesDTOImplToJson(this);
   }
 }
 
-abstract class _RecommendationAttributesDTO
-    extends RecommendationAttributesDTO {
-  const factory _RecommendationAttributesDTO(
-      {final bool? isGroupRecommendation,
-      final String? nextUpdateDate,
-      final List<String>? resourceTypes,
-      required final ResourceTitleDTO title,
-      final String? kind}) = _$RecommendationAttributesDTOImpl;
+abstract class _RecommendationAttributesDTO extends RecommendationAttributesDTO {
+  const factory _RecommendationAttributesDTO({
+    final bool? isGroupRecommendation,
+    final String? nextUpdateDate,
+    final List<String>? resourceTypes,
+    required final ResourceTitleDTO title,
+    final String? kind,
+  }) = _$RecommendationAttributesDTOImpl;
   const _RecommendationAttributesDTO._() : super._();
 
-  factory _RecommendationAttributesDTO.fromJson(Map<String, dynamic> json) =
-      _$RecommendationAttributesDTOImpl.fromJson;
+  factory _RecommendationAttributesDTO.fromJson(Map<String, dynamic> json) = _$RecommendationAttributesDTOImpl.fromJson;
 
   @override
   bool? get isGroupRecommendation;
@@ -1313,8 +1243,8 @@ abstract class _RecommendationAttributesDTO
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RecommendationAttributesDTOImplCopyWith<_$RecommendationAttributesDTOImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$RecommendationAttributesDTOImplCopyWith<_$RecommendationAttributesDTOImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ResourceTitleDTO _$ResourceTitleDTOFromJson(Map<String, dynamic> json) {
@@ -1331,22 +1261,19 @@ mixin _$ResourceTitleDTO {
   /// Create a copy of ResourceTitleDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ResourceTitleDTOCopyWith<ResourceTitleDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ResourceTitleDTOCopyWith<ResourceTitleDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ResourceTitleDTOCopyWith<$Res> {
-  factory $ResourceTitleDTOCopyWith(
-          ResourceTitleDTO value, $Res Function(ResourceTitleDTO) then) =
+  factory $ResourceTitleDTOCopyWith(ResourceTitleDTO value, $Res Function(ResourceTitleDTO) then) =
       _$ResourceTitleDTOCopyWithImpl<$Res, ResourceTitleDTO>;
   @useResult
   $Res call({String stringForDisplay});
 }
 
 /// @nodoc
-class _$ResourceTitleDTOCopyWithImpl<$Res, $Val extends ResourceTitleDTO>
-    implements $ResourceTitleDTOCopyWith<$Res> {
+class _$ResourceTitleDTOCopyWithImpl<$Res, $Val extends ResourceTitleDTO> implements $ResourceTitleDTOCopyWith<$Res> {
   _$ResourceTitleDTOCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -1358,23 +1285,23 @@ class _$ResourceTitleDTOCopyWithImpl<$Res, $Val extends ResourceTitleDTO>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? stringForDisplay = null,
-  }) {
-    return _then(_value.copyWith(
-      stringForDisplay: null == stringForDisplay
-          ? _value.stringForDisplay
-          : stringForDisplay // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? stringForDisplay = null}) {
+    return _then(
+      _value.copyWith(
+            stringForDisplay:
+                null == stringForDisplay
+                    ? _value.stringForDisplay
+                    : stringForDisplay // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$ResourceTitleDTOImplCopyWith<$Res>
-    implements $ResourceTitleDTOCopyWith<$Res> {
-  factory _$$ResourceTitleDTOImplCopyWith(_$ResourceTitleDTOImpl value,
-          $Res Function(_$ResourceTitleDTOImpl) then) =
+abstract class _$$ResourceTitleDTOImplCopyWith<$Res> implements $ResourceTitleDTOCopyWith<$Res> {
+  factory _$$ResourceTitleDTOImplCopyWith(_$ResourceTitleDTOImpl value, $Res Function(_$ResourceTitleDTOImpl) then) =
       __$$ResourceTitleDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -1382,26 +1309,25 @@ abstract class _$$ResourceTitleDTOImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$ResourceTitleDTOImplCopyWithImpl<$Res>
-    extends _$ResourceTitleDTOCopyWithImpl<$Res, _$ResourceTitleDTOImpl>
+class __$$ResourceTitleDTOImplCopyWithImpl<$Res> extends _$ResourceTitleDTOCopyWithImpl<$Res, _$ResourceTitleDTOImpl>
     implements _$$ResourceTitleDTOImplCopyWith<$Res> {
-  __$$ResourceTitleDTOImplCopyWithImpl(_$ResourceTitleDTOImpl _value,
-      $Res Function(_$ResourceTitleDTOImpl) _then)
-      : super(_value, _then);
+  __$$ResourceTitleDTOImplCopyWithImpl(_$ResourceTitleDTOImpl _value, $Res Function(_$ResourceTitleDTOImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of ResourceTitleDTO
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? stringForDisplay = null,
-  }) {
-    return _then(_$ResourceTitleDTOImpl(
-      stringForDisplay: null == stringForDisplay
-          ? _value.stringForDisplay
-          : stringForDisplay // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? stringForDisplay = null}) {
+    return _then(
+      _$ResourceTitleDTOImpl(
+        stringForDisplay:
+            null == stringForDisplay
+                ? _value.stringForDisplay
+                : stringForDisplay // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -1410,8 +1336,7 @@ class __$$ResourceTitleDTOImplCopyWithImpl<$Res>
 class _$ResourceTitleDTOImpl extends _ResourceTitleDTO {
   const _$ResourceTitleDTOImpl({required this.stringForDisplay}) : super._();
 
-  factory _$ResourceTitleDTOImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ResourceTitleDTOImplFromJson(json);
+  factory _$ResourceTitleDTOImpl.fromJson(Map<String, dynamic> json) => _$$ResourceTitleDTOImplFromJson(json);
 
   @override
   final String stringForDisplay;
@@ -1426,8 +1351,7 @@ class _$ResourceTitleDTOImpl extends _ResourceTitleDTO {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResourceTitleDTOImpl &&
-            (identical(other.stringForDisplay, stringForDisplay) ||
-                other.stringForDisplay == stringForDisplay));
+            (identical(other.stringForDisplay, stringForDisplay) || other.stringForDisplay == stringForDisplay));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -1440,24 +1364,19 @@ class _$ResourceTitleDTOImpl extends _ResourceTitleDTO {
   @override
   @pragma('vm:prefer-inline')
   _$$ResourceTitleDTOImplCopyWith<_$ResourceTitleDTOImpl> get copyWith =>
-      __$$ResourceTitleDTOImplCopyWithImpl<_$ResourceTitleDTOImpl>(
-          this, _$identity);
+      __$$ResourceTitleDTOImplCopyWithImpl<_$ResourceTitleDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ResourceTitleDTOImplToJson(
-      this,
-    );
+    return _$$ResourceTitleDTOImplToJson(this);
   }
 }
 
 abstract class _ResourceTitleDTO extends ResourceTitleDTO {
-  const factory _ResourceTitleDTO({required final String stringForDisplay}) =
-      _$ResourceTitleDTOImpl;
+  const factory _ResourceTitleDTO({required final String stringForDisplay}) = _$ResourceTitleDTOImpl;
   const _ResourceTitleDTO._() : super._();
 
-  factory _ResourceTitleDTO.fromJson(Map<String, dynamic> json) =
-      _$ResourceTitleDTOImpl.fromJson;
+  factory _ResourceTitleDTO.fromJson(Map<String, dynamic> json) = _$ResourceTitleDTOImpl.fromJson;
 
   @override
   String get stringForDisplay;
@@ -1466,6 +1385,5 @@ abstract class _ResourceTitleDTO extends ResourceTitleDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ResourceTitleDTOImplCopyWith<_$ResourceTitleDTOImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ResourceTitleDTOImplCopyWith<_$ResourceTitleDTOImpl> get copyWith => throw _privateConstructorUsedError;
 }

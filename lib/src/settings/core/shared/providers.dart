@@ -18,7 +18,6 @@ SettingsRepository settingsRepository(Ref ref) {
   return SettingsRepository(ref.watch(settingsStorageProvider));
 }
 
-final settingsNotifierProvider =
-    StateNotifierProvider<SettingsNotifier, Settings>(
+final settingsNotifierProvider = StateNotifierProvider<SettingsNotifier, Settings>(
   (ref) => SettingsNotifier(ref.read(settingsRepositoryProvider)),
 );

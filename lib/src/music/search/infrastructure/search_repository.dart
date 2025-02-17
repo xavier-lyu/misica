@@ -10,8 +10,7 @@ class SearchRepository {
 
   SearchRepository(this._remoteService);
 
-  Future<Either<MusicFailure, SearchResults>> search(
-      String storefront, String term) async {
+  Future<Either<MusicFailure, SearchResults>> search(String storefront, String term) async {
     try {
       final results = await _remoteService.search(storefront, term);
       return right(results.toDomain());
@@ -20,14 +19,10 @@ class SearchRepository {
     }
   }
 
-  Future<Either<MusicFailure, List<SearchSuggestion>>> searchSuggestions(
-      String storefront, String term) async {
+  Future<Either<MusicFailure, List<SearchSuggestion>>> searchSuggestions(String storefront, String term) async {
     try {
-      final suggestions =
-          await _remoteService.searchSuggestions(storefront, term);
-      return right(
-          suggestions.results.suggestions?.map((e) => e.toDomain()).toList() ??
-              []);
+      final suggestions = await _remoteService.searchSuggestions(storefront, term);
+      return right(suggestions.results.suggestions?.map((e) => e.toDomain()).toList() ?? []);
     } on DioException catch (e) {
       return left(MusicFailure.api(e.response?.statusCode));
     }

@@ -7,19 +7,11 @@ part 'editorial_notes_dto.g.dart';
 @freezed
 class EditorialNotesDTO with _$EditorialNotesDTO {
   const EditorialNotesDTO._();
-  const factory EditorialNotesDTO({
-    String? short,
-    String? standard,
-    String? name,
-  }) = _EditorialNotesDTO;
+  const factory EditorialNotesDTO({String? short, String? standard, String? name}) = _EditorialNotesDTO;
 
-  factory EditorialNotesDTO.fromJson(Map<String, dynamic> json) =>
-      _$EditorialNotesDTOFromJson(json);
+  factory EditorialNotesDTO.fromJson(Map<String, dynamic> json) => _$EditorialNotesDTOFromJson(json);
 
   EditorialNotes? toDomain() {
-    return EditorialNotes(
-      short: short,
-      standard: standard,
-    );
+    return EditorialNotes(short: short, standard: standard);
   }
 }

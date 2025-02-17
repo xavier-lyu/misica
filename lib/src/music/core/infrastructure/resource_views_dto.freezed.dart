@@ -12,7 +12,8 @@ part of 'resource_views_dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ResourceViewDTO _$ResourceViewDTOFromJson(Map<String, dynamic> json) {
   return _ResourceViewDTO.fromJson(json);
@@ -21,8 +22,7 @@ ResourceViewDTO _$ResourceViewDTOFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ResourceViewDTO {
   String get href => throw _privateConstructorUsedError;
-  ResourceViewAttributesDTO get attributes =>
-      throw _privateConstructorUsedError;
+  ResourceViewAttributesDTO get attributes => throw _privateConstructorUsedError;
   @ResourceDTOConverter()
   List<ResourceDTO> get data => throw _privateConstructorUsedError;
 
@@ -32,27 +32,21 @@ mixin _$ResourceViewDTO {
   /// Create a copy of ResourceViewDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ResourceViewDTOCopyWith<ResourceViewDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ResourceViewDTOCopyWith<ResourceViewDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ResourceViewDTOCopyWith<$Res> {
-  factory $ResourceViewDTOCopyWith(
-          ResourceViewDTO value, $Res Function(ResourceViewDTO) then) =
+  factory $ResourceViewDTOCopyWith(ResourceViewDTO value, $Res Function(ResourceViewDTO) then) =
       _$ResourceViewDTOCopyWithImpl<$Res, ResourceViewDTO>;
   @useResult
-  $Res call(
-      {String href,
-      ResourceViewAttributesDTO attributes,
-      @ResourceDTOConverter() List<ResourceDTO> data});
+  $Res call({String href, ResourceViewAttributesDTO attributes, @ResourceDTOConverter() List<ResourceDTO> data});
 
   $ResourceViewAttributesDTOCopyWith<$Res> get attributes;
 }
 
 /// @nodoc
-class _$ResourceViewDTOCopyWithImpl<$Res, $Val extends ResourceViewDTO>
-    implements $ResourceViewDTOCopyWith<$Res> {
+class _$ResourceViewDTOCopyWithImpl<$Res, $Val extends ResourceViewDTO> implements $ResourceViewDTOCopyWith<$Res> {
   _$ResourceViewDTOCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -64,25 +58,27 @@ class _$ResourceViewDTOCopyWithImpl<$Res, $Val extends ResourceViewDTO>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? href = null,
-    Object? attributes = null,
-    Object? data = null,
-  }) {
-    return _then(_value.copyWith(
-      href: null == href
-          ? _value.href
-          : href // ignore: cast_nullable_to_non_nullable
-              as String,
-      attributes: null == attributes
-          ? _value.attributes
-          : attributes // ignore: cast_nullable_to_non_nullable
-              as ResourceViewAttributesDTO,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<ResourceDTO>,
-    ) as $Val);
+  $Res call({Object? href = null, Object? attributes = null, Object? data = null}) {
+    return _then(
+      _value.copyWith(
+            href:
+                null == href
+                    ? _value.href
+                    : href // ignore: cast_nullable_to_non_nullable
+                        as String,
+            attributes:
+                null == attributes
+                    ? _value.attributes
+                    : attributes // ignore: cast_nullable_to_non_nullable
+                        as ResourceViewAttributesDTO,
+            data:
+                null == data
+                    ? _value.data
+                    : data // ignore: cast_nullable_to_non_nullable
+                        as List<ResourceDTO>,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of ResourceViewDTO
@@ -97,68 +93,61 @@ class _$ResourceViewDTOCopyWithImpl<$Res, $Val extends ResourceViewDTO>
 }
 
 /// @nodoc
-abstract class _$$ResourceViewDTOImplCopyWith<$Res>
-    implements $ResourceViewDTOCopyWith<$Res> {
-  factory _$$ResourceViewDTOImplCopyWith(_$ResourceViewDTOImpl value,
-          $Res Function(_$ResourceViewDTOImpl) then) =
+abstract class _$$ResourceViewDTOImplCopyWith<$Res> implements $ResourceViewDTOCopyWith<$Res> {
+  factory _$$ResourceViewDTOImplCopyWith(_$ResourceViewDTOImpl value, $Res Function(_$ResourceViewDTOImpl) then) =
       __$$ResourceViewDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String href,
-      ResourceViewAttributesDTO attributes,
-      @ResourceDTOConverter() List<ResourceDTO> data});
+  $Res call({String href, ResourceViewAttributesDTO attributes, @ResourceDTOConverter() List<ResourceDTO> data});
 
   @override
   $ResourceViewAttributesDTOCopyWith<$Res> get attributes;
 }
 
 /// @nodoc
-class __$$ResourceViewDTOImplCopyWithImpl<$Res>
-    extends _$ResourceViewDTOCopyWithImpl<$Res, _$ResourceViewDTOImpl>
+class __$$ResourceViewDTOImplCopyWithImpl<$Res> extends _$ResourceViewDTOCopyWithImpl<$Res, _$ResourceViewDTOImpl>
     implements _$$ResourceViewDTOImplCopyWith<$Res> {
-  __$$ResourceViewDTOImplCopyWithImpl(
-      _$ResourceViewDTOImpl _value, $Res Function(_$ResourceViewDTOImpl) _then)
-      : super(_value, _then);
+  __$$ResourceViewDTOImplCopyWithImpl(_$ResourceViewDTOImpl _value, $Res Function(_$ResourceViewDTOImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of ResourceViewDTO
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? href = null,
-    Object? attributes = null,
-    Object? data = null,
-  }) {
-    return _then(_$ResourceViewDTOImpl(
-      href: null == href
-          ? _value.href
-          : href // ignore: cast_nullable_to_non_nullable
-              as String,
-      attributes: null == attributes
-          ? _value.attributes
-          : attributes // ignore: cast_nullable_to_non_nullable
-              as ResourceViewAttributesDTO,
-      data: null == data
-          ? _value._data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<ResourceDTO>,
-    ));
+  $Res call({Object? href = null, Object? attributes = null, Object? data = null}) {
+    return _then(
+      _$ResourceViewDTOImpl(
+        href:
+            null == href
+                ? _value.href
+                : href // ignore: cast_nullable_to_non_nullable
+                    as String,
+        attributes:
+            null == attributes
+                ? _value.attributes
+                : attributes // ignore: cast_nullable_to_non_nullable
+                    as ResourceViewAttributesDTO,
+        data:
+            null == data
+                ? _value._data
+                : data // ignore: cast_nullable_to_non_nullable
+                    as List<ResourceDTO>,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ResourceViewDTOImpl extends _ResourceViewDTO {
-  const _$ResourceViewDTOImpl(
-      {required this.href,
-      required this.attributes,
-      @ResourceDTOConverter() required final List<ResourceDTO> data})
-      : _data = data,
-        super._();
+  const _$ResourceViewDTOImpl({
+    required this.href,
+    required this.attributes,
+    @ResourceDTOConverter() required final List<ResourceDTO> data,
+  }) : _data = data,
+       super._();
 
-  factory _$ResourceViewDTOImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ResourceViewDTOImplFromJson(json);
+  factory _$ResourceViewDTOImpl.fromJson(Map<String, dynamic> json) => _$$ResourceViewDTOImplFromJson(json);
 
   @override
   final String href;
@@ -184,15 +173,13 @@ class _$ResourceViewDTOImpl extends _ResourceViewDTO {
         (other.runtimeType == runtimeType &&
             other is _$ResourceViewDTOImpl &&
             (identical(other.href, href) || other.href == href) &&
-            (identical(other.attributes, attributes) ||
-                other.attributes == attributes) &&
+            (identical(other.attributes, attributes) || other.attributes == attributes) &&
             const DeepCollectionEquality().equals(other._data, _data));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, href, attributes,
-      const DeepCollectionEquality().hash(_data));
+  int get hashCode => Object.hash(runtimeType, href, attributes, const DeepCollectionEquality().hash(_data));
 
   /// Create a copy of ResourceViewDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -200,27 +187,23 @@ class _$ResourceViewDTOImpl extends _ResourceViewDTO {
   @override
   @pragma('vm:prefer-inline')
   _$$ResourceViewDTOImplCopyWith<_$ResourceViewDTOImpl> get copyWith =>
-      __$$ResourceViewDTOImplCopyWithImpl<_$ResourceViewDTOImpl>(
-          this, _$identity);
+      __$$ResourceViewDTOImplCopyWithImpl<_$ResourceViewDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ResourceViewDTOImplToJson(
-      this,
-    );
+    return _$$ResourceViewDTOImplToJson(this);
   }
 }
 
 abstract class _ResourceViewDTO extends ResourceViewDTO {
-  const factory _ResourceViewDTO(
-          {required final String href,
-          required final ResourceViewAttributesDTO attributes,
-          @ResourceDTOConverter() required final List<ResourceDTO> data}) =
-      _$ResourceViewDTOImpl;
+  const factory _ResourceViewDTO({
+    required final String href,
+    required final ResourceViewAttributesDTO attributes,
+    @ResourceDTOConverter() required final List<ResourceDTO> data,
+  }) = _$ResourceViewDTOImpl;
   const _ResourceViewDTO._() : super._();
 
-  factory _ResourceViewDTO.fromJson(Map<String, dynamic> json) =
-      _$ResourceViewDTOImpl.fromJson;
+  factory _ResourceViewDTO.fromJson(Map<String, dynamic> json) = _$ResourceViewDTOImpl.fromJson;
 
   @override
   String get href;
@@ -234,12 +217,10 @@ abstract class _ResourceViewDTO extends ResourceViewDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ResourceViewDTOImplCopyWith<_$ResourceViewDTOImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ResourceViewDTOImplCopyWith<_$ResourceViewDTOImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
-ResourceViewAttributesDTO _$ResourceViewAttributesDTOFromJson(
-    Map<String, dynamic> json) {
+ResourceViewAttributesDTO _$ResourceViewAttributesDTOFromJson(Map<String, dynamic> json) {
   return _ResourceViewAttributesDTO.fromJson(json);
 }
 
@@ -253,22 +234,21 @@ mixin _$ResourceViewAttributesDTO {
   /// Create a copy of ResourceViewAttributesDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $ResourceViewAttributesDTOCopyWith<ResourceViewAttributesDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $ResourceViewAttributesDTOCopyWith<ResourceViewAttributesDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ResourceViewAttributesDTOCopyWith<$Res> {
-  factory $ResourceViewAttributesDTOCopyWith(ResourceViewAttributesDTO value,
-          $Res Function(ResourceViewAttributesDTO) then) =
-      _$ResourceViewAttributesDTOCopyWithImpl<$Res, ResourceViewAttributesDTO>;
+  factory $ResourceViewAttributesDTOCopyWith(
+    ResourceViewAttributesDTO value,
+    $Res Function(ResourceViewAttributesDTO) then,
+  ) = _$ResourceViewAttributesDTOCopyWithImpl<$Res, ResourceViewAttributesDTO>;
   @useResult
   $Res call({String title});
 }
 
 /// @nodoc
-class _$ResourceViewAttributesDTOCopyWithImpl<$Res,
-        $Val extends ResourceViewAttributesDTO>
+class _$ResourceViewAttributesDTOCopyWithImpl<$Res, $Val extends ResourceViewAttributesDTO>
     implements $ResourceViewAttributesDTOCopyWith<$Res> {
   _$ResourceViewAttributesDTOCopyWithImpl(this._value, this._then);
 
@@ -281,25 +261,26 @@ class _$ResourceViewAttributesDTOCopyWithImpl<$Res,
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? title = null,
-  }) {
-    return _then(_value.copyWith(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? title = null}) {
+    return _then(
+      _value.copyWith(
+            title:
+                null == title
+                    ? _value.title
+                    : title // ignore: cast_nullable_to_non_nullable
+                        as String,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$ResourceViewAttributesDTOImplCopyWith<$Res>
-    implements $ResourceViewAttributesDTOCopyWith<$Res> {
+abstract class _$$ResourceViewAttributesDTOImplCopyWith<$Res> implements $ResourceViewAttributesDTOCopyWith<$Res> {
   factory _$$ResourceViewAttributesDTOImplCopyWith(
-          _$ResourceViewAttributesDTOImpl value,
-          $Res Function(_$ResourceViewAttributesDTOImpl) then) =
-      __$$ResourceViewAttributesDTOImplCopyWithImpl<$Res>;
+    _$ResourceViewAttributesDTOImpl value,
+    $Res Function(_$ResourceViewAttributesDTOImpl) then,
+  ) = __$$ResourceViewAttributesDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String title});
@@ -307,27 +288,27 @@ abstract class _$$ResourceViewAttributesDTOImplCopyWith<$Res>
 
 /// @nodoc
 class __$$ResourceViewAttributesDTOImplCopyWithImpl<$Res>
-    extends _$ResourceViewAttributesDTOCopyWithImpl<$Res,
-        _$ResourceViewAttributesDTOImpl>
+    extends _$ResourceViewAttributesDTOCopyWithImpl<$Res, _$ResourceViewAttributesDTOImpl>
     implements _$$ResourceViewAttributesDTOImplCopyWith<$Res> {
   __$$ResourceViewAttributesDTOImplCopyWithImpl(
-      _$ResourceViewAttributesDTOImpl _value,
-      $Res Function(_$ResourceViewAttributesDTOImpl) _then)
-      : super(_value, _then);
+    _$ResourceViewAttributesDTOImpl _value,
+    $Res Function(_$ResourceViewAttributesDTOImpl) _then,
+  ) : super(_value, _then);
 
   /// Create a copy of ResourceViewAttributesDTO
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? title = null,
-  }) {
-    return _then(_$ResourceViewAttributesDTOImpl(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? title = null}) {
+    return _then(
+      _$ResourceViewAttributesDTOImpl(
+        title:
+            null == title
+                ? _value.title
+                : title // ignore: cast_nullable_to_non_nullable
+                    as String,
+      ),
+    );
   }
 }
 
@@ -364,25 +345,20 @@ class _$ResourceViewAttributesDTOImpl extends _ResourceViewAttributesDTO {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ResourceViewAttributesDTOImplCopyWith<_$ResourceViewAttributesDTOImpl>
-      get copyWith => __$$ResourceViewAttributesDTOImplCopyWithImpl<
-          _$ResourceViewAttributesDTOImpl>(this, _$identity);
+  _$$ResourceViewAttributesDTOImplCopyWith<_$ResourceViewAttributesDTOImpl> get copyWith =>
+      __$$ResourceViewAttributesDTOImplCopyWithImpl<_$ResourceViewAttributesDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ResourceViewAttributesDTOImplToJson(
-      this,
-    );
+    return _$$ResourceViewAttributesDTOImplToJson(this);
   }
 }
 
 abstract class _ResourceViewAttributesDTO extends ResourceViewAttributesDTO {
-  const factory _ResourceViewAttributesDTO({required final String title}) =
-      _$ResourceViewAttributesDTOImpl;
+  const factory _ResourceViewAttributesDTO({required final String title}) = _$ResourceViewAttributesDTOImpl;
   const _ResourceViewAttributesDTO._() : super._();
 
-  factory _ResourceViewAttributesDTO.fromJson(Map<String, dynamic> json) =
-      _$ResourceViewAttributesDTOImpl.fromJson;
+  factory _ResourceViewAttributesDTO.fromJson(Map<String, dynamic> json) = _$ResourceViewAttributesDTOImpl.fromJson;
 
   @override
   String get title;
@@ -391,6 +367,6 @@ abstract class _ResourceViewAttributesDTO extends ResourceViewAttributesDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ResourceViewAttributesDTOImplCopyWith<_$ResourceViewAttributesDTOImpl>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$ResourceViewAttributesDTOImplCopyWith<_$ResourceViewAttributesDTOImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

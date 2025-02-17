@@ -14,22 +14,16 @@ class RecommendationsList extends ConsumerWidget {
     final state = ref.watch(recosNotifierProvider);
 
     return state.maybeWhen(
-      orElse: () => SliverToBoxAdapter(
-        child: Container(),
-      ),
-      data: (recos) => SliverList(
-        delegate: SliverChildBuilderDelegate(
-          ((context, index) {
-            if (index.isOdd) {
-              return const DividerWidget(
-                endIndent: 0,
-              );
-            }
-            return RecommendationWidget(recommendation: recos[index ~/ 2]);
-          }),
-          childCount: max(0, recos.length * 2 - 1),
-        ),
-      ),
+      orElse: () => SliverToBoxAdapter(child: Container()),
+      data:
+          (recos) => SliverList(
+            delegate: SliverChildBuilderDelegate(((context, index) {
+              if (index.isOdd) {
+                return const DividerWidget(endIndent: 0);
+              }
+              return RecommendationWidget(recommendation: recos[index ~/ 2]);
+            }), childCount: max(0, recos.length * 2 - 1)),
+          ),
     );
   }
 }

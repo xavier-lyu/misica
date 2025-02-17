@@ -27,12 +27,7 @@ class _StationsService implements StationsService {
     const Map<String, dynamic>? _data = null;
     final _options = _setStreamType<MusicResponse>(
       Options(method: 'GET', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/me/recent/radio-stations?art[url]=f',
-            queryParameters: queryParameters,
-            data: _data,
-          )
+          .compose(_dio.options, '/me/recent/radio-stations?art[url]=f', queryParameters: queryParameters, data: _data)
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
@@ -54,12 +49,7 @@ class _StationsService implements StationsService {
     const Map<String, dynamic>? _data = null;
     final _options = _setStreamType<MusicResponse>(
       Options(method: 'GET', headers: _headers, extra: _extra)
-          .compose(
-            _dio.options,
-            '/catalog/${storefront}/station-genres',
-            queryParameters: queryParameters,
-            data: _data,
-          )
+          .compose(_dio.options, '/catalog/${storefront}/station-genres', queryParameters: queryParameters, data: _data)
           .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
     );
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
@@ -102,8 +92,7 @@ class _StationsService implements StationsService {
 
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
     if (T != dynamic &&
-        !(requestOptions.responseType == ResponseType.bytes ||
-            requestOptions.responseType == ResponseType.stream)) {
+        !(requestOptions.responseType == ResponseType.bytes || requestOptions.responseType == ResponseType.stream)) {
       if (T == String) {
         requestOptions.responseType = ResponseType.plain;
       } else {

@@ -22,9 +22,10 @@ class ArtworkWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bgColor = artwork?.bgColor != null
-        ? colorFromHexString(artwork!.bgColor!)
-        : context.toc.colorScheme.surfaceContainerHighest;
+    final bgColor =
+        artwork?.bgColor != null
+            ? colorFromHexString(artwork!.bgColor!)
+            : context.toc.colorScheme.surfaceContainerHighest;
 
     return Container(
       decoration: artworkShadow(bgColor, context.toc.brightness, radius),
@@ -32,49 +33,32 @@ class ArtworkWidget extends StatelessWidget {
       width: width,
       child: ClipRRect(
         borderRadius: BorderRadius.all(Radius.circular(radius)),
-        child: artwork == null
-            ? ColoredBox(
-                color: bgColor,
-              )
-            : CachedNetworkImage(
-                fit: fit,
-                imageUrl: artwork!.formatArtworkURL(
-                  height: height.toInt(),
-                  width: width.toInt(),
-                  devicePixelRatio: MediaQuery.of(context).devicePixelRatio,
+        child:
+            artwork == null
+                ? ColoredBox(color: bgColor)
+                : CachedNetworkImage(
+                  fit: fit,
+                  imageUrl: artwork!.formatArtworkURL(
+                    height: height.toInt(),
+                    width: width.toInt(),
+                    devicePixelRatio: MediaQuery.of(context).devicePixelRatio,
+                  ),
+                  placeholder: (context, url) => ColoredBox(color: bgColor),
+                  errorWidget: (context, url, error) => ColoredBox(color: bgColor),
                 ),
-                placeholder: (context, url) => ColoredBox(
-                  color: bgColor,
-                ),
-                errorWidget: (context, url, error) => ColoredBox(
-                  color: bgColor,
-                ),
-              ),
       ),
     );
   }
 }
 
-BoxDecoration artworkShadow(
-  Color bgColor,
-  Brightness brightness,
-  double radius,
-) {
+BoxDecoration artworkShadow(Color bgColor, Brightness brightness, double radius) {
   final isLightTheme = brightness == Brightness.light;
-  final shadowColor =
-      isLightTheme ? Colors.black.withAlpha(25) : Colors.white.withAlpha(50);
+  final shadowColor = isLightTheme ? Colors.black.withAlpha(25) : Colors.white.withAlpha(50);
 
   return BoxDecoration(
     borderRadius: BorderRadius.circular(radius),
     color: bgColor,
     shape: BoxShape.rectangle,
-    boxShadow: [
-      BoxShadow(
-        offset: const Offset(0, 5),
-        color: shadowColor,
-        blurRadius: 24,
-        spreadRadius: 0,
-      ),
-    ],
+    boxShadow: [BoxShadow(offset: const Offset(0, 5), color: shadowColor, blurRadius: 24, spreadRadius: 0)],
   );
 }

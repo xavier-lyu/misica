@@ -12,7 +12,8 @@ part of 'search_results_dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 SearchResultsDTO _$SearchResultsDTOFromJson(Map<String, dynamic> json) {
   return _SearchResultsDTO.fromJson(json);
@@ -20,8 +21,7 @@ SearchResultsDTO _$SearchResultsDTOFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$SearchResultsDTO {
-  Map<String, SearchResultDTO>? get results =>
-      throw _privateConstructorUsedError;
+  Map<String, SearchResultDTO>? get results => throw _privateConstructorUsedError;
   ResourceMetaDTO? get meta => throw _privateConstructorUsedError;
 
   /// Serializes this SearchResultsDTO to a JSON map.
@@ -30,14 +30,12 @@ mixin _$SearchResultsDTO {
   /// Create a copy of SearchResultsDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SearchResultsDTOCopyWith<SearchResultsDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SearchResultsDTOCopyWith<SearchResultsDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SearchResultsDTOCopyWith<$Res> {
-  factory $SearchResultsDTOCopyWith(
-          SearchResultsDTO value, $Res Function(SearchResultsDTO) then) =
+  factory $SearchResultsDTOCopyWith(SearchResultsDTO value, $Res Function(SearchResultsDTO) then) =
       _$SearchResultsDTOCopyWithImpl<$Res, SearchResultsDTO>;
   @useResult
   $Res call({Map<String, SearchResultDTO>? results, ResourceMetaDTO? meta});
@@ -46,8 +44,7 @@ abstract class $SearchResultsDTOCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$SearchResultsDTOCopyWithImpl<$Res, $Val extends SearchResultsDTO>
-    implements $SearchResultsDTOCopyWith<$Res> {
+class _$SearchResultsDTOCopyWithImpl<$Res, $Val extends SearchResultsDTO> implements $SearchResultsDTOCopyWith<$Res> {
   _$SearchResultsDTOCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -59,20 +56,22 @@ class _$SearchResultsDTOCopyWithImpl<$Res, $Val extends SearchResultsDTO>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? results = freezed,
-    Object? meta = freezed,
-  }) {
-    return _then(_value.copyWith(
-      results: freezed == results
-          ? _value.results
-          : results // ignore: cast_nullable_to_non_nullable
-              as Map<String, SearchResultDTO>?,
-      meta: freezed == meta
-          ? _value.meta
-          : meta // ignore: cast_nullable_to_non_nullable
-              as ResourceMetaDTO?,
-    ) as $Val);
+  $Res call({Object? results = freezed, Object? meta = freezed}) {
+    return _then(
+      _value.copyWith(
+            results:
+                freezed == results
+                    ? _value.results
+                    : results // ignore: cast_nullable_to_non_nullable
+                        as Map<String, SearchResultDTO>?,
+            meta:
+                freezed == meta
+                    ? _value.meta
+                    : meta // ignore: cast_nullable_to_non_nullable
+                        as ResourceMetaDTO?,
+          )
+          as $Val,
+    );
   }
 
   /// Create a copy of SearchResultsDTO
@@ -91,10 +90,8 @@ class _$SearchResultsDTOCopyWithImpl<$Res, $Val extends SearchResultsDTO>
 }
 
 /// @nodoc
-abstract class _$$SearchResultsDTOImplCopyWith<$Res>
-    implements $SearchResultsDTOCopyWith<$Res> {
-  factory _$$SearchResultsDTOImplCopyWith(_$SearchResultsDTOImpl value,
-          $Res Function(_$SearchResultsDTOImpl) then) =
+abstract class _$$SearchResultsDTOImplCopyWith<$Res> implements $SearchResultsDTOCopyWith<$Res> {
+  factory _$$SearchResultsDTOImplCopyWith(_$SearchResultsDTOImpl value, $Res Function(_$SearchResultsDTOImpl) then) =
       __$$SearchResultsDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -105,44 +102,41 @@ abstract class _$$SearchResultsDTOImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$SearchResultsDTOImplCopyWithImpl<$Res>
-    extends _$SearchResultsDTOCopyWithImpl<$Res, _$SearchResultsDTOImpl>
+class __$$SearchResultsDTOImplCopyWithImpl<$Res> extends _$SearchResultsDTOCopyWithImpl<$Res, _$SearchResultsDTOImpl>
     implements _$$SearchResultsDTOImplCopyWith<$Res> {
-  __$$SearchResultsDTOImplCopyWithImpl(_$SearchResultsDTOImpl _value,
-      $Res Function(_$SearchResultsDTOImpl) _then)
-      : super(_value, _then);
+  __$$SearchResultsDTOImplCopyWithImpl(_$SearchResultsDTOImpl _value, $Res Function(_$SearchResultsDTOImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of SearchResultsDTO
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? results = freezed,
-    Object? meta = freezed,
-  }) {
-    return _then(_$SearchResultsDTOImpl(
-      results: freezed == results
-          ? _value._results
-          : results // ignore: cast_nullable_to_non_nullable
-              as Map<String, SearchResultDTO>?,
-      meta: freezed == meta
-          ? _value.meta
-          : meta // ignore: cast_nullable_to_non_nullable
-              as ResourceMetaDTO?,
-    ));
+  $Res call({Object? results = freezed, Object? meta = freezed}) {
+    return _then(
+      _$SearchResultsDTOImpl(
+        results:
+            freezed == results
+                ? _value._results
+                : results // ignore: cast_nullable_to_non_nullable
+                    as Map<String, SearchResultDTO>?,
+        meta:
+            freezed == meta
+                ? _value.meta
+                : meta // ignore: cast_nullable_to_non_nullable
+                    as ResourceMetaDTO?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$SearchResultsDTOImpl extends _SearchResultsDTO {
-  const _$SearchResultsDTOImpl(
-      {final Map<String, SearchResultDTO>? results, this.meta})
-      : _results = results,
-        super._();
+  const _$SearchResultsDTOImpl({final Map<String, SearchResultDTO>? results, this.meta})
+    : _results = results,
+      super._();
 
-  factory _$SearchResultsDTOImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SearchResultsDTOImplFromJson(json);
+  factory _$SearchResultsDTOImpl.fromJson(Map<String, dynamic> json) => _$$SearchResultsDTOImplFromJson(json);
 
   final Map<String, SearchResultDTO>? _results;
   @override
@@ -173,8 +167,7 @@ class _$SearchResultsDTOImpl extends _SearchResultsDTO {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_results), meta);
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_results), meta);
 
   /// Create a copy of SearchResultsDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -182,25 +175,20 @@ class _$SearchResultsDTOImpl extends _SearchResultsDTO {
   @override
   @pragma('vm:prefer-inline')
   _$$SearchResultsDTOImplCopyWith<_$SearchResultsDTOImpl> get copyWith =>
-      __$$SearchResultsDTOImplCopyWithImpl<_$SearchResultsDTOImpl>(
-          this, _$identity);
+      __$$SearchResultsDTOImplCopyWithImpl<_$SearchResultsDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SearchResultsDTOImplToJson(
-      this,
-    );
+    return _$$SearchResultsDTOImplToJson(this);
   }
 }
 
 abstract class _SearchResultsDTO extends SearchResultsDTO {
-  const factory _SearchResultsDTO(
-      {final Map<String, SearchResultDTO>? results,
-      final ResourceMetaDTO? meta}) = _$SearchResultsDTOImpl;
+  const factory _SearchResultsDTO({final Map<String, SearchResultDTO>? results, final ResourceMetaDTO? meta}) =
+      _$SearchResultsDTOImpl;
   const _SearchResultsDTO._() : super._();
 
-  factory _SearchResultsDTO.fromJson(Map<String, dynamic> json) =
-      _$SearchResultsDTOImpl.fromJson;
+  factory _SearchResultsDTO.fromJson(Map<String, dynamic> json) = _$SearchResultsDTOImpl.fromJson;
 
   @override
   Map<String, SearchResultDTO>? get results;
@@ -211,8 +199,7 @@ abstract class _SearchResultsDTO extends SearchResultsDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SearchResultsDTOImplCopyWith<_$SearchResultsDTOImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SearchResultsDTOImplCopyWith<_$SearchResultsDTOImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 SearchResultDTO _$SearchResultDTOFromJson(Map<String, dynamic> json) {
@@ -234,27 +221,19 @@ mixin _$SearchResultDTO {
   /// Create a copy of SearchResultDTO
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SearchResultDTOCopyWith<SearchResultDTO> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SearchResultDTOCopyWith<SearchResultDTO> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SearchResultDTOCopyWith<$Res> {
-  factory $SearchResultDTOCopyWith(
-          SearchResultDTO value, $Res Function(SearchResultDTO) then) =
+  factory $SearchResultDTOCopyWith(SearchResultDTO value, $Res Function(SearchResultDTO) then) =
       _$SearchResultDTOCopyWithImpl<$Res, SearchResultDTO>;
   @useResult
-  $Res call(
-      {String name,
-      String groupId,
-      @ResourceDTOConverter() List<ResourceDTO> data,
-      String? href,
-      String? next});
+  $Res call({String name, String groupId, @ResourceDTOConverter() List<ResourceDTO> data, String? href, String? next});
 }
 
 /// @nodoc
-class _$SearchResultDTOCopyWithImpl<$Res, $Val extends SearchResultDTO>
-    implements $SearchResultDTOCopyWith<$Res> {
+class _$SearchResultDTOCopyWithImpl<$Res, $Val extends SearchResultDTO> implements $SearchResultDTOCopyWith<$Res> {
   _$SearchResultDTOCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -273,54 +252,53 @@ class _$SearchResultDTOCopyWithImpl<$Res, $Val extends SearchResultDTO>
     Object? href = freezed,
     Object? next = freezed,
   }) {
-    return _then(_value.copyWith(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      groupId: null == groupId
-          ? _value.groupId
-          : groupId // ignore: cast_nullable_to_non_nullable
-              as String,
-      data: null == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<ResourceDTO>,
-      href: freezed == href
-          ? _value.href
-          : href // ignore: cast_nullable_to_non_nullable
-              as String?,
-      next: freezed == next
-          ? _value.next
-          : next // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            name:
+                null == name
+                    ? _value.name
+                    : name // ignore: cast_nullable_to_non_nullable
+                        as String,
+            groupId:
+                null == groupId
+                    ? _value.groupId
+                    : groupId // ignore: cast_nullable_to_non_nullable
+                        as String,
+            data:
+                null == data
+                    ? _value.data
+                    : data // ignore: cast_nullable_to_non_nullable
+                        as List<ResourceDTO>,
+            href:
+                freezed == href
+                    ? _value.href
+                    : href // ignore: cast_nullable_to_non_nullable
+                        as String?,
+            next:
+                freezed == next
+                    ? _value.next
+                    : next // ignore: cast_nullable_to_non_nullable
+                        as String?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$SearchResultDTOImplCopyWith<$Res>
-    implements $SearchResultDTOCopyWith<$Res> {
-  factory _$$SearchResultDTOImplCopyWith(_$SearchResultDTOImpl value,
-          $Res Function(_$SearchResultDTOImpl) then) =
+abstract class _$$SearchResultDTOImplCopyWith<$Res> implements $SearchResultDTOCopyWith<$Res> {
+  factory _$$SearchResultDTOImplCopyWith(_$SearchResultDTOImpl value, $Res Function(_$SearchResultDTOImpl) then) =
       __$$SearchResultDTOImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String name,
-      String groupId,
-      @ResourceDTOConverter() List<ResourceDTO> data,
-      String? href,
-      String? next});
+  $Res call({String name, String groupId, @ResourceDTOConverter() List<ResourceDTO> data, String? href, String? next});
 }
 
 /// @nodoc
-class __$$SearchResultDTOImplCopyWithImpl<$Res>
-    extends _$SearchResultDTOCopyWithImpl<$Res, _$SearchResultDTOImpl>
+class __$$SearchResultDTOImplCopyWithImpl<$Res> extends _$SearchResultDTOCopyWithImpl<$Res, _$SearchResultDTOImpl>
     implements _$$SearchResultDTOImplCopyWith<$Res> {
-  __$$SearchResultDTOImplCopyWithImpl(
-      _$SearchResultDTOImpl _value, $Res Function(_$SearchResultDTOImpl) _then)
-      : super(_value, _then);
+  __$$SearchResultDTOImplCopyWithImpl(_$SearchResultDTOImpl _value, $Res Function(_$SearchResultDTOImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of SearchResultDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -333,45 +311,51 @@ class __$$SearchResultDTOImplCopyWithImpl<$Res>
     Object? href = freezed,
     Object? next = freezed,
   }) {
-    return _then(_$SearchResultDTOImpl(
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      groupId: null == groupId
-          ? _value.groupId
-          : groupId // ignore: cast_nullable_to_non_nullable
-              as String,
-      data: null == data
-          ? _value._data
-          : data // ignore: cast_nullable_to_non_nullable
-              as List<ResourceDTO>,
-      href: freezed == href
-          ? _value.href
-          : href // ignore: cast_nullable_to_non_nullable
-              as String?,
-      next: freezed == next
-          ? _value.next
-          : next // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$SearchResultDTOImpl(
+        name:
+            null == name
+                ? _value.name
+                : name // ignore: cast_nullable_to_non_nullable
+                    as String,
+        groupId:
+            null == groupId
+                ? _value.groupId
+                : groupId // ignore: cast_nullable_to_non_nullable
+                    as String,
+        data:
+            null == data
+                ? _value._data
+                : data // ignore: cast_nullable_to_non_nullable
+                    as List<ResourceDTO>,
+        href:
+            freezed == href
+                ? _value.href
+                : href // ignore: cast_nullable_to_non_nullable
+                    as String?,
+        next:
+            freezed == next
+                ? _value.next
+                : next // ignore: cast_nullable_to_non_nullable
+                    as String?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$SearchResultDTOImpl extends _SearchResultDTO {
-  const _$SearchResultDTOImpl(
-      {required this.name,
-      required this.groupId,
-      @ResourceDTOConverter() required final List<ResourceDTO> data,
-      this.href,
-      this.next})
-      : _data = data,
-        super._();
+  const _$SearchResultDTOImpl({
+    required this.name,
+    required this.groupId,
+    @ResourceDTOConverter() required final List<ResourceDTO> data,
+    this.href,
+    this.next,
+  }) : _data = data,
+       super._();
 
-  factory _$SearchResultDTOImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SearchResultDTOImplFromJson(json);
+  factory _$SearchResultDTOImpl.fromJson(Map<String, dynamic> json) => _$$SearchResultDTOImplFromJson(json);
 
   @override
   final String name;
@@ -410,8 +394,7 @@ class _$SearchResultDTOImpl extends _SearchResultDTO {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, name, groupId,
-      const DeepCollectionEquality().hash(_data), href, next);
+  int get hashCode => Object.hash(runtimeType, name, groupId, const DeepCollectionEquality().hash(_data), href, next);
 
   /// Create a copy of SearchResultDTO
   /// with the given fields replaced by the non-null parameter values.
@@ -419,28 +402,25 @@ class _$SearchResultDTOImpl extends _SearchResultDTO {
   @override
   @pragma('vm:prefer-inline')
   _$$SearchResultDTOImplCopyWith<_$SearchResultDTOImpl> get copyWith =>
-      __$$SearchResultDTOImplCopyWithImpl<_$SearchResultDTOImpl>(
-          this, _$identity);
+      __$$SearchResultDTOImplCopyWithImpl<_$SearchResultDTOImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SearchResultDTOImplToJson(
-      this,
-    );
+    return _$$SearchResultDTOImplToJson(this);
   }
 }
 
 abstract class _SearchResultDTO extends SearchResultDTO {
-  const factory _SearchResultDTO(
-      {required final String name,
-      required final String groupId,
-      @ResourceDTOConverter() required final List<ResourceDTO> data,
-      final String? href,
-      final String? next}) = _$SearchResultDTOImpl;
+  const factory _SearchResultDTO({
+    required final String name,
+    required final String groupId,
+    @ResourceDTOConverter() required final List<ResourceDTO> data,
+    final String? href,
+    final String? next,
+  }) = _$SearchResultDTOImpl;
   const _SearchResultDTO._() : super._();
 
-  factory _SearchResultDTO.fromJson(Map<String, dynamic> json) =
-      _$SearchResultDTOImpl.fromJson;
+  factory _SearchResultDTO.fromJson(Map<String, dynamic> json) = _$SearchResultDTOImpl.fromJson;
 
   @override
   String get name;
@@ -458,6 +438,5 @@ abstract class _SearchResultDTO extends SearchResultDTO {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SearchResultDTOImplCopyWith<_$SearchResultDTOImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SearchResultDTOImplCopyWith<_$SearchResultDTOImpl> get copyWith => throw _privateConstructorUsedError;
 }

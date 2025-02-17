@@ -18,10 +18,6 @@ ChartsRepository chartsRepository(Ref ref) {
   return ChartsRepository(ref.watch(chartsServiceProvider));
 }
 
-final chartsNotifierProvider =
-    StateNotifierProvider<ChartsNotifier, AsyncValue<Charts>>(
-  (ref) => ChartsNotifier(
-    ref.read(chartsRepositoryProvider),
-    ref,
-  ),
+final chartsNotifierProvider = StateNotifierProvider<ChartsNotifier, AsyncValue<Charts>>(
+  (ref) => ChartsNotifier(ref.read(chartsRepositoryProvider), ref),
 );

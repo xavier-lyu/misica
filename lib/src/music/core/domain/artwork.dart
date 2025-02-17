@@ -14,24 +14,15 @@ class Artwork with _$Artwork {
     required String? textColor,
   }) = _Artwork;
 
-  factory Artwork.fromJson(Map<String, dynamic> json) =>
-      _$ArtworkFromJson(json);
+  factory Artwork.fromJson(Map<String, dynamic> json) => _$ArtworkFromJson(json);
 
-  String formatArtworkURL({
-    int? height,
-    int? width,
-    String ext = "webp",
-    double devicePixelRatio = 1,
-  }) {
+  String formatArtworkURL({int? height, int? width, String ext = "webp", double devicePixelRatio = 1}) {
     double h = (height ?? this.height).toDouble();
     double w = (width ?? this.width).toDouble();
     if (devicePixelRatio >= 1.5) {
       h *= devicePixelRatio;
       w *= devicePixelRatio;
     }
-    return url
-        .replaceAll('{h}', '${h.floor()}')
-        .replaceAll('{w}', '${w.floor()}')
-        .replaceAll('{f}', ext);
+    return url.replaceAll('{h}', '${h.floor()}').replaceAll('{w}', '${w.floor()}').replaceAll('{f}', ext);
   }
 }

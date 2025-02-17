@@ -31,16 +31,12 @@ class _LibraryPageState extends ConsumerState<LibraryPage> {
       body: likedResourcesState.map(
         data: (resources) {
           if (resources.value.isEmpty) {
-            return Center(
-              child: Text(context.loc.nothingHereYet),
-            );
+            return Center(child: Text(context.loc.nothingHereYet));
           }
 
           return LikedResourcesView(resources: resources.value);
         },
-        error: (err) => Center(
-          child: Text('${err.error}'),
-        ),
+        error: (err) => Center(child: Text('${err.error}')),
         loading: (_) => const Loader(),
       ),
     );

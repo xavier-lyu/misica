@@ -11,19 +11,13 @@ class Track with _$Track {
   const factory Track.song(Song song) = _TrackSong;
   const factory Track.musicVideo(MusicVideo mv) = _TrackMusicVideo;
 
-  String get id => when(
-        song: (song) => song.id,
-        musicVideo: (musicVideo) => musicVideo.id,
-      );
+  String get id => when(song: (song) => song.id, musicVideo: (musicVideo) => musicVideo.id);
   // String get id => switch (this) {
   //       TrackSong(:final value) => value.id,
   //       TrackMusicVideo(:final value) => value.id,
   //     };
 
-  String get type => when(
-        song: (song) => song.type,
-        musicVideo: (musicVideo) => musicVideo.type,
-      );
+  String get type => when(song: (song) => song.type, musicVideo: (musicVideo) => musicVideo.type);
 
   int get durationInMillis =>
       when(
@@ -32,20 +26,13 @@ class Track with _$Track {
       ) ??
       0;
 
-  int? get trackNumber => when(
-        song: (song) => song.attributes?.trackNumber,
-        musicVideo: (mv) => mv.attributes?.trackNumber,
-      );
+  int? get trackNumber =>
+      when(song: (song) => song.attributes?.trackNumber, musicVideo: (mv) => mv.attributes?.trackNumber);
 
-  String? get name => when(
-        song: (song) => song.attributes?.name,
-        musicVideo: (musicVideo) => musicVideo.attributes?.name,
-      );
+  String? get name =>
+      when(song: (song) => song.attributes?.name, musicVideo: (musicVideo) => musicVideo.attributes?.name);
 
-  Artwork? get artwork => when(
-        song: (song) => song.artwork,
-        musicVideo: (musicVideo) => musicVideo.artwork,
-      );
+  Artwork? get artwork => when(song: (song) => song.artwork, musicVideo: (musicVideo) => musicVideo.artwork);
 
   bool get isExplicit =>
       when(
@@ -54,8 +41,5 @@ class Track with _$Track {
       ) ==
       'explicit';
 
-  bool get isMV => when(
-        song: (_) => false,
-        musicVideo: (_) => true,
-      );
+  bool get isMV => when(song: (_) => false, musicVideo: (_) => true);
 }

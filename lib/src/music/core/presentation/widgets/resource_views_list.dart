@@ -18,48 +18,30 @@ import 'resource_cards_list.dart';
 import 'resources_list.dart';
 
 class ResourceViewsList extends StatelessWidget {
-  const ResourceViewsList({
-    super.key,
-    required this.views,
-  });
+  const ResourceViewsList({super.key, required this.views});
 
   final Map<String, ResourceView> views;
 
   @override
   Widget build(BuildContext context) {
     return SliverList(
-      delegate: SliverChildBuilderDelegate(
-        ((context, index) {
-          MapEntry<String, ResourceView> entry =
-              views.entries.elementAt(index ~/ 2);
-          return Container(
-            padding: EdgeInsets.symmetric(
-              vertical: (index.isOdd ? 0 : PADDING_S),
-            ),
-            color: context.toc.colorScheme.surface,
-            child: (index.isOdd)
-                ? const DividerWidget(
-                    endIndent: 0,
-                    height: 1,
-                  )
-                : ResourceViewWidget(
-                    kind: entry.key,
-                    resourceView: entry.value,
-                  ),
-          );
-        }),
-        childCount: max(0, views.length * 2 - 1),
-      ),
+      delegate: SliverChildBuilderDelegate(((context, index) {
+        MapEntry<String, ResourceView> entry = views.entries.elementAt(index ~/ 2);
+        return Container(
+          padding: EdgeInsets.symmetric(vertical: (index.isOdd ? 0 : PADDING_S)),
+          color: context.toc.colorScheme.surface,
+          child:
+              (index.isOdd)
+                  ? const DividerWidget(endIndent: 0, height: 1)
+                  : ResourceViewWidget(kind: entry.key, resourceView: entry.value),
+        );
+      }), childCount: max(0, views.length * 2 - 1)),
     );
   }
 }
 
 class ResourceViewWidget extends ConsumerWidget {
-  const ResourceViewWidget({
-    super.key,
-    required this.kind,
-    required this.resourceView,
-  });
+  const ResourceViewWidget({super.key, required this.kind, required this.resourceView});
 
   final ResourceView resourceView;
   final String kind;
@@ -71,13 +53,7 @@ class ResourceViewWidget extends ConsumerWidget {
       children: [
         Padding(
           padding: const EdgeInsetsDirectional.only(start: PADDING_M),
-          child: Text(
-            resourceView.title,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 24,
-            ),
-          ),
+          child: Text(resourceView.title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 24)),
         ),
         const SizedBox(height: 8),
         _buildViews(context, ref),
@@ -85,35 +61,28 @@ class ResourceViewWidget extends ConsumerWidget {
     );
   }
 
-  bool get isMV => [
-        'related-videos',
-        'music-videos',
-        'top-music-videos',
-        'more-by-artist',
-        'more-in-genre'
-      ].contains(kind);
+  bool get isMV =>
+      ['related-videos', 'music-videos', 'top-music-videos', 'more-by-artist', 'more-in-genre'].contains(kind);
 
   Widget _buildViews(BuildContext context, WidgetRef ref) {
     if (isMV) {
-      return ResourceCardsList(
-        resources: resourceView.data,
-        itemHeightOffset: 50.0,
-        artworkAspectRatio: 16 / 9,
-      );
+      return ResourceCardsList(resources: resourceView.data, itemHeightOffset: 50.0, artworkAspectRatio: 16 / 9);
     }
 
     if (kind == 'top-songs') {
       return ResourcesList(
         resources: resourceView.data,
-        itemBuilder: (_, item) => ResourceTile(
-          resource: item,
-          onTap: () => ref.read(musicPlayerProvider).playMany(
-                items: resourceView.data,
-                startingAt: resourceView.data.indexWhere(
-                  (element) => element.id == item.id,
-                ),
-              ),
-        ),
+        itemBuilder:
+            (_, item) => ResourceTile(
+              resource: item,
+              onTap:
+                  () => ref
+                      .read(musicPlayerProvider)
+                      .playMany(
+                        items: resourceView.data,
+                        startingAt: resourceView.data.indexWhere((element) => element.id == item.id),
+                      ),
+            ),
       );
     }
 
@@ -121,11 +90,7 @@ class ResourceViewWidget extends ConsumerWidget {
       return _buildLatestRelease(context);
     }
 
-    return ResourceCardsList(
-      resources: resourceView.data,
-      itemHeightOffset: 50.0,
-      mainAxisCount: 2,
-    );
+    return ResourceCardsList(resources: resourceView.data, itemHeightOffset: 50.0, mainAxisCount: 2);
   }
 
   Widget _buildLatestRelease(BuildContext context) {
@@ -134,15 +99,10 @@ class ResourceViewWidget extends ConsumerWidget {
       padding: const EdgeInsets.symmetric(horizontal: PADDING_M),
       child: Row(
         children: [
-          ArtworkWidget(
-            artwork: latest.artwork,
-            height: 120,
-            width: 120,
-          ),
+          ArtworkWidget(artwork: latest.artwork, height: 120, width: 120),
           Expanded(
             child: Padding(
-              padding: const EdgeInsetsDirectional.only(
-                  start: PADDING_S, end: PADDING_S),
+              padding: const EdgeInsetsDirectional.only(start: PADDING_S, end: PADDING_S),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -159,10 +119,7 @@ class ResourceViewWidget extends ConsumerWidget {
                         ),
                       ),
                       if (latest.isExplicit)
-                        Container(
-                          margin: const EdgeInsetsDirectional.only(start: 5),
-                          child: const ExplicitIcon(),
-                        )
+                        Container(margin: const EdgeInsetsDirectional.only(start: 5), child: const ExplicitIcon()),
                     ],
                   ),
                 ],

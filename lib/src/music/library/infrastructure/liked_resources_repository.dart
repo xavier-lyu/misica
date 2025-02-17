@@ -6,19 +6,15 @@ class LikedResourcesRepository {
 
   LikedResourcesRepository(this._localService);
 
-  Stream<Map<String, List<Resource>>> watchLikedResources() =>
-      _localService.watchLikedResources(finder: null);
+  Stream<Map<String, List<Resource>>> watchLikedResources() => _localService.watchLikedResources(finder: null);
 
-  Future<Map<String, List<Resource>>> getResources() =>
-      _localService.getResources();
+  Future<Map<String, List<Resource>>> getResources() => _localService.getResources();
 
   Future<Resource?> getResource(String id) => _localService.getResource(id);
 
-  Future<void> addLikedResource(Resource resource) =>
-      _localService.upinsertResource(resource);
+  Future<void> addLikedResource(Resource resource) => _localService.upinsertResource(resource);
 
-  Future<void> deleteLikedResource(String id) =>
-      _localService.deleteResource(id);
+  Future<void> deleteLikedResource(String id) => _localService.deleteResource(id);
 
   Future<bool> isLiked(String id) => _localService.isLiked(id);
 }

@@ -7,10 +7,7 @@ import 'package:misica/src/music/search/domain/search_results.dart';
 import 'search_result_widget.dart';
 
 class SearchResultsView extends StatefulWidget {
-  const SearchResultsView({
-    super.key,
-    required this.results,
-  });
+  const SearchResultsView({super.key, required this.results});
 
   final Map<String, SearchResult> results;
 
@@ -18,8 +15,7 @@ class SearchResultsView extends StatefulWidget {
   State<StatefulWidget> createState() => _SearchResultsViewState();
 }
 
-class _SearchResultsViewState extends State<SearchResultsView>
-    with TickerProviderStateMixin {
+class _SearchResultsViewState extends State<SearchResultsView> with TickerProviderStateMixin {
   late TabController _tabController;
 
   @override
@@ -57,14 +53,10 @@ class _SearchResultsViewState extends State<SearchResultsView>
           bottom: TabBar(
             isScrollable: true,
             controller: _tabController,
-            tabs: widget.results.keys
-                .map((key) => Tab(
-                      child: Text(
-                        widget.results[key]!.name,
-                        style: context.ttoc.titleSmall,
-                      ),
-                    ))
-                .toList(),
+            tabs:
+                widget.results.keys
+                    .map((key) => Tab(child: Text(widget.results[key]!.name, style: context.ttoc.titleSmall)))
+                    .toList(),
           ),
         ),
         SliverFillRemaining(
@@ -72,14 +64,13 @@ class _SearchResultsViewState extends State<SearchResultsView>
             padding: const EdgeInsets.only(bottom: 66),
             child: TabBarView(
               controller: _tabController,
-              children: widget.results.values.map((result) {
-                return SearchResultWidget(
-                  result: result,
-                );
-              }).toList(),
+              children:
+                  widget.results.values.map((result) {
+                    return SearchResultWidget(result: result);
+                  }).toList(),
             ),
           ),
-        )
+        ),
       ],
     );
   }

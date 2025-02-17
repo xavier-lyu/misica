@@ -13,10 +13,7 @@ class AlbumsNotfier extends StateNotifier<AsyncValue<Album>> {
   Future<Unit> fetchCatalogAlbum(String id) async {
     final storefront = await _ref.read(storefrontProvider.future);
     final failureOrAlbum = await _repository.fetchCatalogAlbum(storefront, id);
-    state = failureOrAlbum.fold(
-      (error) => AsyncError(error, StackTrace.current),
-      (album) => AsyncData(album),
-    );
+    state = failureOrAlbum.fold((error) => AsyncError(error, StackTrace.current), (album) => AsyncData(album));
     return unit;
   }
 }

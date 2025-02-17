@@ -6,18 +6,14 @@ part of 'repeat_mode_notifier.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$repeatModeNotifierHash() =>
-    r'ac8986f0ff256d199f1e63a5db4f27495e48eb45';
+String _$repeatModeNotifierHash() => r'ac8986f0ff256d199f1e63a5db4f27495e48eb45';
 
 /// See also [RepeatModeNotifier].
 @ProviderFor(RepeatModeNotifier)
-final repeatModeNotifierProvider = AutoDisposeAsyncNotifierProvider<
-    RepeatModeNotifier, MusicPlayerRepeatMode>.internal(
+final repeatModeNotifierProvider = AutoDisposeAsyncNotifierProvider<RepeatModeNotifier, MusicPlayerRepeatMode>.internal(
   RepeatModeNotifier.new,
   name: r'repeatModeNotifierProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$repeatModeNotifierHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$repeatModeNotifierHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

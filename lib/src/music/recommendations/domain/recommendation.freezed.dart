@@ -12,37 +12,31 @@ part of 'recommendation.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 /// @nodoc
 mixin _$Recommendation {
   String get title => throw _privateConstructorUsedError;
   List<Resource>? get contents => throw _privateConstructorUsedError;
-  List<Recommendation>? get recommendations =>
-      throw _privateConstructorUsedError;
+  List<Recommendation>? get recommendations => throw _privateConstructorUsedError;
 
   /// Create a copy of Recommendation
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $RecommendationCopyWith<Recommendation> get copyWith =>
-      throw _privateConstructorUsedError;
+  $RecommendationCopyWith<Recommendation> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RecommendationCopyWith<$Res> {
-  factory $RecommendationCopyWith(
-          Recommendation value, $Res Function(Recommendation) then) =
+  factory $RecommendationCopyWith(Recommendation value, $Res Function(Recommendation) then) =
       _$RecommendationCopyWithImpl<$Res, Recommendation>;
   @useResult
-  $Res call(
-      {String title,
-      List<Resource>? contents,
-      List<Recommendation>? recommendations});
+  $Res call({String title, List<Resource>? contents, List<Recommendation>? recommendations});
 }
 
 /// @nodoc
-class _$RecommendationCopyWithImpl<$Res, $Val extends Recommendation>
-    implements $RecommendationCopyWith<$Res> {
+class _$RecommendationCopyWithImpl<$Res, $Val extends Recommendation> implements $RecommendationCopyWith<$Res> {
   _$RecommendationCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -54,85 +48,81 @@ class _$RecommendationCopyWithImpl<$Res, $Val extends Recommendation>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? title = null,
-    Object? contents = freezed,
-    Object? recommendations = freezed,
-  }) {
-    return _then(_value.copyWith(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      contents: freezed == contents
-          ? _value.contents
-          : contents // ignore: cast_nullable_to_non_nullable
-              as List<Resource>?,
-      recommendations: freezed == recommendations
-          ? _value.recommendations
-          : recommendations // ignore: cast_nullable_to_non_nullable
-              as List<Recommendation>?,
-    ) as $Val);
+  $Res call({Object? title = null, Object? contents = freezed, Object? recommendations = freezed}) {
+    return _then(
+      _value.copyWith(
+            title:
+                null == title
+                    ? _value.title
+                    : title // ignore: cast_nullable_to_non_nullable
+                        as String,
+            contents:
+                freezed == contents
+                    ? _value.contents
+                    : contents // ignore: cast_nullable_to_non_nullable
+                        as List<Resource>?,
+            recommendations:
+                freezed == recommendations
+                    ? _value.recommendations
+                    : recommendations // ignore: cast_nullable_to_non_nullable
+                        as List<Recommendation>?,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$RecommendationImplCopyWith<$Res>
-    implements $RecommendationCopyWith<$Res> {
-  factory _$$RecommendationImplCopyWith(_$RecommendationImpl value,
-          $Res Function(_$RecommendationImpl) then) =
+abstract class _$$RecommendationImplCopyWith<$Res> implements $RecommendationCopyWith<$Res> {
+  factory _$$RecommendationImplCopyWith(_$RecommendationImpl value, $Res Function(_$RecommendationImpl) then) =
       __$$RecommendationImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String title,
-      List<Resource>? contents,
-      List<Recommendation>? recommendations});
+  $Res call({String title, List<Resource>? contents, List<Recommendation>? recommendations});
 }
 
 /// @nodoc
-class __$$RecommendationImplCopyWithImpl<$Res>
-    extends _$RecommendationCopyWithImpl<$Res, _$RecommendationImpl>
+class __$$RecommendationImplCopyWithImpl<$Res> extends _$RecommendationCopyWithImpl<$Res, _$RecommendationImpl>
     implements _$$RecommendationImplCopyWith<$Res> {
-  __$$RecommendationImplCopyWithImpl(
-      _$RecommendationImpl _value, $Res Function(_$RecommendationImpl) _then)
-      : super(_value, _then);
+  __$$RecommendationImplCopyWithImpl(_$RecommendationImpl _value, $Res Function(_$RecommendationImpl) _then)
+    : super(_value, _then);
 
   /// Create a copy of Recommendation
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? title = null,
-    Object? contents = freezed,
-    Object? recommendations = freezed,
-  }) {
-    return _then(_$RecommendationImpl(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      contents: freezed == contents
-          ? _value._contents
-          : contents // ignore: cast_nullable_to_non_nullable
-              as List<Resource>?,
-      recommendations: freezed == recommendations
-          ? _value._recommendations
-          : recommendations // ignore: cast_nullable_to_non_nullable
-              as List<Recommendation>?,
-    ));
+  $Res call({Object? title = null, Object? contents = freezed, Object? recommendations = freezed}) {
+    return _then(
+      _$RecommendationImpl(
+        title:
+            null == title
+                ? _value.title
+                : title // ignore: cast_nullable_to_non_nullable
+                    as String,
+        contents:
+            freezed == contents
+                ? _value._contents
+                : contents // ignore: cast_nullable_to_non_nullable
+                    as List<Resource>?,
+        recommendations:
+            freezed == recommendations
+                ? _value._recommendations
+                : recommendations // ignore: cast_nullable_to_non_nullable
+                    as List<Recommendation>?,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$RecommendationImpl implements _Recommendation {
-  const _$RecommendationImpl(
-      {required this.title,
-      required final List<Resource>? contents,
-      required final List<Recommendation>? recommendations})
-      : _contents = contents,
-        _recommendations = recommendations;
+  const _$RecommendationImpl({
+    required this.title,
+    required final List<Resource>? contents,
+    required final List<Recommendation>? recommendations,
+  }) : _contents = contents,
+       _recommendations = recommendations;
 
   @override
   final String title;
@@ -168,16 +158,16 @@ class _$RecommendationImpl implements _Recommendation {
             other is _$RecommendationImpl &&
             (identical(other.title, title) || other.title == title) &&
             const DeepCollectionEquality().equals(other._contents, _contents) &&
-            const DeepCollectionEquality()
-                .equals(other._recommendations, _recommendations));
+            const DeepCollectionEquality().equals(other._recommendations, _recommendations));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      title,
-      const DeepCollectionEquality().hash(_contents),
-      const DeepCollectionEquality().hash(_recommendations));
+    runtimeType,
+    title,
+    const DeepCollectionEquality().hash(_contents),
+    const DeepCollectionEquality().hash(_recommendations),
+  );
 
   /// Create a copy of Recommendation
   /// with the given fields replaced by the non-null parameter values.
@@ -185,16 +175,15 @@ class _$RecommendationImpl implements _Recommendation {
   @override
   @pragma('vm:prefer-inline')
   _$$RecommendationImplCopyWith<_$RecommendationImpl> get copyWith =>
-      __$$RecommendationImplCopyWithImpl<_$RecommendationImpl>(
-          this, _$identity);
+      __$$RecommendationImplCopyWithImpl<_$RecommendationImpl>(this, _$identity);
 }
 
 abstract class _Recommendation implements Recommendation {
-  const factory _Recommendation(
-          {required final String title,
-          required final List<Resource>? contents,
-          required final List<Recommendation>? recommendations}) =
-      _$RecommendationImpl;
+  const factory _Recommendation({
+    required final String title,
+    required final List<Resource>? contents,
+    required final List<Recommendation>? recommendations,
+  }) = _$RecommendationImpl;
 
   @override
   String get title;
@@ -207,6 +196,5 @@ abstract class _Recommendation implements Recommendation {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RecommendationImplCopyWith<_$RecommendationImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$RecommendationImplCopyWith<_$RecommendationImpl> get copyWith => throw _privateConstructorUsedError;
 }

@@ -45,26 +45,17 @@ class _RadioPageState extends ConsumerState<RadioPage> {
   Widget build(BuildContext context) {
     final scrollOffset = useState<double>(0);
 
-    ref.listen<AsyncValue<List<Genre>>>(
-      stationGenresNotifierProvider,
-      (prev, next) {
-        if (_completer?.isCompleted == false) {
-          next.whenOrNull(data: (_) => _completer?.complete());
-        }
-      },
-    );
+    ref.listen<AsyncValue<List<Genre>>>(stationGenresNotifierProvider, (prev, next) {
+      if (_completer?.isCompleted == false) {
+        next.whenOrNull(data: (_) => _completer?.complete());
+      }
+    });
 
-    ref.listen<AsyncValue<List<Station>>>(
-      recentStationsNotifierProvider,
-      (previous, next) {
-        if (_completer?.isCompleted == false) {
-          next.whenOrNull(
-            data: (_) => _completer?.complete(),
-            error: (error, _) => _completer?.completeError(error),
-          );
-        }
-      },
-    );
+    ref.listen<AsyncValue<List<Station>>>(recentStationsNotifierProvider, (previous, next) {
+      if (_completer?.isCompleted == false) {
+        next.whenOrNull(data: (_) => _completer?.complete(), error: (error, _) => _completer?.completeError(error));
+      }
+    });
 
     final recentStationsState = ref.watch(recentStationsNotifierProvider);
     final stationGenresState = ref.watch(stationGenresNotifierProvider);
@@ -78,64 +69,41 @@ class _RadioPageState extends ConsumerState<RadioPage> {
           onOffsetChanged: (offset) => scrollOffset.value = offset,
           slivers: [
             AppNavbar(
-              title: Text(
-                context.loc.radio,
-                style: context.ttoc.titleLarge,
-                textAlign: TextAlign.start,
-              ),
+              title: Text(context.loc.radio, style: context.ttoc.titleLarge, textAlign: TextAlign.start),
               centerTitle: scrollOffset.value >= 44,
             ),
             ...recentStationsState.maybeWhen(
-              orElse: () => [
-                SliverToBoxAdapter(child: Container()),
-              ],
-              data: (stations) => [
-                SliverToBoxAdapter(
-                  child: SectionTitle(title: context.loc.recentlyPlayed),
-                ),
-                SliverToBoxAdapter(
-                  child: ResourceCardsList(
-                    resources: stations,
-                    itemHeightOffset: 50.0,
-                    mainAxisCount: 2,
-                  ),
-                ),
-              ],
+              orElse: () => [SliverToBoxAdapter(child: Container())],
+              data:
+                  (stations) => [
+                    SliverToBoxAdapter(child: SectionTitle(title: context.loc.recentlyPlayed)),
+                    SliverToBoxAdapter(
+                      child: ResourceCardsList(resources: stations, itemHeightOffset: 50.0, mainAxisCount: 2),
+                    ),
+                  ],
             ),
             ...stationGenresState.maybeWhen(
-              orElse: () => [
-                SliverToBoxAdapter(child: Container()),
-              ],
-              loading: () => [
-                const SliverFillRemaining(
-                  child: Loader(),
-                )
-              ],
-              data: (genres) => [
-                SliverToBoxAdapter(
-                  child: SectionTitle(title: context.loc.stationsByGenre),
-                ),
-                SliverPadding(
-                  padding: const EdgeInsetsDirectional.only(
-                    start: PADDING_M,
-                    end: PADDING_M,
-                    bottom: 80,
-                  ),
-                  sliver: SliverGrid(
-                    delegate: SliverChildBuilderDelegate(
-                      (context, index) => GenrePillWidget(genre: genres[index]),
-                      childCount: genres.length,
+              orElse: () => [SliverToBoxAdapter(child: Container())],
+              loading: () => [const SliverFillRemaining(child: Loader())],
+              data:
+                  (genres) => [
+                    SliverToBoxAdapter(child: SectionTitle(title: context.loc.stationsByGenre)),
+                    SliverPadding(
+                      padding: const EdgeInsetsDirectional.only(start: PADDING_M, end: PADDING_M, bottom: 80),
+                      sliver: SliverGrid(
+                        delegate: SliverChildBuilderDelegate(
+                          (context, index) => GenrePillWidget(genre: genres[index]),
+                          childCount: genres.length,
+                        ),
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          mainAxisSpacing: 10,
+                          crossAxisSpacing: 10,
+                          childAspectRatio: 4,
+                        ),
+                      ),
                     ),
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2,
-                      mainAxisSpacing: 10,
-                      crossAxisSpacing: 10,
-                      childAspectRatio: 4,
-                    ),
-                  ),
-                ),
-              ],
+                  ],
             ),
           ],
         ),

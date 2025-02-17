@@ -1,4 +1,3 @@
-
 import 'package:dio/dio.dart';
 
 class DioJsonTransformer extends BackgroundTransformer {

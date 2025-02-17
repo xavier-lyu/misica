@@ -12,60 +12,49 @@ part of 'auth_failure.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 /// @nodoc
 mixin _$AuthFailure {
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() storage,
-    required TResult Function() platform,
-  }) =>
+  TResult when<TResult extends Object?>({required TResult Function() storage, required TResult Function() platform}) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? storage,
-    TResult? Function()? platform,
-  }) =>
+  TResult? whenOrNull<TResult extends Object?>({TResult? Function()? storage, TResult? Function()? platform}) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? storage,
     TResult Function()? platform,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Storage value) storage,
     required TResult Function(_Platform value) platform,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Storage value)? storage,
     TResult? Function(_Platform value)? platform,
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Storage value)? storage,
     TResult Function(_Platform value)? platform,
     required TResult orElse(),
-  }) =>
-      throw _privateConstructorUsedError;
+  }) => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AuthFailureCopyWith<$Res> {
-  factory $AuthFailureCopyWith(
-          AuthFailure value, $Res Function(AuthFailure) then) =
+  factory $AuthFailureCopyWith(AuthFailure value, $Res Function(AuthFailure) then) =
       _$AuthFailureCopyWithImpl<$Res, AuthFailure>;
 }
 
 /// @nodoc
-class _$AuthFailureCopyWithImpl<$Res, $Val extends AuthFailure>
-    implements $AuthFailureCopyWith<$Res> {
+class _$AuthFailureCopyWithImpl<$Res, $Val extends AuthFailure> implements $AuthFailureCopyWith<$Res> {
   _$AuthFailureCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -79,18 +68,14 @@ class _$AuthFailureCopyWithImpl<$Res, $Val extends AuthFailure>
 
 /// @nodoc
 abstract class _$$StorageImplCopyWith<$Res> {
-  factory _$$StorageImplCopyWith(
-          _$StorageImpl value, $Res Function(_$StorageImpl) then) =
+  factory _$$StorageImplCopyWith(_$StorageImpl value, $Res Function(_$StorageImpl) then) =
       __$$StorageImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$StorageImplCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res, _$StorageImpl>
+class __$$StorageImplCopyWithImpl<$Res> extends _$AuthFailureCopyWithImpl<$Res, _$StorageImpl>
     implements _$$StorageImplCopyWith<$Res> {
-  __$$StorageImplCopyWithImpl(
-      _$StorageImpl _value, $Res Function(_$StorageImpl) _then)
-      : super(_value, _then);
+  __$$StorageImplCopyWithImpl(_$StorageImpl _value, $Res Function(_$StorageImpl) _then) : super(_value, _then);
 
   /// Create a copy of AuthFailure
   /// with the given fields replaced by the non-null parameter values.
@@ -108,8 +93,7 @@ class _$StorageImpl implements _Storage {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$StorageImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$StorageImpl);
   }
 
   @override
@@ -117,19 +101,13 @@ class _$StorageImpl implements _Storage {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() storage,
-    required TResult Function() platform,
-  }) {
+  TResult when<TResult extends Object?>({required TResult Function() storage, required TResult Function() platform}) {
     return storage();
   }
 
   @override
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? storage,
-    TResult? Function()? platform,
-  }) {
+  TResult? whenOrNull<TResult extends Object?>({TResult? Function()? storage, TResult? Function()? platform}) {
     return storage?.call();
   }
 
@@ -184,18 +162,14 @@ abstract class _Storage implements AuthFailure {
 
 /// @nodoc
 abstract class _$$PlatformImplCopyWith<$Res> {
-  factory _$$PlatformImplCopyWith(
-          _$PlatformImpl value, $Res Function(_$PlatformImpl) then) =
+  factory _$$PlatformImplCopyWith(_$PlatformImpl value, $Res Function(_$PlatformImpl) then) =
       __$$PlatformImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$PlatformImplCopyWithImpl<$Res>
-    extends _$AuthFailureCopyWithImpl<$Res, _$PlatformImpl>
+class __$$PlatformImplCopyWithImpl<$Res> extends _$AuthFailureCopyWithImpl<$Res, _$PlatformImpl>
     implements _$$PlatformImplCopyWith<$Res> {
-  __$$PlatformImplCopyWithImpl(
-      _$PlatformImpl _value, $Res Function(_$PlatformImpl) _then)
-      : super(_value, _then);
+  __$$PlatformImplCopyWithImpl(_$PlatformImpl _value, $Res Function(_$PlatformImpl) _then) : super(_value, _then);
 
   /// Create a copy of AuthFailure
   /// with the given fields replaced by the non-null parameter values.
@@ -213,8 +187,7 @@ class _$PlatformImpl implements _Platform {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$PlatformImpl);
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$PlatformImpl);
   }
 
   @override
@@ -222,19 +195,13 @@ class _$PlatformImpl implements _Platform {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() storage,
-    required TResult Function() platform,
-  }) {
+  TResult when<TResult extends Object?>({required TResult Function() storage, required TResult Function() platform}) {
     return platform();
   }
 
   @override
   @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? storage,
-    TResult? Function()? platform,
-  }) {
+  TResult? whenOrNull<TResult extends Object?>({TResult? Function()? storage, TResult? Function()? platform}) {
     return platform?.call();
   }
 

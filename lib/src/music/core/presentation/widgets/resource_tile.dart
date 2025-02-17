@@ -8,13 +8,7 @@ import 'package:misica/src/music/core/presentation/widgets/resource_context_menu
 import 'artwork_widget.dart';
 
 class ResourceTile extends StatelessWidget {
-  const ResourceTile({
-    super.key,
-    required this.resource,
-    this.onTap,
-    this.padding = EdgeInsets.zero,
-    this.subtitle,
-  });
+  const ResourceTile({super.key, required this.resource, this.onTap, this.padding = EdgeInsets.zero, this.subtitle});
 
   final Resource resource;
   final VoidCallback? onTap;
@@ -38,12 +32,7 @@ class ResourceTile extends StatelessWidget {
         padding: padding,
         child: Row(
           children: [
-            ArtworkWidget(
-              artwork: resource.artwork,
-              width: styles.$1,
-              height: 60.0,
-              radius: styles.$2,
-            ),
+            ArtworkWidget(artwork: resource.artwork, width: styles.$1, height: 60.0, radius: styles.$2),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: PADDING_S),
@@ -55,32 +44,23 @@ class ResourceTile extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Flexible(
-                          child: Text(
-                            resource.name,
-                            overflow: TextOverflow.ellipsis,
-                            style: context.ttoc.titleMedium,
-                          ),
+                          child: Text(resource.name, overflow: TextOverflow.ellipsis, style: context.ttoc.titleMedium),
                         ),
-                        if (resource is Song && (resource as Song).isExplicit)
-                          const Icon(Icons.explicit_rounded),
+                        if (resource is Song && (resource as Song).isExplicit) const Icon(Icons.explicit_rounded),
                       ],
                     ),
                     if (caption?.isNotEmpty == true)
                       Container(
                         margin: const EdgeInsetsDirectional.only(top: 5),
-                        child: Text(
-                          caption!,
-                          overflow: TextOverflow.ellipsis,
-                          style: context.ttoc.labelLarge,
-                        ),
-                      )
+                        child: Text(caption!, overflow: TextOverflow.ellipsis, style: context.ttoc.labelLarge),
+                      ),
                   ],
                 ),
               ),
             ),
             resource.isTrack
                 ? ResourceContextMenuButton(resource: resource)
-                : const Icon(Icons.keyboard_arrow_right_rounded)
+                : const Icon(Icons.keyboard_arrow_right_rounded),
           ],
         ),
       ),

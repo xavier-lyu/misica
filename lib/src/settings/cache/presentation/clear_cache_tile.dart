@@ -14,9 +14,7 @@ class _ClearCacheTileState extends ConsumerState<ClearCacheTile> {
   @override
   void initState() {
     super.initState();
-    Future.microtask(
-      () => ref.read(cacheNotifierProvider.notifier).calculating(),
-    );
+    Future.microtask(() => ref.read(cacheNotifierProvider.notifier).calculating());
   }
 
   @override
@@ -25,9 +23,10 @@ class _ClearCacheTileState extends ConsumerState<ClearCacheTile> {
     return ListTile(
       title: Text(context.loc.clearCache),
       trailing: sizeState.when(
-          loading: () => Text('${context.loc.calculating}...'),
-          data: (data) => Text(data),
-          error: (_, __) => const Text('NaN')),
+        loading: () => Text('${context.loc.calculating}...'),
+        data: (data) => Text(data),
+        error: (_, __) => const Text('NaN'),
+      ),
       onTap: () => _clearCache(),
     );
   }

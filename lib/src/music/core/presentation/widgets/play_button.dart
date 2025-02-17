@@ -6,11 +6,7 @@ import 'package:misica/src/music/core/domain/resource.dart';
 import 'package:misica/src/music/player/shared/providers.dart';
 
 class PlayButton extends ConsumerWidget {
-  const PlayButton({
-    super.key,
-    required this.kind,
-    required this.item,
-  });
+  const PlayButton({super.key, required this.kind, required this.item});
 
   final String kind;
   final Resource item;
@@ -24,11 +20,7 @@ class PlayButton extends ConsumerWidget {
       },
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Icon(Icons.play_arrow_rounded),
-          const SizedBox(width: 8),
-          Text(context.loc.play),
-        ],
+        children: [const Icon(Icons.play_arrow_rounded), const SizedBox(width: 8), Text(context.loc.play)],
       ),
     );
   }

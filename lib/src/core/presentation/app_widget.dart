@@ -21,13 +21,9 @@ class AppWidget extends ConsumerWidget {
     ref.listen<AuthState>(authNotifierProvider, (previous, next) {
       switch (next) {
         case MusicAuthorizationStatusAuthorized():
-          _appRouter.replace(
-            const IndexRoute(),
-          );
+          _appRouter.replace(const IndexRoute());
         default:
-          _appRouter.replace(
-            const AuthorizationRoute(),
-          );
+          _appRouter.replace(const AuthorizationRoute());
       }
     });
 

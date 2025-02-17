@@ -12,7 +12,8 @@ part of 'settings.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 Settings _$SettingsFromJson(Map<String, dynamic> json) {
   return _Settings.fromJson(json);
@@ -28,21 +29,18 @@ mixin _$Settings {
   /// Create a copy of Settings
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SettingsCopyWith<Settings> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SettingsCopyWith<Settings> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $SettingsCopyWith<$Res> {
-  factory $SettingsCopyWith(Settings value, $Res Function(Settings) then) =
-      _$SettingsCopyWithImpl<$Res, Settings>;
+  factory $SettingsCopyWith(Settings value, $Res Function(Settings) then) = _$SettingsCopyWithImpl<$Res, Settings>;
   @useResult
   $Res call({ThemeMode themeMode});
 }
 
 /// @nodoc
-class _$SettingsCopyWithImpl<$Res, $Val extends Settings>
-    implements $SettingsCopyWith<$Res> {
+class _$SettingsCopyWithImpl<$Res, $Val extends Settings> implements $SettingsCopyWith<$Res> {
   _$SettingsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -54,23 +52,23 @@ class _$SettingsCopyWithImpl<$Res, $Val extends Settings>
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? themeMode = null,
-  }) {
-    return _then(_value.copyWith(
-      themeMode: null == themeMode
-          ? _value.themeMode
-          : themeMode // ignore: cast_nullable_to_non_nullable
-              as ThemeMode,
-    ) as $Val);
+  $Res call({Object? themeMode = null}) {
+    return _then(
+      _value.copyWith(
+            themeMode:
+                null == themeMode
+                    ? _value.themeMode
+                    : themeMode // ignore: cast_nullable_to_non_nullable
+                        as ThemeMode,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
-abstract class _$$SettingsImplCopyWith<$Res>
-    implements $SettingsCopyWith<$Res> {
-  factory _$$SettingsImplCopyWith(
-          _$SettingsImpl value, $Res Function(_$SettingsImpl) then) =
+abstract class _$$SettingsImplCopyWith<$Res> implements $SettingsCopyWith<$Res> {
+  factory _$$SettingsImplCopyWith(_$SettingsImpl value, $Res Function(_$SettingsImpl) then) =
       __$$SettingsImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -78,26 +76,24 @@ abstract class _$$SettingsImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$SettingsImplCopyWithImpl<$Res>
-    extends _$SettingsCopyWithImpl<$Res, _$SettingsImpl>
+class __$$SettingsImplCopyWithImpl<$Res> extends _$SettingsCopyWithImpl<$Res, _$SettingsImpl>
     implements _$$SettingsImplCopyWith<$Res> {
-  __$$SettingsImplCopyWithImpl(
-      _$SettingsImpl _value, $Res Function(_$SettingsImpl) _then)
-      : super(_value, _then);
+  __$$SettingsImplCopyWithImpl(_$SettingsImpl _value, $Res Function(_$SettingsImpl) _then) : super(_value, _then);
 
   /// Create a copy of Settings
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? themeMode = null,
-  }) {
-    return _then(_$SettingsImpl(
-      themeMode: null == themeMode
-          ? _value.themeMode
-          : themeMode // ignore: cast_nullable_to_non_nullable
-              as ThemeMode,
-    ));
+  $Res call({Object? themeMode = null}) {
+    return _then(
+      _$SettingsImpl(
+        themeMode:
+            null == themeMode
+                ? _value.themeMode
+                : themeMode // ignore: cast_nullable_to_non_nullable
+                    as ThemeMode,
+      ),
+    );
   }
 }
 
@@ -106,8 +102,7 @@ class __$$SettingsImplCopyWithImpl<$Res>
 class _$SettingsImpl extends _Settings {
   const _$SettingsImpl({required this.themeMode}) : super._();
 
-  factory _$SettingsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SettingsImplFromJson(json);
+  factory _$SettingsImpl.fromJson(Map<String, dynamic> json) => _$$SettingsImplFromJson(json);
 
   @override
   final ThemeMode themeMode;
@@ -122,8 +117,7 @@ class _$SettingsImpl extends _Settings {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SettingsImpl &&
-            (identical(other.themeMode, themeMode) ||
-                other.themeMode == themeMode));
+            (identical(other.themeMode, themeMode) || other.themeMode == themeMode));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -140,19 +134,15 @@ class _$SettingsImpl extends _Settings {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SettingsImplToJson(
-      this,
-    );
+    return _$$SettingsImplToJson(this);
   }
 }
 
 abstract class _Settings extends Settings {
-  const factory _Settings({required final ThemeMode themeMode}) =
-      _$SettingsImpl;
+  const factory _Settings({required final ThemeMode themeMode}) = _$SettingsImpl;
   const _Settings._() : super._();
 
-  factory _Settings.fromJson(Map<String, dynamic> json) =
-      _$SettingsImpl.fromJson;
+  factory _Settings.fromJson(Map<String, dynamic> json) = _$SettingsImpl.fromJson;
 
   @override
   ThemeMode get themeMode;
@@ -161,6 +151,5 @@ abstract class _Settings extends Settings {
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SettingsImplCopyWith<_$SettingsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$SettingsImplCopyWith<_$SettingsImpl> get copyWith => throw _privateConstructorUsedError;
 }

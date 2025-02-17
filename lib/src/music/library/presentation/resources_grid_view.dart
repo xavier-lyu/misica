@@ -16,22 +16,14 @@ class ResourcesGridView extends StatelessWidget {
     final childAspectRatio = itemWidth / (itemWidth + 50);
 
     return GridView.builder(
-      padding: const EdgeInsetsDirectional.only(
-        start: PADDING_M,
-        end: PADDING_M,
-        top: PADDING_S,
-      ),
+      padding: const EdgeInsetsDirectional.only(start: PADDING_M, end: PADDING_M, top: PADDING_S),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         childAspectRatio: childAspectRatio,
         crossAxisSpacing: 10,
       ),
       itemBuilder: (context, index) {
-        return ResourceCard(
-          resource: resources[index],
-          aspectRatio: childAspectRatio,
-          artworkWidth: itemWidth,
-        );
+        return ResourceCard(resource: resources[index], aspectRatio: childAspectRatio, artworkWidth: itemWidth);
       },
       itemCount: resources.length,
     );

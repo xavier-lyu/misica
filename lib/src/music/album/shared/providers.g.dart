@@ -13,9 +13,7 @@ String _$albumsServiceHash() => r'9362efea7f11bc64e27bc81c4e9c4a70b89c4343';
 final albumsServiceProvider = AutoDisposeProvider<AlbumsService>.internal(
   albumsService,
   name: r'albumsServiceProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$albumsServiceHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$albumsServiceHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
@@ -30,9 +28,7 @@ String _$albumsRepositoryHash() => r'94c1f2df5c56c24ce09f8e22e14bb8b850d33eb5';
 final albumsRepositoryProvider = AutoDisposeProvider<AlbumsRepository>.internal(
   albumsRepository,
   name: r'albumsRepositoryProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$albumsRepositoryHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$albumsRepositoryHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

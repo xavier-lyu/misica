@@ -47,10 +47,7 @@ class _ArtistsService implements ArtistsService {
   }
 
   @override
-  Future<MusicResponse> defaultPlayableContent(
-    String storefront,
-    String id,
-  ) async {
+  Future<MusicResponse> defaultPlayableContent(String storefront, String id) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -78,8 +75,7 @@ class _ArtistsService implements ArtistsService {
 
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
     if (T != dynamic &&
-        !(requestOptions.responseType == ResponseType.bytes ||
-            requestOptions.responseType == ResponseType.stream)) {
+        !(requestOptions.responseType == ResponseType.bytes || requestOptions.responseType == ResponseType.stream)) {
       if (T == String) {
         requestOptions.responseType = ResponseType.plain;
       } else {

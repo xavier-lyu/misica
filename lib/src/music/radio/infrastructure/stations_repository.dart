@@ -24,8 +24,7 @@ class StationsRepository {
     }
   }
 
-  Future<Either<MusicFailure, List<Genre>>> fetchStationGenres(
-      String storefront) async {
+  Future<Either<MusicFailure, List<Genre>>> fetchStationGenres(String storefront) async {
     try {
       final genres = await _remoteService.fetchStationGenres(storefront);
       return right(genres.data.toDomain<Genre>());
@@ -36,8 +35,7 @@ class StationsRepository {
     }
   }
 
-  Future<Either<MusicFailure, List<Station>>> fetchGenreStations(
-      String storefront, String id) async {
+  Future<Either<MusicFailure, List<Station>>> fetchGenreStations(String storefront, String id) async {
     try {
       final stations = await _remoteService.fetchGenreStations(storefront, id);
       return right(stations.data.toDomain<Station>());
