@@ -668,6 +668,13 @@ packages:
       relative: true
     source: path
     version: "1.2.1"
+  music_kit_darwin:
+    dependency: "direct overridden"
+    description:
+      path: "../flutter_music_kit/packages/music_kit_darwin"
+      relative: true
+    source: path
+    version: "0.0.1"
   music_kit_platform_interface:
     dependency: "direct overridden"
     description:

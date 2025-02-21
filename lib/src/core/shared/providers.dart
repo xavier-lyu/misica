@@ -40,7 +40,7 @@ Future<Unit> initialization(Ref ref) async {
   }
 
   ref.read(musicDioProvider).interceptors.addAll([
-    LogInterceptor(responseBody: kDebugMode),
+    LogInterceptor(responseBody: kDebugMode, logPrint: (o) => debugPrint(o.toString())),
     newSembastCacheInterceptor(ref.read(sembastProvider).instance),
     ref.watch(musicAuthIntercepterProvider),
   ]);

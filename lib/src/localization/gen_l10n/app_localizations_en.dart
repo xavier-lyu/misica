@@ -15,8 +15,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get defaultExplanatory => 'Soundtrack your life with Apple Music.';
 
   @override
-  String get restrictedExplanatory =>
-      'Misica can not be used on this device because usage of Apple Music is restricted.';
+  String get restrictedExplanatory => 'Misica can not be used on this device because usage of Apple Music is restricted.';
 
   @override
   String get secondaryExplanatory => 'Please grant Misica\n access to Apple Music in Settings.';
