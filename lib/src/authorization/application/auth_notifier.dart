@@ -8,7 +8,7 @@ class AuthNotifier extends StateNotifier<AuthState> {
   final MusicKit _musicKit;
   final MusicAuthenticator _authenticator;
 
-  AuthNotifier(this._musicKit, this._authenticator) : super(MusicAuthorizationStatusInitial());
+  AuthNotifier(this._musicKit, this._authenticator) : super(MusicAuthorizationStatusNotDetermined());
 
   Future<void> checkAndUpdateAuthState() async {
     final result = await _musicKit.authorizationStatus;
