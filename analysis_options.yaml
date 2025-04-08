@@ -10,7 +10,7 @@ linter:
 analyzer:
   exclude:
     - '**/*.g.dart'
-    - '**/*.freezed.dart'
+    # - '**/*.freezed.dart'
     - '**/gen_l10n/app_localizations_*.dart'
   errors:
     missing_return: error

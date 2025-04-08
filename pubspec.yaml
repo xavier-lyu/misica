@@ -10,7 +10,7 @@ environment:
   sdk: ^3.7.0
 
 dependencies:
-  app_settings: ^5.1.1
+  app_settings: ^6.1.1
   auto_route: ^9.3.0+1
   auto_size_text: ^3.0.0
   cached_network_image: ^3.2.1
@@ -58,6 +58,6 @@ flutter:
   # Enable generation of localized Strings from arb files.
   generate: true
 
-  assets:
+  # assets:
     # Add assets from the images directory to the application.
-    - assets/images/
+    # - assets/images/
