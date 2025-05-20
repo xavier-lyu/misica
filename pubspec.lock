@@ -28,10 +28,11 @@ packages:
   app_settings:
     dependency: "direct main"
     description:
-      name: app_settings
-      sha256: "3e46c561441e5820d3a25339bf8b51b9e45a5f686873851a20c257a530917795"
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: HEAD
+      resolved-ref: "62269d3ebe826a8b9e5367085c45a97a8f553e6d"
+      url: "https://github.com/xavier-lyu/app_settings.git"
+    source: git
     version: "6.1.1"
   args:
     dependency: transitive

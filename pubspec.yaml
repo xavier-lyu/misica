@@ -10,7 +10,8 @@ environment:
   sdk: ^3.7.0
 
 dependencies:
-  app_settings: ^6.1.1
+  app_settings:
+    git: https://github.com/xavier-lyu/app_settings.git
   auto_route: ^9.3.0+1
   auto_size_text: ^3.0.0
   cached_network_image: ^3.2.1
