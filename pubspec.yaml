@@ -12,24 +12,23 @@ environment:
 dependencies:
   app_settings:
     git: https://github.com/xavier-lyu/app_settings.git
-  auto_route: ^9.3.0+1
+  auto_route: ^10.0.1
   auto_size_text: ^3.0.0
   cached_network_image: ^3.2.1
   dio: ^5.4.2+1
-  dio_cache_interceptor: ^3.2.7
-  dio_cache_interceptor_sembast_storage: ^0.2.0
+  dio_cache_interceptor: ^4.0.3
+  http_cache_sembast_store: ^1.0.0
   duration: ^4.0.3
   expandable_text: ^2.3.0
   flutter:
     sdk: flutter
-  flutter_hooks: ^0.20.5
+  flutter_hooks: ^0.21.2
   flutter_localizations:
     sdk: flutter
   flutter_secure_storage: ^10.0.0-beta.4
   fpdart: ^1.1.0
-  freezed_annotation: ^2.2.0
+  freezed_annotation: ^3.0.0
   hooks_riverpod: ^2.1.1
-  intl: ^0.19.0
   json_annotation: ^4.8.1
   jwt_decoder: ^2.0.1
   material_floating_search_bar_2: ^0.5.0
@@ -40,18 +39,18 @@ dependencies:
   retrofit: ^4.1.0
   riverpod_annotation: ^2.3.5
   salomon_bottom_bar: ^3.3.1
-  sembast: ^3.2.0+1
+  sembast: ^3.8.5
 
 dev_dependencies:
-  auto_route_generator: ^9.3.1
-  build_runner: ^2.4.14
+  auto_route_generator: ^10.0.1
+  build_runner: ^2.4.15
   flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
-  freezed: ^2.2.1
-  json_serializable: ^6.5.4
-  retrofit_generator: ^9.1.7
-  riverpod_generator: ^2.4.0
+  freezed: ^3.0.6
+  json_serializable: ^6.9.5
+  retrofit_generator: ^9.2.0
+  riverpod_generator: ^2.6.5
 
 flutter:
   uses-material-design: true

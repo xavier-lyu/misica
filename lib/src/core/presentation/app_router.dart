@@ -61,7 +61,7 @@ class AppRouter extends RootStackRouter {
       path: '/player',
       page: PlayerRoute.page,
       transitionsBuilder: TransitionsBuilders.slideBottom,
-      durationInMilliseconds: 300,
+      duration: const Duration(milliseconds: 300),
     ),
     RedirectRoute(path: '*', redirectTo: '/'),
   ];
