@@ -64,6 +64,25 @@ android {
             signingConfig = signingConfigs.getByName("release")
         }
     }
+
+    flavorDimensions += "default"
+    productFlavors {
+        create("development") {
+            dimension = "default"
+            applicationIdSuffix = ".dev"
+            manifestPlaceholders["appName"] = "[DEV] Misica"
+        }
+        create("staging") {
+            dimension = "default"
+            applicationIdSuffix = ".stg"
+            manifestPlaceholders["appName"] = "[STG] Misica"
+        }
+        create("production") {
+            dimension = "default"
+            applicationIdSuffix = ""
+            manifestPlaceholders["appName"] = "Misica"
+        }
+    }
 }
 
 flutter {
