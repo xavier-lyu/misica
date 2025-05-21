@@ -24,3 +24,6 @@
 
 # @Serializable and @Polymorphic are used at runtime for polymorphic serialization.
 -keepattributes RuntimeVisibleAnnotations,AnnotationDefault
+
+-dontwarn org.apache.maven.plugins.annotations.Mojo
+-dontwarn org.slf4j.impl.StaticLoggerBinder
